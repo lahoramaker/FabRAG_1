@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: scroll;
+            font-family: 'Helvetica', sans-serif;
+        }
+        #menu {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 180px;
+            background-color: #fa7268;
+            color: #fff;
+            padding-top: 15px;
+        }
+        #menu a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            text-indent: 10px each-line;
+            margin-bottom: 10px;
+        }
+        #content {
+            margin-left: 200px;
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 2px;
+            padding: 5px;
+        }
+        .grid-item {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="menu">
+        <a href="https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/moonlighterfablab.html"><strong>Moonlighter FabLab</strong></a>
+      
+        <a href="https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/index.html"><img src="https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/images/Tom-Pupo.jpg" width="80%" alt="Tom Pupo"></a>
+        
+        <h1>&#160&#160Tom &#160&#160Pupo</h1>
+        <p>&#160&#160&#160&#160M.Arch, M.AA, FIU &#160&#160&#160&#160Founder & Executive &#160&#160&#160&#160Director of &#160&#160&#160&#160Moonlighter FabLab. &#160&#160&#160&#160Multi-Disciplinary &#160&#160&#160&#160Designer & Maker.</P>
+            <a href="../index.html">Home</a>
+            <a href="../aboutme.html">About Me</a>
+
+    </div>
+
+    <div id="content">
+
+        <h1>&#160&#160&#160Final Project</h1>
+        <br>
+        <br>
+        <br>
+        <strong>ArchiBlox</strong>
+        <p>The concept for ArchiBlox is a high quality, beautifully crafted table top modular building block toy that resembles the classic designs of Froebel blocks.
+            Hidden in the blocks and in the tiled board are a series of sensors and processors that wirelessly transmit the design of the tile, the rotational orientation of the tile, and the placement in the board grid to a virtual interface.
+            As a child makes a space using the blocks, a 2D floorplan is populated in the software where they can drag and drop different components to design an interior space.
+            For future development and versions, we would also have the software generate a 3D model of the space as a digital twin, with various 3D components and more capabilites for customizing the digital version with materials and finishes.
+            For the final future version, AR can be utilized to overlay the digital customizations over the physical objects. For the proof of concept to be built during FabAcademy, I will focus on building the physical components, electonic systems, and basic user interface that virtually represents a 2D floorplan of the physical blocks.
+        </p>
+        <img src="../images/archibloxsketch.jpg" width=100% alt="Archiblox Sketch">
+        <img src="../images/archiblox-section.jpg" width=100% alt="Archiblox Section">
+        <img src="../images/tp-finalproject-concept.jpg" width=100% alt="Conceptual Diagram">
+        <img src="../images/rhino-model.jpeg" width=100% alt="Archiblox 3D Model">
+        <img src="../images/archiblox-render.jpg" width=100% alt="Archiblox Rendering">
+        <br>
+        <br>
+        <strong>Schedule</strong>
+        <img src="../images/finalproject-gantt.jpg" width=100% alt="Schedule">
+        <br>
+        <br>
+        <h1>Project Process:</h1>
+        <br>
+        <br>
+        <h2>Tile 3D Design & 3D Printing</h2>
+        <p>The Tiles were designed with Rhinocerous3D and printed with Marble PLA on a Bambulabs X1C. Magnets were press-fit into the bottom.
+        <br><br>Detailed process can be reviewed in: 
+        <br><a href="../assignments/tp-week2.html"><strong>Computer Aided Design Week Documentation</strong></a>
+        </p>
+        <video src="../images/3d-design-print.mp4" controls loop width="100%">
+          This browser does not support HTML video.
+        </video> 
+        <br>
+        <br>
+        <h2>Circuit Design and Fabrication</h2>
+        <p>The custom circuit boards were designed in KiCAD and programmed on Thonny using CircuitPython.
+        <br>Detailed process can be reviewed in:</p>
+        <br><a href="../assignments/tp-week8.html"><strong>Electornics Design Documentation</strong></a>
+        <br><a href="../assignments/tp-week12.html"><strong>Input Devices Documentation</strong></a>
+        <br>
+        <video src="../images/circuit-production.mp4" controls loop width="100%">
+          This browser does not support HTML video.
+        </video> 
+        <br>
+        <br>
+        <h2>Programming the ESP32-S3 and Communicating with Web Interface</h2>
+        <p>The ESP32-S3 was programmed using Circuit Python in Thonny and the web interface was coded in HTML in Visual Studio Code.
+        <br>Detailed process can be reviewed in:</p>
+        <br><a href="../assignments/tp-week9.html"><strong>Output Devices Documentation</strong></a>
+        <br><a href="../assignments/tp-week14.html"><strong>Networking & Communications Documentation</strong></a> 
+        <br><a href="../assignments/tp-week15.html"><strong>Interface & Application Programming Documentation</strong></a> 
+        <br> 
+        <video src="../images/interface-demo.mp4" controls loop width="100%">
+            This browser does not support HTML video.
+          </video> 
+        <br>
+        <br>
+        <h2>Fabricating the Enclosure</h2>
+        <p>The board top was laser cut using a Full Spectrum Laser PS36. The board case was CNC milled on a Shop Sabre 4896. CAD on Rhino3D and CAM in RhinoCAM. The circuit boards fit perfectly snug in the case.</p>
+        <video src="../images/laser-cnc-fabrication.mp4" controls loop width="100%">
+        This browser does not support HTML video.
+         </video>   
+        <br>
+        <h3>Integrated Systems</h3>
+        <img src="../images/integrated-sytem.jpg" width=100% alt="Integrated System">
+        <br>
+        <br>
+        <h2>The Finished Build</h2>
+        <p>The final build successfully showcased the technology with two tiles. Its implications span from educational play, to role-playing gameplay, to the architectural design industry and more.</p>
+        <video src="../images/final-demo.mp4" controls loop width="100%">
+        This browser does not support HTML video.
+         </video> 
+        <br>
+        <br>
+        <h2>Final Project Description</h2>
+        <br>
+        <p><strong>What does it do?</strong>
+        <br>Archiblox discreetly senses a physical 3-dimensional tile placed on a build board and wirelessly transmits the 2-dimensional floorplan of the tile on a web app. 
+        <br><br><strong>Who's done what beforehand?</strong>
+        <br>The concept builds on the educational values of Froebel Blocks for free play, but combines it with technology to nurture advanced spatial thinking. There are other technology toys on the market that use QR codes for an AR view of a digital 3D object on a physical object through a smartphone or virtual reality/augmented reality glasses. This concept marries the best of both worlds allowing for tactile physical creativity and unlocking 2d digital play - both synced live. 
+        <br><br><strong>What did you design?</strong>
+        <br>I designed the Custom PCB boards, the Build Board, the 3-Dimensional tile variations, and the basic web interface the sensors transmit to.
+        <br><br><strong>What materials and components were used?</strong>
+        <br>The build board is made up of solid wood, to harken back to the crafted toy experience, and the tiles are made of PLA with a marble composite aesthetic.
+        <br> <br><strong>Where did they come from?</strong>
+        <br>Pine is prevalent in South Florida as many lumber yards source these locally. The Bambulabs PLA, electronic components, and magnets were imported.
+        <br><br><strong>How much did they cost?</strong>
+        <br>My final 2-tile mini board prototype has a total material cost of $45.75 (refer to the bill of materials linked below) but this does not account for the sunk costs of tooling, additional quantities of components sold in bulk packs, and other overhead costs.
+        <br><br><strong>What parts and systems were made?</strong>
+        <br>The custom pcbs were made on a Bantam Tools precision CNC, the build board was made on a Shop Sabre CNC router, and the individual tiles were made on a Bambulabs 3D Printer.
+        <br><br><strong>What processes were used?</strong>
+        <br>The board code was programmed using CircuitPython on Thonny, The PCBs were designed on KiCad and milled using the Bantam Tools CAM software. The build board was designed in Rhinocerous3D and sliced in Bambulabs slicer, and the top of the board was laser etched using a Full Spectrum Laser running RetinaEngrave V3. Soldering was done using paste and a handheld heat gun for reflow. Magnets were press-fit into the tiles and secured with adhesive.
+        <br><br><strong>What questions were answered?</strong>
+        <br>This prototype illustrates the possibility of a new hybrid physical and digital play workflow. It also validates the concept of using hall sensors and magnets to trigger the synchronized play environment.
+        <br><br><strong>What worked? What didn't?</strong>
+        <br>The four magnet/hall array worked really well in quickly transmitting the type of tile, the orientation of the tile, as well as it's position on the board. After caching the images in the code, the response time was very fast and natural. To build beyond a two tile board, I would need a microcomputer with significantly more inputs. I experimented with a multiplexor to extend the capability of the Xiao ESP32S3 but ran into digital/analog problems which resulted in any single hall sensor triggering an all on or all off response. I concluded that for the larger 3x3 tile board, I would need to utilize a Raspberry Pi to have enough inputs to handle the quantity of hall sensors.
+        <br><br><strong>How was it evaluated?</strong>
+        <br>The prototype was evaluated by its ability to deliver the hybrid 3d and 2d live creative play experience. In that fact, it was a success. But the limitation to two tiles warrants continued development and a more robust web app would unlock much more play potential in the 2D environment.
+        <br><br><strong>What are the implications?</strong>
+        <br>Archiblox would be a versatile modular system for the following markets: Educational play as a building toy, Creative play for older gaming enthusiasts including role-playing games or other map-based play, and for the Architectural Design industry to quickly mock up a layout with a client in real-time. The next version could have different customized themed-tile types to fit each market, and the web app can also have various modes to support these various use-cases.
+        </p>
+        <br>
+        <br>
+        <iframe style="width:100%; height:600px"src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSBHPQB-4Vr6trwhXD_-AZTDdVjb0DkpvMm8j4TdlPYaRW_Qc8xDHl3T4TPlhPnAZm0BpmWmBVQsyh1/pubhtml?widget=true&amp;headers=false"></iframe>
+        <br>
+        <br>
+        <img src="../presentation.png" width=100% alt="Archiblox Sketch">
+        <br>
+        <br>
+        <h2>Final Presentation Video</h2>
+<video src="../presentation.mp4" controls loop width="100%">
+  This browser does not support HTML video.
+</video>  
+        <br>
+        <br>
+        <strong>Files</strong>
+        <br>
+        <a href=”../files/archiblox.3dm” download>Download Tiles 3D Model</a>
+        <a href=”../files/ARCHIBLOX-CASE.3dm” download>Download Case 3D Model</a>
+        <a href=”../files/ARCHIBLOX-CODE.zip” download>Download Code</a>
+        <br>
+        <p>Copyright 2024 Thomas Pupo - Creative Commons Attribution Non Commercial<br>Source code hosted at <a href="https://gitlab.fabcloud.org/academany/fabacademy/2024/labs/hopelab/students/thomas-pupo">fabcloud/fabacademy/2024/thomas-pupo</a></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+Title: Applications and Implications
+
+URL Source: http://fabacademy.org/2018/labs/fablabzoi/students/guillermo-guerra/week17.html
+
+Markdown Content:
+What will it do?
+----------------
+
+I am currently developing a project to support children with motor problems within a foundation in Cuenca - Ecuador, so I spoke with some of the teachers in charge and they told me about some ideologies within the teaching and what more I liked it was "learn by playing". so implement this ideology in this project.  
+The project is to create a toy with which the child with motor problems plays and interacts with it and while the robot plays supports the development of the child's therapy.  
+To better understand gross motor skills refers to activities that require using the large muscles of the arms, legs, such as running jumping reaching things, among others.
+
+  
+
+Scopes of the project
+---------------------
+
+The project aims to support foundations, educational establishments, fab kids, and any space that works with children for whom Firulais can be supportive, stimulating a positive change in children who need it most.
+
+  
+
+Who's done what beforehand?
+---------------------------
+
+There are many toys that teach children, whether they learn letters, numbers, words. But there are few who support therapies supporting and instructing the child. The main and greatest example is the robot called NAO, it is an interactive, programmable robot.  
+Below you can find a link to learn more about NAO.  
+[](http://aliverobots.com/nao/)
+
+#### [Nao link](http://aliverobots.com/nao/)
+
+What materials and components will be required?
+-----------------------------------------------
+
+\- Micro reducer motor  
+\- HC-SR04 Sensor  
+\- Steel rod  
+\- Sensor hall 003  
+\- Neodymium magnet  
+\- Ruleman
+
+Where will they come from?
+--------------------------
+
+All electronic materials are inside the Fab inventory.  
+Machining will use existing machines and basic use in a Fab Lab.  
+The materials such as the rod and the ruliman are standard materials that can be found worldwide.
+
+  
+
+How much will it cost?
+----------------------
+
+\-The components of materials with an approximate of $ 40.00.  
+\-The bearings $ 3.00  
+\-3D printing $ 60.00 (cost per hour of 3D printing 4.00 x hour).  
+\-The rod 3mm (10cm) $ 0.20  
+TOTAL $ 103.20
+
+  
+
+What parts and systems will be made?
+------------------------------------
+
+An electronic board will be created that controls both the sensors and the motors, which will centralize the entire Firulais process.  
+On the other hand create a friendly design for both children and to achieve mechanization without problems so that it can be replicated in any Fab Lab.
+
+What processes will be used?
+----------------------------
+
+\- CNC electronics boards  
+\- 3D printing  
+\- Composites  
+\- Output Devices  
+\- Input Devices  
+\- Mechanical desing
+
+What tasks need to be completed?
+--------------------------------
+
+1\. Design  
+1.1 3D Modeling  
+1.2 Assemblies  
+1.3 test join  
+2\. Molding and casting  
+2.1 Design  
+2.2 Production  
+3\. Electronic production  
+3.1 Design  
+3.2 Production  
+3.3 test 4. Join all process
+
+What questions need to be answered?
+-----------------------------------
+
+Can I make a faster prototype?  
+What movements can help the child?  
+How to help the child with his therapy?
+
+What is the schedule?
+---------------------
+
+In the next link we can take my the time line of my final project
+
+How will it be evaluated?
+-------------------------
+
+The principal purpose is make product whit them get better the process of therapy. The functionality and the concept, I think is the most important items to my evaluation.

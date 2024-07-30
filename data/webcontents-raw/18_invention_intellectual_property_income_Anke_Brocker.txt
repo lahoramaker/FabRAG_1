@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fab Academy 2018 - Assignment 17</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Fab Academy 2018 Home</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutNew.html">About</a>
+                </li>
+                <!--<li class="nav-item">-->
+                <!--<a class="nav-link" href="services.html">Services</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--<a class="nav-link" href="contact.html">Contact</a>-->
+                <!--</li>-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Assignments
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                        <a class="dropdown-item" href="assignment1.html">Assignment 1: Project Management</a>
+                        <a class="dropdown-item" href="assignment2.html">Assignment 2.1: 2D Design</a>
+                        <a class="dropdown-item" href="assignment2.2.html">Assignment 2.2: 3D Design</a>
+                        <a class="dropdown-item" href="assignment3.html">Assignment 3: Computer-controlled Cutting</a>
+                        <a class="dropdown-item" href="assignment4.html">Assignment 4: Electronics Production</a>
+                        <a class="dropdown-item" href="assignment5.html">Assignment 5: 3D scanning and printing</a>
+                        <a class="dropdown-item" href="assignment6.html">Assignment 6: Electronics Design</a>
+                        <a class="dropdown-item" href="assignment7.html">Assignment 7: Computer-controlled Machining</a>
+                        <a class="dropdown-item" href="assignment8.html">Assignment 8: Embedded Programming</a>
+                        <a class="dropdown-item" href="assignment9.html">Assignment 9: Molding & Casting</a>
+                        <a class="dropdown-item" href="assignment10.html">Assignment 10: Input Devices</a>
+                        <a class="dropdown-item" href="assignment11.html">Assignment 11: Output Devices</a>
+                        <a class="dropdown-item" href="assignment12.html">Assignment 12: Interface & Application Programming</a>
+                        <a class="dropdown-item" href="assignment13.html">Assignment 13: Networking & Communications</a>
+                        <a class="dropdown-item" href="assignment14.html">Assignment 14: Mechanical & Machine Design</a>
+                        <a class="dropdown-item" href="assignment15.html">Assignment 15: Wildcard Week</a>
+                        <a class="dropdown-item" href="assignment16.html">Assignment 16: Applications & Implications</a>
+                        <a class="dropdown-item" href="assignment17.html">Assignment 17: Invention, Intellectual Property & Income</a>
+                    </div>
+                </li>
+                <!--<li class="nav-item dropdown">-->
+                <!--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                <!--Blog-->
+                <!--</a>-->
+                <!--<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">-->
+                <!--<a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>-->
+                <!--<a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>-->
+                <!--<a class="dropdown-item" href="blog-post.html">Blog Post</a>-->
+                <!--</div>-->
+                <!--</li>-->
+                <!--<li class="nav-item dropdown">-->
+                <!--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                <!--Other Pages-->
+                <!--</a>-->
+                <!--<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">-->
+                <!--<a class="dropdown-item" href="full-width.html">Full Width Page</a>-->
+                <!--<a class="dropdown-item" href="sidebar.html">Sidebar Page</a>-->
+                <!--<a class="dropdown-item" href="faq.html">FAQ</a>-->
+                <!--<a class="dropdown-item" href="404.html">404</a>-->
+                <!--<a class="dropdown-item" href="pricing.html">Pricing Table</a>-->
+                <!--</div>-->
+                <!--</li>-->
+                <li class="nav-item">
+                    <a class="nav-link" href="finalProject.html">Final Project</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Assignment 17
+        <!--<small>Subheading</small>-->
+    </h1>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Assignment 17</li>
+    </ol>
+
+    <!-- Intro Content -->
+    <div class="row">
+        <!--<div class="col-lg-12">-->
+        <!--&lt;!&ndash;<img class="img-fluid rounded mb-4" src="website-setup-1.jpg" alt="">&ndash;&gt;-->
+
+
+        <!--<h2 align="center" >2D Design Concepts</h2>-->
+        <!--</div>-->
+
+
+
+
+        <div class="col-lg-12">
+            <!--<img class="img-fluid rounded mb-4" src="website-setup-1.jpg" alt="">-->
+
+
+            <h2 align="center" >Invention, Intellectual Property, & Income</h2>
+            <p align="center">
+                <img height="470" align="center" src="images/assignment17/Intellectual-Property.jpg">
+                <figcaption align="center" class="figure-caption"><a class="link" href="http://www.wsuventures.org/get-started/protecting-intellectual-property-ippatents">Intellectual Property</a></figcaption>
+
+            </p>
+            <br>
+            After designing and fabricating so many different objects over the last months several question arise what we want to do with
+            our materials and how we can handle them when sharing with others:
+            <ul>
+                <li>How can we spread it? </li>
+                <li>How can we protect it in terms of copyright, patents and licenses? </li>
+                <li>How can we assure that our name will always be attached?</li>
+            </ul>
+
+        </div>
+
+        <div class="col-lg-12">
+            <hr>
+            <h4 align="center" >Licenses</h4>
+            Definition by <a class="link" href="https://www.techopedia.com/definition/17177/license">techopedia</a></figcaption>: <i>'A license is an agreement
+            that allows someone to copy, use, or resell a commodity, such as digital content.'</i>
+            <br>
+            Moreover, by online search I found out that there exist several characteristics that a
+            license can have to fit all kinds of need of the owners. Owners need to assure they understand these characteristics and choose the option that
+            covers most of their needs.
+
+        </div>
+
+        <div class="col-lg-12">
+            <hr>
+            <h5 align="center" >License Comparison</h5>
+            <!--<h6 align="center" >GNU (Lesser General Public License) vs. Creative Commons</h6>-->
+            To achieve a feeling for the different types of licenses we were asked to compare different approaches of licenses. I decided to compare the 'LGPL', the 'Creative Commons'
+            and the 'Apache license, version 2.0' approach.
+            <br>
+            <br>
+            <b>a.) LPGL</b> <br>
+            <ul>
+                LGPL (Lesser General Public License) gives developers and companies the opportunity to integrate software released under
+                the LGPL into their software. But they are not required by the
+                terms of a strong copyleft license to release the source code of their own components. I.e. the code is not available for others to work with it and
+                change it. The code just has to be available for other users.<br>
+                <b>Copyleft definition:</b> people have the right to freely distribute copies and modified versions
+                of a work with the condition that the same rights be preserved in derivative works down the line.
+            </ul>
+
+            <b>b.) Creative Commons</b> <br>
+            <ul>
+                <a class="link" href="https://creativecommons.org">Creative Commons</a> is a nonprofit organisation that offers copyright licenses for digital work.<br>
+
+                Several licenses are offered, from which designers can select which of the licenses best fits their purpose. For other people to know they mark
+                their work accordingly. This way others are able to read detailed terms and conditions. The Creative Commons organisation provides option that picture the
+                maker movement thought very close.
+                <br>
+                These six categories of licenses are present (definitions taken from <a class="link" href="http://whatis.techtarget.com/definition/Creative-Commons-copyright">here</a>):
+                <ul>
+                    <li><b>Attribution</b> - lets others distribute, remix, tweak and build upon work, even commercially, as long as they credit the creator for the original work.</li>
+
+                    <li><b>Attribution-NoDerivs</b> - allows for commercial and non-commercial redistribution, as long as the work is passed along unchanged and in whole, crediting the creator.</li>
+
+                    <li><b>Attribution-NonCommercial-ShareAlike</b> - lets others remix, tweak, and build upon work for non-commercial purposes,
+                        as long as they credit the creator and license any new creations under the identical terms.</li>
+
+                    <li><b>Attribution-ShareAlike</b> - lets others remix, tweak, and build upon work for commercial and non-commercial purposes,
+                        as long as they credit the creator and license new creations under the identical terms.</li>
+
+                    <li><b>Attribution-NonCommercial</b> - lets others remix, tweak, and build upon work for non-commercial purposes, crediting the creator.
+                        Derivative works do not have to be licensed under the same terms.</li>
+
+                    <li><b>Attribution-NonCommercial-NoDerivs</b> - allows others to download work and share it as long as they credit the creator,
+                        don't change the work in any way or use it for commercial purposes.</li>
+                </ul>
+            </ul>
+
+            <b>c.) Apache license, version 2.0</b> <br>
+            <ul>
+                The Apache License is a free and open source software (FOSS) licensing agreement from the Apache Software Foundation.
+                <ul>
+                    <li>Software can be freely used, reproduced, modified, distributed or sold.</li>
+                    <li>Software can be combined with other products and sold as together.</li>
+                    <li>Products derived or modified from licensed software can be distributed under other licenses.</li>
+                    <li>A copy of the license must be distributed along with any Apache software as well.</li>
+                </ul>
+                Basically, the point of commercial use and sale cannot be taken away from the Apache license. This is a problem for me, as I do not want others to make money with my
+                body of thought.
+            </ul>
+
+            <hr>
+            <h5 align="center" >Which license is the best one for me?</h5>
+            For my assignments and final project I have chosen to use the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+            license. The characteristics of this license provide exactly the important rules which I want to be effective for my material.<br>
+            I chose the suitable license based on the definitions in the paragraph above. To double check my decision I used the tool of the
+            <a class="link" href="https://creativecommons.org/choose/">Creative Commons website</a>.
+            <p align="center">
+                <img height="450" align="center" src="images/assignment17/license.png">
+                <figcaption align="center" class="figure-caption">Result of questionnaire to check suitable Creative Commons license.</figcaption>
+            </p>
+            I decided to not let my material be used commercial as this is not a part of the maker-methodology. Knowledge should be disseminated free of costs to assure
+            everybody gets a chance to use it. Paying money for the material would restrict the knowledge spreading to a certain group of people.
+
+        </div>
+
+        <div class="col-lg-12">
+            <hr>
+            <h4 align="center" >Dissemination of Project</h4>
+            Nowadays exist various options to 'advertise' and disseminate a project for free. Social platforms, e.g. Twitter, Instagram, Snapchat or Facebook can easily be used
+            to show your friends your project. Additionally, website like <a class="link" href="https://www.thingiverse.com">Thingiverse</a> allow you to share your project with
+            other people. Of course, the license discussion has also been present on these websites as reported in
+            <a class="link" href="https://www.makerbot.com/media-center/2016/03/14/thingiverse-creative-commons-licenses-explained">this article</a>. With the help of these
+            platforms I would start spread my project. If after I assume 5-6 months I do not receive feedback that the project reached people I would try to find maker meet-ups
+            nearby and bring the project along. One step further would be visiting a Maker Faire but I personally do not intend to actuate so much effort if the social media
+            platforms and regional meet-ups are not enough to spread the project. Maybe that means that the project does need more improvement.
+            <br>
+            <br>
+        </div>
+
+
+
+
+    </div>
+    <!-- /.row -->
+
+    <!--&lt;!&ndash; Team Members &ndash;&gt;-->
+    <!--<h2>Our Team</h2>-->
+
+    <!--<div class="row">-->
+    <!--<div class="col-lg-4 mb-4">-->
+    <!--<div class="card h-100 text-center">-->
+    <!--<img class="card-img-top" src="http://placehold.it/750x450" alt="">-->
+    <!--<div class="card-body">-->
+    <!--<h4 class="card-title">Team Member</h4>-->
+    <!--<h6 class="card-subtitle mb-2 text-muted">Position</h6>-->
+    <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<a href="#">name@example.com</a>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-lg-4 mb-4">-->
+    <!--<div class="card h-100 text-center">-->
+    <!--<img class="card-img-top" src="http://placehold.it/750x450" alt="">-->
+    <!--<div class="card-body">-->
+    <!--<h4 class="card-title">Team Member</h4>-->
+    <!--<h6 class="card-subtitle mb-2 text-muted">Position</h6>-->
+    <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<a href="#">name@example.com</a>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-lg-4 mb-4">-->
+    <!--<div class="card h-100 text-center">-->
+    <!--<img class="card-img-top" src="http://placehold.it/750x450" alt="">-->
+    <!--<div class="card-body">-->
+    <!--<h4 class="card-title">Team Member</h4>-->
+    <!--<h6 class="card-subtitle mb-2 text-muted">Position</h6>-->
+    <!--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<a href="#">name@example.com</a>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; /.row &ndash;&gt;-->
+
+    <!--&lt;!&ndash; Our Customers &ndash;&gt;-->
+    <!--<h2>Our Customers</h2>-->
+    <!--<div class="row">-->
+    <!--<div class="col-lg-2 col-sm-4 mb-4">-->
+    <!--<img class="img-fluid" src="http://placehold.it/500x300" alt="">-->
+    <!--</div>-->
+    <!--<div class="col-lg-2 col-sm-4 mb-4">-->
+    <!--<img class="img-fluid" src="http://placehold.it/500x300" alt="">-->
+    <!--</div>-->
+    <!--<div class="col-lg-2 col-sm-4 mb-4">-->
+    <!--<img class="img-fluid" src="http://placehold.it/500x300" alt="">-->
+    <!--</div>-->
+    <!--<div class="col-lg-2 col-sm-4 mb-4">-->
+    <!--<img class="img-fluid" src="http://placehold.it/500x300" alt="">-->
+    <!--</div>-->
+    <!--<div class="col-lg-2 col-sm-4 mb-4">-->
+    <!--<img class="img-fluid" src="http://placehold.it/500x300" alt="">-->
+    <!--</div>-->
+    <!--<div class="col-lg-2 col-sm-4 mb-4">-->
+    <!--<img class="img-fluid" src="http://placehold.it/500x300" alt="">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; /.row &ndash;&gt;-->
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">This work is licensed under a
+            <a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

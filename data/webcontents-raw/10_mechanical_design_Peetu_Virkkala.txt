@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Week_15</title>
+  </head>
+  <body>
+	<h1> Assignment 15&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp; 2.5.2018<br>
+	</h1>
+	<h2>Topic: Mechanical design</h2>
+	Goals of this week:<br>
+	<ul>
+	  <li>Design a machine that includes mechanism+actuation+automation (Group) (<a href="http://fab.academany.org/2018/labs/fablaboulu/machine_week_group2.html">LINK</a>)<br></li>
+	  <li>Build the passive parts and operate it manually (Group) (<a href="http://fab.academany.org/2018/labs/fablaboulu/machine_week_group2.html">LINK</a>)</li>
+	  <li>Document the group project and your individual contribution (Group) (<a href="http://fab.academany.org/2018/labs/fablaboulu/machine_week_group2.html">LINK</a>)</li>
+	</ul>
+	There were no individual assignments for this week so here you can find my individual contribution for this week´s machine project<br>
+	<h2>Brainstorming the idea</h2>
+	Our lab divided into two groups. Our group decided to create automatic apple peeling device. Before going any further, we researched more<br>
+	about the device. I found following examples:<br>
+	<img src="images/Week15-MechanicalDesign/Apples.jpg" alt="apples" width="400"
+	  height="400"><br>
+	<br>
+	When we had more information about the possibilities, we had a brainstorming session for machine designing:<br>
+	<img src="images/Week15-MechanicalDesign/Selvittelyä.jpg" alt="Selvittelyä" width="400"
+	  height="400"><br>
+	<br>
+	First, we visualized how the machine could work:<br>
+	<img src="images/Week15-MechanicalDesign/How.jpg" alt="How" width="400"
+	  height="450"><br>
+	<br>
+	Then we imagined the apple peeling procedure from the start to finish:<br>
+	<img src="images/Week15-MechanicalDesign/Model.jpg" alt="Model" width="400"
+	  height="500"><br>
+   	<br>
+   	According to our findings, I created two sketches about our machine:<br>
+   	<img src="images/Week15-MechanicalDesign/image1.jpg" alt="image1" width="400"
+	  height="300"><br>
+	<br>
+	<img src="images/Week15-MechanicalDesign/image2.jpg" alt="image2" width="400"
+	  height="300"><br>
+	<br>
+	After this sketching session, we divided responsibility and began to create the machine.<br>
+	<h2>Creating a dish</h2>
+	When the machine peels the apple, apple peels drop on the top of the machine. To protect the machine from the peels, I decided to create<br>
+	a simple waterproof dish. First I tried to create the dish from a yellow 3mm vinyl plate:<br>
+	<img src="images/Week15-MechanicalDesign/Plastic.jpg" alt="plastic" width="400"
+	  height="400"><br>
+	  <br>
+	However, it was difficult to glue the pieces together so I decided to do same design with an mdf-pieces and cover them with an epoxy layer.<br>
+	First I printed the pieces and glued them together with a paper glue:<br>
+	<img src="images/Week15-MechanicalDesign/Mdf.jpg" alt="Mdf" width="400"
+	  height="600"><br>
+	<br>
+	Then I mixed an epoxy liquid and covered the glued piece with it:<br>
+	<img src="images/Week15-MechanicalDesign/Epox.jpg" alt="Epox" width="400"
+	  height="600"><br>
+	<br>  
+ 	Next morning, epox had dried out and the dish was ready to be used:<br>
+ 	<img src="images/Week15-MechanicalDesign/Dish.jpg" alt="Dishfinal " width="400"
+	  height="400"><br>
+ 	<br>
+ 	<h2>Building a base for a stepper motor</h2>
+ 	I built a durable container for a stepper motor inside of a cardboard box. First I used super strong tape to attach the motor to box. Then<br>
+ 	I created cardboard dividers and attached them to box. Finally, I filled all empty spots with a wool and covered the box with a masking tape.<br>
+ 	The box was now ready to be used:<br>
+ 	<img src="images/Week15-MechanicalDesign/boxi.jpg" alt="Boxi" width="600"
+	  height="300"><br>
+ 	<h2>Creating a pitchfork</h2>
+ 	Next, I began to create a pitchfork which is used to pierce an apple. To do this, I acquired a sausage stick and measured its width with<br>
+ 	a micrometer screw:<br>
+	<img src="images/Week15-MechanicalDesign/Atrain.jpg" alt="Atrain" width="400"
+	  height="350"><br>
+	<br>
+	Next, our team 3D printed a clutch according to width measurements which we got from the sausage stick and the stepper motor. When the clutch<br>
+	was ready, I cut the sausage stick with an iron saw and attached the piece to the clutch. To tight the bond between the pieces, I used a piece of<br>
+	wool to wedge the pieces together.<br>
+	<img src="images/Week15-MechanicalDesign/Tiukka.jpg" alt="Tiukka" width="400"
+	  height="269"><br>
+	<br>
+	<img src="images/Week15-MechanicalDesign/Team2.jpg" alt="Team2" width="500"
+	  height="375"><br>
+	<h2>FILES made THIS WEEK</h2>
+	<ul>
+	<li><a href="Files/Week15/Dish.pdf" alt="Dish">Dish pdf. file</a><br></li>
+	</ul>
+	<br>
+	<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+
+
+
+
+
+

@@ -1,0 +1,159 @@
+Title: Applications and Implications
+
+URL Source: http://fabacademy.org/2021/labs/kochi/students/pallab-shrestha/Applications_and_Implications.html
+
+Markdown Content:
+#### Assignment
+
+Propose a final project masterpiece that integrates the range of units covered, answering:  
+    a. What will it do?  
+    b. Who's done what beforehand?  
+    c. What will you design?  
+    d. What materials and components will be used?  
+    e. Where will come from?  
+     f. How much will they cost?  
+    g. What parts and systems will be made?  
+    h. What processes will be used?  
+     i. What questions need to be answered?  
+     j. How will it be evaluated?  
+Your project should incorporate  
+    a. 2D and 3D design,  
+    b. additive and subtractive fabrication processes,  
+    c. electronics design and production,    
+    d. embedded microcontroller interfacing and programming,  
+    e. system integration and packaging  
+Where possible, you should make rather than buy the parts of your project  
+Projects can be separate or joint, but need to show individual mastery of the skills, and be independently operable
+
+![Image 1: Week16_Plan](https://fabacademy.org/2021/labs/kochi/students/pallab-shrestha/assets/images/week16-task-1219x316.jpg)
+
+#### Introduction
+
+This week we will be documenting about the final project. Its function, parts, cost, process involved and evaluation criteria.   
+Our Lab is closed and will remain closed until further notice due to covid issues.
+
+I had planned on doing Solar Cleaner but sue to unavailability of parts inhouse and as the hardware shops are not open, i decided to change my project to medicine dispenser.
+
+The main purpose of the proposed system is to help patients, mainly seniors and elderly people, take their medications on time in an easy manner without the possibility of skipping pills and thus reducing the risk of accidental over/under dose treatment. Failing to take medications promptly can have serious consequences on patients including delay in recovery, occurrence of other illness and even death.
+
+![Image 2: dispenser](https://fabacademy.org/2021/labs/kochi/students/pallab-shrestha/assets/images/untitled.63-1-1646x1259.jpeg)
+
+**What will it do?**   
+Functionally, it will dispense the medication according to the user entered time maximum up to 3 times a day. When modules are connected in series, it can dispense from more than one module meaning different type of tablets per requirement of the user.
+
+As an outcome, it will help people to take medication on time without forgetting. This will also help to prevent confusion between medicines when to take which one reducing irregularity.
+
+The User interface will be following
+
+![Image 3: GUI_Plan_final](https://fabacademy.org/2021/labs/kochi/students/pallab-shrestha/assets/images/fab-gui-1125x2436.png)
+
+**Who's done what beforehand?**   
+There are commercial dispensers that can be found like the following
+
+https://www.instructables.com/The-Automatic-Pill-Dispenser/  
+https://www.instructables.com/AUTOMATIC-PILL-DISPENSER/#:~:text=AUTOMATIC%20PILL%20DISPENSER.%20This%20is%20a%20pill%20dispenser,the%20machine%20is%20easily%20refilled%20by%20the%20user.
+
+Similiarly you can make a diy pill dispenser which are shared in instructables.
+
+[![Image 4: instructables1](https://fabacademy.org/2021/labs/kochi/students/pallab-shrestha/assets/images/f6ejhkjjq2o66gp-640x700.jpeg)](https://www.instructables.com/AUTOMATIC-PILL-DISPENSER/#:~:text=AUTOMATIC%20PILL%20DISPENSER.%20This%20is%20a%20pill%20dispenser,the%20machine%20is%20easily%20refilled%20by%20the%20user.)
+
+[![Image 5: instructables2](https://fabacademy.org/2021/labs/kochi/students/pallab-shrestha/assets/images/ff2rm4hjqaszohu-1-525x700.jpeg)](https://www.instructables.com/The-Automatic-Pill-Dispenser/)
+
+There are some open source manual dispenser as well from which it can be used like that or can be made automatic according to the requirement. You can download the opensource manual dispenser from this [link](https://www.welder.app/careables.org/enzyme.dispenser.mechanism/master/tree)
+
+![Image 6: manual2](https://fabacademy.org/2021/labs/kochi/students/pallab-shrestha/assets/images/0.krrdray8w9c789597bc-f820-475e-b9d8-16a4c8cce8b0-690x518.jpg)
+
+![Image 7: manual](https://fabacademy.org/2021/labs/kochi/students/pallab-shrestha/assets/images/0.xybg413ydcimage-1-900x518.jpeg)
+
+In commercial, or automatic, every week has to be filled in advance with different tablets but i am trying to make one dispenser per pill and make it modular for multiple pills. and just fill it one only .
+
+#### **What will you design?**I will design following:
+
+1.  **Mechanism:** mechanism design to dispense the medication tablets.
+2.  **Casing**: It Holds every thing together, mechanism, electronics, and material.  
+    \- Design for assembly  
+    \- Design for fabrication  
+    \- Design for cost  
+    \- Design for versatility
+3.  **Electronics design:** Design the board for the mechanism for the dispensor
+4.  **Programming:**   
+    \- Embedded programming for the microcontrollers  
+    \- Connect via mobile platform
+5.  **Networking:**  
+    \-I2C communication protocol between main board and the secondary modules
+
+#### **What materials and components will be used?** 
+
+1.  **Mechanism:** PLA plastic
+2.  **Casing**:   
+    \- PLA plastic  
+    \- M2 Nuts and bolts  
+    \- Inserts  
+    \- Acrylic (tray and cup)
+3.  **Electronics :**  
+    **Master Board:**  
+    \-ESP-32 X 1  
+    \-10K ohm resistor X 2 \-4.99K ohm resistor X 2 \-1K ohm resistor X 1 \-10uF Capacitor X 1 \-1uF Capacitor X 1 \-0.1uF Capacitor X 1 \-MOSFET N-Channel \-5 to 3.3 Voltage regulator X 1 \-2x2 header pin X 1 \-FTDI header pin X 1 \-1x3 THT header pin X 1 \-1x4 THT header pin X 1 \-SPDT switch X 1 \-Tactile switch X 1 \-Buzzer X 1 \-Connection Jack 2.1mm X 1 \-Servo Motor X 1  
+    **Master Hall Module:**  
+    \-Hall effect sensor X 1  
+    \-MOSFET N-Channel X 1 \-10K ohm Resistor X 2 \-1K ohm Resistor X 1 \-1uF Capacitor X 1  
+    \-Blue Led THT X 1 \-1x4 THT header pin X 1  
+    **Secondary main board:**  
+    \-ATtiny 412 X 1  
+    \-10K ohm resistor X 1  
+    \-1K ohm resistor X 1  
+    \-4.99K ohm resistor X 1  
+    \-1uF Capacitor X 1   
+    \-MOSFET N-Channel X 1  
+    \-2x2 header pin X 2  
+    \-1x3 THT header pin X 2  
+    \-Buzzer X 1  
+    \-Servo Motor X 1  
+    **Secondary hall module:**  
+    \-Hall effect sensor X 1  
+    \-1K ohm Resistor X 1 \-Blue Led THT X 1 \-1x3 THT header pin X 1
+
+**Where will come from?**   
+I am a person who when  does something, is focused on that particular work only which makes me forget many things. In work, google calendar came handy which reminded of events that kept me on track. But for medicines, whenever I had to, sometimes i would skip a schedule or there is a delay. Later I found out from the doctor that each medicine has a course in which it has to be taken without skipping the schedule otherwise the medication would not be effective.  
+Even for me it was hard and I thought how would elderly people maintain the strict schedule. I searched if there is any dispenser and found out there are many, but for I could not find it back in my hope country Nepal.
+
+But i found out that there are commercial medicine dispenser and also there are research papers for the dispenser and Thought of making one locally in a digital  fabrication lab which can be recreated anywhere with digital fabrication facilities,.
+
+**How much will they cost?**  
+There are many types of cost while defining the cost of the product as like R&D cost, material cost, fabrication cost, packaging cost, QA/QC cost, Marketing cost, profit etc but for now I will be only mentioning the material cost for electronics only.
+
+![Image 8: costing](https://fabacademy.org/2021/labs/kochi/students/pallab-shrestha/assets/images/costing-1024x710.jpg)
+
+**What parts and systems will be made?**   
+Standard parts like ESP32, ATTiny-412, resistors capacitors will be used and except that all will be fabricated as follows  
+1\. A slider mechanism will be made using 3D printed part and actuated by servomotor.  
+2\. The servo motor will be operated from two types of electronics board board with ESP 32 in master and ATTiny-412 in secondary.  
+3\. Main board with Hall sensor module underneath the container.  
+4\. Transparent Cartridge for medicine will be made from laser cutting.  
+5\. Hopper with lid will be designed and using 3D printer it will be fabricated.  
+6\. Magnetic hopper will be made from laser cutting and 3D printing.  
+7\. A compact casing including all of them will be then designed and printed using 3D printer.
+
+**What processes will be used?**   
+1\. Computer Aided Design, part and assembly  
+2\. Electronics design  
+3\. 3D printing  
+4\. Laser cutting  
+5\. Vinyl Cutting  
+6\. PCB milling  
+7\. Stuffing, Soldering, testing, debugging  
+8\. Embedded programming  
+9\. Assembly  
+10\. Testing  
+11\. Iteration
+
+**What questions need to be answered?**   
+1\. Does it dispense well?  
+2\. Is there any complication while loading the medications in the hopper?  
+3\. Does it dispense according to the time entered by the user?  
+4\. Is it modular?
+
+**How will it be evaluated?**  
+Since the Lab was closed since the Output week, most of the class week was self learning and theoretical learning only so for the final project the evaluation criteria that i think would be that it should dispense medication of designed size tablet smoothly without errors as per user.
+
+[](https://mobirise.site/e)[web page](https://mobirise.site/s) was started with Mobirise theme

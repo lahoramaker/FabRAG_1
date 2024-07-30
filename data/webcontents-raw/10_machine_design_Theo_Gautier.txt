@@ -1,0 +1,2835 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Fab Academy documentation site for GAUTIER Théo">
+      
+      
+      
+        <meta name="author" content="GAUTIER Théo">
+      
+      
+        <link rel="canonical" href="http://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/">
+      
+      <link rel="shortcut icon" href="../../images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>10. Mechanical & machine design - GAUTIER Théo - Fab Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#10-mechanical-machine-design" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="http://fabacademy.org/2021/labs/agrilab/students/theo-gautier/" title="GAUTIER Théo - Fab Academy" class="md-header-nav__button md-logo" aria-label="GAUTIER Théo - Fab Academy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            GAUTIER Théo - Fab Academy
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              10. Mechanical & machine design
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../week01/" class="md-tabs__link md-tabs__link--active">
+        Assignments
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../projects/final-project/" class="md-tabs__link">
+        Projects
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="http://fabacademy.org/2021/labs/agrilab/students/theo-gautier/" title="GAUTIER Théo - Fab Academy" class="md-nav__button md-logo" aria-label="GAUTIER Théo - Fab Academy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+
+    </a>
+    GAUTIER Théo - Fab Academy
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        About
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About me
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/agreement/" class="md-nav__link">
+        Student Agreement
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      
+      <label class="md-nav__link" for="nav-3">
+        Assignments
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assignments" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Assignments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week01/" class="md-nav__link">
+        1. Principles and practices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week02/" class="md-nav__link">
+        2. Project management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week03/" class="md-nav__link">
+        3. Computer Aided design
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week04/" class="md-nav__link">
+        4. Computer controlled cutting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week05/" class="md-nav__link">
+        5. Electronics production
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week06/" class="md-nav__link">
+        6. 3D Scanning and printing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week07/" class="md-nav__link">
+        7. Electronics design
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week08/" class="md-nav__link">
+        8. Computer controlled machining
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week09/" class="md-nav__link">
+        9. Embedded programming
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week10/" class="md-nav__link">
+        11. Molding and casting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week11/" class="md-nav__link">
+        12. Input devices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week12/" class="md-nav__link">
+        13. Output devices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week13/" class="md-nav__link">
+        14. Applications and implications
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week14/" class="md-nav__link">
+        15. Networking and communications
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          10. Mechanical & machine design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        10. Mechanical & machine design
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#video-shot" class="md-nav__link">
+    Vidéo shot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment" class="md-nav__link">
+    Group assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slide" class="md-nav__link">
+    Slide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#day-1-thinking-of-an-idea-looking-for-kind-of-equipment-with-have-at-agrilab-start-the-design-and-test-some-electronics" class="md-nav__link">
+    Day 1 - thinking of an idea, looking for kind of equipment with have at Agrilab, start the design and test some electronics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-assignment" class="md-nav__link">
+    Individual assignment:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fusion-360" class="md-nav__link">
+    Fusion 360
+  </a>
+  
+    <nav class="md-nav" aria-label="Fusion 360">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-make-a-mcmaster-carr-insertion" class="md-nav__link">
+    How do I make a McMaster Carr insertion ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-parts-for-laser-cutting" class="md-nav__link">
+    Exporting parts for laser cutting.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cutting-the-aluminium-profile" class="md-nav__link">
+    Cutting the aluminium profile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly" class="md-nav__link">
+    Assembly
+  </a>
+  
+    <nav class="md-nav" aria-label="Assembly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fitting-the-motors-belts-and-limit-switches" class="md-nav__link">
+    Fitting the motors, belts and limit switches
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#box-for-the-integration-of-the-wires" class="md-nav__link">
+    Box for the integration of the wires
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment_1" class="md-nav__link">
+    Group assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peristaltic-pump" class="md-nav__link">
+    Peristaltic pump
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viscosity-test" class="md-nav__link">
+    Viscosity test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improving-the-control-of-the-pump-with-a-joystick" class="md-nav__link">
+    Improving the control of the pump with a joystick
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improving-the-control-of-the-pump-with-gcode" class="md-nav__link">
+    Improving the control of the pump with Gcode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grbl-cnc-system" class="md-nav__link">
+    GRBL CNC system
+  </a>
+  
+    <nav class="md-nav" aria-label="GRBL CNC system">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parts" class="md-nav__link">
+    Parts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumables" class="md-nav__link">
+    Consumables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-an-atx-power-supply" class="md-nav__link">
+    Using an ATX Power supply
+  </a>
+  
+    <nav class="md-nav" aria-label="Using an ATX Power supply">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-on-jumper" class="md-nav__link">
+    Power on jumper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cnc-control-system-assembly-and-configuration" class="md-nav__link">
+    CNC control system assembly and configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="CNC control system assembly and configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cnc-board" class="md-nav__link">
+    CNC board
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assembly_1" class="md-nav__link">
+    Assembly
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor-drivers" class="md-nav__link">
+    Motor drivers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stepper-motors" class="md-nav__link">
+    Stepper motors
+  </a>
+  
+    <nav class="md-nav" aria-label="Stepper motors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wiring" class="md-nav__link">
+    Wiring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vref-calibration" class="md-nav__link">
+    VREF calibration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps-per-millimeter-for-belt-driven-systems" class="md-nav__link">
+    Steps per millimeter for belt driven systems
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grbl" class="md-nav__link">
+    GRBL
+  </a>
+  
+    <nav class="md-nav" aria-label="GRBL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compiling-and-flashing-grbl-using-arduino-ide" class="md-nav__link">
+    Compiling and Flashing GRBL using Arduino IDE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compiling-and-flashing-using-command-line-tools" class="md-nav__link">
+    Compiling and flashing using command line tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-z-axis-homing-routine" class="md-nav__link">
+    Disable Z axis homing routine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-configuration" class="md-nav__link">
+    Firmware configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valid-gcode" class="md-nav__link">
+    Valid GCODE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wiring-and-connections" class="md-nav__link">
+    Wiring and connections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fusion-360-work-flow" class="md-nav__link">
+    Fusion 360 work-flow
+  </a>
+  
+    <nav class="md-nav" aria-label="Fusion 360 work-flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manufacturing" class="md-nav__link">
+    Manufacturing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation" class="md-nav__link">
+    Simulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nc-file-post-processing" class="md-nav__link">
+    NC file post-processing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#universal-gcode-sender" class="md-nav__link">
+    Universal GCODE sender
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion-and-future" class="md-nav__link">
+    Conclusion and future
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    Useful links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week16/" class="md-nav__link">
+        16. Interface and application programming
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week18/" class="md-nav__link">
+        17. Wildcard week
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week19/" class="md-nav__link">
+        18. Invention, intellectual property and income
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week20/" class="md-nav__link">
+        19. Project development
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+      
+      <label class="md-nav__link" for="nav-4">
+        Projects
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Projects" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/final-project/" class="md-nav__link">
+        Final Project
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#video-shot" class="md-nav__link">
+    Vidéo shot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment" class="md-nav__link">
+    Group assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slide" class="md-nav__link">
+    Slide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#day-1-thinking-of-an-idea-looking-for-kind-of-equipment-with-have-at-agrilab-start-the-design-and-test-some-electronics" class="md-nav__link">
+    Day 1 - thinking of an idea, looking for kind of equipment with have at Agrilab, start the design and test some electronics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-assignment" class="md-nav__link">
+    Individual assignment:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fusion-360" class="md-nav__link">
+    Fusion 360
+  </a>
+  
+    <nav class="md-nav" aria-label="Fusion 360">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-make-a-mcmaster-carr-insertion" class="md-nav__link">
+    How do I make a McMaster Carr insertion ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-parts-for-laser-cutting" class="md-nav__link">
+    Exporting parts for laser cutting.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cutting-the-aluminium-profile" class="md-nav__link">
+    Cutting the aluminium profile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly" class="md-nav__link">
+    Assembly
+  </a>
+  
+    <nav class="md-nav" aria-label="Assembly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fitting-the-motors-belts-and-limit-switches" class="md-nav__link">
+    Fitting the motors, belts and limit switches
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#box-for-the-integration-of-the-wires" class="md-nav__link">
+    Box for the integration of the wires
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment_1" class="md-nav__link">
+    Group assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peristaltic-pump" class="md-nav__link">
+    Peristaltic pump
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viscosity-test" class="md-nav__link">
+    Viscosity test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improving-the-control-of-the-pump-with-a-joystick" class="md-nav__link">
+    Improving the control of the pump with a joystick
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improving-the-control-of-the-pump-with-gcode" class="md-nav__link">
+    Improving the control of the pump with Gcode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grbl-cnc-system" class="md-nav__link">
+    GRBL CNC system
+  </a>
+  
+    <nav class="md-nav" aria-label="GRBL CNC system">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parts" class="md-nav__link">
+    Parts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumables" class="md-nav__link">
+    Consumables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-an-atx-power-supply" class="md-nav__link">
+    Using an ATX Power supply
+  </a>
+  
+    <nav class="md-nav" aria-label="Using an ATX Power supply">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-on-jumper" class="md-nav__link">
+    Power on jumper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cnc-control-system-assembly-and-configuration" class="md-nav__link">
+    CNC control system assembly and configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="CNC control system assembly and configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cnc-board" class="md-nav__link">
+    CNC board
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assembly_1" class="md-nav__link">
+    Assembly
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor-drivers" class="md-nav__link">
+    Motor drivers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stepper-motors" class="md-nav__link">
+    Stepper motors
+  </a>
+  
+    <nav class="md-nav" aria-label="Stepper motors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wiring" class="md-nav__link">
+    Wiring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vref-calibration" class="md-nav__link">
+    VREF calibration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps-per-millimeter-for-belt-driven-systems" class="md-nav__link">
+    Steps per millimeter for belt driven systems
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grbl" class="md-nav__link">
+    GRBL
+  </a>
+  
+    <nav class="md-nav" aria-label="GRBL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compiling-and-flashing-grbl-using-arduino-ide" class="md-nav__link">
+    Compiling and Flashing GRBL using Arduino IDE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compiling-and-flashing-using-command-line-tools" class="md-nav__link">
+    Compiling and flashing using command line tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-z-axis-homing-routine" class="md-nav__link">
+    Disable Z axis homing routine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-configuration" class="md-nav__link">
+    Firmware configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valid-gcode" class="md-nav__link">
+    Valid GCODE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wiring-and-connections" class="md-nav__link">
+    Wiring and connections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fusion-360-work-flow" class="md-nav__link">
+    Fusion 360 work-flow
+  </a>
+  
+    <nav class="md-nav" aria-label="Fusion 360 work-flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manufacturing" class="md-nav__link">
+    Manufacturing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation" class="md-nav__link">
+    Simulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nc-file-post-processing" class="md-nav__link">
+    NC file post-processing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#universal-gcode-sender" class="md-nav__link">
+    Universal GCODE sender
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion-and-future" class="md-nav__link">
+    Conclusion and future
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    Useful links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="10-mechanical-machine-design">10. Mechanical &amp; machine design<a class="headerlink" href="#10-mechanical-machine-design" title="Permanent link">&para;</a></h1>
+<p>This week was dedicated to making a machine as a group. I am very happy to have this opportunity. Working in a group to make something concrete is very exciting for me. To be able to exchange our knowledge to improve our prototype is really great. </p>
+<p><strong><a href="http://fab.academany.org/2021/labs/agrilab/group/week10/">Group assignment</a></strong> :</p>
+<ul>
+<li>Design a machine that includes mechanism + actuation + automation</li>
+<li>Build the mechanical parts and operate it manually.</li>
+<li>Actuate and automate your machine.</li>
+<li>Document the group project</li>
+</ul>
+<p><strong>Individual assignment</strong> :</p>
+<ul>
+<li>Document your individual contribution.</li>
+</ul>
+<h2 id="video-shot">Vidéo shot<a class="headerlink" href="#video-shot" title="Permanent link">&para;</a></h2>
+<!--iframe width="560" height="315" src="https://www.youtube.com/embed/_DBPXuooTRU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe -->
+
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="path/to/poster_image.png" width=100% loop>
+    <source src="../../video/week10/demo.mp4" type="video/mp4">
+  </video>
+</figure>
+
+<h2 id="group-assignment">Group assignment<a class="headerlink" href="#group-assignment" title="Permanent link">&para;</a></h2>
+<h2 id="slide">Slide<a class="headerlink" href="#slide" title="Permanent link">&para;</a></h2>
+<p><img alt="Slide_pancake" src="../../images/week10/slide.jpg" /></p>
+<h2 id="day-1-thinking-of-an-idea-looking-for-kind-of-equipment-with-have-at-agrilab-start-the-design-and-test-some-electronics">Day 1 - thinking of an idea, looking for kind of equipment with have at Agrilab, start the design and test some electronics<a class="headerlink" href="#day-1-thinking-of-an-idea-looking-for-kind-of-equipment-with-have-at-agrilab-start-the-design-and-test-some-electronics" title="Permanent link">&para;</a></h2>
+<p>On the first day, we made a brainstorming together on which kind of machine we want to build and how to build it.</p>
+<p><img alt="" src="../../images/week10/w10_3.jpg" /></p>
+<p>We want to have a device that is working with 2 or 3 axes.</p>
+<ul>
+<li>First Theo has the idea to make a smart garbage sorting device, where we put some garbage in a box and with buttons, it will throw the garbage in the right trash can we would have built.</li>
+<li>The second idea was to make a device that print pancakes to a warming plate, to draw pancakes with different shpaes, such as pancakes in the shape of houses, or animals.</li>
+</ul>
+<p><img alt="" src="../../images/week10/w10_4.jpg" /></p>
+<p>So we decided to make a pancake printer because it is a device that interested us, to make something with food. We started to think to a way to make this device, we drew on paper how the machine could work. We want to have an extruder, to pour the pancake dough on the plate, that will move on 2 axes, X and Y, with motors. We thought about 2 differents systems to pour the pancake dough. Because this paste is pretty fluid, we thought of a system with pump that will bring the dough to the extruder, or a system with a syringe, that can be activate with a motor to push the pancake dough.</p>
+<p><img alt="" src="../../images/week10/w10_5.jpg" /></p>
+<p>Some shields for Arduino have been ordered in our lab for this week so we gonna use an Arduino mega board with a shield GRBL to use gcode to pilot our device.</p>
+<p>Antonio talked to us about peristaltic we can use for the device. In Agrilab we have a device that dispense hydroalcoholic gel (because of the pandemic) which is using this kind of pump. We went to check it for how it works and how we can use it in the device.</p>
+<p><img alt="" src="../../images/week10/w1015.jpg" /></p>
+<p><img alt="" src="../../images/week10/w1014.jpg" /></p>
+<p>To move the extruder of pancake dough we have thought of two possibilites:</p>
+<ul>
+<li>One is the plate that can move, like creality 10</li>
+</ul>
+<p><img alt="" src="../images/week10/17.jpg" /></p>
+<ul>
+<li>Second is to have 2 axes for the extruder</li>
+</ul>
+<p>We would like to use a hotplate that can be find in a kitchen, with a pan, that&rsquo;s why we are choosing the second possibilities. To do this we drew a ramp system.</p>
+<p><img alt="" src="../../images/week10/w10_6.jpg" /></p>
+<p>Now we have a pretty clear idea in our mind, we went over Agrilab to look of all the device we have and which system inspire us.</p>
+<p>We have a 3D printer where we can see the mechanism, a Creality ender 5 plus.</p>
+<p><img alt="" src="../../images/week10/w1016.jpg" /></p>
+<p>It is working with wheels that roll along an aluminium V-profile rail that is drived with a belt thanks to a motor and a puley for X and Y axes.</p>
+<p><img alt="" src="../../images/week10/w10_9.jpg" /></p>
+<p>One of the axes is drived with a motor with two sides.</p>
+<p><img alt="" src="../../images/week10/w10_11.jpg" /></p>
+<p>For the Z axe, it is the plate that goes up and and down with a threaded rod and a motor.</p>
+<p><img alt="" src="../../images/week10/w10_10.jpg" /></p>
+<p>We found in storage aluminium profiles that we will certainly use.</p>
+<p><img alt="" src="../../images/week10/w10_12.jpg" /></p>
+<p>In Agrilab we have an other device made by Luc, that engrave cardboard plates.</p>
+<p><img alt="" src="../../images/week10/w10_13.jpg" /></p>
+<p>Here is it moving accoding to a motor with puley, a belt and wheels that block everything.</p>
+<p><img alt="" src="../../images/week10/w10_15.jpg" /></p>
+<p>There is this kind of system with motors on both sides of the aluminium V-profile that are coordinate to move together.</p>
+<p>The other axis is working according to the same principle.</p>
+<p>We took a look on a small CNC built in our lab.</p>
+<p><img alt="" src="../../images/week10/w10_21.jpg" /></p>
+<p>This device is moving with bearings, metal sticks and the movement is make by and threaded rot with a screw, that turn with a motor and drive the cnc tool.</p>
+<p><img alt="" src="../../images/week10/w10_20.jpg" /></p>
+<p>We found in the storage some metal sticks that fit perfectly with the bearing that we have at our disposal, and also threaded shafts with screw, but that is not the system we gonna use.</p>
+<p>We were inspired by all these systems to make our pancake printer bot. We were given some wheels for the aluminium V-profiles to check what is it.</p>
+<p>Now we have started to design our machine. Theo started the design on Fusion 360.</p>
+<p><img alt="" src="../../images/week10/w10_2.jpg" /></p>
+<p><img alt="" src="../../images/week10/w10_7.jpg" /></p>
+<h2 id="individual-assignment">Individual assignment:<a class="headerlink" href="#individual-assignment" title="Permanent link">&para;</a></h2>
+<h2 id="fusion-360"><a href="https://www.autodesk.com/products/fusion-360/overview?term=1-YEAR">Fusion 360</a><a class="headerlink" href="#fusion-360" title="Permanent link">&para;</a></h2>
+<p>I design on Fusion 360. For this I was very inspired by the machines we have at AgriLab. After thinking about it and looking for materials in storage we decided on a machine that moves on 20 x 20 mm aluminium profile rails. In addition to our rails I found bearings and wheels that fit perfectly into our V-profiles. So I were able to make a list of all the items we were going to take.</p>
+<ul>
+<li>Aluminium profile 20 x 20 mm</li>
+<li>Bearings</li>
+<li>2 Nema17 motors</li>
+<li>Transmission belts</li>
+<li>Output pinions for the motor</li>
+<li>2 stop switches for our X and Y axes</li>
+<li>1 power source</li>
+<li>1 peristaltic pump </li>
+<li>Plexiglass 3mm thick</li>
+<li>6mm thick MDF</li>
+<li>Nuts, bolts, washers&hellip;</li>
+</ul>
+<p><img alt="" src="../../images/week10/4.jpg" /></p>
+<p><img alt="" src="../../images/week10/5.jpg" /></p>
+<p>So I started the design by adding a <a href="https://www.mcmaster.com">Mc MasterCarr</a> component, our profiles. I then extruded it to the length we wanted. In order to make the frame of our machine I moved them (1). Then I made the support for the crossbar (2). This support is held in place by three bearings, inserted with Mc MasterCarr, and then moved on the drawing (3). I then did the same thing on the other side of the machine (4). I added a pivot point for the belt. This point will have a double use, first to send the belt back to the other side but also to tension the belt (5). I have inserted our nema17 engine. For this I had to modify a support bracket to be able to fix the motor. I used the datasheet of the motor to make the fixing holes (6). In the continuity I made the carriage (7). I then made the mounting bracket and inserted the second motor (8). Again with Mc MasterCarr I inserted the drive belts (9). Finally I made the feet of our machine. Here is the finished machine (10).</p>
+<h3 id="how-do-i-make-a-mcmaster-carr-insertion">How do I make a McMaster Carr insertion ?<a class="headerlink" href="#how-do-i-make-a-mcmaster-carr-insertion" title="Permanent link">&para;</a></h3>
+<p>It&rsquo;s <strong>very simple</strong>, just click on the <strong>insert</strong> button and then click on <strong>insert McMaster-Carr component</strong>. A dialogue box will open and you will have to find the object you want. In this example I would like to insert a screw. Once you have found the object you want, click on <strong>product detail CAD</strong> and download the object in <strong>3-D STEP format</strong>. Once all these steps have been completed you can move your object wherever you want.</p>
+<p><img alt="" src="../../images/inserer.jpg" /></p>
+<h3 id="exporting-parts-for-laser-cutting">Exporting parts for laser cutting.<a class="headerlink" href="#exporting-parts-for-laser-cutting" title="Permanent link">&para;</a></h3>
+<p>In order to cut our parts quickly and precisely I chose to use our laser cutter. To do this I exported all our parts to be machined so that I could save the sketches in DXF. To check if our supports were good I decided to cut our parts on cardboard. </p>
+<p>For this I cut out all the parts like the head for the extruder, the feet, the bearing supports&hellip; After cutting out all the pieces and assembling them I realised that there were improvements to be made. </p>
+<p><img alt="" src="../../images/week10/6.jpg" /></p>
+<p>I made some modifications with these cuttings. </p>
+<ul>
+<li>I added an extra bearing on the crossbar support. This support will have 4 bearings instead of 3. This is to increase the precision of the movement. With the weight of the motor I was afraid that the displacement would be imprecise, so I added this 4th bearing to increase the constraints and thus have a more precise displacement</li>
+<li>I modified one base to be able to integrate the motor directly into the base. It was possible to position the motor directly in the foot of the machine. This avoids the need to manufacture another motor mount. So I enlarged the base to fit the motor.</li>
+<li>I modified a foot to be able to force in a bearing for the belt return pinion. The same for the other belt tensioner. This allowed me to gain in efficiency on the belt return and allows the motor to force itself less, the movement is more smooth.</li>
+<li>I added the fixing holes for the belts in the supports</li>
+</ul>
+<p><img alt="" src="../../images/week10/7.jpg" /></p>
+<p>With all these modifications I was ready to make the final cuts. For that I exported my sketches in DXF again. For the bases we used 6mm thick MDF. We decided to use this MDF because it is the thickest and therefore strongest material we have at AgriLab that is capable of being laser cut. For the rest of the machine (extruder head and X axis support)we used 3mm thick plexiglass. These parts are the most exposed to the projection of our pancake dough, so it is preferable to use this kind of material for more safety.Plexiglass has the particularity to be food safe. The purpose of our machine being to make edible pancakes it is preferable to look at the materials we use to avoid danger. </p>
+<h3 id="cutting-the-aluminium-profile">Cutting the aluminium profile<a class="headerlink" href="#cutting-the-aluminium-profile" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../images/week10/3.jpg" /></p>
+<p>The structure of our machine is made of aluminium profile. At AgriLab we have large bars that need to be cut with our band saw. Being a dangerous and complex machine to use, it was a worker (Jérome) from the Lab who cut our profiles. I gave all the measurements and the bar to cut out and then Jérome did it all. </p>
+<h2 id="assembly">Assembly<a class="headerlink" href="#assembly" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../images/week10/8.jpg" /></p>
+<p>Once all the parts were cut and grouped together I was able to assemble the whole machine. </p>
+<p>To assemble there is no particular order. However, you should be careful when inserting your bearings into the profile, it is best to place them before assembling and closing the frame. Apart from that, using a profile with a special fastener helps a lot with the assembly. It was very easy to assemble piece by piece.</p>
+<p>I started by assembling the chassis with brackets. Then I assembled the crossbar and added the bearings. Finally I assembled the legs.</p>
+<h3 id="fitting-the-motors-belts-and-limit-switches">Fitting the motors, belts and limit switches<a class="headerlink" href="#fitting-the-motors-belts-and-limit-switches" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../images/week10/2.jpg" /></p>
+<p>Once <a href="http://fabacademy.org/2021/labs/agrilab/students/antonio-anaya/about/">Antonio</a> finished presetting the motors I was able to insert them on the machine. Then to transmit the power of the motors I added two toothed belts. I tightened them on the supports and then finalized their tension by adjusting the tensioners. The goal is to have the belts tight but not too tight. This adjustment is done by the sight and touch. Finally, I had the task of positioning the machine&rsquo;s stop switches on the X and Y axes. For the limit switches we have chosen to position them in these corners for one main reason. These two corners had a large space to be able to fix them solidly. </p>
+<p><img alt="" src="../../images/week10/50.jpg" /></p>
+<p><img alt="" src="../../images/week10/9.jpg" /></p>
+<h2 id="box-for-the-integration-of-the-wires">Box for the integration of the wires<a class="headerlink" href="#box-for-the-integration-of-the-wires" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../images/week10/1.jpg" /></p>
+<p>My last mission for this group work was to make boxes to hide the Arduino, the wires and to fix the peristaltic pump. For that I used the <a href="https://www.makercase.com">makercase</a> website to make the box. Then I imported the DXF file in fusion to make the fixing holes. I also cut these parts with a laser to have precision and speed of action. </p>
+<p><img alt="" src="../../images/week10/11.jpg" /></p>
+<p><img alt="" src="../../images/week10/10.jpg" /></p>
+<h2 id="group-assignment_1">Group assignment<a class="headerlink" href="#group-assignment_1" title="Permanent link">&para;</a></h2>
+<p>Antonio was looking into a power source for our motors.</p>
+<p><img alt="" src="../../images/week10/w10_1.jpg" /></p>
+<p>And he also tried to flash the Arduino board with the shield for CNC.</p>
+<p><img alt="" src="../../images/week10/w10_8.jpg" /></p>
+<h2 id="peristaltic-pump">Peristaltic pump<a class="headerlink" href="#peristaltic-pump" title="Permanent link">&para;</a></h2>
+<p>Elina worked on the system to make the pump bring the pancake paste to the warming plate. First she needed to make the pump turn in one way and an other way to have a retract of the paste of pancake inside the tube. The first step was to find how to plug the pump to an arduino board to flash it. </p>
+<p><img alt="" src="../../images/week10/w1020.jpg" /></p>
+<p>The pump is made of ball bearings and silicone pipe. It is working with 12V current and 2A. The motor is a DC motor. In AgriLab the instructors ordered for us some H-bridges for the motors. She looked on internet how to wire the motor of the pump with that and on Arduino and she found <a href="https://arduino.blaisepascal.fr/pont-en-h-l298n/">this website on how to use H-bridge with a L298N motor</a>. </p>
+<p>This schematic were very useful to know where to plug what.</p>
+<p>This <a href="https://howtomechatronics.com/tutorials/how-to-setup-grbl-control-cnc-machine-with-arduino/">website</a> helped her also to understand how to control the CNC shield with Arduino.</p>
+<p>The pump is powered with an AC/DC electric power supply 12V.</p>
+<p><img alt="" src="../../images/week10/w1013.jpg" /></p>
+<p>Step by step, Elina wrote the code to make the pump turn. The program is taking a value written in the serial monitor and send it to the motor as the speed. The turning side of the motor depend on the sign of the number (positives numbers will turn in one directon, negatives numbers will turn in another one).</p>
+<p>Here is the wiring of the pump she made: </p>
+<p><img alt="" src="../../images/week10/w1018.jpg" /></p>
+<p><img alt="" src="../../images/week10/w1019.jpg" /></p>
+<p>Here is the code she wrote. Elina used the IDE <a href="https://code.visualstudio.com/">Visual Studio Code</a> she discovered during <a href="http://fabacademy.org/2021/labs/agrilab/students/elina-nguyen-cadoret/assignments/week09/#visual-studio-code">a previous week</a>. First there is the constants, the pins where the wires are plugged. In the setup function, she set the pins as outputs. Then she wrote a function for the movement, with two variables, the speed and the direction. And in the loop Elina first collect the value of the speed that is set, then transform it a bit in order to make it nice for the motor. </p>
+<p><img alt="" src="../../images/week10/cap4.jpg" /></p>
+<p>Here 200 is the speed of the motor, -200 is the same speed but in the other side, and -1 stop the motor.</p>
+<p>She got a problem on the value when I print it on the serial monitor. The value she wrote is read but after the delay it take again the 0 value, and stop the motor. To fix that the 0 was excluded for the program and she changed the stop for the value -1.</p>
+<div class="codehilite"><pre><span></span><code>#include &lt;Arduino.h&gt;
+
+//https://ardwinner.jimdofree.com/arduino/iv-les-moteurs-continus/3-faire-tourner-un-moteur-dc-bidirectionnel-avec-un-module-l298n/
+//https://arduino.blaisepascal.fr/pont-en-h-l298n/
+
+//declaration des variables et des constantes
+int enA = 9; //les pins avec des tilds
+int in1 = 10;
+int in2 = 11;
+
+int speedmotor = 0; //vitesse du moteur
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(enA, OUTPUT);
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  Serial.begin(9600); //la valeur de communication
+}
+
+void move(int speed, bool testforward) {// speed between 0 and 255 analog write, test d&#39;un booléen pour aller dans un sens ou dans un autre
+  if (testforward){
+    digitalWrite(in1, HIGH); //envoie du courant dans un sens (set to +)
+    digitalWrite(in2, LOW); //en envoie pas, le récupère (set to -)
+  }
+  else{
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, HIGH);
+  }
+  analogWrite(enA, speed);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  if(Serial.available() &gt; 0){ //si la board arduino est branchée
+    speedmotor = Serial.parseInt(); // speedmotor recupere la valeur inscrite dans le serial
+    Serial.println(speedmotor);
+    if (speedmotor == 0){
+      return;
+    }
+    if(speedmotor &gt; 0){ //si speedmoto a une valeur, plus grande que 0
+      if (speedmotor &gt; 255){
+        speedmotor = 255; //speedmotor est forcé à 255 maxi
+      }
+      move(speedmotor, true); //alors marche avant
+    }
+    else if(speedmotor &lt; -1){
+      speedmotor = -1*speedmotor; //pour que la vitesse ait une valeur de vitesse mais en marche arrière
+      if (speedmotor &gt; 255){ //recopiage du test parce que speedmotor est de nouveau positif
+        speedmotor = 255; //speedmotor est forcé à 255 maxi
+      }
+      move(speedmotor,false); //marche arriere
+    }
+    else if(speedmotor == -1){ //c&#39;est zero donc tout s&#39;arrete
+      digitalWrite(in1, LOW);
+      digitalWrite(in2, LOW);
+    }    
+  } 
+}
+</code></pre></div>
+
+<p>With this code, she was able to make the viscosity test of the pancake paste in the tubes.</p>
+<h2 id="viscosity-test">Viscosity test<a class="headerlink" href="#viscosity-test" title="Permanent link">&para;</a></h2>
+<p>Elina cooked the first pancake paste according to <a href="https://www.marmiton.org/recettes/recette_pancakes-faciles-et-rapides_81518.aspx">this recipe</a>.</p>
+<ul>
+<li>150 g of flour T55</li>
+<li>1 egg</li>
+<li>1 tablespoon of sugar</li>
+<li>1 tablespoon of oil</li>
+<li>1 teaspoon of chemical yeast</li>
+<li>200 mL of milk</li>
+</ul>
+<p>She made a small test with this consistency of dough but it is too liquid, the flow continues to fall even with gravity when the pump is stopped.</p>
+<p><img alt="" src="../../images/week10/w101.jpg" /></p>
+<p>So she made different paste with different viscosity, the first one is the control sample, with initial recipe. </p>
+<p><img alt="" src="../../images/week10/w102.jpg" /></p>
+<p>The second one has 25% more flour, and the third one has 50% more flour. We can see the different viscosity of the paste on the video.</p>
+<video controls="true" allowfullscrenn="true" width="50%">
+  <source src="../../video/week10/vid3.mp4" type="video/mp4">
+</video>
+
+<p>To make the extruder she assembled some tubes from the largest to the smallest we could find. The biggest one is 7.6 mm, the second is 5.4 mm, the third one is 3.5 mm,a nd the last one is that small iI wasn&rsquo;t able to measure it with the calliper.</p>
+<p><img alt="" src="../../images/week10/w103.jpg" /></p>
+<p>She also tested the different tube with the different viscosity of the paste. </p>
+<!--// video de tous les tests-->
+
+<p>With the pipe of 3.5 mm she draw by hand a line on the warm plate to see how the dough is reacting to warm. We can see that the less viscose paste make the thinner line. After we taste it, because of too much flour we pour inside it is not really tasty.</p>
+<p><img alt="" src="../../images/week10/w104.jpg" /></p>
+<p>We finally decided to take the consitency of the second dough, with 25% more flour, and the third pipe.</p>
+<h2 id="improving-the-control-of-the-pump-with-a-joystick">Improving the control of the pump with a joystick<a class="headerlink" href="#improving-the-control-of-the-pump-with-a-joystick" title="Permanent link">&para;</a></h2>
+<p>After making the pump turning according to some values, she wanted to add an input, a joystick to control the speed of the pump. I searched on internet how to use a potential meter and found this very useful <a href="https://www.mataucarre.fr/index.php/2019/03/09/utiliser-un-potentiometre-avec-un-arduino/">website on how to control a potential meter with Arduino</a>. There is a picture of the wiring and how to control a LED with a potential meter. </p>
+<p><img alt="" src="../../images/week10/cap1.jpg" /></p>
+<p>Elina apply this to my motor of the pump. </p>
+<p>To understand how a potential meter is working she just copied the code and watch the values of the potential meter printed on the serial monitor.</p>
+<p><img alt="" src="../../images/week10/cap2.jpg" /></p>
+<p>To plug everything on the Arduino board she checked <a href="https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/">this website with H-bridge and Arduino</a> and she followed this schematic with the potential meter and the motor.</p>
+<p><img alt="" src="../../images/week10/cap3.jpg" /></p>
+<p>She discover the function <em>map</em> to transform some value to some other which was very usefu because the motor handle values from 0 to 255 and the potential meter have value from 0 to 1023. I modify the code to make the pump go in a way or in an other according to the position of the potential meter. </p>
+<p><img alt="" src="../../images/week10/w1011.jpg" /></p>
+<p><img alt="" src="../../images/week10/w1012.jpg" /></p>
+<p>Here is the code she wrote, and we use it for the device, the pancake bot.</p>
+<div class="codehilite"><pre><span></span><code>#include &lt;Arduino.h&gt;
+
+//https://ardwinner.jimdofree.com/arduino/iv-les-moteurs-continus/3-faire-tourner-un-moteur-dc-bidirectionnel-avec-un-module-l298n/
+//https://arduino.blaisepascal.fr/pont-en-h-l298n/
+//https://www.mataucarre.fr/index.php/2019/03/09/utiliser-un-potentiometre-avec-un-arduino/
+
+//declaration des variables et des constantes
+int enA = 9; //les pins avec des tilds
+int in1 = 10;
+int in2 = 11;
+int pot; //valeur du potentiometre
+
+int speedmotor = 0; //vitesse du moteur
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(enA, OUTPUT);
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  Serial.begin(9600); //la valeur de communication
+}
+
+void move(int speed, bool testforward) {// speed between 0 and 255 analog write, test d&#39;un booléen pour aller dans un sens ou dans un autre
+  if (testforward){
+    digitalWrite(in1, HIGH); //end current in one side (set to +)
+    digitalWrite(in2, LOW); //receive the current (set to -)
+  }
+  else{
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, HIGH);
+  }
+  analogWrite(enA, speed); //send some speed to the motor
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+    pot = analogRead(A0); // read the value of the potentialmeter
+    delay(200); 
+    Serial.println(pot); //print the value, to have a check
+    if(pot &lt; 470){ //separate the value of the potential meter, and have a gap of 40 to be sure to taje the value
+      speedmotor = map(pot, 470, 0, 0, 255); // the speedmotor variable take the value of pot that is transformed, the speed has to be from 0 to 255, map function transform the value, when the potential meter go farther the origin, it increae the peed of the motor
+      move(speedmotor, true); //alors marche avant
+    }
+    else if(pot &gt; 550){ // other case, the potentialmeter is in the other side
+      speedmotor = map(pot, 550, 1023, 0, 255); //map the value, but in the other way
+      move(speedmotor,false); //marche arriere
+    }
+    else{ // if it is not on the values before it stops
+      digitalWrite(in1, LOW);
+      digitalWrite(in2, LOW);
+    }     
+}
+</code></pre></div>
+
+<p>To control the peristaltic pump for our pancake bot, we used this system so they are two Arduino boards to control the pancake bot. We decided to use the joystick because the time was short, and we wanted to have the device ready pretty quickly.</p>
+<p>When she first tried the code she took a new pump but the ball bearings inside were broken. I first believed that the code she wrote were miswritten, but it finally was the pump that actually don&rsquo;t work. It took her a little time to figure out that it was the pump and not the code.</p>
+<p><img alt="" src="../../images/week10/w107.jpg" /></p>
+<h2 id="improving-the-control-of-the-pump-with-gcode">Improving the control of the pump with Gcode<a class="headerlink" href="#improving-the-control-of-the-pump-with-gcode" title="Permanent link">&para;</a></h2>
+<p>Elina wanted improve the control of the peristaltic pump with the Gcode, to have the control of the pump directly in the code and not manually with the joystick.</p>
+<p>First she looked for a way to understand gcode, so I followed a tutorial on how to control a CNC with Arduino and grbl. Here is <a href="https://letmeknow.fr/shop/fr/blog/110-piloter-une-cnc-avec-arduino-et-grbl">the tutorial on how to flash arduino with grbl</a>. To use Arduino IDE with grbl she need to install it so according to the tutorial she installed <a href="https://github.com/grbl/grbl">grbl</a>.</p>
+<p>Elina started by building the electronic system with 2 motors, on for X and one for Y. With the equipment we add and thanks to some pictures on internet She plugged the shiel CNC for Arduino on the Arduino board and try to understand how to plug the motor and the power source on it.</p>
+<p><img alt="" src="../../images/week10/w105.jpg" /></p>
+<p>She found on <a href="https://blog.protoneer.co.nz/arduino-cnc-shield/">a blog how to use the shield CNC for Aduino</a>. The shield she have is a V3, and thanks to the picture she succeed to plug eveything to the Arduino, and the writing on the shield. To plug the motor on the right side she looked for a datasheet of the motor to know which wire goes to which wire. She found <a href="https://datasheetspdf.com/pdf-file/928656/MotionKing/17HS3401/1">this datasheet</a> but the datas are wrong. My instructor helped to find the good side and replugged everything right. To do that we use Dupont wire. We turn the motor manually while plug to hole together with the wire, and when we feel a strength in the motor it means that the color wires go together. </p>
+<p>So the red goes with the green, and the blue with the black. Here is the wiring she made.</p>
+<p><img alt="" src="../../images/week10/w1010.jpg" /></p>
+<p>She also installed <a href="https://github.com/winder/Universal-G-Code-Sender">Universal Gcode Sender</a> to control the motor. And according to <a href="https://letmeknow.fr/shop/fr/blog/110-piloter-une-cnc-avec-arduino-et-grbl">the tutorial I mainly followed on how to use grbl with Arduino</a>. </p>
+<p>Elina searched to learn more on G. command in gcode. <a href="https://marlinfw.org/docs/gcode/G091.html">The Marlin website</a> were really useful to understand more the gcode command. On the terminal of UGS (Universal Gcode Sender), she wrote this line to make the motor work</p>
+<div class="codehilite"><pre><span></span><code>G21G91G1X5Y5F50
+</code></pre></div>
+
+<p>Which means :</p>
+<ul>
+<li>in millimeters</li>
+<li>with relative coordonate</li>
+<li>make a linear move</li>
+<li>in X, 5 mm</li>
+<li>in Y, 5 mm</li>
+<li>with a Feedrate at 50</li>
+</ul>
+<p>And here is the video on how the motors are working with this line of code.</p>
+<video controls="true" allowfullscrenn="true" width="50%">
+  <source src="../../video/week10/vid1.mp4" type="video/mp4">
+</video>
+
+<p>Now she understood a little bit more, I wanted to add my pump to the system. She found the <a href="https://blogs.brighton.ac.uk/danielscncmachine/testing/">Gcode command for the spindle here</a>.</p>
+<ul>
+<li>M03 = CW Spindle</li>
+<li>M04 = CWW Spindle</li>
+<li>M05 = Spindle</li>
+</ul>
+<p>Elina tried to look on internet to know how to plug the H-bridge to the CNC shield, for example on <a href="https://blog.protoneer.co.nz/arduino-cnc-shield-v3-00-assembly-guide/#4THAXIS">this blog</a>, but after reading what is written on the shield and on the H-bridge she finally plugged together whe pin where the name seems the same and see what it is doing.</p>
+<p>ENA with SpnEn, one In with SpnDir, and the In with the ground GND.</p>
+<p><img alt="" src="../../images/week10/w1021.jpg" /></p>
+<p>Here is the wiring between the H-bridge and the CNC shield for Arduino.</p>
+<p><img alt="" src="../../images/week10/w1023.jpg" /></p>
+<p><img alt="" src="../../images/week10/w1022.jpg" /></p>
+<p>Here is the wiring with the motor of the pump and the H-bridge.</p>
+<p><img alt="" src="../../images/week10/w106.jpg" /></p>
+<p>Here is the all wiring between the two motors, the shield for Arduino, the H-bridge, and the peristaltic pump.</p>
+<p><img alt="" src="../../images/week10/w108.jpg" /></p>
+<p>Here is the focus on the wiring between the H-bridge for the pump and the shield for Arduino.</p>
+<p><img alt="" src="../../images/week10/w109.jpg" /></p>
+<p>She might have plugged the wire in a wrong way because the command line doesn&rsquo;t really work has they supposed to do but it still work for the device. M03 start the spindle and M04 stop the spindle. It is maybe because the current flow only in one way, that why the reverse spindle stop the spindle actually.</p>
+<p>Here is the video of the pump controlled by gcode.</p>
+<video controls="true" allowfullscrenn="true" width="50%">
+  <source src="../../video/week10/vid2.mp4" type="video/mp4">
+</video>
+
+<h2 id="grbl-cnc-system">GRBL CNC system<a class="headerlink" href="#grbl-cnc-system" title="Permanent link">&para;</a></h2>
+<p><img src="../../images/week10/diagram_toon.jpg" alt="parts_01" width=100%/></p>
+<h3 id="parts">Parts<a class="headerlink" href="#parts" title="Permanent link">&para;</a></h3>
+<p><img src="../../images/week10/parts_01.jpg" alt="parts_01" width=100%/></p>
+<p><strong>Click on name to check reference in Digikey</strong></p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Quantity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NEMA 17 step motors</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNC GRBL arduino UNO compatible board</td>
+<td>1</td>
+</tr>
+<tr>
+<td>HR4988 Motor drivers</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Limit switches</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Arduino UNO</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Connectors for wiring</td>
+<td>#</td>
+</tr>
+<tr>
+<td>Recycled ATX power supply</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consumables">Consumables<a class="headerlink" href="#consumables" title="Permanent link">&para;</a></h3>
+<p><img src="../../images/week10/wires_01.jpg" alt="consumables_01" width=100%/></p>
+<p><img src="../../images/week10/connectors_01.jpg" alt="consumables_01" width=100%/></p>
+<ol>
+<li>Ribbon wire 4 colors for stepper motors</li>
+<li>AWG wire 1669</li>
+<li>Connectors &ldquo;Type 1&rdquo;</li>
+<li>Connector &ldquo;Type 2&rdquo;</li>
+</ol>
+<h3 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h3>
+<p><img src="../../images/week10/tools_01.jpg" alt="tools_01" width=100%/></p>
+<ol>
+<li>GST Crimping Tool</li>
+<li>Soldering iron</li>
+<li>Clippers</li>
+<li>Multimeter</li>
+<li>Cross screw driver</li>
+<li>Wire stripper</li>
+</ol>
+<h3 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h3>
+<ol>
+<li><a href="https://www.arduino.cc/en/software">Arduino IDE</a></li>
+<li><a href="https://winder.github.io/ugs_website/download/">Universal Gcode sender</a></li>
+<li><a href="https://github.com/grbl/grbl">GRBL firmware</a></li>
+<li><a href="https://www.autodesk.com/products/fusion-360/overview">Fusion 360</a></li>
+</ol>
+<p><strong>Instructions for the usage and configurations are detailed in the next steps.</strong></p>
+<h2 id="using-an-atx-power-supply">Using an ATX Power supply<a class="headerlink" href="#using-an-atx-power-supply" title="Permanent link">&para;</a></h2>
+<p><img src="../../images/week10/atx_01.jpg" alt="atx_01" width=100%/></p>
+<p>We checked possible power sources and the most suitable one was this recycled ATX power supply.</p>
+<p>In AgriLab there&rsquo;s a large stock of recycled parts and materials.</p>
+<h3 id="power-on-jumper">Power on jumper<a class="headerlink" href="#power-on-jumper" title="Permanent link">&para;</a></h3>
+<p>To switch on the power supply Antonio added a jumper between the green wire and ground.</p>
+<p>Explain more</p>
+<ol>
+<li>Cut the wires</li>
+<li>Connect using an electrical union connector</li>
+</ol>
+<p><img src="../../images/week10/atx_03.jpg" alt="atx_03" width=48%/>
+<img src="../../images/week10/atx_02.jpg" alt="atx_02" width=48%/></p>
+<h3 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h3>
+<p>This is the table with the Voltage and Power of every output in the ATX power supply.</p>
+<p><img src="../../images/week10/atx_04.jpg" alt="atx_04" width=100%/></p>
+<p><img src="../../images/week10/atx_05.jpg" alt="atx_05" width=100%/></p>
+<p>He have used 3 pairs of 12 Volts based in the power consumption of every component listed here:</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Voltage</th>
+<th>Wire color</th>
+<th>Black Ground wire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arduino UNO board</td>
+<td>5 Volts</td>
+<td>Red</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>GRBL board</td>
+<td>12 Volts</td>
+<td>Yellow</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>12 V Red LED</td>
+<td>12 Volts</td>
+<td>Yellow</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Peristaltic pump</td>
+<td>12 Volts</td>
+<td>Yellow</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cnc-control-system-assembly-and-configuration">CNC control system assembly and configuration<a class="headerlink" href="#cnc-control-system-assembly-and-configuration" title="Permanent link">&para;</a></h2>
+<p>Introduction:</p>
+<p>The GRBL board we have it&rsquo;s a common one used for CNC machines, like small low power laser cutters, small milling machines and vinyl cutters.</p>
+<h3 id="cnc-board">CNC board<a class="headerlink" href="#cnc-board" title="Permanent link">&para;</a></h3>
+<p>This is the schematic given by the manufacturer.</p>
+<p>Schematic has some faults in the motor driver silk</p>
+<p><img alt="" src="../../images/week10/diagram_01.jpg" /></p>
+<p>characteristics:</p>
+<table>
+<thead>
+<tr>
+<th>GRBL</th>
+<th>Board</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operation voltage</td>
+<td>12 to 16 V</td>
+<td>not regulated, only protected by a fusible</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>3 connectors for XYZ</td>
+<td>+1 Clone axis connector</td>
+</tr>
+<tr>
+<td>Limit switches</td>
+<td>+-X, +-Y, +- Z</td>
+<td></td>
+</tr>
+<tr>
+<td>Spindle control</td>
+<td>Enable, Direction, cooling</td>
+<td>Also used for laser output control</td>
+</tr>
+<tr>
+<td>Machine override controls</td>
+<td>Abort, Hold, Resume</td>
+<td></td>
+</tr>
+<tr>
+<td>Emergency stop</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Serial communication pinouts</td>
+<td>SDA, SCL, TX RX, RST, 3.3V 5V</td>
+<td></td>
+</tr>
+<tr>
+<td>Microstepping configuration jumpers</td>
+<td>1/2, 1/4, 1/8, 1/16</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="assembly_1">Assembly<a class="headerlink" href="#assembly_1" title="Permanent link">&para;</a></h3>
+<p><img src="../../images/week10/cnc_01.jpg" alt="cnc_01" width=100%/></p>
+<p>Connect the motor driver boards to the GRBL board sockets. Check the pinout and be sure all the pins coincide correctly.</p>
+<h3 id="motor-drivers">Motor drivers<a class="headerlink" href="#motor-drivers" title="Permanent link">&para;</a></h3>
+<p><img src="../../images/week10/driver_01.jpg" alt="cnc_01" width=100%/></p>
+<p><img src="../../images/week10/driver_02.jpg" alt="cnc_01" width=100%/></p>
+<p>Characteristic:</p>
+<table>
+<thead>
+<tr>
+<th>HR4988 motor driver</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operation voltage</td>
+<td>5 Volts</td>
+<td></td>
+</tr>
+<tr>
+<td>Resistance</td>
+<td>R100</td>
+<td>0.1 Ohms</td>
+</tr>
+<tr>
+<td>Motor Voltage Regulator</td>
+<td>Potentiometer for VREF</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Pinouts in order:</p>
+<table>
+<thead>
+<tr>
+<th>Left</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direction</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>Step</td>
+<td>VDD</td>
+</tr>
+<tr>
+<td>Sleep</td>
+<td>1B</td>
+</tr>
+<tr>
+<td>Reset</td>
+<td>1A</td>
+</tr>
+<tr>
+<td>MS3</td>
+<td>2A</td>
+</tr>
+<tr>
+<td>MS2</td>
+<td>2B</td>
+</tr>
+<tr>
+<td>MS1</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>Enable</td>
+<td>VMOT</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stepper-motors">Stepper motors<a class="headerlink" href="#stepper-motors" title="Permanent link">&para;</a></h3>
+<h4 id="wiring">Wiring<a class="headerlink" href="#wiring" title="Permanent link">&para;</a></h4>
+<p>The wiring with the stepper motors was confusing and he invested one afternoon to find out the right wiring configuration.</p>
+<p>Following the color code the wires should be punched in the connector like this:</p>
+<p><img src="../../images/week10/motor_01.jpg" alt="cnc_01" width=100%/></p>
+<table>
+<thead>
+<tr>
+<th>Motor driver</th>
+<th>Step motor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Green</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>Red</td>
+<td>Blue</td>
+</tr>
+<tr>
+<td>Black</td>
+<td>Green</td>
+</tr>
+<tr>
+<td>Blue</td>
+<td>Black</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vref-calibration">VREF calibration<a class="headerlink" href="#vref-calibration" title="Permanent link">&para;</a></h4>
+<p>This is an important task to prevent over-heating of the motor drivers, and excessive vibration and over-heating of the step motors.  </p>
+<p><a href="link">This the motor datasheet provided by the manufacturer</a>
+<a href="http://kiloohm.info/smd4-resistor/R100">SMD resistor calculator</a></p>
+<p>Calculation:</p>
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Current Sense resistance</td>
+<td>0.01 Ohms</td>
+<td>Rsense</td>
+</tr>
+<tr>
+<td>Rated motor current</td>
+<td>1.3 A</td>
+<td>RMC</td>
+</tr>
+<tr>
+<td>Safety margin percentage</td>
+<td>25 %</td>
+<td>SM</td>
+</tr>
+</tbody>
+</table>
+<p>Antonio found this formula VREF = RMC x 8 x Rsense</p>
+<p><img src="../../images/week10/vref_01.jpg" alt="vref_01" width=100%/></p>
+<p>Process:</p>
+<ol>
+<li>Use the multimeter as voltmeter in a scale of less than 5 Volts.</li>
+<li>Get a multimeter with a clamp connector in the cathode</li>
+<li>Power on the GRBL board</li>
+<li>Place the cathode (screw driver) in the VREF potentiometer and the ground probe in the bottom left GND pin.</li>
+<li>Turn the potentiometer clockwise to increase and anti-clockwise to decrease the VREF.</li>
+</ol>
+<h4 id="steps-per-millimeter-for-belt-driven-systems">Steps per millimeter for belt driven systems<a class="headerlink" href="#steps-per-millimeter-for-belt-driven-systems" title="Permanent link">&para;</a></h4>
+<p>Antonio calculated this using this <a href="https://zalophusdokdo.github.io/StepperMotorsCalculator/en/index.html">calulator.</a></p>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Motor step angle</td>
+<td>1.8°</td>
+</tr>
+<tr>
+<td>Driven Microstepping</td>
+<td>Full step</td>
+</tr>
+<tr>
+<td>Belt pitch</td>
+<td>2 mm (GT2)</td>
+</tr>
+<tr>
+<td>Pulley tooth count</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result: 5.00</strong></p>
+<table>
+<thead>
+<tr>
+<th>Resolution</th>
+<th>Teeth</th>
+<th>Step angle</th>
+<th>Stepping</th>
+<th>Belt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200 micron</td>
+<td>20</td>
+<td>1.8°</td>
+<td>Full step</td>
+<td>2mm</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grbl">GRBL<a class="headerlink" href="#grbl" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/grbl/grbl">GRBL</a> is an Open-Source firmware that runs in Atmega328 based Arduinos for low cost CNC machines. The version I&rsquo;ve used is the v1.1 released in 08/2019.</p>
+<p>He dowloaded the repository:</p>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/grbl/grbl.git
+</code></pre></div>
+
+<p>Install requirements for Fedora Linux:</p>
+<ul>
+<li>Avr gcc compiler</li>
+<li>Arduino</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>sudo dnf install avr-gcc arduino
+</code></pre></div>
+
+<p>Once the requirements are installed, the next steps are documented in the <a href="https://github.com/gnea/grbl/wiki/Compiling-Grbl">GRBL repository.</a></p>
+<h4 id="compiling-and-flashing-grbl-using-arduino-ide">Compiling and Flashing GRBL using Arduino IDE<a class="headerlink" href="#compiling-and-flashing-grbl-using-arduino-ide" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Launch the Arduino IDE</li>
+<li>Make sure you are using the most recent version of the Arduino IDE!</li>
+<li>Load the <code>grbl folder</code> into the Arduino IDE as a Library.</li>
+<li>Click the <code>Sketch</code> drop-down menu, navigate to <code>Include Library</code> and select <code>Add .ZIP Library</code>. The <code>Add .ZIP Library</code> command supports both a .ZIP file or a folder. In our case, there is no <code>.ZIP</code> file.</li>
+<li>You can confirm that the library has been added. Click the <code>Sketch</code> drop-down menu again, navigate to <code>Include Library</code>, then scroll to the bottom of the list where you should see <code>grbl</code>.</li>
+<li><strong>IMPORTANT:</strong> Select the <code>grbl</code> folder <strong><em>inside</em></strong> the <code>grbl-XXX</code> folder, which <strong>only</strong> contains the source files and an example directory.</li>
+<li>If you accidentally select the <code>.zip</code> file or the wrong folder, you will need to navigate to your Arduino library, delete the mistake, and re-do Step 3.</li>
+<li>Open the <code>GrblUpload</code> Arduino example.</li>
+<li>Click the <code>File</code> down-down menu, navigate to <code>Examples-&gt;Grbl</code>, and select <code>GrblUpload</code>.</li>
+<li>Do not alter this example in any way! Grbl does not use any Arduino code. Altering this example may cause the Arduino IDE to reference Arduino code and compiling will fail.</li>
+<li>Compile and upload Grbl to your Arduino.</li>
+<li>Connect your Arduino Uno to your computer.</li>
+<li>Make sure your board is set to the Arduino Uno in the <code>Tool-&gt;Board</code> menu and the serial port is selected correctly in <code>Tool-&gt;Serial Port</code>. (There are some controller boards on ebay that have the Arduino Pro bootloader on it, if you get error messages like &ldquo;avrdude: stk500_getsync() attempt n of 10: not in sync: resp=0x20&rdquo; then choose another board, try Arudino Pro/Pro Mini)</li>
+<li>Click the <code>Upload</code>, and Grbl should compile and flash to your Arduino! (Flashing with a programmer also works by using the <code>Upload Using Programmer</code> menu command.)</li>
+</ol>
+<h4 id="compiling-and-flashing-using-command-line-tools">Compiling and flashing using command line tools<a class="headerlink" href="#compiling-and-flashing-using-command-line-tools" title="Permanent link">&para;</a></h4>
+<p><strong>Requirements for Fedora Linux</strong></p>
+<p>GRBL repository:</p>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/grbl/grbl.git
+</code></pre></div>
+
+<p>AVR-GCC and Arduino core libraries:</p>
+<div class="codehilite"><pre><span></span><code>sudo dnf install avr-gcc arduino-core
+</code></pre></div>
+
+<p>Make:</p>
+<div class="codehilite"><pre><span></span><code>sudo dnf install make
+</code></pre></div>
+
+<p><strong>Usage</strong></p>
+<p>Go to your local GRBL repository using your terminal by cd <location_of_grbl>, in my case this is:</p>
+<div class="codehilite"><pre><span></span><code>cd $HOME/repos/grbl
+</code></pre></div>
+
+<p>Then use make to compile the grbl HEX file that&rsquo;s going to be flashed to your Arduino UNO board:</p>
+<div class="codehilite"><pre><span></span><code>make clean &amp;&amp; make grbl.hex
+</code></pre></div>
+
+<p>If the HEX file is successfully compiled then proceed to flash it to the board by executing:</p>
+<div class="codehilite"><pre><span></span><code>avrdude -v -patmega328p -Uflash:w:grbl_v1.1h.20190825.hex:i -carduino -b 115200 -P /dev/ttyACM0
+</code></pre></div>
+
+<p>Where:</p>
+<ul>
+<li>
+<p>/dev/ttyACM0 it&rsquo;s the local addres of my Arduino UNO board.</p>
+</li>
+<li>
+<p>-patmega328p it&rsquo;s microprocessor family</p>
+</li>
+<li>
+<p>-Uflash:w:grbl*.hex it&rsquo;s the grbl_file_name.hex you have compiled.</p>
+</li>
+<li>
+<p>b 115200 it&rsquo;s the baudrate speed.</p>
+</li>
+</ul>
+<p>There are different ways to know this value, the easiest one it&rsquo;s this:</p>
+<ul>
+<li>Execute on the terminal with your board <strong>unplugged</strong>:</li>
+</ul>
+<script id="asciicast-aK4bM2mC0358HUAwKh2PpuRtb" src="https://asciinema.org/a/aK4bM2mC0358HUAwKh2PpuRtb.js" async></script>
+
+<div class="codehilite"><pre><span></span><code>ls /dev/tty*
+</code></pre></div>
+
+<p>Save the output and then execute the same command again, <strong>but with your Arduino board connected</strong>, compare the difference, and the new address it&rsquo;s the one of your Arduino:</p>
+<h4 id="disable-z-axis-homing-routine">Disable Z axis homing routine<a class="headerlink" href="#disable-z-axis-homing-routine" title="Permanent link">&para;</a></h4>
+<p>After flashing the board, and setting up electronics and power source he tried to configure the homming using <strong>Universal Gcode Sender</strong> but, I got many alarms in the process of trying the limit switches. Remember I&rsquo;m using a 2 axis configuration in hardware but then the GRBL by default expects  Z axis limit switch in the routine.</p>
+<p>We need to edit and re-flash the firmware to the board, this are the steps needed:</p>
+<p>In the lines 75 and 76 of the <strong>grbl/config.h</strong> file its declared the homing process and as the comments point:</p>
+<ul>
+<li>
+<p>line 75 moves the Z axis which is not existing in our configuration,</p>
+</li>
+<li>
+<p>line 76 moves the XY axis at the same time and rate.</p>
+</li>
+</ul>
+<p>This whole process it&rsquo;s called &ldquo;limit finding&rdquo;:</p>
+<p>Edition:</p>
+<ul>
+<li>
+<p>Comment line 75 by adding double slash &ldquo;//&rdquo; at the begging of the line.</p>
+</li>
+<li>
+<p>Edit line 76 by changing &ldquo;HOMING_CYCLE_1&rdquo; to &ldquo;HOMING_CYCLE_0&rdquo;.</p>
+</li>
+<li>
+<p>Save the file, and run the compilation process with Arduino or Linux command tools.</p>
+</li>
+</ul>
+<p>Now the homing cycle starts by moving the X and Y axis and the errors are fixed.</p>
+<script id="asciicast-MdI79ftDUjOytR7em4Otg9V2P" src="https://asciinema.org/a/MdI79ftDUjOytR7em4Otg9V2P.js" async></script>
+
+<h4 id="firmware-configuration">Firmware configuration<a class="headerlink" href="#firmware-configuration" title="Permanent link">&para;</a></h4>
+<p>The important points of the firmware configuration are:</p>
+<ul>
+<li>
+<p>Report in inches, which means you need to disable it to use millimeters.</p>
+</li>
+<li>
+<p>Homing cycle enabled, this is required since we&rsquo;re using a band-pulley system, and as result the machine is not precise enough to preserve an reliable 0 position.</p>
+</li>
+<li>
+<p>Working area limits:</p>
+</li>
+<li>X: 310 mm</li>
+<li>Y: 290 mm</li>
+</ul>
+<p>We obtained this measurements by manually measuring the travel length of each axis.</p>
+<p><img src="../../images/week10/axis_01.jpg" alt="cnc_01" width=100%/></p>
+<p><img src="../../images/week10/axis_02.jpg" alt="cnc_01" width=100%/></p>
+<p>Firmware configuration table:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$0</td>
+<td>10</td>
+<td>Step pulse time</td>
+</tr>
+<tr>
+<td>$1</td>
+<td>25</td>
+<td>Step idle delay</td>
+</tr>
+<tr>
+<td>$2</td>
+<td>0</td>
+<td>Step pulse invert</td>
+</tr>
+<tr>
+<td>$3</td>
+<td>2</td>
+<td>Step direction invert</td>
+</tr>
+<tr>
+<td>$4</td>
+<td>0</td>
+<td>Invert Step enable pin</td>
+</tr>
+<tr>
+<td>$5</td>
+<td>0</td>
+<td>Invert limit pins</td>
+</tr>
+<tr>
+<td>$6</td>
+<td>0</td>
+<td>Invert probe pin</td>
+</tr>
+<tr>
+<td>$10</td>
+<td>1</td>
+<td>Status report options</td>
+</tr>
+<tr>
+<td>$11</td>
+<td>0.010</td>
+<td>Junction deviation</td>
+</tr>
+<tr>
+<td>$12</td>
+<td>0.020</td>
+<td>Arc tolerance</td>
+</tr>
+<tr>
+<td>$13</td>
+<td>0</td>
+<td>Report in inches</td>
+</tr>
+<tr>
+<td>$20</td>
+<td>1</td>
+<td>Soft limits enable</td>
+</tr>
+<tr>
+<td>$21</td>
+<td>0</td>
+<td>Hard limits enable</td>
+</tr>
+<tr>
+<td>$22</td>
+<td>1</td>
+<td>Homing cycle enable</td>
+</tr>
+<tr>
+<td>$23</td>
+<td>7</td>
+<td>Homing direction invert</td>
+</tr>
+<tr>
+<td>$24</td>
+<td>25.000</td>
+<td>Homing locate feed rate</td>
+</tr>
+<tr>
+<td>$25</td>
+<td>700.000</td>
+<td>Homing search feed rate</td>
+</tr>
+<tr>
+<td>$26</td>
+<td>250</td>
+<td>Homing switch de-bouncing delay</td>
+</tr>
+<tr>
+<td>$27</td>
+<td>1.000</td>
+<td>Homing switch pull-off distance</td>
+</tr>
+<tr>
+<td>$30</td>
+<td>10000</td>
+<td>Maximum spindle speed</td>
+</tr>
+<tr>
+<td>$31</td>
+<td>0</td>
+<td>Minimum spindle speed</td>
+</tr>
+<tr>
+<td>$32</td>
+<td>1</td>
+<td>Laser mode enabled</td>
+</tr>
+<tr>
+<td>$100</td>
+<td>5.000</td>
+<td>X-axis travel resolution</td>
+</tr>
+<tr>
+<td>$101</td>
+<td>5.000</td>
+<td>Y-axis travel resolution</td>
+</tr>
+<tr>
+<td>$102</td>
+<td>5.000</td>
+<td>Z-axis travel resolution</td>
+</tr>
+<tr>
+<td>$110</td>
+<td>10000.000</td>
+<td>X-axis maximum rate</td>
+</tr>
+<tr>
+<td>$111</td>
+<td>10000.000</td>
+<td>Y-axis maximum rate</td>
+</tr>
+<tr>
+<td>$112</td>
+<td>500.000</td>
+<td>Z-axis maximum rate</td>
+</tr>
+<tr>
+<td>$120</td>
+<td>5000.000</td>
+<td>X-axis acceleration</td>
+</tr>
+<tr>
+<td>$121</td>
+<td>5000.000</td>
+<td>Y-axis acceleration</td>
+</tr>
+<tr>
+<td>$122</td>
+<td>10.000</td>
+<td>Z-axis acceleration</td>
+</tr>
+<tr>
+<td>$130</td>
+<td>310.000</td>
+<td>X-axis maximum travel</td>
+</tr>
+<tr>
+<td>$131</td>
+<td>290.000</td>
+<td>Y-axis maximum travel</td>
+</tr>
+<tr>
+<td>$132</td>
+<td>0.000</td>
+<td>Z-axis maximum travel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valid-gcode">Valid GCODE<a class="headerlink" href="#valid-gcode" title="Permanent link">&para;</a></h3>
+<p>Antonio have the time to test multiple GCODES compatible for this version of GRBL.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$H</td>
+<td>Starts homing cycle</td>
+</tr>
+<tr>
+<td>$G28</td>
+<td>Goes to the maximum point</td>
+</tr>
+<tr>
+<td>$G0 X100</td>
+<td>Linear movement on X axis by 100 mm</td>
+</tr>
+<tr>
+<td>$G0 Y100</td>
+<td>Linear movement on Y axis by 100 mm</td>
+</tr>
+<tr>
+<td>$G0 X100 Y100</td>
+<td>Linear movement on X and Y axis by 100 mm</td>
+</tr>
+<tr>
+<td>$G53</td>
+<td>Uses absolute coordinates for positioning</td>
+</tr>
+<tr>
+<td>$G27</td>
+<td>Uses XY plane</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wiring-and-connections">Wiring and connections<a class="headerlink" href="#wiring-and-connections" title="Permanent link">&para;</a></h2>
+<p><img src="../../images/week10/wiring_02.jpg" alt="vref_01" width=100%/></p>
+<ol>
+<li>Connect motor driver boards to the CNC arduino shield</li>
+<li>Connect stepper motors with the correct wiring configuration specified in the stepper motors section.</li>
+<li>Connect X and Y limit switches to -X and -Y ports in the board.</li>
+<li>Connect power supply yellow and black cables from the ATX power supply.</li>
+<li>I&rsquo;ve included a 12 V Red led to give some visual feedback, it&rsquo;s connected by an independent yellow and black wires from the ATX power supply.</li>
+</ol>
+<h2 id="fusion-360-work-flow">Fusion 360 work-flow<a class="headerlink" href="#fusion-360-work-flow" title="Permanent link">&para;</a></h2>
+<p>We used Autodesk&rsquo;s <a href="https://www.autodesk.com/products/fusion-360/overview">Fusion 360</a> to understand how the process of making GCODE works with a familiar software. Although there are other options like <a href="https://laserweb.yurl.ch/">LaserWeb</a></p>
+<h3 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h3>
+<p>The Design process conssit just in drawing a shape using the sketch tools under the Design environment of Fusion 360.</p>
+<p>We made a simple shapes to test the device</p>
+<h3 id="manufacturing">Manufacturing<a class="headerlink" href="#manufacturing" title="Permanent link">&para;</a></h3>
+<p><img src="../../images/week10/fusion_01.jpg" alt="vref_01" width=100%/>
+<img src="../../images/week10/fusion_02.jpg" alt="vref_01" width=100%/>
+<img src="../../images/week10/fusion_03.jpg" alt="vref_01" width=100%/>
+<img src="../../images/week10/fusion_04.jpg" alt="vref_01" width=100%/>
+<img src="../../images/week10/fusion_05.jpg" alt="vref_01" width=100%/>
+<img src="../../images/week10/fusion_06.jpg" alt="vref_01" width=100%/>
+<img src="../../images/week10/fusion_07.jpg" alt="vref_01" width=100%/>
+<img src="../../images/week10/fusion_08.jpg" alt="vref_01" width=100%/></p>
+<h3 id="simulation">Simulation<a class="headerlink" href="#simulation" title="Permanent link">&para;</a></h3>
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="path/to/poster_image.png" width=100% loop>
+    <source src="../../images/week10/fusion_08.mp4" type="video/mp4">
+  </video>
+</figure>
+
+<h3 id="nc-file-post-processing">NC file post-processing<a class="headerlink" href="#nc-file-post-processing" title="Permanent link">&para;</a></h3>
+<p><img src="../../images/week10/fusion_10.jpg" alt="vref_01" width=100%/>
+<img src="../../images/week10/fusion_11.jpg" alt="vref_01" width=100%/>
+<img src="../../images/week10/fusion_12.jpg" alt="vref_01" width=100%/></p>
+<div class="codehilite"><pre><span></span><code>%
+(cake_test_01)
+(Machine)
+(  vendor: Autodesk)
+(  description: Generic Cutting Machine)
+G90 G94
+G17
+G21
+
+(2D Profile2)
+G54
+G0 S255 M4
+G0 X62.576 Y25.508
+G1 X61.576 Y23.776 F1000
+G1 X62.447 Y22.268
+G1 X131.498
+G1 X166.023 Y82.068
+G1 X131.498 Y141.868
+G1 X62.447
+G1 X27.921 Y82.068
+G1 X61.576 Y23.776
+G1 X63.576
+G1 S0
+M30
+%
+</code></pre></div>
+
+<h2 id="universal-gcode-sender">Universal GCODE sender<a class="headerlink" href="#universal-gcode-sender" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Download Universal GCODE sender</p>
+</li>
+<li>
+<p>Run Universal GCODE sender and activate the communication with the machine</p>
+</li>
+<li>Establish serial communication at 115200 bauds</li>
+</ul>
+<p><img src="../../images/week10/ugs_04.jpg" alt="vref_01" width=100%/></p>
+<ul>
+<li>Run the HOME cycle</li>
+</ul>
+<p><img src="../../images/week10/ugs_03.jpg" alt="vref_01" width=100%/></p>
+<ul>
+<li>Import the GCODE in &ldquo;File&rdquo; &ndash;&gt; &ldquo;Open&rdquo;</li>
+</ul>
+<p><img src="../../images/week10/ugs_06.jpg" alt="vref_01" width=100%/></p>
+<ul>
+<li>Press the &ldquo;Play&rdquo; Button to run the GCODE</li>
+</ul>
+<p><img src="../../images/week10/ugs_05.jpg" alt="vref_01" width=100%/></p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Slow speeds:</li>
+</ul>
+<p>Change the maximum acceleration on the firmware configuration:</p>
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="path/to/poster_image.png" width=100% loop>
+    <source src="../../images/week10/demo_02.mp4" type="video/mp4">
+  </video>
+</figure>
+
+<ul>
+<li>High vibration:</li>
+</ul>
+<p>Decrease the motor drivers VREF until the vibration gets reduced</p>
+<ul>
+<li>Axis not moving:</li>
+</ul>
+<p>Check the transmission band, look for any stuck parts or excessive friction.
+Adjust the motor drivers VREF increasing the output</p>
+<ul>
+<li>Motors not changing direction</li>
+</ul>
+<p>Antonio found that the silk labels on the motor drivers are inverted and thus it gets confusing if you try to connect the stepper motors following the schematics.</p>
+<p><img src="../../images/week10/diagram.jpg" alt="vref_01" width=100%/></p>
+<p><img src="../../images/week10/driver_02.jpg" alt="cnc_01" width=100%/></p>
+<h2 id="conclusion-and-future">Conclusion and future<a class="headerlink" href="#conclusion-and-future" title="Permanent link">&para;</a></h2>
+<p>For the future we will be able to make some modifications such as :</p>
+<ul>
+<li>Adding a rasberry pie for ease of use.</li>
+<li>More solid feet</li>
+<li>A guide for the belt, it rubs along the profile which can damage it quickly</li>
+<li>A hot plate specially designed for our machine</li>
+</ul>
+<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../files/pancakesbot.f3d">Pancake bot</a></li>
+<li><a href="../../files/piecepancake.f3d">Part pancake bot</a></li>
+</ul>
+<h2 id="useful-links">Useful links<a class="headerlink" href="#useful-links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.autodesk.com/products/fusion-360/overview?term=1-YEAR">Fusion 360</a></li>
+<li><a href="https://www.mcmaster.com">Mc MasterCarr</a></li>
+<li><a href="https://www.makercase.com">Makercase</a></li>
+</ul>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 16, 2021</span>
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../week14/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                15. Networking and communications
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../week16/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                16. Interface and application programming
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright 2021 GAUTIER Théo - Creative Commons Attribution Non Commercial
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://www.instagram.com/gtr.theo/" target="_blank" rel="noopener" title="www.instagram.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.facebook.com/theo.gautier.311/" target="_blank" rel="noopener" title="www.facebook.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.linkedin.com/in/théo-gautier-b64ba7131/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

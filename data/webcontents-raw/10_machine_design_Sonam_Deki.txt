@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--
+	Be by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sonam Deki</title>
+		 
+    <!-- =============== Bootstrap Core CSS =============== -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css">
+    <!-- =============== fonts awesome =============== -->
+    <link rel="stylesheet" href="../assets/font/css/font-awesome.min.css" type="text/css">
+    <!-- =============== Plugin CSS =============== -->
+    <link rel="stylesheet" href="../assets/css/animate.min.css" type="text/css">
+    <!-- =============== Custom CSS =============== -->
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+    <!-- =============== Owl Carousel Assets =============== -->
+    <link href="../assets/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../assets/owl-carousel/owl.theme.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Trirong" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Corinthia&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- =============== Preloader =============== -->
+    <div id="preloader">
+          <div id="loading">
+		<img width="256" height="32" src="assets/img/loading-cylon-red.svg">
+        </div>
+    </div>
+    <!-- =============== nav =============== -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo">
+                    </a>-->
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+						<li>
+                            <a class="page-scroll" href="../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="assignment.html">Assignment</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="../Project.html">Project</a>
+                        </li>
+                      
+                        <li>
+                            <a class="page-scroll" href="../agreement/agreement.html">Student Agreement</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- =============== navbar-collapse =============== -->
+
+            </div>
+        </div>
+        <!-- =============== container-fluid =============== -->
+    </nav>
+    <!-- =============== header =============== -->
+    <header id="home" class="blog-header">
+		<!-- =============== container =============== -->
+       <!-- <div class="container">
+            <div class="header-content row">
+				<h1> FAB ACADEMY :2021 </h1>
+			</div>
+        </div> -->
+		<!-- =============== container end =============== -->
+    </header>
+    <!-- =============== blog single =============== -->
+	<section>	
+    <div class="container marg50">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="classic-blog blog-single">
+              <!--<div class="bs-blog-img"><img alt="" src="assets/img/ProjectPic1.jpg"></div>-->
+              <div class="bs-blog-naz">
+                <div class="bs-blog-type"><i class="fa fa-pencil-square-o"></i></div>
+                <div class="bs-blog-name"><a style= "color: Orange; font-size: 140%;"> Week 11: Machine Making Week</a></div>
+                <div class="bs-blog-detail">6th April- 20th April 2022 </div>
+                <div class="bs-blog-text">
+					<blockquote style="font-size:20px;"><b>Task to be carried out this week</b></blockquote>
+				</div>
+				<div>
+					<ol type="1"><br><b>Group Assignment</b><br>
+                        <li>Design a machine that includes mechanism+actuation+automation+application</li>
+                        <li>Document the group project and your individual contribution</li>
+                        <li>Build the mechanical parts and operate it manually</li>		
+					</ol>
+                    <ul> <br><b>The softwares used during the week's assignment</b>
+                        <li>Autodesk Fusion 360: Making designs</li>
+                        <li>Aspire: Controlling the Shopbot</li>
+                        <li>DXF to G-code converter: Controlling the machine</li>
+                        <li>Visual Studio: For Documentation </li>
+                    </ul>
+                </div> 
+                <!--work Schedule Table -->
+				<div class="bs-blog-text">
+					<blockquote style="font-size:20px;" ><b>Action Plan</b></blockquote>
+				</div>
+				<table class= "table">
+					<thead class="thead">
+						<td> Date </td>
+						<td> Work Allocation</td>
+					</thead>
+					<tbody class="tbody">
+						<tr>
+							<td>6th April</td>
+							<td style="text-align:left">Prof. Neil's Lecture on Computer Controlled Cutting </td>
+						</tr>
+                        <tr>
+							<td>7th April</td>
+							<td style="text-align:left">Brain storming and Idea sharing</td>
+                        <tr>
+							<td>8th April</td>
+							<td style="text-align:left">Idea conception, initial planning and work distribution</td>
+						</tr>
+                        <tr>
+							<td>9th April</td>
+							<td style="text-align:left">Reading and research on the building PCB milling machines</td>
+						</tr>
+                        <tr>
+							<td>10th-11th April</td>
+							<td style="text-align:left">Design and cuttings </td>
+						</tr>
+                        <tr>
+							<td>12th - 14th April</td>
+							<td style="text-align:left">Assembly of design cutouts</td>
+						</tr>
+                        <tr>
+							<td>14th - 16th April</td>
+							<td style="text-align:left">Electronicss</td>
+						</tr>
+						<tr>
+							<td>17th - 20th April</td>
+							<td style="text-align:left">Machine Assembly, Testing and documentation</td>
+						</tr>
+					</tbody>
+				</table>
+    
+                <!--website development block-->
+                <!--Introduction to electronic design and electronic components-->
+                <div class="bs-blog-text">
+                    <blockquote style="font-size:20px; color: #ec9706;" ><b>Idea Conception and Planning</b></blockquote>
+                    <p>
+                       The idea came from the problem when milling our PCB on the current PCB milling machine. The bed level on the current Roland- SRM20 machien that we are using had become uneven. DIe to this we faced a number of problem when milling our PCB for output week. 
+                       This also caused for the loss of a number of copper plate. Thus, we thought why not try to create a PCB milling machine for this week's machine making week. 
+                       <br> 
+                       Once we all agreed on the idea, the next step was to explore on how to build the machine. Since we do not readily get the electronic components in our country, we had to ensure that all the electronics we required were available in the lab. For this we had to dismantle a couple of previously made machines. 
+                       We gathered all the electronics we required and then started with the work. Our group had 7 members, thus we divided the tasks for efficiency. Two people were allocated for designing the components, 3 for electronics and 2 for documenting the entire process. 
+                       For the assembly and testing the machine, we all worked together. 
+                    </p>
+                    <p style="text-align:center;">
+                        <img  width="30%" height="30%" src="../assets/img/documentation/week11/1.png" >
+                    </p>
+                    <p>
+                        Our plan was to make the machine similar to the one shown in the picture above. 
+                    </p>
+                </div>
+                <!--End -->
+                <!--PCB circuit design-->
+            
+                <div class="bs-blog-text">
+					<blockquote style="font-size:20px; color: #ec9706;" ><b>Design and printing the parts </b></blockquote>
+                    <p>
+                        Initially we planned to 3-D print majority of the components but we realsized that the 3-D printer available at out lab was quite small and had the capicity to print only models with maximum of 180mm dimensions. 
+                        Hence, we cut the bed for the milling machine on the CNC and the body frames using circular saw. For the machine body, we used Alumnium frames and polymer slabs which were cut using circular saw. 
+                        For the bed, we used wood and cut it using CNC. However, for smaller components such as the cable holders and rod holder we 3D printed them. 
+                    <p style="text-align:center;">
+                        <img  width="27.5%" height="27.5%" src="../assets/img/documentation/week11/2.png" ><img  width="30%" height="30%" src="../assets/img/documentation/week11/3.png" >
+                       <br> <b>Rod Holders amd cable holders</b>
+                    </p>
+                    <p style="text-align:center;">
+                        <img  width="30%" height="30%" src="../assets/img/documentation/week11/6.png" ><img  width="30%" height="30%" src="../assets/img/documentation/week11/7.png" >
+                       <br> <b>Machine Base and body parts </b>
+                    </p>
+                </div>  
+                <!--Cutting-->
+                <div class="bs-blog-text">
+					<blockquote style="font-size:20px; color: #ec9706;" ><b>Electronics</b></blockquote>
+                    <p> 
+                       For the machine controller, we used Arduino Mega as the microcontroller. Arduino Mega Motor Shield was used to connect the motor driver to the microcontroller. 
+                       We used 3 moter drivers to control the X,Y and Z axis. 
+                    </p>
+                    <p style="text-align:center;">
+                        <img  width="30%" height="30%" src="../assets/img/documentation/week11/8.png" ><img  width="30%" height="30%" src="../assets/img/documentation/week11/9.png" >
+                       <br> 
+                    </p>
+                </div> 
+                <!--end of 3D scanning-->
+                <div class="bs-blog-text">
+					<blockquote style="font-size:20px; color: #ec9706;" ><b>Machine Assembly</b></blockquote>
+                    <p style="text-align:center;">
+                        <img  width="40%" height="40%" src="../assets/img/documentation/week11/10.png" ><img  width="40%" height="40%" src="../assets/img/documentation/week11/11.png" >
+                        <img  width="40%" height="40%" src="../assets/img/documentation/week11/12.png" ><img  width="40%" height="40%" src="../assets/img/documentation/week11/13.png" >
+                       <br> 
+                    </p>
+                </div> 
+                <div class="bs-blog-text">
+					<blockquote style="font-size:20px; color: #ec9706;" ><b>Machine Control</b></blockquote>
+                    <p>
+                        For controlling the machine we used G-Code. We downloaded an software called dxf2gcode which converts 2D dxf drawings to CNC machine compatible G-Code.  
+                    </p>
+                    <p style="text-align:center;">
+                        <img  width="70%" height="70%" src="../assets/img/documentation/week11/14.png" ><br><br>
+                        <a href="https://sourceforge.net/projects/dxf2gcode/" download>Click to download the software</a>
+                    </p> 
+                </div>
+                <div class="bs-blog-text">
+					<blockquote style="font-size:20px; color: #ec9706;" ><b>Testing</b></blockquote>
+                    <p>
+                        Once the machine was assembled, we tested the machine. There were 3 major testing we carried out;
+                       <ul>
+                            <li>XY-axis test</li>
+                            <li>Z-axis test</li>
+                            <li>Bed allignment test</li>
+                        </ul>
+                        We tested the XY-axis, once the bed was assemnled. We found that the supporting rods were not alligned with the slot bearings, thus we used filers to recitfy that.  
+                        Next, we tested the Z-axis and bed-allignment and made the necessary changes to recify those issues.    
+                    </p>
+                    <p style="text-align:center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/u7eUfnXbJVs" title="YouTube video player"  allowfullscreen></iframe>
+                    
+                    </p>
+                </div>
+                <div class="bs-blog-text">
+					<blockquote style="font-size:20px; color: #ec9706;" ><b>Final Working</b></blockquote>
+                    <p style="text-align:center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/gxOnYQ5oty4" title="YouTube video player"  allowfullscreen></iframe>
+                    </p>
+                </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+</section>	
+	
+    
+
+	
+    <!-- Footer -->
+    <footer id="footer" class="marg50">
+	<!-- =============== container =============== -->
+    <div class="container">
+			    <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+
+					<ul class="social-links">
+						<li><a class="wow fadeInUp animated" href="index.html#" style="visibility: visible; animation-name: fadeInUp;"><i class="fa fa-facebook"></i></a></li>
+						<li><a data-wow-delay=".1s" class="wow fadeInUp animated" href="index.html#" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"><i class="fa fa-twitter"></i></a></li>
+						<li><a data-wow-delay=".2s" class="wow fadeInUp animated" href="index.html#" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"><i class="fa fa-google-plus"></i></a></li>
+						<li><a data-wow-delay=".4s" class="wow fadeInUp animated" href="index.html#" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;"><i class="fa fa-pinterest"></i></a></li>
+						<li><a data-wow-delay=".5s" class="wow fadeInUp animated" href="index.html#" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+
+                
+
+				</div>
+				<div data-wow-delay=".6s" class="col-xs-12 col-sm-6 col-md-6 wow bounceIn  animated" style="visibility: visible; animation-delay: 0.6s; animation-name: bounceIn;">
+
+					  <section class="widget widget_text" id="text-15">
+                         <h3 class="widget-title">College of Science and Technology</h3> <div class="textwidget">Rinchending, Phuentsholing<br>
+                        <p>Tel: 00 000 000<br>
+                        Mobile: 00 000 000<br>
+                        E-mail: <a href="#">somthekey@gmail.com</a></p>
+                        <a href="https://www.google.com/maps/place/College+of+Science+and+Technology+%E0%BD%9A%E0%BD%93%E0%BC%8B%E0%BD%A2%E0%BD%B2%E0%BD%82%E0%BC%8B%E0%BD%91%E0%BD%84%E0%BC%8B%E0%BD%A0%E0%BD%95%E0%BE%B2%E0%BD%B4%E0%BD%A3%E0%BC%8B%E0%BD%A2%E0%BD%B2%E0%BD%82%E0%BC%8B%E0%BD%98%E0%BD%90%E0%BD%BC%E0%BC%8B%E0%BD%A2%E0%BD%B2%E0%BD%98%E0%BC%8B%E0%BD%A6%E0%BE%B3%E0%BD%BC%E0%BD%96%E0%BC%8B%E0%BD%82%E0%BE%B2%E0%BE%AD%E0%BC%8D/@26.8496485,89.3912955,17z/data=!4m9!1m2!2m1!1sCST!3m5!1s0x39e3cb2c210e611d:0x44c5cb2cd32b18d4!8m2!3d26.8502058!4d89.3939924!15sCgNDU1SSAQp1bml2ZXJzaXR5"">Get directions on the map</a> →</div>
+                    </section>
+
+				</div>
+			</div>
+    </div><!-- =============== container end =============== -->
+	</footer>
+    <!-- =============== jQuery =============== -->
+    <script src="../assets/js/jquery.js"></script>
+    <!-- =============== Bootstrap Core JavaScript =============== -->
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <!-- =============== Plugin JavaScript =============== -->
+    <script src="../assets/js/jquery.easing.min.js"></script>
+    <script src="../assets/js/jquery.fittext.js"></script>
+    <script src="../assets/js/wow.min.js"></script> 
+	<!-- =============== owl carousel =============== -->
+    <script src="../assets/owl-carousel/owl.carousel.js"></script>  
+	<!-- Isotope does NOT require jQuery. But it does make things easier -->
+
+<script src="../assets/js/baguetteBox.js" async></script>
+<script src="../assets/js/plugins.js" async></script>
+
+    <!-- =============== Custom Theme JavaScript =============== -->
+    <script src="../assets/js/creative.js">	</script> 
+<script src="../assets/js/jquery.nicescroll.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+  
+	var nice = $("html").niceScroll();  // The document page (body)
+	
+	$("#div1").html($("#div1").html()+' '+nice.version);
+    
+    $("#boxscroll").niceScroll({cursorborder:"",cursorcolor:"#00F",boxzoom:true}); // First scrollable DIV
+
+    $("#boxscroll2").niceScroll("#contentscroll2",{cursorcolor:"#F00",cursoropacitymax:0.7,boxzoom:true,touchbehavior:true});  // Second scrollable DIV
+    $("#boxframe").niceScroll("#boxscroll3",{cursorcolor:"#0F0",cursoropacitymax:0.7,boxzoom:true,touchbehavior:true});  // This is an IFrame (iPad compatible)
+	
+    $("#boxscroll4").niceScroll("#boxscroll4 .wrapper",{boxzoom:true});  // hw acceleration enabled when using wrapper
+    
+  });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Application and interface programming - I know this
+to learn / to do Group assignment:
+Compare as many tool options as possible. Individual assignment
+Write an application that interfaces a user with an input and/or output device that you made looking ahead Well, finally I am on familiar territory. This is my day job, both as developer and as lecturer. As interactive installations are my favourite projects to work on, I am familiar with how to talk to hardware, how to build networks, and how to create user interfaces.'><title>Interface and Application Programming</title>
+
+<link rel='canonical' href='https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/week/interface-and-application-programming/'>
+
+<link rel="stylesheet" href="https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/scss/style.min.790104e7ab67f19fae24d680aeb15c92ce62f2db836e844069825c2a6d3f8b29.css"><meta property='og:title' content='Interface and Application Programming'>
+<meta property='og:description' content='Application and interface programming - I know this
+to learn / to do Group assignment:
+Compare as many tool options as possible. Individual assignment
+Write an application that interfaces a user with an input and/or output device that you made looking ahead Well, finally I am on familiar territory. This is my day job, both as developer and as lecturer. As interactive installations are my favourite projects to work on, I am familiar with how to talk to hardware, how to build networks, and how to create user interfaces.'>
+<meta property='og:url' content='https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/week/interface-and-application-programming/'>
+<meta property='og:site_name' content='Bente van Bourgondiën'>
+<meta property='og:type' content='article'><meta property='article:section' content='Week' /><meta property='article:published_time' content='2022-05-10T12:53:53&#43;02:00'/><meta property='article:modified_time' content='2022-05-10T12:53:53&#43;02:00'/><meta property='og:image' content='https://fabacademy.org/week/interface-and-application-programming/media/images/header.jpg' />
+<meta name="twitter:title" content="Interface and Application Programming">
+<meta name="twitter:description" content="Application and interface programming - I know this
+to learn / to do Group assignment:
+Compare as many tool options as possible. Individual assignment
+Write an application that interfaces a user with an input and/or output device that you made looking ahead Well, finally I am on familiar territory. This is my day job, both as developer and as lecturer. As interactive installations are my favourite projects to work on, I am familiar with how to talk to hardware, how to build networks, and how to create user interfaces."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://fabacademy.org/week/interface-and-application-programming/media/images/header.jpg' />
+    </head>
+    <body class="
+    article-page
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+        on-phone--column compact
+">
+        <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                <a href="https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/">
+                
+                    
+                    
+                    
+                        
+                        <img src="https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/img/avatar_hu355c817889cfecf099a2fc504661a3f9_19228_300x0_resize_q75_box.jpeg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">⚜️</span>
+                
+            </figure>
+            
+        
+        
+        <h1 class="site-name"><a href="https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/">Bente van Bourgondiën</a></h1>
+        <h2 class="site-description">Fabacademy Documentation</h2><ol class="social-menu">
+                
+                    <li>
+                        <a 
+                            href='https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/waag/students/bente-vanbourgondien'
+                            target="_blank"
+                            title="GitLab"
+                        >
+                            
+                            
+                                <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 586 559" style="enable-background:new 0 0 586 559;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FAFAFA;}
+	.st1{fill:#F0F0F0;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#E24329;}
+	.st4{fill:#FCA326;}
+	.st5{fill:#FC6D26;}
+	.st6{fill:#8C929D;}
+	.st7{fill:#2E2E2E;}
+	.st8{fill:none;stroke:#FCA326;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#FC6D26;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#E24329;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st11{fill:none;stroke:#F0F0F0;stroke-miterlimit:10;}
+	.st12{fill:#231F20;}
+	.st13{fill:none;stroke:#231F20;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st14{display:none;}
+	.st15{display:inline;opacity:0.1;fill:#E828E3;}
+	.st16{display:inline;}
+	.st17{opacity:0.1;fill:#E828E3;}
+	.st18{font-family:'SourceSansPro-Semibold';}
+	.st19{font-size:24px;}
+	.st20{display:inline;fill:#DB3B21;}
+	.st21{display:inline;fill:#FC6D26;}
+	.st22{display:inline;fill:#2E2E2E;}
+	.st23{display:inline;fill:#6E49CB;}
+	.st24{display:inline;fill:#380D75;}
+	.st25{display:inline;fill:#FCA121;}
+	.st26{opacity:0.6;fill:none;stroke:#231F20;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:12,6;}
+	.st27{fill:none;stroke:#444444;stroke-width:1.5339;stroke-miterlimit:10;}
+</style>
+<g id="logo_art">
+	<path class="st12" d="M461.514,298.355l-18.049-55.587c0.008,0.025,0.011,0.051,0.019,0.076c-0.009-0.029-0.014-0.058-0.022-0.087
+		c-0.001-0.002-0.001-0.003-0.001-0.005c0-0.001,0-0.002,0-0.002l-35.83-110.31c-1.96-5.811-7.353-9.711-13.536-9.663
+		c-6.201,0.032-11.446,3.857-13.364,9.748L346.721,237.23H239.408l-34.074-104.712c-1.916-5.886-7.162-9.71-13.362-9.742
+		c-0.025,0-0.049,0-0.075,0c-6.105,0-11.509,3.876-13.49,9.752l-35.732,110.211l-0.005,0.014c0,0.001,0,0.002,0,0.003
+		c-0.009,0.028-0.013,0.056-0.022,0.084c0.008-0.025,0.011-0.051,0.019-0.076l-18.115,55.591c-2.725,8.392,0.232,17.512,7.36,22.697
+		L288.328,434.7c0.023,0.017,0.049,0.027,0.072,0.044c0.067,0.048,0.132,0.097,0.2,0.142c-0.064-0.043-0.124-0.09-0.187-0.134
+		c0,0,0-0.001-0.001-0.001c0.01,0.008,0.022,0.013,0.033,0.02c0.009,0.006,0.018,0.01,0.027,0.016
+		c0.001,0.001,0.002,0.002,0.004,0.003c0.242,0.168,0.493,0.322,0.753,0.463c0.036,0.02,0.068,0.045,0.104,0.064
+		c0.001,0,0.001,0.001,0.002,0.001c0.022,0.011,0.042,0.025,0.064,0.036c0.017,0.008,0.035,0.013,0.051,0.021
+		c0.012,0.006,0.025,0.01,0.037,0.015c0.029,0.014,0.061,0.023,0.09,0.038c0.136,0.065,0.279,0.118,0.419,0.175
+		c0.131,0.054,0.258,0.117,0.392,0.164c0.006,0.002,0.011,0.005,0.017,0.007c0.022,0.008,0.042,0.019,0.065,0.027
+		c0.028,0.01,0.055,0.021,0.083,0.03c0.011,0.003,0.022,0.005,0.033,0.008c0.035,0.011,0.073,0.016,0.108,0.026
+		c0.013,0.004,0.028,0.006,0.042,0.01c0.188,0.057,0.383,0.098,0.577,0.141c0.076,0.017,0.149,0.041,0.226,0.055
+		c0.011,0.002,0.021,0.006,0.033,0.008c0.025,0.005,0.048,0.014,0.074,0.018c0.041,0.007,0.081,0.02,0.123,0.026
+		c0.033,0.005,0.067,0.003,0.1,0.008c0.006,0.001,0.011,0,0.017,0.001c0.002,0,0.003,0,0.005,0c0.369,0.053,0.743,0.09,1.124,0.09
+		c0.002,0,0.004,0,0.007,0l0,0c0.001,0,0.002,0,0.002,0c0,0,0.001,0,0.001,0c0.001,0,0.002,0,0.003,0
+		c0.382,0,0.756-0.037,1.126-0.09c0.001,0,0.003,0,0.004,0c0.006-0.001,0.012,0,0.018-0.001c0.033-0.005,0.068-0.003,0.101-0.008
+		c0.042-0.007,0.082-0.019,0.124-0.026c0.025-0.004,0.048-0.013,0.073-0.018c0.011-0.002,0.021-0.006,0.032-0.008
+		c0.078-0.015,0.153-0.039,0.231-0.056c0.191-0.042,0.383-0.083,0.57-0.139c0.013-0.004,0.026-0.005,0.039-0.009
+		c0.037-0.011,0.075-0.016,0.112-0.027c0.011-0.004,0.023-0.005,0.034-0.008c0.029-0.009,0.057-0.021,0.085-0.031
+		c0.022-0.008,0.042-0.019,0.064-0.027c0.006-0.002,0.011-0.005,0.017-0.007c0.142-0.05,0.276-0.116,0.415-0.173
+		c0.129-0.054,0.261-0.102,0.387-0.162c0.031-0.015,0.064-0.024,0.094-0.039c0.012-0.006,0.026-0.01,0.038-0.016
+		c0.017-0.008,0.035-0.013,0.052-0.022c0.023-0.012,0.045-0.026,0.067-0.037c0,0,0.001,0,0.001-0.001
+		c0.037-0.019,0.07-0.046,0.107-0.066c0.258-0.14,0.508-0.293,0.749-0.46c0.019-0.013,0.041-0.023,0.061-0.037
+		c0.005-0.004,0.011-0.006,0.016-0.01c0.023-0.017,0.05-0.028,0.073-0.045l156.44-113.65
+		C461.282,315.867,464.239,306.747,461.514,298.355z M394.194,142.774l30.68,94.456h-61.36L394.194,142.774z M419.501,253.202
+		l-12.519,16.041L314.648,387.55l43.677-134.348H419.501z M285.428,430.707C285.428,430.707,285.428,430.707,285.428,430.707
+		c0.008,0.024,0.021,0.046,0.029,0.071C285.449,430.753,285.436,430.731,285.428,430.707z M271.42,387.558L166.624,253.202l0,0
+		h61.18L271.42,387.558z M191.875,142.773l30.737,94.457h-61.36L191.875,142.773z M141.304,308.133
+		c-1.516-1.103-2.144-3.05-1.563-4.838l13.466-41.325l98.67,126.502L141.304,308.133z M288.053,434.489
+		c-0.031-0.025-0.061-0.052-0.091-0.078c-0.006-0.005-0.012-0.012-0.019-0.017c-0.06-0.05-0.119-0.101-0.177-0.153
+		c-0.114-0.099-0.226-0.2-0.333-0.306c0.009,0.008,0.019,0.015,0.028,0.023c0.012,0.011,0.025,0.02,0.037,0.031
+		c0.229,0.219,0.47,0.425,0.722,0.615c0.003,0.002,0.005,0.005,0.008,0.007c0.012,0.009,0.022,0.02,0.034,0.03
+		C288.193,434.591,288.121,434.543,288.053,434.489z M293.028,402.392l-25.665-79.059l-22.766-70.131h96.933L293.028,402.392z
+		 M298.281,434.241c-0.06,0.052-0.118,0.104-0.179,0.154c-0.007,0.006-0.014,0.013-0.021,0.019c-0.031,0.025-0.06,0.052-0.09,0.077
+		c-0.066,0.053-0.138,0.101-0.207,0.152c0.012-0.009,0.022-0.021,0.035-0.029c0.002-0.002,0.004-0.004,0.006-0.006
+		c0.252-0.19,0.492-0.394,0.719-0.613c0.009-0.009,0.02-0.016,0.029-0.024c0.012-0.011,0.025-0.02,0.036-0.031
+		C298.503,434.043,298.392,434.143,298.281,434.241z M444.766,308.13l-110.557,80.317l98.703-126.467l13.412,41.307
+		C446.906,305.083,446.279,307.03,444.766,308.13z"/>
+</g>
+<g id="spacing_guides" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" class="st14">
+	<path id="path40_116_" sketch:type="MSShapeGroup" class="st15" d="M0,0.5v124h586V0.5H0L0,0.5z"/>
+	<path id="path40_115_" sketch:type="MSShapeGroup" class="st15" d="M0,435.5v124h586v-124H0L0,435.5z"/>
+	<path id="path40_114_" sketch:type="MSShapeGroup" class="st15" d="M462.2,560h124V0h-124V560L462.2,560z"/>
+	<g class="st16">
+		<text transform="matrix(1 0 0 1 511.2881 283.332)" class="st18 st19">1x</text>
+	</g>
+	<g class="st16">
+		<text transform="matrix(1 0 0 1 281.2881 500.9979)" class="st18 st19">1x</text>
+	</g>
+	<g class="st16">
+		<text transform="matrix(1 0 0 1 281.2881 65.9981)" class="st18 st19">1x</text>
+	</g>
+	<path id="path40_109_" sketch:type="MSShapeGroup" class="st15" d="M0,560h124V0H0V560L0,560z"/>
+	<g class="st16">
+		<text transform="matrix(1 0 0 1 51.2881 283.332)" class="st18 st19">1x</text>
+	</g>
+</g>
+</svg>
+
+                            
+                        </a>
+                    </li>
+                
+            </ol></header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/weeks/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                
+                <span>Weeks</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/project/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Final Project</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/commands/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>handy commands</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/week/interface-and-application-programming/">
+                <img src="https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/week/interface-and-application-programming/media/images/header_hu17ff954d35cdafb2a5a804d0b5a7959d_15810_800x0_resize_q75_box.jpg"
+                        srcset="https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/week/interface-and-application-programming/media/images/header_hu17ff954d35cdafb2a5a804d0b5a7959d_15810_800x0_resize_q75_box.jpg 800w, https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/week/interface-and-application-programming/media/images/header_hu17ff954d35cdafb2a5a804d0b5a7959d_15810_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="233" 
+                        loading="lazy"
+                        alt="Featured image of post Interface and Application Programming" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/week/interface-and-application-programming/">Interface and Application Programming</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 10, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    9 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Application and interface programming - I know this</p>
+<h2 id="to-learn--to-do">to learn / to do</h2>
+<p><strong>Group assignment:</strong></p>
+<ul>
+<li>Compare as many tool options as possible.</li>
+</ul>
+<p><strong>Individual assignment</strong></p>
+<ul>
+<li>Write an application that interfaces a user with an input and/or output device that you made</li>
+</ul>
+<h2 id="looking-ahead">looking ahead</h2>
+<p>Well, finally I am on familiar territory. This is my day job, both as developer and as lecturer. As interactive installations are my favourite projects to work on, I am familiar with how to talk to hardware, how to build networks, and how to create user interfaces. Nowadays I use mainly javascript in combination with html/css, altough I have also programmed in objective C/Swift (iOS development), C# (Unity), actionscript 1,2 and 3 (when Flash was still a thing), PHP and occasionally Java (Android development). The first languages I learned were <a class="link" href="https://en.wikipedia.org/wiki/PL/I"  target="_blank" rel="noopener"
+    >PL/1</a> and <a class="link" href="https://en.wikipedia.org/wiki/Rexx"  target="_blank" rel="noopener"
+    >REXX</a>. Right after that came javascript, when it was still new.</p>
+<p>I do not foresee too many problems.  I do want to learn Python, and have toyed with the idea of doing that this week. But The Final Project is looming, and I think I better spend my time on that.</p>
+<h2 id="the-process">the process</h2>
+<h3 id="presentation">presentation</h3>
+<p>A few weeks back, Henk asked <a class="link" href="https://fabacademy.org/2022/labs/waag/students/bas-pijls/"  target="_blank" rel="noopener"
+    >Bas</a> and me to do a lecture on our respective tools of the trade on thursday. So that is what I did: I prepared a lecture about websockets. I like websockets, because they are so versatile. One way to use them is to have your browser talk to your serial port. This is not allowed by default (security), although there is the <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API"  target="_blank" rel="noopener"
+    >Web Serial api</a>. This is however not available in all browsers, as you can see on <a class="link" href="https://caniuse.com/?search=Web%20Serial%20API"  target="_blank" rel="noopener"
+    >Can I Use</a>.</p>
+<p>Websockets on the other hand, are a little bit older, and most browsers support them, see this <a class="link" href="https://caniuse.com/?search=Websockets"  target="_blank" rel="noopener"
+    >Can I Use</a></p>
+<p>For the webpage to talk with the serialport, what you need is something that <em>has</em> access to the serial port. Arduino is an example of a program that has acces to the serial port, just like native programs on your computer have. However, Arduino does not talk to my webbrowser, and so I need something else.</p>
+<p>I use <a class="link" href="https://www.codecademy.com/article/what-is-node"  target="_blank" rel="noopener"
+    >Node</a> for this. Node allows developers to write JavaScript code that runs directly in a computer process itself instead of in a browser. Node <em>has</em> access to the serial port, and also the means to start a Websocket Server. So it is easy to have all communication from and to the serial port routed to the Websocket Server.</p>
+<p>Then in my webpage, I just have to create a WebSocket client that talks to the Websocket server. See the diagram below:</p>
+<img class="centered-img"
+    src="media/images/node-server.jpg"
+    width="" />
+
+
+<p>Note that you can just as easy use Python to create the Websocket server and the serialport connection. It would not make a difference for the client.</p>
+<p>The good thing is that it does not end there. Websockets are not even meant for this, but for much greater things: create full duplex communication channels over a single TCP connection. If you have a websocket server running online, you can have as many clients as you want to connect to it and have the merits of realtime communication in a page, without reloading. See the below diagram:</p>
+<img class="centered-img"
+    src="media/images/websocket-server.jpg"
+    width="" />
+
+
+<p>I prepared a couple of examples for the presentation, that you can download <a class="link" href="https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/waag/students/bente-vanbourgondien/-/tree/master/src/presentation-interface-app-ports"  target="_blank" rel="noopener"
+    >here</a></p>
+<h3 id="group-assignment">group assignment</h3>
+<p>This weeks group assignment consisted of <a class="link" href="https://fabacademy.org/2022/labs/waag/students/bas-pijls/"  target="_blank" rel="noopener"
+    >Bas</a>&rsquo;s and mine presentations of the respective tools to create interfaces. Bas showed us how to use Processing to read serial data and use that data to do cool things, like generating a lot of bouncing balls. He also gave a primer on programming in Java (Processing uses a simplified Java) and the use of classes. I handled the same process, but with javascript in both a webbrowser and in Node.js .</p>
+<p>Both techniques have their merits. Processing is great because it is direct. You can easily access the hardware on your computer. The language is not hard to learn, as long as you keep to the basics. But it also has a lot of flexibility if you want to go deeper.</p>
+<p>Processing uses a main loop function called draw(), it functions much like the loop() function in Arduino. In fact, both environments have a lot of similarities, Arduino is based on the Processing environment.</p>
+<p><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">draw</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">background</span><span class="o">(</span><span class="mi">102</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">translate</span><span class="o">(</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="o">,</span> <span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">zoom</span> <span class="o">=</span> <span class="n">map</span><span class="o">(</span><span class="n">mouseX</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">width</span><span class="o">,</span> <span class="mf">0.1</span><span class="o">,</span> <span class="mf">4.5</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">scale</span><span class="o">(</span><span class="n">zoom</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">shape</span><span class="o">(</span><span class="n">bot</span><span class="o">,</span> <span class="o">-</span><span class="mi">140</span><span class="o">,</span> <span class="o">-</span><span class="mi">140</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<em><strong>typical Processing java draw loop</strong></em></p>
+<p>The draw loop makes it relatively intuitive to get something on the screen and animate it. Processing has simple shape drawing functions, like circle and rect, which makes it a good tool for artists to create computer generated art. I find it a bit harder to create a user interface with it.</p>
+<p>Javascript, wether in a web environment or in Node.js takes a different approach. Although Java and Javascript look connected based on the name, they are not. They share as much characteristics as a Car and a Carpet.</p>
+<p>Javascript is an event driven language, most of the time you handle events that result from actions you initiated (like loading an image) or events that come from user interaction (like clicking, pressing a key, scrolling, moving the mouse).</p>
+<p><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// two types of handling events in javascript
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;cat-image&#34;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;load&#34;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">requestSent</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">wss</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;listening&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">ws</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;-socket connected&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<em><strong>javascript event handling, and there are even more ways</strong></em></p>
+<p>I think it is a great language, that is easy to learn but hard to master. It is dynamic and loosely typed. For example it does make a difference between strings and numbers, but in a very informal way that sometimes catches you when you least expect it. It also has like 4 ways to define a function, which can be very confusing when you are learning it:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// common way of defining a function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">doSomething</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// also common
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">doSomething</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// anonymous function, usually used it event handlers
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// arrow or lambda function, also used in event handlers.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Although javascript also has drawing functionality that you can use with <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial?retiredLocale=nl"  target="_blank" rel="noopener"
+    >canvas</a>, to create user interfaces it is common to use html/css. This is a completely different language, that has it&rsquo;s own history (from a hypertext dissertation text engine to a responsive user interface environment). Using it can be extremely cumbersome as it basically involves translating a graphic design into text and tags.</p>
+<p>Because it runs in your browser, javascript is great to develop web applications with it. But since Node.js javascript also proved to be useful in serverside development. And then there is <a class="link" href="https://www.electronjs.org/"  target="_blank" rel="noopener"
+    >Electron</a> and the like, that combine Node.js with Chromium. This is great for developing cross platform applications, as long as they do not ask for too much processing power. I have used it to create touch interfaces that run in expositions in musea. But the same technique is also used to create cross-platform apps like for example <a class="link" href="https://code.visualstudio.com/"  target="_blank" rel="noopener"
+    >Visual Studio Code</a></p>
+<h3 id="individual-assignment">individual assignment</h3>
+<p>For the individual assignment, I tried out a few things based on the example code that I made for the presentation.</p>
+<p>Everything uses the same code on the microcontroller, a very simple button push:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-arduino" data-lang="arduino"><span class="line"><span class="cl"><span class="cp">#define BUTTON A2
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">pinMode</span><span class="p">(</span><span class="n">BUTTON</span><span class="p">,</span> <span class="kc">INPUT_PULLUP</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nc">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">button_state</span> <span class="o">=</span> <span class="nf">digitalRead</span><span class="p">(</span><span class="n">BUTTON</span><span class="p">);</span> <span class="c1">// 0 is down, 1 is up
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// pass the state to to serial 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nc">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">button_state</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nf">delay</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="web-serial-api">Web Serial API</h4>
+<p>To get an idea how the Web Serial API actually works, I create a web page that loads a random cat every time I press the button.
+It&rsquo;s pretty easy, and involves mainly listening to the right event handlers.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">serial</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Serial</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">serial</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">SerialEvents</span><span class="p">.</span><span class="nx">CONNECTION_OPENED</span><span class="p">,</span> <span class="nx">onSerialConnectionOpened</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">serial</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">SerialEvents</span><span class="p">.</span><span class="nx">CONNECTION_CLOSED</span><span class="p">,</span> <span class="nx">onSerialConnectionClosed</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">serial</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">SerialEvents</span><span class="p">.</span><span class="nx">DATA_RECEIVED</span><span class="p">,</span> <span class="nx">onSerialDataReceived</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">serial</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">SerialEvents</span><span class="p">.</span><span class="nx">ERROR_OCCURRED</span><span class="p">,</span> <span class="nx">onSerialErrorOccurred</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>In the <code>SerialEvents.DATA_RECEIVED</code> event handler, I write some code that uses an <code>XMLHttpRequest</code> to access a public api that points to a random cat image in every new request: <a class="link" href="https://api.thecatapi.com/v1/images/search"  target="_blank" rel="noopener"
+    >https://api.thecatapi.com/v1/images/search</a></p>
+<p>It serves me json, that I parse to get to the url of the cat image so I can load that in my page.</p>
+<p>When you instantiate the Serial class, the browser will popup a small panel that lets you choose the serial port to connect to. After selecting the port and pressing connect, the connection will be made. You can see this in the video below:</p>
+<div class="video-wrapper">
+    <video
+    controls
+    src="media/video/web-serial.mp4"
+    
+    
+    >
+        <p>
+            Your browser doesn't support HTML5 video. Here is a
+            <a href="media/video/web-serial.mp4">link to the video</a> instead.
+        </p>
+    </video>
+</div>
+
+<p>At first, when I press the button on the board, it will load (and show) a lot of cats in succession. Even though I use indicators to signify that a request is made and an image is already loading.</p>
+<p>I think this is because the Serial port and the event loop in javascript are somehow out of sync, and it somehow fires the XMLHttpRequest multiple times in a row before the indicator gets set. I solve it by adding a delay(300) in the code on the microcontroller.</p>
+<h4 id="websockets-for-real">Websockets for real</h4>
+<p>Then I take up the websockets again, but this time to use them as they are meant to be: reloading a cat image on every device that is connected, when I press the magic button.</p>
+<p>For this, I need an online Websocket server. I find a free one here <a class="link" href="https://socketsbay.com/test-websockets"  target="_blank" rel="noopener"
+    >https://socketsbay.com/test-websockets</a>. This one is just for testing purposes. It will just take whatever you send to it and pass it to all the connected clients. Just what I need.</p>
+<p>I create a client.js to use with Node, that connects to the serial port and sends everything that comes out of it to the online socket server.</p>
+<p>Then I change the Web Serial Api cat webpage to use a Websocket Client instead of the Serial Api. I make sure I use the same connection string on both sides: wss://socketsbay.com/wss/v2/2/demo/ and then I run the webpage on both my laptop and my mobile phone. And then I press the button:</p>
+<div class="video-wrapper">
+    <video
+    controls
+    src="media/video/online-sockets.mp4"
+    
+    
+    >
+        <p>
+            Your browser doesn't support HTML5 video. Here is a
+            <a href="media/video/online-sockets.mp4">link to the video</a> instead.
+        </p>
+    </video>
+</div>
+
+<p>It works. You can also see the test server in the background, and the data it receives from my serial port. I send a 0 when the button is pressed, and this is the cue for the webpage to send a request to the cat api.</p>
+<p>The webpage is accesible online:
+<a class="link" href="https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/cats/index.html"  target="_blank" rel="noopener"
+    >https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/cats/index.html</a></p>
+<p>You can use the <a class="link" href="https://socketsbay.com/test-websockets"  target="_blank" rel="noopener"
+    >socketsbay</a> test server to send a 0 to the page, and it will load a random cat.</p>
+<h2 id="looking-back">looking back</h2>
+<h3 id="files">files</h3>
+<p><a class="link" href="https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/waag/students/bente-vanbourgondien/-/tree/master/src/week_14"  target="_blank" rel="noopener"
+    >here are the files for this week</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 Bente van Bourgondiën
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>
+        , based on Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.7.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        , modified for personal use by Bente van Bourgondiën
+    </section>
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#to-learn--to-do">to learn / to do</a></li>
+    <li><a href="#looking-ahead">looking ahead</a></li>
+    <li><a href="#the-process">the process</a>
+      <ol>
+        <li><a href="#presentation">presentation</a></li>
+        <li><a href="#group-assignment">group assignment</a></li>
+        <li><a href="#individual-assignment">individual assignment</a>
+          <ol>
+            <li><a href="#web-serial-api">Web Serial API</a></li>
+            <li><a href="#websockets-for-real">Websockets for real</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#looking-back">looking back</a>
+      <ol>
+        <li><a href="#files">files</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+                
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

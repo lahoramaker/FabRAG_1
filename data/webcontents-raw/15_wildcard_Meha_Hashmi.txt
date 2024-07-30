@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>wildcard</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <header>
+          <nav>
+              <ul>
+              <li><a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/">Home</a></li>
+              <div class="dropdown">
+                   <li><a href="#">Final page</a></li>
+                  <div class="dropdown-content">
+                    <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week1/principles_and_practice.html">Brain Storming</a>
+                    <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/final_project/detail_page.html">Detail page</a>
+                    <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/final_project/final_project.html">Final project</a>
+                    </div>
+                    </div>
+                  <div class="dropdown">
+                       <li><a href="#">Assignments</a></li>
+                      <div class="dropdown-content">
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week1/principles_and_practice.html">Principles and practice</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week1/project_management.html">Project management</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week2/computer-aided-design.html">Computer aided design </a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week3/computer-controlled-cutting.html">Computer controlled cutting</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week4/electronics_production.html">Electronics production</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week5/3dweek.html"> 3D scanning and printing</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week6/electronics_design.html">Electronics design </a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week7/computer_controlled_machining.html">Computer controlled machining</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week8/embedded_programming.html">Embedded programming</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week9/input_devices.html">Input devices</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week10/applications_and_implications.html">Applications and Implications</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week11/output_devices.html">Output devices</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week15/molding.html">Molding and casting</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week12/networking_and_communications.html">Networking and communication</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week13/interface.html">Interface and application programming</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week17/machine.html">Mechanical design</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week16/wildcard.html">Wild card week</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week14/invention.html">Invention, intellectual property and income</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week18/project_development.html">Project development</a>
+                      </div>
+                  </div>
+              </ul>
+          </nav>
+      </header>
+</head>
+<body>
+<h1 id="week-16-wildcard-week"><strong>WEEK 16: Wildcard Week!</strong></h1>
+<h4 id="individual-assignment">Individual assignment:</h4>
+<ul>
+<li>Design and produce something with a digital fabrication process (incorporating computer-aided design and manufacturing) not covered in another assignment.</li>
+</ul>
+<h4 id="learning-outcomes">Learning outcomes:</h4>
+<ul>
+<li>Demonstrate workflows used in the chosen process</li>
+<li>Select and apply suitable materials and processes to do your assignment.</li>
+</ul>
+<hr />
+<p>For this week, I decided to use the digital sewing machine, the <code>Janome Memory Craft 15000</code> to produce a cute embroidered shirt for my 3 year old cousin! It happens to be her birthday month, and I wanted to gift her a special present made by me!</p>
+<p>I followed <a href="http://fab.academany.org/2018/labs/fablabuae/students/salama-altamimy/Wildcard.html">Salama’s</a> instructions and documentations throughout this week to navigate the process of sewing.</p>
+<p><img src="pics/machine.jpg" /></p>
+<p>First, I needed a design to make! I chose a cute Minnie Mouse design I found on <a href="https://www.pinterest.com/pin/394346511115393463/?nic_v2=1a2PkGxud">Pinterest</a>, as it’s my cousin’s <strong>current</strong> obsession, and her name written in Disney font!</p>
+<p><img src="pics/design.jpg" /></p>
+<p>I have to choose the hoop size that would fit my intended design. I went with the <code>FA10 100X40</code> hoop, since it would fit the both the image and the writing.</p>
+<p><img src="pics/hoop.jpg" /></p>
+<p>while choosing, some doubts were raised (by Fatima, Salama and myself) regarding the hoop size and the fitting of the shirt I had. The hoop needed to be secured to the machine, and the shirt had to be <code>slipped</code> into the machine so it would sew on one side only. The only solution to this was to place the hoop askew in the shirt.</p>
+<p><img src="pics/shirt.jpg" /></p>
+<p>Next, I opened <code>digitizer</code>, which is the software I am using to digitize the pictures and produce a toolpath for the machine.</p>
+<p><img src="pics/software.jpg" /></p>
+<p>First, I selected the hoop size I am using.</p>
+<p><img src="pics/hoopsize.jpg" /></p>
+<p>Then, I imported the pictures by heading to <code>Insert artwork</code> under <code>Auto digitizer</code>. I selected the photos I needed then clicked on <code>Auto digitize instant embroidery</code>, which digitized the image, referenced each color and set a sewing pattern to it.</p>
+<p><img src="pics/artwork.jpg" /></p>
+<p><img src="pics/digitize.jpg" /></p>
+<p>clicking on any part of the digitized image displays a window of colors, the number of parts per color, and stitching type.</p>
+<p>Here, I can drag each part to arrange the order, or delete parts that I don’t want. For example, I’d like my design to include the image of <code>minnie mouse</code> only without the black background, so I selected the background and deleted it. Also, since I intend to do my design in 3 colors, thus having to change the thread 3 times, grouping parts of similar colors together is more efficient. I placed the red color first, followed by white and lastly black.</p>
+<p><img src="pics/settings.jpg" /></p>
+<p>I repeated the process of importing the name, and digitizing it and placing it where it needs to be. As the placement of the hoop in the machine as at an angle, I had to do the same with the design for the stitching to be straight so I rotated the design 45 degrees. This is how the final design looks!</p>
+<p><img src="pics/final.jpg" /></p>
+<p>And the toolpath of the machine.</p>
+<p><img src="pics/toolpath.jpg" /></p>
+<p>I exported the files, saved them into a USB, a plugged the USB in the machine.</p>
+<p>As per Salama’s recommendations, and the steps in the <a href="https://www.janome.com/siteassets/support/manuals/embroidery-models/inst-mc15000-enlr2.pdf">manual</a> I setup the fabric into the hoop by placing a paper, and some Vlieseline fusible interlining underneath. And secured it by tightening the screw.</p>
+<p><img src="pics/manual.jpg" /></p>
+<p><img src="pics/setup.jpg" /></p>
+<p>Next, I needed to fill the top and bottom threads, I filled it with red first!</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Jr2Fb57pu7w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+<p>I secured the hoop, and gave the sewing order!</p>
+<p><img src="pics/order.jpg" /></p>
+The first object to be stitched was the name, and the machine did it very nicely!
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CJTEsbknwc4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+<p>Along the way, The machine paused and displayed an error message stating that bottom thread might be insufficient. So, I had to re-load the thread.</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hBy7Q7hgKYI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+<p>I placed the bottom thread again and clicked on the start button to start sewing. The machine continued to work on the bows, but the thread kept getting cut.</p>
+<p><img src="pics/error.jpg" /></p>
+<p>After several trials to re-thread and start, I noticed that the fabric was tearing at places because of the pull of the thread.</p>
+<p><img src="pics/tear.jpg" /></p>
+<p>This eventually lead me to stop working on this piece. I was told by the expert (Salama), that the fabric, and the stitch type might have caused this issue, thus I will be attempting this again (when I have time).</p>
+<p>The final result:</p>
+<p><img src="pics/final_image.jpg" /></p>
+<hr />
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br /><span data-xmlns:dct="http://purl.org/dc/terms/" data-property="dct:title">This work </span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/" rel="dct:source">http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/</a>
+</center>
+<p><br /></p>
+</body>
+</html>

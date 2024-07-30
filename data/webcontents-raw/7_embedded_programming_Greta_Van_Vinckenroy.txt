@@ -1,0 +1,1675 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Fablab ULB">
+      
+      
+      
+        <meta name="author" content="Greta">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>9. Embedded programming - Greta Van Vinckenroy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#9-embedded-programming" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Greta Van Vinckenroy" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Greta Van Vinckenroy
+            </span>
+            <span class="md-header-nav__topic">
+              
+                9. Embedded programming
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../about/" class="md-tabs__link">
+          About
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../week01/" class="md-tabs__link md-tabs__link--active">
+          Assignments
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../projects/final-project/" class="md-tabs__link">
+          Projects
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Greta Van Vinckenroy" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Greta Van Vinckenroy
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="About me" class="md-nav__link">
+      About me
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/agreement/" title="Student Agreement" class="md-nav__link">
+      Student Agreement
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Assignments
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Assignments
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week01/" title="1. Principles and practices" class="md-nav__link">
+      1. Principles and practices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week02/" title="2. Project management" class="md-nav__link">
+      2. Project management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week03/" title="3. Computer Aided design" class="md-nav__link">
+      3. Computer Aided design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week04/" title="4. Computer controlled cutting" class="md-nav__link">
+      4. Computer controlled cutting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week05/" title="5. Electronics production" class="md-nav__link">
+      5. Electronics production
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week06/" title="6. 3D Scanning and printing" class="md-nav__link">
+      6. 3D Scanning and printing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week07/" title="7. Electronics design" class="md-nav__link">
+      7. Electronics design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week08/" title="8. Computer controlled machining" class="md-nav__link">
+      8. Computer controlled machining
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        9. Embedded programming
+      </label>
+    
+    <a href="./" title="9. Embedded programming" class="md-nav__link md-nav__link--active">
+      9. Embedded programming
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#assignment" class="md-nav__link">
+    Assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-assignment" class="md-nav__link">
+    Individual assignment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes-and-introduction" class="md-nav__link">
+    Notes and Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-of-a-microcontroller-datasheet" class="md-nav__link">
+    Analysis of a microcontroller datasheet
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin-configuration-and-description" class="md-nav__link">
+    Pin configuration and description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-diagram-avr-cpu-core" class="md-nav__link">
+    Block diagram, AVR CPU core
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avr-memories" class="md-nav__link">
+    AVR memories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-clock-and-clock-options" class="md-nav__link">
+    System Clock and Clock Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-management-and-sleep-modes" class="md-nav__link">
+    Power Management and Sleep Modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-control-and-reset" class="md-nav__link">
+    System Control and Reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interrupts" class="md-nav__link">
+    Interrupts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#io-ports" class="md-nav__link">
+    I/O-Ports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timers-and-counters" class="md-nav__link">
+    Timers and Counters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spi-serial-peripheral-interface" class="md-nav__link">
+    SPI – Serial Peripheral Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usart" class="md-nav__link">
+    USART
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analog-to-digital-converter" class="md-nav__link">
+    Analog-to-Digital Converter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summaries-of-several-characteristics" class="md-nav__link">
+    Summaries of several characteristics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-my-pcb" class="md-nav__link">
+    Programming my PCB
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#winavr-fabtinyisp" class="md-nav__link">
+    WinAVR + FabtinyISP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arduino-ide-arduino-nano" class="md-nav__link">
+    Arduino IDE + Arduino NANO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atmel-studio7-atmel-ice" class="md-nav__link">
+    Atmel Studio7 + Atmel ICE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment" class="md-nav__link">
+    Group assignment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#languages" class="md-nav__link">
+    Languages:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-environment-compiler-and-programmer" class="md-nav__link">
+    Programming environment, compiler, and programmer:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#still-to-do-if-i-had-time" class="md-nav__link">
+    Still to do if I had time....
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week10/" title="10. Molding and casting" class="md-nav__link">
+      10. Molding and casting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week11/" title="11. Input devices" class="md-nav__link">
+      11. Input devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week12/" title="12. Output devices" class="md-nav__link">
+      12. Output devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week13/" title="13. Applications and implications" class="md-nav__link">
+      13. Applications and implications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week14/" title="14. Networking and communications" class="md-nav__link">
+      14. Networking and communications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week15/" title="15. Mechanical design" class="md-nav__link">
+      15. Mechanical design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week16/" title="16. Interface and application programming" class="md-nav__link">
+      16. Interface and application programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week17/" title="17. Machine design" class="md-nav__link">
+      17. Machine design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week18/" title="18. Wildcard week" class="md-nav__link">
+      18. Wildcard week
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week19/" title="19. Invention, intellectual property and income" class="md-nav__link">
+      19. Invention, intellectual property and income
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week20/" title="20. Project development" class="md-nav__link">
+      20. Project development
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Projects
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Projects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/final-project/" title="Final Project" class="md-nav__link">
+      Final Project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/sample-project/" title="Another project" class="md-nav__link">
+      Another project
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#assignment" class="md-nav__link">
+    Assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-assignment" class="md-nav__link">
+    Individual assignment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes-and-introduction" class="md-nav__link">
+    Notes and Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-of-a-microcontroller-datasheet" class="md-nav__link">
+    Analysis of a microcontroller datasheet
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin-configuration-and-description" class="md-nav__link">
+    Pin configuration and description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-diagram-avr-cpu-core" class="md-nav__link">
+    Block diagram, AVR CPU core
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avr-memories" class="md-nav__link">
+    AVR memories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-clock-and-clock-options" class="md-nav__link">
+    System Clock and Clock Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-management-and-sleep-modes" class="md-nav__link">
+    Power Management and Sleep Modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-control-and-reset" class="md-nav__link">
+    System Control and Reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interrupts" class="md-nav__link">
+    Interrupts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#io-ports" class="md-nav__link">
+    I/O-Ports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timers-and-counters" class="md-nav__link">
+    Timers and Counters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spi-serial-peripheral-interface" class="md-nav__link">
+    SPI – Serial Peripheral Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usart" class="md-nav__link">
+    USART
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analog-to-digital-converter" class="md-nav__link">
+    Analog-to-Digital Converter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summaries-of-several-characteristics" class="md-nav__link">
+    Summaries of several characteristics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-my-pcb" class="md-nav__link">
+    Programming my PCB
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#winavr-fabtinyisp" class="md-nav__link">
+    WinAVR + FabtinyISP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arduino-ide-arduino-nano" class="md-nav__link">
+    Arduino IDE + Arduino NANO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atmel-studio7-atmel-ice" class="md-nav__link">
+    Atmel Studio7 + Atmel ICE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment" class="md-nav__link">
+    Group assignment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#languages" class="md-nav__link">
+    Languages:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-environment-compiler-and-programmer" class="md-nav__link">
+    Programming environment, compiler, and programmer:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#still-to-do-if-i-had-time" class="md-nav__link">
+    Still to do if I had time....
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="9-embedded-programming">9. Embedded programming<a class="headerlink" href="#9-embedded-programming" title="Permanent link">&para;</a></h1>
+<h2 id="assignment">Assignment<a class="headerlink" href="#assignment" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[x]  <strong>individual assignment:</strong>  </li>
+<li>read a microcontroller datasheet  </li>
+<li>
+<p>program your board to do something, with as many different programming languages and programming environments as possible</p>
+</li>
+<li>
+<p>[x]  <strong>group assignment:</strong><br />
+compare the performance and development workflows for other architectures</p>
+</li>
+</ul>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This week, I
+* used my HelloBoard made in <a href="http://fab.academany.org/2019/labs/ulb/students/greta-vanvinckenroy/assignments/week07/#helloboard">week07</a> to reprogram it to use the added LEDS and button.
+* prepare myself to use the ATmega328P to use in my final project, by looking at its datasheet, and programming commercial products with this new microcontroller.</p>
+<p><em>Files are available <a href="../../files/week09/GVV-advanced_helloboard.zip">here</a></em></p>
+<h2 id="individual-assignment">Individual assignment<a class="headerlink" href="#individual-assignment" title="Permanent link">&para;</a></h2>
+<h3 id="notes-and-introduction">Notes and Introduction<a class="headerlink" href="#notes-and-introduction" title="Permanent link">&para;</a></h3>
+<p>Let&rsquo;s start analyzing and summarizing a microcontroller datasheet, namely the ATMega328p datasheet, available <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061A.pdf">here</a></p>
+<p>Actually, in a full project, this is the first step, prior to start making the schematic and PCB layout&hellip;</p>
+<h3 id="analysis-of-a-microcontroller-datasheet">Analysis of a microcontroller datasheet<a class="headerlink" href="#analysis-of-a-microcontroller-datasheet" title="Permanent link">&para;</a></h3>
+<h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
+<p>Really synthetic but crucial information about the chip: <em>The ATmega48A/PA/88A/PA/168A/PA/328/P is a low power, CMOS 8-bit microcontrollers based on the
+AVR® enhanced RISC architecture</em></p>
+<p><strong>Low power</strong>: interesting for portable devices powered through batteries for example.<br />
+<strong>CMOS</strong>: Complementary metal oxide semi-conductor: fabrication technology for the electronic components<br />
+<strong>RISC architecture</strong>: data and program are stored in separate memories&hellip;</p>
+<h4 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h4>
+<p>This is an short overview/summary of the features of the microcontroller, providing important information.
+e.g., the ATMega is</p>
+<h4 id="pin-configuration-and-description">Pin configuration and description<a class="headerlink" href="#pin-configuration-and-description" title="Permanent link">&para;</a></h4>
+<p>The pins configuration  depends on the package. In order to be able to handsolder, we choose the TQFP package:</p>
+<p><img alt="" src="../../images/week09/ATmega328_pinout.png" /></p>
+<p>The datasheet gives then some global description on the functionality of all pins. More detailed data will be found later in in separate sections.</p>
+<h4 id="block-diagram-avr-cpu-core">Block diagram, AVR CPU core<a class="headerlink" href="#block-diagram-avr-cpu-core" title="Permanent link">&para;</a></h4>
+<p>The block diagram and AVR CPU Code provide detailed information on the architecture of the microcontroller, and on the structure of the control process unit (CPU), the core of the system!<br />
+This detailed information is not needed at this stage, and we&rsquo;ll come back when more information may be needed on interrupt management.</p>
+<p>What is interesting is next topic:</p>
+<h4 id="avr-memories">AVR memories<a class="headerlink" href="#avr-memories" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The ATmega328P contains 32Kbytes On-chip In-System Reprogrammable <em>Flash memory</em> for <strong>program</strong> storage.<br />
+For software security, the Flash Program memory space is divided into two sections, <em>Boot Loader Section</em> and <em>Application Program Section</em></li>
+</ul>
+<p><img alt="" src="../../images/week09/program_memory.png" /></p>
+<ul>
+<li>The Volatile part of the <strong>data</strong> memory (SRAM: Static Random Access Memory) is as follows:</li>
+</ul>
+<p><img alt="" src="../../images/week09/data_memory.png" /></p>
+<ul>
+<li>The non-volatile part of the <strong>data</strong> Memory, the EEPROM (Electrically Erasable Programmable Read-Only Memory) is used to store relatively small amounts of <strong>data</strong> but allowing  individual bytes to be erased and reprogrammed.<br />
+The ATmega328P contains 1Kbyte of data EEPROM memory. It is organized as a separate data space, in which single bytes can be read and written.</li>
+</ul>
+<p>Both the Flash and EEPROM memory arrays can be programmed using the serial SPI bus while RESET is
+pulled to GND. The serial interface consists of pins SCK, MOSI (input) and MISO (output). After RESET is set
+low, the Programming Enable instruction needs to be executed first before program/erase operations can be
+executed.</p>
+<blockquote>
+<p>This is exactly what has been done in previous weeks....</p>
+</blockquote>
+<p>Besides the ICSP programming mode, the Boot Loader Support in the ATmega328p provides a &ldquo;self-programming&rdquo; mechanism for downloading and uploading program code by the MCU itself. in other words, <em>the program code within the Boot Loader section has the capability to write into the entire Flash</em>, including the Boot Loader memory, modifying or even erasing itself!</p>
+<p>This feature allows flexible application software updates controlled by the MCU using a Flash-resident Boot Loader program. The Boot Loader program can use any available data interface and associated protocol to read code and write (program) that code into the Flash memory, or read the code from the program memory!</p>
+<p>The size of the Boot Loader memory is configurable with fuses and the Boot Loader has two separate sets of <em>Boot Lock bits</em> which can be set independently. This gives the user a unique flexibility to select different levels of protection.</p>
+<blockquote>
+<p><strong>What is a fuse?</strong><br />
+There are 3 bytes of non-volatile storage called the fuses. The fuses determine how the chip will act, whether it has a bootloader, what speed and voltage it likes to run at, etc. Note that despite being called &lsquo;fuses&rsquo; they are re-settable and don&rsquo;t have anything to do with protection from overpowering (like the fuses in a home).<br />
+How to change fuse bits in a ATmega328p is explained <a href="https://www.instructables.com/id/How-to-change-fuse-bits-of-AVR-Atmega328p-8bit-mic/">here</a>.<br />
+<a href="http://www.engbedded.com/fusecalc">Here</a> is a tool to help programming the fuses.</p>
+</blockquote>
+<p>In addition, there is the I/O memory and the register memory, that are storage locations internal to the processor, used during the process of exchanging data between I/O devices and the main processing unit.</p>
+<h4 id="system-clock-and-clock-options">System Clock and Clock Options<a class="headerlink" href="#system-clock-and-clock-options" title="Permanent link">&para;</a></h4>
+<p>Selecting the correct clock is of paramount importance in the correct functioning of a microcontroller. There is a clock source, giving the cadence of every operation inside the MCU: speed of the CPU operations, baud rate of serial-communication signals, the amount of time needed to perform an analog-to-digital conversion, and so on&hellip;<br />
+There are quite a few ways to generate a clock signal for a microcontroller, each having its drawbacks and advantages (source: https://www.maximintegrated.com/en/app-notes/index.mvp/id/2154)</p>
+<p>The optimal clock source for a particular microcontroller application is determined by a combination of factors including accuracy, cost, power consumption, and environmental requirements. The following table summarizes the common oscillator circuit types discussed here, together with their strengths and weaknesses.</p>
+<p><b>Table 1. Performance Comparison of Clock Source Types</b>
+<table border="0" cellspacing="1" cellpadding="2">
+<tr>
+  <th>Clock Source</th>
+  <th>Accuracy</th>
+  <th>Advantages</th>
+  <th>Disadvantages</th>
+</tr>
+<tr>
+  <td>Crystal</td>
+  <td>Medium to high</td>
+  <td>Low cost</td>
+  <td>Sensitive to EMI, vibration, and humidity. Complex circuit impedance matching.</td>
+</tr>
+<tr>
+  <td>Crystal Oscillator Module </td>
+  <td>Medium to high</td>
+  <td>Insensitive to EMI and humidity. No additional components or matching issues.</td>
+  <td>High cost; high power consumption; sensitive to vibration; large packaging.</td>
+</tr>
+<tr>
+  <td>Ceramic Resonator</td>
+  <td>Medium</td>
+  <td>Lower cost</td>
+  <td>Sensitive to EMI, vibration, and humidity.</td>
+  </tr>
+  <tr class="tablebodyalt">
+  <td>Integrated Silicon Oscillator</td>
+  <td>Low to medium</td>
+  <td>Insensitive to EMI, vibration, and humidity. Fast startup, small size, and no additional components or matching issues.</td>
+  <td>Temperature sensitivity is generally worse than crystal and ceramic resonator types; high supply current with some types.</td>
+</tr>
+<tr>
+  <td>RC Oscillator</td>
+  <td>Very low</td>
+  <td>Lowest cost</td>
+  <td>Usually sensitive to EMI and humidity. Poor temperature and supply-voltage rejection performance.</td>
+</tr>
+</table></p>
+<p>The choice of a 20MHz is explained in the <a href="http://fabacademy.org/2019/docs/FabAcademy-Tutorials/week06_electronic_design/about_clock_speed.html">@fabacademy documents</a></p>
+<p>The datasheet explains how to set the Flash Fuse bits for the different available clock sources.<br />
+We choose here to use an external oscillator (resonator). The clock from the selected source is input to the AVR clock generator, and then routed to the appropriate modules.
+The resonator used here is a 20MHz resonator (capacitors included in the same chip as the crystal), requiring to set the fuses CKSEL3&hellip;1 to 011.<br />
+Important note in the datasheet:  <em>If the crystal frequency exceeds the specification of the device (depends on VCC), the CKDIV8 Fuse can be programmed in order to divide the internal frequency by 8. It must be ensured that the resulting divided clock meets the frequency specification of the device.</em></p>
+<h4 id="power-management-and-sleep-modes">Power Management and Sleep Modes<a class="headerlink" href="#power-management-and-sleep-modes" title="Permanent link">&para;</a></h4>
+<p><em>Sleep modes enable the application to shut down unused modules in the MCU, thereby saving power. The AVR provides various sleep modes allowing the user to tailor the power consumption to the application’s
+requirements.</em></p>
+<p>There are six different sleep mode, to be set through  registers. We&rsquo;ll look at this later on&hellip;</p>
+<h4 id="system-control-and-reset">System Control and Reset<a class="headerlink" href="#system-control-and-reset" title="Permanent link">&para;</a></h4>
+<p><em>During reset, all /O Registers are set to their initial values, and the program starts execution from the Reset Vector. For ATmega328P the instruction placed at the Reset Vector must be a JMP – Absolute Jump – instruction to the reset handling routine</em></p>
+<p>The ATmega48A/PA/88A/PA/168A/PA/328/P has four sources of reset:
+* Power-on Reset. The MCU is reset when the supply voltage is below the Power-on Reset threshold
+(VPOT).
+* External Reset. The MCU is reset when a low level is present on the RESET pin for longer than the
+minimum pulse length.
+* Watchdog System Reset. The MCU is reset when the Watchdog Timer period expires and the Watchdog
+System Reset mode is enabled.
+* Brown-out Reset. The MCU is reset when the supply voltage VCC is below the Brown-out Reset threshold
+(VBOT) and the Brown-out Detector is enabled.</p>
+<h4 id="interrupts">Interrupts<a class="headerlink" href="#interrupts" title="Permanent link">&para;</a></h4>
+<p><em>Interrupts are basically events that require immediate attention by the microcontroller. When an interrupt event occurs the microcontroller pause its current task and attend to the interrupt by executing an Interrupt Service Routine (ISR) at the end of the ISR the microcontroller returns to the task it had pause and continue its normal operations.</em>
+Nice tutorial available <a href="http://www.avr-tutorials.com/interrupts/about-avr-8-bit-microcontrollers-interrupts">here</a></p>
+<h4 id="io-ports">I/O-Ports<a class="headerlink" href="#io-ports" title="Permanent link">&para;</a></h4>
+<p><strong>Ports as General Digital I/O</strong>
+The ports are bi-directional I/O ports with optional internal pull-ups.</p>
+<p><strong>Alternate Port Functions</strong>
+Most port pins have alternate functions in addition to being general digital I/Os.</p>
+<h4 id="timers-and-counters">Timers and Counters<a class="headerlink" href="#timers-and-counters" title="Permanent link">&para;</a></h4>
+<p>The AVR has an interesting circuit, as shown below.  This circuit has 2 inputs and one output:</p>
+<p><img alt="" src="../images/week09/timer.jpg" />.</p>
+<p>If you tie it into the Tn pin it will count the pulses on the pin (this is referred to as a counter on the datasheet).<br />
+If you tie it into the AVRs internal(or external) clock you now have a timer.<br />
+If you tie the counter to the output you will get an Pulse Width Modulator signal on the OCnx pin.</p>
+<p>The ATmega328P has several timers/counters:
+* 8-bit Timer/Counter0 with PWM
+* 16-bit Timer/Counter1 with PWM
+* Timer/Counter0 and Timer/Counter1 Prescalers
+* 8-bit Timer/Counter2 with PWM and Asynchronous Operation</p>
+<p>The datasheet and the application Note <a href="http://ww1.microchip.com/downloads/en. /AppNotes/Atmel-2505-Setup-and-Use-of-AVR-Timers_ApplicationNote_AVR130.pdf">AVR130: Setup and Use of AVR Timers</a> provide more information on how to use the timers/counters.</p>
+<h4 id="spi-serial-peripheral-interface">SPI – Serial Peripheral Interface<a class="headerlink" href="#spi-serial-peripheral-interface" title="Permanent link">&para;</a></h4>
+<p>The Serial Peripheral Interface (SPI) allows high-speed synchronous data transfer between the ATmega328P and peripheral devices or between several AVR devices.</p>
+<h4 id="usart">USART<a class="headerlink" href="#usart" title="Permanent link">&para;</a></h4>
+<p>The Universal Synchronous and Asynchronous serial Receiver and Transmitter (USART) is a highly flexible
+serial communication device.</p>
+<h4 id="analog-to-digital-converter">Analog-to-Digital Converter<a class="headerlink" href="#analog-to-digital-converter" title="Permanent link">&para;</a></h4>
+<p>The ATmega328P features a 10-bit successive approximation ADC. The ADC is connected to an 8-channel Analog Multiplexer which allows eight single-ended voltage inputs constructed from the pins of Port A. The single-ended voltage inputs refer to 0V (GND).
+The ADC contains a Sample and Hold circuit which ensures that the input voltage to the ADC is held at a constant level during conversion.</p>
+<p>The ADC has a separate analog supply voltage pin, AVCC. AVCC must not differ more than ±0.3V from VCC. Internal reference voltages of nominally 1.1V or AVCC are provided On-chip. The voltage reference may be externally decoupled at the AREF pin by a capacitor for better noise performance.</p>
+<p>The ADC converts an analog input voltage to a 10-bit digital value through successive approximation. The
+minimum value represents GND and the maximum value represents the voltage on the AREF pin minus 1 LSB.</p>
+<h4 id="summaries-of-several-characteristics">Summaries of several characteristics<a class="headerlink" href="#summaries-of-several-characteristics" title="Permanent link">&para;</a></h4>
+<p>The ATmega328P datasheet ends with a summary of the available registers and a summary of the instructions set. The latest are the instructions, written in machine language, that the MCU understands and is able to execute.</p>
+<h3 id="programming-my-pcb">Programming my PCB<a class="headerlink" href="#programming-my-pcb" title="Permanent link">&para;</a></h3>
+<p>In week07, I added two leds and a push button on the original <a href="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.png">echo hello-world board</a>.</p>
+<p>So, this week, I&rsquo;ll program the board with following objectives:</p>
+<ul>
+<li>Control both leds (green, on pin PA2 and red on pin PA3 ) from the keyboard, through the FTDI connector by entering G (or g) to toggle the green led, and R (or r) to toggle the red led. This functionality is handled through an interrupt routine (ISR).</li>
+<li>Control both leds together from the push button and send message to terminal. Direct polling  or interrupt may used for the button.</li>
+</ul>
+<h4 id="winavr-fabtinyisp">WinAVR + FabtinyISP<a class="headerlink" href="#winavr-fabtinyisp" title="Permanent link">&para;</a></h4>
+<p>In first instance, I use WinAVR on my Windows 7 PC, starting from Neil&rsquo;s helloboard program....</p>
+<p>We use the same procedure as described in <a href="http://fabacademy.org/2019/labs/ulb/students/greta-vanvinckenroy/assignments/week05/#test-2-programming-through-winavr">week05</a></p>
+<p>I first added the pin definition adapted to my board:</p>
+<div class="codehilite"><pre><span></span>//Pins definitions
+
+  #define serial_port PORTA
+  #define serial_direction DDRA
+  #define serial_pins PINA
+  #define serial_pin_in (1 &lt;&lt; PA0)
+  #define serial_pin_out (1 &lt;&lt; PA1)
+
+  #define led_port PORTA
+  #define led_direction DDRA
+  #define led_pins PINA
+  #define led_pinG (1 &lt;&lt; PA2)
+  #define led_pinR (1 &lt;&lt; PA3)
+  #define ledG PA2
+  #define ledR PA3
+
+  #define button_port PORTB
+  #define button_direction DDRB
+  #define button_pins PINB
+  #define button_pin (1 &lt;&lt; PB2)
+  #define button PB2
+
+//define interrupt from serial port (keyboard) &amp; button
+
+#define serial_interrupt (1 &lt;&lt; PCIE0)
+#define serial_interrupt_pin (1 &lt;&lt; PCINT0)
+// Pin Change Interrupt 0, Source 0. The PA0 pin can serve as an external interrupt source for pin change interrupt 0.
+
+#define button_interrupt (1 &lt;&lt; PCIE1)
+#define button_interrupt_pin (1 &lt;&lt; PCINT10)
+//PCINT10:Pin Change Interrupt 1, Source 10.The PB2 pin can serve as an external interrupt source for pin change interrupt 1.
+</pre></div>
+
+
+<p>In the main program, interruptions need to be activated:</p>
+<div class="codehilite"><pre><span></span>//
+// set up pin change interrupt on input pin
+//
+
+set(GIMSK, serial_interrupt); // Enable serial_interrupt_pin (PA0) Change Interrupts
+set(PCMSK0, serial_interrupt_pin);  //Use serial_interrupt_pin (PA0) as interrupt pin
+
+set(GIMSK, button_interrupt); // Enable button_interrupt_pin (PB2) Change Interrupts
+set(PCMSK1, button_interrupt_pin);  //Use button_interrupt_pin (PB2) as interrupt pin
+
+sei();  //Enable interrupts
+</pre></div>
+
+
+<p>Handling of interruption by introducing character through the keyboard is performed through PCINT0interrupt vector, as follows:</p>
+<div class="codehilite"><pre><span></span>ISR(PCINT0_vect)  {
+   //
+   // keyboard interrupt handler
+   //
+   static char chr;
+
+   get_char(&amp;serial_pins, serial_pin_in, &amp;chr);
+
+   put_string(&amp;serial_port, serial_pin_out, &quot;Hello, what do you want? &quot;);
+   put_char(&amp;serial_port, serial_pin_out, 13); // carriage return
+   put_char(&amp;serial_port, serial_pin_out, 10); // new line
+
+   put_string(&amp;serial_port, serial_pin_out, &quot;To toggle the red LED, type R&quot;);
+   put_char(&amp;serial_port, serial_pin_out, 13); // carriage return
+   put_char(&amp;serial_port, serial_pin_out, 10); // new line
+
+   put_string(&amp;serial_port, serial_pin_out, &quot;To toggle the green LED, type G&quot;);
+   put_char(&amp;serial_port, serial_pin_out, 13); // carriage return
+   put_char(&amp;serial_port, serial_pin_out, 10); // new line
+
+
+   if (chr == 82 || chr == 114) {   //character R or r
+     toggle(led_port, led_pinR);      //change the led status to blink it
+     put_string(&amp;serial_port, serial_pin_out, &quot;RED LED!&quot;);
+     put_char(&amp;serial_port, serial_pin_out, 13); // carriage return
+     put_char(&amp;serial_port, serial_pin_out, 10); // new line
+     _delay_ms(200);
+    }
+
+    if (chr == 71 ||chr == 103) {   //character G or g
+     toggle(led_port, led_pinG);      //change the led status to blink it
+     put_string(&amp;serial_port, serial_pin_out, &quot;GREEN LED!&quot;);
+     put_char(&amp;serial_port, serial_pin_out, 13); // carriage return
+     put_char(&amp;serial_port, serial_pin_out, 10); // new line
+     _delay_ms(200);
+    }
+ }  
+</pre></div>
+
+
+<p>Functionality of the button is first introduced at the level of the main loop. Code is based on <a href="http://archive.fabacademy.org/2018/labs/fablabulb/students/nicolas-decoster/index.html?page=assignment&amp;assignment=08#avrButtonPolling">Nico</a> code:</p>
+<div class="codehilite"><pre><span></span>if bit_test(button_pins, button) {     //test wether the button is pressed : if not... (level it then high)
+  clear(led_port, led_pinR);        //if not, light the led off
+  clear(led_port, led_pinG);
+  if(was_active){                   //if it was pressed during the last loop, put an &quot;exit message&quot;
+    //clean terminal, found on  https://stackoverflow.com/questions/10105666/clearing-the-terminal-screen
+    put_char(&amp;serial_port, serial_pin_out, 27);
+    put_string(&amp;serial_port, serial_pin_out, &quot;[2J&quot;);
+    put_char(&amp;serial_port, serial_pin_out, 27);
+    put_string(&amp;serial_port, serial_pin_out, &quot;[H&quot;);
+    put_string(&amp;serial_port, serial_pin_out, &quot;Good bye - no operation!&quot;);
+
+    put_char(&amp;serial_port, serial_pin_out, 13); // carriage return
+    put_char(&amp;serial_port, serial_pin_out, 10); // new line
+    was_active=0; //disable the was_active flag
+    }
+}
+else {       //if the button was pressed
+    toggle(led_port, led_pinR);      //change the led status to blink it
+    toggle(led_port, led_pinG);      //change the led status to blink it
+    put_string(&amp;serial_port, serial_pin_out, &quot;Stop using the button! Use the keyboard!&quot;);
+    put_char(&amp;serial_port, serial_pin_out, 13); // carriage return
+    put_char(&amp;serial_port, serial_pin_out, 10); // new line
+    _delay_ms(500);   //wait a bit before going to the next step           
+    was_active=1;     //change the was_active flag so that an exit message will be send on button release
+  }
+</pre></div>
+
+
+<p>The complete files are available <a href="../../files/week09/GVV-advanced_helloboard.zip">here</a>.</p>
+<p>To program my PCB, I use the same hardware setup as in <a href="http://fab.academany.org/2019/labs/ulb/students/greta-vanvinckenroy/assignments/week07/#programming">week07</a></p>
+<p>After running, in Programmer&rsquo;s Notepad (WInAVR),  <code>make all</code> to check the .hex file, and <code>make program</code> to load it to the ATtiny84 board, we can disconnect the programmer from the board, but we need the communication with the PC. Fuses were already programmed in week05, it&rsquo;s not necessary to reprogram them again&hellip;</p>
+<p>Both control through the terminal and through the button are correctly performed, a illustrated below:</p>
+<p>Pushing the button toggles both leds together, while a message is sent to the PC: &ldquo;Stop using the button! Use the keyboard!&rdquo;</p>
+<table>
+<thead>
+<tr>
+<th>leds on</th>
+<th>leds off</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../images/week09/button1.jpg" /></td>
+<td><img alt="" src="../../images/week09/button2.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>no action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../images/week09/button3.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>screen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../images/week09/putty1.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>When using the keyboard, &ldquo;G&rdquo; or &ldquo;g&rdquo; toggles the green led, &ldquo;R&rdquo; or &ldquo;r&rdquo; toggle the red led, while the PCB send a string to hte PC to indicate which led is toggled (&ldquo;GREEN LED!&rdquo; or &ldquo;RED LED!&rdquo;) and remembering the user to use the correct strokes to control the leds.Any other key hasno effect&hellip;</p>
+<table>
+<thead>
+<tr>
+<th>green led on</th>
+<th>green led off</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../images/week09/keyboard_greenled_on.jpg" /></td>
+<td><img alt="" src="../../images/week09/keyboard_greenled_off.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>red led on</th>
+<th>red led off</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../images/week09/keyboard_redled_on.jpg" /></td>
+<td><img alt="" src="../../images/week09/keyboard_redled_off.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>screen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../images/week09/putty2.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>The issue I still need to solve, is that once the keyboard has been used, the control through the button seems not to work anymore! Looks like the system does not come out of the interrupt routine!! To be further investigated!!!</p>
+<h4 id="arduino-ide-arduino-nano">Arduino IDE + Arduino NANO<a class="headerlink" href="#arduino-ide-arduino-nano" title="Permanent link">&para;</a></h4>
+<p>First of all, be sure to have the ATtiny recognized by the Arduino IDE, by following the steps given in <a href="http://fabacademy.org/2019/labs/ulb/students/greta-vanvinckenroy/assignments/week05/#test-1-programming-through-arduino-ide">week05</a>. Arduino NANO is recognized by default..</p>
+<p>We follow the tutorials given <a href="https://www.arduino.cc/en/Tutorial/ArduinoISP#toc1">here</a> or <a href="http://highlowtech.org/?p=1706">here</a>.</p>
+<p>First program the Arduino NANO with the example code ArduinoISP. Therefore,</p>
+<ul>
+<li>choose the correct target (Arduino NANO),</li>
+<li>select the serial port to which the Arduino NANO is connected,</li>
+<li>upload the sketch ArduinoISP, without programmer(CTRL+U).</li>
+</ul>
+<p>Now the Arduino NANO is nearly ready to be used as programmer&hellip;</p>
+<ul>
+<li>adapt the C code previously for the HelloBoard for Arduino: here we can keep the original C program, we just move all definitions to the <code>void setup() function</code>, and the while (1) becomes now the <code>void loop()</code> function. We do not use the definitions specific to Arduino&hellip;</li>
+<li>choose the target (ATtiny84),</li>
+<li>select  the serial port to which the Arduino NANO is connected,</li>
+<li>connect the Arduino board to the ATtiny  as follows:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>pin on ICSP connector  HelloBoard:</th>
+<th>WITH pin on Arduino NANO:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pin 1: MISO</td>
+<td>pin PB4 (D12)</td>
+</tr>
+<tr>
+<td>pin 2: VCC</td>
+<td>VCC</td>
+</tr>
+<tr>
+<td>pin 3: SCK</td>
+<td>pin PB5 (D13)</td>
+</tr>
+<tr>
+<td>pin 4: MOSI</td>
+<td>pin PB3 (D11)</td>
+</tr>
+<tr>
+<td>pin 5: RESET</td>
+<td>pin PB2 (D10)</td>
+</tr>
+<tr>
+<td>pin 6: GND</td>
+<td>GND</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Connect a 1 uF capacitor between reset and ground on the Arduino NANO  (negative pin of the polarized capacitor goes to ground): it prevents the Arduino NANO from resetting (which starts the bootloader), thus ensuring that the Arduino IDE talks to the ArduinoISP (not the bootloader) during the upload of sketches.  </li>
+<li>upload the sketch into the ATtiny84 through the Arduino NANO as programmer (CTRL+SHIFT+U).</li>
+</ul>
+<p>Here is the hardware setup, a little bit messy as I do not have the right cables with me at that time&hellip; :-):</p>
+<p><img alt="" src="../../images/week09/arduino_prog.jpg" /></p>
+<p>And the result is the same as with the previous setup (WinAVR + FabtinyISP):
+(I just changed the welcome message&hellip;):</p>
+<p><img alt="" src="../../images/week09/putty3.png" /></p>
+<h4 id="atmel-studio7-atmel-ice">Atmel Studio7 + Atmel ICE<a class="headerlink" href="#atmel-studio7-atmel-ice" title="Permanent link">&para;</a></h4>
+<p>TO BE COMPLETED
+Atmel Studio 7 is a powerful tool to  program and even debug on AVR microcontrollers.
+The Atmel START software helps  making some configuration files.
+In Atmel Studio7.It could even load a Arduino sketch and adapt it!....</p>
+<p>But time and life is short, I leave this for later&hellip;</p>
+<h2 id="group-assignment">Group assignment<a class="headerlink" href="#group-assignment" title="Permanent link">&para;</a></h2>
+<p>We used several workflows to get our board programmed.</p>
+<h3 id="languages">Languages:<a class="headerlink" href="#languages" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>C</code>: we all programmed our microcontrollers in C. <a href="http://fab.academany.org/2019/labs/ulb/students/amy-beaulisch/blogs/mar13.html">Amy</a> also used <a href="https://blockly-games.appspot.com/">blockly</a> a really nice interface allowing diagram coding for C.</li>
+<li><code>assembler</code>: <a href="http://fab.academany.org/2019/labs/ulb/students/axel-cornu/assignments/week09.html">Axel</a> also tried assembler, just for fun!</li>
+</ul>
+<p>programming in <code>C</code> seems to be clearly the easy way here. However, it still remain very general, and allows to keep a good control and what you want your chip to do!</p>
+<h3 id="programming-environment-compiler-and-programmer">Programming environment, compiler, and programmer:<a class="headerlink" href="#programming-environment-compiler-and-programmer" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>Any text editor</code>,  <code>avrdude</code>, and a <code>fabISP</code> on Linux: <a href="http://fab.academany.org/2019/labs/ulb/students/gilles-decroly/assignments/week09.html">Gilles</a> and <a href="http://fab.academany.org/2019/labs/ulb/students/christophe-reyntiens/assignments/week09/">Christophe</a> used this solution. It requires a makefile to tell arvdude how to program the chip.</li>
+<li><code>Any text editor</code>, <code>WinAVR</code>, and a <code>fabISP</code> on Windows 7: <a href="http://fab.academany.org/2019/labs/ulb/students/greta-vanvinckenroy/assignments/week09/">Greta</a> and <a href="http://fab.academany.org/2019/labs/ulb/students/axel-cornu/assignments/week09.html">Axel</a> tested this solution, similar to the first one but on Windows 7.</li>
+<li><code>Arduino IDE</code> and  an <code>Arduino</code>on Windows: <a href="http://fab.academany.org/2019/labs/ulb/students/greta-vanvinckenroy/assignments/week09/">Greta</a> and <a href="http://fab.academany.org/2019/labs/ulb/students/amy-beaulisch/blogs/mar13.html">Amy</a> tried this solution.</li>
+<li><code>Atmel studio</code> and a <code>fabISP</code> on Windows: <a href="http://fab.academany.org/2019/labs/ulb/students/gilles-decroly/assignments/week09.html">Gilles</a> tried this solution, but did not succeed.</li>
+<li><code>Atmel studio</code> and a <code>Atmel commercial programmer</code> on Windows:  <a href="http://fab.academany.org/2019/labs/ulb/students/greta-vanvinckenroy/assignments/week09/">Greta</a>, <a href="http://fab.academany.org/2019/labs/ulb/students/amy-beaulisch/blogs/mar13.html">Amy</a> and <a href="http://fab.academany.org/2019/labs/ulb/students/gilles-decroly/assignments/week09.html">Gilles</a> tried this.</li>
+</ul>
+<p>Using avrdude is very efficient and was a good solution, but you need Linux. WinAVR is similar but only works on windows 7. If you want to program using windows, using commercial solutions will be required&hellip; It has the drawback to be commercial, but depending on the solution, you will have more possibilities in term of debugging and reading the chip than avrdude or winAVR!</p>
+<h2 id="still-to-do-if-i-had-time">Still to do if I had time....<a class="headerlink" href="#still-to-do-if-i-had-time" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Solve the issue  with the interrupt routine</p>
+</li>
+<li>
+<p>Use commercial ATMEL Studio and ICE to program the board</p>
+</li>
+<li>
+<p>Dig into the SPI protocol and analyze the ArduinoISP and the soft downloaded into my programmer during week05.... Let&rsquo;s dream&hellip;</p>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../week08/" title="8. Computer controlled machining" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                8. Computer controlled machining
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../week10/" title="10. Molding and casting" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                10. Molding and casting
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Creative Commons Attribution Non Commercial
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

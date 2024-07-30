@@ -1,0 +1,196 @@
+Title: 5. Electronics production - Fab Academy Quentin Bolsee
+
+URL Source: http://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/assignments/week05/
+
+Markdown Content:
+This week’s assignment was centered around producing pcb with the use of a pcb milling machine. Additionally, we had the opportunity to try other pcb production methods. I focused on two tasks:
+
+*   Milling, soldering and programming a JTAG D11C programmer board
+*   Creating a flexible circuit with the vinyl cutter
+
+Group assignment[¶](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/assignments/week05/#group-assignment "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------
+
+In the [group assignment](http://fabacademy.org/2020/labs/ulb/assignments/week05/), we tested our milling machine with a **1/64 in** and **1/100 in** flat end mill with good results.
+
+Our machine is a [desktop PCB Milling Machine from Bantam tools](https://www.bantamtools.com/machines/basic-desktop-pcb-milling-machine), with a build plate of **5x4 in**.
+
+pcb milling[¶](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/assignments/week05/#pcb-milling "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------
+
+I started with the provided design for the D11C, with an LED and a single JTAG connector:
+
+![Image 1: pcb design](http://academy.cba.mit.edu/classes/embedded_programming/D11C/hello.D11C.blink.png)
+
+For this job, I used a **1/64 in** (0.4 mm) flat end mill:
+
+[![Image 2: milling tool](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling_tool.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling_tool.jpg)
+
+For the conversion to G-code, I followed the same procedure that was described in our [group assignment](http://fabacademy.org/2020/labs/ulb/assignments/week05/). Namely, I used the **G-code -> mill 2D png** program in [**mods**](http://mods.cba.mit.edu/), and the **mill raster** cell was set to:
+
+*   tool diameter: **0.0156 in**
+*   cut depth: **0.07 mm**
+*   max depth: **0.14 mm**
+*   offset number: **10**
+
+And for the **path to G-code** cell:
+
+*   cut speed: **200 mm/min**
+*   plunge speed: **200 mm/min**
+*   jog speed: **300 mm/min**
+*   jog height: **2 mm**
+*   spindle speed: **30.000 RPM**
+*   format: **mm**
+
+[![Image 3: milling](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling1.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling1.jpg)
+
+The milling took about 30 minutes. The outline was performed with a **1 mm** tool in a single cut.
+
+[![Image 4: milling copper](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling2.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling2.jpg)
+
+The finished product is remarkably clean, and the pads seem easy to reach for soldering.
+
+[![Image 5: milling complete](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling3.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling3.jpg)
+
+The edges of the freshly milled pcb are still a bit rough.
+
+[![Image 6: milling result](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling_result.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling_result.jpg)
+
+For the cleanup, I used water and soap to remove some of the remaining dust. I then sanded the board with a fine grit to cleanup the traces.
+
+[![Image 7: sanding pcb](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling_sanding.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling_sanding.jpg)
+
+I could then move on to soldering the components. However, I decided to use a different design for my final pcb. The main reason is that there is only a single JTAG connector here, which means I cannot use the board as a USB to JTAG programmer; it can only be programmed through its only JTAG port to perform very simple tasks.
+
+With the help of my fabacademy instructor, we designed a new board in [EAGLE](https://www.autodesk.com/products/eagle/overview). We started with the schematic:
+
+[![Image 8: pcb EAGLE, schematic](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_eagle.png)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_eagle.png)
+
+Then we placed the components on the board. The extra features offered by our modifications are:
+
+*   Two JTAG connectors
+*   One LED indicating power ON
+*   One LED on PIN 4
+*   A ground plane covering the whole board
+
+[![Image 9: pcb EAGLE](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_eagle2.png)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_eagle2.png)
+
+Using the board editor in EAGLE is quite straightforward. Every device from the schematic is visible as a footprint on the board. Connections are the same, but wires need to be placed manually to satisfy those connections. There is an auto-route option, but for a single layer board, best results are obtained through manual routing.
+
+The design rules check (DRC) is a useful tool that lets you check wether your design can be produced correctly. By clicking on the DRC button on the lower-left, I get a new window where I set tolerence compatible with a **1/64 in** tool:
+
+[![Image 10: pcb EAGLE](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/DRC.png)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/DRC.png)
+
+For the outline of the board, I trace a line in the _milling_ layer. The host software from Bantam tools supports EAGLE files natively, so it was a good opportunity to try this alternative G-code conversion pipeline. I loaded the .brd file:
+
+[![Image 11: pcb EAGLE](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/bantam.png)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/bantam.png)
+
+Thanks to the ground plane, the milling can be performed in only a few passes with a **1/64 in** (0.4 mm) bit. However, the area near the USB port needs more clearance. I decided to add a second job with a **1 mm** with a clearance of **2.3mm** to clean those areas later. Even though the software is complaining that it cannot reach all areas with such a large bit, this can be safely ignored, as the **1/64 in** tool already went there.
+
+[![Image 12: pcb EAGLE](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/bantam2.png)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/bantam2.png)
+
+To add a new tool in the software, I click on tool library and set up the tool diameter, feed rate and max step down:
+
+[![Image 13: pcb EAGLE](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/bantam_tool.png)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/bantam_tool.png)
+
+It is important to setup the correct thickness for the material. In my case, I know that the thickness of the copper plate + sticky tape is around **1.74 mm**. To measure this, the BitBreaker tool can be used in the menu. The machine can detect a contact with the copper plate using a small electric current flowing through the tool itself. The BitBreaker module lets you measure the plate thickness with this method.
+
+The milling took about 30 minutes in total, and the outline was cut with the **1 mm** in a single pass.
+
+[![Image 14: milling final pcb](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling4.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/milling4.jpg)
+
+The finished pcb is slightly more challenging to solder, as the wires are sometimes very close to the ground plane. However, there was no incident during soldering.
+
+[![Image 15: pcb result](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_final.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_final.jpg)
+
+I started by taping the D11C to make sure it wouldn’t move during soldering of its first pins. For the smaller components, I used a different method: I first solder a single contact on the raw pcb, then bring the component in place with a set of pliers while heating its pin with the soldering iron. Both methods were effective.
+
+[![Image 16: pcb soldering](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_soldering.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_soldering.jpg)
+
+The finished product is relatively clean. I can immediately connect it to a USB port to see if the power ON LED does its job correctly.
+
+[![Image 17: pcb USB](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_usb.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_usb.jpg)
+
+D11C programming[¶](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/assignments/week05/#d11c-programming "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------
+
+We used a [particle.io](https://www.particle.io/) JTAG programmer to initially flash the bootloader to our D11C chip.
+
+[![Image 18: JTAG programming](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_flash.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_flash.jpg)
+
+We used EDBG with the provided binary file [free\_dap\_d11c\_mini.bin](http://academy.cba.mit.edu/classes/embedded_programming/SWD/free_dap_d11c_mini.bin). Programming occured correctly, indicating that my D11C was correctly connected to the JTAG pins.
+
+[![Image 19: EDBG terminal](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/debug1.png)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/debug1.png)
+
+To prove that the binary file was correctly functioning, I connected the chip directly on my USB port, and used it to program another board through its outgoing JTAG connector.
+
+[![Image 20: JTAG programming with our board](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_programmer.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/pcb_programmer.jpg)
+
+My board was able to communicate with EDBG and program the other board correctly, which was a huge relief. In the coming weeks, I will try to program my board to perform different tasks, such as blinking the LED, or directly program it through USB which should be feasible with the correct bootloader and a [modified Arduino IDE](https://github.com/mattairtech/ArduinoCore-samd).
+
+[![Image 21: EDBG terminal with our board](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/debug2.png)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/debug2.png)
+
+Flexible circuit[¶](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/assignments/week05/#flexible-circuit "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------
+
+As I had a bit of extra time this week, I was curious to see how the vinyl cutter could be used to cut a flexible circuit. For my design, I went for a patch antenna, which have become very popular with NFC tags, anti-theft devices and Qi charging.
+
+As a I wanted a parametric number of loops, wire width and clearance, I wrote a module in OpenSCAD to place the spiral points, and connect them to form a poly-line with rounded edge thanks to [a module I found online](https://openhome.cc/eGossip/OpenSCAD/Polyline.html).
+
+[![Image 22: OpenSCAD design](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/openscad.png)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/openscad.png)
+
+I found some copper tape with a protective paper on the back, and sticked the whole thing to the Silhouette Cameo’s cutting plate.
+
+On the first try, I used the following settings:
+
+*   Depth: 2
+*   Speed: 6
+*   Force: 10
+
+[![Image 23: cutting, first try](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch1.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch1.jpg)
+
+However, peeling off the unwanted copper resulted in a failure. The main reason was that the cuts were perfect.
+
+[![Image 24: cutting failure](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch2.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch2.jpg)
+
+I then decreased the speed, and increased the force a bit:
+
+*   Depth: 2
+*   Speed: 2
+*   Force: 16
+
+[![Image 25: cutting, second try](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch3.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch3.jpg)
+
+Peeling off the extra copper was a success.
+
+[![Image 26: peeling result](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch4.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch4.jpg)
+
+I immediately taped the remaining copper in place to protect it from falling appart. While the protective paper on the back was not the greatest surface to place my antenna, it was good enough for this test.
+
+[![Image 27: adding tape](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch5.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch5.jpg)
+
+To close the circuit and adda connector, I used a small cutting knife to reveal the relevant areas. There was a bit of glue on the copper, which I scraped off.
+
+[![Image 28: cut holes](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch6.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch6.jpg)
+
+I completed the circuit with an extra band of copper from my initial failed test.
+
+[![Image 29: adding jumper](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch7.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch7.jpg)
+
+Soldering the connector and the extra band was a bit challenging, as the heat threated to melt the plastic on the back side. I had to be quick in the process.
+
+[![Image 30: soldering](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch8.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch8.jpg)
+
+The finished product is usable. I was able to transmit a pretty weak signal between two of these antennas with a 27 MHz sine wave. In the coming weeks I will try to show how RFID tags work, by first charging a capacitor with a diode bridge, and then discharging the current in an LED for instance.
+
+[![Image 31: complete circuit](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch9.jpg)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/images/week04/patch9.jpg)
+
+With a quick calculation, I estimated the inductance to be of only **4 µH**, so I doubt this design could be used to transmit any serious power. I might need to add a few loops, or use several antennas in series. This was still a satisfying result for my first flexible circuit.
+
+Downloads[¶](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/assignments/week05/#downloads "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------
+
+*   [pcb design (.brd)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/3d/week04/SAMD11C_v2.brd)
+*   [pcb design (.sch)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/3d/week04/SAMD11C_v2.sch)
+*   [patch antenna (OpenSCAD .scad)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/3d/week04/patch_antenna.scad)
+*   [patch antenna (.dxf)](https://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/3d/week04/patch_antenna.dxf)

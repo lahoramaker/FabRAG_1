@@ -1,0 +1,230 @@
+Title: Interface and Application Programming
+
+URL Source: http://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/week/interface-and-application-programming/
+
+Published Time: 2022-05-10T12:53:53+02:00
+
+Markdown Content:
+Application and interface programming - I know this
+
+to learn / to do
+----------------
+
+**Group assignment:**
+
+*   Compare as many tool options as possible.
+
+**Individual assignment**
+
+*   Write an application that interfaces a user with an input and/or output device that you made
+
+looking ahead
+-------------
+
+Well, finally I am on familiar territory. This is my day job, both as developer and as lecturer. As interactive installations are my favourite projects to work on, I am familiar with how to talk to hardware, how to build networks, and how to create user interfaces. Nowadays I use mainly javascript in combination with html/css, altough I have also programmed in objective C/Swift (iOS development), C# (Unity), actionscript 1,2 and 3 (when Flash was still a thing), PHP and occasionally Java (Android development). The first languages I learned were [PL/1](https://en.wikipedia.org/wiki/PL/I) and [REXX](https://en.wikipedia.org/wiki/Rexx). Right after that came javascript, when it was still new.
+
+I do not foresee too many problems. I do want to learn Python, and have toyed with the idea of doing that this week. But The Final Project is looming, and I think I better spend my time on that.
+
+the process
+-----------
+
+### presentation
+
+A few weeks back, Henk asked [Bas](https://fabacademy.org/2022/labs/waag/students/bas-pijls/) and me to do a lecture on our respective tools of the trade on thursday. So that is what I did: I prepared a lecture about websockets. I like websockets, because they are so versatile. One way to use them is to have your browser talk to your serial port. This is not allowed by default (security), although there is the [Web Serial api](https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API). This is however not available in all browsers, as you can see on [Can I Use](https://caniuse.com/?search=Web%20Serial%20API).
+
+Websockets on the other hand, are a little bit older, and most browsers support them, see this [Can I Use](https://caniuse.com/?search=Websockets)
+
+For the webpage to talk with the serialport, what you need is something that _has_ access to the serial port. Arduino is an example of a program that has acces to the serial port, just like native programs on your computer have. However, Arduino does not talk to my webbrowser, and so I need something else.
+
+I use [Node](https://www.codecademy.com/article/what-is-node) for this. Node allows developers to write JavaScript code that runs directly in a computer process itself instead of in a browser. Node _has_ access to the serial port, and also the means to start a Websocket Server. So it is easy to have all communication from and to the serial port routed to the Websocket Server.
+
+Then in my webpage, I just have to create a WebSocket client that talks to the Websocket server. See the diagram below:
+
+![Image 1](https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/week/interface-and-application-programming/media/images/node-server.jpg)Note that you can just as easy use Python to create the Websocket server and the serialport connection. It would not make a difference for the client.
+
+The good thing is that it does not end there. Websockets are not even meant for this, but for much greater things: create full duplex communication channels over a single TCP connection. If you have a websocket server running online, you can have as many clients as you want to connect to it and have the merits of realtime communication in a page, without reloading. See the below diagram:
+
+![Image 2](https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/week/interface-and-application-programming/media/images/websocket-server.jpg)I prepared a couple of examples for the presentation, that you can download [here](https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/waag/students/bente-vanbourgondien/-/tree/master/src/presentation-interface-app-ports)
+
+### group assignment
+
+This weeks group assignment consisted of [Bas](https://fabacademy.org/2022/labs/waag/students/bas-pijls/)’s and mine presentations of the respective tools to create interfaces. Bas showed us how to use Processing to read serial data and use that data to do cool things, like generating a lot of bouncing balls. He also gave a primer on programming in Java (Processing uses a simplified Java) and the use of classes. I handled the same process, but with javascript in both a webbrowser and in Node.js .
+
+Both techniques have their merits. Processing is great because it is direct. You can easily access the hardware on your computer. The language is not hard to learn, as long as you keep to the basics. But it also has a lot of flexibility if you want to go deeper.
+
+Processing uses a main loop function called draw(), it functions much like the loop() function in Arduino. In fact, both environments have a lot of similarities, Arduino is based on the Processing environment.
+
+<table><tbody><tr><td><pre tabindex="0"><code><span>1
+</span><span>2
+</span><span>3
+</span><span>4
+</span><span>5
+</span><span>6
+</span><span>7
+</span></code></pre></td><td><pre tabindex="0"><code data-lang="java"><span><span><span>void</span> <span>draw</span><span>()</span> <span>{</span>
+</span></span><span><span>  <span>background</span><span>(</span><span>102</span><span>);</span>
+</span></span><span><span>  <span>translate</span><span>(</span><span>width</span><span>/</span><span>2</span><span>,</span> <span>height</span><span>/</span><span>2</span><span>);</span>
+</span></span><span><span>  <span>float</span> <span>zoom</span> <span>=</span> <span>map</span><span>(</span><span>mouseX</span><span>,</span> <span>0</span><span>,</span> <span>width</span><span>,</span> <span>0.1</span><span>,</span> <span>4.5</span><span>);</span>
+</span></span><span><span>  <span>scale</span><span>(</span><span>zoom</span><span>);</span>
+</span></span><span><span>  <span>shape</span><span>(</span><span>bot</span><span>,</span> <span>-</span><span>140</span><span>,</span> <span>-</span><span>140</span><span>);</span>
+</span></span><span><span><span>}</span></span></span></code></pre></td></tr></tbody></table>
+
+_**typical Processing java draw loop**_The draw loop makes it relatively intuitive to get something on the screen and animate it. Processing has simple shape drawing functions, like circle and rect, which makes it a good tool for artists to create computer generated art. I find it a bit harder to create a user interface with it.
+
+Javascript, wether in a web environment or in Node.js takes a different approach. Although Java and Javascript look connected based on the name, they are not. They share as much characteristics as a Car and a Carpet.
+
+Javascript is an event driven language, most of the time you handle events that result from actions you initiated (like loading an image) or events that come from user interaction (like clicking, pressing a key, scrolling, moving the mouse).
+
+<table><tbody><tr><td><pre tabindex="0"><code><span>1
+</span><span>2
+</span><span>3
+</span><span>4
+</span><span>5
+</span><span>6
+</span><span>7
+</span><span>8
+</span><span>9
+</span></code></pre></td><td><pre tabindex="0"><code data-lang="javascript"><span><span><span>// two types of handling events in javascript
+</span></span></span><span><span><span></span>
+</span></span><span><span><span>document</span><span>.</span><span>getElementById</span><span>(</span><span>"cat-image"</span><span>).</span><span>addEventListener</span><span>(</span><span>"load"</span><span>,</span> <span>event</span> <span>=&gt;</span> <span>{</span>
+</span></span><span><span>  <span>requestSent</span> <span>=</span> <span>false</span><span>;</span>
+</span></span><span><span><span>});</span>
+</span></span><span><span>
+</span></span><span><span><span>wss</span><span>.</span><span>on</span><span>(</span><span>'listening'</span><span>,</span> <span>(</span><span>ws</span><span>)</span> <span>=&gt;</span> <span>{</span>
+</span></span><span><span>  <span>console</span><span>.</span><span>log</span><span>(</span><span>"-socket connected"</span><span>)</span>
+</span></span><span><span><span>});</span> 
+</span></span></code></pre></td></tr></tbody></table>
+
+_**javascript event handling, and there are even more ways**_I think it is a great language, that is easy to learn but hard to master. It is dynamic and loosely typed. For example it does make a difference between strings and numbers, but in a very informal way that sometimes catches you when you least expect it. It also has like 4 ways to define a function, which can be very confusing when you are learning it:
+
+<table><tbody><tr><td><pre tabindex="0"><code><span> 1
+</span><span> 2
+</span><span> 3
+</span><span> 4
+</span><span> 5
+</span><span> 6
+</span><span> 7
+</span><span> 8
+</span><span> 9
+</span><span>10
+</span><span>11
+</span><span>12
+</span><span>13
+</span><span>14
+</span><span>15
+</span><span>16
+</span><span>17
+</span><span>18
+</span><span>19
+</span></code></pre></td><td><pre tabindex="0"><code data-lang="javascript"><span><span><span>// common way of defining a function
+</span></span></span><span><span><span></span><span>function</span> <span>doSomething</span><span>(){</span>
+</span></span><span><span>
+</span></span><span><span><span>}</span>
+</span></span><span><span>
+</span></span><span><span><span>// also common
+</span></span></span><span><span><span></span><span>let</span> <span>doSomething</span> <span>=</span> <span>function</span><span>()</span> <span>{</span>
+</span></span><span><span>
+</span></span><span><span><span>}</span>
+</span></span><span><span>
+</span></span><span><span><span>// anonymous function, usually used it event handlers
+</span></span></span><span><span><span></span><span>function</span><span>()</span> <span>{</span>
+</span></span><span><span>
+</span></span><span><span><span>}</span>
+</span></span><span><span>
+</span></span><span><span><span>// arrow or lambda function, also used in event handlers.
+</span></span></span><span><span><span></span><span>()</span> <span>=&gt;</span> <span>{</span>
+</span></span><span><span>
+</span></span><span><span><span>}</span></span></span></code></pre></td></tr></tbody></table>
+
+Although javascript also has drawing functionality that you can use with [canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial?retiredLocale=nl), to create user interfaces it is common to use html/css. This is a completely different language, that has it’s own history (from a hypertext dissertation text engine to a responsive user interface environment). Using it can be extremely cumbersome as it basically involves translating a graphic design into text and tags.
+
+Because it runs in your browser, javascript is great to develop web applications with it. But since Node.js javascript also proved to be useful in serverside development. And then there is [Electron](https://www.electronjs.org/) and the like, that combine Node.js with Chromium. This is great for developing cross platform applications, as long as they do not ask for too much processing power. I have used it to create touch interfaces that run in expositions in musea. But the same technique is also used to create cross-platform apps like for example [Visual Studio Code](https://code.visualstudio.com/)
+
+### individual assignment
+
+For the individual assignment, I tried out a few things based on the example code that I made for the presentation.
+
+Everything uses the same code on the microcontroller, a very simple button push:
+
+<table><tbody><tr><td><pre tabindex="0"><code><span> 1
+</span><span> 2
+</span><span> 3
+</span><span> 4
+</span><span> 5
+</span><span> 6
+</span><span> 7
+</span><span> 8
+</span><span> 9
+</span><span>10
+</span><span>11
+</span><span>12
+</span><span>13
+</span><span>14
+</span><span>15
+</span><span>16
+</span><span>17
+</span></code></pre></td><td><pre tabindex="0"><code data-lang="arduino"><span><span><span>#define BUTTON A2
+</span></span></span><span><span><span></span>
+</span></span><span><span><span>void</span> <span>setup</span><span>()</span> <span>{</span>
+</span></span><span><span>    <span>pinMode</span><span>(</span><span>BUTTON</span><span>,</span> <span>INPUT_PULLUP</span><span>);</span>
+</span></span><span><span>
+</span></span><span><span>    <span>Serial</span><span>.</span><span>begin</span><span>(</span><span>9600</span><span>);</span>
+</span></span><span><span><span>}</span>
+</span></span><span><span>
+</span></span><span><span><span>void</span> <span>loop</span><span>()</span> <span>{</span>
+</span></span><span><span>
+</span></span><span><span>  <span>int</span> <span>button_state</span> <span>=</span> <span>digitalRead</span><span>(</span><span>BUTTON</span><span>);</span> <span>// 0 is down, 1 is up
+</span></span></span><span><span><span></span>
+</span></span><span><span>  <span>// pass the state to to serial 
+</span></span></span><span><span><span></span>  <span>Serial</span><span>.</span><span>println</span><span>(</span><span>button_state</span><span>);</span>
+</span></span><span><span>
+</span></span><span><span>  <span>delay</span><span>(</span><span>300</span><span>);</span>  
+</span></span><span><span><span>}</span></span></span></code></pre></td></tr></tbody></table>
+
+#### Web Serial API
+
+To get an idea how the Web Serial API actually works, I create a web page that loads a random cat every time I press the button. It’s pretty easy, and involves mainly listening to the right event handlers.
+
+<table><tbody><tr><td><pre tabindex="0"><code><span>1
+</span><span>2
+</span><span>3
+</span><span>4
+</span><span>5
+</span></code></pre></td><td><pre tabindex="0"><code data-lang="javascript"><span><span><span>const</span> <span>serial</span> <span>=</span> <span>new</span> <span>Serial</span><span>();</span>
+</span></span><span><span><span>serial</span><span>.</span><span>on</span><span>(</span><span>SerialEvents</span><span>.</span><span>CONNECTION_OPENED</span><span>,</span> <span>onSerialConnectionOpened</span><span>);</span>
+</span></span><span><span><span>serial</span><span>.</span><span>on</span><span>(</span><span>SerialEvents</span><span>.</span><span>CONNECTION_CLOSED</span><span>,</span> <span>onSerialConnectionClosed</span><span>);</span>
+</span></span><span><span><span>serial</span><span>.</span><span>on</span><span>(</span><span>SerialEvents</span><span>.</span><span>DATA_RECEIVED</span><span>,</span> <span>onSerialDataReceived</span><span>);</span>
+</span></span><span><span><span>serial</span><span>.</span><span>on</span><span>(</span><span>SerialEvents</span><span>.</span><span>ERROR_OCCURRED</span><span>,</span> <span>onSerialErrorOccurred</span><span>);</span></span></span></code></pre></td></tr></tbody></table>
+
+In the `SerialEvents.DATA_RECEIVED` event handler, I write some code that uses an `XMLHttpRequest` to access a public api that points to a random cat image in every new request: [https://api.thecatapi.com/v1/images/search](https://api.thecatapi.com/v1/images/search)
+
+It serves me json, that I parse to get to the url of the cat image so I can load that in my page.
+
+When you instantiate the Serial class, the browser will popup a small panel that lets you choose the serial port to connect to. After selecting the port and pressing connect, the connection will be made. You can see this in the video below:
+
+At first, when I press the button on the board, it will load (and show) a lot of cats in succession. Even though I use indicators to signify that a request is made and an image is already loading.
+
+I think this is because the Serial port and the event loop in javascript are somehow out of sync, and it somehow fires the XMLHttpRequest multiple times in a row before the indicator gets set. I solve it by adding a delay(300) in the code on the microcontroller.
+
+#### Websockets for real
+
+Then I take up the websockets again, but this time to use them as they are meant to be: reloading a cat image on every device that is connected, when I press the magic button.
+
+For this, I need an online Websocket server. I find a free one here [https://socketsbay.com/test-websockets](https://socketsbay.com/test-websockets). This one is just for testing purposes. It will just take whatever you send to it and pass it to all the connected clients. Just what I need.
+
+I create a client.js to use with Node, that connects to the serial port and sends everything that comes out of it to the online socket server.
+
+Then I change the Web Serial Api cat webpage to use a Websocket Client instead of the Serial Api. I make sure I use the same connection string on both sides: wss://socketsbay.com/wss/v2/2/demo/ and then I run the webpage on both my laptop and my mobile phone. And then I press the button:
+
+It works. You can also see the test server in the background, and the data it receives from my serial port. I send a 0 when the button is pressed, and this is the cue for the webpage to send a request to the cat api.
+
+The webpage is accesible online: [https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/cats/index.html](https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/cats/index.html)
+
+You can use the [socketsbay](https://socketsbay.com/test-websockets) test server to send a 0 to the page, and it will load a random cat.
+
+looking back
+------------
+
+### files
+
+[here are the files for this week](https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/waag/students/bente-vanbourgondien/-/tree/master/src/week_14)

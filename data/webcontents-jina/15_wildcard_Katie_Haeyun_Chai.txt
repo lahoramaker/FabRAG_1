@@ -1,0 +1,215 @@
+Title: 18. Wildcard week - Fab Academy Katie Chai
+
+URL Source: http://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/
+
+Markdown Content:
+For wildcard week, I initially wanted to learn about composites. I later switched to embroidery.
+
+Composites[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#composites "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------
+
+This is the “assignment” for [composites](http://academy.cba.mit.edu/classes/composites/index.html).
+
+I decided to make a burlap composite case for my final project circuitry. Throughout this learning process, I referenced Dr. Taylor’s [composite week from 2016](http://archive.fabacademy.org/fabacademy2016/charlottelatin/students/87/exercise14.html) to better understand the process. He made a batman composite!
+
+I found this burlap in the Fab Lab from previous years.
+
+![Image 1](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/burlap.jpg)
+
+### 3D Mold[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#3d-mold "Permanent link")
+
+Once I gathered my materials, I took the measurements for my case. I based them around my circuit from week 11.
+
+I added a little clearance room so that my board would have room to grow if I changed anything along the way.
+
+Here is my 3D rendering of my case.
+
+Origionally, I modeled the box with thinner sides, but after cutting our a few pieces of test burlap on the laser cutter, I figured out that it would not be reasonable to have the burlap be so thin.
+
+### Fiber Composite[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#fiber-composite "Permanent link")
+
+I lasercut the two main shapes involved in my box: the wall rectangle outline and the base rectangle.
+
+Here are those files : [Download Files](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/composite%20/(1/).zip)
+
+Here is a video that shows the lasercutting.
+
+Here are the lasercut pieces.
+
+![Image 2](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/IMG_6896%20-%20Copy.jpg)
+
+![Image 3](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/IMG_6895%20-%20Copy.jpg)
+
+![Image 4](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/IMG_6898%20-%20Copy.jpg)
+
+As I continued my research for this process, I soon found out that we didn’t have the resin or thick enough HDPE. I decided to switch to learning how to use the embroidery machine for this week, becuase I had to leave for Germany in less than a week (and wanted to finish most of my weekly assignments before I left).
+
+Embroidery[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#embroidery "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------
+
+Embroidery is the process of creating designs of fabrics using a needle and thread. I used to embroider things at camp or in girlscouts, but I had never used an embroidery machine.
+
+### Designing the Embroidery Files[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#designing-the-embroidery-files "Permanent link")
+
+I started by designing my first embroidery file which I would send to our embroidery machine. I used two softwares to design my files: Ink Stich and Sew Art. Using these softwares, I designed the logo of a beach that I visit (Bald Head Island). My design consited of a turtle and the BHI abreviation text.
+
+#### Ink Stich[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#ink-stich "Permanent link")
+
+[Ink/Stitch](https://inkstitch.org/) is an Inkscape Plug-in that allows you to create embroidery files.
+
+Here is there video series that walks the the beginner skills involved with the program.
+
+There are 7 main types of stitches:
+
+1.  Underlay - gives base, prevents fabric from bunching
+    
+2.  Fill Stitch - “coloring in area”
+    
+3.  Satin Column - cylinder that goes back and forth
+    
+4.  Line - give line width
+    
+5.  Customize it (draw out each line of the column)
+    
+6.  Straight Stitches - ex. Ice cream cone
+    
+7.  Single Stitch - use dotted/dashed lines
+    
+
+These are the steps that I documented:
+
+1.  Create a design
+    
+2.  Make the object you designed a path
+    
+3.  Hit plus sign to make new layer (ex. Background layer and border layer) (You can switch order of layers in menu) (You can hide layers if want to set specific parameters)
+    
+4.  Move the path to a layer - select layer
+    
+5.  Go to the plug in menu and select Ink/stitch > English > Embroidery params
+    
+6.  Simulate the embroidery paths
+    
+7.  Export as a file to USB (DST file type - most basic file type - cannot scale) (PES file type “- Top tier” - Dr. David Taylor)
+    
+
+![Image 5](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/workflow-chart.svg)
+
+Here is the [Ink/Stitch Wokflow](https://inkstitch.org/docs/workflow/) that explains the above picture.
+
+Here is the text I that I wrote out in the program and made into an embroidery file. This is a video of it simulated.
+
+#### Sew Art[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#sew-art "Permanent link")
+
+After learning about this first software, my teacher (Dr. David Taylor) reccommended that we learn about Sew Art. I took him uo on his offer. He had learned about the software at the Fab 14 conference in Toulouse. Here is what explained to me…
+
+*   The pro version of the program is free for 30 days
+    
+*   It was created by SNS computing
+    
+*   You are able to import images into the program! (I was very excited about this feature! I was also glad that I took the time to learn about this additional software)
+    
+
+Here are the general steps that Dr. Taylor outlined for me!
+
+1.  Start with canvas
+    
+2.  Bringing in images
+    
+3.  Posterize tool (need to cut down colors) (De-speckle tool)
+    
+4.  Image color reduction (can merge colors - do this slowly)
+    
+5.  Auto it (create embroidery layers) (put down paths)
+    
+6.  Export as a .tif file
+    
+
+Here is my file with te layers outlined.
+
+![Image 6](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/dog/layers.jpg)
+
+#### Sew What[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#sew-what "Permanent link")
+
+After the file is exported as a .tif, Dr. Taylor explained to me that I would have to use a supplementary program called Sew What to explot the .tif it to the Brother Embroidery Machine. In this program, I was able to combine my turtle file from Sew Art and my “BHI” text from Ink Stich into one file!
+
+### Setting up the Machine[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#setting-up-the-machine "Permanent link")
+
+This is the embroidery machine that we have in the CLS Fab Lab. It is the [Brother 6-Needle Home Embroidery Machine](https://www.brother-usa.com/products/PR670E).
+
+It has…
+
+*   6-Needles
+    
+*   8” x 12” Maximum embroidery area
+    
+*   1000spm (stich per minute) maximum embroidery speed
+    
+*   Large 10.1” built-in high definition LCD display with large icons and scrolling menu
+    
+*   16 built-in video tutorials so you can learn as you go
+    
+*   High-Speed Acceleration means projects will be completed faster
+    
+*   60 built-in embroidery designs, 12 monogramming font styles, 140 frame pattern combinations, 37 lettering fonts, 50 built-in utility stitch designs and 10 buttonhole styles in 3 sizes
+    
+*   On-screen letter input and editing
+    
+*   Smart stitch management with progress bar and direct entry to pin-point the exact stitch
+    
+*   Intuitive Color Management for easy design customization
+    
+*   Color Grouping allows multiple regions to be selected at a time for editing color
+    
+*   Color Sort feature to cut down on thread changes when combining designs
+    
+*   Droplight LED Positioning Marker to see where the needle will drop
+    
+
+After learning about the different parts of the embroidery process thanks to Mr. Rudolph and Mr. Taylor, I made the follwing Youtube videos that walked through the involved steps and skills.
+
+#### How to Thread the Needles[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#how-to-thread-the-needles "Permanent link")
+
+#### How to Change the Bobbin[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#how-to-change-the-bobbin "Permanent link")
+
+#### How to Use the Embroidery Hoop[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#how-to-use-the-embroidery-hoop "Permanent link")
+
+Once I had walked through these steps, I started embroidering my turtle design.
+
+This is my file in the Brother program.
+
+![Image 7](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/dog/file%20in%20software.jpg)
+
+![Image 8](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/dog/final%20file.jpg)
+
+This video shows a timelapse of my turtle being embroidered. Sorry, it is a little shakey.
+
+This is my finished design!
+
+![Image 9](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/dog/final%20in%20hoop.jpg)
+
+![Image 10](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/dog/final%20pic.jpg)
+
+This is another great tutorial that I found while I was browsing the web.
+
+### Tips and Tricks[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#tips-and-tricks "Permanent link")
+
+1.  When picking out a photo to embroider, try to find a simple image that does not have alot of colors. This will help when you are reducing the colors in the program. (Keep in mind that you are almost limited to 6 colors with the Brother emoridery machine). I tried to embroider complex images at first and it took up alot of my time. I was sad
+    
+2.  Try to practice on a scrap piece of fabric. If you practice with a cheaper material, there is less risk if your design messes up!
+    
+3.  Start by making simpler items like keychains or hankerchiefs. It is much harder to get a design straight and tangle-free with a larger item like a t-shirt.
+    
+4.  Don’t try to embroider brand names and sell them. It is illegal.
+    
+5.  Make sure to check the thread all the way to the spool. There could be complication with the thread higher up on the treading track.
+    
+6.  Keep an extra stylus and usb flash drive near the machine. These items are small, but they are very important in the embroidery process. The stylus is the tool that allows you to use the touch screen. The flash drive will allow you to upload your design.
+    
+7.  Don’t try to timelapse your embroidery without a tripod. I tried to do this and was left with a tired hand and shakey video.
+    
+
+Files[¶](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/assignments/week18/#files "Permanent link")
+-------------------------------------------------------------------------------------------------------------------
+
+Here are all my files from this week: [Download Files](https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/dog/embroidery-20190528T031608Z-001.zip)

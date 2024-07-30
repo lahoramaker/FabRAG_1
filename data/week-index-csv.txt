@@ -1,0 +1,18 @@
+week; session_name; url
+2; computer-aided design; https://academy.cba.mit.edu/classes/computer_design/index.html
+3; computer-controlled cutting; https://academy.cba.mit.edu/classes/computer_cutting/index.html
+4; electronics production; https://academy.cba.mit.edu/classes/electronics_production/index.html
+5; 3D scanning and printing; https://academy.cba.mit.edu/classes/scanning_printing/index.html
+6; embedded programming; https://academy.cba.mit.edu/classes/embedded_programming/index.html
+7; computer-controlled machining; https://academy.cba.mit.edu/classes/computer_machining/index.html
+8; electronics design; https://academy.cba.mit.edu/classes/electronics_design/index.html
+9; output devices; https://academy.cba.mit.edu/classes/output_devices/index.html
+10; mechanical design, machine design; https://academy.cba.mit.edu/classes/machine_design/index.html
+11; input devices; https://academy.cba.mit.edu/classes/input_devices/index.html
+12; molding and casting; https://academy.cba.mit.edu/classes/molding_casting/index.html
+13; networking and communications; https://academy.cba.mit.edu/classes/networking_communications/index.html
+14; interface and application programming; https://academy.cba.mit.edu/classes/interface_application_programming/index.html
+15; system integration; https://academy.cba.mit.edu/classes/system_integration/index.html
+16; applications and implications, project development; https://academy.cba.mit.edu/classes/applications_implications/index.html
+17; invention, intellectual property, and income; https://academy.cba.mit.edu/classes/invention_IP/index.html
+18; project presentations; https://academy.cba.mit.edu/classes/project_presentation/index.html

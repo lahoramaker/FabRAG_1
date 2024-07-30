@@ -1,0 +1,205 @@
+Title: Week14: Interface and Application Programming
+
+URL Source: http://fabacademy.org/2022/labs/waag/students/bas-pijls/blog/week14/
+
+Markdown Content:
+### Week14: Interface and Application Programming
+
+Introduction
+------------
+
+Connecting your embedded devices to the internet can have some real benefits. One thing that always remains a nuisance is to find your device on the world wide web of connected computers by determining it’s IP address. To obtain the IP address, a user must often resort to having a display or opening up another communication channel to your device, typically a serial connection.
+
+I have this problem quite often when students have to connect a large number of devices simultaneously in a classroom setting. This made me start looking for an answer to the following question:
+
+> How can I communicate a device’s IP address or other unique identifier to an end-user?
+
+The solution should be:
+
+*   cheap
+*   easy to use
+*   without access to the connected router’s DHCP table
+*   speed isn’t an issue for now.
+
+Ways to do this would be:
+
+*   **send the address to a known external server**
+    *   which would have security and reliability issues
+*   **print the identifier**
+    *   When it’s static this would work. For large amounts of devices this would mean a lot of work.
+*   **a display**
+    *   Which would defeat the purpose of having a small IoT device
+*   **bluetooth**
+    *   which is a bit of a hassle, with pairing and everything. Also, not all wifi-capable devices also have bluetooth.
+*   **another radio protocol**
+    *   Which would need specialized hardware on receiving side
+*   **a special LED Matrix “QR-code”**
+    *   Would be nice, quite cheap but make your devices rather bulky
+
+Eventually I chose to explore whether it would be possible to **encode data in the flashing pattern of an RGB LED**
+
+I was happy enough with the result I decided to present it at the [Open Review](https://vimeo.com/709043026#t=4850s).
+
+The final result
+----------------
+
+The microcontroller flashes an RGB LED in a specific pattern. A JavaScript application is written to analyze the pattern, interpret the bits and bytes and convert it back into readable data.
+
+|  |
+| --- |
+| By keeping a flashing RGB LED in the green-marked region, the R, G and B channels of the webcam input are interpreted as `CLOCK`, `BYTE` and `BIT` information respectively |
+
+Besides sending text, the microcontroller can be programmed to send out it’s IP address as separate bytes.
+
+|  |
+| --- |
+| The webapplication can create a link to the detected IP address so a user can easily find and control the device through it’s web interface |
+
+The circuit
+-----------
+
+For the code examples to run out of the box, it’s necessary to:
+
+*   have an Arduino compatible device
+*   have the AdaFruit NeoPixel library (or equivalent) installed
+*   have a WS2812b LED with its data-in pin connected to whatever the LED\_PIN points to, in my case ESP8266 pin D3.
+
+I chose to connect a WS2812b RGB LED to an ESP8266 microcontroller. I already had a PCB lying around which I designed to drive little classroom robots.
+
+| ![Image 1: schematic_little_endian](https://fabacademy.org/2022/labs/waag/students/bas-pijls/blog/week14/schematic_little_endian.jpg) | ![Image 2: schematic_little_endian](https://fabacademy.org/2022/labs/waag/students/bas-pijls/blog/week14/pcb_little_endian.jpg) |
+| --- | --- |
+| The schematic for the “Little-Endian” classroom robot | The PCB for the “Little-Endian” classroom robot. The PCB was designed and manufactured before FabAcademy. |
+
+A lot of components on this PCB are not significant for this demonstration but this is what I used for testing.
+
+Firmware
+--------
+
+For the RGB-LED to reliably send data a synchronous communication protocol was chosen. An RGB LED is basically three LEDS in one so each color channel is able to play a different role. A little serial communication protocol was made to turn the red, green and blue channels of the LED on in different combinations and the point it towards my webcam and see what color it returned.
+
+```
+if (Serial.available())
+  {
+    val = Serial.read();
+    switch (val)
+    {
+      case 'r': r = BRIGHTNESS_R; break;
+      case 'e': r = 0; break;
+      case 'g': g = BRIGHTNESS_G; break;
+      case 'f': g = 0; break;
+      case 'b': b = BRIGHTNESS_B; break;
+      case 'v': b = 0; break;
+      case 's':
+        sending = true;
+        bitIndex = 0; clockBit = 0; break;
+      case 'S': sending = false; break;
+    }
+  }
+```
+
+When the character `'s'` is sent, the ws2812 starts flashing in a certain pattern:
+
+| Channel | Description |
+| --- | --- |
+| Red | the `clock` signal, flashing on and of for each bit |
+| Green | the `byte` signal. Flashes bright green to signify the beginning of a new byte. The `clock` signal is low when flashing for a new byte |
+| Blue | The `bit` signal. Flashes when an individual bit in the outgoing data is high |
+
+When flashing the bytes, the `FLASH_INTERVAL` will determine how fast the LED will flash it’s bits. The sampling rate of the camera that picks up the signal is assumed to be between 24 and 30fps. Flashing bits at a rate of over half this frequency will result in aliasing. Keeping the `FLASH_INTERVAL` at 75ms will keep it slightly above the Nyquist frequency of 15Hz.
+
+Determining whether to flash the `bit` channel is done by shifting the byte to send:
+
+```
+// Creates a unit32_t that represents whether the bit at <bitIndex> is high or low
+uint32_t createDataColor(uint8_t dataByte, uint8_t bitIndex)
+{
+  return BRIGHTNESS_R << 16 | // Set the red (clock) channel to HIGH
+         //determine wether the bit at <bitIndex> in <dataByte> is high
+         BRIGHTNESS_B * ((dataByte & (1 << (7 - bitIndex))) > 0); 
+}
+```
+
+Timing is done using `millis()` and determining the state (flashing a bit, clock or byte) is done using an ugly pile of nested if-statements.
+
+### Javascript and Webcam
+
+The Webcam code should run in a browser, as this is an application to turn flashes of light into an IP address. Using P5.js makes it easy to get to activate a webcam and to draw shapes on a canvas. I am using the Facetime camera of my MacBook Pro 13" 2019.
+
+The end-user should point a camera to the RGB-LED. I don’t have to scan the entire image, so I defined a [specific region](https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/waag/students/bas-pijls/-/blob/master/app_interface/datapixel/js/scanregion.js) of the screen in which I scan for color changes. The average color in the region was determined to see whether separate flashes could be picked up with the webcam.
+
+| ![Image 3: prototype](https://fabacademy.org/2022/labs/waag/students/bas-pijls/blog/week14/webcam_prototype.jpg) |
+| --- |
+| The first iteration looked like this. The average red, green and blue components were drawn below the web-cam image as separate circles |
+
+At a later stage some code was introduced to handle rudimentary signal processing and a better way to plot [timeseries](https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/waag/students/bas-pijls/-/blob/master/app_interface/datapixel/js/timeseries.js).
+
+|  |
+| --- |
+| Using the fist prototype, the effect of the different color combinations of the LED could be determined. |
+
+As it turns out, activating separate colors of the LED will not purely activate the corresponding channels of the webcam. This is probably due to the webcam being smart and dynamically trying to correct colors and dynamic white balancing. There is a certain amount of cross-talk between the color channels. Especially the blue and green channels affect each other. Red is quite unaffected by both. Luckily there is enough information to differentiate the signals.
+
+The conversion from raw signals to bits and bytes is done by using some simple rules and statistics.
+
+| Type of Signal | Processing method |
+| --- | --- |
+| `clock` | The red signal is turned into a clock signal by triggering it at a threshold of 2 times the standard deviation of the signal over 300 samples |
+| `bit` | The bit signal is generated by comparing the green and the blue signals. Green>blue, bit = 0, Blue>green, bit = 1 |
+| `byte` | A byte is finished by detecting a flash of green at 1.5 times it’s standard deviation over 300 samples |
+
+A bit is detected by determining the state of the `bit` signal at two samples before a rising edge of the `clock` signal. A byte is detected at the rising edge of the `byte` signal. When a `byte` event is detected, all eight previously received bits are converted to a byte. One thing to look out for is the unavailability of unsigned data types in JavaScript. When interpreting the received byte as a number, `128` should be added to the byte in order to convert it to an unsigned byte. When converting the byte to an ASCII character, the byte should be left alone.
+
+Hello World Demo
+----------------
+
+| Upload a version of [hello\_rgbeacon](https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/waag/students/bas-pijls/-/blob/master/embedded_experiments/arduino/hello_rgbeacon/hello_rgbeacon.ino) sketch to your Arduino-compatible board with a WS2812 attached to it. Press the “Enable WebCam” button and keep the LED in the green region of the video display to watch the message appear. |
+| --- |
+|  |
+|  |
+
+Conclusion
+----------
+
+It is possible to send data to a device with a webcam using a cheap RGB LED. By sending an IP address from the microcontroller to a device with a web browser it is shown that sending data this way can be useful. Other useful applications might be:
+
+*   Sending simple device ID information, such as the last few bytes of the MAC address, which helps you identifying your device on any website that supports it.
+*   Sending simple data over a large distance. Setting up an RGBeacon on large festivals and scanning them from afar.
+*   Indoor positioning. Analyzing a video stream filming multiple RGBeacons can help localizing objects, for instance in a warehouse. Use TCP/IP to tell all your RGBeacons to blink their ID will tell your webcam where to find your devices spatially.
+
+At this point sending data using and RGB LED and a webcam is quite slow and error prone but there is a lot of room for refinements and improvements:
+
+**On the hardware side:**
+
+*   The environmental light conditions determine the way the camera perceives light levels. The light level of the LED could dynamically react on the amount of environment light. Either using a sensor or maybe assume a certain light level at a certain time of day.
+*   The data could be encoded in another fashion. Doing it asynchronously one might triple the speed because each color component could represent one bit of data.
+*   Some error correction could be built in. Maybe sacrificing one entire channel for parity bits, making a tradeoff between speed and accuracy.
+*   Standardize protocols for integers, ip addresses, text, geo coordinates, etc.
+
+**On the webcam side:**
+
+*   Cross-talk between channels could be minimized by correcting them using linear algebra
+*   Parameters that should be explored to make the application more stable:
+    *   Threshold levels
+    *   Timing
+    *   Window size for SD and average
+*   Error checking on the webcam side. Using checksums
+
+Eventually this should be turned into an Arduino library and a nicely encapsulated JavaScript library for use in actual applications. This is purely a proof of concept.
+
+Group Assignment
+----------------
+
+For the group project I prepared a tutorial for my fellow students to get experienced in Processing and connect Processing applications to your microcontroller using serial communication. The tutorial can be found [here](https://fabacademy.org/2022/labs/waag/students/bas-pijls/tutorials/processing/).
+
+| ![Image 4](https://fabacademy.org/2022/labs/waag/students/bas-pijls/blog/week14/processing_particle_system.jpg) |
+| --- |
+| The result was a particle system that emitted particles based on a serial input value. |
+
+Furthermore, [Bente](https://fabacademy.org/2022/labs/waag/students/bente-vanbourgondien/week/interface-and-application-programming/#group-assignment) showed us how to use WebSockets to communicate with a web-page. Using an ESP8266 and a websocket library we were able to send data to a website when a button was pressed.
+
+Files
+-----
+
+\- [Particle system analog input](https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/waag/students/bas-pijls/-/tree/master/app_interface/SerialParticleSpray)
+
+*   [RGBeacon Hello World](https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/waag/students/bas-pijls/-/tree/master/app_interface/datapixel) - [RGBeacon ip address link](https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/waag/students/bas-pijls/-/tree/master/app_interface/rgbeacon_ipaddress) - [RGBeacon Webserver Firmware](https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/waag/students/bas-pijls/-/tree/master/embedded_experiments/platformio/rgbeacon_webserver) - [RGBeacon Hello World firmware](https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/waag/students/bas-pijls/-/tree/master/embedded_experiments/platformio/DataPixel)

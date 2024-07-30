@@ -1,0 +1,2115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Solomon Embafrash">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2018- Solomon Embafrash</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Solomon Embafrash</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+
+<div id="preview">
+<div align="center">
+            <img
+                src="media/Pictures/06.ElectronicsDesign/screenshots/background2.png"
+                alt=""
+            />
+
+        </div>
+        <div>
+            <header>
+                <h1>
+            <div align="center">
+  Week 6. Electronic design
+</div>
+                </h1>
+            </header>
+
+                        <nav>
+                            <div>
+                                <div>
+                                </div>
+                                <div id="bs-example-navbar-collapse-1">
+                                    <ul>
+                                        <li>
+                                            <a
+                                                href="http://fab.academany.org/2018/labs/fablabaalto/students/solomon-embafrash/exercise06.html#tasks"
+                                            >
+                                                Tasks
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="fab.academany.org/2018/labs/fablabaalto/students/solomon-embafrash/exercise06.html#process"
+                                            >
+                                                Process
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="fab.academany.org/2018/labs/fablabaalto/students/solomon-embafrash/exercise06.html#resources"
+                                            >
+                                                Resources
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="fab.academany.org/2018/labs/fablabaalto/students/solomon-embafrash/exercise06.html#Reflection"
+                                            >
+                                                Reflection
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="fab.academany.org/2018/labs/fablabaalto/students/solomon-embafrash/exercise06.html#models"
+                                            >
+                                                Models files
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <p>
+                            During this week I designed, fabricated and tested
+                            a basic board for the ATtiny44 from scratch.
+                        </p>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/23.png"
+                            />
+                        </div>
+                        <h2 id="tasks">
+                            Tasks
+                        </h2>
+                        <ul>
+                            <li>
+                                Redraw the echo hello-world board, adding at
+                                least one button and a LED
+                            </li>
+                            <li>
+                                Fabricate the board
+                            </li>
+                            <li>
+                                Test the board
+                            </li>
+                            <li>
+                                Measure its operation
+                            </li>
+                        </ul>
+                        <h2 id="process">
+                            Process explanation
+                        </h2>
+                        <h3 id="design">
+                            Design a Hello-World board using Eagle
+                        </h3>
+                        <p>
+                            I decided to create a board utilizing the Hello
+                            World FTDI as an example (Figure 1). I decided to
+                            use
+                            <a
+                                href="http://www.autodesk.com/education/free-software/eagle"
+                            >
+                                Autodesk Eagle
+                            </a>
+                            as a EDA (Electronic design automation) to design
+                            my board. It is one of the most utilized tool for
+                            the hobbyists all around the world. In the future I
+                            might try other alternatives. My board should
+                            include in addition to the previous components:
+                        </p>
+                        <ul>
+                            <li>
+                                A Green LED programmable from the ATTiny
+                            </li>
+                            <li>
+                                A button with a simple debouncing circuit (that
+                                is, to avoid glitches in the transitions)
+                            </li>
+                            <li>
+                                A RED LED indicating the circuit is powered
+                            </li>
+                            <li>
+                                A set of extra headers connected to free pins
+                                in order to connect external sensor and
+                                actuators. The TX and RX signals of the FDTI
+                                will be utilized when not in use it for
+                                programming/using serial port.
+                            </li>
+                        </ul>
+                        <div>
+                            <img
+                                src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/img/week6/design0.jpg"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 1. Hello World FDTI provided in the
+                                <a
+                                    href="http://academy.cba.mit.edu/classes/embedded_programming/index.html#echo"
+                                >
+                                    Fabacademy embedded programming lesson
+                                </a>
+                            </div>
+                        </div>
+                        <p>
+                            The lists of components to use are:
+                        </p>
+                        <ul>
+                            <li>
+                                Atmel ATtiny44 microcontroller
+                            </li>
+                            <li>
+                                20Mhz Crystal
+                            </li>
+                            <li>
+                                SPI headers pins
+                            </li>
+                            <li>
+                                FTDI header pins
+                            </li>
+                            <li>
+                                Pull up resistor for RESET signal (10K)
+                            </li>
+                            <li>
+                                Decoupling capacitor: 1uF
+                            </li>
+                            <li>
+                                Omron switch
+                            </li>
+                            <li>
+                                Debouncing circuit: two resistors of 49.9k and
+                                one Capacitor of 1nF
+                            </li>
+                            <li>
+                                Yellow programmable LED + its current limiting
+                                resistor (499)
+                            </li>
+                            <li>
+                                Red power LED + its current limiting resistor
+                                (499)
+                            </li>
+                            <li>
+                                6 pins header (SPI MISO, SPI MOSI, FTDI TX,
+                                FTDI RX, 2 pins free left from ATtiny)
+                            </li>
+                        </ul>
+                        <p>
+                            I installed Autodesk Eagle 8.6.3 in my mac
+                            machine. Next, I had to install the Fab Lab
+                            components library (
+                            <a
+                                href="http://archive.fabacademy.org/archives/2017/doc/electronics/fab.lbr"
+                            >
+                                <samp>fab.lbr</samp>
+                            </a>
+                            ) containing majority of components from the
+                            <a href="http://fab.cba.mit.edu/about/fab/inv.html">
+                                Fabinventory
+                            </a>
+                            . I just downloaded the library and placed in the
+                            "library folder" of my Eagle installation.
+                            Actually, you can set where Eagle looks for your
+personal libraries in                            <samp>Options&gt;Directories</samp>. Finally, in
+                            order to be able to to use the library, I should
+                            select it on the left menu, click with the right
+                            button and select <samp>Use</samp>. Other option is
+                            to click on the gray button located at the right of
+                            the library name.
+                        </p>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/3.png"
+                                alt="Eagle library"
+                            />
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/4.png"
+                                alt="Eagle fab.lbr activation"
+                            />
+                            <div>
+Figure 2 Setting the adequate directory for the                                <samp>fab.lbr</samp>library and activating it
+                            </div>
+                        </div>
+    <br>
+                        <p>
+After creating a new project                            <samp>File&gt;New&gt;Project</samp>, I need to
+                            create the schematics: Put the mouse on the new
+created project&gt;                            <samp>Right button&gt;New&gt;Schematic</samp>A
+                            schematic diagram, is a representation of the
+                            components of a circuit using graphic symbols
+                            (simple shapes). It shows also the lines which
+                            connects the components and through which the
+                            electricity flow. Figure 4 shows the main buttons
+of the UI. When you press the button                            <samp>Add component</samp>you select a component
+                            from the libraries in use to be added to the
+                            schematics. In order to simplify the search of
+                            components (reduce the number of options) i marked
+as used just the                            <samp>fab.lbr and the supply1.lbr</samp>. I marked
+                            the rest as not used by clicking on the green
+                            button.
+                        </p>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/5.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 3 Creating a new schematics.
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/10.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 4 Main elements of the user interface.
+                            </div>
+                        </div>
+                        <p>
+When you add a component (using the                            <samp>Add component</samp> button) is very
+                            important that you choose adequate encapsulation.
+                            We are not using throughhole components but surface
+                            mounted ones, so we must be sure that we select
+                            that encapsulation. Usually, components in the fab
+                            inventory contains the <samp>FAB</samp> suffix
+somewhere. When you add a component (press                            <samp>Enter</samp> button when you have selected
+                            the correct component), the <samp>ADD </samp>window
+                            opens again. If you want to remove this window just
+                            press <samp>ESC</samp> button. If you cannot find
+the adequate component, you can use the                            <samp>Search</samp> button.
+                        </p>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/9.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 5 Choosing the right encapsulation for
+                                the ATtiny microcontroller.
+                            </div>
+                        </div>
+                        <p>
+If you want to move a component, just press the                            <samp>Move</samp> button from the Menu and click on
+                            the cross located inside the component you desire
+                            to move. If you want to rotate a component, select
+                            a component using the <samp>Move </samp>tool and
+                            press the right button of the mouse.
+                        </p>
+             <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/27.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 5 Choosing the right encapsulation for
+                                the ATtiny microcontroller.
+                            </div>
+                        </div>
+                        <p>
+I added all the components and give them adequate                            <samp>Name</samp> and <samp>Value</samp> using the
+                            buttons on the Menu. The name is the reference name
+                            of the component (e.g. R1) while the value is the
+                            real value of the component. For the components
+                            that does not have a value (e.g. LED) you must add
+                            a significant characteristic (e.g. color of the
+                            LED).
+                        </p>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/12.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 6 Adding components, names and values to
+                                the schematics.
+                            </div>
+                        </div>
+                        <p>
+                            After that you must create the connections among
+the components. To that end, I used the<samp>Net</samp> tool and NOT the                            <samp>wire/line</samp>tool. In order to simplify
+                            the circuit I gave names to some of those Nets
+using the <samp>Name</samp> tool. Two                            <samp>nets</samp>with the same value will be linked
+                            in the board file (they belong to the same
+                            electrical line). In order to visualize the name of
+                            the <samp>nets</samp> use the <samp>Label</samp>
+                            button.
+                        </p>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/28.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 7 Final version of schematics
+                            </div>
+                        </div>
+                        <p>
+After creating all the connections, I run the                            <samp>ERC</samp> (Electrical Rule Check) to check
+                            that there are no problems with the signals. I got
+                            two warnings (Figure 8), but they were caused by
+                            the way I drew the circuit. After the schematics
+                            was correct I moved to the board view pressing the
+                            button <samp>Generate/switch to board view</samp>.
+                            This view permits drawing the traces for the
+                            circuit. The main tools I utilized are shown in
+                            Figure 9.
+                        </p>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/29.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 8. Checking the ERC. Important to check
+                                also the warnings!!!
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/13.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 9. Board view UI components
+                            </div>
+                        </div>
+                        <p>
+                            I made sure that the traces had the correct size.
+                            We are using a milling bit of 1/64. We have to be
+                            sure that the isolation lines are of the correct
+                            size. Considering that we are using several offsets
+                            of 50% we cannot choose a width for the line much
+                            smaller than the milling bit. Hence, I thougth that
+0.015 mils was a good size. Go                            <samp>Settings&gt;Width</samp>and be sure that it
+                            is marked 0.016. You can move the components using
+                            the <samp>Move </samp>button. I placed all the
+                            components in my candidate initial position before
+                            starting any traces. I had to move from the
+                            schematics to the board view several times in order
+                            to check the names of the components. I finally
+                            opted to print the schematics in paper to make my
+                            life easier.
+                        </p>
+                        <p>
+I created manually all routes using the                            <samp>Route button</samp>. However, before starting
+the manual work I pressed the                            <samp>Ratnest button</samp>. This button calculate
+                            the shortest airwire for the current position of
+                            all the components. Once you are drawing a route
+                            you can select multiple <samp>wire bends </samp>
+                            (straight angle, non-straight angle, linear, round
+                            ... They are quite helpful in order to draw
+                            adequate lines. By default, Eagle use a snap grid
+                            to place the routes. You can define the grid size
+                            pressing the <samp>Grid</samp> button. In addition,
+                            by pressing <samp>Alt</samp> while creating the
+                            route you can define a finer position. You can also
+set up the <samp>Alt </samp>resolution in the                            <samp>Grid tool</samp>(Figure 10). For some routes
+I had to set the grid to 0.025 inches with an                            <samp>Alt</samp> resolution of 0.005 inches.
+                        </p>
+                        <p>
+                            The whole process took me quite a lot of time. It
+                            was really difficult to imagine which was the best
+                            position to place the components initially to
+                            reduce the paths and do not have routes that cross
+                            each other. I could not manage to create a network
+                            without crossing so I had to use 1 0Ohm Resistor to
+                            overcome one line cross. Actually, I also realized
+                            that having the MISO and MOSI pins of the SPI
+                            available in the pin header for external
+                            connections (I called it GPIOT) was really
+                            problematic, so I finally decided to remove those
+                            connections. The new pin header GPIOT had only 4
+                            connections: TXD, RXD, GPIO1, and GPIO2. The
+                            current version of the board is shwon in Figure 11.
+                        </p>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/30.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 10. My grid size.
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/17.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 11. Current version of the board
+                            </div>
+                        </div>
+                        <p>
+                            Once the board was ready I firs inspected visually,
+                            using the <samp>Show object</samp> button, that all
+the connections were correct. After that, I run the                            <samp>Design Rule Check</samp> to check if the
+                            clearances were correct. Before I had to configure
+                            those values in the <samp>Clearance</samp> tab of
+                            the <samp>DRC</samp>(Figure 12). I set all the
+                            values to 16mil (the size of the milling bit: 1/64
+                            inches)
+                        </p>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/21.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 12. Clearances values
+                            </div>
+                        </div>
+                        <p>
+                            The clearance test return several errors, because
+                            some lines were really close one from each other
+                            (Figure 13), or very close to the pads. To solve
+                            the errors I had to move the lines, change the wire
+                            bend in some of them and use a finer position for
+                            the grid (0.01 inches) in order to position more
+                            accurately the traces.
+                        </p>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/31.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 13. Clearances errors
+                            </div>
+                        </div>
+                        <p>
+                            After I managed to remove all clearance errors, I
+removed all unnecessary layers using the <samp>Show/Edit/Hide layers</samp> button. I just
+                            left the Top layer (the one containing the lines
+                            and the Pads). In order to show again a hidden
+                            layer you must click on the layer number from the
+                            Menu (Figure 14)
+                        </p>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/32.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 14. Showing just top layer.
+                            </div>
+                        </div>
+                        <p>
+                            The final result is shown in the following figure:
+                        </p>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/33.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 15. Final board file. It is ready to
+                                mill.
+                            </div>
+                        </div>
+                        <p>
+                            Next we had to edit a little bit the files before
+                            being able to send it to Fabmodules so it creates
+                            the <samp>.rml</samp>. The process is as follows:
+                        </p>
+                        <ol>
+                            <li>
+Export the files from Eagle as<samp>.png</samp>. The resolution I used was                                <em>1500dpi</em>. Be sure that you select
+                                Monochrome in the Export Menu.
+                            </li>
+                            <li>
+                                To create the cutout and the traces files
+                                <ol>
+                                    <li>
+Open the previous generated                                        <samp>.png</samp> file in GIMP.
+                                    </li>
+                                    <li>
+                                        Create a new layer using black as
+                                        background
+                                    </li>
+                                    <li>
+Modify the size of the layer (                                        <samp>Set Layer to Boundary Size</samp>
+). We want to make bigger the                                        <samp>.png</samp> file so we take into
+                                        account the material milled away by the
+                                        CNC when cutting the board
+                                        (1/32in=&gt;0.8 mm). So, we extend the
+                                        height and the width 1.6 mm. Center the
+                                        layer in the canvas.
+                                    </li>
+                                    <li>
+                                        Resize the canvas to the layer's size (
+                                        <samp>
+                                            Image&gt;Fit Canvas to Layer
+                                        </samp>
+                                        )
+                                    </li>
+                                    <li>
+                                        Fill the empty area of the bottom layer
+                                        with black. The visible image is our
+                                        traces image.
+                                    </li>
+                                    <li>
+                                        Fill the traces layer with white. This
+                                        is the cutout image.
+                                    </li>
+                                    <li>
+                                        You can create new layers to add images
+                                        / text. You can create it as an
+                                        external file if you want to mill it
+                                        with other settings.
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/34.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 16. The traces and cutout files.
+                            </div>
+                        </div>
+                        <p>
+                            After creating the <samp>.rml </samp>file I noticed
+                            that some of the traces were so close, that it
+                            could only do one offset, instead of 4 (Figure 17).
+                            Hence, I decided to go back to Eagle and reduce the
+                            width of some of the most problematics line from
+                            0.016 to 0.012. Furthermore, I redo some of the
+bends to ensure more distance among tracks. The new                            <samp>.rml</samp>file managed to have at least 2
+                            offsets in all the lines. Final version in Figure
+                            18.
+                        </p>
+                        <div>
+                            <img
+                                src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/img/week6/design18.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 17. The <samp>.rml</samp> visualization
+                                shows areas that might produce problems in
+                                Production.
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/17.png"
+                                alt="Eagle design 1"
+                            />
+                            <div>
+                                Figure 18. New version of the board.
+                            </div>
+                        </div>
+                        <h3 id="fabricate">
+                            Fabricate the board using the Roland CNC precision
+                            milling machine
+                        </h3>
+                        <p>
+                            I used the same method as in
+                            <a
+                                href="http://fab.academany.org/2018/labs/fablabaalto/students/solomon-embafrash/exercise04.html"
+                            >
+                                Week 4 assignment
+                            </a>
+                            . I had some problems with the board, since it look
+                            like that the FSR1 was a little bit bent. Hence, I
+                            had to mill it twice, the second time with a depth
+                            of 0.25 instead of 0.15 that is the default one
+                            that we use for our machine setup. The final board
+                            is shown in the following figure
+                        </p>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/24.png"
+                            />
+                        </div>
+                                Figure 19. Board after milling and cleaning.
+                            </div>
+                        </div>
+                        <p>
+                            The stuffing process took some time. I still need
+                            some practice with surface mounted soldering.
+                            However, although it is not a piece of art, I
+                            managed to create a working board.
+                        </p>
+        <p>
+                            I used the ULP command in EAGLE to export
+                            <a
+                                href="media/Pictures/06.ElectronicsDesign/mainboard.html"
+                            >
+                                BOD
+                            </a>
+                        <div>
+                            <img
+                                src="media/Pictures/06.ElectronicsDesign/screenshots/25.png"
+                                alt="Board fabrication"
+                            />
+                            <div>
+                                Figure 20. The board with all the components
+                                soldered.
+                            </div>
+                        </div>
+
+                        <h3 id="test">
+                            Test the board
+                        </h3>
+                        <p>
+                            I started checking visually the board with the help
+                            of a microscope in order to find possible visible
+                            shortcuts.
+                        </p>
+                        <div>
+                            <img
+                                src=""
+                                alt="Board fabrication"
+                            />
+                            <div>
+                                Figure 22. Checking possible shorts with the
+                                help of a microscope.
+                            </div>
+                        </div>
+                        <p>
+                            After that I used the multimeter to check
+                            continuity and find possible shortcuts.
+                            Fortunately, i did not find any problem.
+                        </p>
+                        <div>
+                            <img
+                                src=""
+                                alt="Board fabrication"
+                            />
+                            <div>
+                                Figure 23. Checking continuity with a
+                                multimeter
+                            </div>
+                        </div>
+                        <p>
+                            Next step, was to program the board. I downloaded
+                            the software from the
+                            <em>
+                                <a
+                                    href="http://academy.cba.mit.edu/classes/embedded_programming/"
+                                >
+                                    Embedded programming week
+                                </a>
+                            </em>
+                            . Actually I downloaded the following files:
+                        </p>
+                        <ul>
+                            <li>
+                                <a
+                                    href="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.echo.c"
+                                >
+                                    hello.ftdi.44.echo.c
+                                </a>
+                                : Hello world app
+                            </li>
+                            <li>
+                                <a
+                                    href="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.echo.c.make"
+                                >
+                                    hello.ftdi.44.echo.c.make
+                                </a>
+                                : Make file
+                            </li>
+                            <li>
+                                <a
+                                    href="http://academy.cba.mit.edu/classes/embedded_programming/term.py"
+                                >
+                                    term.py
+                                </a>
+                                : Python file to connect using a serial port
+                                with the board.
+                            </li>
+                            <li>
+                                <a
+                                    href="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.program.png"
+                                >
+                                    Instructions to run the test.
+                                </a>
+                            </li>
+                        </ul>
+
+        To be continued
+        <!--To Be continued
+                        <p>
+                            I utilized our instructor's FabISP programmer to
+                            upload the program to our board. This programmer
+                            powers also the board, so i do not need to connect
+                            the board directly to my computer.
+                        </p>
+                        <div>
+                            <img
+                                src=""
+                                alt="Board fabrication"
+                            />
+                            <div>
+                                Figure 24. Programming the board with the Hello
+                                world.
+                            </div>
+                        </div>
+                        <p>
+                            I run the following commands to compile, program
+                            and test the board:
+                        </p>
+                        <ul>
+                            <li>
+                                <code>make -f hello.ftdi.44.echo.c.make</code>
+                                : Compile the code
+                            </li>
+                            <li>
+                                <code>
+                                    sudo make -f hello.ftdi.44.echo.c.make
+                                    program-usbtiny-fuses
+                                </code>
+                                : Setting up the microcontroller for
+                                programming
+                            </li>
+                            <li>
+                                <code>
+                                    sudo make -f hello.ftdi.44.echo.c.make
+                                    program-usbtiny
+                                </code>
+                                : Flash the microcontroller
+                            </li>
+                            <li>
+                                Once the program was flashed, I removed the
+                                programmer and connected the FTDI cable to the
+board. Then I run the python application.                                <code>python term.py /dev/ttyUSB0 115200</code>
+                                : Run the python application app which connects
+                                with the serial port of the board.
+                            </li>
+                        </ul>
+                        <p>
+                            For knowing the serial port in which the USB device
+                            is running in my computer I run the following
+                            command: <code>dmesg | grep tty</code>
+                        </p>
+                        <p>
+                            It looks like everything is working as expected. I
+                            managed to write messages in the terminal and board
+                            returns the echo.
+                        </p>
+                        <div>
+                            <img
+                                src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/img/week6/programming3.jpg"
+                                alt="Board fabrication"
+                            />
+                            <div>
+                                Figure 25. My first program was flushed to the
+                                board!!!
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/img/week6/programming2.jpg"
+                                alt="Board fabrication"
+                            />
+                            <div>
+                                Figure 26. Python terminal application showing
+                                hello world application.
+                            </div>
+                        </div>
+                        <h3 id="measure">
+                            Measure board operation
+                        </h3>
+                        <h2 id="resources">
+                            Resources utilized
+                        </h2>
+                        <ul>
+                            <li>
+                                <a
+                                    href="http://www.autodesk.com/products/eagle/overview"
+                                >
+                                    Eagle 8.6.3
+                                </a>
+                                : DEA software to design the circuit and
+                                produce the board
+                            </li>
+                            <li>
+                                <a href="https://www.gimp.org/">GIMP</a>
+                                : To create the <samp>.png</samp> files with
+                                the traces and cutout
+                            </li>
+                            <li>
+                                <a href="http://fabmodules.org/">Fabmodules</a>
+                                : To create the <samp>.rml</samp> files
+                            </li>
+                            <li>
+                                Roland MDX-20: milling machine to fabricate the
+                                board
+                            </li>
+                            <li>
+                                Set of electronics components in the Fab
+                                inventory
+                            </li>
+                            <li>
+                                Oscilloscope and multimeter to test the board.
+                            </li>
+                        </ul>
+                        <h2 id="reflection">
+                            Reflection
+                        </h2>
+                        <h4 id="summary">
+                            Summary
+                        </h4>
+                        <p>
+                            This week I got acquainted with Eagle software.
+                            Although I had used once before, it is the first
+                            time I face a design problem by myself.
+                        </p>
+                        <h4 id="difficulties">
+                            Main difficulties
+                        </h4>
+                        <p>
+                            Creating the routes to connect different signals
+                            is, with difference, the most complex topic I dealt
+                            with during this week. It is very difficult to
+                            guess beforehand which the best position for the
+                            components to generate efficient routes.
+                            Furthermore, sometimes it was rather complex to
+                            create a route in which two signals does not cross
+                            with each other. I guess that with more training, I
+                            will improve my skills and manage to make this
+                            process quicker.
+                        </p>
+                        <p>
+                            I still find also some difficulties soldering the
+                            surface mount components. This board was more
+                            challenging that the
+                            <a
+                                href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/week4.html"
+                            >
+                                one we built two weeks ago
+                            </a>
+                            . But, this time I felt more confident soldering.
+                        </p>
+                        <h4 id="learnings">
+                            Main learnings
+                        </h4>
+                        <p>
+                            I learned to use Eagle software. I think now I have
+                            better intuition on how to create the routes. I
+                            still need to practice a little bit more with the
+                            soldering. Although the board seems to work, it is
+                            still not "beautiful".
+                        </p>
+                        <div>
+                            <h2 id="models">
+                                Models files
+                            </h2>
+                            <ul>
+                                <li>
+                                    The Eagle
+                                    <a
+                                        href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/files/week6/mainboard.sch"
+                                    >
+                                        schematics
+                                    </a>
+                                    and
+                                    <a
+                                        href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/files/week6/mainboard.brd"
+                                    >
+                                        board
+                                    </a>
+                                    files
+                                </li>
+                                <li>
+                                    The
+                                    <a
+                                        href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/files/week6/traces.png"
+                                    >
+                                        traces
+                                    </a>
+                                    and
+                                    <a
+                                        href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/files/week6/cutout.png"
+                                    >
+                                        cutout
+                                    </a>
+                                    images
+                                </li>
+                                <li>
+                                    The Roland files (<samp>.rml</samp>) for
+                                    the
+                                    <a
+                                        href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/files/week6/outline.rml"
+                                    >
+                                        outline
+                                    </a>
+                                    , the
+                                    <a
+                                        href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/files/week6/cutout.rml"
+                                    >
+                                        cutout
+                                    </a>
+                                    and the
+                                    <a
+                                        href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/files/week6/traces.rml"
+                                    >
+                                        traces
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a
+    id="back-to-top"
+    href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/week6.html#"
+    title=""
+>
+</a>
+<div id="tooltip17473">
+    <div>
+    </div>
+    <div>
+        Click to return on the top page
+    </div>
+</div>
+
+
+
+                <!--To Be continued
+
+
+
+
+
+                        href="http://archive.fabacademy.org/archives/2016/doc/arduinoisp.html"
+                    >
+                        Arduino Uno as an ISP
+                    </a>
+                    .
+                </p>
+                <p>
+                    The Arduino sketch is included as an example in the Arduino
+                    IDE under:
+                    <br/>
+                    <code>File &gt; Examples &gt; ArduinoISP_</code>
+                </p>
+                <p>
+                    With the ISP board disconnected from the Arduino, upload
+                    the sketch.
+                </p>
+                <p>
+                    The ArduinoISP sketch includes comments on how to connect
+                    the FabISP to the Arduino:
+                </p>
+                <pre><code>RST:      10
+MOSI:     11
+MISO:     12
+SCK:      13
+</code></pre>
+                <p>
+                    VCC is connected to 5V and GND to GND:
+                </p>
+                <pre><code>VCC:      5V
+GND:      GND
+</code></pre>
+                <p>
+                    <img
+                        src="http://archive.fabacademy.org/archives/2016/fablabaalto/students/294/articles/making-the-fab-isp/img/fabisp-arduino-programming.jpg"
+                        alt=""
+                    />
+                    <small>
+                        The FabISP connected to Arduino Uno
+                    </small>
+                </p>
+                <p>
+                    To send the Makefile to the FabISP, I first needed to
+                    install an AVRprogramming application. I’m running Mac OS,
+                    so I chose
+                    <a
+                        href="https://www.obdev.at/products/crosspack/index.html"
+                    >
+                        Crosspack AVR
+                    </a>
+                    .
+                </p>
+                <p>
+                    I downloaded the FabISP Firmware from the Fab Academy
+                    documentation, and edited the programmer configuration in
+                    the Makefile to:
+                </p>
+                <pre><code>AVRDUDE = avrdude -c stk500v1 -b19200 -P /dev/tty.usbmodem1411 -p $(DEVICE)
+</code></pre>
+                <p>
+                    Now to compile the firmware:
+                </p>
+                <pre><code>cd Downloads/fabISP_mac.0.8.2_firmware
+make clean
+</code></pre>
+                <p>
+                    A positive response should be:
+                </p>
+                <pre><code>rm -f main.hex main.lst main.obj main.cof main.list main.map main.eep.hex main.elf *.o usbdrv/*.o main.s usbdrv/oddebug.s usbdrv/usbdrv.s
+</code></pre>
+                <p>
+                    Now compile:
+                </p>
+                <pre><code>make hex
+</code></pre>
+                <p>
+                    Response:
+                </p>
+                <pre><code>avr-gcc -Wall -Os -DF_CPU=20000000     -Iusbdrv -I. -DDEBUG_LEVEL=0 -mmcu=attiny44 -c usbdrv/usbdrv.c -o usbdrv/usbdrv.o
+avr-gcc -Wall -Os -DF_CPU=20000000     -Iusbdrv -I. -DDEBUG_LEVEL=0 -mmcu=attiny44 -x assembler-with-cpp -c usbdrv/usbdrvasm.S -o usbdrv/usbdrvasm.o
+avr-gcc -Wall -Os -DF_CPU=20000000     -Iusbdrv -I. -DDEBUG_LEVEL=0 -mmcu=attiny44 -c usbdrv/oddebug.c -o usbdrv/oddebug.o
+avr-gcc -Wall -Os -DF_CPU=20000000     -Iusbdrv -I. -DDEBUG_LEVEL=0 -mmcu=attiny44 -c main.c -o main.o
+main.c:88:13: warning: always_inline function might not be inlinable [-Wattributes]
+ static void delay ( void )
+             ^
+avr-gcc -Wall -Os -DF_CPU=20000000     -Iusbdrv -I. -DDEBUG_LEVEL=0 -mmcu=attiny44 -o main.elf usbdrv/usbdrv.o usbdrv/usbdrvasm.o usbdrv/oddebug.o main.o
+rm -f main.hex main.eep.hex
+avr-objcopy -j .text -j .data -O ihex main.elf main.hex
+avr-size main.hex
+   text       data        bss        dec        hex    filename
+      0       2002          0       2002        7d2    main.hex
+</code></pre>
+                <p>
+                    Next, set the fuses so the board will use the external
+                    crystal:
+                </p>
+                <pre><code>make fuse
+</code></pre>
+                <p>
+                    Response:
+                </p>
+                <pre><code>avrdude -c stk500v1 -b19200 -P /dev/tty.usbmodem1411 -p attiny44 -U hfuse:w:0xDF:m -U lfuse:w:0xFF:m
+
+avrdude: stk500_getparm(): (a) protocol error, expect=0x14, resp=0x14
+
+avrdude: stk500_getparm(): (a) protocol error, expect=0x14, resp=0x01
+avrdude: stk500_initialize(): (a) protocol error, expect=0x14, resp=0x10
+avrdude: initialization failed, rc=-1
+         Double check connections and try again, or use -F to override
+         this check.
+
+avrdude: stk500_disable(): unknown response=0x12
+
+avrdude done.  Thank you.
+
+make: *** [fuse] Error 1
+</code></pre>
+                <p>
+                    Oh dear. At this point, I inspected the board closely for
+                    cold joints or visible shorts and realised I hadn’t
+                    soldered the pins on the back of the USB header at all! I
+                    also had a 4.99 Ohm resistor in place of the 499 Ohm
+                    resistor. Lesson learned: don’t trust that resistors have
+                    been put in the correct draw in the component tower -
+                    always check the component markings.
+                </p>
+                <p>
+                    With those problems fixed, I attempted to set the fuses
+                    again (this time using sudo to run my command):
+                </p>
+                <pre><code>sudo make fuse
+</code></pre>
+                <p>
+                    Still I had the same error message, even after checking
+                    carefully for shorts with a multimeter, so I abandoned the
+                    Arduino and tried using a FabISP made by
+                    <a
+                        href="http://fabacademy.org/archives/2014/students/shooshtari.ali/week4/week4.html"
+                    >
+                        Ali Neissi
+                    </a>
+                    .
+                </p>
+                <p>
+                    I changed the programmer config to:
+                </p>
+                <pre><code>AVRDUDE = avrdude -c usbtiny -p $(DEVICE)
+</code></pre>
+                <p>
+                    Then ran:
+                </p>
+                <pre><code>sudo make fuse
+</code></pre>
+                <p>
+                    Response:
+                </p>
+                <pre><code>avrdude -c usbtiny -p attiny44  -U hfuse:w:0xDF:m -U lfuse:w:0xFF:m
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9207
+avrdude: reading input file "0xDF"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xDF:
+avrdude: load data hfuse data from input file 0xDF:
+avrdude: input file 0xDF contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+avrdude: reading input file "0xFF"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xFF:
+avrdude: load data lfuse data from input file 0xFF:
+avrdude: input file 0xFF contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+
+avrdude: safemode: Fuses OK (H:FF, E:DF, L:FF)
+
+avrdude done.  Thank you.
+</code></pre>
+                <p>
+                    That’s more like it!
+                </p>
+                <pre><code>sudo make program
+</code></pre>
+                <p>
+                    Response:
+                </p>
+                <pre><code>avrdude -c usbtiny -p attiny44  -U flash:w:main.hex:i
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9207
+avrdude: NOTE: "flash" memory has been specified, an erase cycle will be performed
+     To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: reading input file "main.hex"
+avrdude: writing flash (2002 bytes):
+
+Writing | ################################################## | 100% 1.96s
+
+avrdude: 2002 bytes of flash written
+avrdude: verifying flash memory against main.hex:
+avrdude: load data flash data from input file main.hex:
+avrdude: input file main.hex contains 2002 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 2.32s
+
+avrdude: verifying ...
+avrdude: 2002 bytes of flash verified
+
+avrdude: safemode: Fuses OK (H:FF, E:DF, L:FF)
+
+avrdude done.  Thank you.
+
+avrdude -c usbtiny -p attiny44  -U hfuse:w:0xDF:m -U lfuse:w:0xFF:m
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9207
+avrdude: reading input file "0xDF"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xDF:
+avrdude: load data hfuse data from input file 0xDF:
+avrdude: input file 0xDF contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+avrdude: reading input file "0xFF"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xFF:
+avrdude: load data lfuse data from input file 0xFF:
+avrdude: input file 0xFF contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+
+avrdude: safemode: Fuses OK (H:FF, E:DF, L:FF)
+
+avrdude done.  Thank you.
+</code></pre>
+                <p>
+                    Yiiihewwww! With that, I verified that the FabISP was
+                    identified correctly.
+                </p>
+                <p>
+                    <img
+                        src="http://archive.fabacademy.org/archives/2016/fablabaalto/students/294/articles/making-the-fab-isp/img/fabisp-verify.jpg"
+                        alt=""
+                    />
+                    <small>
+                        The FabISP making friends with my Macbook
+                    </small>
+                </p>
+                <p>
+                    All good! Finally I desoldered jumpers SJ1 and SJ2, then
+                    went for a beer!
+                </p>
+                <p>
+                    <img
+                        src="http://archive.fabacademy.org/archives/2016/fablabaalto/students/294/articles/making-the-fab-isp/img/fabisp-hero.jpg"
+                        alt=""
+                    />
+                    <small>
+                        The FabISP completed, programmed and ready to save the
+                        day
+                    </small>
+                </p>
+                <p>
+                    <strong>Files</strong>
+                </p>
+                <p>
+                    FabISP Traces (14kB) -
+                    <a
+                        href="http://archive.fabacademy.org/archives/2016/fablabaalto/students/294/articles/making-the-fab-isp/files/hello-ISP44_traces.png"
+                    >
+                        hello-ISP44_traces.png
+                    </a>
+                    <br/>
+                    FabISP Cutout (12kB) -
+                    <a
+                        href="http://archive.fabacademy.org/archives/2016/fablabaalto/students/294/articles/making-the-fab-isp/files/hello-ISP44_interior.png"
+                    >
+                        hello-ISP44_interior.png
+                    </a>
+                </p>
+                <p>
+                    <strong>TODOs</strong>
+                </p>
+                <p>
+                    ☑ Make the Fab ISP
+                    <br/>
+                    ☑ Program the board
+                    <br/>
+                    ☑ Explain problems and how they were overcome
+                    <br/>
+                    ☑ Include a ‘hero shot’ of the board
+                    <br/>
+                </p>
+                <p>
+                    <strong>Links</strong>
+                </p>
+                <p>
+                    Fab Academy 2016 -
+                    <a
+                        href="http://academy.cba.mit.edu/classes/electronics_production/index.html"
+                    >
+                        Electronics Production
+                    </a>
+                    <br/>
+                    FabISP Programming Tutorial -
+                    <a
+                        href="http://archive.fabacademy.org/archives/2016/doc/programming_FabISP.html"
+                    >
+                        FabISP: Programming
+                    </a>
+                    <br/>
+                    FabISP Troubleshooting -
+                    <a
+                        href="http://archive.fabacademy.org/archives/2016/doc/electronics_production_FabISP.html#troubleshooting"
+                    >
+                        FabISP: Electronics Production
+                    </a>
+                </p>
+            </section>
+        </article>
+    </div>
+</div>
+<footer>
+    <div>
+        <section>
+            <p>
+                <strong>WHOIS</strong>
+            </p>
+            <p>
+                Solomon is an Engineer, Designer and Lab Manager
+                <br/>
+                at <a href="http://fablab.aalto.fi/">Aalto Fablab</a> in
+                Helsinki, Finland
+            </p>
+        </section>
+    </div>
+</footer>
+
+
+
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/fabmodules.jpg"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <p>
+                And for the outline: Image import and milling machine settings
+                are as earlier. Number 3 defines how deep the mill bit will go
+                at one run. This with the material thickness defines, how many
+                rounds the milling bit has to do to go through the material.
+                You can see each consecutive run at the picture (three in this
+                case).
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/fabmodules_outline.jpg"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <p>
+                After setting the parameters press the "calculate"-button. And
+                finally "save"-button. Files will be .rlm format. Now that we
+                have files ready. It is time to set up the milling machine.
+            </p>
+            <p>
+                Setting up the milling machine for PCB manufacturing includes
+                next phases:
+                <br/>
+                1. Set up the blank pcb to the milling machine
+                <br/>
+                2. define origo and drill bit depth
+                <br/>
+                3. import the milling files (.rlm from fabmodules)
+                <br/>
+                4. Milling and removing the ready made pcb
+                <br/>
+            </p>
+            <p>
+                The biggest issue is to set the blank pcb to the milling
+                machine so that it is even. First attach the pcb blank to the
+                bottom support with 2-sided tape. Make sure that there isn't
+                any air or small particles between. Then attach the bottom
+                support to the milling machine bottom plate, if it is not
+                attached already. Use 2-sided tape there as well.
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/milling_pohjan_osat_valmis.jpg"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <p>
+                Next attach the whole package to the milling machine. There are
+                4 screws. Slide the bottom plane in place, press firmly towards
+                back of the machine and tighten the screws. Now the machine is
+                almost ready.
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/milling_bottom_inplace_text.jpg"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <p>
+                Next we insert the correct milling bit must be put to the machine using allen key. One must
+                take care not to drop the bit. It will break quite easily. Dont
+                push the drill all the way in to the spindle so you have some
+                free movement later when defining the milling depth.
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/mill_bit.jpg"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <p>
+                After adding the right milling bit open Vpanel for SRM-20 that
+                is the milling machine user interface software.
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/Milling_panel_text.jpg"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <p>
+                From move X/Y buttons at the middle of the screen move the
+                drilling head to the origo i.e. left front corner of blank pcb.
+                When happy with origo, press the Set Origin Point X/Y button on
+                the right. This will set the origo. It is easier to set the
+                origo when you move the milling bit closer to the surface. Take
+                care not to hit it thought. Next move the z-axes, using
+                z-button up/down, down close to pcb surface. Be carefull not to
+                hit the sufrace. Use "cursor step" (move speed in picture
+                there) options to control your movement. Stop the mill bit head
+                close to the surface. Use Allen key to loosen the mill bit and
+                ease it to the surface. This will be the depth setting. Tighten
+                the Allen screw again and accept the new depth by pressing the
+                Set origin Point Z-button at right top of the VPanel. This will
+                set the new z-axis zero point. You can see the zero set on the
+                left top side on the VPanel (Coordinates).
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/Milling_bit_set_text.jpg"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <p>
+                This will finnish the milling machine setup. Time to load the
+                milling files and run them. This happens in VPanel. Push the
+                Cut-button and an file selection window opens. Clear all old
+                milling files by pushing the Delete/Delete all -button. Then
+                use Add-button and find the file you want to mill. Pressing
+                Output-button will start the selected milling so make sure that
+                everything else is set and you have the right file selected.
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/vpanel_cutting.jpg"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <p>
+                Finally milling machine is doing it job and milling.
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/Milling_milling_text.jpg"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <p>
+                My first couple of millings did not go well but 3th time's the
+                charm and I got one well milled pcb. On the first failed
+                milling the blank pcb was not level, so part of the milling did
+                not happen. See the picture.
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/milling_bad2_text.jpg"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <header>
+                <h3>
+                    Soldering the components on i.e. assembling the board
+                </h3>
+            </header>
+            <p>
+                All the components were available FabLabs storage. It is time
+                to do some soldering.
+                <br/>
+                List of all components needed for this board. I used ATtiny45.
+                <br/>
+            </p>
+            <ul>
+                <li>
+                    1x ATtiny44
+                </li>
+                <li>
+                    2x 1kΩ resistors
+                </li>
+                <li>
+                    2x 499Ω resistors
+                </li>
+                <li>
+                    2x 49Ω resistors
+                </li>
+                <li>
+                    2x 3.3v zener diodes
+                </li>
+                <li>
+                    1x red LED
+                </li>
+                <li>
+                    1x green LED
+                </li>
+                <li>
+                    1x 100nF capacitor
+                </li>
+                <li>
+                    1x 2x3 pin header
+                </li>
+            </ul>
+            <div>
+                <img
+                    src="media/Pictures/04.Electronics-Production/component.jpg"
+                    alt="arrenge the conponents for easier soldering"
+                />
+            </div>
+            <br/>
+            <p>
+                Picture of component placement here. Component designation is
+                visible on the collected components picture.
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/Kokoonpanokuva.png"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <p>
+                And here is the ready made board.
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/valmis_levy.jpg"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <p>
+                Soldering is familiar to me, so it did not take a lot of time
+                to finish this. I love to see what happens when soldering so I
+                use microscope and good fine tipped Weller soldering iron. Here
+                is the setup while working on it.
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/solderingstation.jpg"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <p>
+                After finishing the first board I wanted to make an other one
+                to test my own programmer. I selected one called
+                <a
+                    href="http://fab.cba.mit.edu/classes/863.16/doc/tutorials/FabISP/FabISP_Demystified.html"
+                >
+                    FabOptimus
+                </a>
+                by Ali. I used my work place PCB milling process for that. The
+                milling machine is LPKF S103 milling/drilling machine. I will
+                not go into detail in that as it is not stantard FabLab
+                process. After milling I but the components on and then it was
+                time to start programming. Of course I programmed the first
+                board with an another programmer from our FabLab. Here is a
+                picture of FabOptimus. There is one annoying feature with
+                FabOptimus. It is using mini-usb connector. It is really hard
+                to find mini-usb nowadays as micro-usb is more of a standard
+                everywhere.
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/optimusBoard.jpg"
+                    alt=""
+                />
+            </div>
+            <br/>
+            <header>
+                <h3>
+                    Programming the programmer
+                </h3>
+            </header>
+            <p>
+                After finishing the board, it was time to program it to be a
+                programmer. This was done following the instructions made by
+                <a
+                    href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html"
+                >
+                    Brian
+                </a>
+                . I use windows OS so I had to install some programs from AVR.
+                First it was installing a GIT but that I had already. Then I
+                installed Atmel GNU Toolchain and GNU Make. Finally installing
+                avrdude and then some paths had to be defined for the programs
+                to find software tools installed.
+            </p>
+            <p>
+                Tasks to get the programming environment going in Windows 10
+                environment is installing:
+                <br/>
+                <br/>
+                1.1.
+                <a
+                    href="http://www.atmel.com/tools/atmelavrtoolchainforwindows.aspx"
+                >
+                    Atmel GNU toolchain
+                </a>
+                . From the selection of programs at the www-page, I got "Atmel
+                AVR 8-bit Toolchain 3.5.4 - Windows" as ATtiny 45 is 8-bit
+                prosessor.
+                <br/>
+                <br/>
+                1.2.
+                <a
+                    href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/make-3.81.exe"
+                >
+                    GNU make
+                </a>
+                . Just note where you install the program, as you will need to
+                make the correct path change later.
+                <br/>
+                <br/>
+                1.3.
+                <a
+                    href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/avrdude-win-64bit.zip"
+                >
+                    avrdude
+                </a>
+                does not need to install, just add the files to c:/Program
+                files (for example, they can be anywhere).
+                <br/>
+                <br/>
+                1.4. Adding paths to windows so avrdude will find installed
+                software. Go to Control panel (fast way is to right click mouse
+                button on start-icon) -&gt; System -&gt; Advanced System
+                Settings (on left panel, this will open a new System Properties
+                window) -&gt; Advanced tab -&gt; and click the Environment
+                Variables button in User variables section. Select Path and
+                click the Edit button. Add these three paths. If the path edit
+                does not open new window, use semicolon between the "lines"
+                when adding the paths to path variable. The paths here in this
+                example window are the locations I have my programs. Make sure
+                you select the paths where you added the new software.
+                <br/>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/Path_text.jpg"
+                    alt=""
+                />
+                <br/>
+                <br/>
+                It seems that Windows 10 does not have the right USB-drivers
+for ISPtiny. I installed the driver using program called                <a href="http://zadig.akeo.ie/">Zagid</a>. Plug the programmer
+                (working one, not the one you are about to program) to your
+                usb-port. If windows does not recognize your programmer use
+                zadig to define driver and install it. To see if Windows
+                regognizes your programmer go to Cotrol panel -&gt; System
+                -&gt; Device manager (again on the left). This will open Device
+                Manager window. Your Programmer should be listed as Atmel USB
+                Devise-FabISP (in my case).
+            </p>
+            <p>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/devicemanagerISP.jpg"
+                    alt=""
+                />
+                <br/>
+            </p>
+            <p>
+                If you do not find your programmer, run the Zadig.
+            </p>
+            <img
+                src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/zadig_text.jpg"
+                alt=""
+            />
+            <br/>
+            <p>
+                Next you can test that the software work and the paths are
+                correct. Please follow good instructions at Brians page
+                <a
+                    href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/windows_avr.html"
+                >
+                    here
+                </a>
+                . Just go to the "Sanity Check" part at the end of the page.
+            </p>
+            <header>
+                <h4>
+                    Flashing the ATtiny... finally
+                </h4>
+            </header>
+            <p>
+                Programming started with downloading the source code and
+                compiling it to .hex file that will be programmed to the new
+                boards atmega-chip. It was done by downloading the source from
+                <a
+                    href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/fts_firmware_bdm_v1.zip"
+                >
+                    here
+                </a>
+                . Open your console (git bash or so) and go to the folder you
+                downloaded the sofware files. Write <code>make</code> and the
+                .hex file is generated.
+            </p>
+            <p>
+                Next was time to connect the hardware and program the new
+                system. This was done by plugging the programmer to computer
+                USB port. connecting the programming cable to the new board. On
+                my case power for the new board was provided by the programmer
+                hence there is no need to get any other power source to the new
+                board. In case you need to add power to the new board, it can
+                be given from other USB-port or separate power source.
+            </p>
+            <div>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/week4_front.jpg"
+                    alt=""
+                />
+            </div>
+            <p>
+                Following the instrucions at
+                <a
+                    href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html"
+                >
+                    Brians page
+                </a>
+                I opened the git bash console and run the
+                <br/>
+                1. First we generate the program file (.hex) that can be loaded
+                to the microcontroller using command <code>Make</code>.
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/programming1_makeANDfiles.jpg"
+                    alt=""
+                />
+                <br/>
+                There is a better visualization of files generated.
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/programming2_files.jpg"
+                    alt=""
+                />
+                <br/>
+                2. <code>make flash</code>; this will program the .hex file
+                compiled earlier to the chip.
+                <br/>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/programming3_flash.jpg"
+                    alt=""
+                />
+                <br/>
+                3. <code>make fuses</code>; Make the fuses except the one that
+                makes chip not possible to program again. (Makes reset pin as
+                normal IO-pin.)
+                <br/>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/programming4_makeFuses.jpg"
+                    alt=""
+                />
+                <br/>
+                4. Before blowing the reset fuse, its time to test if the new
+                programmer works. Unplug programmers and plug the new one to
+                your computers usb port, if it shows in windows as usb-devise
+                (see instructions above to see if you board is recognised by
+                the OS. If it does not show up, start debugging with Brians
+                instructions. On my case it worked well, so I just went on
+                blowing the reset fuse.
+                <br/>
+                <br/>
+                5. use command <code>make rstdisbl</code> and that will do it.
+                Now the new board is ready to be used as a programmer.
+                <br/>
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/Programming5_Reset_fuse.jpg"
+                    alt=""
+                />
+                <br/>
+                Oh and the last thing, remember to de-solder the bridge made to
+                the board. See picture. It is de-soldered here already.
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/valmis_levy_text.jpg"
+                    alt=""
+                />
+                <br/>
+                At the end I also made this cable and small case for the board
+                with one of our 3D-printers. Links to the files are behind the
+                i-symbol at the bottom of the page.
+                <img
+                    src="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/Heroshot_ISP.jpg"
+                    alt=""
+                />
+                <br/>
+            </p>
+            <br/>
+            <header>
+                <h3>
+                    Tools, machines and software used during this weeks
+                    assingment:
+                </h3>
+            </header>
+            <p>
+                1. FabLab milling machine: Roland SRM-20 and its software
+                interface VPanel for SRM-20
+                <br/>
+                2. Soldering iron. Weller WMRS (not FabLab stardard), but with
+                a fine tip
+                <br/>
+                3. Windows OS AVR programming environments:
+                <br/>
+                3.1.
+                <a
+                    href="http://www.atmel.com/tools/atmelavrtoolchainforwindows.aspx"
+                >
+                    Atmel GNU toolchain
+                </a>
+                .
+                <br/>
+                3.2.
+                <a
+                    href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/make-3.81.exe"
+                >
+                    GNU make
+                </a>
+                <br/>
+                3.3.
+                <a
+                    href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/avrdude-win-64bit.zip"
+                >
+                    avrdude
+                </a>
+                <br/>
+            </p>
+            <header>
+                <h3>
+                    Files used with this weeks assignment
+                </h3>
+            </header>
+            <p>
+                Here are the files. All of them this week are not done by me,
+                but downloaded from others. Later in the text, when I talk
+                about the process, the links to the source pages are given.
+                <br/>
+                <a
+                    href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/fts_mini_traces.png"
+                >
+                    Traces.PNG file
+                </a>
+                <br/>
+                <a
+                    href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/fts_mini_cut.png"
+                >
+                    Outline.PNG file
+                </a>
+                <br/>
+                <a
+                    href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/Test.rml"
+                >
+                    Test cut file made from outline-file
+                </a>
+                <br/>
+                <a
+                    href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/traces.rml"
+                >
+                    Traces milling file made with fabmodules
+                </a>
+                <br/>
+                <a
+                    href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/outline.rml"
+                >
+                    Outline milling file made with fabmodules
+                </a>
+                <br/>
+                <a
+                    href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/kotelo_pohja.FCStd"
+                >
+                    3D printed case bottom part for the programmer CAD-file
+                </a>
+                <br/>
+                <a
+                    href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/pohja_palanen.stl"
+                >
+                    3D printed case bottom part for the programmer .STL-file
+                </a>
+                <br/>
+                <a
+                    href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/kotelo_kansi.FCStd"
+                >
+                    3D printed case top part for the programmer CAD-file
+                </a>
+                <br/>
+                <a
+                    href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/kansi.stl"
+                >
+                    3D printed case top part for the programmer .STL-file
+                </a>
+                <br/>
+            </p>
+        </div>
+    </div>
+    <a
+        href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/week_3.html"
+    >
+    </a>
+    <a
+        href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/week_5.html"
+    >
+    </a>
+</div>
+<footer id="footer">
+    <a
+        href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/week_4.html#"
+    >
+    </a>
+    <div>
+        <div>
+            <h3>
+                All link related to this weeks topics are here.
+            </h3>
+            <p>
+                <a
+                    href="http://www.atmel.com/tools/atmelavrtoolchainforwindows.aspx"
+                >
+                    Atmel GNU toolchain
+                </a>
+                .
+                <br/>
+                <a
+                    href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/make-3.81.exe"
+                >
+                    GNU make
+                </a>
+                <br/>
+                <a
+                    href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/avrdude-win-64bit.zip"
+                >
+                    avrdude
+                </a>
+                <br/>
+            </p>
+        </div>
+        <div>
+            <a
+                href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/fts_mini_traces.png"
+            >
+                Traces.PNG file
+            </a>
+            <br/>
+            <a
+                href="http://archive.fabacademy.org/archives/2017/fablaboulu/students/70/images/week4/fts_mini_cut.png"
+            >
+                Outline.PNG file
+            </a>
+            <br/>
+-->
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+
+    <footer id="footer">
+        <p id="cclicense">
+        </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()
+		})
+	  }(window.jQuery)
+	</script>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

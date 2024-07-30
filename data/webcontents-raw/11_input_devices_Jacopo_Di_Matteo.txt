@@ -1,0 +1,1585 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="My Fabacademy site">
+      
+      
+      
+        <meta name="author" content="Jacopo Michele Di Matteo">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/de-waag-logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>11 - Input Devices - Jacopo Di Matteo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/title.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-indigo" data-md-color-accent="orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#11-input-devices" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Jacopo Di Matteo" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">panorama_vertical</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Jacopo Di Matteo
+            </span>
+            <span class="md-header-nav__topic">
+              
+                11 - Input Devices
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="About Me" class="md-tabs__link">
+        About Me
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../week01/" title="Assignments" class="md-tabs__link md-tabs__link--active">
+          Assignments
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../final-project/" title="Final project" class="md-tabs__link">
+          Final project
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Jacopo Di Matteo" class="md-nav__button md-logo">
+      
+        <i class="md-icon">panorama_vertical</i>
+      
+    </a>
+    Jacopo Di Matteo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About Me" class="md-nav__link">
+      About Me
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../agreement/" title="Student Agreement" class="md-nav__link">
+      Student Agreement
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/" title="Extensions Info" class="md-nav__link">
+      Extensions Info
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../size_counter/" title="Automatic Repo Size Checker" class="md-nav__link">
+      Automatic Repo Size Checker
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Assignments
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Assignments
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week01/" title="1 - Principles & Practices" class="md-nav__link">
+      1 - Principles & Practices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week02/" title="2 - Project Management" class="md-nav__link">
+      2 - Project Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week03/" title="3 - Computer-Aided Design" class="md-nav__link">
+      3 - Computer-Aided Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week04/" title="4 - Computer-Controlled Cutting" class="md-nav__link">
+      4 - Computer-Controlled Cutting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week05/" title="5 - Electronics Production" class="md-nav__link">
+      5 - Electronics Production
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week06/" title="6 - 3D Scanning & Printing" class="md-nav__link">
+      6 - 3D Scanning & Printing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week07/" title="7 - Electronics Design" class="md-nav__link">
+      7 - Electronics Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week08/" title="8 - Computer-Controlled Machining" class="md-nav__link">
+      8 - Computer-Controlled Machining
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week09/" title="9 - Embedded Programming" class="md-nav__link">
+      9 - Embedded Programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week10/" title="10 - Moulding and Casting" class="md-nav__link">
+      10 - Moulding and Casting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        11 - Input Devices
+      </label>
+    
+    <a href="./" title="11 - Input Devices" class="md-nav__link md-nav__link--active">
+      11 - Input Devices
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preamble" title="Preamble" class="md-nav__link">
+    Preamble
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-of-choice" title="Sensor of Choice" class="md-nav__link">
+    Sensor of Choice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-response-as-proximity-sensor" title="Step Response as Proximity Sensor" class="md-nav__link">
+    Step Response as Proximity Sensor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-board" title="The board" class="md-nav__link">
+    The board
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-psoc" title="The PSoC" class="md-nav__link">
+    The PSoC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing" title="Installing" class="md-nav__link">
+    Installing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps" title="Steps" class="md-nav__link">
+    Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-which" title="After which" class="md-nav__link">
+    After which
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming" title="Programming" class="md-nav__link">
+    Programming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootloading" title="Bootloading" class="md-nav__link">
+    Bootloading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gallery" title="Gallery" class="md-nav__link">
+    Gallery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2019" title="2019" class="md-nav__link">
+    2019
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-research" title="Background Research" class="md-nav__link">
+    Background Research
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-approach" title="My approach" class="md-nav__link">
+    My approach
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-pad-design" title="Sensor Pad - Design" class="md-nav__link">
+    Sensor Pad - Design
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inkscape-export-settings" title="Inkscape Export Settings" class="md-nav__link">
+    Inkscape Export Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-pad-cutting" title="Sensor Pad - Cutting" class="md-nav__link">
+    Sensor Pad - Cutting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-an-avr-make-it-sense-capacitance" title="Use An AVR &amp; Make It Sense Capacitance" class="md-nav__link">
+    Use An AVR &amp; Make It Sense Capacitance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcb-design-in-kicad" title="PCB Design in KiCad" class="md-nav__link">
+    PCB Design in KiCad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milling" title="Milling" class="md-nav__link">
+    Milling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stuffing" title="Stuffing" class="md-nav__link">
+    Stuffing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming_1" title="Programming" class="md-nav__link">
+    Programming
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arduino-as-a-programmer-cant-read-serial" title="Arduino As A Programmer Can't Read Serial" class="md-nav__link">
+    Arduino As A Programmer Can't Read Serial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pins-anti-pins" title="Pins &amp; Anti-pins" class="md-nav__link">
+    Pins &amp; Anti-pins
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-arduino-pinout" title="The Arduino Pinout" class="md-nav__link">
+    The Arduino Pinout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-attiny44-pinout" title="The ATTiny44 Pinout" class="md-nav__link">
+    The ATTiny44 Pinout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-the-files" title="Download The Files" class="md-nav__link">
+    Download The Files
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week12/" title="12 - Output Devices" class="md-nav__link">
+      12 - Output Devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week13/" title="13 - Applications and Implications" class="md-nav__link">
+      13 - Applications and Implications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week14/" title="14 - Embedded Networking and Communications" class="md-nav__link">
+      14 - Embedded Networking and Communications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week15/" title="15 - Mechanical Design, Machine Design" class="md-nav__link">
+      15 - Mechanical Design, Machine Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week16/" title="16 - Interface and Application Programming" class="md-nav__link">
+      16 - Interface and Application Programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week17/" title="17 - Wildcard Week" class="md-nav__link">
+      17 - Wildcard Week
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week18/" title="18 - Invention, Intellectual Property and Business Models" class="md-nav__link">
+      18 - Invention, Intellectual Property and Business Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week19/" title="19 - Project Development" class="md-nav__link">
+      19 - Project Development
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Final project
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Final project
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../final-project/" title="Final Project" class="md-nav__link">
+      Final Project
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preamble" title="Preamble" class="md-nav__link">
+    Preamble
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-of-choice" title="Sensor of Choice" class="md-nav__link">
+    Sensor of Choice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-response-as-proximity-sensor" title="Step Response as Proximity Sensor" class="md-nav__link">
+    Step Response as Proximity Sensor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-board" title="The board" class="md-nav__link">
+    The board
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-psoc" title="The PSoC" class="md-nav__link">
+    The PSoC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing" title="Installing" class="md-nav__link">
+    Installing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps" title="Steps" class="md-nav__link">
+    Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-which" title="After which" class="md-nav__link">
+    After which
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming" title="Programming" class="md-nav__link">
+    Programming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootloading" title="Bootloading" class="md-nav__link">
+    Bootloading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gallery" title="Gallery" class="md-nav__link">
+    Gallery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2019" title="2019" class="md-nav__link">
+    2019
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-research" title="Background Research" class="md-nav__link">
+    Background Research
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-approach" title="My approach" class="md-nav__link">
+    My approach
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-pad-design" title="Sensor Pad - Design" class="md-nav__link">
+    Sensor Pad - Design
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inkscape-export-settings" title="Inkscape Export Settings" class="md-nav__link">
+    Inkscape Export Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-pad-cutting" title="Sensor Pad - Cutting" class="md-nav__link">
+    Sensor Pad - Cutting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-an-avr-make-it-sense-capacitance" title="Use An AVR &amp; Make It Sense Capacitance" class="md-nav__link">
+    Use An AVR &amp; Make It Sense Capacitance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcb-design-in-kicad" title="PCB Design in KiCad" class="md-nav__link">
+    PCB Design in KiCad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milling" title="Milling" class="md-nav__link">
+    Milling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stuffing" title="Stuffing" class="md-nav__link">
+    Stuffing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming_1" title="Programming" class="md-nav__link">
+    Programming
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arduino-as-a-programmer-cant-read-serial" title="Arduino As A Programmer Can't Read Serial" class="md-nav__link">
+    Arduino As A Programmer Can't Read Serial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pins-anti-pins" title="Pins &amp; Anti-pins" class="md-nav__link">
+    Pins &amp; Anti-pins
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-arduino-pinout" title="The Arduino Pinout" class="md-nav__link">
+    The Arduino Pinout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-attiny44-pinout" title="The ATTiny44 Pinout" class="md-nav__link">
+    The ATTiny44 Pinout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-the-files" title="Download The Files" class="md-nav__link">
+    Download The Files
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="11-input-devices">11 - Input Devices<a class="headerlink" href="#11-input-devices" title="Permanent link">&para;</a></h1>
+<div class=hero>
+    <div class=eleven></div>
+    <h3><em>Sensing</em> The World </h3>
+</div>
+
+<details class="important"><summary>Tools &amp; Assignment</summary><p><img alt="😊" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f60a.svg" title=":blush:" /> Updated for 2019 evaluation standards!
+<strong>Group assignment</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Probe an input device&rsquo;s analog levels and digital signals</li>
+</ul>
+<p><strong>Individual assignment</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Measure something: add a sensor to a microcontroller board that you have designed and read it.</li>
+</ul>
+<p><strong>Learning outcomes</strong></p>
+<ul>
+<li>Demonstrate workflows used in circuit board design and fabrication</li>
+<li>Implement and interpret programming protocols</li>
+</ul>
+<p><strong>Have you?</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Described your design and fabrication process using words/images/screenshots or linked to previous examples.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Explained the programming process/es you used and how the microcontroller datasheet helped you.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Explained problems and how you fixed them</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Included original design files and code</li>
+</ul>
+<p><strong>FAQ</strong></p>
+<p><em>Q:</em> Is the <code class="codehilite">satsha kit/fabduino</code> I fabricated considered a valid board for this assignment?<br />
+<em>A:</em> Fabricating an unmodified board is considered as electronics production. It doesn&rsquo;t count towards any design skill. You must make some significant changes to the original <code class="codehilite">satsha kit/fabduino</code>, for the board to be considered your own design.  </p>
+</details>
+<p><small>
+(Copy of my <a href="http://archive.fabacademy.org/fabacademy2016/fablabamsterdam/students/181/WeekEleven.html">2016</a> website, with spelling corrections :)
+</small></p>
+<h2 id="preamble">Preamble<a class="headerlink" href="#preamble" title="Permanent link">&para;</a></h2>
+<p>From the start of the Fab Academy I was interested in using <a href="https://en.wikipedia.org/wiki/Field-programmable_gate_array">FPGA</a> / <a href="https://en.wikipedia.org/wiki/Programmable_system-on-chip">PSoC</a> in my project.<br />
+So I decided I was going to use it for this project; I had never used it before.</p>
+<h2 id="sensor-of-choice">Sensor of Choice<a class="headerlink" href="#sensor-of-choice" title="Permanent link">&para;</a></h2>
+<p>I decided to use a PSoC as a microcontroller, and I used the possibility of creating a Step Response sensor as a witty way around designing a really simple board (while sticking to the rules)</p>
+<h2 id="step-response-as-proximity-sensor">Step Response as Proximity Sensor<a class="headerlink" href="#step-response-as-proximity-sensor" title="Permanent link">&para;</a></h2>
+<p>A step response sensor is essentially a copper plate that, in combination with the users hand, becomes a &ldquo;capacitor&rdquo;.</p>
+<p>This functionality allows for different types of responses by altering the basic functionalities of capacitors by, for example, distancing your hand.
+In my case I will use step response to make a proximity sensor.</p>
+<h2 id="the-board">The board<a class="headerlink" href="#the-board" title="Permanent link">&para;</a></h2>
+<p>The PSoC allows for an internal reconfiguration of components. This meant I could design 99% of the board internally.</p>
+<p>However, since we had to make a board, the board I made was probability the simplest board possible (this compensates for how complicated it is to use a PSoC).
+Practically just a copper board.</p>
+<div class="image_card">
+<p><h3>Step Response board</h3></p>
+<p><img alt="NAME" src="../../images/week11/board-1.jpg" /></p>
+</div>
+<p>Due to the small surface area of this small board it&rsquo;s capabilities as a proximity sensor aren&rsquo;t really that great, it&rsquo;s more like a touch sensor really.
+Using a ruler, as seen in the image gallery actually works much better.</p>
+<h2 id="the-psoc">The PSoC<a class="headerlink" href="#the-psoc" title="Permanent link">&para;</a></h2>
+<p>PSoC is a board with a programmable architecture.</p>
+<p>Cypress has for sale a very cheap kit, which in combination with the Cypress IDE <code class="codehilite">PSoC Creator (3.3)</code> makes programming the PSoC &ldquo;Easy&rdquo; (and when I say easy I mean a little less close to Hell&trade; then the other methods).</p>
+<p>Okay, it wasn&rsquo;t THAT bad&hellip; I actually didn&rsquo;t have many problems or issues, the biggest issue was how daunting the IDE, and the programming, was.</p>
+<p>Even if it was basic C language, the API is generated automatically, this means that a whole lot of commands and projects which needed to be included are generated only after you build the project, which is confusing.</p>
+<p>PSoC&rsquo;s aren&rsquo;t common, so there isn&rsquo;t a lot of community support.</p>
+<p>This means a very small amount of external documentation, which often is outdated.</p>
+<p>Fortunately the guys at Cypress do an amazing job at documentation, but the huge amount of pages makes it hard to go through in one week.</p>
+<h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
+<h3 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h3>
+<p><em>1.</em> Ordering the part (which Emma did from <a href="https://uk.farnell.com/">Farnell</a>).<br />
+<em>2.</em> Subscribing to the Cypress website.<br />
+<em>3.</em> Installing a software which is required to download from the Cypress site.  </p>
+<h3 id="after-which">After which<a class="headerlink" href="#after-which" title="Permanent link">&para;</a></h3>
+<p>I could finally download Cypress PSoC creator 3.3, this only works on Windows (The install process is also very long).</p>
+<p>Installing is quite tedious there are three different <code class="codehilite">.exe</code> programs to download, and the choice is amongst at least 9 downloads specific for the <code class="codehilite">PSoC 4 CY8CKIT-049 4xxx</code> of which I am using the <code class="codehilite">PSoC 4 CY8CKIT-049 42xx PSoC</code>.</p>
+<p>Amongst the <code class="codehilite">PSoC 4 M-series</code> about 30 possible downloads (which I had to scavenge through to find example projects)&hellip;</p>
+<p>Also, I had to Update to 3.3 from 3.1&hellip;</p>
+<p>This was crucial and solved a lot of problems that I couldn&rsquo;t figure out&hellip;</p>
+<h2 id="programming">Programming<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
+<p>The first thing I did was look at the tutorials on the Cypress site. Programming was not necessarily difficult but very complicated, using the right commands depended a lot on what configuration used, since the API is generated rather then being a downloaded standard.</p>
+<p>This meant that without reading the documentation, it was impossible to do anything, it also makes it prone to errors.</p>
+<p>I started by using the <code class="codehilite">SCB_BootableBlinking</code> example which changed the speed at which the intermittent LED&rsquo;s on the PSoC blink.</p>
+<h2 id="bootloading">Bootloading<a class="headerlink" href="#bootloading" title="Permanent link">&para;</a></h2>
+<p>There is a very specific procedure to upload a program to the PSoC.</p>
+<p>First you need to hold down the button on the board to make sure that it&rsquo;s in <code class="codehilite">bootable mode</code> when you plug it in.
+The second thing that needs to be done is that after building, it&rsquo;s necessary that its programmed to the board using the bootable.</p>
+<p>The third thing was finding the file and building a file with a bootable module, without it the <code class="codehilite">Cortex0</code> folder which should contain the bootable file needed to control the PSoC.</p>
+<p>This means that the bulk of the example projects CAN&rsquo;T be used because this is the cheap kit (4€ versus 10€) we can&rsquo;t program it directly but instead we need to&hellip;</p>
+<div class="admonition warning">
+<p class="admonition-title">Never Finished This Page</p>
+<p>This is as far as the original documentation takes me, I added a <code class="codehilite">Downloads</code> header but added no link, &amp; I can&rsquo;t recall my way around the files I have locally.
+Meaning we can see the results of my work but have no explanation of how they work or how to use them, meaning this work is practically worthless.</p>
+<p>Meaning week will need re-doing, it&rsquo;s a real shame because I had worked quite hard on programming the PSoC as I recall.<br />
+Additionally it could have been an interesting addition to the FAB Academy documentation, since not many people use PSoC&rsquo;s.</p>
+<p>Some images of the results are below.</p>
+</div>
+<h2 id="gallery">Gallery<a class="headerlink" href="#gallery" title="Permanent link">&para;</a></h2>
+<div class="image_card">
+<p><h3>No Contact</h3></p>
+<p><img alt="No Contact" src="../../images/week11/no-contact.jpg" /></p>
+<p>Finger not close to pad <em>-&gt;</em> Proximity sensor <code class="codehilite">off</code></p>
+</div>
+<div class="image_card">
+<p><h3>Contact</h3></p>
+<p><img alt="NAME" src="../../images/week11/contact.jpg" /></p>
+<p>Finger close to pad <em>-&gt;</em> Proximity sensor <code class="codehilite">on</code></p>
+</div>
+<div class="image_card">
+<p><h3>More Range</h3></p>
+<p><img alt="More range" src="../../images/week11/more-range.jpg" /></p>
+<p>Step Response using cutting edge sensor technology [ie. a ruler]</p>
+</div>
+<h2 id="2019">2019<a class="headerlink" href="#2019" title="Permanent link">&para;</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/Hexapawn">HexaPawn</a> has a basic user interface, similar to a chess board or tic-tac-toe. <br />
+On a 3 by 3 board the player (white) has to make a move with one of his pawns, this can either be one square forwards or one square diagonally, to capture an opponent. </p>
+<p>Our interactive board will need a way to record the moves which have been made.<br />
+This is obviously proximity / touch input, and we have a few ways to go about it.</p>
+<p>We could use an infrared proximity sensor,  which would suffice for detecting which of the board squares a pawn had moved too.</p>
+<p>At that point, if we need a touch sensor, we might as well skimp on money by avoiding the <code class="codehilite">*insert sarcastic tone*</code>  hugely expensive IR sensors and instead using step/capacitive sensors.</p>
+<p>This will also add continuity from my work in 2016. </p>
+<p>We can guarantee that a movement is unique in each case by &lsquo;lift to placement&rsquo; combos.<br />
+What I mean by that is, every time we move a pawn from A to B, we get a lifting response at A and a placing one at B, if we record both,  we can ensure uniqueness of moves, as well as finding illegal moves.</p>
+<p>To note, with this method, pawns don&rsquo;t have unique identifiers, so it can be played with anything
+that triggers the sensors. </p>
+<p>In contrast to, for example, if I created &ldquo;smart pawns&rdquo; which used <a href="https://en.wikipedia.org/wiki/Radio-frequency_identification">RFID</a>, which should be possible according to <a href="https://hackaday.com/2018/01/05/attiny-chip-abused-in-rfid-application/">this blog post</a>, but is too much of a hassle.</p>
+<p>Now the question is, how do we go about creating a step-response sensor.</p>
+<h3 id="background-research">Background Research<a class="headerlink" href="#background-research" title="Permanent link">&para;</a></h3>
+<p>First things first lets find who has done something like this in the past.<br />
+I start my search from the obvious place, the &lsquo;step response&rsquo;  section of the <a href="http://academy.cba.mit.edu/classes/input_devices/index.html">Input Devices</a> week.</p>
+<p>Here we find two interesting links: </p>
+<p><em>-&gt;</em> <a href="http://fab.cba.mit.edu/classes/863.10/people/matt.blackshaw/week8.html">Matt Blackshaw - Week 8: Input Devices -Touchpad</a></p>
+<p><em>-&gt;</em><a href="http://fab.cba.mit.edu/classes/863.11/people/matthew.keeter/multitouch/index.html">Matt Keeter - Capacitive Multitouch</a></p>
+<p>Both these guys have an array of capacitive sensors.</p>
+<p>Two things to note:</p>
+<ol>
+<li>These guys cover a small, but detailed, surface area</li>
+<li>They want stand alone, I want something that I can use for the networking week :)</li>
+</ol>
+<p>They both seem highly inspired by Neil&rsquo;s step-response board, fair enough.</p>
+<p>I stumbled across this as well when I searched &lsquo;step response sensor attiny&rsquo; on google:</p>
+<p><em>-&gt;</em> <a href="http://fabacademy.org/archives/2014/students/harris.adam/week10.html">Adam Harris - 2014: Input Devices</a></p>
+<p>He has this redesigned version of Neil&rsquo;s board connected to a cool looking antenna</p>
+<h3 id="my-approach">My approach<a class="headerlink" href="#my-approach" title="Permanent link">&para;</a></h3>
+<p>As I pointed out in the notes I made above, the surface areas of the above examples are  somewhat small.<br />
+Additionally they aren&rsquo;t very serviceable, if a single pad is damaged the whole lot is to throw.</p>
+<p>When the surface area is tiny that&rsquo;s fine, but in my case it be best to have interchangeable plates. </p>
+<p>This may seem like a dumb problem to address, but having witnessed what skin oil from handling and 3 years can do to a fabISP (aka break it) it&rsquo;s actually a concern for me.</p>
+<div class="admonition note">
+<p class="admonition-title">Protecting Bare PCBs</p>
+<p>Copper will naturally oxidise and erode over time, particularly if there are traces of oils from your hands when handling the board.<br />
+There are a few ways we  can protect the boards from this:  </p>
+<p>The first obvious choice is using a <a href="https://www.youtube.com/watch?v=wvU2yyfH-XE">PCB mask</a>, but it&rsquo;s too much of a bother to deal with it.</p>
+<p>The second is to coating the PCB with <code class="codehilite">plain old nail polish</code>, like seen <a href="https://www.youtube.com/watch?v=h8ycmroFQSs">here</a>, which can also make the PCB waterproof-ish (all 3 methods shown in the video would work too, but the last two are overkill).</p>
+<p>It&rsquo;s not clear, however, how nail polish will react with bare copper, I&rsquo;ve done my trails and nothing broke so far, but I remain skeptical.</p>
+</div>
+<p>I need <code class="codehilite">9</code> points of resolution <code class="codehilite">(3x3)</code>, we could connect each pad up to an IO pin, that would take <code class="codehilite">9</code> digital IO pins.
+Alternatively using multiplexing to address the pads in (row, column) combinations. 
+That would take up 6 digital IO pins, I&rsquo;m not sure if 3 extra pins are vital, but there is no need to waste pins.</p>
+<p>In either case, the <code class="codehilite">attiny45</code> is too small, so it&rsquo;s going to have to be the <code class="codehilite">attiny44</code>.</p>
+<p>Originally I thought a single AVR with multiplexing would be the best way forwards.<br />
+However, with further inspection, it&rsquo;s fairly hard to get this right.</p>
+<p>Blackshaw does it by overlapping copper cut-outs made with the vinyl cutter, and his pads are cut diagonally.<br />
+Keeter does it with through whole connections and <code class="codehilite">0 Ohms</code> resistors, and uses diodes to prevent leaking of capacitance.</p>
+<p>Keeter&rsquo;s solution is great, but afraid it will require some dark magic to get it work (aka it&rsquo;s beyond my knowledge).</p>
+<p>What I will do instead, is that each pad will share a send pin, and each pad will have it&rsquo;s own output pin. </p>
+<p>This consume a total of <code class="codehilite">10</code> IO pins which leaves us with a <code class="codehilite">2</code> free IO pins! </p>
+<p>Fortunately we only need <code class="codehilite">1</code> pin for <code class="codehilite">FTDI</code> communication (sending), and for programing the board  we can share the programming pins.</p>
+<h3 id="sensor-pad-design">Sensor Pad - Design<a class="headerlink" href="#sensor-pad-design" title="Permanent link">&para;</a></h3>
+<p>The copper pad/plates which will act as sensors are more aesthetics then electronics.</p>
+<p>Not sure if there is an easy way to design this kind of design in KiCad, but I will do in in Inkscape, since that will be faster then me learning how to do so.</p>
+<div class="admonition note">
+<p class="admonition-title">Pad Design</p>
+<p>I&rsquo;m well aware that because we&rsquo;re dealing with copper, we can&rsquo;t really have the &lsquo;black/white&rsquo; as we do with a normal chess board. 
+However we can etch some interesting pattern to make a distinction.<br />
+My choice for is 黒 - kuro,  the Japanese character for &lsquo;black&rsquo;. </p>
+</div>
+<p>Here is how it will look.
+<div class=image_card markdown="1"></p>
+<h3>Color - Inkscape</h3>
+
+<p><img alt="Color" src="../../images/week11/pads-inkscape.jpg" /></p>
+<h3>Traces - Black</h3>
+
+<p><img alt="Traces Black" src="../../images/week11/pad-traces-black.jpg" /></p>
+<h3>Traces - White</h3>
+
+<p><img alt="Traces White" src="../../images/week11/pads-traces-white.png" /></p>
+<h3>Cutout</h3>
+
+<p><img alt="Cutout" src="../../images/week11/pads-cutout.png" />
+</div></p>
+<p>The size of the pad is <code class="codehilite">1.75 inches</code>, about <code class="codehilite">4.5 cm</code> which is the standard size for chess squares.  </p>
+<p>I know these design dimensions through Inkscape, and they are 1:1 with fabmodules.  </p>
+<p>The holes in the design are <code class="codehilite">1/32 inches</code> which I round up to <code class="codehilite">0.035 in</code> because thats the size of the cut-out bit plus as small offset.</p>
+<p>Let&rsquo;s cut one out and see how it will look.</p>
+<div class="admonition danger">
+<p class="admonition-title">Design Mistake</p>
+<p>In my original design, the solder pad has a glaring fault, it&rsquo;s detached from the main copper body!<br />
+By the time I realized I had milled out most copper pads and re-cutting everything would have been a waste, since it can be fixed with some solder.<br />
+The inkscape file corrects this mistake, the images above show what I used.</p>
+</div>
+<h4 id="inkscape-export-settings">Inkscape Export Settings<a class="headerlink" href="#inkscape-export-settings" title="Permanent link">&para;</a></h4>
+<p>A very import note to make, after several failed attempts at trying to drill small holes, I discovered that hte DPI of image you give to the fab modules actually matters. </p>
+<p>From testing <code class="codehilite">475</code> dpi is a good number.</p>
+<div class="image_card">
+<p><img alt="Export Settings" src="../../images/week11/pads-inkscape-export.jpg" /></p>
+</div>
+<h4 id="sensor-pad-cutting">Sensor Pad - Cutting<a class="headerlink" href="#sensor-pad-cutting" title="Permanent link">&para;</a></h4>
+<p>First thing do do is get the <code class="codehilite">.gcode</code> files using the fab modules, in this case we can just load the <code class="codehilite">.png</code> files we just exported from Inkscape.</p>
+<div class="admonition quote">
+<p class="admonition-title">Using Mods Mantra</p>
+<p>Positive is to keep.
+Negative is to remove.</p>
+</div>
+<p>The settings used for the mods follow from <code class="codehilite">week 5</code>.
+<div class=image_card markdown="1"></p>
+<h3>Traces</h3>
+
+<p><img alt="Mods Traces" src="../../images/week11/pads-mods-traces.jpg" /></p>
+<h3> Cutout </h3>
+
+<p><img alt="Mods Cutout" src="../../images/week11/pads-mods-cutout.jpg" />
+</div></p>
+<p>Yes here I&rsquo;m using the <code class="codehilite">1mm</code> milling bit for both jobs.
+This doesn&rsquo;t match the <code class="codehilite">0.8mm</code> hole, or the typical trace dimensions.</p>
+<p>I don&rsquo;t really care for detail on these, just fast production.</p>
+<p>Then we can go to our trusted <code class="codehilite">3018</code> &amp;<code class="codehilite">bCNC</code> combo to get the pads cut out.</p>
+<div class="image_card">
+<p><img alt="Cutout" src="../../images/week11/cut-pads.jpg" /></p>
+</div>
+<p>This isn&rsquo;t actually the final design of the pads, but a prototype, as can be seen by the connected, and squared, pad.</p>
+<p>The photo below was my favourite though, you&rsquo;ll see me use this sensor in this tutorial (didn&rsquo;t want to ruin the nice ones for testing), 
+while the above design and milling settings are for the final versions of the pads, which  will go in the final project.</p>
+<p>In the image it might appear that the lower left side of the edge of the board, and the character, are not fully milled out,
+in fact, the light coloration is caused by some left over pcb material, which I wasn&rsquo;t able to remove with the use of soap, 
+if you zoom into the picture you will clearly see the step near the edge of the cut.</p>
+<p>This material was later removed using a precision knife very easily, but a second photo was not taken.</p>
+<p>Un-milled traces on my particular PCB look dark and shiny.</p>
+<div class="image_card">
+<p><img alt="Cutout Finish" src="../../images/week11/cut-pads-finish.jpg" /></p>
+</div>
+<h3 id="use-an-avr-make-it-sense-capacitance">Use An AVR &amp; Make It Sense Capacitance<a class="headerlink" href="#use-an-avr-make-it-sense-capacitance" title="Permanent link">&para;</a></h3>
+<p>To make things nice and easy our first step is get our knowledge up to speed.</p>
+<p><em>Q1</em> What AVR to use? </p>
+<p><em>A1</em> We established in <code class="codehilite">my approach</code> that I will use the<code class="codehilite">attiny44</code></p>
+<p><em>Q2</em> Can the input pins be digital, or must they be analog? </p>
+<p>The fastest way to answer the last question is to look at example code.  </p>
+<p><em>Q3</em> This begs the question, how will we do the programming?</p>
+<p><em>A3</em> Neil offers a <code class="codehilite">c</code> code for this task, but I think I&rsquo;ll go down the easy path this time around. </p>
+<p>A simple google search &ldquo;Capacitive sensor Arduino&rdquo; will yield 1,830,000 results,
+the first of which, for me, is: <a href="https://playground.arduino.cc/Main/CapacitiveSensor/">Capacitive Sensing Library</a></p>
+<p>This is our starting point, we got to read through that before we can go ahead. </p>
+<p>Important notes made during read:</p>
+<ul>
+<li><code class="codehilite">100 kilohm - 50 megohm</code> resistor between the send pin and the sensor pin.</li>
+<li>For many applications, a more useful range of values is obtained if the sensor is covered with paper, plastic, or another insulating material, so that users do not actually touch the metal foil.</li>
+<li>A small capacitor (<code class="codehilite">100 pF</code>) or so from sensor pin to ground improves stability and repeatability.</li>
+<li>A small capacitor (<code class="codehilite">20</code> - <code class="codehilite">400 pF</code>) in parallel with the body capacitance, is highly desirable too, as it stabilizes the sensed readings.</li>
+<li>Grounding: run a foil ground plane under the sensor foil (insulated by plastic, paper, etc.), and connected by a wire to ground. This worked really well to stabilize sensor values and also seemed to dramatically increase sensor sensitivity.</li>
+</ul>
+<p>Guidelines:</p>
+<ul>
+<li>1 megohm resistor (or less maybe) for absolute touch to activate.</li>
+<li>If the sensor is exposed metal, it is possible that the send pin will never be able to force a change in the receive (sensor) pin, and the sensor will timeout.</li>
+<li>Also experiment with small capacitors (<code class="codehilite">100 pF</code>- <code class="codehilite">.01 uF</code>) to ground, on the sense pin. They improve stability of the sensor.</li>
+</ul>
+<p><em>A2</em> There is nothing in the documentation or the example programs suggest digital pins are a problem.</p>
+<p>Cool Demo Video : <a href="https://www.youtube.com/watch?v=BHQPqQ_5ulc">CapacitiveSensor Arduino Library, Demo on Teensy 2.0</a></p>
+<p>This board should be fairly straight forward.</p>
+<h3 id="pcb-design-in-kicad">PCB Design in KiCad<a class="headerlink" href="#pcb-design-in-kicad" title="Permanent link">&para;</a></h3>
+<p>I&rsquo;ve never tried KiCad at this point, but Eagle is distant enough in my past to justify trying a different tool.</p>
+<p>Using the rough sketch found on the <a href="https://playground.arduino.cc/Main/CapacitiveSensor/">arduino documentation</a>, we create the following board design:</p>
+<div class="image_card_wide">
+<p><img alt="Schematic" src="../../images/week11/schematic.png" /></p>
+</div>
+<p>Here we can see the set of required <code class="codehilite">1M</code> resistors between the sender pin and sensor pins, as well as the suggested<code class="codehilite">100pF</code> capacitors between the sensor pin and <code class="codehilite">GND</code>.</p>
+<div class="image_card_wide">
+<p><img alt="Routing" src="../../images/week11/routing.png" /></p>
+</div>
+<p>When it came to routing, I had to give up on the capacitors because routing had become impossible.</p>
+<p>Did I try for many hours? Yes.<br />
+Could I have done it had I been a better PCB designer? Maybe.  </p>
+<p>In practice this will mean &ldquo;less stable sensors&rdquo;, not sure what that exactly entails, I guess we will find out (or hopefully not!).</p>
+<p>One aspect to note about my PCB design is the use of <code class="codehilite">0805</code> components (capacitors and resistors), 
+which aren&rsquo;t part of the FabAcademy inventory, but where the only one I could get an assortment of.</p>
+<p>The inventory standard is <code class="codehilite">1206</code>, which is a little larger.
+The only difference between the two is difficulty in soldering and thermals,  neither of these should prove to be an issue though.</p>
+<p>When we export the design files for millings, usually it picks up things like holes in the THT components.
+Since the output files are <code class="codehilite">.svg</code>, I normally open them in Inkscape to see if there are any unwanted artifacts, such as these.</p>
+<h3 id="milling">Milling<a class="headerlink" href="#milling" title="Permanent link">&para;</a></h3>
+<p>We can load the <code class="codehilite">svg</code> file into the <code class="codehilite">mods</code>, and connect the <code class="codehilite">svg</code> component (detaching the <code class="codehilite">png</code> one). </p>
+<p>Setting as follows:</p>
+<div class="image_card">
+<p><img alt="Board Milling" src="../../images/week11/board-milling.png" /></p>
+<p><img alt="Board CNC Setup" src="../../images/week11/board-mill-setup.png" /></p>
+</div>
+<p>Then we can run the job on bCNC</p>
+<div class="image_card_wide">
+<p><img alt="bCNC" src="../../images/week11/bcnc.jpg" /></p>
+<p><img alt="Job Running" src="../../images/week11/board-running.jpg" /></p>
+</div>
+<p>For the cutouts the settings are the same as for the pads, except the tool diameter is <code class="codehilite">0.8</code>.</p>
+<h3 id="stuffing">Stuffing<a class="headerlink" href="#stuffing" title="Permanent link">&para;</a></h3>
+<p>Stuffing was quite challenging, it was my first time using <code class="codehilite">0805</code> parts, and that proved smaller then expected.</p>
+<p>All in all I regret not having done more passes (say 2), making the tracks larger.</p>
+<p>However, with some effort, it worked out.</p>
+<div class="image_card_wide">
+<p><img alt="Board" src="../../images/week11/board-final.jpg" /></p>
+</div>
+<h3 id="programming_1">Programming<a class="headerlink" href="#programming_1" title="Permanent link">&para;</a></h3>
+<p>For the programming, the first thing we do is import the right capacitive sensor library.</p>
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;CapacitiveSensor.h&gt;</span><span class="cp"></span>
+</pre></div>
+
+<p>Set up the sender and sensor pin (correctly! see <code class="codehilite">pins &amp; anti-pins</code>)</p>
+<div class="codehilite"><pre><span></span><span class="n">CapacitiveSensor</span> <span class="nf">capOne</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">);</span> <span class="c1">// 8 is sender, 9 is sensor</span>
+</pre></div>
+
+<p>Setup serial communication (in my case done through the arduino)</p>
+<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>The following could have been condensed into only <code class="codehilite">void loop</code> but this will make it easier for read &amp; write using more sensors.
+What it does is write to serial the value of the readings performed by <code class="codehilite">cap.capacitiveSensor(30)</code>.</p>
+<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">check_state</span><span class="p">(</span><span class="n">CapacitiveSensor</span> <span class="o">&amp;</span><span class="n">cap</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">float</span> <span class="n">read_val</span> <span class="o">=</span> <span class="n">cap</span><span class="p">.</span><span class="n">capacitiveSensor</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">read_val</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">check_state</span><span class="p">(</span><span class="n">capOne</span><span class="p">);</span> 
+  <span class="n">mySerial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">delay</span> <span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<h4 id="arduino-as-a-programmer-cant-read-serial">Arduino As A Programmer Can&rsquo;t Read Serial<a class="headerlink" href="#arduino-as-a-programmer-cant-read-serial" title="Permanent link">&para;</a></h4>
+<p><em>IF</em> you try to connect the serial pins to an Arduino with a ArduinoISP program loaded on it, 
+the <code class="codehilite">Tx</code> &amp; <code class="codehilite">Rx</code> pins won&rsquo;t plot to <code class="codehilite">serial monitor</code> as they normally would.</p>
+<p>To solve this issue, either connect to an alternative serial reader (like an FTDI cable) or load onto the Arduino something like <code class="codehilite">BareMinimum</code> under:</p>
+<ul>
+<li><code class="codehilite">File</code> <em>-&gt;</em> <code class="codehilite">Examples</code> <em>-&gt;</em> <code class="codehilite">01.Basics</code> <em>-&gt;</em> <code class="codehilite">BareMinimum</code></li>
+</ul>
+<p>This will free the <code class="codehilite">Rx</code> &amp; <code class="codehilite">Tx</code> pins (don&rsquo;t forget to detach the capacitor you inserted between <code class="codehilite">RST</code> &amp; <code class="codehilite">GND</code> when you were programming the board)</p>
+<p>The numbers should now plot onto the <code class="codehilite">serial monitor</code> as expected.</p>
+<p>.... It sure is a headache, I get now why we use the FabISP.</p>
+<h4 id="pins-anti-pins">Pins &amp; Anti-pins<a class="headerlink" href="#pins-anti-pins" title="Permanent link">&para;</a></h4>
+<p>Initially, and somewhat foolishly, I thought I could upload this code &ldquo;as is&rdquo; to the board and have ZeroProblems&trade;.
+This wasn&rsquo;t the case. The basic code was correct, but the pin numbers were totally wrong! </p>
+<p>It took me a while to figure this out by the way, the damn thing was uploading without a problem, yet the capacitative sensor was, well, not sensing. </p>
+<p>As, I sat there crying for my incompetence in creating circuits, I was playing with the pin headers, moving them around in desperation and BOOM numbers appear.</p>
+<p><center> What? </center></p>
+<h5 id="the-arduino-pinout">The Arduino Pinout<a class="headerlink" href="#the-arduino-pinout" title="Permanent link">&para;</a></h5>
+<p>We are all told from a young age &ldquo;Arduino IDE pins match to the Arduino header labels, not the AVR on it&rdquo;</p>
+<p>Okay, cool, so if I have a LED connected to the <strong>Arduino pin header</strong> (not the ATTiny) <code class="codehilite">4</code>, and I edit the <code class="codehilite">Blink program</code> from:</p>
+<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// initialize digital pin LED_BUILTIN as an output.</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>to </p>
+<div class="codehilite"><pre><span></span><span class="n">led</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="kt">void</span> <span class="n">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">led</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>I expect the led to turn on. Now, I <em>assumed</em> this would be the case, I didn&rsquo;t actually take out a LED to check if this is the case, but it worked with the hello echo.</p>
+<p>We can confirm and backtrack this assumption by look at the <code class="codehilite">DIP-28 package ATmega8/48/88/168/328</code> pinout <em>-&gt;</em> <a href="https://github.com/MCUdude/MiniCore#pinout">Minicore</a> to tell me that.</p>
+<p>We can notice that Arduino pins <code class="codehilite">13, 12, 11, 10</code> match our programming wiring with <code class="codehilite">SCK MISO MOSI SS</code> and are mapped to IC pins <code class="codehilite">19 18 17 16</code>, 
+so we can assume this mapping is correct, since we have been able to program the board.</p>
+<p>So, in the above example code, pin <code class="codehilite">4</code> is actually IC pin <code class="codehilite">6</code>.</p>
+<h5 id="the-attiny44-pinout">The ATTiny44 Pinout<a class="headerlink" href="#the-attiny44-pinout" title="Permanent link">&para;</a></h5>
+<p>Using the reverse process, and a similar pinout diagram: </p>
+<div class="image_card_wide">
+<p><img alt="Pinout" src="https://camo.githubusercontent.com/d46f3f004aaf977040d933ae5eaf25d22d33eac1/687474703a2f2f6472617a7a792e636f6d2f652f696d672f50696e6f7574543834612e6a7067" /></p>
+<p>External link because image is too large, but compressing looses too much detail.
+Source, <a href="https://github.com/SpenceKonde/ATTinyCore#attiny-244484">ATTinyCore</a></p>
+</div>
+<p>I can deduce that IC pin <code class="codehilite">2</code>, which is my sender pin, is actually Arduino IDE pin <code class="codehilite">0</code> (or <code class="codehilite">10</code>), which is the value I should set in the program.</p>
+<p>However, looking at the actual pins that turn on, it turns out I had to look at <code class="codehilite">PCINT</code> not <code class="codehilite">Arduino pin</code>, which means the programming value should be <code class="codehilite">8</code> instead of <code class="codehilite">0</code> !</p>
+<div class="image_card">
+<p><img alt="confused" src="../../images/week11/confused.jpg" /></p>
+</div>
+<p>This was never an issue with the hello echo board because Arduino pins and <code class="codehilite">PCINT</code> match!</p>
+<p>I&rsquo;m not gonna lie, I&rsquo;ve no idea why this is the case, but I just accepted as fact by now.</p>
+<h4 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h4>
+<p>We can fix the pin-numbers in the otherwise correct code, and with that we close another chapter and my input device intakes.</p>
+<p>(Code in <code class="codehilite">porgramming</code> section is correct)</p>
+<div class="image_card">
+<p><h3>Hero</h3>
+  <video width="auto" height="auto" autoplay loop>
+    <source src="../../images/week11/hero-vid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video></p>
+</div>
+<h2 id="download-the-files">Download The Files<a class="headerlink" href="#download-the-files" title="Permanent link">&para;</a></h2>
+<p><em>-&gt;</em> <a href="../../files/week11/pads.zip" download> Download The Inkscape Pads Design File</a><br>
+<em>-&gt;</em> <a href="../../files/week20/kicad.zip" download> KiCad Design Files (Also Contains Design Files For TFT Board - week12)</a><br>
+<em>-&gt;</em> <a href="../../files/week11/cap_over_serial_v1.zip" download> Cap Over Serial <code class="codehilite">.ino</code> Code </a><br></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../week10/" title="10 - Moulding and Casting" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                10 - Moulding and Casting
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../week12/" title="12 - Output Devices" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                12 - Output Devices
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Creative Commons Attribution Non Commercial
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/academany" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/fabacademany" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/academany" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://instagram.com/fabacademany" class="md-footer-social__link fa fa-instagram"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

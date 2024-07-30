@@ -1,0 +1,86 @@
+Title: Week_15
+
+URL Source: http://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/Week15.html
+
+Markdown Content:
+Assignment 15                                                                        2.5.2018  
+
+------------------------------------------------------------------------------------------------
+
+Topic: Mechanical design
+------------------------
+
+Goals of this week:  
+
+*   Design a machine that includes mechanism+actuation+automation (Group) ([LINK](http://fab.academany.org/2018/labs/fablaboulu/machine_week_group2.html))  
+    
+*   Build the passive parts and operate it manually (Group) ([LINK](http://fab.academany.org/2018/labs/fablaboulu/machine_week_group2.html))
+*   Document the group project and your individual contribution (Group) ([LINK](http://fab.academany.org/2018/labs/fablaboulu/machine_week_group2.html))
+
+There were no individual assignments for this week so here you can find my individual contribution for this week´s machine project  
+
+Brainstorming the idea
+----------------------
+
+Our lab divided into two groups. Our group decided to create automatic apple peeling device. Before going any further, we researched more  
+about the device. I found following examples:  
+![Image 1: apples](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/Apples.jpg)When we had more information about the possibilities, we had a brainstorming session for machine designing:  
+![Image 2: Selvittelyä](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/Selvittely%C3%A4.jpg)
+
+First, we visualized how the machine could work:  
+![Image 3: How](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/How.jpg)
+
+Then we imagined the apple peeling procedure from the start to finish:  
+![Image 4: Model](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/Model.jpg)
+
+According to our findings, I created two sketches about our machine:  
+![Image 5: image1](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/image1.jpg)
+
+![Image 6: image2](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/image2.jpg)
+
+After this sketching session, we divided responsibility and began to create the machine.
+
+Creating a dish
+---------------
+
+When the machine peels the apple, apple peels drop on the top of the machine. To protect the machine from the peels, I decided to create  
+a simple waterproof dish. First I tried to create the dish from a yellow 3mm vinyl plate:  
+![Image 7: plastic](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/Plastic.jpg)However, it was difficult to glue the pieces together so I decided to do same design with an mdf-pieces and cover them with an epoxy layer.  
+First I printed the pieces and glued them together with a paper glue:  
+![Image 8: Mdf](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/Mdf.jpg)
+
+Then I mixed an epoxy liquid and covered the glued piece with it:  
+![Image 9: Epox](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/Epox.jpg)
+
+Next morning, epox had dried out and the dish was ready to be used:  
+![Image 10: Dishfinal ](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/Dish.jpg)
+
+Building a base for a stepper motor
+-----------------------------------
+
+I built a durable container for a stepper motor inside of a cardboard box. First I used super strong tape to attach the motor to box. Then  
+I created cardboard dividers and attached them to box. Finally, I filled all empty spots with a wool and covered the box with a masking tape.  
+The box was now ready to be used:  
+![Image 11: Boxi](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/boxi.jpg)  
+
+Creating a pitchfork
+--------------------
+
+Next, I began to create a pitchfork which is used to pierce an apple. To do this, I acquired a sausage stick and measured its width with  
+a micrometer screw:  
+![Image 12: Atrain](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/Atrain.jpg)Next, our team 3D printed a clutch according to width measurements which we got from the sausage stick and the stepper motor. When the clutch  
+was ready, I cut the sausage stick with an iron saw and attached the piece to the clutch. To tight the bond between the pieces, I used a piece of  
+wool to wedge the pieces together.  
+![Image 13: Tiukka](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/Tiukka.jpg)
+
+![Image 14: Team2](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week15-MechanicalDesign/Team2.jpg)
+
+FILES made THIS WEEK
+--------------------
+
+*   [Dish pdf. file](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/Files/Week15/Dish.pdf)  
+    
+
+  
+[![Image 15: Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)  
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).

@@ -1,0 +1,162 @@
+Title: Nikki Stancampiano - Fab Academy
+
+URL Source: http://fabacademy.org/2023/labs/vancouver/students/nicole-stancampiano/assignments/week14.html
+
+Markdown Content:
+Week 14. Interface and application programming
+----------------------------------------------
+
+Group Assignment
+----------------
+
+Here is our group assignment on Kelleigh's page:
+
+[Group Assignment](https://fabacademy.org/2023/labs/vancouver/students/kelleigh-huey/assignments/week14.html)
+
+Individual Assignment
+---------------------
+
+1.  #### Understand the Microcontroller Unit (MCU):
+    
+    An MCU is an intelligent semiconductor IC that consists of a processor unit, memory modules, communication interfaces, and peripherals. It is like a small computer that can be used in various applications.
+2.  #### Set up the Development Environment:
+    
+    Install the necessary software to program the MCU. For the Seeed Studio Pico board, you can use the Arduino IDE or the Seeed Studio's own development platform, depending on the specific MCU used in your board. I am using the Arduino app.
+3.  #### Write the Application:
+    
+    Write a program to control the LED light. For example, you can make the LED light up when the button is pressed. Here is the code that I used to make the LED light up when I pressed the button:
+
+            ```
+
+              const int ledPin1 = 0;
+              int ledState = LOW;
+              int buttonState = 0;
+              
+              void setup() {
+                pinMode(ledPin1, OUTPUT);
+                Serial.begin(9600);
+                Serial.println("Arduino is ready");
+              }
+              
+              void loop() {
+                if (Serial.available() > 0) {
+                  char command = Serial.read();
+                  Serial.print("Received command: ");
+                  Serial.println(command);
+                  
+                  if (command == 'H') {
+                    ledState = !ledState;  // Toggle LED state
+                    digitalWrite(ledPin1, ledState);
+                  }
+                }
+              }
+              
+              
+              void flashLED() {
+                Serial.println("Flashing LED");
+                digitalWrite(ledPin1, HIGH);
+                delay(500);
+                digitalWrite(ledPin1, LOW);
+                delay(500);
+                digitalWrite(ledPin1, HIGH);
+                delay(500);
+                digitalWrite(ledPin1, LOW);
+                delay(500);
+                digitalWrite(ledPin1, HIGH);
+                delay(2000);
+                digitalWrite(ledPin1, LOW);
+                delay(1000);
+              }              
+            
+```
+          
+
+5.  #### Implement a Graphical User Interface (GUI):
+    
+    I chose to use the app, “Processing.” Processing is a simple programming environment designed to facilitate the development of visually oriented applications, with a focus on animation and visual arts. It was initially created as a domain-specific extension to Java, targeted towards artists and designers, and has since evolved into a versatile design and prototyping tool used for large-scale motion graphics and complex data visualization. Processing is based on Java, but its program elements are fairly simple, making it accessible even to those unfamiliar with Java. The environment transparently handles various scenarios, such as file management, and allows for the bundling of sketches as standalone applications for different operating systems. Overall, Processing provides a user-friendly platform for creating visual applications and is particularly well-suited for individuals with limited programming experience. You can download the app [here](https://processing.org/download).
+6.  #### Adapt code to control MCU:
+    
+    I modified this code so that when I clicked a button with my mouse it would turn on the LED, and when I clicked it again it would turn off. Here is my updated code:
+
+            ```
+
+              import processing.serial.*;
+
+Serial port;
+Button b;
+
+void setup() {
+  size(200, 100);
+  // Modify the port name based on your system (check in Arduino IDE)
+  port = new Serial(this, "/dev/cu.usbmodem14101", 9600);
+  
+  // Create a button
+  b = new Button(width/2 - 50, height/2 - 25, 100, 50, "Toggle LED");
+}
+
+void draw() {
+  // Nothing to draw here
+}
+
+void mousePressed() {
+  // Check if the mouse is pressed over the button
+  b.clicked();
+}
+
+class Button {
+  float x, y, w, h;
+  String label;
+  
+  Button(float x, float y, float w, float h, String label) {
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+    this.label = label;
+    drawButton();
+  }
+  
+  void drawButton() {
+    rect(x, y, w, h);
+    fill(255);
+    textAlign(CENTER, CENTER);
+    text(label, x + w/2, y + h/2);
+  }
+  
+void clicked() {
+  println("Button Clicked");
+  if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
+    if (port != null) {
+      port.write('H');  // Send 'H' to Arduino
+      println("Sent command 'H' to Arduino");
+    }
+  }
+}
+
+}
+
+            
+```
+          
+
+Note: I ran into some trouble here because I was not using the correct port. This code (below) allowed me to see all the ports available and I verified it was the correct port by checking the arduino port.
+
+        ```
+
+          import processing.serial.*;
+
+          // The serial port
+          Serial myPort;
+
+          // List all the available serial ports
+          printArray(Serial.list()); 
+
+        
+```
+      
+
+10.  #### Run the Code:
+    
+    Finally, you can see my working application here:
+
+ Your browser does not support the video tag.

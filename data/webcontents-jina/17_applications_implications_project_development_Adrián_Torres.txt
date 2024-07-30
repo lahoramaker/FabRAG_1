@@ -1,0 +1,140 @@
+Title: Week 10. Applications and Implications
+
+URL Source: http://fabacademy.org/2020/labs/leon/students/adrian-torres/week10.html
+
+Markdown Content:
+This week is an individual work only. Propose a final project masterpiece that integrates the range of units covered. Your project should incorporate:
+
+*   2D and 3D design. ✔
+*   Additive and subtractive fabrication processes. ✔
+*   Electronics design and production. ✔
+*   Microcontroller interfacing and programming. ✔
+*   System integration and packaging. ✔
+
+Have you answered these questions?
+
+*   What will it do? ✔
+*   Who has done what beforehand? ✔
+*   What will you design? ✔
+*   What materials and components will be used? ✔
+*   Where will they come from? ✔
+*   How much will they cost? ✔
+*   What parts and systems will be made? ✔
+*   What processes will be used? ✔
+*   What questions need to be answered? ✔
+*   How will it be evaluated? ✔
+
+The answers to the questions above will allow you to create your BOM (Bill Of Materials). ✔
+
+Like every week, my weekly schedule. 😊
+
+![Image 1](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week10/week10.01.jpg)
+
+_This week is a bit of a break, I need to rest my mind. We have been working on making protective screens for the COVID-19 and it exhausts everything at once. Also enough videoconferences, if the confinement time was to be calm at home, in my case it has not been._ 🙏😇
+
+What will it do?
+----------------
+
+My **Fab Train Model** is the construction of a modular model using the different **digital fabrication tools.** With this mode of construction the model can be replicated much easier, making it **light.**
+
+In addition, with the manufacture of **modular electronics,** different model processes can be automated. In my case I will use it to detect the train and close / open a **level crossing.** But train detection can be used to manage a **station**, that is, be able to make itineraries to park a train at the station and move the [**railroad switches.**](https://en.wikipedia.org/wiki/Railroad_switch)
+
+It can also serve to make [**track circuits**](https://en.wikipedia.org/wiki/Track_circuit) of trains, as an [Automatic Train Protection security system,](https://en.wikipedia.org/wiki/Automatic_train_protection) which when you detect a train on one section of track until it is free, the next cannot enter.
+
+My idea of the Fab Train Model is to be able to use it apart from the modular **model exhibitions,** it is to use it as a **training element.** In my [**Adif**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/www.adif.es) company, simulators are used as training tools, but why not use a model to explain the operation of a level crossing.
+
+The Fab Train Model could also be used to explain to **children** how a level crossing works and its dangers.
+
+Recently in [Maquetren's](https://maquetren.net/) post, Japanese model maker [**KATO**](https://www.katomodels.com/) wants to apply **STEAM** to model. For this they want children and young people to get involved in the miniature train. For this, for example, during the process of placing the vegetation on the model, the different types of vegetation or trees that exist are shown. Or by means of mathematics or physics, the maximum ramps that a train can circulate or the arrangement of the elements in a model for photography are studied.
+
+The aim is for children to learn different applications of **S**cience, **T**echnology, **E**ngineering, **A**rt or **M**athematics through **_playing_** with the **train.**
+
+Who has done what beforehand?
+-----------------------------
+
+Actually at the Fab Academy there is no project on train model. I have been inspired by my association where we use the Maquetren regulations. With this regulation, the idea is to be able to build a model with standardized profiles to be able to connect with other colleagues and build a larger model. My evolution from 2002 to 2019 😂
+
+You can find the Maquetren regulations [here.](http://maquetren.net/wp-content/uploads/2019/04/Modulos-Maquetren-H0-via-unica-recto-MQ40.pdf)
+
+![Image 2](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/about/maq1.jpg)
+
+What will you design?
+---------------------
+
+My idea is to design almost all the parts of the model except for the structure, which I cut manually either with a jigsaw or I cut with the CNC. I will design the electronic boards, the level crossing barriers and the model landscape.
+
+What materials and components will be used?
+-------------------------------------------
+
+To create the **landscape** and the **structure:**
+
+*   Polystyrene.
+*   Fabric or linen.
+*   Composite resin.
+*   10 mm plywood.
+
+For barriers:
+
+*   PLA filament.
+
+For **decoration:**
+
+*   Flexible track.
+*   Herbs for the landscape.
+*   Sandpaper for the road.
+*   White glue.
+
+For **electronics:**
+
+*   3 Phototransistors or time of flight sensor VL53LOX.
+*   2 servos.
+*   4 LEDs SMD 1608.
+*   9V Power Supply or external power supply by Powerbank.
+*   1 ATtiny3216.
+*   1 ATtiny412.
+*   Several pin headers.
+
+Where will they come from?
+--------------------------
+
+The landscape and structure materials would come from local suppliers; the PLA filament from Prusament; the decoration from [**El Taller del Modelista**](https://www.eltallerdelmodelista.com/es/) and the electronic items from Digikey and Amazon.
+
+How much will they cost?
+------------------------
+
+<table><tbody><tr><td></td><td>Units</td><td>Unit price</td><td>Total price</td></tr><tr><td>Polystyrene.( 1200 x 600 x 40 mm)</td><td>6</td><td>3,00€</td><td>18,00€</td></tr><tr><td>Composite resin</td><td>1</td><td>10,00€</td><td>10,00€</td></tr><tr><td>PLA filament 100gr.</td><td>1</td><td>2,00€</td><td>2,00€</td></tr><tr><td>Flexible track.</td><td>3</td><td>5,20€</td><td>15,60€</td></tr><tr><td>Herbs for the landscape.</td><td>2</td><td>12,30€</td><td>24,60€</td></tr><tr><td>White glue.</td><td>1</td><td>5,00€</td><td>5,00€</td></tr><tr><td>Plywood 10 mm (2440 x 1220mm)</td><td>1</td><td>12,00€</td><td>12,00€</td></tr><tr><td>9V power supply or Powerbank</td><td>1</td><td>5,00€</td><td>5,00€</td></tr><tr><td>Servo motor</td><td>2</td><td>4,00€</td><td>8,00€</td></tr><tr><td>VL53L0X sensor</td><td>3</td><td>2,00€</td><td>6,00€</td></tr><tr><td>Phototransistor</td><td>3</td><td>0,36€</td><td>1,08€</td></tr><tr><td>ATtiny3216</td><td>1</td><td>1,00€</td><td>1,00€</td></tr><tr><td>ATtiny412</td><td>1</td><td>0,45€</td><td>0,45€</td></tr><tr><td>Other consumables (leds, tin, cables...)</td><td>1</td><td>10,00€</td><td>10,00€</td></tr><tr><td></td><td></td><td>Total aprox.</td><td>118,73€</td></tr></tbody></table>
+
+What parts and systems will be made?
+------------------------------------
+
+*   Landscape.  
+*   Barriers and signs of the level crossing.
+*   Electronics.
+
+What processes will be used?
+----------------------------
+
+For the design of the level crossing barriers I have used FreeCAD and 3D printing. Landscape modeling I will use Rhinoceros and Blender to shape it and I will use the CNC and the composite technique. To design and manufacture the electronic boards I will use Eagle and the milling and soldering process. For the programming of the microcontrollers I will use Arduino and Linux. For the decoration I will use paint, herbs ...
+
+What questions need to be answered?
+-----------------------------------
+
+Over the next few weeks I hope to learn more. I want to see how servos work in Outputs Devices week for level crossing barriers. And discover the composites, and see how I adapt them to my final project. Just like in molding and casting week I can make something for the model.
+
+How will it be evaluated?
+-------------------------
+
+As Neil says many times in class, a project is made up of **spiral development.**
+
+*   The **first spiral** is to detect the train with the first sensor, to lower the level crossing barriers, and to turn on the LEDs. When the train finishes passing the level crossing, the barriers are raised.
+*   The **second spiral** is to detect the train whether it comes from the left or the right of the level crossing.
+*   The **third spiral** is that this train detection system can serve to teach me in a panel or an application the location of the train.
+
+All this will be influenced by the evolution of the shutdown by COVID-19. My idea for this week and the break was to use that time to build the model structure.
+
+Random Review. 15/04/2020.
+--------------------------
+
+After having volunteered several times in the reviews, during this week's review I played the Random Generator. From minute 27 you can see and hear me. 😊 The times I volunteer I don't get so nervous. Sorry for my English. 😬
+
+I think Neil has already associated me with Adrian the boy on the trains. 😊 🚄 🚂

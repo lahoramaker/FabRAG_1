@@ -1,0 +1,1362 @@
+Title: Computer-Aided Design
+
+URL Source: http://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/
+
+Published Time: 2021-02-03T00:00:00+00:00
+
+Markdown Content:
+This week we’ve gotten an introduction into computer-aided design. Modelling in both 2D and 3D, preferably parametrically.
+
+Assignments
+-----------
+
+Our task for this week is:
+
+*   Model (raster, vector, 2D, 3D, render, animate, simulate, …) a possible final project, compress your images and videos, and post it on your class page
+
+Hero Shots
+----------
+
+Showing some final renders and animations of my 3D models for the `tl;dr` and hopefully showing you why the rest of this very long blog could be interesting to read (⌐■\_■)
+
+An animation of puzzle pieces falling into my 'puzzle box'
+
+[![Image 1: The rendering result from Fusion 360](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_render_result.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_render_result.jpg)
+
+The rendering result from Fusion 360
+
+2D Modelling
+------------
+
+To model in 2D you can use a raster based program, which makes use of the concept of a rectangular field of pixels and you basically define the color and transparency of each pixel. In an extreme case _pixel art_ is a beautiful example of raster based drawing. Typical programs for raster based drawing are _Adobe Photoshop_, _GIMP_, and you can even draw (raster-based images) with JavaScript using the _HTML5 Canvas_. Typical file types are _png_, _jpeg_, and _gif_.
+
+However, you can also create visuals using vector based programs. These use mathematical formulas and paths to define each shape. A big advantage is that the vectors can be scaled without losing any detail. And they are the type of “drawing” that is needed to work with laser- and vinyl-cutters. Typical tools for vector based drawing are _Adobe Illustrator_, _InkScape_, or when using JavaScript, you can create vector images as well, with _svg_ being the most standard file type of vectors.
+
+### Raster based
+
+Because I already have experience with 2D raster and vector-based tools through my daily work, I want to focus on the 3D modelling aspect this week. I’m therefore not going to very deeply into how the 2D (and especially raster-based) tools work.
+
+#### Tayasui Sketches
+
+I already sketched my final project in 2D (top-view) and 3D (rough top-side) in a raster based tool during the [previous week](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-1b/), with my iPad Pro, Apple Pen, and an app called [Tayasui Sketches](https://tayasui.com/sketches/). I use this app very often to create sketches of my data visualizations.
+
+Below you can see the the app in use. It’s extremely straightforward and minimal. Just select the type of tool you want to use (e.g. pencil, pen, brush) along the left, a color in the bottom right, the layer in the top right and right below the layer you can set the thickness and opacity of your chosen tool. That’s really it. You can output the image as a png.
+
+[![Image 2: 2D raster program ‘Tatasui Sketches’ on my iPad](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_raster_tayasui_sketches.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_raster_tayasui_sketches.jpg)
+
+2D raster program ‘Tatasui Sketches’ on my iPad
+
+### Vector based
+
+I have experience with _Adobe Illustrator_ and _Affinity Designer_ and feel comfortable enough with both to create designs. I’ve tried _InkScape_ in the past, but didn’t like it. For this week however I started my 2D vector approach with _JavaScript_ + _D3.js_ and finished it in Adobe Illustrator.
+
+#### JavaScript & D3.js
+
+[D3.js](https://d3js.org/) is a JavaScript library mainly used for the creation of data visualizations (on the web) as an SVG. It’s the core of my work and I feel very comfortable using it. You write JavaScript that creates the SVG in a web browser. I think you can see it as parametric modelling in 2D because you fix every aspect of the design through code.
+
+I create a folder with a simple `index.html` and an empty JavaScript file. I prefer working with a live server so whenever I make changes to my JavaScript and save the file, the web browser running the live server automatically refreshes. I make use of [Node.js](https://nodejs.org/en/) and it’s quite easy to install a [live server](https://www.npmjs.com/package/live-server) with `npm install -g live-server` (the `-g` makes it globally accessible on my laptop, not just in one repository). Within my folder with the `index.html` I run `live-server` in the terminal, and it opens up a webpage in my default browser that will automatically refresh on saving any file in the folder.
+
+[![Image 3: My working set-up with the browser (and devTools open) on the left and the JS file in Visual Studio Code along the right](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_workflow.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_workflow.jpg)
+
+My working set-up with the browser (and devTools open) on the left and the JS file in Visual Studio Code along the right
+
+I started very simple, a black circe to represent the wooden outline, with a hatched circle for the interior where you’d place the puzzle pieces.
+
+```
+//Append and SVG to the body in D3.js style
+const width = 1000
+const height = 1000
+const svg = d3.select("body")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g") //add a group and offset it to the center of the SVG
+    .attr("transform", `translate(${width/2}, ${height/2})`)
+
+//Add a circle
+const outside_radius = width/2 * 0.8
+const outside = svg.append("circle")
+    .attr("r", outside_radius)
+    .style("fill", "black")
+```
+
+I then added a spirograph pattern on top that will be etched out of the wood and puzzle pieces. I’ve played with the math for spirographs in JavaScript quite often (I [sell pen plots](https://shop.visualcinnamon.com/collections/pen-plotter-prints) with spirograph designs), so I grabbed my code from those projects to create a spirograph.
+
+[![Image 4: Two concentric circles to start with (left) and adding a spirograph pattern on top (right)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_first_steps.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_first_steps.jpg)
+
+Two concentric circles to start with (left) and adding a spirograph pattern on top (right)
+
+However, I want my puzzle to only have one possible solution, and a circular outline is the exact opposite of that. Even the swirly square shape that I drew in my initial sketch doesn’t have 1 possible solution, since it’s symmetric. I therefore started thinking of how to truly shape my puzzle ( ｡･-･｡｀)
+
+Maybe I could randomly perturb the circular outline so it wasn’t perfect anymore? I drew an exceptionally ugly sketch to see how it might look, but I didn’t like that break from symmetry.
+
+[![Image 5: Sketching a perturbed circle to get a sense of how it would look](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_raster_perturbed_circle.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_raster_perturbed_circle.jpg)
+
+Sketching a perturbed circle to get a sense of how it would look
+
+I kept on sketching and drew a hexagon. It’s my favorite geometric shape, I won’t go into the reasons here, but I’ve worked with hexagons in my work often, and it’s also the main shape of my company’s logo. Perhaps I could have small marks along each of the 6 corners to help guide the puzzler to place corner pieces in the correct place?
+
+[![Image 6: Going for a hexagon with marks in the corner to make sure a corner piece is placed correctly](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_raster_hexagon_corners.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_raster_hexagon_corners.jpg)
+
+Going for a hexagon with marks in the corner to make sure a corner piece is placed correctly
+
+I left that idea for a while, because I was intrigued with filling the hexagon with a hexagonal grid of puzzle pieces I sketched a few hexagonal grids and filled them with “puzzle pieces”. Perhaps I could “perturb” the perfect lines so each piece would indeed have a unique position in the grid? Would that create very sharp edges for some pieces though?
+
+[![Image 7: Sketching a set of pieces onto a hexagonal / triangular grid](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_raster_hexagon_grid.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_raster_hexagon_grid.jpg)
+
+Sketching a set of pieces onto a hexagonal / triangular grid
+
+In the end I decided that until I knew if the LEDs would go inside a puzzle piece or would be below in the board itself, I’d just stick with simpler puzzle pieces, even if that meant they weren’t unique (for now).
+
+Back in JavaScript, I turned the inner circle into a hexagon, and created some overly long-winded code to fill that grid with tiny triangles where no line was overlapping. I could then randomly remove some of the lines to create puzzle pieces that were more unique.
+
+[![Image 8: Hexagonal grid with puzzle pieces created through random deletion of lines](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_hexagonal_random_deletions.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_hexagonal_random_deletions.jpg)
+
+Hexagonal grid with puzzle pieces created through random deletion of lines
+
+However, I wasn’t quite sure I liked the result enough. Some pieces were quite large and going around corners, while others remained as small as a triangle. Perhaps due to the electronics I might need to have these pieces be more similar sizes? Figuring out exactly which lines to remove through code felt like overkill to spend my time on at this point.
+
+#### Adobe Illustrator
+
+Some things are just much easier to do manually. For those cases I take my SVG from the browser, and away from the code, into Illustrator for some final fine-tuning. I put all the original grid lines back in and copied the SVG from the browser into Adobe Illustrator to manually remove edge lines. You can easily copy an SVG by opening up the devTools of your browser with `⌘+⌥+i`. Right-click the SVG element, move to _Copy_ and then _Outer HTML_. Now open up Adobe Illustrator, create a new file and just paste it.
+
+[![Image 9: Copying an SVG from the browser](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_copy_svg.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_copy_svg.jpg)
+
+Copying an SVG from the browser
+
+Within Illustrator I started manually removing edges to only create diamond and trapezoid shapes by clicking on an edge and deleting it.
+
+[![Image 10: Having one line selected in Adobe Illustrator, which can be deleted with backspace](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_illustrator_remove_lines.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_illustrator_remove_lines.jpg)
+
+Having one line selected in Adobe Illustrator, which can be deleted with backspace
+
+That only took 1 or 2 minutes, so wouldn’t be too bad to redo. After saving the result from Illustrator back to SVG I do generally dive into the resulting SVG code to clean it up a little. I find that Illustrator always adds many attributes that aren’t needed (such as `enable-background` or `xml:space`).
+
+Below you can see the final result from creating the top of my puzzle “box” with 2D.
+
+[![Image 11: Final 2D vector result of the top of the puzzle](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_final.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_final.jpg)
+
+Final 2D vector result of the top of the puzzle
+
+Below are the files for the 2D vector version:
+
+*   The JavaScript code | [zip file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_puzzle.zip)
+*   The raw SVG | [svg file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_puzzle_raw.svg)
+*   The cleaned-up (with Illustrator) SVG | [svg file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_puzzle.svg)
+
+Now that I had an SVG version for the puzzle grid and spirograph, I was hoping to import the inner section with the puzzle as an SVG into some of the 3D tools to use as a base sketch.
+
+3D Modelling
+------------
+
+Although the 2D side of this week was familiar to me, the 3D side was _completely_ new. During the class with Neil, but also during the following tutorials given by the different instructors there were so many programs that seemed interesting to try. I eventually decided to investigate _xDesign_, _Fusion 360_, _FreeCAD_, _OpenSCAD_, with _Antimony_ being a stretch goal. And trying _Blender_ for some rendering and animation.
+
+### Fusion 360
+
+On Thursday and Friday morning we received tutorials about Fusion 360 from the instructor at AgriLab and our lovely assistant at the Waag, Michelle Vossen. Those were really helpful to get a basic understanding of how to create 3D shapes in various ways. Since it was the tool I’d had most exposure too, I decided to start my 3D CAD exploration in here.
+
+I had also watched parts of this “Parametric vs Direct Modeling” [video](https://www.youtube.com/watch?v=sVT6xt6uc6Q) Wednesday evening to learn about the difference, but it turned out to be quite a good explanation of using Fusion 360 as well.
+
+Below you can see the general starting screen of Fusion 360. I’ve marked some of the tools and functions that I’ve used (the most) during the creation of my project this week, and will be referring back to in the explanation below
+
+[![Image 12: The general starting screen of Fusion 306 with the tools I used most often](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_button_explanation.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_button_explanation.png)
+
+The general starting screen of Fusion 306 with the tools I used most often
+
+My goal is to make a cylindrical box where the top half is made of wood and the bottom from acrylic (for now), with cubby holes taken out along the edge, in the center a depression to place the puzzles pieces in, a bunch of puzzle pieces, and carving out a spirograph design from the top.
+
+#### Creating a Sketch
+
+You always start with making a sketch. Make sure you’re in the “Design” mode (big button top-left), Click the “new sketch” button, and select the plane onto which to make the sketch.
+
+[![Image 13: Start a new sketch and select which plane to create it on](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_new_sketch.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_new_sketch.jpg)
+
+Start a new sketch and select which plane to create it on
+
+This will take you into the sketch mode and changes the button option along the top. I’ve made the collage below to show the menu’s hidden beneath the sketch options. The rows marked by a pink dot are the ones I’ve used (often) while experimenting with Fusion 360 (and there are even fold out menu’s here, such as several different ways to define how to draw a rectangle or circle).
+
+[![Image 14: The many functions available during the sketch phase, with my main ones highlighted with a pink circle](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_sketch_functions.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_sketch_functions.jpg)
+
+The many functions available during the sketch phase, with my main ones highlighted with a pink circle
+
+I started by creating a circle (from center). Click in the center once, draw outward, it doesn’t really matter how far at first. You can also fill in a diameter right now by typing a number.
+
+[![Image 15: Start a new sketch and select which plane to create it on](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_create_circle.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_create_circle.jpg)
+
+Start a new sketch and select which plane to create it on
+
+#### Parameters
+
+Because it’s important to create a parametric model, I then created a parameter for the radius of my model. Along the top, click on _Modify_ and then select _Change Parameters_. This will open up a new window in which you can add new parameter by clicking the “+” sign next to _User Parameters_. A new window pops up in which you can supply a name, dimension and value.
+
+[![Image 16: Adjust parameters](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_adjust_parameter.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_adjust_parameter.jpg)
+
+Adjust parameters
+
+Inside the _Expression_ box you can also use mathematical functions, or use previously defined parameters to calculate the new parameter. Saving the parameter, I returned to my circle, double-clicked the radius, and replaced it with `2 * radius_box`.
+
+[![Image 17: Setting the diameter of the circle with a parameter](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_apply_parameter.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_apply_parameter.jpg)
+
+Setting the diameter of the circle with a parameter
+
+Starting simple, I finished the sketch (the big button top-right). I could always return to it and make more changes or additions.
+
+#### Extruding
+
+Back in the main window, I selected _Extrude_ from the top menu and clicked on the circle I’d just drawn on the sketch to select it as the shape to extrude (and make 3D). This opens up a window along the right in which you have many options as to how to extrude. The default is to extrude upwards. However, you can also extrude in both ways, and create cuts (I’ll do this later). I’d created a new variable `thickness_wood` to apply to the distance to extrude.
+
+[![Image 18: Extruding the circle into a 3D cylinder](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_extrude.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_extrude.jpg)
+
+Extruding the circle into a 3D cylinder
+
+However, after doing this, I realized that I’d made the wooden top lie on the “ground”, whereas I needed to have the acrylic section underneath it. I therefore clicked on the _Move/Copy_ big cross-arrow icon along the middle-top. Just like with _extrude_ this opens up a window along the right, in which I can customize how to move the body. I moved it upward by `thickness_acrylic`, another parameter.
+
+[![Image 19: Moving the body upward](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_move_upward.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_move_upward.jpg)
+
+Moving the body upward
+
+#### Inserting an SVG as a Sketch
+
+Next, I wanted to create the hexagonal center with the puzzle pieces. I created a new sketch, and this time selected the top of the cylinder as my sketch plane (it doesn’t always need to be at the origin. In fact, I probably should’ve created an _offset plane_ to create my first sketch with, but didn’t think of that).
+
+I selected the _Insert_ and then _Insert SVG_ to add an SVG of my puzzle (that only contained the hexagon puzzle). I then saw that my SVG wasn’t centered on the hexagon, and it was too small. I tried adjusting _X Distance_ and _Y Distance_ to make it centered, but it felt too rough, and I couldn’t get it quite right.
+
+[![Image 20: Inserting the SVG of the puzzle into the sketch, but seeing that it wasn’t centered](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_insert_svg.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_insert_svg.jpg)
+
+Inserting the SVG of the puzzle into the sketch, but seeing that it wasn’t centered
+
+Instead I went into the SVG code, and changed the `viewbox` of the SVG from `viewbox = "0 0 1000 1000"` to `viewbox = "-500 -500 500 500"` and removing the translation that I’d applied to the SVG as whole (moving its center back to `0 0`). With this change, the hexagon SVG was placed in the direct center of my circle / origin, and I only had to adjust the scaling (which I set to `2.75`). Now I had the puzzle in the center and could select each inner shape.
+
+[![Image 21: Having successfully loaded the puzzle SVG into my sketch](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_svg_loaded.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_svg_loaded.jpg)
+
+Having successfully loaded the puzzle SVG into my sketch
+
+However, I then realized that I _first_ wanted to cut the big outer hexagonal shape into the “wooden” cylinder, whereas all these separate puzzle piece shapes wasn’t making that straightforward. I therefore deleted all the separate shapes, saved each separate component of the puzzle SVG into its own SVG (the hexagonal outside, the inner puzzle pieces, the spirograph), and inserted just the hexagon shape. I didn’t use the _polygon_ option from Fusion 360 to add the hexagon, because I wanted to make sure that the hexagon would perfectly fit the puzzle pieces that I’d add later (however, since I later added spacing between the puzzle pieces, I might as well have used the easier route of creating the hexagon within Fusion 360).
+
+With the hexagon sketch lying on top of the cylinder, I selected _Extrude_ and this time selected _Cut_ for the _Operation_ and gave the _Distance_ as a minus number. This created a hexagonal hole through the cylinder.
+
+[![Image 22: Cutting a hexagon shape from the cylinder](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_hexagon_cut.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_hexagon_cut.jpg)
+
+Cutting a hexagon shape from the cylinder
+
+#### Offsetting
+
+I started a new sketch for the puzzle pieces, but then remembered having see the usage of an _Offset plane_ to draw a new sketch and decided to apply it here as well. Under _Construct_ in the top row, select _Offset Plane_. In the pop-up that appears along the right, I selected the XY-plane and extended by a distance of `thickness_acrylic`. The meant that the new plane would lie exactly flush with the bottom of the “wooden” cylinder.
+
+[![Image 23: Creating an offset plane](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_create_offset_plane.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_create_offset_plane.jpg)
+
+Creating an offset plane
+
+Saving the result, I could then select this new higher lying plane after I clicked _New Sketch_. I inserted the SVG with just the puzzle pieces and scaled it to `2.75` as well.
+
+I wanted to extrude each puzzle piece upward eventually. However, for realism, I wanted to add a little gap between each piece. For this I used the _Offset_ that you cal select along the top while in _Sketch_ mode. I created a parameter for the gap, `gap_puzzle_distance`. I tried to select a puzzle _shape_, but found out that I could only select the _edges_. Clicking in the center of a shape had no effect. But I could create a closed shape by clicking on all the outer edges of the shape.
+
+[![Image 24: Offsetting a puzzle piece to create a gap between each piece](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_offset.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_offset.jpg)
+
+Offsetting a puzzle piece to create a gap between each piece
+
+I did have to make sure that the offset line, the red line, was positioned towards the inner part of the shape. Otherwise I could click _Flip_ in the _Offset_ panel.
+
+[![Image 25: An offset applied to one diamond shape](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_offset_applied.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_offset_applied.jpg)
+
+An offset applied to one diamond shape
+
+I tried googling to see if it was at all possible to select a full shape to offset, but I wasn’t able to find any solution. In the end I just resigned myself to selecting the edges of each puzzle piece separately and offsetting them all manually ಥ﹏ಥ
+
+Strangely enough sometimes the offset would default to the inside, and sometimes it would default to the outside. With more than enough pieces to offset, I tried finding a pattern; clockwise selecting the edges versus counter-clockwise and such, but I couldn’t figure out the logic.
+
+I left two puzzle pieces out for some diversity.
+
+#### Body Groups
+
+Finally having done all the offsets, I finished the sketch, selected all the pieces and extruded all 57 pieces by `puzzle_piece_height`.
+
+[![Image 26: Extruding all 57 puzzle pieces](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_extruding_pieces.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_extruding_pieces.jpg)
+
+Extruding all 57 puzzle pieces
+
+That created 57 unique bodies in my _Browser_ (the panel along the left), which doesn’t make it very ordered. Thankfully you can create a _Body Group_ by right-clicking the _Bodies_ in the Browser and selecting _New Group_ and dragging all the bodies in there.
+
+[![Image 27: Creating a body group to place all puzzle pieces into](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_body_group.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_body_group.jpg)
+
+Creating a body group to place all puzzle pieces into
+
+#### Applying Materials
+
+I’d been at it for a while now, and for some fun I decided to add some different materials to these bodies (the standard material is steel I think). You can change this by clicking on _Modify_ and then selecting _Physical Material_.
+
+[![Image 28: A different material can be applied with ‘Physical Material’](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_material.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_material.jpg)
+
+A different material can be applied with ‘Physical Material’
+
+This will open a panel along the right with a large selection of materials. You can inspect them, and when you’ve chosen, you simply drag the material to the body that you want to apply it to. If you want to apply the same material to many different bodies at once (the puzzle pieces), you can simply select all of the bodies, then go to _Physical Material_, drag the desired material to one of the selected bodies, and it gets applied to all.
+
+[![Image 29: The bodies take on a very rough color and transparency to mimic the applied material](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_materials_applied.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_materials_applied.jpg)
+
+The bodies take on a very rough color and transparency to mimic the applied material
+
+#### More Complex Shapes & Mirroring
+
+With the sketch along the XY-plane base that I already had, I created another extrusion from the base to the bottom of the wood to represent the acrylic bottom in which I hope to hide the electronics.
+
+[![Image 30: Adding another body below and applying a black acrylic material to it](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_adding_acrylic_bottom.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_adding_acrylic_bottom.jpg)
+
+Adding another body below and applying a black acrylic material to it
+
+It was time to create the more difficult shapes of the puzzle-piece-stashing cubby holes along several of the sides. I opened up the sketch on which I’d drawn the hexagonal outline of the puzzle, that lies along the top of the wooden cylinder.
+
+I wanted to make one cubby hole and then mirror that along a circle. I drew a line from the center point and set the angle just a little smaller than 30°, the angle at which the first corner point of a hexagon lies. In the _Linetype_ option of the _Sketch Palette_ along the right, I then turned this line into a _construction line_, since I only wanted to use it as a guide to draw one side of the cubby hole with.
+
+Next I had some trouble placing the straight line that needed to be parallel with the hexagon side. When I drew a vertical line and selected it to set it’s distance from the origin, I could only set its length. No matter if I drew it at an angle. Some googling later showed me that I had to select an end point, not the line segment itself.
+
+I then suddenly realized that it would be easier to draw half the cubby hole, and then simply mirror it along the x-axis to create something perfectly symmetric. So I drew a straight vertical line from the x-axis down to the radial construction line, then followed along that radial line for a bit, and to end it I drew a piece of circular arc using the _very_ handy _3-Point Circle_ option. With this you first select the center of the circle (the origin here), and then two points along the radius between which you want an arc. Eventually I had the line section you see in the image below.
+
+I then clicked the _Mirror_ option along the top. With the Mirror panel I selected the 3 line segments as _Objects_ to mirror, and the x-axis as the _Mirror Line_ and voila, a full cubby hole!
+
+[![Image 31: Creating one side of the cubby hole with 2 straight lines and one circular arc section](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_cubby_hole_one_side.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_cubby_hole_one_side.jpg)
+
+Creating one side of the cubby hole with 2 straight lines and one circular arc section
+
+With the cubby hole complete, I fixed its dimensions (based on variables). I could now use the other _very_ handy _Circular Pattern_ option that you can find under _Create_. Selecting the full cubby hole, and the origin as the _Center Point_. Setting 4 objects to be created in total along 180°.
+
+[![Image 32: Mirroring 3 other cubby holes along the circle](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_mirror_circular.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_mirror_circular.jpg)
+
+Mirroring 3 other cubby holes along the circle
+
+I then extruded these cubby holes through the wood and partly into the acrylic underside.
+
+[![Image 33: Cutting the cubby holes away from the wood and acrylic underside](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_cut_cubby_holes.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_cut_cubby_holes.jpg)
+
+Cutting the cubby holes away from the wood and acrylic underside
+
+#### Sweeping
+
+Next I wanted to cut out the spirograph pattern from the top of the wood and puzzle pieces. I first thought to do this with the _Sweep_ functionality that is found under _Create_ (while not in a _Sketch_).
+
+[![Image 34: The sweep function to create a shape along a path](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_sweep_function.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_sweep_function.jpg)
+
+The sweep function to create a shape along a path
+
+I created a new sketch along the top plane of the puzzle and loaded the spirograph SVG as the path. While selecting _Sweep_ I saw that I also needed a profile, a shape to sweep along the path. I googled a bit to figure out how to create a profile. I created yet another sketch, but this time along the YZ-plane and drew a tiny circle.
+
+I finished the _Sketch_, selected _Sweep_ once more, with the spirograph as the path and the circle as the profile. However, Fusion 360 then gave me a very generic error message: `Cannot make sweep closure for closed path`. Some googling gave me the idea that the sweep wasn’t able to handle difficult paths, and this spirograph was definitely difficult, with self intersecting points. Perhaps it just couldn’t handle that?
+
+[![Image 35: Fusion 360 didn’t want to sweep the circle along the spirograph](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_sweep_error.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_sweep_error.jpg)
+
+Fusion 360 didn’t want to sweep the circle along the spirograph
+
+Some more googling got me to a not quite related [StackExchange answer](https://graphicdesign.stackexchange.com/questions/108152) that stroked the path to make it have thickness. Right! I could also make a thick line and just cut that out of the wood and puzzle pieces!
+
+Back in Illustrator I selected the spirograph path, made its stroke thicker, and via _Object_ -> _Path_ -> _Outline Stroke_ turned it into a shape instead of a path. I loaded this new SVG into Fusion 360 and could _thankfully_ select it as one shape to cut with. It cut through the wood very quickly. For cutting the puzzle pieces, I had to set the _Start_ of the extrusion at the top of a (random) puzzle piece because the pieces are a little less high than the depth of the wood. Cutting the path from all the puzzle pieces took a few minutes for Fusion 360 to finish.
+
+[![Image 36: Cutting the outlined spirograph path from the puzzle pieces](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_cut_spirograph.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_cut_spirograph.jpg)
+
+Cutting the outlined spirograph path from the puzzle pieces
+
+#### A Glass Plate and Hollow Shell
+
+Because I’m not sure if the LEDs will be within each puzzle piece or in the bottom of the puzzle, I decided to make the bottom of the puzzle area out of matte glass. In the sketch with the hexagon outline, I created another hexagon by offsetting the original hexagon outward a little. I then cut this slightly larger hexagon out of the bottom acrylic cylinder. Next, I extruded the same hexagon as a new body upward, and applied a glass material to it.
+
+[![Image 37: Cutting a larger hexagon from the bottom to place a glass plate into](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_glass_plate.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_glass_plate.jpg)
+
+Cutting a larger hexagon from the bottom to place a glass plate into
+
+I didn’t want the bottom section to be one massive acrylic block. This part would need to contain the electronics! I therefore turned the model on its bottom and selected the _Shell_ command to turn the massive bock into a shell. It ws surprisingly easy. I merely selected the bottom face, gave the thickness of the shell, and it neatly followed all the depressions I’d created into the top of the acrylic cylinder.
+
+[![Image 38: Turning the massive acrylic bottom into a shell](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_shell_bottom.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_shell_bottom.jpg)
+
+Turning the massive acrylic bottom into a shell
+
+I think I can’t actually _physically_ create the acrylic bottom as a shell like this… However, right now I don’t have the required knowledge of what you exactly _can_ and _can’t do_ with the machines. I’ll leave the feasibility for another week.
+
+I cut the original hexagon from the acrylic shell so the glass bottom would be approachable from the bottom.
+
+[![Image 39: Having cut the (smaller) hexagon from the acrylic bottom](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_glass_see_through.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_glass_see_through.jpg)
+
+Having cut the (smaller) hexagon from the acrylic bottom
+
+#### Fillets
+
+There was one thing I wanted to add that I hadn’t used yet. To round off the sharp edges from the wooden top. For this you can use the _Fillet_ option from the _Modify_ menu. When clicking _Fillet_ I noticed that due to the etching out of the spirograph from the wood I had to select each separate piece of the cubby holes' sides. I figured that could be done in less steps. So I moved the history slider on the bottom back to right before I etched out the spirograph from the wood, and clicked _Fillet_ again.
+
+I noticed that it was easy to create several groups to round with different values. I thus created 3 different groups; the outside circle, the cubby holes, and the inner hexagon, and played with the numbers to create fillets that looked good.
+
+[![Image 40: Creating fillets along the top of the wood to round off the edges](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_fillet.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_fillet.jpg)
+
+Creating fillets along the top of the wood to round off the edges
+
+After saving I moved the history back to the last step and noticed that the spirograph was no longer etched out of the wood! I edited the extrusion of that original cut and saw an error message about a problem in combining the geometry together.
+
+[![Image 41: The error message in trying to cut the spirograph from the wood](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_cut_error.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_cut_error.jpg)
+
+The error message in trying to cut the spirograph from the wood
+
+Looking a little closer, I got the idea that the problem could possibly be that the spirograph top and the wood top somehow were lying too close together? Not sure why the fillet had caused that to be an issue though. I therefore turned the spirograph sketch into a new body and extruded it in _both_ dimensions.
+
+The next step I took I _truly_ would not have figured out if Michelle hadn’t shown this in her tutorial. I selected the _Combine_ from the _Modify_ section. Selected the wooden top as the _Target Body_ and the spirograph body as the _Tool Body_ with a _cut_ operation.
+
+[![Image 42: Using ‘Combine’ to cut the spirograph body from the wooden top](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_combine.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_combine.jpg)
+
+Using ‘Combine’ to cut the spirograph body from the wooden top
+
+Thankfully this didn’t throw an error and resulted in the etched out spirograph to appear back in the wood!
+
+#### Rendering
+
+That felt like enough creation of the different parts in one tool. It was time to look into rendering and animation. From the big button on the top-left that usually says _Design_ I selected _Render_. There are a lot less buttons in this menu thankfully, so I quickly explored each after having watched [this](https://www.youtube.com/watch?v=sejMq84YREs) and [this](https://www.youtube.com/watch?v=dwCrOwEw7u8) Youtube tutorial.
+
+[![Image 43: Rendering the puzzle box in canvas](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_render.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_render.jpg)
+
+Rendering the puzzle box in canvas
+
+The rainbow circle lets you apply materials to each body. I had just seen in our Mattermost channel that there was a LED “material” available, which seemed very interesting, so I explored the materials some more, tried a few light emitting ones on the puzzle pieces and decided on sticking with making one puzzle piece into a “A Type Bulb - Frosted - 800lm”.
+
+Next to the rainbow circle are the _Scene Settings_, such as the brightness, the focal length, depth of field and more. I also played a little with this to see the resulting effect.
+
+One option was very interesting, the metallic circle with the green “play” circle. This actives that _In-Canvas Render_ and renders the scene right then and there. It starts out very rough and the longer you give it, the more the image becomes smooth and (more) realistic.
+
+Finally, you can also do the rendering under the hood with the _Render_ button (the teapot (why?)). Below you can see the result from rendering my puzzle box. I like how the light emitted by one of the puzzle pieces is scattered throughout the others.
+
+[![Image 44: The result from rendering the full design](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_render_result.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_render_result.jpg)
+
+The result from rendering the full design
+
+#### Animating an Exploded View
+
+My final exploration in Fusion 360 was to create an explosion animation of the separate pieces. To create animations, I had learned from Michelle that I had to turn my bodies into components. You can create a component from the _Assemble_ menu along the top. I gave it a descriptive name, saved it, and dropped the body into the component (from the _Browser_ panel along the left). I did this for all four parts; the acrylic bottom, the glass puzzle bottom plate, the wooden top and the puzzle pieces.
+
+From the big button on the top-left I selected _Animation_. Again not many buttons along the top, so I explored the options given. The _Auto-Explode_ options seemed interesting. However I kept getting error messages that `selected components are already separated from each other`. Through some YouTube video’s that I’d seen on xDesign I’d already learned about the concept of “mating”, where you specify how separate components are attached or aligned to one another. In Fusion 360 this is called _Joint_, also in the _Assemble_ menu along the top in the _Design_ screen. However, when I clicked on _Joint_ my entire model turned transparent and I couldn’t select _anything_. I tried googling for what I’d done wrong, but couldn’t find any question that seemed similar to what I had. I did find [a short tutorial](https://www.autodesk.com/products/fusion-360/blog/components-bodies-for-new-designers/) on the Autodesk website about components and bodies in which components were directly created from bodies by right-clicking a body, and selecting “Create components from bodies”.
+
+[![Image 45: Turning a body into a component directly](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_component_from_body.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_component_from_body.jpg)
+
+Turning a body into a component directly
+
+Deleting all my components, and trying via this method I created my four components again, went to the _Animation_ menu and tried _Auto-Explode_ again. This time it worked! Truly not sure why the previous way didn’t work…
+
+[![Image 46: Finally auto exploding the four components](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_auto_explode.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_auto_explode.jpg)
+
+Finally auto exploding the four components
+
+I watched parts of [this](https://www.youtube.com/watch?v=Mehss_89ldo) Youtube video on exploded views (around the 20 min mark), which made me remove the auto-explosion, and instead move apart my 4 elements manually by using the _Transform Components_ cross-arrow icon in the top.
+
+[![Image 47: Manually transforming each of the four components to an exploded view](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_transform.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_transform.jpg)
+
+Manually transforming each of the four components to an exploded view
+
+And played with the duration and starting point of each movement in the animation timeline that is visible along the bottom. Only through that youtube video did I learn that all of my camera movements of the scene were also being recorded and added to the animation.
+
+[![Image 48: You can adjust each movement, and the camera movement, in the animation timeline along the bottom](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_animation_timeline.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_animation_timeline.jpg)
+
+You can adjust each movement, and the camera movement, in the animation timeline along the bottom
+
+With the _Publish_ button at the top-right you can save the animation to an _mp4_. See my final explosion animation below:
+
+Exploded View
+
+*   Final Fusion 360 STL files of the 4 components | [zip file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_stl.zip)
+*   Separate SVG files used for the hexagon and puzzle piece sketches | [zip file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_puzzle_svgs.zip)
+
+I had a stretch goal to also cut out a pattern from the sides of the wood and acrylic bottom, but getting to this point already took too much time ಥ\_ಥ and thus I moved on to other tools.
+
+Finally, although I never watched any, the Fusion 360 tutorials from [Product Design Online](https://www.youtube.com/channel/UCooViVfi0DaWk_eqxIXXiOQ) seem very elaborate and useful. Perhaps I should look into that more if I decide to continue with Fusion 360.
+
+### OpenSCAD
+
+After the highly visual and mouse driven designing of Fusion 360, I really wanted to try [OpenSCAD](https://www.openscad.org/index.html), since it relies on scripting your model instead.
+
+After a short tutorial given by our instructor Henk about the basics, watching a Youtube [tutorial](https://www.youtube.com/watch?v=wXpHRHgJyUE) to learn a little more about modules, skimming through [the OpenSCAD tutorial](https://en.wikibooks.org/wiki/OpenSCAD_Tutorial), and downloading several [very](https://www.thingiverse.com/thing:99020) [interesting](https://www.thingiverse.com/thing:37926) [examples](https://www.thingiverse.com/thing:86476) I was ready to draw my puzzle box.
+
+For quick access, here are some of the OpenSCAD documentation pages that came in handy:
+
+*   [OpenSCAD User Manual](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual)
+*   [OpenSCAD Cheat Sheet](https://www.openscad.org/cheatsheet/index.html)
+*   [Primitive Solids](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solid) | cubes, spheres, cylinders and more
+*   [2D Primitives](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem) | squares, circles, and how to extrude them
+*   [OpenSCAD’s mathematical functions](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions)
+*   To comment the entire selected section: `⌘+D`, to uncomment: `⌘+SHFT+D`
+
+There aren’t many button in OpenSCAD since the modelling all happens through the script. Below you can see the general overview with the main button functions that I’ve used.
+
+[![Image 49: The OpenSCAD working environment with the main (button) functions that I used](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_main_functions.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_main_functions.png)
+
+The OpenSCAD working environment with the main (button) functions that I used
+
+#### Cylinders
+
+I started pretty simple by setting up some variables such as the radius of the puzzle box and the heights of the wooden and acrylic parts. Next, I drew two [cylinders](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#cylinder) on top of each other, representing the wooden top and the acrylic bottom.
+
+[![Image 50: Two cylinders on top of each other](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_two_cylinders.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_two_cylinders.jpg)
+
+Two cylinders on top of each other
+
+These are quite easy to script, such as the top wooden cylinder with:
+
+```
+//translate upwards by height_acrylic
+translate([0, 0, height_acrylic])
+    //Create a cylinder that has the same radius at the bottom and the top
+    cylinder(height_wood, r = radius);
+```
+
+I found out that although during a _preview_ I can use different colors for different parts, during an actual render OpenSCAD assumes everything that you make to be one body, and it all turns yellow. I therefore kept using the _preview_ for all development.
+
+I created a hexagon, which interestingly comes from creating a circle/cylinder using only 6 edges. I turned this into a module to be able to easily use it multiple times,
+
+```
+//Create a module, that returns a geometry
+module hexagon(h, r) {
+    //$fn gives the number of facets to use to create a "circle"
+    cylinder($fn = 6, h, r = r);
+}
+```
+
+#### Constructive Solid Geometry
+
+With openSCAD you can create fascinating geometric shapes by using _union_, _difference_ and _intersect_ on two or more objects. To cut out a hexagonal center from my cylinders, I had to take the `difference` of a hexagon from a cylinder
+
+```
+//Every object within the difference gets subtracted from the first object
+difference() {
+    cylinder(height_wood, r = radius);
+    //Subtract the inner hexagon
+    hexagon(height_wood, hex_radius);
+}
+```
+
+However, that subtraction gave some really weird artifacts when previewed. As if the top and bottom were _just_ there, but stringy.
+
+[![Image 51: Strange stringy artifacts left after subtracting a hexagon from the cylinder](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_difference_artifacts.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_difference_artifacts.jpg)
+
+Strange stringy artifacts left after subtracting a hexagon from the cylinder
+
+I googled a bit and found that this can happen when the shapes touch _exactly_. Instead you need to subtract a hexagon that is just a _little_ taller than the cylinder. Someone called it the _nothing_ parameter, because when 3D printed, the difference amounts to nothing. And so I created a `nothing = 0.01;` parameter and changed my `difference` function to:
+
+```
+//Every object within the difference gets subtracted from the first object
+difference() {
+    cylinder(height_wood, r = radius);
+    //Subtract the inner hexagon
+    //First move the hexagon just a little down
+    translate([0, 0, -nothing])
+        //Subtract a hexagon shape that is just a little taller than the cylinder
+        hexagon(height_wood + 2 * nothing, hex_radius);
+    }//translate
+}//difference
+```
+
+And that resulting in a clean cut. It did bug me that I’d have to create extra translations though.
+
+I moved on to create the glass plat along the bottom of puzzle floor, and subtracting that same hexagon from the acrylic bottom cylinder.
+
+Because I sometimes only wanted to see the wooden box, or the other two parts, I put the creation of each object into its own module. That way I could call each separately with just one line, such as `acrylic_box();`, or comment it out if I didn’t want to have it drawn.
+
+[![Image 52: Three simple objects to form the base of my puzzle box](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_3_objects.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_3_objects.jpg)
+
+Three simple objects to form the base of my puzzle box
+
+#### More Complex Geometry
+
+Next came a more complex, but still quite geometric shape; the cubby holes. I drew a simple sketch by hand to see how I could create one through adding or subtracting simple geometric shapes, and saw that it’s basically a pie slice with a rectangle taken out from the pointy part.
+
+Sadly, openSCAD’s `cylinder` function doesn’t have any parameters to take on a starting and ending angle. But thankfully a quick google got me to some `pie_slice`\-like [functions](https://3dprinting.stackexchange.com/questions/10638) that I incorporated as a module in my code. I then wrote another module that creates a full cubby hole that can also be rotated:
+
+```
+module cubby_hole(angle = 60, r, h, d) {
+    difference() {
+        //Create and rotate a centered pie-slice
+        rotate(-angle/2) pie_slice(r, h, angle);
+
+        //Remove a cube from it, centered on the origin
+        translate([0,0,-nothing]) {
+            linear_extrude(height= h + 2*nothing) 
+                square(2*d, center=true); 
+        }//translate
+    }//difference
+}//module cubby_hole
+```
+
+Resulting in the following shape
+
+[![Image 53: Creating the shape of a cubby hole](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_cubby_hole.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_cubby_hole.jpg)
+
+Creating the shape of a cubby hole
+
+I can add the `cubby_hole` module to the `difference` function I already had in the wooden top and acrylic bottom, adding it into a `for` loop to take out 4 cubby holes.
+
+```
+/*Inside the difference function */
+
+//Cut out the cubby holes
+for ( i = [0 : 3] ){
+    rotate(-i * 60) {
+        cubby_hole(angle = angle_cubby, r = radius_hole, h = height_wood + 2 * nothing, d  = inside_distance);
+    }//rotate
+}//for i
+```
+
+Resulting in the following shape:
+
+[![Image 54: Four cubby holes taken out](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_cubby_holes_removed.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_cubby_holes_removed.jpg)
+
+Four cubby holes taken out
+
+#### Inserting the Spirograph SVG
+
+To etch out the spirograph from the top I used the `import` function to load the SVG file, together with the `linear_extrude` to give the 2D path some height. Turning it into a simple module:
+
+```
+//Get the spirograph from the SVG
+module spirograph(height) {
+    linear_extrude(height = height) {
+        scale(spiro_scale)
+        import("puzzle_spirograph_outlined.svg");
+    }
+}//module spirograph
+```
+
+Thankfully I already had an outlined spirograph shape from using it for the Fusion 360 model. Strangely it didn’t load in the origin, even though it did for Fusion 360. Some fiddling with the `viewport` and overall translation of the inner path within the SVG and I was looking at a spirograph shape in OpenSCAD.
+
+I added the call to the `spirograph` module to the `difference` function of the wooden box to etch it out of the top (and also etched it out of the glass plate, since I didn’t have any puzzle pieces to etch it out of). Below is the result from doing a _render_ where you can see the etching much better.
+
+[![Image 55: A spirograph etched out of the top](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_etched_spirograph.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_etched_spirograph.png)
+
+A spirograph etched out of the top
+
+It was all going rather smooth until this point. However, these were really only rather easy geometric shapes and steps. When I wanted to make more fine-tuning steps, things got quite a bit harder…
+
+#### Sweeping a Spirograph Path with Math
+
+I figured, with such a geometric and mathematically oriented program, shouldn’t I be able to etch out the spirograph path by creating the path using the original _spirograph formula_ instead of the SVG!
+
+It turned out that there wasn’t a “sweep along path” option default to OpenSCAD, only the simple `linear_extrude` and `rotate_extrude`. However, I found a [GitHub repo](https://github.com/openscad/list-comprehension-demos) that contained a `sweep` function together with some examples on how to use it.
+
+Thankfully in OpenSCAD you can include and use other `.scad` files, which give you access to all the files' modules (and possibly created geometry when you use `include` instead of `use`).
+
+The `sweep` function used files from yet another non-default library from OpenSCAD called [scad-utils](https://github.com/openscad/scad-utils). I downloaded this, and added both the `sweep.scad` file and the full `scad-utils` folder to the library of OpenSCAD (found in `Applications/OpenSCAD/Contents/Resources/libraries` on a Mac), since these seemed like more general functions that I could be using more often.
+
+I could now use the `sweep` function by adding `use <sweep/sweep.scad>` and `use <scad-utils/shapes.scad>` to the top of my script.
+
+I got some of the simple example scripts working that were included with the _sweep_ files, and turned to creating an array that would hold the path (x & y positions) of my spirograph. With the experience I’d had so far, I took my JavaScript code for my spirograph and kind of pseudo-code-like tried to adjust it to OpenSCAD:
+
+```
+//Semi pseudo-code that I wrote as a first try to create a spirograph function in OpenSCAD
+module spiro_step(wheels, k) {
+    line = [];
+    for(k = [0 : steps]) {
+        theta = step_size * k * 2 * PI;
+        x = 0;
+        y = 0;
+        //Loop over all the wheels
+        for(i = [0 : 2]) {
+            angle = (wheels[i][1] * theta + PI * 2 * wheels[i][2]) * 180/PI;
+            x = x + hex_radius * wheels[i][0] * cos(angle);
+            y = y + hex_radius * wheels[i][0] * sin(angle);
+        }//for i
+        line = concat(line, [x,y]);
+    }//for k
+}//function spiro_step
+```
+
+I [learned](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules) that modules can only return geometries, not values. But OpenSCAD did have functions! Alright, without investigating further, I figured, a function is a function, no matter if it’s JS, python or OpenSCAD. I replaced `module` by `function`, but was plagued by errors in the console. I couldn’t quite grasp what the issue was. After actually googling a bit about functions in OpenSCAD I was baffled to find out that OpenSCAD only allows the _simplest_ of functions, just one line statements (⑉⊙ȏ⊙) WHY?! I’m [far from the only one](http://forum.openscad.org/function-syntax-td5915.html) asking this question, but ok, nothing I could do about it, but to _slowly_ transform my human-readable, usable, spirograph function into something that worked within OpenSCAD.
+
+It took _many_ tries, and lots of `echo(<<variable>>)` calls, but I got it working eventually. However, it now looked like the following mess _just_ to get an array with points along the spirograph:
+
+```
+    line_data = [
+        for (k = [ 0 : steps]) [ //set up the x, y and z values
+            x_total(wheels, step_size * k * 2 * PI), 
+            y_total(wheels, step_size * k * 2 * PI), 
+            0]
+    ];
+
+    //////// Spirograph Functions ////////
+    function angle(wheels, index, theta) = (wheels[index][1] * theta + PI * 2 * wheels[index][2]) * 180/PI;
+    
+    function x_val(wheels, index, angle) = radius * wheels[index][0] * cos(angle);
+    function y_val(wheels, index, angle) = radius * wheels[index][0] * sin(angle);
+    
+    function x_total(wheels, theta) = x_val(wheels, 0, angle(wheels, 0, theta)) + x_val(wheels, 1, angle(wheels, 1, theta))  + x_val(wheels, 2, angle(wheels, 2, theta)); 
+    
+    function y_total(wheels, theta) = y_val(wheels, 0, angle(wheels, 0, theta)) + y_val(wheels, 1, angle(wheels, 1, theta))  + y_val(wheels, 2, angle(wheels, 2, theta));
+```
+
+Since I’d only been using this tool for a few hours, I’m sure that experts would be able to rewrite this to something shorter. However, I do wonder if that makes it more human-readable? I personally didn’t grasp how to instead create a spirograph function with OpenSCAD’s _list-comprehension_ for example.
+
+I still had some errors in my console, about the circular shape being unknown. After diving into the `shapes.scad` file from the `scad-utils` library I added, I saw that it used the `$fn` value to set the number of fragments to use. I hadn’t set this in my script, and the default value is zero, thus the circle function failed. Easy enough to fix thankfully, although the error messages were a bit vague, making it hard to find the true reason (strangely enough, the sweep function couldn’t use the 2D primitive `circle` that is part of OpenSCAD itself). And then _finally_ I had the sweep function working, and had a spirograph object in my window.
+
+[![Image 56: Creating a sweep along the spirograph path using a hexagon for a shape](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_spirograph_sweep.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_spirograph_sweep.png)
+
+Creating a sweep along the spirograph path using a hexagon for a shape
+
+However, when I then added this shape as a `difference` to the glass plate, instead of using the SVG version, the places where the spirograph line intersected, were not being removed from the glass plate.
+
+[![Image 57: Taking the difference of the spirograph and glass plate left the areas where the spirograph path intersects itself](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_spirograph_difference.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_spirograph_difference.jpg)
+
+Taking the difference of the spirograph and glass plate left the areas where the spirograph path intersects itself
+
+I wasn’t really sure why. Does a self intersection imply the inverse of the volume? However, this had taken me more than enough time already, and besides, I already had a working spirograph etching by using the SVG version. I therefore took out the sweeped spirograph module and code, put it into a new file, added a `z` coordinate value that is based on the distance from the center, and turned my spirograph line into a bowl (⌐■\_■)
+
+[![Image 58: My spirograph ‘bowl’](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_spirograph_bowl.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_spirograph_bowl.png)
+
+My spirograph ‘bowl’
+
+#### Shell
+
+Returning to my puzzle box, I wanted to try and turn the acrylic bottom into a shell. In Fusion 360 that was exceptionally easy. In openSCAD there was no default function to do this. I googled, and found that the `morphology.scad` file from the [scad-utils](https://github.com/openscad/scad-utils) library had a `shell` option.
+
+It seemed quite simple, I only had to call the `shell` function and then give it the shape, e.g. `shell(d=-0.3) shape();`. However, I got the error that `Mixing 2D and 3D objects is not supported`. Looking into the `morphology.scad` file and the example given in the repo, together with the error code, gave me the idea that it was perhaps only meant for 2D geometries, not 3D like my acrylic box.
+
+Alright, no shell this time then. I just cut a hexagon straight through the acrylic box.
+
+[![Image 59: Cutting a simple hexagon from the bottom of the acrylic box](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_hexagon_cut_acrylic_box.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_hexagon_cut_acrylic_box.jpg)
+
+Cutting a simple hexagon from the bottom of the acrylic box
+
+#### (Not) Creating Fillets
+
+I briefly looked into fillets, but when I again found many google posts about how there was no fillet default function, and how people struggled, I let this one go.
+
+#### Puzzles Pieces
+
+Creating the puzzle pieces didn’t feel like it would add much knowledge and merely take up time that I wanted to use for exploring more tools, and thus I decided not to include them here. If I _had_ added them, I would have probably gone back to my SVG in Illustrator, selected the lines of the puzzle pieces, thickened the strokes, and outlined all the strokes. Next, I would’ve loaded that new SVG into OpenSCAD, scaled it, added a `linear_extrude` to give it height and then taken a difference with a hexagon shape to create all the pieces. Sadly, this doesn’t make the thickness of the gap between the puzzle pieces easily adjustable / a parameter, since that happens with the stroke thickness in Illustrator.
+
+#### OpenSCAD Final Result
+
+Below you can see the final result of what I created with OpenSCAD:
+
+[![Image 60: The final (preview) result from OpenSCAD](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_final.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_final.jpg)
+
+The final (preview) result from OpenSCAD
+
+I saved the 3 separate elements into their own STL file, and you can find them all here, together with the original `.scad` file and the spirograph bowl:
+
+*   The different components as separate STL files | [zip file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_STL.zip)
+*   The final OpenSCAD file and spirograph SVG | [zip file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_files.zip)
+*   The spirograph bowl OpenSCAD and STL files | [zip file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_spirograh_bowl.zip)
+
+#### Final Thoughts on OpenSCAD
+
+I did like working with OpenSCAD when it was all still about (easy) geometric shapes and combinations. But once I wanted something more difficult, such as the sweep, more complex functions, fillets, a shell, I really hit some walls. Perhaps with hours and hours of more experience I would overcome some of those, but for now I see OpenSCAD as a great tool for creating interesting _highly_ geometric / mathematical models (with some rough edges), but not what I would use for my final project.
+
+I also noticed that 9 out of 10 pages with questions about openSCAD that I found while trying to fix my bugs came from ~2011 - 2014, maybe up to 2016, barely anything more recent than that. That felt quite odd to me. Is the tool no longer popular? Are all the questions asked? (That can never happen though). Even the `scad-utils` and `sweep` libraries had not seen updates in the past ±6 years! Not sure what to make of that, but it didn’t feel like a good development.
+
+Bonus though for being the only tool I could use functionally without a mouse and just my laptop (including trackpad), and thus spend my Saturday evening on the couch and Sunday morning in bed (⌐■\_■)
+
+### xDesign
+
+xDesign is an online CAD software, from the same company as _SolidWorks_. You don’t have to download and install any software, however you do need an internet connection.
+
+These are some of the videos that I watched to learn about xDesign:
+
+*   The Basics of Sketching and Creating Extruded Features [video](https://www.youtube.com/watch?v=EEeFfGSQX2k)
+*   Learning How to Use Patterns, Mirrors and Sweep Features [video](https://www.youtube.com/watch?v=IurpjYf3jp0)
+*   Basics of Building an Assembly [video](https://www.youtube.com/watch?v=dgceGDMzR0Y)
+*   [“Explore the 3D Creator Role”](https://eduspace.3ds.com/CompanionManager/ui/index_lms.html?lpId=223539&lang=en&rc_Type=8&lexType=1&utm_source=10473_2_5&utm_medium=por_crs&utm_campaign=C223539&ticket=ST-684300-g2Bx0wLQuv7hfCCJui77-cas), which turns out to be a course on xDesign (not very well named I’d say).
+
+Because every tool has this implemented differently, and I keep forgetting, here are the view controls:
+
+*   Rotate: Right-mouse hold and move
+*   Zooming: Right-mouse hold + Shift key and move
+*   Panning: Never managed to figure this out…
+
+And below is an image of how the xDesign environment looks. At the bottom are the main tools, with the _Sketch_ currently active. Besides _Sketch_ is was mostly within the _Features_ tab.
+
+[![Image 61: Some of the main (sketching) options I used in xDesign](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_main_options.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_main_options.png)
+
+Some of the main (sketching) options I used in xDesign
+
+#### Sketch
+
+Just like with Fusion 360, you start be creating a _Sketch_, with the little icon that looks like graph paper around the middle of the _Sketch_ tab’s options. You select a plane to start the sketch on. I went for the XY-plane.
+
+You can draw several kinds of geometries, such as lines, arcs, rectangles, circles, and polygons. I started with a circle, clicking the diameter box afterwards to change its dimension to 500mm.
+
+[![Image 62: Draw a circle in the sketch and fixing its diameter](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_create_circle.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_create_circle.jpg)
+
+Draw a circle in the sketch and fixing its diameter
+
+I wanted to make this parametric and use a variable for that dimension. However, **I wasn’t able to find any button or tool that would let me create parameters**. Googling for it came up empty too. I asked my partner to check how it was done in _SolidWorks_ and there you had many options when you clicked on the dimension box to change it, one of which was to setup and create parameters. I also noticed that in all of the tutorials that I’d watched, I had not seen the usage of parameters. All dimensions were hard-coded as numbers. That made me think that perhaps xDesign wasn’t meant for pure parametric modelling? But perhaps I’ve just missed how to add parameters.
+
+#### Extruding a Cylinder
+
+I finished the sketch, selected the _Features_ tab and then _Extrude_ to extrude the circle upwards into a cylinder. This would be the acrylic bottom. I then selected the top of the cylinder and extruded this. However now I used _New_ as an option to create it as a new body for the “wooden top”.
+
+[![Image 63: Extruding the “wooden top” as a second cylinder, making it into a new body](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_extrude_second_cylinder.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_extrude_second_cylinder.jpg)
+
+Extruding the “wooden top” as a second cylinder, making it into a new body
+
+#### (Not) Importing an SVG
+
+Next I wanted to import my puzzle hexagon SVG into the sketch. I opened up the original sketch again, and went searching for some sort of _Import_ functionality. There was indeed an _Import_ option hidden behind the _New/Open/Import_ icon all the way to the left of the bottom menu. However, this only let me import 3D models, not SVGs. Some Googling taught me that there was an SVG import function _in SolidWorks_, but I couldn’t find any reference of it for xDesign. Alright, second hiccup so far that would not work well for using xDesign for my final project.
+
+#### Cutting Hexagons
+
+I could also create a hexagon shape with the _Polygon_ option in the Sketch menu. So I went back into my sketch (in the _History_ panel, right-click the sketch and select _Edit Sketch_), drew a hexagon, and then found out that the points of the hexagon wouldn’t snap to any axis. I therefore added a line that I wanted to fix at 30° and then make a hexagon point snap to that. You create a construction line by first drawing a normal line, selecting it, and in the little window that appears to the top-right upon selection, clicking the top-left icon that says _Construction_ (when you hover over it for a second or two). I then selected the _Sketch Dimension_ in the lower tab, but I couldn’t set the angle yet. I added another construction line to represent the x-axis, and _then_ when I selected both construction lines with the _Sketch Dimension_ active, I could set the angle. Deactivating the dimensions option (just press escape). Selecting the point along the hexagon and the line at 30° a little window appeared in the top-right in which I could make these _Coincident_. That fixed my hexagon finally.
+
+[![Image 64: Creating a hexagon in my sketch required two construction lines to fix](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_hexagon_sketch.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_hexagon_sketch.jpg)
+
+Creating a hexagon in my sketch required two construction lines to fix
+
+I also immediately created a slightly larger hexagon with the _Offset_ option from the lower tab bar.
+
+I saved the sketch and wanted to cut some hexagons from the two cylinders. But this proved to be far more difficult than I thought. xDesign kept telling me that `the selected end condition failed`. I wasn’t sure what the issue was. I had selected the top of the highest cylinder as the face for the start of the cut, since i didn’t want the cut to start from the sketch plane. I tried setting the distance to a minus, but that didn’t solve it. And then I tried the original way again, and this time it _did_ work…
+
+[![Image 65: Cutting the hexagon shape from the cylinders](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_cutting_hexagons.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_cutting_hexagons.jpg)
+
+Cutting the hexagon shape from the cylinders
+
+And this wasn’t the only cut that I struggled with to get working, basically any cut that wasn’t starting or ending at the sketch plane required several tries, and then at some point it worked, and in some cases I just gave up.
+
+#### Mirroring in Sketches & 3D
+
+For the cubby holes I created a new sketch on top face of the “wooden” cylinder. I created another construction line at 25°. It took a few tries to get the shape at the approximate position that I wanted (with two lines and one arc), and then mirrored it along the x-axis.
+
+[![Image 66: Mirroring half of my cubby hole lines in the sketch to create a full hole](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_mirror_half_cubby_hole.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_mirror_half_cubby_hole.jpg)
+
+Mirroring half of my cubby hole lines in the sketch to create a full hole
+
+Saving the sketch I selected all four edges of the cubby hole lines (I couldn’t select that shape itself strangely enough) and performed another cut into the cylinders. This cut finally went smoothly, because I was cutting from the sketch plane I think.
+
+I then used the _Circular Pattern_ from the _Features_ tab to cut out three more cubby holes, using the top face as the _Pattern Axis_.
+
+[![Image 67: Mirroring the cut cubby hole 4 times along the circle](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_circular_pattern.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_circular_pattern.jpg)
+
+Mirroring the cut cubby hole 4 times along the circle
+
+#### Separating the Bodies
+
+Although I had read that you could create multiple components within the same xDesign window, I felt that I had done things wrong and that in my current design the acrylic bottom and wooden top were seen as the same body. After watching a short tutorial I learned that I did probably went about this the wrong way, and I should’ve set up the wooden and acrylic part as two separate “Ordered Geometrical Sets”.
+
+The option to create one is within the _Tools_ tab (towards the right side). I then tried to drag the 2nd extrusion to this new set, but that didn’t work. Fine, I’ll just recreate the second cylinder in the new set, but that meant that I had to delete it from the first set. I wasn’t sure how I could re-use the same sketch for my 2nd set though. It seemed like I wouldn’t be the only person to want to re-use parts of a sketch for different components? But somehow I wasn’t able to make _any_ changes to the first set anymore. Perhaps I was missing some way to _activate_ one set at a time?
+
+[![Image 68: Created a second “Ordered Geometrical Set” to hopefully separate my bottom and top](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_ordered_geometrical_set.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_ordered_geometrical_set.jpg)
+
+Created a second “Ordered Geometrical Set” to hopefully separate my bottom and top
+
+I therefore undid my actions to before I created the second _Ordered Geometrical Set_, so I could make changes again to my original design. I threw away all the steps that I had done to create the wooden top, and recreated a second set. But now I was getting errors that my 2nd sketch (that was originally at the top of the second cylinder) was now `dangling in space` and I couldn’t find any way to move it, or use any part of that sketch to use as extrusions or cuts (there were no more cubby holes in my design anymore for example). Googling for it came up empty yet again.
+
+I was quite frustrated with xDesign at this point, and just accepted that I’d set up this whole design wrong. I was also 100% sure that I wouldn’t be using xDesign anymore, finding the other tools that I’d tried to fit me much better. I thus didn’t mind that my model from xDesign wasn’t a proper one. I’d tried the tool, that was the point. I therefore undid all my actions again until I had my two cylinders and four cubby holes back.
+
+#### Shell
+
+I did apply the _Shell_ command to carve out the bottom acrylic box, just to see how that would go. This finally went well again.
+
+[![Image 69: Turning the bottom cylinder into a shell](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_shell.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_shell.jpg)
+
+Turning the bottom cylinder into a shell
+
+#### xDesign Final Results
+
+Not very proud of this result, but this is how my final model looked from xDesign:
+
+[![Image 70: Turning the bottom cylinder into a shell](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_final.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_final.jpg)
+
+Turning the bottom cylinder into a shell
+
+And the STL file (the xDesign file is in the cloud I think, which you might be able to find if you search for my name in the online environment?):
+
+*   The model as an STL file | [stl file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_final.stl)
+
+#### Final Thoughts on xDesign
+
+There were many things that I didn’t like about xDesign. These are only a few specific examples:
+
+*   I couldn’t find answers to many questions I had about xDesign by Googling, such as: how to insert and SVG to the sketch, how to pan and zoom with a mouse, how to create and use parameters.
+*   I don’t think you can actually work with user defined parameters, which makes good parametric modelling impossible?
+*   Even if I create a dimension with a formula, such as `500 * 0.6`, when I then click this dimension again, it only shows the result of the equation (`300`) not the equation itself, which is lost.
+*   The fact that you can’t import an SVG as a sketch (as far as I have been able to figure out) was a major downside for my particular project.
+*   There were _very_ few tutorials on xDesign, barely any on Youtube.
+*   There is a _User Assistance_ in xDesign, but you can’t _search_ in it.
+*   There are only a few available _Materials_; only plastics, glass and metals (and even less materials when you want a “core material” instead of a “covering material”), no wood at all.
+*   I found the handling of the mouse with the view to be a little tricky. I never actually figured out how to pan, and had to use the _Reframe_ option (hidden behind the left-pointing arrow head to the left of the chair in the top right) to get my model back into a useful position and zoom level quite often.
+
+It’s probably me though. Perhaps my mind has been biased by using several other CAD tools before. Or part of it was that we didn’t get an introduction tutorial to xDesign by an expert to show us the general mindset. Or perhaps xDesign is too minimal? But gosh was I _frustrated_ with this tool many times. It just seemed that everything went much smoother and was more user-friendly in Fusion 360.
+
+I know that part of this frustration also comes from not having taken enough time to sit and watch more tutorials (I think I watched about an hour of tutorials), but for now it’s pretty clear to me that I’ll not be continuing with xDesign.
+
+### FreeCAD
+
+And then it was Wednesday and time was up sadly (╥﹏╥)
+
+### Blender
+
+I’ve tried Blender for some simple experiments about 2 years ago. I made a donut by following BlenderGuru’s _excellent_ [Blender tutorials](https://www.youtube.com/playlist?list=PLjEaoINr3zgEq0u2MzVgAaHEBt--xLB6U). I then worked with Blender for a few experiments through the _python_ API only.
+
+[![Image 71: A random collection of balls I created in Blender during 2019](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_earlier_circles.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_earlier_circles.jpg)
+
+A random collection of balls I created in Blender during 2019
+
+I think it’s absolutely _amazing_ for 3D (even 2D) animated movies and games, with extensive sculpting options, and photo realistic results. However, with that experience, and while attending the (also great) [Blender tutorial](http://fcycle.de/tutorials/blender/) given by Ferdi from FabLab Kamp-Lintfort during the past three Sundays, it was clear to me that I didn’t want to use this tool for the actual parametric design. _However_, I did indeed want to use it for next-level rendering and animations.
+
+With the tutorials from Ferdi, and scanning some specific videos from BlenderGuru’s donut tutorial again, I got started.
+
+[![Image 72: The starting screen of Blender](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_main_screen.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_main_screen.png)
+
+The starting screen of Blender
+
+Blender really is too chuck full of (hidden) options to explain all or explain well in here. I’ve done lots of explorations to finally get at my final render and animations. Let me share the main ones. You can assume that I had to (extensively) google _every. little. thing._ that I explain below.
+
+To remind my future self, the mouse view moves:
+
+*   Rotate: Middle mouse click, hold and drag
+*   Panning: Shift + Middle mouse click, hold and drag
+*   Zoom: Mouse scroll
+
+#### Importing STL
+
+I first imported the four `.stl` files of my result in Fusion 360 into Blender (_File_ -> _Import_ -> _.stl_). This gets you to the finder window to select you files, but it also contains some other useful settings to set the scale and what direction should be _up_ and _forward_ for example. On the first try I ignored this, and imported my puzzle base, only to find that it was the size of a skyscraper compared to my scene! Eventually I settled on a measly `0.02` scaling.
+
+[![Image 73: Imported my puzzle base into Blender](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_puzzle_base.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_puzzle_base.jpg)
+
+Imported my puzzle base into Blender
+
+Interestingly, when I saved my puzzle pieces component, Fusion 360 gave me the option to save all bodies (pieces) into one file or each piece separately. Quite a handy option to have. Thankfully, from Ferdi’s tutorial I’d seen the option to separate bodies in Blender, so I kept all puzzle pieces in one STL. Another handy thing was that each of the four puzzle objects was positioning correctly in space when imported into Blender. I didn’t have to move any of them to have them exactly aligned.
+
+#### Adding Objects
+
+In Blender you can press `SHFT+A` to add new objects. You get a pop-up window from which you can select many things. With my puzzle imported (and the default cube removed), I added a base plane, as the “floor” to put my puzzle on. Using `S` I could scale the plane really big (much later I turned this into a curved plane, following the steps found [here](https://blender.stackexchange.com/questions/5623) to have some shadow falling on a background).
+
+[![Image 74: Adding new objects into Blender with SHFT+A](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_add.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_add.jpg)
+
+Adding new objects into Blender with SHFT+A
+
+#### Some Useful Tips
+
+A few other move/scale/rotate moves I used often, when an object is selected, while in _Object_ mode of the _3D Viewport_ (the main window that you see when starting a new file):
+
+*   Move it by pressing `g`, to only move things in the _x_ direction, press `g+x`, or to move an object in the _xy_\-plane, press `g+SHFT+z` (move in every direction _except_ the _z_).
+*   Scale it by pressing `s`, the same extra options as for move above work for scaling.
+*   Rotate it by pressing `r`, the same extra options as for move above work for scaling.
+
+Another good thing to do in general, is make use of _collections_ to place the different objects into. The “finder” is located in the top-right. I created a collection for the lights and camera, one for the background (just the plane now), the puzzle box, and one for the puzzle pieces.
+
+You can set which objects can be selected via a mouse-drag or mouse click in the _3D Viewport_ using the little eye+arrow icon along the top-right of the window. I deselected the lights, because I kept on selecting those while I was dragging my mouse over the screen to select all my puzzle pieces for example.
+
+[![Image 75: Making the Lights not selectable within the 3D Viewport](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_selections.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_selections.jpg)
+
+Making the Lights not selectable within the 3D Viewport
+
+I also applied a _Parenting_ to the acrylic puzzle bottom and the glass plate that lies on top of it. I’d seen this in BlenderGuru’s videos. That way, when I would move the bottom, the plate would move along with it. To parent, you select any children first, then select the parent last, press `CTRL+P`, and in the pop-up select _Object (Keep Transform)_. The child is now enclosed inside the parent in the finder window.
+
+[![Image 76: The glass plate became part of the acrylic bottom after “parenting”](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_parenting.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_parenting.jpg)
+
+The glass plate became part of the acrylic bottom after “parenting”
+
+I didn’t parent anything else eventually because I wanted to have the other objects move separately for an animated video
+
+#### Camera View
+
+One of the main objects in Blender is the camera. When you create an actual _render_, it’s the viewport of the camera that gets rendered. I prefer to create a separate window next to the one I was working in, in which I had my “camera view” visible at all times. Within Blender you can split the view into sections (rows and columns) and within each new section you can select a new _Editor Type_, such as the _UV Editor_, _Shader Editor_, _Graph Editor_ and many more. Or just create more copies of the main _3D Viewport_. Generally you create one by hovering in the corner of a window until the mouse turns into a cross, and then drag the new window into existence (it usually takes me a few tries).
+
+[![Image 77: Created a separate window to fix my “camera view”](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_camera_perspective.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_camera_perspective.jpg)
+
+Created a separate window to fix my “camera view”
+
+To make the right panel the “Camera View”, go into _View_ (it’s along the top of the window itself), then _Cameras_ and _Active Camera_. You’ll then see a rectangular box, such as in the right window of the image above. One final handy thing is to lock to this camera view, so even when you perform mouse moves in that window, the camera will move along. For this, with the “Camera View” window focused press _N_, which will slide out some options, then go to _View_ along the right tab (yes, this is _a different View_ than the one I mentioned before, so many options in Blender (⊙\_⊙) ), and select _Lock to View_.
+
+#### Rendering Engine
+
+Another big change in the image above, is that I’d selected the views of both windows to switch from the default solid body like look to using an actual shader. This actually takes light, shadows and material properties into account and makes things look more realistic (but it’s much slower to render). You can change these looks by selecting the right-most circle from the group of 4 circles that is in the top-right of the _3D Viewport_.
+
+[![Image 78: Four different ways to have the objects be rendered in the 3D Viewport](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_view_options.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_view_options.png)
+
+Four different ways to have the objects be rendered in the 3D Viewport
+
+Generally the rendering in the viewport is a compromise between performance and how it looks. You often have many stray and black pixels, which I learned are called _fireflies_. For your final render you can press `F12`, or go into _Render_ -> _Render Image_. This will (generally) use a much more complex render processes, and thus can take a while, depending on the quality of the CPU (and even better, GPU) of your laptop/pc. The image is slowly built in in tiles.
+
+[![Image 79: A final render while halfway, being built up from tiles](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_render_halfway.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_render_halfway.jpg)
+
+A final render while halfway, being built up from tiles
+
+Later on, while I was trying to get rid of the _fireflies_ that were plaguing my renders due to the heavy use of see-through materials, I watched several [videos](https://www.youtube.com/watch?v=5gYyn0L7g7w&t=848s) / read blogs with tips. These were some of my most useful, and I hope I interpreted them correctly:
+
+*   Use the _Cycles_ rendering engine.
+*   If you have a compatible GPU, us it! (You might need to active it under _Edit_ -> _Preferences_ -> _System_.) And then set the _Tile_ size to 265 x 265. For CPU use smaller tiles of 64 x 64.
+*   Set the _Sampling_ of your final render quite high, 300+ but keep that of the _Viewport_ to the default 32.
+*   Set the _Sampling Integrator_ to _Branched Path Tracing_ and then in the _Sub Samples_ adjust the ratio based on your scene (e.g. if you have a lot of glass-like material, set the _Transmission_ sample to 2 or 3).
+*   Try and see how a _Denoising_ looks
+*   Play with the _Light Paths_ -> _Max Bounces_ again taking into account the materials in your scene to see which bounces can be increased. For scenes with a lot of glass, click on the menu icon in _Light Paths_ and choose _Full Global Illumination_.
+*   To deal with fireflies specifically: use big lamps. Plus, this [video](https://www.youtube.com/watch?v=TF5YZoDwDYI) and [blog](https://www.blenderguru.com/articles/7-ways-get-rid-fireflies) are also chuck full of tips.
+
+All of these things can be set in the _Render Properties_ tab. This tab, along with many other very useful property tabs is in the lower-right of the screen.
+
+[![Image 80: The Render options tab found in the lower-right side of the screen](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_render_options.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_render_options.jpg)
+
+The Render options tab found in the lower-right side of the screen
+
+Right below this tab is the _Output Properties_ where you can change things such as the camera resolution, frame rates, save locations, output file types and more.
+
+Random note: I stumbled upon [Filmic Blender](https://www.blenderguru.com/tutorials/secret-ingredient-photorealism), an add-on to create better colors, which I installed and applied to my _Color Management_ in the _Render Properties_ tab.
+
+#### Creating Materials
+
+To add a material to any object, first select it. Then in that right column of _Property_ tabs select the bottom red checkered circle, (_Material Properties_). Add a new material, and now a whole rabbit hole opens up for you. Generally the “Principled BSDF” is selected, which is quite the versatile material, with _lots_ of sliders that can change your material to look like transparent glass, to a glossy metal, or rough brick. This [Materials tutorial](https://www.youtube.com/watch?v=5lr8QnR5WWU) was really helpful to understand more about it. I used this base material (and the values mentioned [here](https://blender.stackexchange.com/questions/117336)) to turn my acrylic bottom into a black acrylic like material.
+
+I split my right window upwards, so I could set the lower to be a _Shader Editor_ which lets you apply more advanced steps to materials. I’d found [an example](https://blender.stackexchange.com/questions/27807/colored-matt-glass-shade-for-lamp-in-cycles) to create matt glass for the puzzle plate (which I actually sort of understood) and recreated the nodes.
+
+[![Image 81: Creating a “frosted matt glass” material to apply to the glass plate, using the “Shader Editor” (lower-right window)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_material_nodes.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_material_nodes.jpg)
+
+Creating a “frosted matt glass” material to apply to the glass plate, using the “Shader Editor” (lower-right window)
+
+You add nodes with `SHFT+A` while the _Shader Editor_ is active, and can search for the name, which I generally found easiest. You can connect them by dragging from one connection point to another (actually _cutting_ a connection as a little harder to figure out, but you should press CTRL + right click while “slicing” through the link).
+
+#### When Wood Turns Out to Be Hard
+
+There didn’t seem to be any straightforward material to apply and turn my puzzle top into wood. Google seemed to show several different ways of getting to a wood-like appearance.
+
+I looked a little into using an image as a texture. In the _Color_ option of a material, you can click the circle, and then choose _Image Texture_. I actually can’t quite remember why I didn’t fully continue with this. I did download [this](https://blendswap.com/blend/9478) wooden texture, but was then lost as how to actually apply it. When I opened the `.blend` file that came with it and looked at the material in the _Shader Editor_ it was _much_ more complex than just a simple image.
+
+I also checked out _procedurally created wood_ where a wooden pattern is created without images and fully by the very smart use of the nodes and randomness. I downloaded the [Timber](https://www.blendernation.com/2019/08/08/timber-a-realistic-procedural-pbr-wood-material/) procedural material, and was again lost as to how to actually apply it. Thankfully, this material came with a (still too vague) instruction. Some googling later I had it working. Apparently, you can _append_ a material from _another_ blend file (learned from [here](https://blender.stackexchange.com/questions/63018/how-to-import-downloaded-materials-files/63055)).
+
+*   Click _File_ and then _Append_
+*   Select the `.blend` file with the material you want. This will open the file as a folder structure
+*   Go to _Materials_ and choose the material that you want to append
+
+Now _seemingly_ nothing has changed. However, if you select your object, go to the _Material Properties_ and click on the drop down next to the tiny white checkered sphere, the new material should be there for you to apply.
+
+[![Image 82: I appended a “Timber - Decorative Veneer” material and could find it as an option within the drop-down in the Material Properties](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_appended_material.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_appended_material.jpg)
+
+I appended a “Timber - Decorative Veneer” material and could find it as an option within the drop-down in the Material Properties
+
+I really like how you can see an example of the material as a 3D sphere right within the _Material Properties_ window.
+
+I selected my appended material for the wooden top aaaaaand it just turned plain brown…. Weird. To check, I applied the wood to the plane, and it worked perfectly there. I could play with settings in the _Shader Editor_ and see the wood change patterns. I tried a different wood and applied it to the monkey (Suzanne) head, to see if the problem was a more complex shape, but it worked fine for Suzanne.
+
+[![Image 83: The wood getting correctly applied to Suzanne, but not to my wooden puzzle box top](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_wood_not_working.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_wood_not_working.jpg)
+
+The wood getting correctly applied to Suzanne, but not to my wooden puzzle box top
+
+I was at such a loss for what might be going wrong there that I eventually reached out to Ferdi to ask for help (because I was apparently not googling for the right words). And he was so very kind to help me! I sent over my file and he returned with a 5 minute _video_ explaining the exact steps that I had to take (ﾉ◕ヮ◕)ﾉ\*:・ﾟ✧ It appeared that I had to _UV-map_ by wooden box first!
+
+I turned my _Shader Editor_ into a _UV Editor_ (you change this with the top-left most button in each window). Next, I selected the wooden top in my left window, switched to _Edit Mode_ (press _tab_ to switch between _Object_ and _Edit_ mode). You know that you’re in editor view when you are able to see the mesh of the selected object. Press `U` and this will open up the _UV Mapping_ window.
+
+[![Image 84: Pressing “U” while your object is selected in “Edit Mode” will open up the “UV Mapping” options](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_uv_mapping.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_uv_mapping.jpg)
+
+Pressing “U” while your object is selected in “Edit Mode” will open up the “UV Mapping” options
+
+Select _Smart UV Project_. In the _Smart UV Project_ window that appears, I left everything to default, checking both _Correct Aspect_ and _Scale to Bounds_. With this the UV Editor switched to showing the wooden grain texture that was included with the wooden material that I was trying to apply (not sure why it now suddenly showed the wooden grain as a background), with the wooden top folded out on top of it. If you want, you can scale the UV-mapping by focusing in the _UV Editor_ window, with the entire mapping selected and pressing `S` and moving the mouse.
+
+[![Image 85: “Smart UV Project” lays out my puzzle box top onto the wooden structure image in the “UV Editor”](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_uv_unwrapped.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_uv_unwrapped.jpg)
+
+“Smart UV Project” lays out my puzzle box top onto the wooden structure image in the “UV Editor”
+
+And lo and behold, my “wooden” top finally looked like wood! (I kept switching between this wood and the procedural wood that looked like glossy veneer).
+
+[![Image 86: The wooden structure was finally visible on my wooden top!](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_wood_applied.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_wood_applied.jpg)
+
+The wooden structure was finally visible on my wooden top!
+
+I also learned that Ferdi didn’t have access to the image files that one of my wooden materials used when I sent him my file. And that you can _pack_ those files _into_ you `.blend` by going to _File_ -> _External Data_ -> _Pack all into .blend_. Later you can unpack it all with _Unpack all into files_.
+
+#### Separate Puzzle Pieces
+
+Alright, one more part of the puzzle to apply materials to, the puzzle pieces. The pieces were still seen as one type of object. You can separate them easily by selecting them all while in the _Edit Mode_ of the _3D Viewport_, then pressing `P`. This will open up the _Separate_ window, where I selected _By Loose Parts_. All these pieces were now separate bodies within my “Puzzle Pieces” collection.
+
+[![Image 87: With the puzzle group selected and in “Edit Mode”, pressing “P” will pop-up the “Separate” window](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_separate.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_separate.jpg)
+
+With the puzzle group selected and in “Edit Mode”, pressing “P” will pop-up the “Separate” window
+
+Something important that I’d seen come by in a video on animations in Blender (I’ll get to that) was the fact that this kind of separation leaves the origin of each piece at the origin of the original whole object. It’s better to reset the origin of all the pieces to their geometric origin. You can do this be selecting all the pieces (this time being on _Object Mode_ also worked), going to _Object_ -> _Set Origin_ -> _Origin to Geometry_. And now it was clear that each of my puzzle pieces had its origin set correctly:
+
+[![Image 88: I reset the origin of all the pieces to each piece’s geometric origin](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_origin_reset.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_origin_reset.jpg)
+
+I reset the origin of all the pieces to each piece’s geometric origin
+
+#### Acrylic Puzzle Pieces With Lights
+
+With the pieces separated, I wanted them to be of a transparent acrylic. I selected one puzzle piece and used the (node) steps as describe in [this](https://www.youtube.com/watch?v=1Y1Ny6MTPD4) video to set-up my material.
+
+That turned one piece acrylic. Thankfully you can link multiple objects to all have the same material, and when you make changes to the material of one piece, it gets applied to all of them. To link materials, select all the objects, while selecting the one with the correct material as the _active_ one (select it first or last). Then press `CTRL+L` which pops up the _Make Links_ window. From that, select _Material_, and then all my pieces looked acrylic.
+
+[![Image 89: Linking my one acrylic puzzle piece to all the other pieces in terms of Material](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_linked_material.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_linked_material.jpg)
+
+Linking my one acrylic puzzle piece to all the other pieces in terms of Material
+
+To make it look as if some of my puzzle pieces contained lights, I first looked into the _Emission_ material. Using [this](https://www.youtube.com/watch?v=qS1ZbPkNCYM) video I saw that it’s as easy as just selecting the material, choosing a color and a strength, and done.
+
+[![Image 90: Making one of the pieces become a light emitting object by applying the “Emission” material](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_emission.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_emission.jpg)
+
+Making one of the pieces become a light emitting object by applying the “Emission” material
+
+However, I didn’t quite like the result enough. It didn’t quite capture the idea that an LED was hidden inside. So I removed the material and instead tried to hide a tiny colored point light _into_ two pieces. You add lights with `SHFT+A` just like with bodies. There are four types of lights to choose from; sun, point, area and spotlight. I played with all of them while setting up my scene, but for these puzzle pieces I went with a point light. You can adjust the settings of your selected light by going into the _Object Data Properties_ setting in that column of tabs along the right (it looks like a green lamp icon when the light is selected).
+
+[![Image 91: Adjusting the settings of a light in the lights' “Object Data Properties”](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_light_properties.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_light_properties.jpg)
+
+Adjusting the settings of a light in the lights' “Object Data Properties”
+
+I created two point lights and moved them into the pieces, which made it look more like what I had in mind, as if an LED was present within the pieces:
+
+[![Image 92: Embedding two point lights into two pieces made them look like LEDs inside the pieces](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_acrylic_lights.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_acrylic_lights.jpg)
+
+Embedding two point lights into two pieces made them look like LEDs inside the pieces
+
+Around this point I experimented quite some time with the render settings to try and get rid of those pixelated _fireflies_ which I had a lot due to all the transparent materials. Most things I tried I already explained earlier in the _Rendering_ section above.
+
+I also experimented a lot with the lighting of my scene. Using different types of lights, different colors, different placements. My final, using a yellow, pink and blue area light is of course far from perfect, I’m not a lighting specialist, but I felt it made the scene look somewhat interesting.
+
+[![Image 93: A far-away look at the scene I’d set up with 3 colored lights around the puzzle box](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_lighting_scene.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_lighting_scene.jpg)
+
+A far-away look at the scene I’d set up with 3 colored lights around the puzzle box
+
+#### Final (Static) Result in Blender
+
+Below you can see the final rendered result of my puzzle box in Blender. It’s far from photorealistic, but with only 1 day of experimenting I’m happy with it.
+
+[![Image 94: The final rendering result from Blender](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_final_static.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_final_static.jpg)
+
+The final rendering result from Blender
+
+The final `.blend` file is almost 10Mb so I hope it’s ok that I’m not sharing that file here.
+
+#### Animating the Scene
+
+It would be a shame to stop there with Blender, because it can do really nice things with animations too. The _Timeline_ editor is generally all the way at the bottom of the window. I dragged it up to be able to see it. During last Sunday’s Blender tutorial by Ferdi we’d seen a short into into animation.
+
+You basically set the blue “current frame” line in the _Timeline_ to the point you want something to happen. Then you place, move, rotate or whatnot the object into the position that you want. Next, press `I` which will open up the _Insert Keyframe_ window, and select what type of keyframe to add. Just location, or location _and_ rotation, etc. Now move the current frame to another position, readjust the object and add another keyframe. By pressing the spacebar the animation will run and you’ll see you object moving/scaling/rotating between the two keyframes that you set.
+
+[![Image 95: Select the object, hit “I” and select which type of keyframe to add to the timeline](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_keyframe.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_keyframe.jpg)
+
+Select the object, hit “I” and select which type of keyframe to add to the timeline
+
+I switched my _Shader Editor_ to the _Graph Editor_ which let’s you have more control over the exact path that is taken to move/scale/etc. the keyframes. Even though the general process is quite simple, it did require quite some fiddling and going back to earlier positions before I had something working as I wanted it to. I never figured out how to set locations _exactly_ for example. I first moved my whole puzzle box up, and then moved the base down first, and then the wooden top next, and the pieces last. But I had to manually fiddle to place the wooden top back onto the acrylic bottom (or even to exactly place the bottom onto the place), there was no snapping, and in the graph editor I didn’t see how to add exact numbers…
+
+You can actually add a keyframe to about _anything_. Right-click while you’re inside the _Power_ of the light, and you can add a keyframe for that (I dimmed my light throughout the animation). And you can of course add a keyframe for the camera position as well by pressing `I` while the camera is selected (move it and press `I` again to add another keyframe).
+
+I never figured out how to easily change the value that was set with a keyframe. Yes, I could drag the line up or down in the graph editor, but this was a slow going process (the editor let me move the power of the light up by about 20W per drag upwards, whereas I wanted a 200W change).
+
+Due to all the fireflies that my renders were giving, and to speed up the rendering time, since for an animation I had to render many images, I completely changed my scene. I switched all the transparent materials to glossy dark acrylic, made a few random pieces have the _Emission_ material, and deactivated all the lights from my scene, so the glowing pieces would stand out.
+
+I animated the bottom coming in from the top, then the wooden top, and the puzzle pieces coming in last. I did have some weird effect where my scene was all dark when I saw it while working on the scene, but when _rendered_ there were lights again. Some experimenting showed that somehow the three lights that I’d placed for the original render, but deactivated (clicking the “eye” icon next to the lights in the _finder_ window), where back again in the _final_ render. At that time I just removed the lights all together. However, a few weeks later I had this issue again, and found the solution. The little “eye” icon is only for the _3D Viewport_, but if you click on the little _Filter_ icon above the finder window, you can also select a little “camera” icon. This will add the camera icon next to each object and by deactivating it, it will not show up in the render (see \[this\] video).
+
+I also learned that the “World” also has an ambient light, you can set the strength and color of this within the _World Properties_ tab (the red Earth icon).
+
+[![Image 96: Although I deactivated all the lights, they still appeared in the final render](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_lights_still_present.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_lights_still_present.jpg)
+
+Although I deactivated all the lights, they still appeared in the final render
+
+One final thing to add to my animation was the staggered “falling” of the puzzle pieces. I didn’t want to have to adjust the keyframe of each piece manually. Thankfully, I found a Blender add-on called [_Commotion_](https://github.com/mrachinskiy/commotion) that creates this for you. It was a little bit of a search for a [video](https://www.blendernation.com/2019/09/08/commotion-addon-blender-2-8x/) that showed how to use it in a way that I could understand. The _Commotion_ settings where hidden along the right side of the _3D Viewport_. I had set up a general keyframe for all puzzle pieces at some height at frame 0 and all down on the puzzle box at frame ±100. I selected all my pieces, and within the _Commotion_ fold-out set _Order by_ to _Random_ and clicked _Offset Animation_.
+
+[![Image 97: Using the “Commotion” add-on to stagger my puzzle pieces](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_commotion.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_commotion.jpg)
+
+Using the “Commotion” add-on to stagger my puzzle pieces
+
+And that was it! This turned the simple two keyframes of all the puzzle pieces into a whole mess of keyframes. I wasn’t sure how easy it was to make changes afterwards, but I didn’t care since the effect was just what I wanted.
+
+[![Image 98: The puzzle pieces moving into the box in a staggered fashion](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_staggered_pieces.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_staggered_pieces.jpg)
+
+The puzzle pieces moving into the box in a staggered fashion
+
+I downsized the resolution of the rendering area, used less samples and light bounces to have the rendering go faster per image. I installed Blender on the (much more powerful) PC of my partner, and did the animation render there. You can render an animation by foing to _Render_ -> _Render Animation_. Using `ffmpeg` I stitched the 130 pngs together into a short video, using:
+
+```
+$ ffmpeg -r 24 -f image2 -s 840x560 -start_number 15 -i %04d.png -vcodec libx264 -crf 25 -pix_fmt yuv420p video.mp4
+```
+
+You can find more on this command [here](https://hamelot.io/visualization/using-ffmpeg-to-convert-a-set-of-images-into-a-video/). And the final animation turned into this:
+
+Animating the puzzle box and pieces into place
+
+The scene turned out too dark, but pretty cool what you can make in a short-ish amount of time! I wish I would’ve had a whole other week to play with Blender (๑•̀ㅂ•́)ง✧
+
+#### Animating with Physics
+
+Another pretty darn cool thing of Blender is that you can animate by using _physics_! [This](https://www.youtube.com/watch?v=KtjJfWlQ8oE) video on physics in Blender with multiple objects was extremely useful to help me set up something simple. Every time I thought I had seen enough of the video and tried the next step myself, I ran into some weird result, by just watching the video a minute further, he’d already explained and fixed that exact issue.
+
+**I wanted to let my puzzle pieces fall down onto the puzzle box.**
+
+I selected my plane, puzzle bottom and wooden top, went into the _Physics Properties_ tab along the right, selected _Rigid Body_ and set these to _Passive_. That makes sure that other (rigid) bodies know that they’re there, but there not moving themselves (I think).
+
+[![Image 99: Giving physics properties to my objects](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_physics_properties.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_physics_properties.jpg)
+
+Giving physics properties to my objects
+
+I selected all my puzzle pieces and moved them up collectively (with `g+z`). Next I randomly selected pieces to offset them somewhat more, making the falling down of the pieces look more dynamic.
+
+[![Image 100: Randomly offsetting the height of some pieces for amore dynamic falling down](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_start_position_falling_pieces.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_start_position_falling_pieces.jpg)
+
+Randomly offsetting the height of some pieces for amore dynamic falling down
+
+You can make all the puzzle pieces become an _active_ rigid body, by going into _Object_ (along the top of the _3D Viewport_), then _Rigid body_, and select _Add Active_. I then changed one piece to become more bouncy. Like we’ve seen before, when I select all the pieces, but the one I’d just set as the _last_ one (you can see that it’s lighter orange), Blender probably has _some_ way to duplicate settings across all. Here you need to go into _Object_ and _Rigid body_ again, and this time select _Copy from Active_.
+
+And that was really all I had to do, Blender’s physics engine takes care of the rest. Just press the _spacebar_ to see the animation.
+
+I looked closer towards the end of the animation and saw my puzzle pieces falling _through_ the wooden top! Apparently, I hadn’t actually selected my wooden top to set it up as a passive rigid body, and thus it was being ignored by the falling pieces. After fixing this the pieces nicely fell within the box (I also set its shape to _Mesh_ instead of _Convex Hull_).
+
+[![Image 101: Puzzle pieces were falling through the wooden top!](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_pieces_through_box.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_pieces_through_box.jpg)
+
+Puzzle pieces were falling through the wooden top!
+
+I also randomly rotated my puzzle pieces, so they wouldn’t all fall down flat. This [video](https://www.youtube.com/watch?v=S1XiO-TCxNc) was all I needed. **Make sure that your timeframe is set at zero.** Select all the pieces (make sure one is light orange, the “active” one), then in _Object_ (in the top-left of the _3D Viewport_) select _Transform_ and then _Randomize Transform_. Then it might look that nothing happened, but a little tab has appeared along the bottom-left of the _3D Viewport_. Open this and play with the numbers. I only left _Randomize Rotation_ on and set the _x_, _y_, and _z_ values to about 30° - 60°. Interestingly, this made some of the pieces scatter outward in the air already when I played the animation, because the rotation made them bump into each other.
+
+[![Image 102: Randomizing the rotation of all my pieces](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_randomize_rotation.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_randomize_rotation.jpg)
+
+Randomizing the rotation of all my pieces
+
+When I set my partner’s pc to render again and checked the result at around frame 40, I was still looking at an empty puzzle box (⊙０⊙) A [quick google](https://blender.stackexchange.com/questions/186523) revealed that I had to “bake” the simulation into the scene first. Go to _Scene Properties_ along the right, then make sure _Rigid Body World_ is active. Within that, under _Cache_ press _Delete All Bakes_ and then _Bake All Dynamics_. Now you can render the animation (it feels rather obscure to hide this important step away like that).
+
+[![Image 103: Baking the dynamics so they show up in the animation rendering](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_bake_dynamics.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_blender_bake_dynamics.jpg)
+
+Baking the dynamics so they show up in the animation rendering
+
+Rendering these 120 frames took a lot longer than the dark animation before, because of the transparent pieces and glass plate. I also set the rendering settings quite low so it wouldn’t take hours, thus the light reflection isn’t awesome, and there are still fireflies. Here is the final result where the pieces were not rotated, and most still fall neatly into the box:
+
+Animating the puzzle pieces falling into the box
+
+And below is the version where I randomly rotated the pieces, which made the pieces bounce off each other in the air and became in a more scattered result:
+
+Animating the puzzle pieces falling into the box while starting out randomly rotated
+
+A note on _parenting_ again. Because I parented the two lights to the two puzzles pieces, they remained fixed _inside_ the puzzle pieces while falling and bouncing, really useful. But now I really need to stop playing with Blender (\*≧▽≦)
+
+#### Final Thoughts on Blender
+
+Blender is truly amazing in terms of its power to create photo realistic renderings (that I’ve seen online) and animations. It was also easy to import my model from Fusion 360 to continue with in Blender. It wasn’t easy to progress though. I had to google for every little thing, and even then you sort of just have to _know_ that it’s possible, or kind of know what to google for, because there is a lot hidden away behind menus or short keys. But definitely a tool I wouldn’t mind spending (a lot) more time with.
+
+### Antimony | Stretch Goal
+
+When I saw this node-based process being demonstrated by Neil during Wednesday’s class, I was intrigued. I added it to my “try-out” list for the week as a possible stretch goal, and thankfully found the time to dive a little into it.
+
+I installed [Antimony](https://github.com/mkeeter/antimony) and watched the (super) short [tutorial](http://www.mattkeeter.com/projects/antimony/3/) on the creator’s website.
+
+When you open the tool it’s very bare and you don’t see anything but blackness and a small axis. I placed the node window and resulting model window side by side, left and right respectively. You can add nodes by right-clicking in the node window and selecting what you want.
+
+[![Image 104: The starting set-up of Antimony and how to add nodes](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_start_screen.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_start_screen.jpg)
+
+The starting set-up of Antimony and how to add nodes
+
+#### Creating Cylinders
+
+Although you can start with 3D shapes, I found that the model window becomes a bit cluttered with all the blue lines that represent your starting 3D shapes. It’s can be handier to start with a 2D circle and then _extruding_ it upward.
+
+There are _very_ few tutorials to be found on Antimony, and funnily enough, most are attached to the Fab Academy (perhaps because the creator, Matt, used to be a student of Neil I think? And Neil has added quite some code to Antimony). The “Script: Dimensions” section from [this](http://fabacademy.org/2019/docs/FabAcademy-Tutorials/week02_computer_aided_design/antimony_tabs.html) Fab Academy tutorial was very helpful to figure out how to work parametrically and create a node to hold your dimensions.
+
+[![Image 105: Having created a “dimensions” node and a 2D circle](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_circle.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_circle.jpg)
+
+Having created a “dimensions” node and a 2D circle
+
+The code for the dimensions node, which you can access by clicking the hamburger icon in the top-right of the node, looked as follows:
+
+```
+import fab
+
+title('Dimensions')
+
+input('r', float)
+input('h_acryl', float)
+input('h_wood', float)
+input('r_hex', float)
+```
+
+By clicking in the top-left of the node, you can change the “name” of the node. I changed the dimensions node to `dim` and thus could use the values that I’d set in any other node by `dim.h_wood` for example. You can also connect the yellow squares to the right of the dimension that you want to use and connect it to the node that you want to use it (see the yellow connection in the image above). However, I find that creates a _lot_ of messy lines real fast, and I don’t think that method lets you do any math, such as saying that the wooden cylinder should be extruded from a `z_min` of `dim.h_acryl` up to a `z_max` of `dim.h_acryl + dim.h_wood`.
+
+[![Image 106: Two cylinders, and starting on the hexagonal cuts](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_hexagon.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_hexagon.jpg)
+
+Two cylinders, and starting on the hexagonal cuts
+
+I created a hexagon and used some translations and _difference_ functions (from CSG: _Constructive Solid Geometry_)to cut away the hexagon through the entire “wooden” top, and partway through the “acrylic bottom”. I found out that using a difference of a 2D hexagon on a 3D cylinder will cut all the way through it. To only cut partway, I had to first extrude the 2D hexagon into a 3D version, translate it upward so it would be positioned correctly for the part-way cut, and then do a difference on the 3D cylinder and 3D hexagon. You can see these steps in the node connections in the image below (specifically the bottom four connected nodes):
+
+[![Image 107: The nodes links to cut a 3D hexagon partly from the 2D cylinder](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_partway_hexagon_cut.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_partway_hexagon_cut.png)
+
+The nodes links to cut a 3D hexagon partly from the 2D cylinder
+
+#### Cubby Holes From Scratch
+
+For the cubby holes, I had to basically disassemble the steps that I’d already used in OpenSCAD into Antimony nodes. I looked at my OpenSCAD script and started constructing the nodes; a circle, intersecting with two rectangles, one of which was rotated, then rotating the result halfway back to get it centered.
+
+[![Image 108: Creating a slice of a circle took quite some nodes (the group of 6 separated nodes)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_pie_slice.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_pie_slice.jpg)
+
+Creating a slice of a circle took quite some nodes (the group of 6 separated nodes)
+
+I was kind of surprised at how many steps that had taken. And how fast my node window was getting cluttered, and I was starting to forget what specific other nodes were doing. I could really use some way of annotation or grouping nodes into a “module” or function I guess.
+
+To finish the cubby holes I subtracted a square from the center of the pie slice, extruded the result, translated it upward. Each of these simple steps needed a new node though. Using the two hexagon cylinders I applied a difference with the cubby hole and had removed one hole.
+
+[![Image 109: Having removed one cubby hole](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_removed_cubby_hole.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_removed_cubby_hole.jpg)
+
+Having removed one cubby hole
+
+To remove 4 holes, I wasn’t completely sure what the best way forward was. Perhaps add 3 rotation nodes and add all those to the/a difference node as well? However, I’d seen an interesting use of an _array_ node in an example file from the Antimony Github repo. I created an array node, and set the `n` to 4, which created four copies of my cubby holes along. However, they ran along 360°, and I couldn’t see an option to set a start and/or end angle. At this point though I felt that I had played enough with Antimony to get a little feeling for it, and just upped the number to create 6 holes around the entire perimeter, and called it finished (I couldn’t see any way to get my spirograph SVG or math in there…).
+
+#### Final Result
+
+I did actually clean up the model a little it and removed some nodes that turned the bottom cylinder into a shell with a hexagon take out of it. The nodes were getting too messy and I was pretty sure I’d not be able to figure out the logic if I’d ever open the file again.
+
+There is an _Export Mesh (.stl)_ node, to which I plugged my model into. It asked for the number of voxels, which I left to the default `13`. However, when I checked the resulting `.stl` file it was 14Mb big! And furthermore, it was just one big cylinder! All the holes were gone (O\_O) No idea why that happened, but both of those are the reason why I’m not including the `.stl` file here, but only the Antimony `.sb` file.
+
+Below you can see the final resulting model and the node structure I used to create it.
+
+[![Image 110: The final model in Antimony](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_final_model.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_final_model.png)
+
+The final model in Antimony
+
+[![Image 111: The final node structure in Antimony, with the “two cylinders and (semi) cut out hexagon” flow at the top and the “cubby hole” flow at the bottom](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_final_nodes.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_final_nodes.png)
+
+The final node structure in Antimony, with the “two cylinders and (semi) cut out hexagon” flow at the top and the “cubby hole” flow at the bottom
+
+*   Final Antimony `.sb` file | [sb file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_final.sb)
+
+#### Fstl an STL Viewer
+
+The creator has made another nifty tool called [_fstl_](https://www.mattkeeter.com/projects/fstl/) for viewing stl files. There is no one-step way to install it / get the app. The [GitHub repo](https://github.com/fstl-app/fstl) does tell you the steps (for Mac OS). However, there is no `fstl.pro` file in the entire folder to be able to run `qmake ../qt/fstl.pro`. Looking at the issues of the repo I saw something about “having to update the README for Mac OS, just like was done for the Linux set-up steps”. I thus checked the Linux set-up, which used the line `cmake ..` instead. Ok, installed `cmake` with `homebrew install cmake`, followed the rest of the set-up. The `fstl.app` had been created, tried to open it. Aaaand was completely shut down by Big Sur’s tightened security (ᗒᗣᗕ)՞
+
+#### Final Thoughts on Antimony
+
+I thought it was interesting, and the examples were quite cool to have been created in so few steps. However, I _really_ needed more documentation. It was really unclear what some of the more obscure nodes would do, or how you should/could use them. Sure, I understand _scale_,_translate_, and so one, but _array_ wasn’t quite clear until I saw an example. Plus it is still completely unclear how I might use the _script_ node to so some more complex things (spirographs maybe??).
+
+I also found my node window to get really cluttered and unintelligible quite fast. I’m sure that was partly because I was doing things in a roundabout way, but I wonder if I’m just too used to the verbose and linear way of writing code?
+
+I do whish that the creator had chosen a more unique name (\*^▽^\*)ゞ Since the tool doesn’t seem to have really been picked up, it’s quite a bit difficult to find documentation on it, and the fact that antimony is a chemical element, and the name of several other tools, shows lots of non-relevant pages in many search results.
+
+Furthermore, it’s no longer under active development (it’s in [“long-term maintenance mode”](https://github.com/mkeeter/antimony/issues/205#issuecomment-484271273)). The creator seems to have moved on if I look at all the [new projects](https://www.mattkeeter.com/projects/) that he’s worked on since 2015. The combination of this, with the fact that it hasn’t widely been picked up, therefore making it hard to find help online, marks this as a tool for me that I wouldn’t dive any deeper into.
+
+### SolidWorks | Bonus
+
+I’m calling this a bonus, because I only have the final files and end result. During Thursday evening my partner _really_ wanted to show me [SolidWorks](https://www.designsolutions.nl/SOLIDWORKS-3d-cad) (from the same company as xDesign), the main CAD tool that he’d used during his university years. I proposed to make a cookie jar with different elements, such as a lid. And so in about an hour we sat behind his pc and worked together to create the jar, trying different ways to set up each element. It wasn’t the right time and vibe to take process screenshots though. Furthermore, I won’t be using this tool any further, since I don’t have a license myself, and I’m not planning on using his (Windows) PC during class. But below is the final rendering of our cookie jar! Pretty darn good rendering btw O.O
+
+[![Image 112: The very shiny cookie jar I created with my partner](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_solidworks_cookie_jar.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_solidworks_cookie_jar.jpg)
+
+The very shiny cookie jar I created with my partner
+
+If you look closely there’s actually a physical impossibility in this design, except if glue is used (\*^▽^\*)ゞ
+
+It’s a powerful took that seems quite straightforward to use to build things (it did take some time to figure out the rendering). However, I didn’t like the fact that I had to create all three elements of the jar (base, lid, top knop) separately instead of making them all from scratch in a single overview. Creation in one overview just makes it easier to see how the elements would relate to each other and relate the different dimensions that need to fit together.
+
+Reflections
+-----------
+
+A very busy week, with lots of new tools and concepts to learn.
+
+#### What went wrong
+
+Lots went wrong while learning all of the tools. On average I had ±60 tabs open in my browser to google solutions about the specific tool I was trying at that time. However, I’ve talked about most of them above, and this blog is long enough as it is, so I won’t repeat myself here. Nothing major went wrong thankfully.
+
+#### What went well
+
+Although it took basically the entire week of my “awake time” to test and document all the tools, I’m very happy that I _did_ manage to test quite some tools. It has really broadened my view on CAD tools, and which I would use under what circumstances.
+
+#### What I would do differently
+
+Although I tried many tools I did them sequentially. Trying one up till the point that I felt I had a good enough opinion on it, before moving on. In hindsight, I should’ve made an early start with _all_ the tools that I wanted to try, document it, and then continue a little further with the tools I wanted to explore more, etc, until the week was up.
+
+#### Wrapping up
+
+I don’t think I’ve thoroughly tried so many new (elaborate) software tools in so few days ✖\_✖ , but it was definitely a very interesting exercise. I really liked _Fusion 360_, was intrigued by _OpenSCAD_, highly frustrated by _xDesign_. This is probably also the longest blog post I’ve ever written \[¬º-°\]¬
+
+All Files Together
+------------------
+
+*   2D Vector
+    *   The JavaScript code | [zip file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_puzzle.zip)
+    *   The raw SVG | [svg file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_puzzle_raw.svg)
+    *   The cleaned-up (with Illustrator) SVG | [svg file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/2D_vector_puzzle.svg)
+*   Fusion 360
+    *   Final Fusion 360 STL files of the 4 components | [zip file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_stl.zip)
+    *   Separate SVG files used for the hexagon and puzzle piece sketches | [zip file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_fusion360_puzzle_svgs.zip)
+*   OpenSCAD
+    *   The different components as separate STL files | [zip file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_STL.zip)
+    *   The final OpenSCAD file and spirograph SVG | [zip file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_files.zip)
+    *   The spirograph bowl OpenSCAD and STL files | [zip file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_openscad_spirograh_bowl.zip)
+*   xDesign
+    *   The model as an STL file | [stl file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_xdesign_final.stl)
+*   Antimony
+    *   Final Antimony file | [sb file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/3D_antimony_final.sb)

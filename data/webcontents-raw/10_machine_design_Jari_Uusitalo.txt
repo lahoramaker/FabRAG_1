@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Fab Academy 2018 - Jari Uusitalo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="Style/Fabstyle.css">
+
+</head>
+<body>
+    <div class="wrap" id="start">
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="finalproject.html">Final Project</a>
+        </div>
+       
+        <div class="content">        
+          <h2><a href="http://academy.cba.mit.edu/classes/mechanical_design/index.html" target="_blank">
+              Week 16: Mechanical Design
+              </a></h2>
+            
+              <br>
+            <div class="assignbox">
+              
+                <p>
+                <i><b>Group project:</b><br>
+                 - design a machine (mechanism+actuation+automation), including the end effector
+                 - build the passive parts and operate it manually
+                 - document the group project and your individual contribution
+
+                <br>
+                
+                </i></p>
+            </div>
+                
+              
+            <div class="answer">
+                
+               
+                
+                <p>My task for this week was to build laser cutting images with Inkscape, using Ari's 3D model as basis. I imported the model, and used measuring tool for dimensions.</p>
+                <div class="imgbox">
+                    <img class="answerimgs" src="Images/week_16/fusion_1.jpg">
+                    <div class="imgoverlay">
+                        <div class="imgtxt" >The Machine - 3D</div>
+                    </div>
+                </div>
+                <br> 
+               
+               
+                <p>On Inkscape, I installed <a href="https://github.com/paulh-rnd/TabbedBoxMaker">Tabbed Box Maker</a> extension, by simply copying the files to inkscape/shares/extensions folder.</p>
+                
+                <p>Under extension, laser tools, selected tabbed box maker.From opening windows I could select dimensions, tab width, kerf, joint clearance etc. </p>
+                <div class="imgbox">
+                    <img class="answerimgs" src="Images/week_16/tabbed_box_maker.jpg">
+                    <div class="imgoverlay">
+                        <div class="imgtxt" >Tabbed options</div>
+                    </div>
+                </div>
+                <br> 
+                <p>The extension could only help me out so far, and had to manually split boxes to make the design as I wanted. Measuring the 3d model and then applying values to inkscape. After everything was done, I placed them so we could cut this in 1 go.</p>
+                
+                <div class="imgbox">
+                    <img class="answerimgs" src="Images/week_16/inkscape_1.jpg">
+                    <div class="imgoverlay">
+                        <div class="imgtxt" >Main body layout</div>
+                    </div>
+                </div>
+                <br> 
+                
+                <p>Big picture(group efforts) can be found <a href="http://fab.academany.org/2018/labs/fablaboulu/machine_week_group1.html" target="_blank">here</a>.</p>
+                
+                <h3>Files</h3>
+                <a href="Files/week_16/Machine_all.svg">All Machine parts (.svg)</a><br>
+                <a href="Files/week_16/main_body.pdf">main_body.pdf</a><br>
+                <a href="Files/week_16/lift.pdf">lift.pdf</a><br>
+                <a href="Files/week_16/3rd_axis.pdf">3rd_axis.pdf</a><br>
+            </div>
+            <a href="#start"><img class="up" src="Images/arrow.png"></a>    
+        </div>
+ 
+        <div class="footer">
+            <a href="http://www.fabacademy.org">
+            <img style=float:right src="Images/fab-academy-trans3.png" class="image2">
+            </a>
+        </div>
+    </div>
+</body>
+</html>

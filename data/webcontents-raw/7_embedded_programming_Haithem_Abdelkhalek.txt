@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="FAB ACADEMY 2018 STUDENT SITE">
+    <meta name="author" content="HAITHEM ABDELKHALEK FAB ACADEMY SITE">
+
+    <title>FAB ACADEMY 2018 - HAITHEM ABDELKHALEK</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">HAITHEM ABDELKHALEK</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+           
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ASSIGNMENTS
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+               
+               <a class="dropdown-item" href="week2.html">PROJECT MANAGEMENT</a>
+                <a class="dropdown-item" href="week3.html">COMPUTER-AIDED DESIGN</a>
+                <a class="dropdown-item" href="week4.html">COMPUTER-CONTROLLED CUTTING</a>
+                <a class="dropdown-item" href="week5.html">ELECTRONICS PRODUCTION</a>
+                <a class="dropdown-item" href="week6.html">SCANNING AND PRINTING</a>
+                <a class="dropdown-item" href="week7.html">ELECTRONICS DESIGN</a>
+                <a class="dropdown-item" href="week9.html">COMPUTER-CONTROLLED MACHINING</a>
+                <a class="dropdown-item" href="week8.html">EMBEDDED PROGRAMMING</a>
+                <a class="dropdown-item" href="week10.html">MOLDING AND CASTING</a>
+                <a class="dropdown-item" href="week11.html">INPUT DEVICES</a>
+                <a class="dropdown-item" href="week12.html">OUTPUT DEVICES</a>
+                <a class="dropdown-item" href="week13.html">INTERFACE AND APPLICATION PROGRAMMING</a>
+                <a class="dropdown-item" href="week14.html">NETWORKING AND COMMUNICATION</a>
+                <a class="dropdown-item" href="week15.html">MECHANICAL DESIGN</a>
+                <a class="dropdown-item" href="week16.html">MACHINE DESIGN</a>
+                <a class="dropdown-item" href="week17.html">WILDCARD (COMPOSITES)</a>
+                <a class="dropdown-item" href="week18.html">APPLICATION AND IMPLICATIONS</a>
+                <a class="dropdown-item" href="week19.html">INVENTION, INTELLECTUAL PROPERTY AND INCOME</a>
+                <a class="dropdown-item" href="week20.html">PROJECT DEVELOPMENT</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="finalproject.html">FINAL PROJECT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mycontacts">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+        
+    <!-- Page Content -->
+    <div class="container">
+        
+    <!-- Page Heading/Breadcrumbs -->
+        
+      <h1 class="mt-4 mb-3">WEEK 9
+        <small class="subhead1"> - EMBEDDED PROGRAMMING</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">HOME</a></li>
+        <li class="breadcrumb-item active">ASSIGNMENTS</li>
+        <li class="breadcrumb-item active">EMBEDDED PROGRAMMING</li>
+      </ol>
+           
+        <!-- Row with side image -->
+        <div class="row"><div class="col-sm-12"><br><h3>INTRODUCTION</h3></div></div>
+        <div class="row">
+            <div class="col-sm-12" style="text-align: justify;">
+                      This week is a complementary work to week 7 where we learned the Electronics Design and we created the HELLO Board, Now it is time to program the board to do something. This week also is the time to learn how to read a datasheet which is an essential and basic skill to be able to design and program any microconroller.
+                <br><br> 
+            </div>
+        </div>  
+        
+           <!-- two cards side by side -->
+        <br>
+        <div class="row">
+        <div class="col-lg-12 portfolio-item">
+          <div class="card h-100" id="description">
+            
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Assignment Description</a>
+              </h4>
+              <Div class="card-text">
+                <UL>
+                    <li>  Read a microcontroller data sheet. </li> 
+                    <li>  Program your board to do something, with as many different programming languages and programming environments as possible. </li> 
+                    <li>  Optionally, experiment with other architectures. </li>
+                </UL>
+                </Div>   
+            </div>
+          </div>
+        </div>
+        </div> 
+        <div class="row">
+        <div class="col-lg-6 portfolio-item">
+          <div class="card h-100" id="outcome">
+            
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Learning Outcomes</a>
+              </h4>
+              <div class="card-text">            
+               <UL>
+                 <li> Identify relevant information in a microcontroller data sheet.</li>
+                 <li> Implement programming protocols.</li>
+                </UL> 
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 portfolio-item">
+          <div class="card h-100" id="haveu">
+            <a href="#"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Have you (Checklist)</a>
+              </h4>
+              <p class="card-text">
+               
+                <UL style="list-style-type: none;">
+                 <li> <strong>&#10004</strong> Documented what you learned from reading a microcontroller datasheet?</li>
+                 <li> <strong>&#10004</strong> Programmed your board?</li>
+                 <li> <strong>&#10004</strong> Described the programming process/es you used?</li>
+                 <li> <strong>&#10004</strong> Included your code?</li>
+                </UL>      
+              </p>
+            </div>
+          </div>
+        </div>
+        </div> 
+       
+      
+    <div class="row"><div class="col-sm-12"><br><h3>STEPS PERFORMED:</h3></div></div>
+    <div class="row">
+            <div class="col-sm-12"><br><span style="color:#0B3C5D; font-weight: bold;"><strong>READING THE DATA SHEET</strong></span></div>
+        </div> 
+    <div class="row" id="row1">
+            <div class="col-sm-12"><br>              
+                
+                <ul>
+                    <li> My first step was to go through the tutorial provided in <a href="https://www.sparkfun.com/tutorials/223"> THIS LINK</a> to know more about what is an electronic component datasheet and what are the typical contents that can usually be found in a datasheet. Then I downloaded the ATTiny44 <a href="source_files/w9/doc8183.pdf"> DETAILED DTATSHEET</a> and <a href="source_files/w9/8183S.pdf"> SUMMARY DATASHEET</a>.<br> </li> 
+                    <li> <strong> ELECTRONIC COMPONENT DATASHEET</strong> is simply the ultimate reference and instruction manuals for the electronic component. It explains exactly what a component does and how to use it.</li>
+                    <li>Typical contents that I could find in the ATTiny44 datasheet were:  a summary of the part’s function and features, Pinout functions and descriptions, absolute maximum ratings and recommended operating conditions and packaging and layout considerations.</li>
+                    <li> The summary datasheet was 22 pages and the detailed datasheet was 286 pages, I realized that like any reference it was crucila to identify what I need to lookup and go to find it out instead of reading the full datasheet. I went first very quickly through the summary datasheet (i.e: the 22 pages) and I decided that I will definitely need to know: THE GENERAL FETAURES, THE PINOUTS and THE PIN DESCRIPTIONS. <br></li>
+                 
+               </ul>  
+                 <ul>
+                    <li> <STRONG>FEATURES:</STRONG> The ATTiny44 is high Performance, low Power 8-bit Microcontroller with advanced RISC architecture, I found the following very useful:</li>
+                     <ul>
+                        <li>2K/4K/8K Bytes of Flash Program Memory, 128/256/512 Bytes of Programmable EEPROM. 128/256/512 bytes SRAM.</li>
+                         <li>12 general purpose I/O lines, 32 general purpose working registers and 8-channel 10-bit ADC.</li>
+                         <li>Internal calibrated oscillator.</li>
+                         <li>Operating voltage between 1.8 ~ 5.5V.</li>
+                         <li>It has two kinds of ports: Port A pins are 8-bit bi-directional I/O port with internal pull-up resistors (pin names are from PA0 to PA7) and Port B pins are 4-bit bi-directional I/O port with internal pull-up resistors(pin names are from PB0 to PB3).</li>
+                     </ul>
+               </ul>  
+                 <ul style="list-style-type: none;"> 
+                         <li><img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_datasheet_01.jpg" alt=""><br></li>      
+                </ul>
+             </div>
+        </div>
+    <br>
+        <div class="row" id="row1">
+            <div class="col-sm-12"><br>              
+                
+                <ul>
+                    <li> The Pin diagram and the Pin description are what you need to know when you program the board to know how to address the pins in C language and also whether you can assign this pin in Input mode or Output mode.<br> </li> 
+               </ul>   
+                 <ul style="list-style-type: none;"> 
+                         <li><img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_datasheet_02.jpg" alt=""><br></li>     
+                         <li><img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_datasheet_03.jpg" alt=""><br></li>   
+                </ul>
+             </div>
+        </div>
+    <br>
+        
+    <div class="row">
+            <div class="col-sm-12"><br><span style="color:#0B3C5D; font-weight: bold;"><strong>PROGRAMMING THE BOARD</strong></span></div>
+    </div> 
+    <BR>
+    <div class="row" id="row1">
+            <div class="col-sm-12"><br> To learn and experience different methodologies to program the micro-controllers, I decided to try 2 different ways as follows:
+                <ul>
+                    <li><Strong>METHOD (1):</Strong> Using FAB ISP and Arduino IDE.</li>
+                    <li><Strong>METHOD (2):</Strong> Using FAB ISP and WINAVR.</li>
+                </ul>
+                <br>
+             </div>
+    </div>    
+    <div class="row">
+            <div class="col-sm-12"><br><span style="color:#000000; font-weight: bold;"><strong>METHOD 1 - USING FAB ISP AND ARDUINO IDE</strong></span></div>
+    </div> 
+    <div class="row" id="row1">
+            <div class="col-sm-12"><br>               
+                
+                <ul>
+                    <li> Connect the FAB ISP pins to the Hello board pins with each pin connected to its corresponding similar pin as follows:</li> 
+                    <ul>
+                        <li> MISO (in FAB ISP) -> MISO (in Hello Board)</li>
+                        <li> MOSI (in FAB ISP) -> MOSI (in Hello Board)</li>
+                        <li> SCK  (in FAB ISP) -> SCK  (in Hello Board)</li>
+                        <li> Vcc  (in FAB ISP) -> Vcc  (in Hello Board)</li>
+                        <li> GND  (in FAB ISP) -> GND  (in Hello Board)</li>
+                        <li> RST  (in FAB ISP) -> RST  (in Hello Board)</li>
+                    </ul>
+                    <li> Connect the FAB ISP to the usb Port and ensure it is detected by the PC.</li>
+                    <li> Connect the FTDI Cable to the FTDI header in the FTDI pins in the Hello-Echo Board.</li>
+               </ul> 
+            </div>
+        </div>
+        <div class="row" id="row1">
+            <div class="col-sm-6"><br>  
+                  <img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_connection_01.jpg" alt="">
+            </div>
+            <div class="col-sm-6"><br>  
+                  <img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_connection_02.jpg" alt="">
+            </div>
+        </div>
+        <div class="row" id="row1">
+            <div class="col-sm-12"><br>   
+                         <img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_connection_03.jpg" alt=""><br>      
+            </div>
+        </div>
+         <div class="row" id="row1">
+            <div class="col-sm-12"><br>   
+                         <img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_connection_04.jpg" alt=""><br>      
+            </div>
+        </div>
+        <div class="row" id="row1">
+            <div class="col-sm-12"><br>   
+                <ul>
+                    <li> Download Arduino IDE from <a href="https://www.arduino.cc/download_handler.php?f=/arduino-1.8.5-windows.exe"> THIS LINK</a> and install it</li>
+                    <li> I added support to the ATTINY44 to my arduino IDE by doing the following steps:</li>
+                    <ul>
+                        <li>Open File -> Preferences, Then, at the bottom of the pop up menu where you see "Additional Boards Manager URLs" copy and paste "https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json" and click OK</li>
+                        <li> Go to Tools > Board > Board Manager, scroll down to the bottom and you should find "attiny". Click the install button and the words "Installed" should appear when the task is completed. </li>
+                        <li> To confirm that you have added support for the boards, navigate to Tools > Board and you should see ATtiny at the bottom of the list.</li>
+                    </ul>
+                </ul>
+                <ul style="list-style-type: none;"> 
+                    <li><img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w7_boot_loader.gif"  alt=""><br></li> 
+                </ul>
+                 
+                 <ul>
+                    <li>To be able to upload a Sketch to the ATTINY 44, it is mandatory to burn the BOOTLOADER. So I followed the following steps:</li>
+                     <ul>
+                        <li>Select "USBtinyISP" under Tools > Programmer.</li>
+                        <li>Select ATtiny from Tools > Board.</li>
+                        <li>Select the specific ATtiny you are using (44/45/84/85) from Tools > Processor.</li>
+                        <li>Next select "20 MHz (External)" from Tools > Clock.</li>
+                        <li>select "Burn Bootloader" under tools and wait till it completes.</li>
+                    </ul>
+                </ul>
+                <ul style="list-style-type: none;"> 
+                    <li><img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_arduino_burn_bootloader.gif"  alt=""><br></li>
+                    
+                </ul>
+                <ul>
+                    <li>I identified the ATTINY44 Pins that the button and the led are connected to and their corresponding mapping to them in Arduino IDE to be:</li>
+                    <ul>
+                        <li>LED    -> ATTINY44 Pin = PA7  ->  Arduino Pin = 7 </li>
+                        <li>BUTTON -> ATTINY44 Pin = PB2  ->  Arduino Pin = 8 </li>
+                    </ul>
+                     
+                </ul>
+                <ul style="list-style-type: none;"> 
+                    <li><img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_attiny_pinout_01.png"  alt=""><br></li>
+                </ul>
+                <ul>
+                    <li>I wrote a simple code as shown below that blinks the led when the button is pressed and I uploaded it. I then disconnected the programmer and I ran the HELLO-ECHO board.</li>                 
+                </ul>
+                <ul style="list-style-type: none;"> 
+                    <li><img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_arduino_upload_01.jpg"  alt=""><br></li>
+                </ul>
+               
+             </div>
+        </div>
+    <br>    
+        
+        
+    <div class="row">
+            <div class="col-sm-12"><br><span style="color:#000000; font-weight: bold;"><strong>METHOD 2 - USING FAB ISP AND WINAVR</strong></span></div>
+    </div> 
+    <div class="row" id="row1">
+            <div class="col-sm-12"><br>               
+                
+                <ul>
+                    <li> Connect the FAB ISP pins to the Hello board pins with each pin connected to its corresponding similar pin as follows:</li> 
+                    <ul>
+                        <li> MISO (in FAB ISP) -> MISO (in Hello Board)</li>
+                        <li> MOSI (in FAB ISP) -> MOSI (in Hello Board)</li>
+                        <li> SCK  (in FAB ISP) -> SCK  (in Hello Board)</li>
+                        <li> Vcc  (in FAB ISP) -> Vcc  (in Hello Board)</li>
+                        <li> GND  (in FAB ISP) -> GND  (in Hello Board)</li>
+                        <li> RST  (in FAB ISP) -> RST  (in Hello Board)</li>
+                    </ul>
+                    <li> Connect the FAB ISP to the usb Port and ensure it is detected by the PC.</li>
+                    <li> Connect the FTDI Cable to the FTDI header in the FTDI pins in the Hello-Echo Board.</li>
+                </ul>
+                <br>
+            </div>
+        </div>
+        <div class="row" id="row1">
+            <div class="col-sm-12"><br>
+                <div class="alert alert-dark">
+                    <strong>WHAT IS FTDI AND WHAT FTDI CABLE I USED?</strong><br> The FTDI cable is a USB to Serial (TTL level) converter which allows for a simple way to connect TTL interface devices to USB. The I/O pins of this FTDI cable are configured to operate at 5V. The FTDI cable is designed around an FT232RQ, which is housed in a USB A connector. The other side of the cable is terminated with 6-pin connector with the following pinout: RTS, RX, TX, 5V, CTS, GND (RTS is the green cable and GND is black). <a href="https://www.sparkfun.com/products/9718" class="alert-link">CLICK HERE</a> to see the FTDI cable I used.
+                </div>
+            </div>
+        </div>
+        
+        <div class="row" id="row1">
+            <div class="col-sm-6"><br>  
+                  <img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_connection_01.jpg" alt="">
+            </div>
+            <div class="col-sm-6"><br>  
+                  <img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_connection_02.jpg" alt="">
+            </div>
+        </div>
+        <div class="row" id="row1">
+            <div class="col-sm-12"><br>   
+                         <img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_connection_03.jpg" alt=""><br>      
+            </div>
+        </div>
+         <div class="row" id="row1">
+            <div class="col-sm-12"><br>   
+                         <img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_connection_04.jpg" alt=""><br>      
+            </div>
+        </div>
+        <div class="row" id="row1">
+            <div class="col-sm-12"><br>  
+                <ul>
+                    <li> Download WINAVR from <a href="http://winavr.sourceforge.net/download.html"> THIS LINK</a> and install it</li>
+                    <li> In windows OS: Open System properties -> Click on Environment Variables -> Choose PATH variable and click EDIT and add the "C:\Winavr\bin"</li>
+                </ul>
+                <ul style="list-style-type: none;"> 
+                    <li><img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_winavr_path_01.jpg"  alt=""><br></li>
+                    <li><img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_winavr_path_02.jpg"  alt=""><br></li>
+                </ul>
+                  <ul>
+                    <li> I opened the code written by Mohammed Haggag in <a href="http://archive.fabacademy.org/archives/2017/fablabegypt/students/468/embedded-programming.html">THIS LINK</a> which was written based on  "hello.RGB.45.c" from "Output Devices" and "hello.button.45.c" from "Input Devices", then I modified it to blink when the button is pressed. </li>
+                    <li> I opened brackets editor and started to type the following code and saved it as .C file, the .C file can be downloaded from <a href="source_files/w9/button.led.44.c"> HERE</a>.</li>
+                </ul>
+                <ul style="list-style-type: none;"> 
+                    <li><img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_winavr_03.jpg"  alt=""><br></li>
+                </ul>
+                <ul>
+                    <li> In the barakets editor I created the following make file that can be found <a href="source_files/w9/Makefile">Here</a></li>
+                </ul>
+                <ul style="list-style-type: none;"> 
+                    <li><img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_winavr_make_03.jpg"  alt=""><br></li>
+                </ul>
+                 <ul>
+                    <li> In windows OS: Open the command prompt and go to the folder where the C file is saved then type the following commands.</li>
+                     <ul>
+                         <li>make program-usbtiny-fuses</li>
+                         <li>make program-usbtiny</li>
+                     </ul>
+                </ul>
+                <ul style="list-style-type: none;"> 
+                    <li><img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_winavr_fuses_01.jpg"  alt=""><br></li>
+                    <li><img style="padding:1px; border:1px solid #1D2731;" class="img-fluid rounded mb-4" src="images/w9_winavr_cmd_make_01.jpg"  alt=""><br></li>
+                </ul>
+                <ul>
+                    <li> Now disconnect the programmer and keep the FTDI cable connected to power up the board.</li> 
+                </ul>
+             </div>
+        </div>
+    <br>       
+         <div class="row" id="row3">
+            <div class="col-sm-12"><br>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/e0ZoRoD68qs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br>
+            </div>
+            </div> 
+        </div>
+        
+     
+   <!--    <div class="alert alert-warning"><strong>TBF! - </strong> TBF!.</div>     -->
+    <div class="row" id="row1">
+            <div class="col-sm-12"><br>
+                <div class="alert alert-dark">
+                    <strong>WHAT DID I LEARN?</strong><br> This week I learned a lot of useful information that added to my knowledge and will definitely help me to fulfill the tasks I will need in my proposed final project specially that it will involve 2 different boards with different input and output devices. Few points I learned this week can be summarized as follows: <br>
+                    <ul>
+                        <li>I learned how to read a datasheet, the typical contents in a datasheet and how to extract the important needed info.</li>
+                        <li>I learned that some of the ATTiny44 PINS has built-in pull-up resistors that can be configured to set the PIN to Signal to HIGH. This could have saved me a lot of hassle as in <a href="http://fab.academany.org/2018/labs/fablabegypt/students/haithem-abdelkhalek/week7.html">WEEK 7 ASSIGNMENT</a> I did design the ATTiny pins connected to the GND and I thought that since the PIN is connected to the GND then it will never sense any change in state. I even did a RE-WORK to the PCB to fix that... this was not needed.<br> </li>
+                        <li>I learned how to program a controller using ARDUNIO IDE and WINAVR.</li>
+                        <li>I learned the fact that using Arduino for programming introduce an overhead that is not needed  to the memory since it include the arduino libraries, this can be avoided when I used the C-language. so for more effecient use of memory I will use Embedded C.<br></li>
+                        <li> I learned how to write simple C code for micro-controller.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>   
+        <div class="row" id="row1">
+            <div class="col-sm-12"><br>
+                <div class="alert alert-warning">
+                    <strong>WHAT I STILL NEED TO LEARN?</strong>- I believe since the memory in the ATTiny is limityed and as I need more memory to save the IR codes in my final project, I believe I will need to learn more about how to store info in the EEPROM. <br>
+                    
+                </div>
+            </div>
+        </div>   
+      
+      
+      
+    <div class="row">
+            <div class="col-sm-12"><br><span style="color:#0B3C5D; font-weight: bold;"><strong>Files:</strong></span></div>
+        </div> 
+    <div class="row" id="row3">
+            <div class="col-sm-12"><br>
+                <ul>
+                    <li><a href="source_files/w9/w9_ino_sketch.ino">INO ARDUINO SKETCH.</a></li>
+                    <li><a href="source_files/w9/button.led.44.c">C FILE</a></li>
+                    <li><a href="source_files/w9/button.led.44.c.hex">HEX FILE</a></li>
+                    <li><a href="source_files/w9/Makefile">MAKE FILE</a></li>
+                    <li><a href="source_files/w9/8183S.pdf">ATTINY44 SUMMARY DATASHEET</a></li>
+                    <li><a href="source_files/w9/doc8183.pdf">ATTINY44 DETAILED DATASHEET</a></li>
+                </ul>
+                <br><br>
+            </div>
+         </div> 
+       
+     
+    <!-- /.container -->
+
+   
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+             
+      </div>
+    <!-- Footer -->
+    <footer>
+     <br> <div class="container">
+       <div class="row">
+           <div class="col-md-4 col-sm-6 col-xs-12">
+                  <span class="logo"><img class="footer_logo" src="images/logo_fab_2.png" alt=""></span>
+            </div>
+                
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="menu">
+                         <span>Useful Links</span>    
+                            <li><a href="http://archive.fabacademy.org/">Fab Academy</a></li>
+							<li><a href="http://fab.academany.org/2018/lectures.html">2018 Lectures</a></li>
+							<li><a href="http://archive.fabacademy.org/archives/2017/master/lectures/index.html">2017 Lectures</a></li>
+							<li><a href="http://fab.academany.org/2018/schedule.html">2018 Schedule</a></li>
+							<li><a href="http://docs.academany.org/FabAcademy-Tutorials/_book/en/">2018 Tutorials</a></li>
+                     </ul>
+                </div>
+           
+                <div id="mycontacts" class="col-md-4 col-sm-6 col-xs-12">
+                  <ul class="address" style="list-style-type:none">
+                        <span>My Contacts</span>       
+                       
+                        <li>
+                           <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:haithem.abdelkhalek@gmail.com">: My E-mail.</a>
+                        </li> 
+                        <li>
+                           <i class="fa fa-facebook" aria-hidden="true"></i> <a href="https://www.facebook.com/haithem.abdelkhalek">: My Facebook Account.</a>
+                        </li> 
+                        <li>
+                           <i class="fa fa-linkedin" aria-hidden="true"></i> <a href="https://eg.linkedin.com/in/haithemabdelkhalek">: My LinkedIn Account.</a>
+                        </li> 
+                   </ul>
+               </div> 
+           </div> 
+        </div>
+        
+    </footer>
+       <div class="footer-copyright" width="100%">
+        <div class="container-fluid" width="100%">
+            <strong>DEVELOPED BY: </strong> HAITHEM ABDELKHALEK 
+        </div>
+    </div> 
+    
+  </body>
+
+</html>

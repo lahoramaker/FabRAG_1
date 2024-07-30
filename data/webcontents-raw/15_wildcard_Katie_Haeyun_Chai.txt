@@ -1,0 +1,1236 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="My Fabacademy site">
+      
+      
+      
+        <meta name="author" content="Katie Chai">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>18. Wildcard week - Fab Academy Katie Chai</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#18-wildcard-week" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Fab Academy Katie Chai" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Fab Academy Katie Chai
+            </span>
+            <span class="md-header-nav__topic">
+              
+                18. Wildcard week
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../about/" title="About" class="md-tabs__link">
+          About
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../week01/" title="Assignments" class="md-tabs__link md-tabs__link--active">
+          Assignments
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../projects/final-project/" title="Projects" class="md-tabs__link">
+          Projects
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Fab Academy Katie Chai" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Fab Academy Katie Chai
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="About me" class="md-nav__link">
+      About me
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/agreement/" title="Student Agreement" class="md-nav__link">
+      Student Agreement
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Assignments
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Assignments
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week01/" title="1. Principles and practices" class="md-nav__link">
+      1. Principles and practices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week02/" title="2. Project management" class="md-nav__link">
+      2. Project management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week03/" title="3. Computer Aided design" class="md-nav__link">
+      3. Computer Aided design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week04/" title="4. Computer controlled cutting" class="md-nav__link">
+      4. Computer controlled cutting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week05/" title="5. Electronics production" class="md-nav__link">
+      5. Electronics production
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week06/" title="6. 3D Scanning and printing" class="md-nav__link">
+      6. 3D Scanning and printing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week07/" title="7. Electronics design" class="md-nav__link">
+      7. Electronics design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week08/" title="8. Computer controlled machining" class="md-nav__link">
+      8. Computer controlled machining
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week09/" title="9. Embedded programming" class="md-nav__link">
+      9. Embedded programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week10/" title="10. Molding and casting" class="md-nav__link">
+      10. Molding and casting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week11/" title="11. Input devices" class="md-nav__link">
+      11. Input devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week12/" title="12. Output devices" class="md-nav__link">
+      12. Output devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week13/" title="13. Applications and implications" class="md-nav__link">
+      13. Applications and implications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week14/" title="14. Networking and communications" class="md-nav__link">
+      14. Networking and communications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week15/" title="15. Mechanical Design" class="md-nav__link">
+      15. Mechanical Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week16/" title="16. Interface and application programming" class="md-nav__link">
+      16. Interface and application programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week17/" title="17. Machine design" class="md-nav__link">
+      17. Machine design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        18. Wildcard week
+      </label>
+    
+    <a href="./" title="18. Wildcard week" class="md-nav__link md-nav__link--active">
+      18. Wildcard week
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#composites" title="Composites" class="md-nav__link">
+    Composites
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3d-mold" title="3D Mold" class="md-nav__link">
+    3D Mold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fiber-composite" title="Fiber Composite" class="md-nav__link">
+    Fiber Composite
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embroidery" title="Embroidery" class="md-nav__link">
+    Embroidery
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#designing-the-embroidery-files" title="Designing the Embroidery Files" class="md-nav__link">
+    Designing the Embroidery Files
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ink-stich" title="Ink Stich" class="md-nav__link">
+    Ink Stich
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sew-art" title="Sew Art" class="md-nav__link">
+    Sew Art
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sew-what" title="Sew What" class="md-nav__link">
+    Sew What
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-machine" title="Setting up the Machine" class="md-nav__link">
+    Setting up the Machine
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-thread-the-needles" title="How to Thread the Needles" class="md-nav__link">
+    How to Thread the Needles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-change-the-bobbin" title="How to Change the Bobbin" class="md-nav__link">
+    How to Change the Bobbin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-embroidery-hoop" title="How to Use the Embroidery Hoop" class="md-nav__link">
+    How to Use the Embroidery Hoop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-and-tricks" title="Tips and Tricks" class="md-nav__link">
+    Tips and Tricks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" title="Files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week19/" title="19. Invention, intellectual property and income" class="md-nav__link">
+      19. Invention, intellectual property and income
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week20/" title="20. Project development" class="md-nav__link">
+      20. Project development
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Projects
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Projects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/final-project/" title="Concept and Research" class="md-nav__link">
+      Concept and Research
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/sample-project/" title="Processes and Results" class="md-nav__link">
+      Processes and Results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#composites" title="Composites" class="md-nav__link">
+    Composites
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3d-mold" title="3D Mold" class="md-nav__link">
+    3D Mold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fiber-composite" title="Fiber Composite" class="md-nav__link">
+    Fiber Composite
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embroidery" title="Embroidery" class="md-nav__link">
+    Embroidery
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#designing-the-embroidery-files" title="Designing the Embroidery Files" class="md-nav__link">
+    Designing the Embroidery Files
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ink-stich" title="Ink Stich" class="md-nav__link">
+    Ink Stich
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sew-art" title="Sew Art" class="md-nav__link">
+    Sew Art
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sew-what" title="Sew What" class="md-nav__link">
+    Sew What
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-machine" title="Setting up the Machine" class="md-nav__link">
+    Setting up the Machine
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-thread-the-needles" title="How to Thread the Needles" class="md-nav__link">
+    How to Thread the Needles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-change-the-bobbin" title="How to Change the Bobbin" class="md-nav__link">
+    How to Change the Bobbin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-the-embroidery-hoop" title="How to Use the Embroidery Hoop" class="md-nav__link">
+    How to Use the Embroidery Hoop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-and-tricks" title="Tips and Tricks" class="md-nav__link">
+    Tips and Tricks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" title="Files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="18-wildcard-week">18. Wildcard week<a class="headerlink" href="#18-wildcard-week" title="Permanent link">&para;</a></h1>
+<p>For wildcard week, I initially wanted to learn about composites. I later switched to embroidery.</p>
+<h2 id="composites">Composites<a class="headerlink" href="#composites" title="Permanent link">&para;</a></h2>
+<p>This is the &ldquo;assignment&rdquo; for <a href="http://academy.cba.mit.edu/classes/composites/index.html">composites</a>.</p>
+<p>I decided to make a burlap composite case for my final project circuitry. Throughout this learning process, I referenced Dr. Taylor&rsquo;s <a href="http://archive.fabacademy.org/fabacademy2016/charlottelatin/students/87/exercise14.html">composite week from 2016</a> to better understand the process. He made a batman composite!</p>
+<p>I found this burlap in the Fab Lab from previous years. </p>
+<p><img alt="" src="../../images/week18/burlap.jpg" /></p>
+<h3 id="3d-mold">3D Mold<a class="headerlink" href="#3d-mold" title="Permanent link">&para;</a></h3>
+<p>Once I gathered my materials, I took the measurements for my case. I based them around my circuit from week 11. </p>
+<p>I added a little clearance room so that my board would have room to grow if I changed anything along the way. </p>
+<p>Here is my 3D rendering of my case.</p>
+<iframe src="https://myhub.autodesk360.com/ue2a5fe25/shares/public/SH7f1edQT22b515c761e36e774c9a088b04e?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+
+<p>Origionally, I modeled the box with thinner sides, but after cutting our a few pieces of test burlap on the laser cutter, I figured out that it would not be reasonable to have the burlap be so thin.</p>
+<h3 id="fiber-composite">Fiber Composite<a class="headerlink" href="#fiber-composite" title="Permanent link">&para;</a></h3>
+<p>I lasercut the two main shapes involved in my box: the wall rectangle outline and the base rectangle.</p>
+<p>Here are those files :
+<a href="https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/composite (1).zip" download>Download Files</a></p>
+<p>Here is a video that shows the lasercutting.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_Ui4CH3hrQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Here are the lasercut pieces.</p>
+<p><img alt="" src="../../images/week18/IMG_6896 - Copy.jpg" /></p>
+<p><img alt="" src="../../images/week18/IMG_6895 - Copy.jpg" /></p>
+<p><img alt="" src="../../images/week18/IMG_6898 - Copy.jpg" /></p>
+<p>As I continued my research for this process, I soon found out that we didn&rsquo;t have the resin or thick enough HDPE. I decided to switch to learning how to use the embroidery machine for this week, becuase I had to leave for Germany in less than a week (and wanted to finish most of my weekly assignments before I left).</p>
+<h2 id="embroidery">Embroidery<a class="headerlink" href="#embroidery" title="Permanent link">&para;</a></h2>
+<p>Embroidery is the process of creating designs of fabrics using a needle and thread. I used to embroider things at camp or in girlscouts, but I had never used an embroidery machine.</p>
+<h3 id="designing-the-embroidery-files">Designing the Embroidery Files<a class="headerlink" href="#designing-the-embroidery-files" title="Permanent link">&para;</a></h3>
+<p>I started by designing my first embroidery file which I would send to our embroidery machine. I used two softwares to design my files: Ink Stich and Sew Art. Using these softwares, I designed the logo of a beach that I visit (Bald Head Island). My design consited of a turtle and the BHI abreviation text. </p>
+<h4 id="ink-stich">Ink Stich<a class="headerlink" href="#ink-stich" title="Permanent link">&para;</a></h4>
+<p><a href="https://inkstitch.org">Ink/Stitch</a> is an Inkscape Plug-in that allows you to create embroidery files.</p>
+<p>Here is there video series that walks the the beginner skills involved with the program.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PTcSRuCA1Aw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>There are 7 main types of stitches:</p>
+<ol>
+<li>
+<p>Underlay - gives base, prevents fabric from bunching </p>
+</li>
+<li>
+<p>Fill Stitch - “coloring in area”</p>
+</li>
+<li>
+<p>Satin Column - cylinder that goes back and forth</p>
+</li>
+<li>
+<p>Line - give line width</p>
+</li>
+<li>
+<p>Customize it (draw out each line of the column) </p>
+</li>
+<li>
+<p>Straight Stitches - ex. Ice cream cone</p>
+</li>
+<li>
+<p>Single Stitch - use dotted/dashed lines</p>
+</li>
+</ol>
+<p>These are the steps that I documented:</p>
+<ol>
+<li>
+<p>Create a design</p>
+</li>
+<li>
+<p>Make the object you designed a path</p>
+</li>
+<li>
+<p>Hit plus sign to make new layer (ex. Background layer and border layer) (You can switch order of layers in menu) (You can hide layers if want to set specific parameters) </p>
+</li>
+<li>
+<p>Move the path to a layer - select layer</p>
+</li>
+<li>
+<p>Go to the plug in menu and select Ink/stitch &gt; English &gt; Embroidery params </p>
+</li>
+<li>
+<p>Simulate the embroidery paths</p>
+</li>
+<li>
+<p>Export as a file to USB (DST file type - most basic file type - cannot scale) (PES file type “- Top tier” - Dr. David Taylor)</p>
+</li>
+</ol>
+<p><img alt="" src="../../images/week18/workflow-chart.svg" /></p>
+<p>Here is the <a href="https://inkstitch.org/docs/workflow/">Ink/Stitch Wokflow</a> that explains the above picture.</p>
+<p>Here is the text I that I wrote out in the program and made into an embroidery file. This is a video of it simulated.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WEjnEmlBgf0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h4 id="sew-art">Sew Art<a class="headerlink" href="#sew-art" title="Permanent link">&para;</a></h4>
+<p>After learning about this first software, my teacher (Dr. David Taylor) reccommended that we learn about Sew Art. I took him uo on his offer. He had learned about the software at the Fab 14 conference in Toulouse. Here is what explained to me&hellip;</p>
+<ul>
+<li>
+<p>The pro version of the program is free for 30 days</p>
+</li>
+<li>
+<p>It was created by SNS computing</p>
+</li>
+<li>
+<p>You are able to import images into the program! (I was very excited about this feature! I was also glad that I took the time to learn about this additional software)</p>
+</li>
+</ul>
+<p>Here are the general steps that Dr. Taylor outlined for me!</p>
+<ol>
+<li>
+<p>Start with canvas</p>
+</li>
+<li>
+<p>Bringing in images</p>
+</li>
+<li>
+<p>Posterize tool (need to cut down colors) (De-speckle tool)</p>
+</li>
+<li>
+<p>Image color reduction (can merge colors - do this slowly)</p>
+</li>
+<li>
+<p>Auto it (create embroidery layers) (put down paths)</p>
+</li>
+<li>
+<p>Export as a .tif file</p>
+</li>
+</ol>
+<p>Here is my file with te layers outlined.</p>
+<p><img alt="" src="../../images/week18/dog/layers.jpg" /></p>
+<h4 id="sew-what">Sew What<a class="headerlink" href="#sew-what" title="Permanent link">&para;</a></h4>
+<p>After the file is exported as a .tif, Dr. Taylor explained to me that I would have to use a supplementary program called Sew What to explot the .tif it to the Brother Embroidery Machine. In this program, I was able to combine my turtle file from Sew Art and my &ldquo;BHI&rdquo; text from Ink Stich into one file!</p>
+<h3 id="setting-up-the-machine">Setting up the Machine<a class="headerlink" href="#setting-up-the-machine" title="Permanent link">&para;</a></h3>
+<p>This is the embroidery machine that we have in the CLS Fab Lab. It is the <a href="https://www.brother-usa.com/products/PR670E">Brother 6-Needle Home Embroidery Machine</a>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tuACJOwFetc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>It has&hellip;</p>
+<ul>
+<li>
+<p>6-Needles</p>
+</li>
+<li>
+<p>8&rdquo; x 12&rdquo; Maximum embroidery area</p>
+</li>
+<li>
+<p>1000spm (stich per minute) maximum embroidery speed</p>
+</li>
+<li>
+<p>Large 10.1&rdquo; built-in high definition LCD display with large icons and scrolling menu</p>
+</li>
+<li>
+<p>16 built-in video tutorials so you can learn as you go</p>
+</li>
+<li>
+<p>High-Speed Acceleration means projects will be completed faster</p>
+</li>
+<li>
+<p>60 built-in embroidery designs, 12 monogramming font styles, 140 frame pattern combinations, 37 lettering fonts, 50 built-in utility stitch designs and 10 buttonhole styles in 3 sizes</p>
+</li>
+<li>
+<p>On-screen letter input and editing</p>
+</li>
+<li>
+<p>Smart stitch management with progress bar and direct entry to pin-point the exact stitch</p>
+</li>
+<li>
+<p>Intuitive Color Management for easy design customization</p>
+</li>
+<li>
+<p>Color Grouping allows multiple regions to be selected at a time for editing color</p>
+</li>
+<li>
+<p>Color Sort feature to cut down on thread changes when combining designs</p>
+</li>
+<li>
+<p>Droplight LED Positioning Marker to see where the needle will drop</p>
+</li>
+</ul>
+<p>After learning about the different parts of the embroidery process thanks to Mr. Rudolph and Mr. Taylor, I made the follwing Youtube videos that walked through the involved steps and skills.</p>
+<h4 id="how-to-thread-the-needles">How to Thread the Needles<a class="headerlink" href="#how-to-thread-the-needles" title="Permanent link">&para;</a></h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ea37ePS5bhk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h4 id="how-to-change-the-bobbin">How to Change the Bobbin<a class="headerlink" href="#how-to-change-the-bobbin" title="Permanent link">&para;</a></h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xl4bPfiFI6c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h4 id="how-to-use-the-embroidery-hoop">How to Use the Embroidery Hoop<a class="headerlink" href="#how-to-use-the-embroidery-hoop" title="Permanent link">&para;</a></h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YuTmEo3IKF0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Once I had walked through these steps, I started embroidering my turtle design.</p>
+<p>This is my file in the Brother program.</p>
+<p><img alt="" src="../../images/week18/dog/file in software.jpg" /></p>
+<p><img alt="" src="../../images/week18/dog/final file.jpg" /></p>
+<p>This video shows a timelapse of my turtle being embroidered. Sorry, it is a little shakey.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/apbRUTwN8Wg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>This is my finished design!</p>
+<p><img alt="" src="../../images/week18/dog/final in hoop.jpg" /></p>
+<p><img alt="" src="../../images/week18/dog/final pic.jpg" /></p>
+<p>This is another great tutorial that I found while I was browsing the web.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ANy4a2iP3To" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h3 id="tips-and-tricks">Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>When picking out a photo to embroider, try to find a simple image that does not have alot of colors. This will help when you are reducing the colors in the program. (Keep in mind that you are almost limited to 6 colors with the Brother emoridery machine). I tried to embroider complex images at first and it took up alot of my time. I was sad</p>
+</li>
+<li>
+<p>Try to practice on a scrap piece of fabric. If you practice with a cheaper material, there is less risk if your design messes up!</p>
+</li>
+<li>
+<p>Start by making simpler items like keychains or hankerchiefs. It is much harder to get a design straight and tangle-free with a larger item like a t-shirt.</p>
+</li>
+<li>
+<p>Don&rsquo;t try to embroider brand names and sell them. It is illegal.</p>
+</li>
+<li>
+<p>Make sure to check the thread all the way to the spool. There could be complication with the thread higher up on the treading track. </p>
+</li>
+<li>
+<p>Keep an extra stylus and usb flash drive near the machine. These items are small, but they are very important in the embroidery process. The stylus is the tool that allows you to use the touch screen. The flash drive will allow you to upload your design.</p>
+</li>
+<li>
+<p>Don&rsquo;t try to timelapse your embroidery without a tripod. I tried to do this and was left with a tired hand and shakey video.</p>
+</li>
+</ol>
+<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">&para;</a></h2>
+<p>Here are all my files from this week:
+<a href="https://fabacademy.org/2019/labs/charlotte/students/katie-chai/images/week18/dog/embroidery-20190528T031608Z-001.zip" download>Download Files</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../week17/" title="17. Machine design" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                17. Machine design
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../week19/" title="19. Invention, intellectual property and income" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                19. Invention, intellectual property and income
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Creative Commons Attribution Non Commercial
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/academany" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/fabacademany" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/academany" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://instagram.com/fabacademany" class="md-footer-social__link fa fa-instagram"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

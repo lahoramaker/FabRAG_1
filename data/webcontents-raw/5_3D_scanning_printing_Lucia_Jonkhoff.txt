@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+<html lang="en" data-figures="" class="page" data-mode="lit">
+  <head>
+<title>Week 5; 3D-printing and scanning | Lucia</title>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.88.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script async src="https://www.googletagmanager.com/gtag/js?id=XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'XXXXXXXXXX');
+</script>
+  
+<meta property="og:locale" content="en" />
+
+<meta property="og:type" content="article">
+<meta name="description" content="Week 5; about ...">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="">
+<meta name="twitter:title" content="Week 5; 3D-printing and scanning" />
+<meta property="og:url" content="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/post/weekly/week5/" />
+<meta property="og:title" content="Week 5; 3D-printing and scanning" />
+<meta property="og:description" content="Week 5; about ..." />
+<meta property="og:image" content="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/images/gietertje.jpg" />
+<link rel="lucia180" sizes="180x180" href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/icons/lucia180.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/icons/favicon-32x32.png'>
+<link rel="manifest" href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/icons/site.webmanifest'>
+<link rel="mask-icon" href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/safari-pinned-tab.svg' color="#002538">
+<meta name="msapplication-TileColor" content="#002538">
+<meta name="theme-color" content="#002538">
+
+<link rel="canonical" href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/post/weekly/week5/">
+
+    
+
+    
+    
+    <link rel="preload" href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/css/styles.326b735abeb3559973defd4d4298b33f6a53743b9cd0e89d05f3841aa4a63a3ff9075bc018b4ff81048088039cb221db3ffb5299fd61251655e4e0033943ca02.css" integrity = "sha512-MmtzWr6zVZlz3v1NQpizP2pTdDuc0OidBfOEGqSmOj/5B1vAGLT/gQSAiAOcsiHbP/tSmf1hJRZV5OADOUPKAg==" as="style" crossorigin="anonymous">
+    <link rel="preload" href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/js/bundle.min.873eb7ff9cbc302ee350ba4d72361254f3c2c2e5161582fd0d03ef840eb5310d17eeb4252fe72ad0481000384589635d52cf7e0614b2ea239e31229c5d1f48af.js" as="script" integrity=
+    "sha512-hz63/5y8MC7jULpNcjYSVPPCwuUWFYL9DQPvhA61MQ0X7rQlL&#43;cq0EgQADhFiWNdUs9&#43;BhSy6iOeMSKcXR9Irw==" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" type="text/css" href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/css/styles.326b735abeb3559973defd4d4298b33f6a53743b9cd0e89d05f3841aa4a63a3ff9075bc018b4ff81048088039cb221db3ffb5299fd61251655e4e0033943ca02.css" integrity="sha512-MmtzWr6zVZlz3v1NQpizP2pTdDuc0OidBfOEGqSmOj/5B1vAGLT/gQSAiAOcsiHbP/tSmf1hJRZV5OADOUPKAg==" crossorigin="anonymous">
+    
+  </head>
+  
+  
+    
+  
+  <body data-code="7" data-lines="false" id="documentTop">
+
+<header class="nav_header" >
+  <nav class="nav"><a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/' class="nav_brand nav_item" title="Lucia">
+  <img src="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/logos/sneeuw50.png" class="logo" alt="Lucia">
+  <div class="nav_close">
+    <div><svg class="icon">
+  <use xlink:href="#open-menu"></use>
+</svg><svg class="icon">
+  <use xlink:href="#closeme"></use>
+</svg></div>
+  </div>
+</a>
+    <div class='nav_body nav_body_left'>
+      
+      
+      
+        
+
+  <div class="nav_parent">
+    <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/post/weekly/" class="nav_item" title="Assignments">Assignments </a>
+  </div>
+  <div class="nav_parent">
+    <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/post/final/" class="nav_item" title="Final">Final </a>
+  </div>
+  <div class="nav_parent">
+    <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/" class="nav_item" title="About">About <img src='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/icons/caret-icon.svg' alt="icon" class="nav_icon"></a>
+    <div class="nav_sub">
+      <span class="nav_child"></span>
+        <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/about/" class="nav_child nav_item" title="About me">About me</a>
+        <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/agreement/" class="nav_child nav_item" title="Agreement">Agreement</a>
+    </div>
+  </div>
+      
+      <div class="nav_parent">
+        <a href="#" class="nav_item"></a>
+        <div class="nav_sub">
+          <span class="nav_child"></span>
+          
+          <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/" class="nav_child nav_item">English</a>
+          
+          <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/pt/" class="nav_child nav_item">Português</a>
+          
+        </div>
+      </div>
+<div class='follow'>
+<div class="color_mode">
+  <input type="checkbox" class="color_choice" id="mode">
+</div>
+
+</div>
+
+    </div>
+  </nav>
+</header>
+
+    <main>
+  
+<div class="grid-inverse wrap content">
+  <article class="post_content">
+    <h1 class="post_title">Week 5; 3D-printing and scanning</h1><div class="post_meta">
+  
+    <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+    <span class="post_date">
+      Feb 25, 2021</span>
+      <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/workflow' title="workflow" class="post_tag button button_translucent">workflow
+      </a>
+      <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/3d-printer' title="3D-printer" class="post_tag button button_translucent">3D-printer
+      </a>
+      <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/fusion360' title="fusion360" class="post_tag button button_translucent">fusion360
+      </a>
+      <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/slicing' title="slicing" class="post_tag button button_translucent">slicing
+      </a>
+</div>
+
+    
+  <div class="post_share">
+    
+    
+    </a>
+  </div>
+
+    
+    <p><strong>This week is all about 3D-printing and scanning, 3D-printing is a method that is not taking material away but is adding material in slices, which is a great method to make objects that would be impossible to make form one piece using more traditional methods. But, of course there are also quite some restrictions.</strong></p>
+<h2 id="wednesday-global-class">Wednesday Global Class</h2>
+<p>The basics about 3D-printing.
+It started with the explanation of the limits of the process and how to test that.
+<img src="testneil.jpg" alt="">
+Important is of course the accuracy of the printer. There are options with different materials (PLA, ABS, PETG PMMA, HiPS). It is important to understand slicing an object.</p>
+<h3 id="slicing">Slicing</h3>
+<p>In order to send an object to the printer, first it is exported out of the 3D-CAD software. (as for example a STL file) and then it is imported in the slicer-software this software will slice the object in horizotal layers that will be printed from bottom to top. It exports the model in a .Gcode file which the printer can read and use.</p>
+<p>after this class I was quite confused, but looking at:
+<a href="https://www.simplify3d.com/support/articles/rafts-skirts-and-brims/">rafts-skirts-and-brims</a> I learned a lot about the different unknown things.</p>
+<hr>
+<h2 id="weekly-assignment">Weekly Assignment</h2>
+<h6 id="in-my-own-words">In my own words</h6>
+<p>Group assignment:</p>
+<ul>
+<li>Test the printer by sending different test-objects to it. and evaluate what the possibilities are.
+Individual assignments:</li>
+<li>design and print something on a 3D-printer that is hard to make on a machine which will cut away the material. The object can be a few cm3, so there is time to print it all.</li>
+<li>scan something with one of the scanner-tools.</li>
+</ul>
+<h2 id="planning-this-week">Planning this week</h2>
+<p>Due to Corona, we have to split up the group in halves to work in the Waag, I am scheduled to be there on thursday (instruction and group assignment) and on monday and tuesday, the afternoons. I work on monday-morning, tuesday-morning and friday, so it is quite a tight schedule.  I made my planning around this schedule.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Day</th>
+<th style="text-align:left">Lesson</th>
+<th style="text-align:left">subject/activity</th>
+<th style="text-align:left">activities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">Wednesday</td>
+<td style="text-align:left">global class</td>
+<td style="text-align:left">make this plan</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:right">Thursday</td>
+<td style="text-align:left">local class explanation of the 3D-printers</td>
+<td style="text-align:left">group assignment 3D-printer-test</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:right">Friday</td>
+<td style="text-align:left">'work' for my work</td>
+<td style="text-align:left">build model</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:right">Saturday</td>
+<td style="text-align:left">global open time</td>
+<td style="text-align:left">build model</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:right">Sunday</td>
+<td style="text-align:left">work on documentation</td>
+<td style="text-align:left">finish model</td>
+<td style="text-align:left">family-time</td>
+</tr>
+<tr>
+<td style="text-align:right">Monday</td>
+<td style="text-align:left">afternoon local Fab time</td>
+<td style="text-align:left">get my first 3D-print</td>
+<td style="text-align:left">see what goes well</td>
+</tr>
+<tr>
+<td style="text-align:right">Tuesday</td>
+<td style="text-align:left">afternoon local Fab time</td>
+<td style="text-align:left">Try out different options with the print</td>
+<td style="text-align:left">Documentation</td>
+</tr>
+<tr>
+<td style="text-align:right">Wednesday</td>
+<td style="text-align:left">presentations</td>
+<td style="text-align:left">ready to present</td>
+<td style="text-align:left">fix last things</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3d-printer-instruction">3d printer instruction</h2>
+<p>Henk explained about 3D-printing: &quot;It makes plastic Rubbish and it takes long&quot; Then he explained about the Filaments, the different printers and the different slicing software that is used at Waag. There is a Prua I3-MK3S+ (using PrusaSlicer) And a Ultimaker 2+ (using Ultimaker Cura)
+<img src="3D-printerinstr.jpg" alt="">
+The Bed needs to be clean and calibrated, the Prusa can run a Wizard to Calibrate it. There is a 'pinda' to automatically calibrate the Z-axis, but during calibration we found that it is way to high and should be at around -1,000 mm lower. The Adjustment of the bed is very important, because it is the base of the model that is made here and if that is not done right, it wil not stick to the bed properly and that way it will end up in a lot of plastic spaghetti.
+The filament (1,75 for the Prusa, larger for the Ultimaker) should always be cut at a 45 degree angle, so it is nice and clean and will fit through all the openings easily.</p>
+<p><img src="firstlayercalibration.jpg" alt="">
+Filament should always be kept airtight because it is vulnerable for humidity. So at the end of the day all the machines should be emptied from the filament and turned off.</p>
+<p>If everything is calibrated, adjusted, cleaned and filled it is time to put an SD-card in the machine with the model in Gcode.
+<img src="mistakes3D-printing.png" alt=""></p>
+<hr>
+<h2 id="group-assignment">Group assignment</h2>
+<p>For the group assignment we were with 5 people and split up in two groups.  I worked with Phil and Loes and we used the Prusa, while Douwe and Paula used the Ultimaker.  We chose a testing-object, we found that 'Marian Tripka's 3D-printer-test-mini' would test a lot of things, had good imprints on the test-object and was a lot quicker that the other ones.
+We used the Prusa-slicer to set up the model, using 100% infill (for testing purposes) No brim, accidentaly we did use a skirt, but that did not really matter and we made the Gcode-file.
+<img src="testgcode.jpg" alt="">
+We put it in the Prusa, had to recalibrate, found after 5 rounds (-0.150, -0.700, -1.000 and -0.850) that -1.000 would do the trick and started printing.
+<img src="calibtrating.jpg" alt="">
+The test-print came out fine, which is sad, because it did everything that we tested. the overhang was not so nice anymore at the bottom of the 70 degree setting and really ugly at the 80 degree settings.
+<img src="test3D.jpg" alt="">
+It could do the bridging up to 25 mm, but there was no higher value that failed, so it could even be better.</p>
+<h2 id="comparing-the-tests">Comparing the tests</h2>
+<p>the fridaygroup did the same object on the Ultimaker in Pink, and so on monday I could do some real measurements and comparison. I noticed that the Ultimaker made the work more shiny and I don't know the exact settings that the group used on friday, but it seemed that it was less precise.
+<img src="orangeandpink.jpg" alt="">
+the 2 mm hole was really a lot smaller. The difference between the 2 printers was not very clear. It was hard to measure, because it is under the overhang and you need to measure inside the hole. but I did manage. (in the images the right measurement is on the screen, but only pointing to the hole, because it was impossible to measure and photograph at the same time)
+<img src="2mmhole.jpg" alt="">
+the cylinders on the board had quite a difference, the Prusa made it actually a bit smaller and the Ultimaker (pink) made it larger
+<img src="cylinders.jpg" alt=""></p>
+<p>X and Y axis
+there was not a lot of difference in the 10 mm bar in the x and Y direction
+<img src="xeny10mmtest.jpg" alt=""></p>
+<hr>
+<h2 id="individual-assignments">Individual assignments</h2>
+<h3 id="design-and-print-something-that-is-not-easily-made-with-a-retractive-process">Design and print something that is not easily made with a retractive process</h3>
+<p><img src="raakfles.jpg" alt="">
+For this I walked around my house and thought of changing a lemonade-sirup bottle into a 'gietertje', a watering can with a funnel and a 'rose' (the front part of the watering-can that turns the waterjet into a gentle shower) for my tiny plant-seedlings that I grow for my garden.
+<img src="inspiratiegietertje.jpg" alt="">
+Inspiration for this came form the local plant store where I saw such a watering-rose last year, but thought it was ugly and way to expensive.</p>
+<h3 id="measurements">measurements</h3>
+<p>What I need is a bottle-cap with the right thread on the inside so it will fit the empty sirup-bottle. The top of the cap will have a hole so the water can go through and on top of that comes the miniature funnel with the rose.
+With my caliper I measured the bottle and the original cap and made drawings with that on paper with pen.
+<img src="flesendop.jpg" alt=""></p>
+<hr>
+<h3 id="fusion-360">fusion 360</h3>
+<p>To make the thread I first wanted to use grabcad and see how they did that, but looking at different threads I found someone on Grabcad that made his model using a tutorial by Heine Ravnholt.</p>
+<p><a href="https://www.youtube.com/watch?v=-BS9KR-B9U4"><img src="tutorialthread.jpg" alt=""></a></p>
+<p>What I thought was really difficult was actually good to work with, so I sat at my computer, with my bottle and caliper and was nicely making my own thread.
+<img src="schroefdraad1.jpg" alt="">
+Once I got that figured out I could also think of how to make it parametric and I remeasured everything and started a new model.
+<img src="parametersdop.jpg" alt="">
+With all the parameters ready I followed the steps of the tutorial again and had a nice bottle-cap. A niece copy of the real cap, although it could not work, as you can see on the middle drawing the cap is made watertight with an extra rim sticking down from the top. I have to remove that, because it cannot be printed. Instead of that I made a rim in the top corner that would be snug-fit with the bottle and hope that that makes is waterproof. (see the right drawing)
+<img src="dopje1.jpg" alt="">
+After that the funnel-part. I needed some more info on revolving multiple objects, but it worked out fine.  I used the existing parameters so everything is based on the bottle-diameter and the cap-height. This way the material-thickness can still vary without the design getting in trouble.
+<img src="dopjetuut.jpg" alt=""></p>
+<p>I got stuck with the top and trying to make the holes in it, I walked to the garden and found that a real 'rose' is part of a globe in stead of the flat top that I had made. Logical, because that way the water will spread like a shower. But not very easy to construct.</p>
+<p>So I needed a new design and while looking for tutorials on spreading holes evenly I found information on patterns in Fusion360 and a great tutorial of making a golf-ball by Lars Christensen, with all the dents in it, that was really helpful.
+<a href="https://www.youtube.com/watch?v=roAO_gtz44g"><img src="golfbal.jpg" alt=""></a></p>
+<p>I used cylinders for making the holes instead of globes and made the origin of all cylinders and the globe in the origin of the drawing and made them 1,5 times the material-thickness , that way everything would stay parametric.
+<img src="gietertjezat.jpg" alt=""></p>
+<hr>
+<h3 id="saturday-open-time">Saturday open time</h3>
+<p>So, I was all happy and asked the people at open time about the right wallthickness and about ways to make these 3D-printed  things watertight. they gave me a lot of inspiration with which I could test this week:</p>
+<ul>
+<li>Use ABS and acetone to improve the walls, the ABS will flow and that way small gaps will close itself. It will weld the layers.</li>
+<li>use only three layer thick material and do a 100% fill, that way it does not make a mesh in the middle but will make a nicely filled wall.</li>
+<li>use a thick layer setting (layerheight 0,3 with a 0,4 nozzle), that way the plastic will heat up the previous layer and make a better connection.</li>
+<li>think of PETG, that is better watertight and foodsafe.
+Thank you Dan, Adrian, Pablo, and Rico, for all this great suggestions. I did play around with these.</li>
+</ul>
+<p>I also learned about printer maintanance:</p>
+<ul>
+<li>always cool down fully until turning the printer of, else there is a chance of a clog just behind the printerhead, which is hard to get out. With that the printer will make a tikking sound.</li>
+<li>check the PTFE-tube and the connection of that with the printer-head regularly.</li>
+<li>the printerhead should be wel tightened so the filament is not coming out the wrong way.
+<img src="printermaintenance.jpg" alt=""></li>
+</ul>
+<hr>
+<h3 id="sunday">Sunday</h3>
+<p>Thanks to Douwe, who said on sunday that he put his part in the slicer and it took way too long I realized that I could test in a slicer as well. so I downloaded Prusa-slicer and found that my model would tak 1 hour and 20 minutes. that looked fine.
+It is wonderful to look at all the layers that it makes and even the path that the printerhead will follow. But looking at the tricky parts I found that the Prusa-slicer would not make bridges, but would start making circles of plastic in mid-air. Of course, we learned about this in the group assignment. the 3D-printer cannot print horizontally, the maximum is about65-70 degrees. Hmmmmm how to fix this.</p>
+<p><img src="slicer1.jpg" alt=""></p>
+<p>Using Support material would be very difficult to remove, especially to keep it nice and smooth fitting with the bottle and watertight. A part of the problem is in the top, above the funnel-part, there is would be impossible to remove.</p>
+<p><img src="afrondingslicer.jpg" alt="">
+I tried adjusting the fillet on the top of the bottle-cap and after several tries the slicer would connect all the layers well enough and I would need no support there.</p>
+<p>But the top part is a different case. Without making concessions to the design on the outside I have to make a solution on the inside. I thought of extra circles around the middle-hole, but that would only lower the problem. If I make it too full then the water cannot get to all the holes. I thought that a few small pillars would do the trick. they are connecting the part right next to the top-hole with the almost horizontal part next to the bottom-hole.<br>
+<img src="pilaartje2.jpg" alt=""></p>
+<p>It would only partly solve the problem. The very top now seemed connected, but parts next to it only connected to air.</p>
+<p>Instead I made these three ribs in the top-part. That way on every level there is something to bridge to and the water can flow freely around the ribs. Only problem is that my nicely spread holes make it hard to find a place where the ribs can be situated. turning them 20 degrees from the X-axis solved that problem. I made 3 ribs with fillets on every edge. It really looks nice.
+<img src="ribben.jpg" alt=""></p>
+<p>I was all ready with my Gietertje set in Prusa-slicer for the Prusa-printer.
+The settings are for PLA (215 degrees celcius nozzle heat and 60 degree bed-heat, speed 100%) with a layerthickness of 0,2 mm (nice and quick), 100% infill (I need it to be waterproof) and no support material. I saved the G-code and was ready to print on monday</p>
+<hr>
+<h2 id="monday-waag-time">Monday Waag-time.</h2>
+<p>So all set and ready to print I went to Waag. There it was quite busy so I had to wait for a while until it was my turn, I had some trouble getting the the stuff on the SD-card, but then it went and took 1,5 hour to print. I thought I make my documentation meanwhile, but I was fascinated by the process and the way you can look inside your own product. So I actually spend 1,5 hours staring at my 'gietertje' being printed.
+<img src="gietertjeprusa1.jpg" alt="">
+Halfway it did have some trouble making the inside of the cap, you can see the threads in the right picture.
+Halfway I thought, it is great like this also, I can use my bottle as a 'poffertjes-fles' to make Dutch miniature pancakes. The top part with the 3 ribs worked really well.
+<img src="gietertjeprusa2.jpg" alt=""></p>
+<h3 id="scanning-part-1">Scanning part 1</h3>
+<p>I did find some time to try the scanner 'Sense 3D'. It is connected with usb to a local computer and comes with its own software and I tried everything with the standard-settings.
+<img src="settingssense3d.jpg" alt="">
+The scanner is not gear with a happy flow. While scanning, you have to move around the object and keep the scanner very stable pointed at the object. Most times, somewhere halfway the scanning, it will suddenly stop and there is no way to continue from there onwards. Reasons for it to stop are uncertain, it has more trouble with shiny and smooth objects, but if and object has a distinguished shape it will have trouble catching the corners. So everything I tried did not work out to well. We tried changing the light (spotlight, ambient light, darker lighter), the background (even, extra objects, lots of contrast) and Philip brought this small turning table and with a Waag-tripod to make a nice and stable setup. All objects that we found at Waag were not suitable to scan, I did not bring something to scan from home. Only my wallet would do the trick. But it is not a very beautiful object.
+<img src="wallet3d.jpg" alt="">
+I will bring some things from home tomorrow and try and scan that.</p>
+<h2 id="success">Success</h2>
+<p>To my great surprise, all my work on sundaynight fixing the slicer-problems worked. My 'gietertje' came out great. A few threads on the inside, but they can be cut away. Everybody was really happy with the friendly watering-cap, especially the only plant at Waag.
+<img src="gietertjeprusaaf.jpg" alt=""></p>
+<hr>
+<h2 id="my-own-printer">My own printer</h2>
+<p>While I was at Waag, the postman came with the packages from Germany and I arranged my friend Reini to pick me up by car. So in stead of working on my documentation and making a better version I worked on assembling my very own Crealty Ender-3. At the end of the night I could do some testprinting with benchy, but it was too late to do my 'gietertje'</p>
+<p>Tuesdaymorning I had all these meetings for work and that is great to combine with 3D-printing. I sliced 'gietertje' in the Cura-slicer and gave it a try. (Settings: PLA 205 degrees bedheat 50 degrees layerthickness 0,2 and infill 100%)
+<img src="spagetthiender.jpg" alt="">
+I looked online for some quick fixes and found that, next to cleaning the bed and making a rim you can</p>
+<ul>
+<li>heat the bed a bit more</li>
+<li>print the first layer really slowly</li>
+</ul>
+<p>So I tried those and it worked.
+<img src="gieterender.jpg" alt="">
+Almost at the end, I noticed that there was no filament coming out of the extruder anymore and when I found that the filament-filling-reel was loose I paused the print and fixed it with the alan-key. So the learning point is to check all the bolts on the machines, instead of only those that you have to tighten yourself!.
+It missed 2 or 3 layers, but it could be finished. and now it has a nice little extra rim at the top, but is working.
+after that I did not have time to make a new Gcode, so I tried to print the Gcode that I made earlier for the Prusa on the Ender and is worked very well, although the prusa-board is a bit bigger and the starting-line it does was in front of the board. I learned that I have to adjust the endstops on my ender.
+<img src="3gieterscomment.jpg" alt=""></p>
+<hr>
+<h2 id="tuesday-in-waag">Tuesday in Waag</h2>
+<h3 id="scanning-part-2">Scanning part 2</h3>
+<p>I brought a whole lot of things from home, rubber bathtoys, lego, a small djembe, some wooden souvenirs, and some stuffed toys. Again I used the '3D-sense'
+<img src="3Dscanning.jpg" alt="">
+And I tried and tried and tried, but did not have a lot of success. the shiny plastic stuf would not work, most of the things were unable to really turn around. The scanner would loose the image after about 90 degrees, or would not connect it at 360degrees. So I ended up trying a lot, but not getting much that would be possible to 'finish'.
+<img src="djembe.jpg" alt="">
+Until I took away all the studio material and tried the stuffed toys, I think the scanner liked the matt cloth material and I got a great image of my sons little mouse 'Muisje'. The bottom is filled in automatically but most of the surface is looking great
+<img src="muisjescangroot.jpg" alt="">
+<img src="muisjescan.jpg" alt=""></p>
+<hr>
+<h3 id="printing-with-different-settings">Printing with different settings</h3>
+<p>Printing with a thinner wall (1,2 mm in stead of 2mm), according to the advice on saturday and with a good layerheight. the bottom was to thin to stick to the board... Spaghetti. with a brim it would stick though. the golden one on the Prusa and the green one on the Ultimaker. The golden version was wider than the previous ones so sadly enough it is leaking.
+<img src="goudengroen2.jpg" alt=""></p>
+<h2 id="the-result">the result</h2>
+<p>Eventually I made 5 caps, and they all work perfectly, and especially the first one is very good, that is because it has smaller holes in the top than it should have...
+<img src="5gietertjes.jpg" alt="">
+Here are my testing photo's.
+<img src="gieten2.jpg" alt="">
+<img src="gietenplantje2.jpg" alt=""></p>
+<hr>
+<h3 id="tuesdaynight-at-home">Tuesdaynight at home</h3>
+<p>As a surprise for my son I started printing a miniature version of his 'Muisje' without telling him that I made it, He had to guess what it was. Only when the shoulders were printed he recognized his little friend. Arend was very happy with it.
+<img src="muisjearend.jpg" alt="">
+<img src="muisjehero.jpg" alt=""></p>
+<p>I really like the shiny surface of the Ender-3 prints, Maybe the temperature of my ender 3 is a few degrees lower.  At least the prints are really precise and shiny, no extra after-print finishing needed.</p>
+<p><img src="muisjesglim.jpg" alt=""></p>
+<h2 id="learnings-this-week">Learnings this week</h2>
+<p>This week was really nice, I did not think that I would enjoy using the 3D-printer. Actually I was quite sceptic about it. But I really liked it:</p>
+<ul>
+<li>I loved making the design in Fusion, it really was the joy that I had when I was working as a designer. It is really nice to have a design-goal and find out how to make it.</li>
+<li>I love the saturday open time, it is great to have all these enthousiastic people telling about their projects and knowledge. I really learn a lot on those afternoons.</li>
+<li>It is wonderful to make something which is not possible to buy in a store. I think I will really use the 3d-printer more than I thought.</li>
+<li>I am happy that I bought the Ender-3 printer, actually it was not me that wanted it really, but my son was the most enthousiastic. and since we can't go skiing we thought we get ourselfes this for a present.</li>
+<li>It is wonderfull to see the printer working, it is like watching an exploded view growing into the real product. It is like watching a fire, it never gets boring.</li>
+<li>Even the scanning and printing is wonderfull, especially if it is an object that is lovable.</li>
+<li>The scanning was really hard with the sense 3D, I want to try the Qlone app and see if that works better for me.</li>
+</ul>
+<h2 id="links-to-design-files">Links to Design-files</h2>
+<p>here are the links to the designfiles of this week:
+The watering rose:</p>
+<ul>
+<li><a href="./designfiles/gietertjeribben.stl">First 'Gietertje'</a> or <a href="./designfiles/gietertjeribben.stl" download>download</a></li>
+<li><a href="./designfiles/gietertjeribbendun.stl">Second Gietertje, thinner materialthickness</a> or <a href="./designfiles/gietertjeribbendun.stl" download>download</a></li>
+</ul>
+<p>Gcode for the Prusa (made with 'Prusaslicer'):</p>
+<ul>
+<li><a href="./designfiles/gietertjeribben_0.2mm_PLA_MK3S_1h35m.gcode">gietertjeribben_0.2mm_PLA_MK3S_1h35m.gcode</a> or <a href="./designfiles/gietertjeribben_0.2mm_PLA_MK3S_1h35m.gcode" download>download</a></li>
+</ul>
+<p>Gcode for the Ender (made with 'Ultimaker Cura slicer' ):</p>
+<ul>
+<li><a href="./designfiles/Ender3gietertje.gcode">Ender3gietertje.gcode</a> or <a href="./designfiles/Ender3gietertje.gcode" download>download</a></li>
+</ul>
+<p>The scanned mouse</p>
+<ul>
+<li><a href="./designfiles/lumuisje.obj">lumuisje.obj</a> or <a href="./designfiles/lumuisje.obj" download>download</a></li>
+<li><a href="./designfiles/lumuisje.stl">lumuisje.stl</a> or <a href="./designfiles/lumuisje.stl" download>download</a></li>
+</ul>
+<hr>
+    
+      
+    
+  </article>
+<aside class="sidebar">
+  <section class="sidebar_inner">
+    
+      <h2>Lucia Jonkhoff</h2>
+      <div class="sidebar_description">
+        My Fabadventure described in weekly assignments.
+      </div>
+      <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/about/' class="button mt-1" role="button" title='Read More'>Read More</a>
+    <h2 class="mt-4">Recent Posts</h2>
+    <ul class="flex-column">
+      <li>
+        <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/post/weekly/week17/" class="nav-link" title="Week17, whats next?">Week17, whats next?</a>
+      </li>
+      <li>
+        <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/post/final/finalprojectpage/" class="nav-link" title="Final project presentation page">Final project presentation page</a>
+      </li>
+      <li>
+        <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/post/final/theprocess/" class="nav-link" title="Final project, the process page">Final project, the process page</a>
+      </li>
+      <li>
+        <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/post/weekly/week16/" class="nav-link" title="Week 16, final project, the overview">Week 16, final project, the overview</a>
+      </li>
+      <li>
+        <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/post/weekly/week15/" class="nav-link" title="Week15: Wildcard-week">Week15: Wildcard-week</a>
+      </li>
+      <li>
+        <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/post/weekly/week14/" class="nav-link" title="Week14, interface and application programming">Week14, interface and application programming</a>
+      </li>
+      <li>
+        <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/post/weekly/week13/" class="nav-link" title="Week13, networking">Week13, networking</a>
+      </li>
+      <li>
+        <a href="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/post/weekly/week12/" class="nav-link" title="Week12, Output">Week12, Output</a>
+      </li>
+    </ul>
+    <div>
+      <h2 class="mt-4 taxonomy" id="tags-section">Tags</h2>
+      <nav class="tags_nav">
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/cnc-miller/' class="post_tag button button_translucent" title="cnc-miller">
+          CNC-MILLER
+          <span class="button_tally">10</span>
+        </a>
+        
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/workflow/' class="post_tag button button_translucent" title="workflow">
+          WORKFLOW
+          <span class="button_tally">10</span>
+        </a>
+        
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/final/' class="post_tag button button_translucent" title="final">
+          FINAL
+          <span class="button_tally">6</span>
+        </a>
+        
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/fusion360/' class="post_tag button button_translucent" title="fusion360">
+          FUSION360
+          <span class="button_tally">6</span>
+        </a>
+        
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/soldering/' class="post_tag button button_translucent" title="soldering">
+          SOLDERING
+          <span class="button_tally">6</span>
+        </a>
+        
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/3d-printer/' class="post_tag button button_translucent" title="3d-printer">
+          3D-PRINTER
+          <span class="button_tally">4</span>
+        </a>
+        
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/cad/' class="post_tag button button_translucent" title="cad">
+          CAD
+          <span class="button_tally">4</span>
+        </a>
+        
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/electronics/' class="post_tag button button_translucent" title="electronics">
+          ELECTRONICS
+          <span class="button_tally">4</span>
+        </a>
+        
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/lasercutter/' class="post_tag button button_translucent" title="lasercutter">
+          LASERCUTTER
+          <span class="button_tally">4</span>
+        </a>
+        
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/slicing/' class="post_tag button button_translucent" title="slicing">
+          SLICING
+          <span class="button_tally">4</span>
+        </a>
+        
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/worm-bin/' class="post_tag button button_translucent" title="worm-bin">
+          WORM-BIN
+          <span class="button_tally">4</span>
+        </a>
+        
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/vinylcutter/' class="post_tag button button_translucent" title="vinylcutter">
+          VINYLCUTTER
+          <span class="button_tally">3</span>
+        </a>
+        
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/input/output/' class="post_tag button button_translucent" title="input/output">
+          INPUT/OUTPUT
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/c-language/' class="post_tag button button_translucent" title="c-language">
+          C-LANGUAGE
+          <span class="button_tally">1</span>
+        </a>
+        
+        
+        <br>
+        <div class="post_tags_toggle button">All Tags</div>
+        <div class="post_tags">
+          <div class="tags_list">
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/3d-printer/' class=" post_tag button button_translucent" data-position=4 title="3d-printer">3D-PRINTER<span class="button_tally">4</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/c-language/' class=" post_tag button button_translucent" data-position=1 title="c-language">C-LANGUAGE<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/cad/' class=" post_tag button button_translucent" data-position=4 title="cad">CAD<span class="button_tally">4</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/cnc-miller/' class=" post_tag button button_translucent" data-position=10 title="cnc-miller">CNC-MILLER<span class="button_tally">10</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/electronics/' class=" post_tag button button_translucent" data-position=4 title="electronics">ELECTRONICS<span class="button_tally">4</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/epoxy/' class=" post_tag button button_translucent" data-position=1 title="epoxy">EPOXY<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/final/' class=" post_tag button button_translucent" data-position=6 title="final">FINAL<span class="button_tally">6</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/fusion360/' class=" post_tag button button_translucent" data-position=6 title="fusion360">FUSION360<span class="button_tally">6</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/gitlab/' class=" post_tag button button_translucent" data-position=1 title="gitlab">GITLAB<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/input/output/' class=" post_tag button button_translucent" data-position=2 title="input/output">INPUT/OUTPUT<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/kicad/' class=" post_tag button button_translucent" data-position=1 title="kicad">KICAD<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/lasercutter/' class=" post_tag button button_translucent" data-position=4 title="lasercutter">LASERCUTTER<span class="button_tally">4</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/molding-casting/' class=" post_tag button button_translucent" data-position=1 title="molding-casting">MOLDING-CASTING<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/programming/' class=" post_tag button button_translucent" data-position=1 title="programming">PROGRAMMING<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/slicing/' class=" post_tag button button_translucent" data-position=4 title="slicing">SLICING<span class="button_tally">4</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/soldering/' class=" post_tag button button_translucent" data-position=6 title="soldering">SOLDERING<span class="button_tally">6</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/vinylcutter/' class=" post_tag button button_translucent" data-position=3 title="vinylcutter">VINYLCUTTER<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/workflow/' class=" post_tag button button_translucent" data-position=10 title="workflow">WORKFLOW<span class="button_tally">10</span>
+            </a>
+            
+            
+            <a href='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/tags/worm-bin/' class=" post_tag button button_translucent" data-position=4 title="worm-bin">WORM-BIN<span class="button_tally">4</span>
+            </a>
+            
+            <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span title="sort by count">[0~9]</span>
+            </div>
+            <span class="tags_hide"><svg class="icon">
+            <use xlink:href="#closeme"></use>
+          </svg></span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+</aside>
+
+  
+</div>
+    </main><svg width="0" height="0" class="hidden">
+  
+  
+  <symbol aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="mail">
+    <path  d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="calendar">
+    <path d="M452 40h-24V0h-40v40H124V0H84v40H60C26.916 40 0 66.916 0 100v352c0 33.084 26.916 60 60 60h392c33.084 0 60-26.916 60-60V100c0-33.084-26.916-60-60-60zm20 412c0 11.028-8.972 20-20 20H60c-11.028 0-20-8.972-20-20V188h432v264zm0-304H40v-48c0-11.028 8.972-20 20-20h24v40h40V80h264v40h40V80h24c11.028 0 20 8.972 20 20v48z"></path>
+    <path d="M76 230h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 310h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 390h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80-80h40v40h-40z"></path>
+  </symbol>
+  
+   
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" id="arrow">
+    <path d="M604.501 440.509L325.398 134.956c-5.331-5.357-12.423-7.627-19.386-7.27-6.989-.357-14.056 1.913-19.387 7.27L7.499 440.509c-9.999 10.024-9.999 26.298 0 36.323s26.223 10.024 36.222 0l262.293-287.164L568.28 476.832c9.999 10.024 26.222 10.024 36.221 0 9.999-10.023 9.999-26.298 0-36.323z"></path>
+  </symbol>
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="carly">
+    <path d="M504.971 239.029L448 182.059V84c0-46.317-37.682-84-84-84h-44c-13.255 0-24 10.745-24 24s10.745 24 24 24h44c19.851 0 36 16.149 36 36v108c0 6.365 2.529 12.47 7.029 16.971L454.059 256l-47.029 47.029A24.002 24.002 0 0 0 400 320v108c0 19.851-16.149 36-36 36h-44c-13.255 0-24 10.745-24 24s10.745 24 24 24h44c46.318 0 84-37.683 84-84v-98.059l56.971-56.971c9.372-9.372 9.372-24.568 0-33.941zM112 192V84c0-19.851 16.149-36 36-36h44c13.255 0 24-10.745 24-24S205.255 0 192 0h-44c-46.318 0-84 37.683-84 84v98.059l-56.971 56.97c-9.373 9.373-9.373 24.568 0 33.941L64 329.941V428c0 46.317 37.682 84 84 84h44c13.255 0 24-10.745 24-24s-10.745-24-24-24h-44c-19.851 0-36-16.149-36-36V320c0-6.365-2.529-12.47-7.029-16.971L57.941 256l47.029-47.029A24.002 24.002 0 0 0 112 192z"></path>
+  </symbol>
+  <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="copy">
+    <path d="M23 2.75A2.75 2.75 0 0 0 20.25 0H8.75A2.75 2.75 0 0 0 6 2.75v13.5A2.75 2.75 0 0 0 8.75 19h11.5A2.75 2.75 0 0 0 23 16.25zM18.25 14.5h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5zm0-3h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5zm0-3h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5z"></path>
+    <path d="M8.75 20.5a4.255 4.255 0 0 1-4.25-4.25V2.75c0-.086.02-.166.025-.25H3.75A2.752 2.752 0 0 0 1 5.25v16A2.752 2.752 0 0 0 3.75 24h12a2.752 2.752 0 0 0 2.75-2.75v-.75z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" id="closeme">
+    <path d="M284.286 256.002L506.143 34.144c7.811-7.811 7.811-20.475 0-28.285-7.811-7.81-20.475-7.811-28.285 0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285 0-7.81 7.811-7.811 20.475 0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475 0 28.285a19.938 19.938 0 0 0 14.143 5.857 19.94 19.94 0 0 0 14.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475 0-28.285L284.286 256.002z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="open-menu">
+    <path d="M492 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20zm0-160H20C8.954 76 0 84.954 0 96s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20zm0 320H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id=youtube>
+    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="stackoverflow">
+    <path d="M21 27v-8h3v11H0V19h3v8h18z"></path><path d="M17.1.2L15 1.8l7.9 10.6 2.1-1.6L17.1.2zm3.7 14.7L10.6 6.4l1.7-2 10.2 8.5-1.7 2zM7.2 12.3l12 5.6 1.1-2.4-12-5.6-1.1 2.4zm-1.8 6.8l13.56 1.96.17-2.38-13.26-2.55-.47 2.97zM19 25H5v-3h14v3z"></path>
+  </symbol>
+</svg>
+
+
+<footer class="footer">
+  <div class="footer_inner wrap pale">
+    <img src='https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/icons/lucia150.png' class="icon icon_2 transparent" alt="Lucia">
+    <p>Copyright&nbsp;<span class="year"></span>&nbsp;LUCIA. All Rights Reserved</p><a class="to_top" href="#documentTop">
+  <svg class="icon">
+  <use xlink:href="#arrow"></use>
+</svg>
+</a>
+
+  </div>
+</footer>
+
+    <script type="text/javascript" src="https://fabacademy.org/2021/labs/waag/students/lucia-jonkhoff/js/bundle.min.873eb7ff9cbc302ee350ba4d72361254f3c2c2e5161582fd0d03ef840eb5310d17eeb4252fe72ad0481000384589635d52cf7e0614b2ea239e31229c5d1f48af.js" integrity="sha512-hz63/5y8MC7jULpNcjYSVPPCwuUWFYL9DQPvhA61MQ0X7rQlL&#43;cq0EgQADhFiWNdUs9&#43;BhSy6iOeMSKcXR9Irw==" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

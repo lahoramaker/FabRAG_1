@@ -1,0 +1,27 @@
+Title: I. Overview - Lars Mattern - Fab Academy 2021
+
+Content:
+I. Overview
+This week we have to draw a possible final project, so I started playing around with different software.
+I’ll don’t describe “pixel” paint tools like the windows integrated MS Paint or the open source tool
+GIMP
+For cutting, engraving and printing are vector graphics and / or 3D design files mandatory.
+Vector graphics are lossless scalable, because it uses “nodes” and between this nodes are “pathes”
+Commonly uses file formats are
+svg
+or
+dxf
+3D Modeling
+Fusion360
+HERE
+I describe some Fusion360 basics
+FreeCAD
+HERE
+are some FreeCAD basics
+Vector Graphics
+Inkscape
+HERE
+you find just a really quick Tour and example files, which I drew in the past.
+Affinity Designer
+HERE
+I’ve tried the commercial software Affinity Designer.

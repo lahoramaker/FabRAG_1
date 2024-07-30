@@ -1,0 +1,111 @@
+Title: Mechanical Design and Machine Design - Tejas
+
+URL Source: http://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/assignments/week10/
+
+Markdown Content:
+![Image 1](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/images/week10/Infographic.jpg)
+
+**Final Video**[¶](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/assignments/week10/#final-video "Permanent link")
+----------------------------------------------------------------------------------------------------------------------------------
+
+[Final Video](https://youtu.be/Xl-4oRfSLkg)
+
+**Introduction**[¶](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/assignments/week10/#introduction "Permanent link")
+------------------------------------------------------------------------------------------------------------------------------------
+
+Designing a machine feels both Scary and exciting. It’s a new frontier for us, and we’ve never tackled anything this significant before. However, the excitement comes from the chance to apply our design expertise and create something truly remarkable.
+
+Himanshi, Siddharth and Tejas, it’s a team of 3! Below are the links of our pages.
+
+Himanshi Jain
+
+Siddharth Agarwal
+
+Tejas Dandge
+
+**Here we Begin!!**[¶](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/assignments/week10/#here-we-begin "Permanent link")
+----------------------------------------------------------------------------------------------------------------------------------------
+
+We started with ideation first where we 3 along with our mentors sat and discussed the idea which we initially had.
+
+Initial ideas
+
+Clay or bamboo 3d printer Straight line maker Attendence system for our class paper cutter
+
+After that we finalized 1 idea on which we ideated more and came to a conclusion that we are making a linear actuator which will cut paper.
+
+![Image 2](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/images/week10/Image3ideation.jpg)
+
+![Image 3](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/images/week10/Sketches.jpg)
+
+**Why did we select this idea?**[¶](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/assignments/week10/#why-did-we-select-this-idea "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Well, as designers, we work a lot with paper for making prototypes. Paper is like our starting point for bringing ideas to life. But sometimes, the old-fashioned way of cutting can be slow and tricky. So, we’re building this machine to make our lives easier. It’s all about making our design process smoother, quicker, and more precise. With this machine, we can turn our wildest ideas into reality faster than ever before!.
+
+**Inspiration**[¶](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/assignments/week10/#inspiration "Permanent link")
+----------------------------------------------------------------------------------------------------------------------------------
+
+![Image 4](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/images/week10/quentin.jpg)
+
+To create this product, we delved into the documentation of Quentins Beehive, and the paper cutter attachment onto the Beehive carriage. These resources provided valuable insights and inspiration for our design process. By studying the functionalities and features of these existing solutions, we gained a deeper understanding of the requirements and possibilities for our own machine. Incorporating elements from these sources allowed us to leverage proven techniques and technologies, ultimately enhancing the quality and effectiveness of our final product.
+
+**Why did we select this idea?**[¶](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/assignments/week10/#why-did-we-select-this-idea_1 "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Well, as designers, we work a lot with paper for making prototypes. Paper is like our starting point for bringing ideas to life. But sometimes, the old-fashioned way of cutting can be slow and tricky. So, we’re building this machine to make our lives easier. It’s all about making our design process smoother, quicker, and more precise. With this machine, we can turn our wildest ideas into reality faster than ever before!.
+
+This is how our classroom looks!! It’s papers everywhere.
+
+![Image 5](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/images/week10/Classroom.jpg)
+
+**Bill of Materials**[¶](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/assignments/week10/#bill-of-materials "Permanent link")
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+**Hardware**
+
+*   5x 40mm M5 socket head
+*   15x 10mm M5 socket head
+*   8x 8mm M3 button head
+*   5x M5 nuts
+*   2x M3 nuts
+*   4x Derlin V-wheel
+*   3x 625-2RS bearing
+*   1mx Aluminum extrusion 20\*20
+*   Pulley 20 teeths
+*   1.5 mx 6mm timing belt
+*   4x Grub screw
+*   Metal sheet
+
+**Electronics**
+
+*   1x Stepper motor Nema 17
+*   1x Arduino uno CNC shield with drivers
+*   1x Stepper motor driver for Arduino UNO
+
+**Procuring Materials**[¶](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/assignments/week10/#procuring-materials "Permanent link")
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+![Image 6](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/assignments/images/week10/image2.jpg)
+
+We browsed through Robu.in to explore available components and their prices, helping me choose the appropriate stepper motors, drivers, and other necessary parts for my project.
+
+After that we ordered electronics from lamington road and for hardware we went to naagdevi street there we learned a lot about different materials available, their usage, the trip was worth going!!
+
+![Image 7](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/images/week10/image3.jpg)
+
+![Image 8](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/images/week10/alextrusions.jpg)
+
+**Electronics**[¶](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/assignments/week10/#electronics "Permanent link")
+----------------------------------------------------------------------------------------------------------------------------------
+
+Till our material was arriving for timing we used our mentor jesal sir’s stepper motor and learned how to connect the motor with arduino shield and driver.This is the result for the same
+
+![Image 9](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/images/week10/Untitled%20video%20-%20Made%20with%20Clipchamp%20%281%29.gif)
+
+Once we learned that now we were left with coding as per our design, The next day as electronics came earlier siddharth completed the remaining coding and electronics part, while me and tejas went for procuring materials to naagdevi street.
+
+Group Work![¶](https://fabacademy.org/2024/labs/riidl/students/pushkar-tejas/assignments/week10/#group-work "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------
+
+[Group work for machineing week!](https://fabacademy.org/2024/labs/riidl/students/siddharth-agarwal/assignments/week10/)

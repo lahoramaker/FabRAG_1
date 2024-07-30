@@ -1,0 +1,198 @@
+Title: Final Project
+
+URL Source: http://fabacademy.org/2019/labs/kochi/students/akhil-joseph/FinalProject.html
+
+Markdown Content:
+#### Make a Flute play music like a Flutist
+
+##### What is flute??
+
+![Image 1](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/maxresdefault.jpg)
+
+Indian flute is a cylindrical wooden instrument played which has holes and can be played with the help of blow and fingers. As it is the instrument of Lord Krishna, it has religious importance too. when played correctly the sound Produced is melodious and liked by everyone.s
+
+The “flute family” is the oldest Instrumental family in the woodwind category.
+
+A flute in The Renaissance period sas a simple cylindrical wooden tube with a few finger holes and an embouchure hole.
+
+Throughout the course of time, the structure and design of the instrument gradually changed and became more better.
+
+I wanted to learn Engineering with my love of Music and love towards flute I decided to mix them and make a machine which will play flute automatically. my basic idea is to use Motors instead of fingers and a blower instead of blowing with mouth. This instrument can make a change and replace one person in the band and we would be able to play flute without learning how to play a flute.
+
+*   What task completed?Flute basic operations completed. It can produce notes.Flute fingering mechanism works fine
+    
+*   what tasks remain?The blower nozzile have very low pressur, so the last holes cant produce sound upto the mark
+    
+*   what has works?
+    *   Fingering mechanism works
+    *   Blower works
+    *   Servos works fine
+*   What hasn't work?Last holes can't produce enough sound
+    
+*   What questions need to resolvedneed to study some airodyanamics, to learn how to make flow smoother and reduce back pressure.
+    
+*   what have learned?I learned 3D-modeling, and some aire flow relations
+    
+
+### CAD Design
+
+#### 1\. Flute stand
+
+![Image 2](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/flute%20stand.png)
+
+I 3D printed the model and it was fitting corectly with the flute.
+
+![Image 3](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/flute%20stand.jpg)
+
+[Download Inventor files](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/Downlods/final%20project/flutestand.ipt) [Download STL file](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/Downlods/final%20project/flutestand.stl)
+
+### 2\. Servo Stand
+
+I made one stand for servo by 3D-printing, which was not much strong to hold the servo. The servo got fixed in that stand but it didn't balance properly on the movement of servo motor. so I designed a new one. At this time i think, LASER CUTTING is a better option, because 3D-printing is time consuming task. so i design a new one for my SG90 servos.
+
+![Image 4](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/servohold.png)
+
+[Download Inventor file](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/Downlods/final%20project/Servo%20hold.ipt) [Download DXF files](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/Downlods/final%20project/servohold.zip)
+
+i lasercut this and fix servos in it
+
+![Image 5](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/servo%20hold2.jpg)
+
+### 3\. Fingers
+
+Fingers for the holes of flute. I made fingers using silikka rubber. By molding and casting. This by drow a square in coral draw, and cut it in LASER. please reffer my [computer controled cutting](http://) week to know more about laser cutting i paste it on another acrilic sheet. Then i cast it in silicon rubber. please reffer my [moulding and casting](http://) week to learn how to make mold using silicon.
+
+![Image 6](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/finger1.jpeg)
+
+Then take some resin with proper ratio and mix it then poure it in mold, please refer my [moulding and castig](http://) week t learn more about it.
+
+![Image 7](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/items/week10/resin2.jpg)
+
+After curing time we got fllowing moulds
+
+![Image 8](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/finger2.jpeg)
+
+![Image 9](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/finger.jpeg)
+
+##### Fixing fingers on the flute
+
+This idea is made my my frent akhil g babu.He take a tape and fix this in flute. this is a nice idea. this also helps the servo mechanism easy. my plan is to build and 3D-print a mechanism for this. But he made my work more easyer.
+
+![Image 10](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/coperwire.jpeg)
+
+Heuse 3m tape and copper wire to make the movement Mechanism
+
+![Image 11](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/3mtape.jpeg)
+
+Finaly he attach this to servo, so when servo works, it will open and close holes
+
+![Image 12](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/mchanism.jpeg)
+
+Finaly he attach this to servo, so when servo works, it will open and close holes
+
+![Image 13](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/fixing.jpeg)
+
+### 4\. Blower
+
+Blower for the flute. This blower can be used for your flute, if not approprialte you can make the nozzel according to your flute length. Cut the upper part and make a nozzel according to your flute.
+
+This is the most complex part for me, This is difficult because the im very new to aero dyanamics, so the problem is that the flute will only produce sound when the flow and angle of incidence is correct.
+
+![Image 14](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/blower.png)
+
+[Download Inventor files](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/Downlods/final%20project/nozzile.ipt) [Download STL file](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/Downlods/final%20project/nozzile.stl)
+
+![Image 15](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/Finalproject/blownozzle.jpeg)
+
+### Electronics Mother board
+
+Heare i use board which i designed in [week 12](http://fab.academany.org/2019/labs/kochi/students/akhil-joseph/week12.html) Output devices. Which have 6 Servo compactable connectors, FTDI connector, OLED compatable onnector and one LED on 13th digital pin. Full details and schematics aviialable in [week 12](http://fab.academany.org/2019/labs/kochi/students/akhil-joseph/week12.html) assignment page.
+
+![Image 16](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/imgw/items/week12/oled.jpeg)
+
+### 4\. Embedded Programming
+
+I used Arduino to program my board. Because of an Embedded JOB background, this is a easy task for me. Heare i dont know nothing about music. so i can only produce sounds, `sa,ri,ga,ma,pa,ni` i just write a program to open and clse cach holes. i use Servo.h Library.
+
+    #include <**Servo**.h\>
+    **Servo** s1, s2, s3, s4, s5, s6;  int pos \= 0;
+    void setup() {
+      s1.attach(3);
+      s2.attach(5);
+      s3.attach(6);
+      s4.attach(9);
+      s5.attach(10);
+      s6.attach(11);
+    }
+    void loop() {
+      for (pos \= 0; pos <= 120; pos += 30) {
+        s1.write(pos);
+        delay(50);
+      }
+      for (pos \= 0; pos <= 120; pos += 30) {
+        s2.write(pos);
+        delay(50);
+      }
+      for (pos \= 0; pos <= 120; pos += 30) {
+        s3.write(pos);
+        delay(50);
+      }
+      for (pos \= 0; pos <= 120; pos += 30) {
+        s4.write(pos);
+        delay(50);
+      }
+      for (pos \= 0; pos <= 120; pos += 30) {
+        s5.write(pos);
+        delay(50);
+      }
+      for (pos \= 0; pos <= 120; pos += 30) {
+        s6.write(pos);
+        delay(50);
+      }
+      for (pos \= 120; pos \>= 0; pos \-= 30) {
+        s3.write(pos);
+        delay(50);
+      }
+    
+      for (pos \= 120; pos \>= 0; pos \-= 30) {
+        s2.write(pos);
+        delay(50);
+      }
+      for (pos \= 120; pos \>= 0; pos \-= 30) {
+        s3.write(pos);
+        delay(50);
+      }
+      for (pos \= 120; pos \>= 0; pos \-= 30) {
+        s4.write(pos);
+        delay(50);
+      }
+      for (pos \= 120; pos \>= 0; pos \-= 30) {
+        s5.write(pos);
+        delay(50);
+      }
+      for (pos \= 120; pos \>= 0; pos \-= 30) {
+        s6.write(pos);
+        delay(50);
+      }
+    }
+    
+    
+    
+
+### Testing
+
+### Bill of materials
+
+| Name | Description | Quantity | Price |
+| --- | --- | --- | --- |
+| Servo Motor | Used in place of fingers | 6 | Rs.720 |
+| BLDC Motor | Used to rotate blower for blow air into the flute | 1 | Rs.585 |
+| 3LASER CUT Flute Stand | Pressfitting for holding the flute | 3 | Rs.120 |
+| 3D Printed Servo Stand | To hold the servo | 6 | Rs.240 |
+| Laser cut base | Base of the flute | 2 | Rs.160 |
+| Flute | 6 hole PVC | 1 | Rs.350 |
+| Nut and Bolts | Fixing all the components in the Base | 1 | Rs.350 |
+|  |  |  |  |
+|  |  | Total | Rs. 2525 |
+
+[Presentation brochure](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/presentation.png) [Presentation video](https://fabacademy.org/2019/labs/kochi/students/akhil-joseph/presentation.mp4)

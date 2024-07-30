@@ -1,0 +1,1287 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Proud to be a student again">
+      
+      
+      
+        <meta name="author" content="Rutger Oomkes">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>12. Output devices - Fab Academy Student Rutger oomkes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ab47bc">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#12-output-devices" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Fab Academy Student Rutger oomkes" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Fab Academy Student Rutger oomkes
+            </span>
+            <span class="md-header-nav__topic">
+              
+                12. Output devices
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../about/" title="About" class="md-tabs__link">
+          About
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../week01/" title="Assignments" class="md-tabs__link md-tabs__link--active">
+          Assignments
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../contact/contact/" title="Contact" class="md-tabs__link">
+          Contact
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../projects/final-project/" title="Projects" class="md-tabs__link">
+          Projects
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Fab Academy Student Rutger oomkes" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Fab Academy Student Rutger oomkes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/agreement/" title="Agreement" class="md-nav__link">
+      Agreement
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Assignments
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Assignments
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week01/" title="1. Principles and practices" class="md-nav__link">
+      1. Principles and practices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week02/" title="2. Project management" class="md-nav__link">
+      2. Project management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week03/" title="3. Computer Aided design" class="md-nav__link">
+      3. Computer Aided design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week04/" title="4. Computer controlled cutting" class="md-nav__link">
+      4. Computer controlled cutting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week05/" title="5. Electronics production" class="md-nav__link">
+      5. Electronics production
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week06/" title="6. 3D Scanning and printing" class="md-nav__link">
+      6. 3D Scanning and printing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week07/" title="7. Electronics design" class="md-nav__link">
+      7. Electronics design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week08/" title="8. Computer controlled machining" class="md-nav__link">
+      8. Computer controlled machining
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week09/" title="9. Embedded programming" class="md-nav__link">
+      9. Embedded programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week10/" title="10. Molding and casting" class="md-nav__link">
+      10. Molding and casting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week11/" title="11. Input devices" class="md-nav__link">
+      11. Input devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        12. Output devices
+      </label>
+    
+    <a href="./" title="12. Output devices" class="md-nav__link md-nav__link--active">
+      12. Output devices
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#groupsassigment" title="Groupsassigment" class="md-nav__link">
+    Groupsassigment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-1" title="Debugging 1" class="md-nav__link">
+    Debugging 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-the-output-device" title="Designing the output device" class="md-nav__link">
+    Designing the output device
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schematic-design-pcb" title="Schematic design PCB" class="md-nav__link">
+    Schematic design PCB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#milling-the-pcb" title="Milling the PCB" class="md-nav__link">
+    Milling the PCB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boatloading-and-uploading-the-board" title="Boatloading and uploading the board" class="md-nav__link">
+    Boatloading and uploading the board
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-2" title="Debugging 2" class="md-nav__link">
+    Debugging 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" title="Output" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-unsuccessful-coding" title="First unsuccessful coding" class="md-nav__link">
+    First unsuccessful coding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#second-code" title="Second Code" class="md-nav__link">
+    Second Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#third-code" title="Third code" class="md-nav__link">
+    Third code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-i-learned-and-what-went-wrong" title="What i learned and what went wrong." class="md-nav__link">
+    What i learned and what went wrong.
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week13/" title="13. Applications and implications" class="md-nav__link">
+      13. Applications and implications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week14/" title="14. Networking and communications" class="md-nav__link">
+      14. Networking and communications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week15/" title="15. Mechanical design" class="md-nav__link">
+      15. Mechanical design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week16/" title="16. Interface and application programming" class="md-nav__link">
+      16. Interface and application programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week17/" title="17. Machine design" class="md-nav__link">
+      17. Machine design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week18/" title="18. Wildcard week" class="md-nav__link">
+      18. Wildcard week
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week19/" title="19. Invention, intellectual property and income" class="md-nav__link">
+      19. Invention, intellectual property and income
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week20/" title="Final Project" class="md-nav__link">
+      Final Project
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Contact
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Contact
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contact/contact/" title="Contact Rutger Oomkes" class="md-nav__link">
+      Contact Rutger Oomkes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Projects
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Projects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/final-project/" title="Final Project" class="md-nav__link">
+      Final Project
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#groupsassigment" title="Groupsassigment" class="md-nav__link">
+    Groupsassigment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-1" title="Debugging 1" class="md-nav__link">
+    Debugging 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-the-output-device" title="Designing the output device" class="md-nav__link">
+    Designing the output device
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schematic-design-pcb" title="Schematic design PCB" class="md-nav__link">
+    Schematic design PCB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#milling-the-pcb" title="Milling the PCB" class="md-nav__link">
+    Milling the PCB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boatloading-and-uploading-the-board" title="Boatloading and uploading the board" class="md-nav__link">
+    Boatloading and uploading the board
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-2" title="Debugging 2" class="md-nav__link">
+    Debugging 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" title="Output" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-unsuccessful-coding" title="First unsuccessful coding" class="md-nav__link">
+    First unsuccessful coding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#second-code" title="Second Code" class="md-nav__link">
+    Second Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#third-code" title="Third code" class="md-nav__link">
+    Third code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-i-learned-and-what-went-wrong" title="What i learned and what went wrong." class="md-nav__link">
+    What i learned and what went wrong.
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="12-output-devices">12. Output devices<a class="headerlink" href="#12-output-devices" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>This weeks design</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>three led&rsquo;s</td>
+<td><a href="../week12documents/threeledburning/threeledburning.ino">INO</a></td>
+</tr>
+<tr>
+<td>output.kicad_pcb</td>
+<td><a href="../week12documents/output.kicad_pcb">pcb</a></td>
+</tr>
+<tr>
+<td>output.sch</td>
+<td><a href="../week12documents/output.sch">sch</a></td>
+</tr>
+<tr>
+<td>Threeleds and sonar</td>
+<td><a href="../week12documents/threeled_sonar/threeled_sonar.ino">ino</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="groupsassigment">Groupsassigment<a class="headerlink" href="#groupsassigment" title="Permanent link">&para;</a></h2>
+<p>For this weeks group assignment we had to measure the power consumption of a output device. Here we made use of the regulated power supply (powerbench) available at the Fab lab Amsterdam. This machine converts AC current in DC current and you can control the voltage and current (measured in amp) aplied to a device. This machine is used to check the power consumption of a device. You can play with the settings to see what is the minimum combination of voltage and current in which the output device is still functioning. </p>
+<p><img alt="Tenma" src="../../images/week12/tenmaspec.PNG" />
+<em>The specification of the regulated power supply Fablab Amsterdam</em></p>
+<p><a href="http://www.farnell.com/datasheets/2785676.pdf?_ga=2.261128457.588640690.1554627902-315099092.1551783443">Tenma Datasheet</a></p>
+<p>In the device you set the voltage which you want to use and the max amount of current flowing through it. Its good to set a max current (amp) to ensure you won&rsquo;t destroy the electronics. When testing it shows the current flowing through till the max current set in the beginning.</p>
+<p>The device i tested is normally powered by usb which has a voltage of 5. The voltage therefore i set to 5. The current (amp) is set to a max of 0.4 amp. The actual current is much lower and is measured in mA (mili amphere). Setting the max ensures that the voltage you can add never exceeds the limit of the 1 amp current. </p>
+<p>I connected my device i made in week 5 electronic design to a DIY powerbench. The advantage of this powerbench is that is has small female headers for more easy use with the small electronic device. First i connect the cable with gnd  (often black cable). Then applied the vcc cable (often red cable) to the device.</p>
+<p><img alt="powersupply" src="../../images/week12/powersupplysmall.PNG" /> 
+<em>My device connected with 5 volt and max 04. Amp</em></p>
+<p>In the display you an see the amount of volts(5), the current flowing through (0.014 A) and the power consumption of the the device (0.07 WATS). This you can calculate by owns law.</p>
+<p><img alt="Ohms law" src="../../images/week12/wattcalcgood.PNG" />
+*5(V) X * 0.014 (I) = 0.07 (P)</p>
+<p>Now you know the usage is 0.07 watt. When you want to calculate how long it can last you can divide the Voltage with Milliampere. <code>5/0.14 =35.7</code> When you have a battery of 5 volts you can power the device for 35.7 hours. </p>
+<p>My device i applied also the the Tenma powerbench to see if i would get the same results. Here it was more difficult to connect the cables. The outcome was the same on this machine. A nice detail was that the moment the led was on you could see the differents in current.</p>
+<p><img alt="powersupllybig" src="../../images/week12/powersupplysbig.PNG" />
+<em>Same measurement with big powerbench</em></p>
+<h2 id="debugging-1">Debugging 1<a class="headerlink" href="#debugging-1" title="Permanent link">&para;</a></h2>
+<p>My last week ended with recieving imput  from the sonar on my device. After this my device was not recognized anymore when i tried to upload code. AVR dude did not recognize my usbtinyisp. At first i did not seem to find the issue. My first thought was that my device was broken. I used the multimeter checking for short and resoldered parts which where not straight on the circuit. nothing seemed to help for AVR to recognize my device. With the help of my instructor i could find the issue and that learned me also how you should debug. First he tried my device in his computer and it did recognize the device. So the problem was not the usbtiny. He pointed me on the manual of week 5 electronic design.</p>
+<p><a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/windows_avr.html">Using the GNU AVR toolchain on Windows 10</a></p>
+<p>Here they decribe what could be the issue when your device is not recognized.</p>
+<div class="codehilite"><pre><span></span>Connect your programmer to a USB port and type: avrdude -c usbtiny -p t45 and press enter. You should see:
+
+avrdude.exe: initialization failed, rc=-1
+...
+This means that avrdude successfully found your programmer, but failed to talk to a target board (expected because we don&#39;t have anything conencted to the programmer right now.)
+
+If instead you see:
+
+avrdude.exe: Error: Could not find USBtiny device (0x1781/0xc9f)
+check your USB driver installation (the Zadig steps).
+
+If you get a &quot;command not found&quot; error, check your installation of avrdude and your path variable.
+</pre></div>
+
+
+<p>In this case we should use Zadig to reinstall the driver. After doing this my laptop recognized my usbtiny again. When i tried to program the device i recieved the same error again. Now i checked the cables connected to the isp header and they seemed good. The problem seems to lay in the device i made during imput week. Instead of fixing this board i decided to redesign the board since my initial plan is to use the sonar (imput) to shine rgb colors (output)</p>
+<p><img alt="zadig" src="../../images/week12/zadigdebug2.PNG" />
+<em>reinstalling driver usbtiny</em></p>
+<h2 id="designing-the-output-device">Designing the output device<a class="headerlink" href="#designing-the-output-device" title="Permanent link">&para;</a></h2>
+<p>Last week we put the focus on imput devices for which i designed a board with a sonar. With the use of serial communications i was able to recieve data about distance. Already then i had i mind it would be nice that the distance result in a rgb LED light that change colors according the distance of a object. Since my knowledge of electronic is still very basic i decided to go for a relative simple design to learn more about the concepts of electronics. I started straight away with designing a board so i would have more time focussing on coding and understanding the theory of electronics.</p>
+<p>I redesign my board including the imput. Was last board turned out not reliable and i like to improve my design. Further instead of using a rgb light i went for three different colors led. RED, BLUE and GREEN. This way i could say more clearer what the effect would be of changing the brightnes of the colors for output.</p>
+<p>Already knew the components i used during imput week and thanks to neil his lecture i knew different color LED needs a different resistor. For the red and green i used a resistor of 1K and for the blue is used 499 ohm resistor</p>
+<p><img alt="footprint LED" src="../../images/week12/rgbneil.PNG" />
+<em>Footprint board using RGB LED</em></p>
+<h2 id="schematic-design-pcb">Schematic design PCB<a class="headerlink" href="#schematic-design-pcb" title="Permanent link">&para;</a></h2>
+<p>I redesigned the board ot the imput week by uploading the components from the fab library. The only additional component where the three LED and three resistors. Knowing my way in kicad the first part went quickly. I placed the components and added labels to the lines. Which each LED i added a resistor and named the component according to the color it should be and the amount of ohm for the resistors. </p>
+<p><img alt="label component" src="../../images/week12/namingled.PNG" /> 
+<em>Placing the new components in the schematic and labeling them</em></p>
+<p>The confusing part was how to connect the led to the right pin of the processor. From the lecture i understood that to play with the frequency of the led you have to use PWM (pulse Width Modulation). This is a method to reduce the amount of power delivered by a electrical signal <a href="https://en.wikipedia.org/wiki/Pulse-width_modulation">PWM</a> 
+On the Attiny44a processor there are 4 pins you can use for this purpose. </p>
+<p><img alt="pins pwm" src="../../images/week12/pwmpin.PNG" /> 
+<em>Pins PA5,PA6,PA&amp; and PB2</em></p>
+<p>In my previous design for the imput week i used pin pa6 and pa7 to communicate with the sonar. Now i came some pins short for controlling the LED. I did some online research if you could connect the sonar using different pins.</p>
+<p><img alt="imput" src="../../images/week12/imput.PNG" /> 
+<em>Old schematic where is used pa5 and pa7 for the sonar</em></p>
+<p>I found you could connect the sonar using any I/O pin (input/output) for communication between processor and the sonar. I could use any of the adc (analog to digital) functons of the pin. So i changed the pins to pa 2 and pa 3. Now i could place the led on the pins that support PWM. One issue remained. Now i had two pins with a double function. PA5 and PA6 are used for programming the processor with the isp header. My instructor assured me that was not a issue since this is only used for programming the board. The only thing it results in is blinking led when programming the board. Which it does.
+Now this problem was solved i went to the procedure which become a routine. Annotate to give a order in the components The electrical ruler check which resulted in the two error 3 which make sense since there is no power source selected. Assigning the footprint and creating the netlist. </p>
+<p><img alt="schematic" src="../../images/week12/schematic.PNG" /></p>
+<p>This time i did not forget to set the design rules in the newpcb mode. I changed them according to the milling bit we use and the puzzle could start again. Motivated to get the job done in the evening so i had the change to make my board before the weekend. Everytime i struggle much more then intended to make the traces of the board. This time i made sure to leave some extra space around the sonar. In the previous week i did not realize to make the sonar fitting i had to bend the pins to make it fit.  </p>
+<p><img alt="designrules" src="../../images/week12/designrules.PNG" /> 
+<em>correct design rules</em></p>
+<p>I made sure the LED were close to each other to create the rgb feeling. Looking back on the design i should have placed them different so no led would be in the middle. Well.. So you learn.  </p>
+<p>Again it took way longer to place the trace then expected. I wanted the traces to be well separated to avoid issues as shorts in a later stadium. For the processor i made traces going outwards to make the soldering more easy. I think i redid the traces four or five times. At first i did not want to use a zero ohm resistor. This is a resistor that is used as a bridge to be able to cross lines but has no resistance. Only one connection should still be made and not motivated anymore but more coming to desperation i decided to use the zero ohm resistor. I went back to the schematic and added a resistor which i named zero ohm. I added wires and labeled them both as GND. Gave the resistor a footprint and saved as a netlist. Now i finally could finish all the traces.</p>
+<p><img alt="pcb" src="../../images/week12/pcb.PNG" /> 
+<em>All traces sett</em></p>
+<p>Next step was to make the footprint for the hc-sr04 sonar bigger. For this i used inkscape. The exported the file as a svg and opened it in inkscape. There i made squares to fit the sonar on. Further i added my company name to the board.</p>
+<p><img alt="inkscape" src="../../images/week12/inkscape.PNG" />
+<em>Making some alterations on the design</em></p>
+<p>When this was done i used gimp to set the dpi to 1000 and to remove the alpha channel. I exported the inside cut and outside cut as .png and open mods.</p>
+<h2 id="milling-the-pcb">Milling the PCB<a class="headerlink" href="#milling-the-pcb" title="Permanent link">&para;</a></h2>
+<p>Luckely the copper plate was still in the roland mxd 20. I changed the mill to .4 mm and chose the right origin. In mods i uploaded the inside and used inverted function. I chose mill traces and used the default functions. I only adjust the speed to 1 mm per second. When pressing calculate i noticed i placed some traces to close to each other. Went back to newpcb and changed the lines to make good traces.</p>
+<p><img alt="twopcb" src="../../images/week12/twopcb.PNG" />
+<em>left: old, right new</em></p>
+<p>Now the traces were better in mods and i started the job. The soon it started i realized another small error. The outline cut was to close to the inside traces. Went back to inkscape and resized the outline with 10 mm on the x and y. This way i would have 5 mm space on each side. I realize i had to adjust the origin of the machine. On both the x and y i moved the origin with 3 mm. </p>
+<p>The inside traces were cut out nicely and now it was time to cut the outline. A bit nervous if my calculations were correct. The path went perfect around in the inside traces. A happy man.</p>
+<p><img alt="pcbdone" src="../../images/week12/pcbdone.PNG" />
+<em>After washing the board taped to paper for soldering</em></p>
+<p>The soldering went smooth. After having each of the components soldered before i knew in which direction i had to place them on the board. I still take my time to get the board ready but i see i am improving my techniques in how to solder.</p>
+<h2 id="boatloading-and-uploading-the-board">Boatloading and uploading the board<a class="headerlink" href="#boatloading-and-uploading-the-board" title="Permanent link">&para;</a></h2>
+<p>The next part i find nerve wrecking After spending some much time in designing the board and make it now the big test. Will it work?</p>
+<p>I connected my new device with the isp header to my usbtiny. In the terminal i used the avrdude command to check if it could find my device. 
+<code>avrdude -c usbtiny -p t44</code></p>
+<p><img alt="antihero" src="../../images/week12/antihero.PNG" />
+<em>A antihero shot after avrdude did not recognize my device</em></p>
+<p>Lucky i had learned in the debugging that it might be that i had to reinstall my driver using zadig. After doing this the problem was solved and it recognized my device. Now i could perform the boatloader using my arduino IDE software.</p>
+<p><img alt="boatloader" src="../../images/week12/boat.PNG" />
+<em>Successful boat loading</em></p>
+<p>I still had the code i used for the imput week and uploaded it succesfull to my new board. Now this was done i was keen to see some input on my serial monitor. Only i did not..</p>
+<h2 id="debugging-2">Debugging 2<a class="headerlink" href="#debugging-2" title="Permanent link">&para;</a></h2>
+<p>When finished my second board i could initialize the device and program the board using arduino ide. I did not recieve imput from the sonar.  Two debugging options could result in the same solution. </p>
+<ol>
+<li>My code was wrong. I switched the rx pin and tx pin (software)</li>
+<li>Changing the cables rx/tx resulted also in the solution. Somehow i presumed tx should go to tx and rx to rx. It makes sense that the trammiting pin should go in to the recieving pin(hardware)</li>
+</ol>
+<p><img alt="input" src="../../images/week12/datainput.PNG" />
+<em>recieving data from the sonar on my serail monitor</em></p>
+<h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
+<p>My first goal in the output was to make my led blink. I watched some tutorials how to play with rgb led and i found the next one the most useful 
+<a href="https://www.youtube.com/watch?v=Q72DvmcCe4I">Helpful tutorial for rgb led</a>
+I used the code from last week for the sonar. I changed some things in code according what is saw in the tutorial. The majority of the code was from last weeks input. I verified and uploaded the code.</p>
+<h2 id="first-unsuccessful-coding">First unsuccessful coding<a class="headerlink" href="#first-unsuccessful-coding" title="Permanent link">&para;</a></h2>
+<p>Revealed to see that the code was working. This was a first test to see if i would be able to control the different led. My purpose was to integrate the led with the distance.</p>
+<p><img alt="inputoutput" src="../../images/week12/inputoutput.PNG" />
+<em>Uploading succesfull the code</em></p>
+<p>Underneath the code and the mistakes i made.</p>
+<div class="codehilite"><pre><span></span>#include &lt;SoftwareSerial.h&gt; // import another program, a library, to communicate
+#define rxpin 1 
+#define txpin 0
+
+SoftwareSerial serial(rxpin,txpin);
+//Declaring number to the different variables
+int rxPin = 1; 
+int txPin = 0;
+int trig = 3; // 
+int echo = 2; 
+long lecture_echo; 
+long cm;
+int PinRed = 6;
+int PinBlue = 7;
+int PinGreen = 5;
+</pre></div>
+
+
+<p>Initializing the led in the old code</p>
+<div class="codehilite"><pre><span></span>//color amount used
+int Red_Amount = 100;
+int Blue_Amount = 100;
+int Green_Amount = 100;
+void setup() 
+{ 
+  pinMode(PinRed, OUTPUT);
+  pinMode(PinBlue, OUTPUT);
+  pinMode(PinGreen, OUTPUT);
+  pinMode(trig, OUTPUT); 
+  digitalWrite(trig, LOW); 
+  pinMode(echo, INPUT); 
+  serial.begin(9600); 
+}
+</pre></div>
+
+
+<p>From the tutorial i copied the amount and placed this on 100 (from the 0 to 255) Further i declared the led as a output.</p>
+<div class="codehilite"><pre><span></span>void loop() 
+{ 
+  //Read the analog pin
+  int Input_Color = analogRead(echo);
+</pre></div>
+
+
+<p>Initializing the input color. making it equal to the analog output of the the sonar. Later on i realized this would not give me valid data. Now it shows the data of the echo which is much higher then the actual distance. To recieve correct data i should have divided the analog read by 58.</p>
+<div class="codehilite"><pre><span></span>//map the input value to usable range for analogWrite
+  Input_Color = map(Input_Color, 0, 50, 0, 255);
+  //turn on and of led
+  analogWrite(PinRed, Input_Color); 
+  analogWrite(PinBlue,Input_Color ); 
+  analogWrite(PinGreen, Input_Color);  
+</pre></div>
+
+
+<p>Here i tried to map the values of the input_Color from 0 to 50 cm to the rgb colors 0 to 255. Not knowing i would not get data since the values would be well of because of the wrong argument for the input_Color. </p>
+<div class="codehilite"><pre><span></span>  digitalWrite(trig, HIGH); 
+  delayMicroseconds(10); 
+  digitalWrite(trig, LOW); 
+  lecture_echo = pulseIn(echo, HIGH); 
+  cm = lecture_echo / 58; 
+
+  serial.print (&quot;Distance in cm: &quot;); 
+  serial.println(cm); 
+  delay(1000); 
+}
+</pre></div>
+
+
+<p>In this part of the code nothing was changed.</p>
+<p>The tutorial was mend for the potentiometer which has a range from 0 (LOW) to 1023 (HIGH) My assumption was i could read the serial monitor to control the led. In this case you can use the analogRead function to read the data and control the RGB led. I had to come with a new code to have a output based on the input.</p>
+<h2 id="second-code">Second Code<a class="headerlink" href="#second-code" title="Permanent link">&para;</a></h2>
+<p>Here i just focused on getting a output from the different led. I only show the line of code i changed to make the leds blink. Not to impressive but i was happy i could make it work.</p>
+<div class="codehilite"><pre><span></span>void loop() 
+{ 
+
+  digitalWrite(PinRed, HIGH); //High voltage
+  delay(500); //delay of 500 milliseconds
+  digitalWrite(PinRed, LOW); //low voltage
+  digitalWrite(PinBlue, HIGH);
+  delay(500);
+  digitalWrite(PinBlue, LOW); 
+  digitalWrite(PinGreen, HIGH);
+  delay(500);
+  digitalWrite(PinGreen, LOW);
+  }
+</pre></div>
+
+
+<p>Instead of using the pwm function from 0 to 255 i used digitalWrite to create a on(high) or off(low) LED. First the red led burns, then the blue and green with a delay of 500 milliseconds.</p>
+<iframe src="https://player.vimeo.com/video/329372773" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<h2 id="third-code">Third code<a class="headerlink" href="#third-code" title="Permanent link">&para;</a></h2>
+<p>Still i did not receive a output in reaction of a input in the last coding. And this was my goal. At the fablab my fellow student Anne helped me in making a code for one output led. I wanted all my leds to react on the distance so i altered the code. Trying to play with the code and trying it out on the board error appeared in the serial monitor. </p>
+<p><img alt="input" src="../../images/week12/error.PNG" />
+<em>error with data on serial monitor</em></p>
+<p>I checked with the multimeter my board and noticed that the vvc pin of the sonar was not steady connected. When pressing gentle on the sonar it did make connection. Eager to test my code with the board i struggled to keep the connection tight by placing a pin to the object. I do not have soldering equipment at home. After countless effort i managed to recieve the data and see the led changing colors.</p>
+<p>This code i made for input resulting in output.</p>
+<div class="codehilite"><pre><span></span>#include &lt;SoftwareSerial.h&gt; // import another program, a library, to communicate
+#define rxpin 1 
+#define txpin 0
+
+
+SoftwareSerial serial(rxpin,txpin);
+
+//Declaring number to the different variables
+int rxPin = 1; 
+int txPin = 0;
+int trig = 3; 
+int echo = 2; 
+long lecture_echo; 
+long cm;
+int PinRed = 6;
+int PinBlue = 7;
+int PinGreen = 5;
+</pre></div>
+
+
+<p>The first part remains the same as my previous code. Here i initialize all the variables and appoint them to the according pin. The Long command is used when number exceed the normal maximum. </p>
+<div class="codehilite"><pre><span></span>//color amount used
+int Red_Amount = 100;
+int Blue_Amount = 100;
+int Green_Amount = 100;
+</pre></div>
+
+
+<p>This part is also not altered. These settings set the led on a standard brightness of 100 in the scale of 0 to 255. These values are overruled by new arguments in the code except in one argument.</p>
+<div class="codehilite"><pre><span></span>void setup() 
+{ 
+  pinMode(PinRed, OUTPUT);
+  pinMode(PinBlue, OUTPUT);
+  pinMode(PinGreen, OUTPUT);
+  pinMode(trig, OUTPUT); 
+  digitalWrite(trig, LOW); 
+  pinMode(echo, INPUT); 
+  serial.begin(9600); 
+}
+</pre></div>
+
+
+<p>In this code you define the variables as input or output. The only input is the echo from the sonar. The serial begin function start the serial communications.</p>
+<div class="codehilite"><pre><span></span>void loop() 
+{ 
+  digitalWrite(trig, HIGH); 
+  delayMicroseconds(10); 
+  digitalWrite(trig, LOW); 
+  lecture_echo = pulseIn(echo, HIGH); 
+  cm = lecture_echo / 58;   
+</pre></div>
+
+
+<p>This part is for sending pulses and retrieving echo to determine the distance of a object. the delay can be max set at 10 millisecond. The lecture_echo show the raw data which has much higher numbers. Cm is the outcome when dividing by 58.</p>
+<div class="codehilite"><pre><span></span>  int Input_Color = cm;
+  Input_Color = map(Input_Color, 0, 50, 0, 255);
+  analogWrite(PinRed, Input_Color); 
+analogWrite(PinBlue, -Input_Color);
+analogWrite(PinGreen, Input_Color -Green_Amount);
+serial.print (&quot;Distance in cm: &quot;); 
+</pre></div>
+
+
+<p>In this section i decide the color range of the three led. In th map section you convert the outcome of cm to the PWM scale <code>0-255</code> I liked the different led correspond different to the distance so i subtract the the input color with blue. With green i used the standard brightness 100 to subtract. It is far from perfect but this way is see all LED reacting on the distance</p>
+<div class="codehilite"><pre><span></span>serial.println(cm); 
+serial.print (&quot;Red:&quot;);
+serial.println(PinRed);
+serial.print (&quot;blue:&quot;); 
+serial.println(PinBlue);
+serial.print (&quot;Green:&quot;);
+serial.println(PinGreen);
+
+  delay(1000); 
+</pre></div>
+
+
+<p>I want all data to be printed to see how the react according to the distance. I wrote the arguments wrong so you only see the pin which the are connected on.</p>
+<iframe src="https://player.vimeo.com/video/329407470" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<h2 id="what-i-learned-and-what-went-wrong">What i learned and what went wrong.<a class="headerlink" href="#what-i-learned-and-what-went-wrong" title="Permanent link">&para;</a></h2>
+<p>With the start of the week i really wanted to play with the possibilities of the rgb led. After advice of my Instructor i focused more in understanding the basics of electronics and coding. By using three different colors led you actual see the difference in brightness of the led. It was a good call. This week i had my first real understanding of some basics. One thing i am happy about was my planning for this week. Forcing myself to finish the board quickly so i could more focus on the theory of electronics and on the coding itself. </p>
+<p>It remains a challenge but that the reason i am participating in the academy. Is my work this week stunning? Definitely not. But the amount of pleasure i get from seeing it work is worth something right? </p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../week11/" title="11. Input devices" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                11. Input devices
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../week13/" title="13. Applications and implications" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                13. Applications and implications
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Creative Commons Attribution Non Commercial
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/academany" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/fabacademany" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/academany" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://instagram.com/fabacademany" class="md-footer-social__link fa fa-instagram"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

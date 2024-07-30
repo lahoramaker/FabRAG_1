@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Saeed's Week 14</title>
+    <!-- CSS files -->
+    <link rel="stylesheet" href="../core/bootstrap.min.css">
+    <link rel="stylesheet" href="../core/custom_styles.css">
+    <link rel="stylesheet" href="../core/prism.css">
+    <link rel="stylesheet" href="../core/highlighter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="../core/baguetteBox.min.css">
+    <!-- JS files: jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../core/jquery-3.3.1.slim.min.js"></script>
+    <script src="../core/popper.min.js"></script>
+    <script src="../core/bootstrap.min.js"></script>
+    <script src="../core/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('[data-toggle="popover"]').popover({html:true});
+        });
+    </script>
+</head>
+<body data-spy="scroll" data-target="#spy"> 
+    <!--Page Body------------------------------------------------------------------------------------------------->
+    <div class="row"  style="padding-right: 0x;padding-left: 0;margin-left: 0px;margin-right: 0px;">
+        
+        <!--Content Area------------------------------------------------------------------------------------------>
+        <div class="col-lg-9 col-md-12 order-lg-first" style="text-align:justify-all;" id="contentArea">
+            <section>
+                <div id="a0" style="margin-bottom: 0px;">
+                    <br >
+                    <br >
+                    <!--Assignment------------->
+                    <div style='font-weight:800; margin-bottom: 0; overflow:hidden; white-space:nowrap;'>
+                        <span class="fas fa-terminal"></span> <a href="http://academy.cba.mit.edu/classes/invention_IP_business/index.html" target="_blank" style="text-decoration: none;">Assignment</a>&nbsp;  
+                    </div>
+                    <ul>
+                        <li>Develop a plan for dissemination of your <a target="_blank" href="http://academy.cba.mit.edu/classes/project_development/index.html">final project</a></li>
+                        <li>Prepare drafts of your summary slide (presentation.png, 1920x1080)
+                            <br>and video clip (presentation.mp4, 1080p <a href="http://academy.cba.mit.edu/classes/computer_design/video.html" target="_blank">HTML5</a>, &lt; ~minute, &lt; ~10 MB)
+                            <br>and put them in your root directory
+                        </li>
+                    </ul>
+                    
+
+                    <!--Evaluation------------->
+                    <div style='font-weight:800; margin-bottom: 0; overflow:hidden; white-space:nowrap;'>
+                        <span class="fas fa-terminal"></span> <a href="http://fabacademy.org/2020/docs/fabacademy-assessment/invention,_intellectual_property_and_business_mode.html" target="_blank" style="text-decoration: none;">Evaluation Standards</a>&nbsp;  
+                    </div>
+                    <ul>
+                        <li>Outline future possibilities and describe how to make them probabilities</li>
+                        <li>Prepare a draft summary slide and video</li>
+                    </ul>
+                    <!--Output------------->
+                    <div style='font-weight:800; margin-bottom: 0; overflow:hidden; white-space:nowrap;'>
+                        <span class="fas fa-terminal"></span> Output Preview &nbsp;  
+                        <!--<hr style='margin-bottom: 2px;display:inline-block; width:100%;background-color: lightgray;' />----->
+                    </div>
+                    <br>
+                    <center>
+                        <div style="width: 50%;">
+                            <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+                        </div>
+                    </center>
+                    <br>
+                </div>
+                
+                <!--Dissemination Plan --------------------------------------------------------------------------->
+                <div id="a1" class="card   mb-3">
+                    <div class="card-header"><p class="p-2 mb-2 text-left"><span class="fas fa-paper-plane"></span> &nbsp;Dissemination Plan</p></div>
+                    <p class="headcard-header-footer text-dark text-center" style="font-size: 25px"> </p>
+                    <div class="card-body text-dark card-text" style="padding-left: 25px; padding-right: 25px;">
+                        I wish I would be able to convert my final project into a product kit. It would still be open-source, but I'd like 
+                        to have the exclusive credit for any commercial thing.
+                        <br>
+                        <br>
+                        I started exploring the lisences randomly till I found those two resources:
+                        <ul>
+                            <li><a target="_blank" href="https://choosealicense.com/licenses/">https://choosealicense.com/licenses/</a></li>
+                            <li><a target="_blank" href="https://creativecommons.org/choose/">https://creativecommons.org/choose/</a></li>
+                        </ul>
+                        I decided I would use: <br>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+                        <br>
+                        <br>
+
+                        <!----
+                        I'm considering my final project to be the first iteration in a bigger thing and add more feature.
+                        I'm planning to upload the source of each iteration into GitHub and may write an Instructable, in order to make it 
+                        accessible when needed.
+                        <br>
+                        <br>---->
+                        Using the mentioned lisence will make other users able to:
+                        <ul>
+                            <li>Copy and redistribute the material in any medium or format </li>
+                            <li>Remix, transform, and build upon the material</li>
+                        </ul>
+                        Under the following terms:
+                        <ul>
+                            <li>An appropriate credit must be given to the creator and the lisence</li>
+                            <li>No commercial use for the material</li>
+                            <li>Remixed versions must be distributed under the same license as the original</li>
+                        </ul>
+
+                        The creativecommons website also provided me with an HTML code that I can add to the pages:
+                        <center>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active">
+                                <pre style="height:200px;width:94%;font-size:12px;background-color: var(--darkerS);">
+                                    <code class="language-html" >
+&lt;a rel=&quot;license&quot; target=&quot;_blank&quot; href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;
+&lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot; src=&quot;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&quot; /&gt;&lt;/a&gt;
+&lt;br /&gt;This work is licensed under a 
+&lt;a rel=&quot;license&quot; target=&quot;_blank&quot; href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.
+                                    </code>
+                                </pre>
+                                </div>
+                        </div>
+                       </center>
+                    </div>
+                </div>
+
+                <!--Final Project Media --------------------------------------------------------------------------->
+                <div id="a2" class="card   mb-3">
+                    <div class="card-header"><p class="p-2 mb-2 text-left"><span class="fas fa-photo-video"></span> &nbsp;Final Project Media</p></div>
+                    <p class="headcard-header-footer text-dark text-center" style="font-size: 25px"> </p>
+                    <div class="card-body text-dark card-text" style="padding-left: 25px; padding-right: 25px;">
+                        Check <a href="project_presentation.html" target="_blank">Final Project Presentation</a> Page
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!--Side Bar---------------------------------------------------------------------------------------------->
+        <div class="col-lg-3 col-md-12 border-left border-right order-md-first order-sm-first order-first" style="margin-right: 0;background-color: var(--lesslightS);"> <!-----sticky-top sticky-offset-->
+            <div class="sticky-top" style="text-align: left;top: 0.5em;height: 100vh;" > 
+                <br>
+                <div class="nav-center" >
+                        <ul class="nav nav-pills" style="display:inline-flex; cursor: pointer;" id="menu"> 
+                            <li>
+                                <a class="nav-item nav-link btn btn-light text-dark active dropdown-toggle" data-toggle="modal" data-target="#exampleModalCenter1">
+                                Week <span class="badge badge-primary">14</span> </a>
+                            </li>
+                            <li><a class="nav-item nav-link btn btn-light text-dark disabled" >|</a></li>
+                            <li>
+                                <a class="nav-item nav-link btn btn-light text-dark  dropdown-toggle" data-toggle="modal" data-target="#exampleModalCenter2" >
+                                    Project 
+                                </a>
+                            </li>
+                            <li><a class="nav-item nav-link btn btn-light text-dark disabled" >|</a></li>
+                            <li>
+                                <a class="nav-item nav-link btn btn-light  text-dark "  href="../index.html">
+                                    Home
+                                </a>
+                            </li>
+                        
+                        </ul>  
+                    <p class="weekTitle" style="margin-left: 2px;margin-top: 40px;">Invention, Intellectual Property, and Income</p>
+                    <br>
+                    <ul class="nav nav-pills " id="spy" style="display: inline-block">
+                        <li class="nav-item"><a class="nav-link active" href="#a0"><i class="fa fa-quote-left"></i> &nbsp;Requirements</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#a1"><span class="fas fa-paper-plane"></span> &nbsp;Dissemination Plan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#a2"><span class="fas fa-photo-video"></span> &nbsp;Final Project Media</a></li>
+                    </ul>
+                </div>
+                <div  class="nav-center" style="width: 100%; position: absolute;bottom: 15px;line-height: 1.3em;">
+                    <div style="margin-top: 7px;padding: 2px; font-size: 15px;">
+                        <center>
+                        
+                            <br>
+                            <br>
+                            <div class="mr-3">Created in the time of a pandemic</div>
+                            <hr>
+                            <!--Instagram-->
+                            <a href="https://www.instagram.com/ahmadsaaed/" target="_blank" class="mr-3" role="button"><i class="fab fa-instagram"></i> </a>
+                            <!--Twitter-->
+                            <a href="https://twitter.com/_ahmad_saeed" target="_blank" class="mr-3" role="button"><i class="fab fa-twitter"></i> </a>
+                            <!--Facebook-->
+                            <a href="https://www.facebook.com/profile.php?id=100000543669687" target="_blank" class="mr-3" role="button"><i class="fab fa-facebook-f"></i></a>
+                            <!--Linkedin-->
+                            <a href="https://www.linkedin.com/in/ahmadsaaed/" target="_blank" class="mr-3" role="button"><i class="fab fa-linkedin"></i></a>
+                            <!--Github-->
+                            <a href="https://github.com/ahmad-saeed" target="_blank" class="mr-3" role="button"><i class="fab fa-github"></i></a>
+                        </center>
+                    </div>
+                </div>
+           </div>              
+       </div>
+    </div>
+
+
+
+
+
+    <!-- Project Modal -->
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="text-align: left">
+                        <div class="container-fluid d-none d-lg-block">
+                            <div class="row">
+                                <img style="margin-bottom:8px; width: 100%;" src="../presentation.png" >
+                            </div>
+                        </div>
+                        <div class="card card-body" style="text-align: left; text-indent: 1px; margin: 0px;padding: 0px;overflow: hidden;">
+                            <a class="dropdown-item " href="project_presentation.html">Summary and Final Presentation</a> 
+                            <a class="dropdown-item " href="project_documentation.html">Progress Documentation</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header"> </div>
+                <div class="modal-body" style="text-align: left">
+                    <div class="container-fluid d-none d-lg-block">
+                        <div class="row">
+                            <div class="col-lg-4 text-right"><a href="W2P1.html"><img style="margin-bottom:8px" src="../media/menu/2.png" ></a></div>
+                            <div class="col-lg-4 text-center"><a href="W4P1.html"><img style="margin-bottom:8px" src="../media/menu/4.png" ></a></div>
+                            <div class="col-lg-4 text-left"><a href="W17P1.html"><img style="margin-bottom:8px" src="../media/menu/17.png" ></a></div>
+                            
+                            <div class="col-lg-4 text-right"><a href="W3P1.html"><img style="margin-bottom:8px" src="../media/menu/3.png" ></a></div>
+                            <div class="col-lg-4 text-center"><a href="W6P1.html"><img style="margin-bottom:8px" src="../media/menu/6.png" ></a></div>
+                            <div class="col-lg-4 text-left"><a href="W13P1.html"><img style="margin-bottom:8px" src="../media/menu/13.png" ></a></div>
+                            
+                            <div class="col-lg-4 text-right"><a href="W5P1.html"><img style="margin-bottom:8px" src="../media/menu/5.png" ></a></div>
+                            <div class="col-lg-4 text-center"><a href="W8P1.html"><img style="margin-bottom:8px" src="../media/menu/8.png" ></a></div>
+                            <div class="col-lg-4 text-left"><a href="W1P2.html"><img style="margin-bottom:8px" src="../media/menu/1b.png" ></a></div>
+                            
+                            <div class="col-lg-4 text-right"><a href="W7P1.html"><img style="margin-bottom:8px" src="../media/menu/7.png" ></a></div>
+                            <div class="col-lg-4 text-center"><a href="W9P1.html"><img style="margin-bottom:8px" src="../media/menu/9.png" ></a></div>
+                            <div class="col-lg-4 text-left"><a href="W1P1.html"><img style="margin-bottom:8px" src="../media/menu/1a.png" ></a></div>
+                            
+                            <div class="col-lg-4 text-right"><a href="W16P1.html"><img style="margin-bottom:8px" src="../media/menu/16.png" ></a></div>
+                            <div class="col-lg-4 text-center"><a href="W12P1.html"><img style="margin-bottom:8px" src="../media/menu/12.png" ></a></div>
+                            <div class="col-lg-4 text-left"><a href="W10P1.html"><img style="margin-bottom:8px" src="../media/menu/10.png" ></a></div>
+                            
+                            <div class="col-lg-4 text-right"><a href="W18P1.html"><img style="margin-bottom:8px" src="../media/menu/18.png" ></a></div>
+                            <div class="col-lg-4 text-center"><a href="W15P1.html"><img style="margin-bottom:8px" src="../media/menu/15.png" ></a></div>
+                            <div class="col-lg-4 text-left"><a href="W14P1.html"><img style="margin-bottom:8px" src="../media/menu/14.png" ></a></div>
+                        </div>
+                    </div>
+                    <div class="card card-body d-lg-none" style="text-align: left; text-indent: 1px; margin: 0px;padding: 0px;overflow: hidden;">
+                        <a class="dropdown-item " href="W1P1.html">01: Principles and Practices</a> 
+                        <a class="dropdown-item " href="W1P2.html">01: Project Management</a> 
+                        <a class="dropdown-item " href="W2P1.html">02: Computer-Aided Design</a> 
+                        <a class="dropdown-item " href="W3P1.html">03: Computer-Controlled Cutting</a> 
+                        <a class="dropdown-item " href="W4P1.html">04: Electronics Production</a> 
+                        <a class="dropdown-item " href="W5P1.html">05: 3D Scanning and Printing</a> 
+                        <a class="dropdown-item " href="W6P1.html">06: Electronics Design</a> 
+                        <a class="dropdown-item " href="W7P1.html">07: Computer-Controlled Machining</a> 
+                        <a class="dropdown-item " href="W8P1.html">08: Embedded Programming</a> 
+                        <a class="dropdown-item " href="W9P1.html">09: Input Devices</a> 
+                        <a class="dropdown-item " href="W10P1.html">10: Applications and Implications</a> 
+                        <hr>
+                        <a class="dropdown-item " href="W12P1.html">12: Output Devices</a> 
+                        <a class="dropdown-item " href="W13P1.html">13: Interface and Application Programming</a> 
+                        <a class="dropdown-item active" href="W14P1.html">14: Invention, Intellectual Property, and Income</a> 
+                        <a class="dropdown-item " href="W15P1.html">15: Networking and Communications</a> 
+                        <a class="dropdown-item " href="W16P1.html">16: Molding and Casting</a> 
+                        <a class="dropdown-item " href="W17P1.html">17: Wildcard Week</a> 
+                        <a class="dropdown-item " href="W18P1.html">18: Mechanical Design, Machine Design</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
+</body>
+</html>

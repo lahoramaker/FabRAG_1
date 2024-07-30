@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Applications and Implications</title>
+  <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="week.css">
+</head>
+<body>
+
+  <div class="navigation">
+	<li></li>
+	<center>
+	<table width="1000" border="0">
+  <tbody>
+    <tr>
+      <th scope="col"><a href="index.html" >
+    <img src="arte\home.png" height="90px;"></a></th>
+      <th scope="col"><a href="me.html" >
+    <img src="arte\me.png" height="90px;"></a> </th>
+      <th scope="col"><a href="assignments.html" >
+    <img src="arte\a.png" height="90px;"></a></th>
+      <th scope="col"><a href="final.html" >
+    <img src="arte\final.png" height="90px;"></a></th>
+    </tr>
+  </tbody>
+</table>
+</center>
+<li></li>
+  </div>
+
+  <div id="cover">
+    <div class="cover-content">	
+	´<h1>Applications and Implications</h1>
+    </div>
+	</div>
+	<div class="text">
+	<br><br><br><br>
+	<h2>What will it do?</h2>
+		<p>
+		I am currently developing a project to support children with motor problems within a foundation in Cuenca - Ecuador, 
+		so I spoke with some of the teachers in charge and they told me about some ideologies within the teaching and what more 
+		I liked it was "learn by playing". so implement this ideology in this project.<br>
+		The project is to create a toy with which the child with motor problems plays and interacts with it and while the robot 
+		plays supports the development of the child's therapy.<br>
+		To better understand gross motor skills refers to activities that require using the large muscles of the arms, legs, 
+		such as running jumping reaching things, among others.
+		</p>
+	</div>
+
+	<div class="text">
+		<br>
+	<h2>Scopes of the project</h2>
+	<p>
+		The project aims to support foundations, educational establishments, fab kids, and any space that works with children 
+		for whom Firulais can be supportive, stimulating a positive change in children who need it most.
+	</p>
+	</div>
+	
+	<div class="text">
+		<br>
+	<h2>Who's done what beforehand?</h2>
+	<p>
+		There are many toys that teach children, whether they learn letters, numbers, words. But there are few who support therapies 
+		supporting and instructing the child. The main and greatest example is the robot called NAO, it is an interactive, programmable 
+		robot.<br>
+		Below you can find a link to learn more about NAO.<br>
+		<a href="http://aliverobots.com/nao/"><h4>Nao link</h4></a>
+	</p>
+	</div>
+
+	<div class="text">
+		<br><br><br><br>
+	<h2>What materials and components will be required?</h2>
+	<p>
+		-	Micro reducer motor<br>
+		-	HC-SR04 Sensor<br>
+		-	Steel rod<br>
+		-	Sensor hall 003<br>
+		-	Neodymium magnet<br>
+		-	Ruleman<br>
+	</p>
+	</div>
+
+	<div class="text">
+		<br><br><br><br>
+	<h2>Where will they come from?</h2>
+	<p>
+		All electronic materials are inside the Fab inventory.<br>
+		Machining will use existing machines and basic use in a Fab Lab.<br>
+		The materials such as the rod and the ruliman are standard materials that can be found worldwide.
+
+	</p>
+	</div>
+	<div class="text">
+		<br>
+	<h2>How much will it cost?</h2>
+	<p>
+		-The components of materials with an approximate of $ 40.00.<br>
+		-The bearings $ 3.00<br>
+		-3D printing $ 60.00 (cost per hour of 3D printing 4.00 x hour).<br>
+		-The rod 3mm (10cm) $ 0.20<br>
+		TOTAL $ 103.20
+	</p>
+	</div>
+
+	<div class="text">
+		<br>
+	<h2>What parts and systems will be made?</h2>
+	<p>
+		An electronic board will be created that controls both the sensors and the motors, which will centralize the entire Firulais process.<br>
+		On the other hand create a friendly design for both children and to achieve mechanization without problems so that it can be replicated in any Fab Lab.
+	</p>
+	</div>
+
+	<div class="text">
+	<br><br>
+	<h2>What processes will be used?</h2>
+	<p>
+		-	CNC electronics boards<br>
+		-	3D printing<br>
+		-	Composites<br>
+		-	Output Devices<br>
+		-	Input Devices<br>
+		-	Mechanical desing
+
+	</p>
+	</div>
+
+	<div class="text">
+	<br><br>
+	<h2>What tasks need to be completed?</h2>
+	<p>
+	1. Design <br>
+		1.1 3D Modeling<br>
+		1.2 Assemblies<br>
+		1.3 test join<br>
+	2. Molding and casting<br>
+		2.1 Design<br>
+		2.2 Production<br>
+	3. Electronic production<br>
+		3.1 Design<br>
+		3.2 Production<br>
+		3.3 test
+	4. Join all process<br>
+	</p>
+	</div>
+	<div class="text">
+	<br><br>
+	<h2>What questions need to be answered?</h2>
+	<p>
+		Can I make a faster prototype?
+		<br>
+		What movements can help the child?
+		<br>
+		How to help the child with his therapy?
+	</p>
+	</div>
+	<div class="text">
+	<br><br>
+	<h2>What is the schedule?</h2>
+	<p>
+		In the next link we can take my the time line of my final project
+	</p>
+	</div>
+	<div class="img">
+		<img src="arte\timelinefiru.jpg">
+	</div>
+	<div class="text">
+	<br><br>
+	<h2>How will it be evaluated?</h2>
+	<p>
+		The principal purpose is make product whit them get better the process of therapy. 
+		The functionality and the concept, I think is the most important items to my evaluation.
+	</p>
+	</div>	
+	
+	<br>
+	
+
+
+
+
+	
+  <div class="products">
+    <div class="product">
+      <a href="https://www.facebook.com/guillo.guerra.3">
+	  <img src="arte\face.png"> </a>
+      
+    </div>
+
+    <div class="product">
+      <a href="me.html">
+	  <img src="arte\mail.png"> </a>
+      
+    </div>
+
+  </div>
+
+  
+  
+</body>
+</html> 

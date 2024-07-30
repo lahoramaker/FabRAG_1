@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Week 10. Applications and Implications</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/LOGO%20fablab.png" alt="" /></span><span class="title">Adrián Torres</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul><li><a href="index.html">Home</a></li>
+							<li><a href="assignments.html">Assignments</a></li>
+							<li><a href="project.html">Final Project</a></li>
+                            <li><a href="adrianino.html">Adrianino</a></li>
+                            <li><a href="samdino.html">SAMDino</a></li>
+                            <li><a href="fabxiao.html">Fab-Xiao</a></li>
+							<li><a href="about.html">About me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Week 10. Applications and Implications</h1>
+							
+                            <p>This week is an individual work only. Propose a final project masterpiece that integrates the range of units covered. Your project should incorporate:</p>
+
+                                <ul><li> 2D and 3D design. ✔ 
+                                    <li> Additive and subtractive fabrication processes. ✔ 
+                                    <li> Electronics design and production. ✔ 
+                                    <li> Microcontroller interfacing and programming. ✔ 
+                                    <li> System integration and packaging. ✔ 
+                                </ul>  
+                            
+                            <p>Have you answered these questions?</p>
+                            <ul><li> What will it do? ✔
+                                <li> Who has done what beforehand? ✔
+                                <li> What will you design? ✔
+                                <li> What materials and components will be used? ✔
+                                <li> Where will they come from? ✔
+                                <li> How much will they cost? ✔
+                                <li> What parts and systems will be made? ✔
+                                <li> What processes will be used? ✔
+                                <li> What questions need to be answered? ✔
+                                <li> How will it be evaluated? ✔</ul>
+                            
+                            <p>The answers to the questions above will allow you to create your BOM (Bill Of Materials). ✔ </p>
+                            
+                            
+                            
+                            <p>Like every week, my weekly schedule. 😊 </p>
+                            <p><img src="images/week10/week10.01.jpg" width="80%"; max-width="700" /></p>   
+                            
+                            <p style="color:orangered;"> <i>This week is a bit of a break, I need to rest my mind. We have been working on making protective screens for the COVID-19 and it exhausts everything at once. Also enough videoconferences, if the confinement time was to be calm at home, in my case it has not been. </i>🙏😇 </p>
+                            
+                            
+                            <h2>What will it do?</h2>
+                            <p>My <b>Fab Train Model</b> is the construction of a modular model using the different <b>digital fabrication tools.</b> With this mode of construction the model can be replicated much easier, making it <b>light.</b></p>
+                            
+                            <p>In addition, with the manufacture of <b>modular electronics,</b> different model processes can be automated. In my case I will use it to detect the train and close / open a <b>level crossing.</b> But train detection can be used to manage a <b>station</b>, that is, be able to make itineraries to park a train at the station and move the <a href="https://en.wikipedia.org/wiki/Railroad_switch"><b>railroad switches.</b></a>
+
+                            <p>It can also serve to make <a href="https://en.wikipedia.org/wiki/Track_circuit"><b>track circuits</b></a> of trains, as an <a href="https://en.wikipedia.org/wiki/Automatic_train_protection"> Automatic Train Protection security system,</a> which when you detect a train on one section of track until it is free, the next cannot enter.</p>
+
+                            <p>My idea of the Fab Train Model is to be able to use it apart from the modular <b>model exhibitions,</b> it is to use it as a <b>training element.</b> In my <a href="www.adif.es"><b>Adif</b></a> company, simulators are used as training tools, but why not use a model to explain the operation of a level crossing.</p>
+
+                            <p>The Fab Train Model could also be used to explain to <b>children</b> how a level crossing works and its dangers.</p>
+
+                            <p>Recently in <a href="https://maquetren.net/">Maquetren's</a> post, Japanese model maker <a href="https://www.katomodels.com/"><b>KATO</b></a> wants to apply <b>STEAM</b> to model. For this they want children and young people to get involved in the miniature train. For this, for example, during the process of placing the vegetation on the model, the different types of vegetation or trees that exist are shown. Or by means of mathematics or physics, the maximum ramps that a train can circulate or the arrangement of the elements in a model for photography are studied.</p>
+
+                            <p>The aim is for children to learn different applications of <b>S</b>cience, <b>T</b>echnology, <b>E</b>ngineering, <b>A</b>rt or <b>M</b>athematics through <b><i>playing</i></b> with the <b>train.</b></p>
+                            
+                            
+                            <h2>Who has done what beforehand?</h2>
+                            <p>Actually at the Fab Academy there is no project on train model. I have been inspired by my association where we use the Maquetren regulations. With this regulation, the idea is to be able to build a model with standardized profiles to be able to connect with other colleagues and build a larger model. My evolution from 2002 to 2019 😂 </p>
+                            <p>You can find the Maquetren regulations <a href="http://maquetren.net/wp-content/uploads/2019/04/Modulos-Maquetren-H0-via-unica-recto-MQ40.pdf"> here. </a></p>    
+                            <span class="image main"><img src="images/about/maq1.jpg" alt="" /></span>
+                            
+                            
+                            <h2>What will you design?</h2>
+                            <p>My idea is to design almost all the parts of the model except for the structure, which I cut manually either with a jigsaw or I cut with the CNC. I will design the electronic boards, the level crossing barriers and the model landscape.</p>
+                            
+                            <h2>What materials and components will be used?</h2>
+                            <p>To create the <b>landscape</b> and the <b>structure:</b>
+                                <ul><li> Polystyrene.
+                                    <li> Fabric or linen.
+                                    <li> Composite resin.
+                                    <li> 10 mm plywood.</ul>
+                            <p>For barriers:
+                                <ul><li> PLA filament.</ul>
+                            <p>For <b>decoration:</b>
+                                <ul><li> Flexible track.
+                                    <li> Herbs for the landscape.
+                                    <li> Sandpaper for the road.
+                                    <li> White glue.</ul>
+                            <p>For <b>electronics:</b>
+                                <ul><li> 3 Phototransistors or time of flight sensor VL53LOX.
+                                    <li> 2 servos.
+                                    <li> 4 LEDs SMD 1608.
+                                    <li> 9V Power Supply or external power supply by Powerbank.
+                                    <li> 1 ATtiny3216.
+                                    <li> 1 ATtiny412.
+                                    <li> Several pin headers. </ul>  
+                            
+                            <h2>Where will they come from?</h2>
+                            <p>The landscape and structure materials would come from local suppliers; the PLA filament from Prusament; the decoration from <a href="https://www.eltallerdelmodelista.com/es/"><b>El Taller del Modelista</b></a> and the electronic items from Digikey and Amazon. </p>
+                            
+                            <h2>How much will they cost?</h2>
+                            <style>
+                                                    table {
+                                                        font-family: arial, sans-serif;
+                                                        border-collapse: collapse;
+                                                        width: 70%;
+                                                        }
+
+                                                    td, th {
+                                                        border: 1px solid #dddddd;
+                                                        text-align: left;
+                                                        padding: 8px;
+                                                        }
+
+                                                    tr:nth-child(even) {
+                                                        background-color: #dddddd;
+                                                        }
+                                                </style>
+
+                                                <table>
+                                                     <tr>
+                                                        <td></td>
+                                                        <td>Units</td>
+                                                        <td>Unit price</td>
+                                                        <td>Total price</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Polystyrene.( 1200 x 600 x 40 mm) </td>
+                                                        <td>6</td>
+                                                        <td>3,00€</td>
+                                                        <td>18,00€</td>
+                                                    </tr>
+                                                     <tr>
+                                                        <td>Composite resin</td>
+                                                        <td>1</td>
+                                                        <td>10,00€</td>
+                                                        <td>10,00€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PLA filament 100gr. </td>
+                                                        <td>1</td>
+                                                        <td>2,00€</td>
+                                                        <td>2,00€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Flexible track. </td>
+                                                        <td>3</td>
+                                                        <td>5,20€</td>
+                                                        <td>15,60€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Herbs for the landscape.</td>
+                                                        <td>2</td>
+                                                        <td>12,30€</td>
+                                                        <td>24,60€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>White glue.</td>
+                                                        <td>1</td>
+                                                        <td>5,00€</td>
+                                                        <td>5,00€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Plywood 10 mm (2440 x 1220mm) </td>
+                                                        <td>1</td>
+                                                        <td>12,00€</td>
+                                                        <td>12,00€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9V power supply or Powerbank</td>
+                                                        <td>1</td>
+                                                        <td>5,00€</td>
+                                                        <td>5,00€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Servo motor </td>
+                                                        <td>2</td>
+                                                        <td>4,00€</td>
+                                                        <td>8,00€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>VL53L0X sensor </td>
+                                                        <td>3</td>
+                                                        <td>2,00€</td>
+                                                        <td>6,00€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Phototransistor</td>
+                                                        <td>3</td>
+                                                        <td>0,36€</td>
+                                                        <td>1,08€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ATtiny3216 </td>
+                                                        <td>1</td>
+                                                        <td>1,00€</td>
+                                                        <td>1,00€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> ATtiny412 </td>
+                                                        <td>1</td>
+                                                        <td>0,45€</td>
+                                                        <td>0,45€</td>
+                                                    </tr>
+                                                     <tr>
+                                                        <td>Other consumables (leds, tin, cables...) </td>
+                                                        <td>1</td>
+                                                        <td>10,00€</td>
+                                                        <td>10,00€</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>Total aprox.</td>
+                                                        <td>118,73€</td>
+                                                    </tr>
+                                                    
+  
+                                                </table>                 
+                            
+                            <h2>What parts and systems will be made?</h2>
+                            <ul><li> Landscape.
+                                <li> Barriers and signs of the level crossing.
+                                <li> Electronics.
+                            </ul>
+                                    
+                            <h2>What processes will be used?</h2>        
+                            <p>For the design of the level crossing barriers I have used FreeCAD and 3D printing. Landscape modeling I will use Rhinoceros and Blender to shape it and I will use the CNC and the composite technique. To design and manufacture the electronic boards I will use Eagle and the milling and soldering process. For the programming of the microcontrollers I will use Arduino and Linux. For the decoration I will use paint, herbs ...</p>
+                            
+                            <h2>What questions need to be answered?</h2>
+                            <p>Over the next few weeks I hope to learn more. I want to see how servos work in Outputs Devices week for level crossing barriers. And discover the composites, and see how I adapt them to my final project. Just like in molding and casting week I can make something for the model.</p>
+                            
+                            
+                            <h2>How will it be evaluated?</h2>
+                            <p>As Neil says many times in class, a project is made up of <b>spiral development.</b>
+                                
+                            <ul><li> The <b>first spiral</b> is to detect the train with the first sensor, to lower the level crossing barriers, and to turn on the LEDs. When the train finishes passing the level crossing, the barriers are raised.
+                                <li> The <b>second spiral</b> is to detect the train whether it comes from the left or the right of the level crossing.
+                                <li> The <b>third spiral</b> is that this train detection system can serve to teach me in a panel or an application the location of the train.</ul>
+
+                            <p>All this will be influenced by the evolution of the shutdown by COVID-19. My idea for this week and the break was to use that time to build the model structure.</p>
+                            
+                            
+                            <h1>Random Review. 15/04/2020. </h1>
+                            
+                            <p>After having volunteered several times in the reviews, during this week's review I played the Random Generator. From minute 27 you can see and hear me. 😊 The times I volunteer I don't get so nervous. Sorry for my English. 😬 </p>
+                            <p>I think Neil has already associated me with Adrian the boy on the trains. 😊 🚄 🚂</p>
+                            
+                            <iframe src="https://player.vimeo.com/video/408128717" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+                            
+                            
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+                        
+                         <p align="center"> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><b>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</b></a>
+                        
+                        
+                        
+                        
+						<div class="inner">
+							
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/Adrian_Towy" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/adriantrains" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/adrian_towy/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.linkedin.com/in/adri%C3%A1n-torres-oma%C3%B1a/" class="icon brands style2 fa-linkedin"><span class="label">Linkedin</span></a></li>
+						
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

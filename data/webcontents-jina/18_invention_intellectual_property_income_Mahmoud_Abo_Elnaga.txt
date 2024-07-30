@@ -1,0 +1,66 @@
+Title: Week 18
+
+URL Source: http://fabacademy.org/2021/labs/egypt/students/mahmoud-aboelnaga/week18.html
+
+Markdown Content:
+Invention, Intellectual Property and Business Models
+----------------------------------------------------
+
+  
+
+### Assignment Requirements:
+
+*   Develop a plan for dissemination of your final project.
+*   Prepare drafts of your summary slide (presentation.png, 1920x1080) and video clip (presentation.mp4, 1080p HTML5, < ~minute, < ~10 MB) and put them in your root directory.
+
+### Learning Outcomes:
+
+*   Formulate future opportunities.
+
+* * *
+
+### Steps in General:
+
+*   Step(1): Developing a plan for dissemination the final project
+*   Step(2): Preparing drafts of the summary slide and video clip.
+
+* * *
+
+### Steps in Details:
+
+#### Step(1): Developing a plan for dissemination the final project
+
+*   The project is not a new idea, it is an issue at most fab labs and makerspaces and each one contributes some solutions from his side.
+*   The project will be an open-source and non-commercial.
+*   The project is still a prototype and need further improvements and features to make it a final product. for example, it needs to be modular in the electronics side, the application needs to be more user friendly, it should have a smart database, and more and more features.
+*   After Fab Academy, I will continue working on it, taking feedback form the lab members to improve its functions and usage.
+
+*   For the **License**, I prefered to choose the Creative Common License and the MIT license:
+
+*   **Creative Common License:** It is a free standard license which provides others a permission to use your work as per your condition. It helps us to share knowledge and creativity in a legal way. This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/).
+*   **MIT License:** MIT license permits reuse within proprietary software provided that all copies of the licensed software include a copy of the MIT License terms and the copyright notice. I prefer this license in future if I worked on softwares.
+
+![Image 1: Snow](https://fabacademy.org/2021/labs/egypt/students/mahmoud-aboelnaga/img/Week18/c.jpg)
+
+![Image 2: Forest](https://fabacademy.org/2021/labs/egypt/students/mahmoud-aboelnaga/img/Week18/m.jpg)
+
+* * *
+
+#### Step(2): Preparing drafts of the summary slide and video clip
+
+*   **Slide Draft:**
+  
+
+![Image 3](https://fabacademy.org/2021/labs/egypt/students/mahmoud-aboelnaga/img/Week18/sketch.jpg)
+
+  
+*   **Selected images for the slide:**
+*   **Final slide:**
+  
+
+![Image 4](https://fabacademy.org/2021/labs/egypt/students/mahmoud-aboelnaga/presentation.png)
+
+  
+*   **Final Video:**
+
+Your browser does not support the video tag.

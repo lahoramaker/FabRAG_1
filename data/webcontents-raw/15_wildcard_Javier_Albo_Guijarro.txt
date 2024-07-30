@@ -1,0 +1,311 @@
+<html lang="en">
+
+<head>
+ <title>Fabacademy Barcelona 2018</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+ </head>
+
+<center>
+  <div style="width:70%; padding-top:10px">
+  <p><a href="index.html"> < < back home</a></p></div>
+
+<div style="width:50%">
+<h1 id="title1"> week 16 - wildcard week</h1></div>
+<div style="width:70%">
+<p><i><font color="#8c8c8c">assignment:
+<br>
+-design and produce something with a digital fabrication process (incorporating computer-aided design and manufacturing) not covered in another assignment, documenting the requirements that your assignment meets, and including everything necessary to reproduce it. Possibilities include (but are not limited to) composites, textiles, biotechnology, robotics, and cooking.
+</p></font></i>
+</div>
+<br><br>
+<div style="width:50%; padding-top:0px">
+
+<body id="title1" >
+
+<img src="img/week16/lasersewing.jpg" height="200">
+
+<h1 id="title1"> laser welding</h1></div>
+
+<div style="width:90%; padding-top:0px">
+
+<body id="title1" >
+<p align="left">
+<p>
+Laser welding is a technique I wanted to develop in Fab Academy as a final project, but I finally decided to leave it for the wildcard week. The idea is using the laser cutter as a "sewing machine" for plastic materials. The layers, instead of being joined with thread, they are sealed together by melting them with the laser heat. The purpose of this technique is achieving inflatable volumes.
+<br><br>
+Inflatables/soft robotics can also be made in a more manual process with two layers of vinyl and a baking paper layer in between, sealed with a Heat Transfer Press. The purpose of Laser Welding is compiling all the steps into a single lasering process, making it a simpler and faster way of getting similar results.
+<br><br>
+I first came up with this method back when I was in architecture school making this model down here for an inflatable house I designed. Here I sealed the plastic manually using an iron, but this made me think there had to be a better and faster way to seal the plastic. This is how the idea of using the heat of the laser came to my head. Since then I always wanted to spend some time experimenting with this method.
+</p>
+<img src="img/week16/sharedgreenhouse.jpg" height="350">
+<p>
+I searched if this had already been done in Fab Academy, but I believe this digital fabrication process is apparently new because no one has documented this technique before. Developing new stuff is always a personal challenge I like taking! The most similar thing I found on the internet was <a href="http://www.mit.edu/~calisch/fold/www/welding.html">this guy</a> from MIT who also used the laser engraver for the same purpose as me. However, he doesn't really explain the method in detail.
+<br><br>
+There are multiple possibilities and areas where I think this process could be implemented, such as design, architecture, art or even cooking. These are some inflatable examples that might be possible to get with this process. The obtained results could be filled with any shapeless material (air, gas, smoke, water):
+</p>
+<img src="img/week16/lamp.jpg" height="200">
+<img src="img/week16/lamp2.jpg" height="200">
+<img src="img/week16/lamp4.jpg" height="200">
+<img src="img/week16/lamp3.jpg" height="200">
+<br>
+<img src="img/week16/chair.jpg" height="200">
+<img src="img/week16/projection.jpg" height="200">
+<img src="img/week16/igarashi1.jpg" height="200">
+<img src="img/week16/igarashi2.jpg" height="200">
+<p>
+or be used only as a mould to obtain a solid volume (ice, concrete, chocolate):
+</p>
+<img src="img/week16/iceman.jpg" height="250">
+<br><br>
+<img src="img/week16/concrete.jpg" height="250">
+<img src="img/week16/curtain1.jpg" height="250">
+<img src="img/week16/curtain3.jpg" height="250">
+<img src="img/week16/fisac2.jpg" height="250">
+<br><br>
+<h2 id="title1"> process</h2>
+<p>
+I went to Servei Estacio, a huge shop in Barcelona were you can find almost anything. There they had several plastic rolls. PVC roll looked nice and I'm sure it could work nice. However this material should not be lasered because it releases toxic gases when it is burned. That's why I went for Polyethylene (PE), which can be lasered. There were many sizes and thicknesses (even different colors). I believed the thinner the material the easier it would be for the laser to heat both layers without cutting them. That's why I tried with the thinnest Polyethylene they had in the shop: gauge 200 (0.05mm) and gauge 300 (0.075mm).
+<br>
+<br>
+I put a wood base on the laser cutter in order to have a flat bottom. I prepared two PE layers and placed them on the base, one layer on top of the other. Then I proceeded to make different linear tests by changing the power and speed. The two PE layers sometimes melted and sometimes didn't, depending on the settings. To test the strenght of the sealing I pulled both plastics layers. Some tests were stronger than others, but no matter all the settings I tried, none of them were strong enough to bear the stretching.
+</p>
+<img src="img/week16/laser1.jpg" height="300">
+<img src="img/week16/test1.jpg" height="300">
+<p>
+Not finding the right settings was a bit frustating. Technicaly, what I wanted to accomplish sounded logical and possible: just melting two plastic layers together using heat. But maybe the problem was not the laser settings, but something else I was doing wrong...It was a matter of understanding what made it work and what didn't, so I decided to find out what could be done to improve that.
+<br>
+<br>
+First I thought it had to do with the width of the sealing lines. They were very thin, so maybe the sealing was too thin to hold both layers together when pulling... I thought of three options to increase the thickness of the sealing:
+<br><br>
+<b>a) making more than one passing by offsetting the sealing line.</b>
+<br>
+I made several tests with different offset distances. Doubling or tripling the line seemed to improve the strenght when the offsets lines were very close together, merging into a single thicker sealing.
+<br><br>
+<b>b) making a non-linear boundary (zigzag...)</b>
+<br>
+The zigzag didn't really work out, when pulling the two layers of plastics they started to unstick in the sharpened angles of the zigzag.
+</p>
+<img src="img/week16/test2.jpg" height="300">
+<p>
+<b>c) defocusing the laser on purpose.</b>
+<br>
+This seemed to be the best option. Defocusing the laser meant a wider area where the heat was applied. At the beggining I defocused it manually with a ruler. Later on I realised you can defocus it in the laser settings, which was way more useful and fast.
+</p>
+<img src="img/week16/laser2.jpg" height="300">
+<br>
+<img src="img/week16/test6.jpg" height="400">
+<img src="img/week16/test7.jpg" height="400">
+<p>
+I finally decided to keep on trying with both the offset and the defocusing, and move on to try the first inflatable tests. First attempts were a bit dissapointing. The two PE layers did not seal well all along the sealing lines, which made the inflatable piece have small holes through which the air leaked when inflating it.
+</p>
+<img src="img/week16/test3.jpg" height="400">
+<img src="img/week16/test4.jpg" height="400">
+<p>
+I realised it had to do with the two PE layers not being in complete contact to each other. I tried by taping the two layers to the board in order to make them stay in contact, but the result was pretty much the same. After several tries I thought of using some kind of adhesive. We didn't have any in the lab at that moment so the closest thing was the Nelly hairspray we use for the RepRap 3d printer surface (we use it to make the 3d printed piece stick to the base). This made the two PE layers stay almost 100% in contact. And since it's not a strong adhesive, it unsticks easily when inflating the object. By this tecnhique, I achieved the first succesfull test.
+</p>
+<img src="img/week16/nelly.jpg" height="400">
+<p>
+I also tried to use a thermo-adhesive spray. This is used for adhering clothes: you spray the clothes and the heat of the iron activates de glue. This sounded perfect for this process: the heat of the laser would not only melt the plastic but also activate the sprayed area along its path. Worst solution ever: the spray was not sticky but dusty, which made not stick the plastic layers together at all. Also, the heat of the laser cutter did not activate the adhesive (when you iron the sprayed clothes, you need to iron ir for at least 30 seconds). So after a couple tests I didn't even try this again.
+</p>
+<img src="img/week16/spray.jpg" height="400">
+<p>
+However, the method with the hairspray was not 100% reliable either: there were always some air bubbles trapped in-between the two layers, no matter how hard I tried to take all of them out. An air bubble means the two layers are not in contact, which can make the sealing fail on that point.
+<br><br>
+Then I decided to google deeper about sealing plastics together with a laser. I found there are experienced companies (<a href="http://www8.basf.us//PLASTICSWEB/displayanyfile?id=0901a5e18045b8d9">1</a>, <a href="https://www.industrial-lasers.com/articles/2010/07/laser-based_polymer.html">2</a>, <a href="https://www.lpkf.com/newsletter/rapid-pcb-prototyping/597/652/203.htm">3</a>, <a href="http://www.avio.co.jp/english/products/assem/principle/laser/method.html">4</a>, <a href="https://www.or-laser.com/en/laser-welding/laser-plastic-welding/">5</a>) with speacialized laser machinery for transmission welding, even though I believe this method is basically for rigid plastics. There are two important things I got from their way of doing that could be helpful for welding my PE layers:
+<br><br>
+-The top plastic (transparent) must transmit the laser radiation and the bottom plastic (opaque) must absorb it. <a href="http://www.laserplasticwelding.com/how-does-color-affect-the-welding-process">This</a> explains how color affect the welding process and <a href="http://www.laserplasticwelding.com/wp-content/uploads/2011/08/Material-Compatibility-Chart-Updated.jpg">this</a> explains which thermoplastics can be welded.
+</p>
+<img src="img/week16/materials.jpg" height="250">
+<p>
+-To ensure perfect contact of the layers, pressure needs to be applied.
+</p>
+<img src="img/week16/transmission.jpg" height="250">
+<p>
+These videos explain everything about laser welding:
+</p>
+<iframe width="400" height="315" src="https://www.youtube.com/embed/20bVjJrDhK0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="400" height="315" src="https://www.youtube.com/embed/fN2cqfDFBfo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<p>
+After seeing how they do it, I realized by the way I did it most of the laser power went through the two transparent PE layers. I decided to try with two different polyethylene layers: one transparent and one opaque. This seemed to improve the sealing quite a lot, but still did not seal when there was air in between the layers. This means there was always a chance of getting gaps in the sealing, so the tests would not be airtight.
+</p>
+<img src="img/week16/test8.jpg" height="400">
+<img src="img/week16/test9.jpg" height="400">
+<p>
+After playing with the laser settings, I managed to make a succesful small inflatable test.
+</p>
+<img src="img/week16/test16.jpg" height="400">
+<img src="img/week16/testgif.gif" height="400">
+<div style='display: inline-block; vertical-align: top;'><img src="img/week16/testgif2.gif" height="400"><br>it can also hold water!</div>
+<p>
+But as soon as I tried with more complex shapes, sealings problems started to appear again. Most of the problems came from the two PE layers not being in uniform contact throughout the entire surface. This makes the PE layers react weirdly to the laser and rather not be sealed at all or being cut through.
+</p>
+<img src="img/week16/test11.jpg" height="300">
+<img src="img/week16/test14.jpg" height="300">
+<img src="img/week16/test15.jpg" height="300">
+<p>
+The proper contact between the layers is what experienced companies solve by applying pressure on the two parts so they join. But pressure can't be applied in the Trotec...Maybe the air assist nozzle in the laser engraver could apply this pressure?...
+<br><br>
+That night, at home, I took out the garbage. When I replaced the bags for the garbage bin, I noticed how garbage bags were made: a roll of two plastic layers, with absolutely no air in-between. Two polyethylene (PE) layers in complete contact to each other throughout the entire surface. I had to try lasering that.
+</p>
+<img src="img/week16/garbagebag1.jpg" height="400">
+<img src="img/week16/garbagebag2.jpg" height="400">
+<p>
+Even the first tests with this material had very positive results. The sealing was great thanks to the complete contact of the two layers. I tried different garbage bags and turns out biodegradable garbage bags seal better than any other material I had tried.
+</p>
+<img src="img/week16/test.jpg" height="400">
+<img src="img/week16/test13.jpg" height="400">
+<p>
+Soon after I started to make more complex tests and see how far I could go with this technique.
+</p>
+<img src="img/week16/man_cut.gif" height="400">
+<img src="img/week16/man_blow.gif" height="400">
+<div style='display: inline-block; vertical-align: top;'>
+<img src="img/week16/man_fly.gif" height="400">
+<br>fly little man!
+</div>
+<p>
+I wanted to see if I could get helium balloons out of this technique. I inflated the little man with helium, but unfortunately it did not rise. I think the size is too small and the plastic is too heavy for the amount of helium inside. I believe increasing the size of the design will make it rise, since the volume of air inside would scale up quicker than the amount of surface outside.
+<br><br>
+However helium has very thin particles which leak through everywhere. In this photo I had two men, one inflated with helium and one with regular air. The one with helium (left) deinflated in about 1 or 2 hours, while the man filled with air (right) lasted completely inflated for at least more than a week.
+</p>
+<img src="img/week16/man_airhelium.jpg" height="350">
+<p>
+I also wanted to try getting ice shapes by filling the inflatable with water and freezing it (this plastic is NOT foodsafe). Here the result:
+</p>
+<img src="img/week16/man_freezer.jpg" height="350">
+<img src="img/week16/man_demold.jpg" height="350">
+<img src="img/week16/man_ice.jpg" height="350">
+<p>
+Inflatable text can also be made!
+</p>
+<div id='wrapper' style='text-align: center;'>
+    <div style='display: inline-block; vertical-align: top;'>
+      <img src="img/week16/hola_seal.jpg" alt="hola_seal" height="300">
+      <br>sealing
+    </div>
+    <div style='display: inline-block; vertical-align: top;'>
+      <img src="img/week16/hola_cut.jpg" alt="hola_cut" height="300">
+      <br>cutting
+    </div>
+</div>
+<br>
+<img src="img/week16/hola2.gif" width="450">
+<p>
+It's interesting how much it bends when inflating. Notice how the lower part of the L bends, forcing also the A. When inflating, a slight curve in the design will curve even more if no other part stops this movement. This might be something useful somehow...
+</p>
+<img src="img/week16/hola.gif" width="450">
+<p>
+When the sealing is good, you can keep blowing air above the limit until the PE plastic starts deforming. This plastic is not elastic, so any deformation will not go back to the original shape. The deformation makes the plastic thinner and thinner, so if it keeps being inflated it will end up bursting.
+<br><br>
+In this case I inflated it until the little man's belly started growing. When inflating it, I did not decide which part of the man I wanted to start deforming. Inflatables are a bit unpredictable...but I guess the deformation will occur in the bigger volume of the shape, in this case the belly.
+</p>
+<img src="img/week16/man_overblow.jpg" height="350">
+<p>
+This made me think: maybe I can somehow control this deformation? Can I use the laser in a way to weaken the plastic or make it thinner? If so, will the deformation occur where the plastic is weakened? The answer is uncertain...Seems like it might be possible, however the material is probably not the best for this method.
+<br><br>
+This is the closest thing I could get before the test burst. For the blue lines I set the laser power very low, lower than the sealing power, so it weakens the upper layer without sealing it to the lower layer. I think this could work out better with a thicker material.
+</p>
+<img src="img/week16/deformation.jpg" height="300">
+<img src="img/week16/deformation2.jpg" height="300">
+<img src="img/week16/deformation3.jpg" height="300">
+<p>
+With this other test I discovered something very interesting. When the shape is inflated, the narrowings that subdivide the volume will make the shape unstable in the straight position. They will tend to bend to one side or the other, making the narrowings act as articulations. This allows each part of the inflatable shape to keep its position as desired.
+</p>
+<img src="img/week16/fishbone1.jpg" height="400">
+<img src="img/week16/fishbone_move.gif" height="400">
+<p>
+Then I decided to move on to more complex shapes and explore this articulation method. I decided to do a scorpion so I could test if the tail can be articulated by dividing it in different segments separated by narrowings.
+</p>
+<img src="img/week16/scorpio1.jpg" height="400">
+<img src="img/week16/scorpio2.jpg" height="400">
+<p>
+The result was very satisfying. Once inflated, the tail acted as expected and it could be articulated into any position keeping the shape.
+</p>
+<img src="img/week16/scorpio_move.gif" height="400">
+<p>
+Since I had only tried to seal exterior boundaries, I also wanted to try interior sealings, so the inflatable volume can be subdivided into smaller volumes, but all of them sharing the same air. In order to try this, I decided to do a Star Wars spaceship: the N-1 Starfighter.
+</p>
+<img src="img/week16/starwars2.gif" height="250">
+<br><br>
+<img src="img/week16/starfighter_cut.gif" height="350">
+<img src="img/week16/starfighter_lift.gif" height="350">
+<br><br>
+<img src="img/week16/starfighter_blow.gif" height="400">
+<p>
+Notice how at the end of each interior sealing a wider rounding is needed. When inflating the object, the tension held in these points is higher than in the rest of the sealings. Without this wide rounding, the PE plastic will most likely tear and create a hole, which will ruin the inflatable. A more elastic or thicker plastic would probably hold this tension easier.
+</p>
+<img src="img/week16/starfighter1.jpg" height="400">
+<img src="img/week16/starfighter2.jpg" height="400">
+<br><br>
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BmAqK2BHJDg/?utm_source=ig_embed_loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/BmAqK2BHJDg/?utm_source=ig_embed_loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div><div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div></a> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BmAqK2BHJDg/?utm_source=ig_embed_loading" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">He has done it again! bravo @javi.albo 👏👏👏 #lasercutsealed #infletable #starwars #wildcardweek #softrobotics @fabacademany @fablabbcn</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Una publicación compartida por <a href="https://www.instagram.com/futurelearningu/?utm_source=ig_embed_loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> Future Learning Unit</a> (@futurelearningu) el <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-08-03T08:42:28+00:00">3 de Ago de 2018 a las 1:42 PDT</time></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
+<p>
+So these are most of the tests I did for the wildcard week. I will stop for now, but I will keep on testing after Fab Academy. Things I want to try: using the air assist of the laser to apply pressure on the plastic layers; a bigger scale (balloons, zeppelins, boats, architecture...); a more elastic material; <a href="http://tangible.media.mit.edu/project/sticky-actuator/">softrobotics</a>; concrete molding; cnc welding...
+<br><br>
+I believe this technique has so many possibilities in the digital fabrication area and I really want to see how far it can go.
+</p>
+<br>
+<h2 id="title1"> step by step</h2>
+<p>
+I will explain now how to make an inflatable step by step:
+<br><br>
+In Rhino, draw whatever you want to inflate. You will need 2 layers, one for sealing (black) and one for cutting (red). Remember the sealing goes before the cutting! I usually triplicate the sealing path to ensure the sealing is good. I offset each line 0.4mm. If the inflatable is very small, even just one path for sealing might be enough.
+<br><br>
+Also try not to have sharped angles because the laser speed/power will change slightly on those points and it will probably do weird things when sealing. Try to make the angles as round as possible in order to make the laser movement smoother.
+</p>
+<img src="img/week16/step_rhino1.jpg" height="400">
+<img src="img/week16/step_rhino2.jpg" height="400">
+<p>
+Remember to draw an air entrance. I make this entrance a bit long, so I can use it later for making a knot. Once the whole shape is cut, you will need to manually cut off a thin slice of this air entrance so as to be able to introduce the air pump or straw.
+</p>
+<img src="img/week16/step_rhino3.jpg" height="400">
+<br><br>
+Prepare the laser machine:
+<br><br>
+<div style='display: inline-block; vertical-align: top;'>
+  <img src="img/week16/step_base.jpg" height="300">
+  <br>place a flat base on the laser table
+</div>
+<div style='display: inline-block; vertical-align: top;'>
+  <img src="img/week16/step_unroll.jpg" height="300">
+  <br>take one garbage bag from the roll
+</div>
+<div style='display: inline-block; vertical-align: top;'>
+  <img src="img/week16/step_place.jpg" height="300">
+  <br>place the bag on the wood as flat as possible
+</div>
+<div style='display: inline-block; vertical-align: top;'>
+  <img src="img/week16/step_weights.jpg" height="300">
+  <br>put some weights on the edges of the bag
+  </div>
+<p>
+One aspect to keep in mind is the air ventilation inside the laser. Because the plastic bag is very light, it is very easy to be moved by the air. The weights help keeping the bag flat and also hold it in place from the laser machine ventilation. The long piece I put on the lower edge is very important because the air blows from the lower to the upper part. If there is no weight along this edge, air will flow underneath the bag and lift it up from the base. I also tend to close half of the air ventilation valve so the air blowing inside is not that strong. If this is not done, when the laser is cutting the design, the air can lift up some parts, which can ruin the whole thing. The triple sealing also helps sticking the shape on the wood.
+<br><br>
+You will try to place your design avoiding the wrinkles of the bag as much as possible. The more wrinkles the bag has, the higher the chances of getting a bad sealing. Actually, out of all the bags in the roll, the first ones are better because they have less wrinkles. The inner bags of the roll are too wrinkled and will cause many problems in the sealings, specially when doing big inflatables (It would be nice to obtain a BIG roll of this material, so there would be more and bigger bags. This would also allow a bigger flat area and a bigger inflatable design...)
+</p>
+<img src="img/week16/garbagebag3.jpg" height="350">
+<div style='display: inline-block; vertical-align: top;'>
+  <img src="img/week16/step_area.gif" height="350">
+  <br>I usually limit the design size to this area to avoid the wrinkles
+  </div>
+<p>
+  In Rhino, print your design to the Trotec software. Once there, place the drawing in the flat area of the bag and prepare it for sending it to the laser machine. For this material I used these settings:
+</p><b>Sealing:</b> Power 2.70 - Speed 1.10 - 1000Hz - Zoffset 16
+  <br><b>Cutting:</b> Power 5.00 - Speed 1.00 - 1000Hz - Zoffset 10
+<p>
+When the job is done, remove carefully your design, cut off the air entrance, blow and make a knot!
+</p>
+<img src="img/week16/scorpio_lift.gif" height="400">
+<img src="img/week16/scorpio_blow.gif" height="400">
+<br><br>
+:)
+<br><br>
+<img src="img/week16/scorpio3.jpg" height="400">
+<br><br>
+<a href="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/barcelona/students/javier-alboguijarro/tree/master/file/week16">download files</a>
+</div>
+</center>
+
+<center><i><font color="#8c8c8c">
+<br><br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</font></i></center>

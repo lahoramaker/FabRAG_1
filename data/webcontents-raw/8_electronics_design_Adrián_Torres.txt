@@ -1,0 +1,636 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Week 06. Electronics Design</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/LOGO%20fablab.png" alt="" /></span><span class="title">Adrián Torres</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="assignments.html">Assignments</a></li>
+							<li><a href="project.html">Final Project</a></li>
+                            <li><a href="adrianino.html">Adrianino</a></li>
+                            <li><a href="samdino.html">SAMDino</a></li>
+                            <li><a href="fabxiao.html">Fab-Xiao</a></li>
+							<li><a href="about.html">About me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Week 06. Electronics Design</h1>
+                            
+                            
+							<p>Like the previous week, there are two types of assignments, one group and one individual. In my case being alone in the Fab Lab, I do both.</p>
+                            
+                            <ul><li> Use the test equipment in your lab to observe the operation of a microcontroller circuit board (in minimum, check operating voltage on the board with multimeter or voltmeter and use oscilloscope to check noise of operating voltage and interpret a data signal). ✔
+                                <li> Redraw one of the echo hello-world boards or something equivalent, add (at least) a button and LED (with current-limiting resistor) or equivalent input and output, check the design rules, make it, test it. ✔ 
+                                <li> Linked to the group assignment page. ✔ 
+                                <li> Documented what you have learned in electronics design. ✔ 
+                                <li> Explained problems and how you fixed them, if you make a board and it doesn't work; fix the board (with jumper wires etc) until it does work.. ✔ 
+                                <li> Included original design files (Eagle, KiCad, - whatever). ✔ 
+                                <li> Included a ‘hero shot’ of your board. ✔  
+                                <li> Loaded a program and tested if your board works. ✔      
+                            </ul>
+                            
+                            <p>Like every week, my weekly schedule. 😊 </p>
+                              
+                            <p><img src="images/week06/week06.01.jpg" width="80%"; max-width="700" /></p>  
+                            
+                            <p style="color:orangered;"> <i>During <a href="week04.html"><b>Week 04</b> </a> I made my first flexible board with copper vinyl and for this I used Neil's Hello Board with the ATtiny 412. This week I have to design and manufacture my own Hello Board. I hope it works for me.</i>😅</p>
+                            
+                            <p><img src="images/week04/week04.32.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>Every <b>Thursday</b> we participate in a <b>Regional Review</b> with the remote students who are in <b>Cartagena</b> to comment on Wednesday's class. This week, Nuria explained basic knowledge of electronic and use of Eagle. Thanks to this, the week is much easier and doubts can be clarified locally. 😇 From here I want to encourage and congratulate you for the great work my colleagues are doing from Cartagena, because distance is complicated and not having a remote instructor with them. 💪</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.02.jpg" alt="" /></span>
+                            
+                            <h1>Group Assignment. Test Equipment.</h1>  
+                            <p>The <b>Group Assignment page</b> is at the following <a href="http://academany.fabcloud.io/fabacademy/2020/labs/leon/leon-group-assignments/"><b>link.</b></a></p>
+                            
+                            <ul><li><a href="#oscilloscope"><b>Oscilloscope</b></a>
+                                <li><a href="#multimeter"><b>Multimeter</b></a>
+                                <li><a href="#logic"><b>Logic Analyzer</b></a></ul>
+                            
+                            <h2><a id="oscilloscope"></a>Oscilloscope</h2>
+                            <p>In the Fab Lab León we have an oscilloscope purchased to assemble DIY, a <a href="https://es.aliexpress.com/i/32837368469.html"><b>DSO Shell 150</b></a>. I'm going to measure the output of the LED of the Hello Board that Nuria made with the ATtiny 412, because mine being copper vinyl varnish the entire board to protect it. So I <b>regulate</b> the oscilloscope in <b>DC</b>, <b>2V</b> and a time of <b>0.2s</b> for each grid. With the clamps I measure between ground and the LED output.</p>
+                            
+                            <p><img src="images/week06/week06.03.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>A small video where square waves from 0 to 5V are best appreciated. Exactly the <b>maximum value</b> is <b>5, 51 V</b> and the <b>minimum value</b> is <b>2.59 V.</b></p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/395807262" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <h2><a id="multimeter"></a>Multimeter</h2>
+                            <p>I use a multimeter of the brand <a href="https://es.aliexpress.com/i/33000928943.html"><b>Aneng M11</b></a> with good quality-price and that we use especially to teach "Jovenes Makers" how to use. I use the multimeter to <b>verify</b> the <b>continuity</b> of the tracks and the <b>polarities</b> of the LEDs. I can also measure capacitors.</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.04.jpg" alt="" /></span>
+                            
+                            
+                            <h2><a id="logic"></a>Logic Analizer</h2>
+                            <h2>20/03/2021</h2>
+                            <p>During the fall of last year I bought a <a href="https://es.aliexpress.com/item/4001175259241.html?spm=a2g0s.9042311.0.0.274263c0Rj5XSr"><b>Logic Analyzer</b></a> but didn't get to test it until this year. A Logic Analyzer helps us to debug our electronic circuits. It is much more than an oscilloscope, because we can know the information that we send through the FTDI, how an I2C works or simply measure the pulses of a blink and if they correspond to what we have programmed.</p>
+                            
+                            <p>The kit consists of the Logic Analyzer, a USB cable and some female-female cables, but it is better to buy the ones from the following <a href="https://es.aliexpress.com/item/32832013380.html?spm=a2g0s.9042311.0.0.274263c0ZDUJXE"><b>link</b></a> that have clamps.</p>
+                            
+                            <p><img src="images/week06/week06.44.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>To use the Logical Analyzer, we must download the following <a href="https://www.saleae.com/es/downloads/"><b>Saleae</b></a> brand program (it is used for its logic analyzers such as those of generic brands such as this case). We will install all the steps, when we open the program the following screen will appear where we will be asked to connect the Logic Analyzer. When we connect it, the channels will come out.</p>
+                                    
+                            <span class="image main"><img src="images/week06/week06.45.jpg" alt="" /></span>
+                            
+                            <p>The next step is to configure the channels (we have up to 8 channels). We can configure a channel for Async Serial, I2C, SPI... In my case I am going to configure channel 0 as Async Serial to measure Serial signals (TX, RX) or the pulse of an LED. We have to choose the channel that we are going to measure, in my case it will be channel 0 and with a speed of 115200 (speed that we have configured in the microcontroller to communicate by Serial).</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.46.jpg" alt="" /></span>
+                            
+                            <p>Then we go to the Device Settings tab, where we will configure the Trigger mode (continuously record data until a digital trigger is found). It will be on channel 0 and the capture will last for 1 second.</p>
+                            
+                            <p><img src="images/week06/week06.47.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>Once the above is configured, we go to the part of the physical connection. We have to connect a cable to Channel 0 and to GND. The GND will go to the GND (black wire) of the board and Channel 0 (red wire) to the output of the LED pin.</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.48.jpg" alt="" /></span>
+                            
+                            <p>Once connected, we click <b>Play</b> and observe that the timeline advances and stops when the measurement of one second with the Trigger has finished. If we scroll with the mouse, we can see how many pulses we have obtained and, above all, know the time (in my case it coincides with what is programmed by 200 ms Hight, 100 ms Low).</p>
+                            
+                            <p><img src="images/week06/week06.49.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>Now I'm going to test Neil's <a href="http://academy.cba.mit.edu/classes/embedded_programming/t412/hello.t412.echo.ino"><b>Echo program,</b></a> to send and receive information from the microcontroller through the TX and RX. For this I am going to configure Channel 0 and Channel 1. Within the analyzer section, we will configure the section to receive in <b>ASCII.</b></p>
+                            
+                            <p><img src="images/week06/week06.50.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>Now we go to the moment of the physical connection, we will connect the GND (black wire) to GND, Channel 0 to TX (red wire) and Channel 1 to RX (green wire).</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.51.jpg" alt="" /></span>
+                            
+                            <p>Once everything is connected, we press <b>Play</b> and from the Arduino Serial Monitor, we write "Hello" and we can see through the Logic Analyzer how it sends the pulses and in ASCII we see the letters "Hello". If we change to Channel 1, we can see how the microcontroller answers us by writing the word "Hello" letter by letter. Something awesome. 🤩</p>
+                            
+                            
+                            <span class="image main"><img src="images/week06/week06.52.jpg" alt="" /></span>
+                            
+                            <p><video controls width="100%"; max-width="800"><source src="images/week06/logic.mp4" type="video/mp4"></video></p>
+                            
+                            <h1>Hello Train.</h1>
+                            <h2>Eagle</h2>
+                            <p>To redesign the Hello Board I will use Eagle. I will use the <b>ATtiny 1614</b>, so I will use the reference of the echo Hello Board ATtiny 1614 from Neil. I will also design the board with a cool shape, I want to make a <b>train machine.</b> I'm looking for the pinning of ATtiny 1614 because I'm going to need it to know where the pins are.</p>  
+                            
+                            <span class="image main"><img src="images/week06/week06.05.jpg" alt="" /></span>
+                            
+                            <p>I download the version of Eagle 9.5.2 and the Fab <a href="https://gitlab.fabcloud.org/pub/libraries/electronics"><b>libraries</b></a> that Neil taught us in class. I create a new project where I can have a schematic and a board. Looking at the Fab library, I find that the <b>ATtiny 412</b> and the <b>ATtiny1614</b> are <b>missing.</b> 😰  Nuria had told me that since they are the same encapsulation as the ATtiny 44 and 45 that I <b>make my own component.</b> Thanks Nuria. Through the ATtiny44 and the ATtiny1614 pinout I was creating my own component.</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.06.jpg" alt="" /></span>
+                            
+                            <p>Once I have the ATtiny1614 well pinned, I start adding components. For the <b>button</b>, Nuria explained that there are two ways to place it. With <b>pull-up</b> or <b>pull-down</b> resistance. This means that when we have the button with the contact open, <b>noise</b> can enter through that pin and make us vary the state of that microcontroller input. For this we can put a pull-up resistor that is to say if the button is grounded and a pull-down resistor if the button is connected to VCC. In this scheme both things look good. I am going to use a <b>pull-down resistor.</b></p>
+                            
+                            <p><img src="images/week06/week06.07.jpg" width="60%"; max-width="700" /></p>
+                            
+                            <p>When I have all the components in place and with their corresponding values, I start using <b>Labels.</b> They are much easier to use than wires. Because in the end you have many wires and it is difficult to identify them and you are in danger of creating points of union. So once I have all the labels placed, this is the result of the circuit (I finally added two more LEDs to make the board more beautiful 😊) on pins PB0 and PB1.</p>
+                            
+                            <p><img src="images/week06/week06.08.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>Once I have the scheme, I go on to create the PCB. To do this, click on the icon next to the printer called Board. Automatically all the components that I am going to use are loaded and small yellow lines that are the tracks of the tracks appear. Before starting to join components, I look at which layer I am, the TOP and red (if I made a through hole board, I would have to place myself in the blue BOTTOM layer). Nuria told us that before starting to join the components we must also mark the <b>design rules</b> (DRC), that is, the values of the width of the track and the size of the mill. I put the following values at 16mil. (Nuria later told me that in the same folder where the components library is, there is a file with the design rules).🤣 </p>
+                            
+                            <span class="image main"><img src="images/week06/week06.09.jpg" alt="" /></span>
+                            
+                            <p>Once I have the design rules, I begin to orient the components, more or less as I wanted them in the drawing and to make the board smaller. When placing the components I realize that the <b>button</b> will cost me to attach it to the corresponding pin. So I change it in the scheme, from pin PA3 to <b>PA4.</b></p>
+                            
+                            <span class="image main"><img src="images/week06/week06.10.jpg" alt="" /></span>
+                            
+                            <p>Once I have all the components placed and the tracks together, I have to <b>export</b> the file in <b>.PNG.</b> But first we have to be alone with the tracks, so as I said before we are in the TOP layer, the red layer. Well, you have to turn off all the layers and just turn on the <b>TOP layer.</b> This is found in the Layer Settings option. Once we have only the layer of the tracks we go on to export the design. To do this, the following menu appears in the <i>File -> Export -> Image menu.</i> We have to put the file as <b>Monochrome</b>, <b>1000 DPI</b> resolution and the area of the <b>Window.</b></p>
+                            
+                            <p><img src="images/week06/week06.12.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>For the outer shape of the board, I will use <b>GIMP.</b> I download a drawing of a train from the internet, I have tried to combine the board with the drawing of the train but I am not able. Besides the outside we have a regular line there are many pixels. So I don't like how it looks.</p>
+                            
+                            <p><img src="images/week06/week06.13.jpg" width="60%"; max-width="700" /></p>
+                            
+                            <p>So thinking, I realize that even from <b>Eagle</b> I can draw the contour to my liking. So I open Eagle again; with the line button, in a <b>line width of 0.8mm </b>(thickness of the mill for the outside) and on the TOP layer I draw the <b>train machine.</b></p>
+                            
+                            <p><img src="images/week06/week06.14.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>I export the .PNG again with the interior tracks and the train outline. I open GIMP and start copying the image to work in different layers. One layer will be the inner <b>traces</b> with letters and my logo <i>(white the tracks and the rest black)</i>, and another layer the <b>outer</b> edge <i>(black the cut line and the rest white)</i>. With GIMP we can erase the Path that I don't use for the UPDI connector.</p>
+                               
+                            <span class="image main"><img src="images/week06/week06.15.jpg" alt="" /></span>
+                            
+                            
+                            <p>With <b>Mods CE</b>, I <b>simulate</b> the .PNG to see that I can mill all the tracks and not have any problem that there is any track without milling or one with another, especially in the area of the microcontroller.</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.16.jpg" alt="" /></span>
+                            
+                            
+                            <p>Well I already have the two .PNG the traces and the outside line. But ... what is the <b>human mind</b>, when I was <b>sleeping</b>😴, I think that I have not correctly <b>verified</b> the position of the <b>UPDI connector and the GND</b>. So the next morning, before going to work I open Eagle, and I realize that it was wrong, I have to <b>reverse the position of the connector.</b></p>
+                            
+                            <span class="image main"><img src="images/week06/week06.17.jpg" alt="" /></span>
+                            
+                            
+                            <p>Once the UPDI connector problem is solved, I export the .PNG again and edit it with GIMP to get the trace and interior file. Here are the links of the .PNG and the Eagle <b>files.</b>
+                            <ul><li><a href="assignments/week06/Hello%20Train.zip"><b>Hello Train Schematic + Board</b></a>
+                                <li><a href="assignments/week06/hello_train3_traces.png"><b>Hello Train Traces</b></a> 
+                                <li><a href="assignments/week06/hello_train3_interior.png"><b>Hello Train Interior</b></a></ul>    
+                            
+                            <span class="image main"><img src="images/week06/week06.18.jpg" alt="" /></span>
+                            
+                            <h2>ROLAND MDX-20A MODELA + MODS CE</h2>
+                            
+                            <p>As during <a href="week04.html"><b>Week 04</b></a>, I use the Roland Model MDX-20A and Fran's Mods CE again. I import the .PNG of the traces and use the mill 1/64 at a speed of 1 mm / s. The X = 25 and Y = 1.</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.19.jpg" alt="" /></span>
+                            
+                            <p>While I was milling the Model, I observe that in the front, it hardly deepens, but in the back it is doing well 😬. The sacrificial board is slightly inclined. It also happens to me for being a little <b>"ruinas"</b> (spanish expression that you save and spend nothing). So once it finishes milling, I lower the mill a little more and end up milling perfectly.</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.20.jpg" alt="" /></span>
+                            
+                            <p>To cut the board, change to mill 1/32, at a speed of 1 mm / s. When I was milling, I notice that he begins to cut the wood of the sacrificial board, so I stop work. I tell Nuria, and she tells me that it may be because in Mods CE, the parameter of the Z is 2 mm and the boards are 1, 9 mm.</p> 
+                            
+                            <span class="image main"><img src="images/week06/week06.21.jpg" alt="" /></span>
+                            
+                            <h2>Components and tin soldering</h2>
+                            
+                            <p>Once I have the board milled, I pick up the components of the Fab Lab León inventory. And with patience, good light and the computer to follow the scheme and the position of the components start soldering. 😇</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.22.jpg" alt="" /></span>
+                            
+                            <p>A small <b>time-lapse</b> of the soldering process. I had to use the vacuum solder to remove some tin from two pins of the ATtiny1614. Through the <b>multimeter</b> I check the welds and the polarity of the LEDs.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/396037004" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <p>And this is the final result, a very very choo choo train. 🚂 🚂 🚂 😍</p>
+                            
+                            <p><img src="images/week06/week06.23.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <h2>Programming the Hello Train ATtiny 1614</h2>
+                            
+                            <p>To program the board I need to create a program in <b>Arduino</b>, that when I press the button I create a sequence of lights. The first thing I have to do is configure the pins of the inputs and outputs. I want the sequence of lights to be pressed when the button is pressed, the state of that button is 0. Using an If / else conditional I do the sequence. </p>
+                            <p>Here is the <a href="assignments/week06/hello_train_button_led.ino"> <b>Arduino program</b></a> to download.</p>
+                            
+                            
+                            <pre><code>//Adrián Torres - Fab Academy 2020 - Fab Lab León
+//tiny1614 hello_train
+//
+//Original code:Neil Gershenfeld 12/8/19
+// This work may be reproduced, modified, distributed,
+// performed, and displayed for any purpose, but must
+// acknowledge this project. Copyright is retained and
+// must be preserved. The work is provided as is; no
+// warranty is provided, and users accept all liability.
+//
+const int ledPin1 = 3;//first light
+const int ledPin2 = 6;//white light
+const int ledPin3 = 7;//white light
+const int ledPin4 = 1;//red light
+const int ledPin5 = 2;//red light
+const int buttonPin = 0;// button pin
+int buttonState = 0;//initial state of the button
+int i = 0; //variable intensity led
+
+void setup() { //declaration of inputs and outputs
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+  pinMode(ledPin3, OUTPUT);
+  pinMode(ledPin4, OUTPUT);
+  pinMode(ledPin5, OUTPUT);
+  pinMode(buttonPin, INPUT);
+}
+void loop() {
+  buttonState = digitalRead(buttonPin);// we read the state of the button
+  if (buttonState == HIGH) { //if we press the button
+  digitalWrite(ledPin2, HIGH);
+  digitalWrite(ledPin3, HIGH);
+  delay(2000);                       
+  digitalWrite(ledPin4, HIGH);
+  digitalWrite(ledPin5, HIGH);    
+  delay(2000);
+  digitalWrite(ledPin1, HIGH);    
+  delay(5000);
+  digitalWrite(ledPin1, LOW);    
+  delay(1000);
+  digitalWrite(ledPin4, LOW);
+  digitalWrite(ledPin5, LOW);
+  delay(2000);                       
+  digitalWrite(ledPin2, LOW); 
+  digitalWrite(ledPin3, LOW);    
+  delay(1000);
+  
+}
+  else {  //if we don't press the button
+  digitalWrite(ledPin1, LOW);
+  digitalWrite(ledPin2, LOW);
+  digitalWrite(ledPin3, LOW);
+  digitalWrite(ledPin4, LOW);
+  digitalWrite(ledPin5, LOW);
+  }
+}
+
+
+</code></pre>
+                            
+                            
+                            <p>To upload the code to the board I will perform the following process with <b>Linux.</b></p> 
+                            <ul><li>1. I open the Hello_train_button_led program in Arduino. I select the ATtiny 1614 and 20Mhz internal Crystal board. I check it, compile it and save it (save it in .hex and .ino). 
+                                <li>2. I copy the Hello_train_button_led.ino.hex file into the <b>pyupdi folder</b>.
+                                <li>3. I run <b><i>dmesg -w</i></b>
+                                <li>4. I use the USB-FT230XS-UPDI that Nuria created. Connect and disconet the ftdi cable and take note of the "port name" <b>ttyUSB0</b>    
+                                <li>5. I connect the boards as follows. <b> USB-FT230XS-UPDI + hello_train +  USB-Serial-FT230X (this just for power and ground).</b></li></ul> 
+                                    
+                            <p><img src="images/week06/week06.24.jpg" width="60%"; max-width="700" /></p>        
+                                
+                            <ul><li>6. Go into the "pyupdi" folder.
+                                <li>7. Program the board using python -> run <b><i>sudo python3 pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 19200 -f Hello_train_button_led.ino.hex -v</i></b></ul>
+                            
+                            <p>Apparently something is not going well, try loading the .hex file but stop and close the ttyUSB0 port.</p>
+                            
+                            <p><img src="images/week06/week06.25.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>So since two weeks ago my Hello Board ATtiny412 programmed it with my USB-SERIAL FT230X, I need to solder the UPDI converter to FTDI. Thanks to Nuria who is cautious, when she made her USB-FT230XS-UPDI she milled the <b>Serial-UPDI.FT230X.</b> 😘 </p>
+                            
+                            <span class="image main"><img src="images/week06/week06.26.jpg" alt="" /></span>
+                            
+                            <p>Once soldered, I connect it as follows.<b> USB-Serial-FT230X + Serial-UPDI.FT230X + hello_train +  USB-FTDI (this just for power and ground).</b></p>
+                            
+                            <p><img src="images/week06/week06.27.jpg" width="60%"; max-width="700" /></p>
+                            
+                            <p>I repeat all the steps to program.</p>
+                            <ul><li>1. I open the Hello_train_button_led program in Arduino. I select the ATtiny 1614 and 20Mhz internal Crystal board. I check it, compile it and save it (save it in .hex and .ino). 
+                                <li>2. I copy the Hello_train_button_led.ino.hex file into the <b>pyupdi folder</b>.
+                                <li>3. I run <b><i>dmesg -w</i></b>
+                                <li>4. I use the USB-Serial-FT230X. Connect and disconnet the ftdi cable and take note of the "port name" <b>ttyUSB0</b>    
+                                <li>5. I connect the boards as follows.<b>USB-Serial-FT230X + Serial-UPDI.FT230X + hello_train +  USB-FTDI (this just for power and ground).</b> 
+                                <li>6. Go into the "pyupdi" folder.
+                                <li>7. Program the board using python -> run <b><i>sudo python3 pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 19200 -f Hello_train_button_led.ino.hex -v</i></b></ul>
+                            
+                            <p>Now it works, here is a small video of the loading process and the operation when I press the button on the board.  🚂 🚂 🚂 😍 </p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/396189758" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <h2>Case for Serial-UPDI.FT230X</h2>
+                            <p>With Rhinoceros I design a small 3D printed case so that the connectors are not in the air. I leave both designs. <a href="assignments/week04/case%20ftdi%20usb.stl"> <b>Case USB-Serial-FT230X</b></a> and <a href="assignments/week06/carcasa%20conversor%20updi-ftdi.stl"> <b>Case Serial-UPDI.FT230X</b></a></p>
+                                
+                                
+                            <p><img src="images/week06/week06.28.jpg" width="60%"; max-width="700" /></p>
+                            
+                            
+                            <h1>Other software</h1>
+                            
+                                    
+                            <h2>Kicad</h2>         
+                            <p>As Neil recommended us to try other <b>EDA</b> softwares, I will try to use <b>KiCAD.</b> For this I download the sftware and libraries. When designing the schematic, I will use the <b>ATtiny412</b>, 3 LEDs, 1 button to create a <b>traffic light</b> or <b>signal.</b> For this I also use the <b>labels</b>, which is much easier and cleaner schematic.</p>
+                            
+                            <p><img src="images/week06/week06.29.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>When creating the board it is a bit <b>complicated</b>, because we must first generate the <b>list of networks.</b> Then we assign the <b>footprints</b> to the symbols of the scheme. At this moment I get an <b>error</b> with the footprint libraries.</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.30.jpg" alt="" /></span>
+                            
+                            <p>I try to add them manually, but I still can't get all the footprints. It seems that it does not find the relationship between the component and its footprint. So I only get the ATtiny 412 and an LED (that LED does not have its connection with the ATtiny). So I don't know why this happens to me. 😰 </p>
+                            
+                            <p><img src="images/week06/week06.31.jpg" width="80%"; max-width="700" /></p>
+                            
+                            
+                            <h2>EasyEDA</h2> 
+                            <p>As I could not finish the design with KiCAD I decided to try another software, <b>EasyEDA.</b> As soon as you start it you can follow a series of tutorials to create or modify boards. It is very <b>intuitive</b> and has many components in the libraries. So I look for the ATtiny412 and they have it. One of the interesting things is that you can <b>bookmark</b> your most used components. It’s cool.</p>
+                            
+                            <p><img src="images/week06/week06.32.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>The <b>supplies</b> must be <b>wired</b>, it is not worth using Labels directly, so the ATtiny wired it and the rest of the components I put the Label with GND or VCC. The <b>pins</b> that we <b>don't use</b> must be marked with a <b>cross</b>, but we will have an error.</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.33.jpg" alt="" /></span>
+                            
+                            <p>When we start to make the board, this is how the components appear. In the <b>design rules</b> we will put <b>16</b> routing size and track width.</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.34.jpg" alt="" /></span>
+                            
+                            <p>Using the <b>Board Outline layer</b> (purple layer), draw the outside of the board. One of the things I like about EasyEDA is that you can simulate the 3D board finish (and it is valid for single trace or multitraces boards) Incredible. 😲</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.35.jpg" alt="" /></span>
+                            
+                            <p>When exporting the design we can do it in <b>PNG, SVG or PDF.</b> The first thing I do is export it in PNG, but it looks very small and like the pixels are very large and irregular. I try to export it in PNG but increased by 2x; It looks something better. Pablo tells me that it may be the DPI, which is why it is very small and granulated. Try to export it in PDF. In PDF much better, thanks Pablo. 🤗</p>
+                            <p>Another interesting thing about EasyEDA is that you can create the <b>BOM</b> list with all the materials you need and buy them directly.</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.36.jpg" alt="" /></span>
+                            
+                            <p>Here are the EasyEDA files and the PDFs with the traces and the inside of the board.
+                            <li><a href="assignments/week06/Hello_signal_EasyEDA.zip"> <b>Hello Signal EasyEDA</b></a></li></p>
+                            
+                            <h2>Upverter</h2>
+                            <p>My friend Marta Verde has shown me another PCB design program that can be interesting. <a href="https://upverter.com/"><b>Upverter</b></a></p>
+                            
+                            
+                            <h1><a id="adrianino"></a>Adrianino</h1>
+                            <h2>08/09/2020</h2>
+                            
+                            <p>Although I have already finished my Fab Academy, I am still researching. Speaking with my instructors Nuria and Pablo, I told them that I wanted to continue working on the <a href="https://gitlab.fabcloud.org/pub/helloworld/index"><b>Hello World project,</b></a> but I was not satisfied with making a board for each sensor or actuator.</p>
+
+                            <p>So I decided to make a board with the ATtiny1614, where I could use the maximum pins for the inputs or outputs; that had external power; I2C connection. The idea is that a student can test as many sensors as possible, become familiar with electronics and programming little by little. And the <a href="#adrianino"><b>Adrianino</b></a> was born.</p>
+                            
+                            <p>Furthermore, I wanted to go one step further and place a VCC pin next to the UPDI programming pins, which I will explain later on how it works. This version of Adrianino has been updated for the <a href="http://academy.cba.mit.edu/classes/embedded_programming/UPDI/hello.serial-UPDI.3.png"><b>new Serial-UPDI converter.</b></a></p>
+                            
+                            <p><img src="images/week06/week06.37.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <h2>Features</h2>
+                            <ul><li> This board has FTDI and <b>UPDI + VCC</b> connection to program it without the need for external power (or the FTDI).
+                                <li> It contains a voltage regulator to power the board with a <b>power supply</b> (9V battery).
+                                <li> It has another 9V power connection to for example power a DC motor driver. 
+                                <li> Then there are 4 outputs or inputs with VCC and GND on each side to be able to connect different inputs or outputs. 
+                                <li> On the left there is an <b>I2C</b> connection to connect an LCD, OLED or a sensor that uses this communication. 
+                                <li> There are 3 outputs or inputs at the bottom and with a GND pinout.
+                                <li> There is an LED and an integrated button, which will help us to test that the microcontroller works with a simple program.
+                                <li> Through the FTDI connection we can read the data from the different sensors through the Serial.
+                            </ul>
+                            
+                            <h2>BOM and Schematic</h2>
+                            
+                            <p>This is the schematic where you can see all the components.</p>
+                            
+                            <p><img src="images/week06/week06.38.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <style>
+                                                    table {
+                                                        font-family: arial, sans-serif;
+                                                        border-collapse: collapse;
+                                                        width: 100%;
+                                                        }
+
+                                                    td, th {
+                                                        border: 1px solid #dddddd;
+                                                        text-align: left;
+                                                        padding: 8px;
+                                                        }
+
+                                                    tr:nth-child(even) {
+                                                        background-color: #dddddd;
+                                                        }
+                                                </style>
+
+                                                <table>
+                                                    <tr>
+                                                        <td><h3><b>Adrianino</b></h3></td>
+                                                         <td>Where to buy?</td>
+                                                        <td>Amount</td>
+                                                        <td>Price</td>
+                                                        <td>Total price</td>
+                                                    </tr>
+                                                     <tr>
+                                                        <td><a href="https://www.digikey.es/product-detail/es/bantam-tools/MT1004/1932-1038-ND/8567212">Proto Board FR1</a></td>
+                                                        <td>Digikey</td>
+                                                        <td>1/4 board</td>
+                                                        <td>1,24 €/unit</td>
+                                                        <td>0,31 €</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://www.digikey.es/product-detail/es/microchip-technology/ATTINY1614-SSNR/ATTINY1614-SSNRCT-ND/7354424">ATtiny1614</a></td>
+                                                        <td>Digikey</td>
+                                                        <td>1</td>
+                                                        <td>0,64 €/unit</td>
+                                                        <td>0,64 €</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://www.digikey.es/product-detail/es/samsung-electro-mechanics/CL31F105ZBFNNNE/1276-1204-1-ND/3889290">1uF capacitor 50V</a></td>
+                                                        <td>Digikey</td>
+                                                        <td>1</td>
+                                                        <td>0,18 €/unit</td>
+                                                        <td>0,18 €</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://www.digikey.es/products/es?keywords=311-4.99KFRCT-ND">4,99kΩ resistor</a></td>
+                                                        <td>Digikey</td>
+                                                        <td>2</td>
+                                                        <td>0,09 €/unit</td>
+                                                        <td>0,18 €</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://www.digikey.es/product-detail/es/yageo/RC1206FR-07499RL/311-499FRCT-ND/731891">499 Ω resistor</a></td>
+                                                        <td>Digikey</td>
+                                                        <td>1</td>
+                                                        <td>0,09 €/unit</td>
+                                                        <td>0,09 €</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://www.digikey.es/products/es?keywords=NCP1117ST50T3GOSCT-ND">IC Regulator 5V 1A SOT223</a></td>
+                                                        <td>Digikey</td>
+                                                        <td>1</td>
+                                                        <td>0,43 €/unit</td>
+                                                        <td>0,43 €</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://www.digikey.es/products/es?keywords=311-1.00KFRCT-ND">1kΩ resistor</a></td>
+                                                        <td>Digikey</td>
+                                                        <td>1</td>
+                                                        <td>0,09 €/unit</td>
+                                                        <td>0,09 €</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://www.digikey.es/product-detail/es/lite-on-inc/LTST-C150TBKT/160-1643-1-ND/573584">LED</a></td>
+                                                        <td>Digikey</td>
+                                                        <td>1</td>
+                                                        <td>0,35 €/unit</td>
+                                                        <td>0,35 €</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://www.digikey.com/product-detail/es/omron-electronics-inc-emc-div/B3SN-3112P/SW262CT-ND/60835">Button</a></td>
+                                                        <td>Digikey</td>
+                                                        <td>1</td>
+                                                        <td>1,00 €/unit</td>
+                                                        <td>1,00 €</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="https://www.digikey.com/product-detail/es/sullins-connector-solutions/GBC36SGSN-M89/S1143E-36-ND/862355">SMT RT Angle Male Header 0.1" (36pos)</a></td>
+                                                        <td>Digikey</td>
+                                                        <td>9</td>
+                                                        <td>0,15 €/unit</td>
+                                                        <td>1,35 €</td>
+                                                    </tr>
+                                                     <tr>
+                                                        <td><a href="https://www.digikey.com/product-detail/es/gct/BG300-02-A-L-A/2073-BG300-02-A-L-ACT-ND/9859663">Female 1 row horizontal header</a></td>
+                                                        <td>Digikey</td>
+                                                        <td>14</td>
+                                                        <td>0,15 €/unit</td>
+                                                        <td>2,10 €</td>
+                                                    </tr>
+                                                     <tr>
+                                                        <td><a href="https://www.digikey.com/product-detail/en/amphenol-icc-fci/95278-801A04LF/609-5160-1-ND/5967721">Male 2 row vertical header</a></td>
+                                                        <td>Digikey</td>
+                                                        <td>3</td>
+                                                        <td>0,20 €/unit</td>
+                                                        <td>0,60 €</td>
+                                                    </tr>
+                                                    
+                                                  
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td><b>Total cost</b></td>
+                                                        <td><b>7,32 €</b></td>
+                                                    </tr>
+                                                </table>
+                    
+                            <h2>Board design</h2>
+                            <p>In the files section you can download the Eagle files and the PNG's. Here is a sample of the PNG's, traces and cutting lines.</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.39.jpg" alt="" /></span>
+                            
+                            <h2>Programming</h2>
+                            <p>The new generation of ATtiny's are programmed through <b>UPDI</b>, for more information on the process you can follow my documentation of the week <a href="week08.html"><b>Embedded Programming.</b></a></p>
+                            
+                            <h1>UPDI + VCC module. Old version.</h1>
+                            <p>At the time of programming, until now I used the Hello USB-serial.FT230X + Hello serial-UPDI.FT230X and also the power supply of the board with an FTDI (which later helps us to read through the Serial).</p>
+                            <p>With this adapter we have the Serial + UPDI + VCC adding a higher pin, without the need to use another FTDI to power the board.</p>
+                            
+                            <span class="image main"><img src="images/week06/week06.40.jpg" alt="" /></span>
+                            
+                            <h2>Schematic and board design</h2>
+                            <p>The design is the same as the one <a href="http://academy.cba.mit.edu/classes/embedded_programming/UPDI/FTDI-UPDI.png"><b>Neil uses,</b></a> except that I add the Vcc pin to power the board that we programmed.</p>
+                            
+                            <p><img src="images/week06/week06.41.jpg" width="30%"; max-width="700" /></p>
+                            
+                            <p>In the Files section you will find the PNG's and the Eagle file to download them.</p>
+                            
+                            <p><img src="images/week06/week06.42.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <h2>Operation</h2>
+                            <p>The connection is very simple, we only need the FTDI-USB and we connect the UPDI + VCC module to the board, in this case to the Adrianino that has the three pins (UPDI + GND + VCC).</p>
+                            
+                            <p><img src="images/week06/week06.43.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>In the following video you can see the programming process of the Adrianino and an LCD.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/457496735" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <h2>Conclusions</h2>
+                            <p>With this evolution, we managed to program through UPDI without the need for external power from another FTDI.</p>
+                            
+                            <h1>Files</h1>
+                            <p>Find below the files that I made for this assignment.</p>
+                            <ul><li><a href="assignments/week06/Hello%20Train.zip"><b>Hello Train Schematic + Board</b></a>
+                                <li><a href="assignments/week06/hello_train3_traces.png"><b>Hello Train Traces</b></a> 
+                                <li><a href="assignments/week06/hello_train3_interior.png"><b>Hello Train Interior</b></a>
+                                <li><a href="assignments/week06/hello_train_button_led.ino"> <b>Arduino program</b></a>    
+                                <li><a href="assignments/week04/case%20ftdi%20usb.stl"> <b>Case USB-Serial-FT230X</b></a> 
+                                <li><a href="assignments/week06/carcasa%20conversor%20updi-ftdi.stl"> <b>Serial-UPDI.FT230X</b></a>
+                                <li><a href="assignments/week06/Hello_signal_EasyEDA.zip"> <b>Hello Signal EasyEDA</b></a></li>
+                            </ul> 
+                            
+                            <ul><li><a href="assignments/week06/Adrianino_Hello_1614.zip"><b>Adrianino Schematic + Board</b></a>
+                                <li><a href="assignments/week06/Adrianino_v2_traces.png"><b>Adrianino Traces</b></a> 
+                                <li><a href="assignments/week06/Adrianino_v2_interior.png"><b>Adrianino Interior</b></a>
+                                <li><a href="assignments/week06/New_UPDI.zip"><b>Old version UPDI + VCC</b></a>
+                                <li><a href="assignments/week06/New_UPDI_interior.png"><b>Old version UPDI + VCC interior</b></a
+                                <li><a href="assignments/week06/New_UPDI_traces.png"><b>Old version UPDI + VCC traces</b></a    
+                    
+                            
+                            </ul>
+                                    
+                                    
+                                    
+                                    
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+                        
+                         <p align="center"> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><b>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</b></a>
+                        
+						<div class="inner">
+							
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/Adrian_Towy" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/adriantrains" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/adrian_towy/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.linkedin.com/in/adri%C3%A1n-torres-oma%C3%B1a/" class="icon brands style2 fa-linkedin"><span class="label">Linkedin</span></a></li>
+						
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

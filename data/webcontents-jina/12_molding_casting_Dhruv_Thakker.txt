@@ -1,0 +1,66 @@
+Title: Fab Academy 2019 - Dhruv Thakker
+
+URL Source: http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/
+
+Markdown Content:
+Fab Academy 2019 - Dhruv Thakker
+===============
+         
+
+Fab Academy 2019 - Dhruv Thakker  
+
+*   Home
+*   About
+*   *   [About me](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/about/)
+    *   [Agreement](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/about/agreement/)
+*   Assignments
+*   *   [01\. Principles and Practices](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/01.PrinciplesandPractices/)
+    *   [02\. Project Management](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/02.ProjectManagement/)
+    *   [03\. Computer Aided design](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/03.ComputerAidedDesign/)
+    *   [04\. Computer Controlled Cutting](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/04.ComputerControlledCutting/)
+    *   [05\. Electronics Production](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/05.ElectronicsProduction/)
+    *   [06\. 3D Scanning and printing](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week06/)
+    *   [07\. Electronics design](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week07/)
+    *   [08\. Computer controlled machining](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week08/)
+    *   [09\. Embedded programming](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week09/)
+    *   [10\. Molding and casting](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week10/)
+    *   [11\. Input devices](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week11/)
+    *   [12\. Output devices](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week12/)
+    *   [13\. Applications and implications](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week13/)
+    *   [14\. Networking and Communications](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week14/)
+    *   [15\. Mechanical design & 17. Machine Design](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week15/)
+    *   [16\. Interface and application programming](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week16/)
+    *   [15\. Mechanical design & 17. Machine Design](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week17/)
+    *   [18\. Wildcard week](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week18/)
+    *   [19\. Invention, intellectual property and income](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week19/)
+    *   [20\. Project Development](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/assignments/week20/)
+*   Projects
+*   *   [20\. Project Development](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/projects/FinalProjectDevelopment/)
+    *   [Final Project Proposal](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/projects/FinalProjectProposal/)
+    *   [Final project](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/projects/final-project/)
+
+[Next](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/about/) [About me](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/about/)
+
+### Welcome to the Fab Academy site of _**Dhruv Thakker**_[¶](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/#welcome-to-the-fab-academy-site-of-dhruv-thakker "Permanent link")
+
+What I propose here is a chair which transforms into a planar surface hence occupying minimum space when not in use.
+
+**From**
+
+![Image 1: 1](https://gitlab.fabcloud.org/academany/fabacademy/2019/labs/cept/students/dhruv-thakker/raw/master/docs/images/week01/chair_3d_1.jpg)
+
+**To**
+
+![Image 2: 4](https://gitlab.fabcloud.org/academany/fabacademy/2019/labs/cept/students/dhruv-thakker/raw/master/docs/images/week01/chair_3d_4.jpg)
+
+Visit [Project Proposal](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/#assignments/1.%20principles%20and%20practices/) for more Info
+
+  
+
+[Next](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/about/) [About me](http://fabacademy.org/2019/labs/cept/students/dhruv-thakker/about/)
+
+  
+
+Dhruv Thakker
+
+Documentation built with [MkDocs](http://www.mkdocs.org/) using [Windmill](https://github.com/gristlabs/mkdocs-windmill) theme by Grist Labs.

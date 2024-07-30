@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>week8</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="mycss.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+    <td><a href="../index.html"><div align="right"><button> Home page </button></div></a></td>
+    
+<h1 id="week-8-computer-controlled-machining">Week 8: Computer-Controlled Machining</h1>
+<h2 id="used-softwares">Used Softwares:</h2>
+<ul>
+<li>Autodesk Fusion 360</li>
+<li>Vcarve pro for ShopBot</li>
+<li>ShopBot sb3</li>
+</ul>
+<h2 id="week-objective">Week Objective:</h2>
+<ul>
+<li><p>Group assignment: To view the tests for our machine <a href="https://www.shopbottools.com/">ShopBot</a> please visit the <a href="http://fabacademy.org/2020/labs/uae/shopbot/shopbot.html">group page</a>.</p></li>
+<li><p>Documented how you designed your object (something big)</p></li>
+<li><p>Documented how you made your CAM-toolpath</p></li>
+<li><p>Described problems and how you fixed them</p></li>
+<li><p>Included your design files and ‘hero shot’ photos of final object</p></li>
+</ul>
+<h2 id="design-something-big---robot-structure">Design Something Big - Robot Structure :</h2>
+<p>The chassis and the inner structure of the <strong>Fab Guide Robot</strong> was fabricated using CNC milling, which is my final project.</p>
+<p>I spent a lot of time designing, as I don’t have enough experience with designing. Moreover I wanted ensure to have a stable design, also there were a lot of details I must take in consideration such as electronics place, wheels places, line following sensor, support holes, Aluminum slots places, motor holder place, stands, Tablet holder, and, some extra holes for fixing extra parts if needed.</p>
+<p>Many thanks to our instructor <a href="http://archive.fabacademy.org/archives/2017/fablabuae/students/154/">Hashim</a> he helped me a lot in the designing process. Additionally, he taught me a lot of techniques helped in improving my designing skills.</p>
+<p>Before designing the robot structure, I was a big noob in designing 🤓😆. However, now my skills had improved I can design better than before ✌️</p>
+<p>First, to design the robot structure, I browsed a lot of ideas on the internet for different guide robot designs. Moreover, I set some <strong>features</strong> I want to have in the robot:</p>
+<ol type="1">
+<li><p>Suitable length for kids and adults.</p></li>
+<li><p>Place to put the Tablet.</p></li>
+<li><p>Fabrication capability</p></li>
+<li><p>Stability.</p></li>
+</ol>
+<p>I did several designs until I set on this design. This was one of the hardest choices in the project, to select the best design, that can capability to be fabricated in Fab Lab.</p>
+<p>One of the important points to have is a stable design, I did not want to build robot that will fall down on people 🏃.</p>
+<p>So I worked a lot on this point with our instructor. Any change I did in the design must be taken into consideration, whether this change will affects the stability of the structure or not. Moreover, it was better if I did a stability study for structure but there was not enough time, so we relied on experience and luck.</p>
+<p>The most thing I was scared of it, is when we will assemble the robot it will fall down. Fortunately, the robot was stable</p>
+<p>In this assignment I will discuss, the inner structure of the robot, and the milling process was not direct I had to mill the chassis and motor holder a few times until I reached the perfect one.</p>
+<p>One of reasons I designed a big robot because of the height, and, I want to experience building a big robot. In fact now a days whenever you build something smaller it is better, but I wanted to try.</p>
+<p>I used <code>Fusion 360</code> for the designing. When the 3D model is finished, I created sketch on the surface , and project the 2D face of the wanted body to mill it. Afterward I saved it as a DXF file.</p>
+<p><em>Joint and Slots:</em></p>
+<ul>
+<li><p><code>Material thickness</code> = 12 mm Plywood.</p></li>
+<li><p><code>Kerf</code>= 0.2 mm</p></li>
+<li><p><code>t</code> = thickness = 12 mm</p></li>
+<li><p><code>(t-kerf)</code> = 11.8 mm</p></li>
+</ul>
+<p>I started milling using the joint test my colleagues has done before me, so I skipped the test. It was known if I will use a wood sheet with 12 mm thickness the kerf = 0.2 mm. I edited my design according to this value.</p>
+<h2 id="d-model">3D model:</h2>
+<center>
+<p><img src="images8/explain.png" /></p>
+<p><em>Robot inner structure with labeling parts</em></p>
+<p><img src="images8/modelss.png" /></p>
+<p><em>Different views of the structure</em></p>
+<iframe title="A 3D model" width="640" height="480" src="https://sketchfab.com/models/0e58399a3cbd4b3aac86b81bb400020f/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true">
+</iframe>
+</center>
+<p>As shown above, in the 3D model of the robot. The motor holder was attached to the chassis with needed slots according to the gearbox design, and it had the necessary holes to do the electrical connections. In addition, the size of the bases starts to reduce from the bottom to the top, to have a stable structure. Moreover, a holes were added in the stands to reduce the robot’s weight.</p>
+<h2 id="creating-cam-toolpath-using-vcarve-pro-for-shopbot">Creating CAM-toolpath using <em>Vcarve pro for ShopBot</em>:</h2>
+<h3 id="setting-up-the-sheet-settings">Setting up the sheet settings:</h3>
+<ul>
+<li><p>Opening <code>Vcarve Software</code>.</p></li>
+<li><p>Select <code>create a new file</code>. Next a new job setup page will pop up.</p></li>
+<li><p>Enter the below setting as shown :</p></li>
+</ul>
+<p><img src="images8/img1.png" /></p>
+<p><em>1. Setting Job Size (X &amp; Y):</em></p>
+<p>Sheet dimensions X(Width): <code>2420 cm</code> and Y(Hight): <code>1200 cm</code>, The original size of sheet is <code>2440 X 1220 cm</code>, But I enter it smallest by <code>20 cm</code> to ensure the tool will not hit the screws, because it’s may lead to risk.</p>
+<p><em>2. Material (Z):</em> Enter the sheet thickness = <code>12 mm</code>, <strong>Enter:</strong> <code>OK</code></p>
+<blockquote>
+<p>Note: I did the milling in separate days, so every time I changed the sheet size according to the available area in the working space to ensure the end-mill will not hit the fixing screws and to use the space in an efficient way to prevent material waste.</p>
+</blockquote>
+<p>Now the workspace is ready for importing designs. But, before importing the pieces and arrange them, is better to start by labeling the fixing screws places by using <strong>Drilling Toolpath</strong>.</p>
+<h3 id="create-drilling-tool-path-for-sheet-fixing-screws">Create Drilling Tool-path for sheet fixing screws:</h3>
+<p>I placed circles with <code>6 mm</code> dimeter and place them all around the sheet edges as shown below:</p>
+<p><img src="images8/img4.png" /></p>
+<h3 id="drilling-tool-path-settings">Drilling Tool-path settings:</h3>
+<ol type="1">
+<li><p>Select all the circles (screw marks).</p></li>
+<li><p>Select <strong>Tool-path Operations</strong></p></li>
+</ol>
+<p><img src="images8/img2.png" /></p>
+<ol start="3" type="1">
+<li><p><strong>Cut depth</strong>: <code>1.5 mm</code> because I need only to mark the places of screws, then we will do manual drilling.</p></li>
+<li><p><strong>Select tool</strong>: End mill 6mm</p></li>
+<li><p><strong>Calculate.</strong></p></li>
+<li><p><strong>Save tool-path(s) to file.</strong></p></li>
+</ol>
+<p>This tool path saved and ready to be output in the shopBot.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qEqGIZBf4-4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<blockquote>
+<p>Afterward, I will be explaining in sections below how to operate the ShopBot.</p>
+</blockquote>
+<h3 id="adding-the-designsparts">Adding the designs/parts:</h3>
+<ol type="1">
+<li>Import the DXF files to <code>Vcarve</code>, Go to <code>File</code>&gt; <code>Import</code>&gt;<code>Import vectors</code>:</li>
+</ol>
+<p><img src="images8/img3.png" /></p>
+<h3 id="now-is-the-time-to-arrange-the-parts-all-around-sheet-in-empty-places-as-i-mention-before-i-did-the-milling-in-different-times">Now is the time to arrange the parts all around sheet in empty places, as I mention before I did the milling in different times:</h3>
+<center>
+<p><img src="images8/img6.png" /></p>
+<p><em>The first milling:</em> was test for the chassis, motor holder, and, the slots.</p>
+<p><img src="images8/img7.png" /></p>
+<p><em>The second milling:</em> was the updated chassis and motor holder.</p>
+<p><img src="images8/img9.png" /></p>
+<p><em>The Third milling:</em> was the bases and first layer of the stand to test them.</p>
+<p><img src="images8/img8.png" /></p>
+<em>The last and fourth milling:</em> was the remain of the stands.
+</center>
+<p>Each time the process of creating toolpaths was the same, except in chassis, motor holder, and, bases, I used different endmill’s <code>6mm</code> for cutting and <code>3mm</code> for the holes and Aluminum slots.</p>
+<p>As shown below the setting for the Tools:</p>
+<center>
+<p><img src="images8/endmill3.png" /></p>
+<p>End-mill <code>3mm</code></p>
+<p><img src="images8/endmill6.png" /></p>
+End-mill <code>6mm</code>
+</center>
+<p><strong>The process was:</strong></p>
+<ol type="1">
+<li><p>Arrange the parts.</p></li>
+<li><p>Create <code>DogBones</code> in inside all the slots edges (corners).</p></li>
+</ol>
+<p>To create DogBones:</p>
+<p>Go to <code>Edit object</code> &gt; <code>create filet</code> &gt; <code>dogBone</code></p>
+<ul>
+<li>For End-mill <code>6mm</code>:
+<ul>
+<li>Fillet= Tool Radius <code>3 mm</code>.</li>
+</ul></li>
+<li>For End-mill <code>3mm</code>:
+<ul>
+<li>Fillet= Tool Radius <code>1.5 mm</code>.</li>
+</ul></li>
+</ul>
+<p>I used <em>DogBones</em> so joints press-fit into each other perfectly, Otherwise to will be hard to assemble the parts.</p>
+<p><img src="images8/img5.png" /></p>
+<h2 id="toolpaths">Toolpath(s):</h2>
+<p>Always in milling we cut the inner parts first, then the outer parts.</p>
+<ol type="1">
+<li><p>Drilling toolpath <code>Used to fix the screws.</code></p></li>
+<li><p>Pocket toolpath. <code>Inner cut</code></p></li>
+<li><p>Profile toolpath. <code>Outline/outer cut and cutting in general.</code></p></li>
+</ol>
+<blockquote>
+<p>Note: As the process of creating tool-path for the shopBot milling the same. So I will explain the used settings on chassis and motor holders milling only, and the process will go the same for other parts taking into consideration the used tools and different settings.</p>
+</blockquote>
+<h3 id="pocket-toolpath">Pocket Toolpath:</h3>
+<p>First I start by creating the pocket toolpath to cut the inner parts, so I select all part I want it cut inside then select the icon of <code>pocket toolpath</code></p>
+<p><img src="images8/pocket.png" /></p>
+<p><img src="images8/img11.png" /></p>
+<p><em>Select:</em></p>
+<ol type="1">
+<li><p><strong>Cut depth</strong>: <code>12.5 mm</code>. we always increase the cutting depth by <code>0.5 mm</code>. because we want the tool to cut through out the material.</p></li>
+<li><p><strong>Tool</strong>: <code>End Mill 6mm Plywood</code>.</p></li>
+</ol>
+<p><img src="images8/endmill6.png" /></p>
+<ol start="3" type="1">
+<li><p><strong>Name</strong> the tool path, to save it as <code>.sbp</code> file.</p></li>
+<li><p><strong>Calculate.</strong></p></li>
+</ol>
+<p>Then the toolpath now is added to the tool-path list. which can be selected and saved after for milling.</p>
+<p>Next, as there some details in the design needed to be done using end mill 3mm tool I will create different tool path for inner pieces that need to but cut with 3 mm end mill and save separately.</p>
+<p><img src="images8/endmill3.png" /></p>
+<p>I will create for:</p>
+<ul>
+<li><p>The <em>Aluminum slot</em> and as I don’t want the tool to cut through out until the end, I will select the cut depth = <code>10 mm</code>.</p></li>
+<li><p>The <code>holes</code> as shown below the settings for both toolpaths::</p></li>
+</ul>
+<p><strong>Aluminum slot:</strong></p>
+<p><img src="images8/alu.png" /></p>
+<p><strong>Holes:</strong></p>
+<p><img src="images8/holes.png" /></p>
+<h3 id="profile-toolpath">Profile Toolpath:</h3>
+<p>In the Profile Toolpath I will select the outline of the part to cut them.</p>
+<p>As shown below the settings for Profile Toolpath:</p>
+<p><img src="images8/img12.png" /></p>
+<ol type="1">
+<li><p><strong>Cut depth</strong>: <code>12.5 mm</code></p></li>
+<li><p><strong>Tool</strong>: <code>End Mill 6mm Plywood</code>.</p></li>
+<li><p><strong>Machine vectors</strong>: Select outside/right</p></li>
+</ol>
+<blockquote>
+<p>Here we select if we want the cut on the line or outside the line or inside the line.</p>
+</blockquote>
+<ol start="4" type="1">
+<li><p>Check <strong>Add tabs to toolpath</strong>, I used tabs to ensure the parts will stay in it place while milling.</p></li>
+<li><p><strong>Name</strong> the tool path.</p></li>
+<li><p><strong>Calculate.</strong></p></li>
+</ol>
+<p><em>Prepares files for cutting:</em></p>
+<p>The <strong>Tool-path list</strong> shown all available tool-paths to select them for milling. Moreover, to view the total machining time I click in the icon as shown below:</p>
+<p><img src="images8/time.png" /></p>
+<p>In addition, to post processor files &gt; save the tool-path to be used afterward in ShopBot sb3 software as shown below:</p>
+<p><img src="images8/save.png" /></p>
+<p>Next, to start milling tick the boxes of the wanted tool-paths in the tool-path list, the machine will start milling from top to bottom ticked tool-paths.</p>
+<p><img src="images8/img10.png" /></p>
+<h2 id="setting-up-the-machine-using-shopbot-sb3">Setting up the machine using <strong>ShopBot sb3</strong>:</h2>
+<center>
+<p><img src="images8/s.png" /></p>
+</center>
+<p><strong>Summary milling steps:</strong></p>
+<ol type="1">
+<li><p>Set zeros.</p></li>
+<li><p>Cut parts.</p></li>
+<li><p>Clean the sheet.</p></li>
+<li><p>Remove parts.</p></li>
+<li><p>Sanding.</p></li>
+<li><p>Assemble.</p></li>
+</ol>
+<p><strong>To move and give orders in <code>ShopBot</code> we use:</strong> 1. Control panel. 2. KeyPad.</p>
+<table>
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Control panel</th>
+<th style="text-align: center;">KeyPad</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Provides main machine information and controls</td>
+<td style="text-align: center;">Used to manually move the X,Y, and, Z axes</td>
+</tr>
+<tr class="even">
+<td>used to move the router to set XYZ axes</td>
+<td style="text-align: center;">moving the spindle and XY axes by using the blue arrows.</td>
+</tr>
+<tr class="odd">
+<td>Giving order of cutting parts</td>
+<td style="text-align: center;">-</td>
+</tr>
+</tbody>
+</table>
+<p>To open the KeyPad, by clicking the yellow box in the control panel:</p>
+<center>
+<p><img src="images8/kkey.png" /></p>
+</center>
+<h3 id="set-x-y-origin">Set X &amp; Y origin:</h3>
+<p>First thing to do is setting zero of X- and Y-axes , the shopBot it self has its own zeroes points. the machine will move until hitting the limit switch for X and Y this process called <code>proximity switch homing process</code>. which creates an accurate and repeatable start point.</p>
+<center>
+<p><img src="images8/zero.png" /></p>
+</center>
+<p>Manually, I moved the XY axis for the wanted place in the sheet, Then I selected my own zeros of X and Y from KeyPad as shown:</p>
+<center>
+<p><img src="images8/xy.png" /></p>
+</center>
+<h3 id="set-z-origin">Set Z origin:</h3>
+<p>The Z-axis must be zeroed each time that the machine is turned <code>On</code> or bits are changed. The process of setting the zero for Z axes done automatically. First, I move the tool to empty place, where is no holes or anything, and take the router up.</p>
+<p>Next, using the <code>metal plate</code>, by put it under the bit, then from the software I click <code>set zero</code>, the Z axis will go down to touch the plate for three times. This operation will set the Z to zero.</p>
+<p><img src="images8/metel.png" /></p>
+<p>I used two tools for milling the design. Thus, I had to change the tool bits. For changing the tool I need to use these two wrench shown below in the image, this wrench is connected to the key with shopBot for safety reasons. So the machine will turn off while changing the tool, to avoid any unaccepted moves from the machine.</p>
+<p><img src="images8/img52.png" /></p>
+<h3 id="cutting-parts-start-milling">Cutting parts / Start milling:</h3>
+<p>Now the zeros is set up to the origin points. I can start cutting the parts.</p>
+<p><em>They are two ways to start milling:</em></p>
+<ol type="1">
+<li><strong>By clicking on <code>Cut Part</code> at control panel</strong> as shown below:</li>
+</ol>
+<p><img src="images8/cut.png" /></p>
+<blockquote>
+<p>clicking on cut part will start milling for the tool-paths selected Before in the tool-paths list.</p>
+</blockquote>
+<p>After clicking on the cut part some warnings will pop out, we had to read and follow the instruction.</p>
+<p>Finally to start milling click on <code>start</code> at the remote control.</p>
+<p><img src="images8/switch.png" /></p>
+<p>Additionally, for safety reasons I must monitor the shopBot while milling all the time. and I must to keep the remote control near to me in case I need to stop the machine using the <code>emergency switch</code>, also I had to stay outside the milling room and close the door as the filtration not working and for safety reasons.</p>
+<p><img src="https://media.giphy.com/media/mdPIiZrEov4ChQmeXz/giphy.gif" /></p>
+<p>However, if I stayed inside the room while milling I must stand in the extra right edge of the machine.</p>
+<ol start="2" type="1">
+<li><strong>By opening the file from the V-carve.</strong></li>
+</ol>
+<h3 id="remove-the-parts-and-clean">Remove the parts and clean:</h3>
+<p>As filtration was not working, I had to clean the wood chips from sheet manually using Vacuum cleaner. Afterward, to remove the parts from the sheets and break the tabs I used the equipments shown below:</p>
+<p><img src="images8/t.png" /></p>
+<p>Next, I did <strong>sanding</strong> the parts, with the help from <a href="http://fabacademy.org/2020/labs/uae/students/ali-binghulaita/">Ali</a> and Armn. Many thanks to them.</p>
+<p><img src="images8/img56.png" /></p>
+<h3 id="assemble">Assemble:</h3>
+<p>Before explaining the assembling process, this section needed a lot of physical strength and mechanical experience. Thus, <a href="http://fabacademy.org/2020/labs/uae/students/ali-binghulaita/">Ali</a> helped me a lot in the Assembling, Thanks to his help I finished quickly. We did started assembling from bottom to top.</p>
+<p><strong>Some of the problems I noticed after milling were:</strong></p>
+<ol type="1">
+<li>Motor holder will not fit &gt; the holes was small.</li>
+<li>The direction of the motor was wrong.</li>
+<li>wheels will hit the chassis.</li>
+<li>Holes in the chassis for support and electronics.</li>
+</ol>
+<p>I solved these problems gradually until the fourth milling.</p>
+<center>
+<p><img src="images8/cha.png" /></p>
+<p><em>Chassis &amp; motor holder.</em></p>
+<p><img src="images8/blance.png" /></p>
+<p><em>I used <code>Box Beam Level</code>, to ensure the chassis leveled correctly.</em></p>
+<p><img src="images8/parts.png" /></p>
+<p><em>Bases and stands.</em></p>
+<p><img src="images8/inside.png" /></p>
+<p><em>As shown in the image above the inner Structure of the robot.</em></p>
+<p><img src="https://media.giphy.com/media/dg8O3MC6yS5pJcJJrp/giphy.gif" /></p>
+</center>
+    
+    
+<h2 id="files">Files:</h2>
+    
+        <div class="raleway gencontainer">
+       <div class="bisection">
+        <div class="left">
+        Please find the attached file :
+            </div>
+        <div class="right"><table style="width:100%; text-align:center;">
+<tr style="color: #0B89CE">
+<th>File</th>
+<th>Link</th>
+</tr>
+    <tr>
+<td>The inner structure of the robot</td>
+<td><a href="files/inner-sturcture-robot v4.f3d"><button>Download</button></a></td>
+</tr>
+
+
+
+</table>
+            
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+                                         <br/>
+</body>
+</html>

@@ -1,0 +1,72 @@
+Title: Sonam Deki
+
+URL Source: http://fabacademy.org/2022/labs/bhutan/students/sonam-deki/assignment/assignweek11.html
+
+Markdown Content:
+6th April- 20th April 2022
+
+> **Task to be carried out this week**
+
+  
+**Group Assignment**  
+4.  Design a machine that includes mechanism+actuation+automation+application
+5.  Document the group project and your individual contribution
+6.  Build the mechanical parts and operate it manually
+
+  
+**The softwares used during the week's assignment***   Autodesk Fusion 360: Making designs
+*   Aspire: Controlling the Shopbot
+*   DXF to G-code converter: Controlling the machine
+*   Visual Studio: For Documentation
+
+| Date | Work Allocation |
+| --- | --- |
+| 6th April | Prof. Neil's Lecture on Computer Controlled Cutting |
+| 7th April | Brain storming and Idea sharing |
+| 8th April | Idea conception, initial planning and work distribution |
+| 9th April | Reading and research on the building PCB milling machines |
+| 10th-11th April | Design and cuttings |
+| 12th - 14th April | Assembly of design cutouts |
+| 14th - 16th April | Electronicss |
+| 17th - 20th April | Machine Assembly, Testing and documentation |
+
+> **Idea Conception and Planning**
+
+The idea came from the problem when milling our PCB on the current PCB milling machine. The bed level on the current Roland- SRM20 machien that we are using had become uneven. DIe to this we faced a number of problem when milling our PCB for output week. This also caused for the loss of a number of copper plate. Thus, we thought why not try to create a PCB milling machine for this week's machine making week.  
+Once we all agreed on the idea, the next step was to explore on how to build the machine. Since we do not readily get the electronic components in our country, we had to ensure that all the electronics we required were available in the lab. For this we had to dismantle a couple of previously made machines. We gathered all the electronics we required and then started with the work. Our group had 7 members, thus we divided the tasks for efficiency. Two people were allocated for designing the components, 3 for electronics and 2 for documenting the entire process. For the assembly and testing the machine, we all worked together.
+
+![Image 1](https://fabacademy.org/2022/labs/bhutan/students/sonam-deki/assets/img/documentation/week11/1.png)
+
+Our plan was to make the machine similar to the one shown in the picture above.
+
+> **Design and printing the parts**
+
+Initially we planned to 3-D print majority of the components but we realsized that the 3-D printer available at out lab was quite small and had the capicity to print only models with maximum of 180mm dimensions. Hence, we cut the bed for the milling machine on the CNC and the body frames using circular saw. For the machine body, we used Alumnium frames and polymer slabs which were cut using circular saw. For the bed, we used wood and cut it using CNC. However, for smaller components such as the cable holders and rod holder we 3D printed them.
+
+![Image 2](https://fabacademy.org/2022/labs/bhutan/students/sonam-deki/assets/img/documentation/week11/2.png)![Image 3](https://fabacademy.org/2022/labs/bhutan/students/sonam-deki/assets/img/documentation/week11/3.png)  
+**Rod Holders amd cable holders**
+
+![Image 4](https://fabacademy.org/2022/labs/bhutan/students/sonam-deki/assets/img/documentation/week11/6.png)![Image 5](https://fabacademy.org/2022/labs/bhutan/students/sonam-deki/assets/img/documentation/week11/7.png)  
+**Machine Base and body parts**
+
+> **Electronics**
+
+For the machine controller, we used Arduino Mega as the microcontroller. Arduino Mega Motor Shield was used to connect the motor driver to the microcontroller. We used 3 moter drivers to control the X,Y and Z axis.
+
+![Image 6](https://fabacademy.org/2022/labs/bhutan/students/sonam-deki/assets/img/documentation/week11/8.png)![Image 7](https://fabacademy.org/2022/labs/bhutan/students/sonam-deki/assets/img/documentation/week11/9.png)
+
+> **Machine Control**
+
+For controlling the machine we used G-Code. We downloaded an software called dxf2gcode which converts 2D dxf drawings to CNC machine compatible G-Code.
+
+> **Testing**
+
+Once the machine was assembled, we tested the machine. There were 3 major testing we carried out;
+
+*   XY-axis test
+*   Z-axis test
+*   Bed allignment test
+
+We tested the XY-axis, once the bed was assemnled. We found that the supporting rods were not alligned with the slot bearings, thus we used filers to recitfy that. Next, we tested the Z-axis and bed-allignment and made the necessary changes to recify those issues.
+
+> **Final Working**

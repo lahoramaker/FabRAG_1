@@ -1,0 +1,36 @@
+Title: Fab Academy 2018 - Jari Uusitalo
+
+URL Source: http://fabacademy.org/2018/labs/fablaboulu/students/jari-uusitalo/week16.html
+
+Markdown Content:
+[Week 16: Mechanical Design](http://academy.cba.mit.edu/classes/mechanical_design/index.html)
+---------------------------------------------------------------------------------------------
+
+_**Group project:**  
+\- design a machine (mechanism+actuation+automation), including the end effector - build the passive parts and operate it manually - document the group project and your individual contribution  
+_
+
+My task for this week was to build laser cutting images with Inkscape, using Ari's 3D model as basis. I imported the model, and used measuring tool for dimensions.
+
+![Image 1](https://fabacademy.org/2018/labs/fablaboulu/students/jari-uusitalo/Images/week_16/fusion_1.jpg)
+
+On Inkscape, I installed [Tabbed Box Maker](https://github.com/paulh-rnd/TabbedBoxMaker) extension, by simply copying the files to inkscape/shares/extensions folder.
+
+Under extension, laser tools, selected tabbed box maker.From opening windows I could select dimensions, tab width, kerf, joint clearance etc.
+
+![Image 2](https://fabacademy.org/2018/labs/fablaboulu/students/jari-uusitalo/Images/week_16/tabbed_box_maker.jpg)
+
+The extension could only help me out so far, and had to manually split boxes to make the design as I wanted. Measuring the 3d model and then applying values to inkscape. After everything was done, I placed them so we could cut this in 1 go.
+
+![Image 3](https://fabacademy.org/2018/labs/fablaboulu/students/jari-uusitalo/Images/week_16/inkscape_1.jpg)
+
+Big picture(group efforts) can be found [here](http://fab.academany.org/2018/labs/fablaboulu/machine_week_group1.html).
+
+### Files
+
+[All Machine parts (.svg)](https://fabacademy.org/2018/labs/fablaboulu/students/jari-uusitalo/Files/week_16/Machine_all.svg)  
+[main\_body.pdf](https://fabacademy.org/2018/labs/fablaboulu/students/jari-uusitalo/Files/week_16/main_body.pdf)  
+[lift.pdf](https://fabacademy.org/2018/labs/fablaboulu/students/jari-uusitalo/Files/week_16/lift.pdf)  
+[3rd\_axis.pdf](https://fabacademy.org/2018/labs/fablaboulu/students/jari-uusitalo/Files/week_16/3rd_axis.pdf)
+
+[![Image 4](https://fabacademy.org/2018/labs/fablaboulu/students/jari-uusitalo/Images/arrow.png)](https://fabacademy.org/2018/labs/fablaboulu/students/jari-uusitalo/week16.html#start)

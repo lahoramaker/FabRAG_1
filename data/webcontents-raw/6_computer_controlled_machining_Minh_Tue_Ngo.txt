@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"  rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway|Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <title>Computer-Controlled Machining</title>
+</head>
+<body>
+
+    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-0">
+        <a class="navbar-brand" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo" style="color: black!important; font-weight: bold !important;">
+            <img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/cad/2D/2D-logo-dragon.svg" class="img-fluid mb-2" style="max-width: 25px; height: auto;"/>
+            <strong>Tue's FAB-ulous Journey</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/">About Tue</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/final-project.html">Final Project</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assignments.html">Weekly Assignments</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+</div>
+
+    <div class="pt-4 text-center">
+    <h2>Computer-Controlled Machining</h2>
+</div>
+<div class="container py-4 mb-5">
+    
+    <div class="pb-2">
+        <p class="highlight">This week's assignment is to test run-out, alignment, speeds, feeds, and toolpaths of the CNC machine (in-group); to make something big (individual).</p>
+    </div>
+    
+    <div class="pb-2">
+        <p class="font-italic font-weight-bold">* All G-CODE, STL, and original editable files can be downloaded <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/barcelona/students/tue-ngo/tree/master/assets/img/big">here</a>.</p>
+
+<p class="font-italic font-weight-bold">* This week's group assignment is to test the <a href="#group">feeds, speeds, and toolpaths</a> of the CNC machine with a chosen material.</p>
+
+<p class="font-italic font-weight-bold">* I need to individually <a href="#big">design, mill, and assemble</a> something big.</p>
+
+<h2>CNC machining</h2>
+<p>Due to the COVID-19 pandemic, we had to confine ourselves at home right after the global class and couldn't get access to the machines by any means. Hence, my plan was to go ahead with designing the individual assignment first and prepare all possible CAM files, then when we can go back to the lab we should be ready to test, fabricate and assemble.</p>
+<h5 id="group">Group assignment - Characterize the CNC machine</h5>
+<h6>Generating toolpaths with RhinoCAM</h6>
+<p>This part was done after we got back to Fab Lab Barcelona. Although it was not easy to gather people after the lockdown, I had a chance to team up with my classmates <a href="http://fabacademy.org/2020/labs/barcelona/students/arman-najari">Arman Naraji</a>, <a href="http://fabacademy.org/2020/labs/barcelona/students/david-prieto/">David Prieto</a>, <a href="http://fabacademy.org/2020/labs/barcelona/students/antoine-jaunard">Antoine Jaunard</a>, and <a href="http://fabacademy.org/2020/labs/barcelona/students/lynn-dika">Lynn Dika</a> for this group assignment.</p>
+<p>The CAM file of the test was done in RhinoCAM. I myself documented the detailed steps below in the individual assignment, but here you go some of them:</p>
+<ul>
+<li>Navigate to <strong>Stock &gt; Box Stock</strong>, select the stock object (2,400 x 1,250 x 9mm rectangle) and select the right X0,Y0,Z0 (left-bottom-upper point of the stock)</li>
+<li>Create an inner offset of around <i>20mm</i> and create multiple points along the offset line. These marks would be drilled to mark the screw locations.</li>
+<li>Create a <i>1-flute</i> new <i>Flat-end Mill 6mm</i> with below details:</li>
+</ul>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/test-cam-1.png" class="img-fluid w-100" /></p>
+<p>The formula used to calculate the tool's feed and speed is: <strong>Feed rate = N x CPT x RPM</strong>, with feed rate as the speed at which the cutter engages the part, N as the number of flutes (the sharp slots that corkscrew upwards along the length of a milling bit), CPT as the chip load (the thickness of material removed by each cutting edge during a cut), and RPM as the spindle speed at which the spindle of the machine rotates. We checked the chipload for plywood <a href="https://guhdo.com/chipload-calculator">here</a> and the calculation tool gave us a range of 0.28 - 0.33. Hence, the first cutting feed rate we put in the <strong>Feed &amp; Speed</strong> tab was <strong>1 flute x 0.3mm x 18,000rpm = 5,400mm/min</strong>. Other feed rates were set around <strong>2,700mm/min</strong> which is half of the cutting feed rate. We then used these feed rates for the tolerance test.</p>
+<p>Next, we created a <strong>Machining Operation &gt; Engraving</strong> strategy for the screw marks and <strong>Machining Operation &gt; 2-axis Profiling</strong> strategy for the pieces. Remember to put <i>30mm</i> in <strong>Clearance Plane &gt; Stock Max Z + Distance</strong> for the screw marks. This would help to prevent the tool from crashing with the bent material while traveling.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/test-cam-2.png" class="img-fluid w-100" /></p>
+<p>Now it's time to play with the spindle speed and the feed rates as per the requirements of the assignment. We used the same formula and created these operations:</p>
+<ul><strong>
+<li>1 flute x 0.28mm x 18,000rpm = 5,000mm/min</li>
+<li>1 flute x 0.3mm x 18,000rpm = 5,400mm/min</li>
+<li>1 flute x 0.33mm x 18,000rpm = 5,900mm/min</li>
+<li>1 flute x 0.28mm x 20,000rpm = 5,600mm/min</li>
+<li>1 flute x 0.3mm x 20,000rpm = 6,000mm/min</li>
+<li>1 flute x 0.33mm x 20,000rpm = 6,600mm/min</li>
+</strong></ul>
+<p>The last step was to <strong>Post</strong> these operations to the <i>CNC_STEP_BCN</i> processor as a <code>.nc</code> file. Ready to go!</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/test-cam-3.png" class="img-fluid w-100" /></p>
+<p></p>
+<h6>Machining with RaptorX-SL</h6>
+<p>We used the <a href="https://www.cnc-step.com/raptorx-sl-xl-gantry-cnc-router-machine-3200s20-with-3200-x-2010mm-traverse-path/">Raptor X-SL 3200/S20</a> machine and its software <a href="https://www.cnc-step.com/cnc-software/kinetic-nc-cnc-control-software/">KinetiC-NC</a> to do the test. The detailed specs of the machine:</p>
+<ul>
+<li>Working area: 3,200 x 2,010 x 300mm </li>
+<li>Clamping area: X -3,500mm x Y -2,200mm</li>
+<li>Positioning speed X+Y/Z: maximum 40,000mm/min</li>
+<li>Working speed: maximum 20,000mm/min</li>
+<li>Step width X: 0.0213mm</li>
+<li>Step width Y+Z: 0.0113mm</li>
+</ul>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/test-1.jpg" class="img-fluid w-100" /></p>
+<p></p>
+<p>Mikel guided us through the whole process. Before launching the <code>.nc</code> file, we used the machine’s wrench and key to release the collet and holder, and put on the climb (cut down) 6mm flat-end mill. Then we needed to find a good Z0 by using a button-like Z0 finder.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/test-3.jpg" class="img-fluid w-100" /></p>
+<p></p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/test-2.jpg" class="img-fluid w-100" /></p>
+<p></p>
+<p>After running the toolpath of the screw marks, screwing the stock, and running the toolpath of the cut pieces, we got the test result. The tolerance test starts with tolearnce=0.1mm, 0.2mm, 0.3mm, 0.4mm, and 0.5mm.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/test-4.jpg" class="img-fluid w-100" /></p>
+<p></p>
+<p>When the machine performed the 2 last cuts, we could hear an annoying sound like a baby crying for breast-feeding. This helped me to confirm that we should never play with a feed rate above <strong>6,000mm/min</strong>. Also, I personally find the feed rate of <strong>5,400mm/min</strong> and the spindle speed of <strong>18,000RPM</strong> to be the most satisfying settings. As for tolerance measurement, <strong>0.3-0.4mm</strong> will be the perfect one for a tight fit.</p>
+<p></p>
+
+<h6>What I personally learned:</h6>
+<ul>
+<li>Safety first: wear safety glasses and earbuds!</li>
+<li>It is important to measure the full stock from every corner since the material will never be exactly 9mm or 15mmm, also different parts can have different thicknesses due to fabrication or storage conditions</li>
+<li>The 0 position of the machine is set by default to the left-bottom-upper point of the stock and the X axis is always the longer side of the stock</li>
+<li>Be really careful with the screws: when they're fucked up, it will be annoyingly difficult to handle them</li>
+<li>Math does not lie: we should never play with a feed rate above <strong>6,000mm/min</strong>, else the baby will cry!</li>
+<li>We should take it slowly and carefully while breaking the tabs and removing the pieces since the piece removal can harm the final pieces and create splinters on the visible parts of the final result</li>
+<li><strong>KNOW WHERE THE EMERGENCY STOP BUTTON IS!</strong></li>
+<li><strong>TURN ON THE AIR VENTILATION!</strong></li>
+<li><strong>MEASURE THE MATERIAL AND RUN A TOLERANCE TEST BEFORE FINALIZING THE DESIGN!</strong></li>
+</ul>
+<p></p>
+
+<h5 id="big">Individual assignment - Make something big</h5>
+<p>This part was designed during the COVID-19 lockdown. I had to work at home quite a lot during the lockdown, and sometimes I was in the mood of working on the balcony, in the kitchen, or even while lying down on my bed. It was really inconvenient to carry my laptop and all other pieces of stuff (phone, mouse, cables, boards, electronic components, etc.) around. Hence, I decided to design <strong>a 560 x 580 x 300mm portable desk</strong> using Fusion 360. RhinoCAM and Aspire CAM were introduced by the instructors, however, after researching online, I learned that I can generate toolpaths for ShopBot using Fusion 360. So, why not?</p>
+
+<h6>Designing with Fusion 360</h6>
+<p>Now I can follow the <strong>UNFOLDING</strong> design process which I couldn't do properly during the <a href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assignments/week-03-computer-controlled-cutting.html">4th week</a>. The very first thing I need to know was the stock size and the thickness of available materials at Fab Lab Barcelona. Since measuring materials and doing a press-fit test was impossible during the social distancing, I had to talk to Josep and also took a look at the alumni's websites. Based on gathered information (2,400 x 1,250mm plywood, 9mm and 15mm thickness, 0.2 - 0.3mm tolerance, 6mm end mill), I assumed some below parameters (which might be modified after I get access to the lab):</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/fusion-0.png" class="img-fluid w-100" /></p>
+<p>The next step was to plan the possible joints. Some useful references for CNC-able joints: the classic <a href="http://winterdienst.info/50-digital-wood-joints-by-jochen-gros/">50 Digital Wood Joint</a> and this <a href="https://www.instagram.com/thejoinery_jp/?hl=en"><strong>SATISFYING</strong> collection</a> of Japanese-styled joinery. I tried to apply many types of joinery in my design, but some joints I'd like to try (such as tongue and groove, tenon and mortise, dovetails, etc.) could not be done since we are limited to only perform one-sided cuts. Therefore, I could only include simple slotting joints and finger joints.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/fusion-1.png" class="img-fluid w-100" /></p>
+<p>Next, I had to create <a href="https://ekinssolutions.com/product/nifty-dogbones-f360/">dogbones</a> which are additional interior corner cuts for removing more material in the CNC process in order to clear out the interfering corner (the result of cutting material using a round-shaped tool). In order to add dogbone fillets to the joints, I installed this Fusion 360 <a href="https://github.com/tapnair/Dogbone">add-in</a>. Basically, the add-in helped me performing 3 tasks at once: creating a <strong>Plane Along Path</strong> from an edge, create a sketch (supposedly the edge itself), and <strong>Sweep</strong> it with the same diameter as the tool diameter (6mm).</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/fusion-2.png" class="img-fluid w-100" /></p>
+<p>This is how my portable desk should look like after being fully assembled. Here I have an integrated Macbook holder, adjustable trays (where I can put my mouse, my keyboard, my touchpad, working PCBs, etc.), phone holder, and assemblable drawers (storing electronic components, cables, and other tools):</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/fusion-4.png" class="img-fluid w-100" /></p>
+<p>Here you go the 3D model on Sketchfab, ready to be unfolded!</p>
+<div class="sketchfab-embed-wrapper text-center">
+    <iframe title="A 3D model" width="640" height="480" src="https://sketchfab.com/models/e6c416167fd646aba5b3361e5179a177/embed?preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+<p></p>
+<p>I felt quite confident with the 0.3mm tolerance even before we could get back to the lab to do the test, so I went ahead with it. <strong>NOTE:</strong> tolerance=0.3mm means to allow an offset of 0.15mm from each side to make a perfect fit.</p>
+<p></p>
+
+<h6>Generating toolpaths with Fusion 360</h6>
+<p>In order to avoid wasting time during the social distancing, I decided to continue with the process of preparing CAM files before testing the stability and press-fit clearance (<strong>FINGER-CROSSED</strong>). It's good to go through the process once anyway, and if I'm lucky, I won't need to re-design everything. I found great documentation from <a href="http://fab.academany.org/2018/labs/barcelona/students/krisjanis-rijnieks/assignments/week08/">Krisjanis Rijnieks</a> (Fab Lab Barcelona 2018) where he described in detail the whole process of using Fusion 360 to prepare files for manufacturing on a ShopBot. Before switching from the <strong>Design</strong> environment to the <strong>Manufacture</strong> environment, I had to unfold all pieces in my design and align them onto the stock.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/fusion-5.png" class="img-fluid w-100" /></p>
+<p>Some steps followed to unfold the portable desk:</p>
+<ul>
+<li>Convert all available bodies into components</li>
+<li>Create a 2,400 x 1,250 x 9mm <i>Stock</i> component and <strong>Ground</strong> it</li>
+<li>Navigate to <strong>Assemble &gt; Joints</strong>, select faces (which will be placed onto the stock) of all the bodies and create <strong>Planar</strong> joints</li>
+<li><strong>Flip</strong> the pieces and <strong>Move</strong> them around to nest them within the stock</li>
+</ul>
+<p></p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/fusion-6.png" class="img-fluid w-100" /></p>
+<p>Below is the how-I-did-that video:</p>
+<div class="text-center">
+<iframe width="640" height="480" src="https://www.youtube.com/embed/YN7n0h6Ps48" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+<p></p>
+
+<p>The next step was to create a <strong>ShopBot 6mm</strong> setup for generating toolpaths. Some steps to follow:</p>
+<ul>
+<li>Create a <strong>Setup &gt; New Setup</strong></li>
+<li>In the <strong>Setup</strong> tab, change <strong>Orientation</strong> to <i>Select X &amp; Y axes</i>, select the longer side as X axis, the shorter side as Y axis, and select the left-bottom-upper point of the stock as the <strong>Stock Point</strong></li>
+<li>For <strong>Model</strong> section in <strong>Setup</strong> tab, select all the parts to be cut</li>
+<li>For the <strong>Stock</strong> tab, select <i>From solid</i> mode and the stock component</li>
+</ul>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cam-setup.png" class="img-fluid w-100" /></p>
+<p>I used the same parameters as what Krisjanis did for creating a <strong>New Mill Tool</strong> in <strong>Manage &gt; Tool library</strong>, and the final cutting feed rate I put in the <strong>Feed &amp; Speed</strong> tab was <strong>1 flute x 0.25mm x 12,000rpm = 3,000mm/min</strong>. A lower ramp and plunge feed rates of <strong>500mm/min</strong> and <strong>1,500mm/min</strong> were used.</p>
+<p>I modified some other parameters in other tabs:</p>
+<ul>
+<li>In the <strong>Cutter</strong> tab, choose a <i>Flat</i> end mill with <i>1</i> flute, check the <i>Clockwise spindle rotation</i> option, and set <strong>Unit</strong> to <i>Millimeters</i></li>
+<li>In the <strong>Geometry</strong> tab, set a <i>6mm</i> tool diameter as we will mostly work with a 6mm tool, and some other parameters as the pictures below</li>
+<li>In the <strong>Post Processor</strong> tab, check the <i>Manual tool change</i> checkbox</li>
+</ul>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cam-tool.png" class="img-fluid w-100" /></p>
+<p></p>
+<p>To generate CAM toolpaths for my design, I had to perform 4 operations:</p>
+<ul>
+<li>Mark the position of the screws that we will use to fix the stock to the bed of the machine with a <strong>Drilling</strong> strategy</li>
+<li>Cut the invisible joints with a <strong>2D Pocketing</strong> strategy</li>
+<li>Cut the inner parts of the pieces with an <strong>internal 2D Contouring</strong> strategy</li>
+<li>Cut the pieces out of the stock with an <strong>external 2D Contouring</strong> strategy</li>
+</ul>
+<p>The first operation was drilling marks of the screw locations. First I had to go back to the <strong>Design</strong> environment, created a <i>-4mm</i> offset plan from the top surface of the stock component, and sketched points where I want to drill the marks. Then I switched to the <strong>Manufacture</strong> environment and created a <strong>New Operation &gt; Drilling &gt; Drill</strong> operation. In the <strong>Geometry</strong> tab, I selected all the points I recently created.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cam-drill-1.png" class="img-fluid w-100" /></p>
+<p>Here you go the yellow toolpath!</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cam-drill-2.png" class="img-fluid w-100" /></p>
+<p>The next strategy was 2D Pocketing. Pocketing is for creating pockets or pits into the material and we can create invisible joints by using this strategy. I created a <strong>New Operation &gt; 2D &gt; 2D Pocket</strong> operation, and selected all the holes that I'd like to leave some materials unmilled in the <strong>Geometry</strong> tab. An important thing is the pockets need to be started inside, and we can check that by clicking the red arrows to see whether the blue areas are inside or outside the holes. In the <strong>Passes</strong> tab, I chose the <i>Right (conventional milling)</i> <strong>Sideways Compensation</strong>. I also put <i>5mm</i> to all these sections: <strong>Maximum Stepover, Maximum Roughing Stepdown,</strong> and <strong>Finishing Stepdown</strong>.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cam-pocket-1.png" class="img-fluid w-100" /></p>
+<p>The <strong>New Operation &gt; 2D &gt; 2D Contour</strong> strategy in Fusion 360 is used to cut the pieces out by following their vector outlines, which works similarly to <strong>Profiling</strong> in RhinoCAM. In the <strong>Heights</strong> tab, I modified the <strong>Bottom Height</strong> as a <i>-0.6mm</i> offset from <i>Stock bottom</i> to make sure the material will be cut through completely. As a good practice, the internal contouring cuts need to be performed before the external ones:</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cam-inner-contour-1.png" class="img-fluid w-100" /></p>
+<p>However, I couldn't generate toolpaths for the circular air vents of the laptop holder for some reason which I haven't figured out. Hence, I decided to remove them from my design. Bad news: I had to go through the CAM process once again because the design was outdated!</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cam-inner-contour-2.png" class="img-fluid w-100" /></p>
+<p>It is important to create <strong>Tabs</strong> in the <strong>Geometry</strong> tab for the external 2D contouring cut. Tabs keep the pieces to be removed in place while cutting material. If there are no tabs, the pieces can get loose or jump off, which can be very dangerous. I manually placed 4 tabs per piece, and the settings used are as below image (hope I didn't overdo it):</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cam-outer-contour.png" class="img-fluid w-100" /></p>
+<p></p>
+
+<p>Before finalizing toolpaths, I navigated to <strong>Action &gt; Simulate</strong> in order to check whether the plywood material will be removed as I wish. I was a bit worried about whether I should "drill" the dogbones separately, but after reviewing the simulation, everything seemed fine.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cam-pocket-2.png" class="img-fluid w-100" /></p>
+<p>All toolpaths displayed:</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cam-final.png" class="img-fluid w-100" /></p>
+<p>Below is the a video for the whole simulation:</p>
+<div class="text-center">
+<iframe width="640" height="360" src="https://www.youtube.com/embed/y8JLaTHC69k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+<p></p>
+<p>Now it's time to export the G-CODE! What to do is to navigate to <strong>Action &gt; Post Process</strong> and look for a ShopBot post processor. I made a mistake by selecting the <i>ShopBot ISO</i> processor which generated a failed <code>.nc</code> file with the below error:</p>
+<pre class="bg-light py-2 mt-0" style="overflow: auto; max-height: 350px;">
+<code>
+    ...
+    Error: Failed to invoke function 'onSection'.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error: Failed to invoke 'onSection' in the post configuration.
+    Error: Failed to execute configuration.
+    Stop time: Thu May 21 19:45:36 2020
+    Post processing failed
+</code>
+</pre>
+<p>Finally I could export G-CODE by selecting the other <i>ShopBot OpenSBP</i> processor and generated an <code>.sbp</code> file. Ready to fabricate!</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cam-gcode.png" class="img-fluid w-100" /></p>
+<p></p>
+
+<h6>Generating toolpaths with RhinoCAM</h6>
+<p>After getting back to the lab, I realized (in tears) that we have to use RhinoCAM installed on the computers at Fab Lab in order to generate CAM files that are compatible with the available RaptorX-SL machine at the lab (there is no ShopBot machine as in 2018!). I had to export the design to <code>.dxf</code> and imported the file in Rhino 6. Then I navigated to <strong>RhinoCAM 2018 &gt; Mill</strong> to see the RhinoCAM toolbar. Essential steps:</p>
+<ul>
+<li>Create a 2,400 x 1,250 x 9mm rectangle (the longer side is at the X axis), navigate to <strong>Stock &gt; Box Stock</strong>, and select the stock object</li>
+<li>Select the right X0,Y0,Z0 (left-bottom-upper point of the stock)</li>
+<li>Create an inner offset of <i>20mm</i> and create multiple screw marks along the offset line</li>
+<li>Create a <i>1-flute</i> new down-cut <i>Flat-end Mill 6mm</i> with settings similar to what we did above with the group assignment <strong>(1 flute x 0.3mm x 18,000rpm = 5,400mm/min)</strong></li>
+</ul>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/rhino-1.png" class="img-fluid w-100" /></p>
+<p>The drilling operation in RhinoCAM is called <strong>2 Axis &gt; Engraving</strong> and the contouring operation is called <strong>2 Axis &gt; Profiling</strong>. It is a good practice to create layers for engraving, pocketing, inner profiling, and outer profiling.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/rhino-2.png" class="img-fluid w-100" /></p>
+<p>Clearance is similar to <strong>zjog</strong> setting while using the small milling machine. It is the distance above the material when the end mill rapidly changes its location. For the <strong>Engraving</strong> operation, I filled the <strong>Clearance Plane &gt; Stock Max Z + Distance</strong> with <i>30mm</i> and the <strong>Rough Depth Cut</strong> with <i>3mm</i>. Also, I chose <i>Minimum Distance Sorting</i> in the <strong>Sorting</strong> tab (this will be the same for all the strategies).</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/rhino-3.png" class="img-fluid w-100" /></p>
+<p>For the <strong>Pocketing</strong> strategy, I filled the <strong>Clearance Plane &gt; Stock Max Z + Distance</strong> with <i>10mm</i>. Next, I navigated to the <strong>Cut Parameters</strong> tab. Here I defined how the tool should move along the line and in what direction it should spin. In <strong>Global Parameters</strong>, I specified <strong>Stock</strong> to be <i>0</i> and left everything else as default. Remember to choose <i>Climb (Down Cut)</i> direction and <i>Inside</i> start point.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/rhino-4.png" class="img-fluid w-100" /></p>
+<p>I specified how much material I want to keep in the <strong>Cut Levels</strong> tab. I wanted to leave 1mm of material to create invisible joints, so the <strong>Total Cut Depth</strong> in this case was <i>8.3mm</i>. We were told that <strong>Rough Depth Cut</strong> should be less or equal to the diameter of the tool (which means each cut level should be 3mm maximum), so I put <i>2.1mm</i> here, then there will be 4 cut levels. Clicking <i>Depth First</i> would help to fasten the process since it would reduce the traveling time of the tool. Also, I could right-click and preview the simulation of the created strategies.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/rhino-5.png" class="img-fluid w-100" /></p>
+<p>My <strong>Inner Profiling</strong> was basically the <strong>Pocketing</strong> operation with no material left. The <strong>Total Cut Depth</strong> in this case was <i>10mm</i> as I added 0.7mm more in order to make sure that the tool cuts through.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/rhino-6.png" class="img-fluid w-100" /></p>
+<p>Profiling cuts follow a line from the inside or outside. In my case, I chose <i>Outside</i>. As in Fusion 360, I had to create tabs for the <strong>Outer Profiling</strong> operation. Tabs keep the pieces to be removed in place while cutting wood, and if there are no tabs, the piece can get loose, jump off and hurt people. I increased the frequency of tabs to <i>5</i> tabs per piece.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/rhino-7.png" class="img-fluid w-100" /></p>
+<p></p>
+
+<h6>Machining with RaptorX-SL</h6>
+<p>I did my individual assignment right after the group test, so I had all the setup ready (finding X0,Y0,Z0 and putting the tool). The next step was to launch the <code>.nc</code> file with the marks for the screws, to drill the stock down, and to launch the rest of the job.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cnc-1.jpg" class="img-fluid w-100" /></p>
+<p></p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cnc-2.jpg" class="img-fluid w-100" /></p>
+<p>Below is a video recording the process:</p>
+<div class="text-center">
+<iframe width="640" height="480" src="https://www.youtube.com/embed/MMAjWPxoWOI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+<p></p>
+<p>Milling job is done!</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cnc-3.jpg" class="img-fluid w-100" /></p>
+<p>I used a hammer and a chisel to cut the tabs and remove the pieces from the stock. Sad news: they don't fit together. Then I realized I made a <strong>HUGE</strong> mistake: I didn't measure the material before finalizing the design! The actual thickness of the material is 9.3mm, not 9mm! (the above screenshots were taken during the 2nd time generating the CAM files). Also, I didn't increase the Profiling's <strong>Total Cut Depth</strong> to be a bigger number than 9mm, and that's why the quality of the job was not good at all.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cnc-4.jpg" class="img-fluid w-100" /></p>
+<p>So, I had to re-design my <code>.dxf</code> file, re-did the CAM files, and performed the jobs again. That was quite stressful! This time, my classmates Arman and Antoine helped me a lot in handling the screws. In the end, 1 screw was fucked up, and we were unable to take it out. Josep had to quickly create a file in RhinoCAM (which we named <code>FuckedScrew.nc</code>) and cut a rectangular piece, and then manually rotated it to remove the fucked-up screw. Annoyingly problematic screw!</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/cnc-5.jpg" class="img-fluid w-100" /></p>
+<p></p>
+
+<h6>Final result</h6>
+<p>I brought the final result home for assembling. Although I was quite satisfied with the quality of the 2nd cut, however, I still had to sand the pieces a lot by hand (especially areas with dogbones) to make them fit properly. There were some parts that hadn't been cut through, but they're not the important parts or joints.</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/hero-1.jpg" class="img-fluid w-100" /></p>
+<p>And here you go the final product after assembly. We can notice that some joints didn't actually fit 100% all the way, but I left them like that since I was too tired to keep sanding, and the portable desk already stood super strong and stable. Fancy, huh? Totally!</p>
+<p><img src="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assets/img/assignments/week-07/hero-2.jpg" class="img-fluid w-100" /></p>
+<p></p>
+
+<h2>Conclusion</h2>
+<p>This was one of the last assignments regarding CAM techniques and also our last opportunity to work with the biggest machine in the lab before saying goodbye to the Fab Academy. It may sound ridiculous to some extent, but I was quite obsessed with the story that Neil told us about a girl who died using a CNC machine. I was so worried that I would be the second one to have a tragic accident, but in the end, I felt very confident and comfortable working with the machine, and the whole process went smoothly. I'm so proud of myself!</p>
+
+<div class="container w-100 text-center py-4">
+<a class="btn m-2" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assignments/week-06-electronics-design.html">Previous Assignment</a>
+<a class="btn m-2" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assignments/week-08-embedded-programming.html">Next Assignment</a>
+</div>
+
+    </div>
+</div>
+
+    <div id="footer">
+    <div class="container mt-2 mb-0">
+        <ul class="list-inline text-white">
+                <li class="list-inline-item"><p class="m-0" style="color: darkgray; font-weight: lighter;">Tue M. Ngo © 2020</p></li>
+                <li class="list-inline-item"><a class="text-white" target="_blank" href="#"><i class="fa fa-globe fa-lg"></i></a></li>
+                <li class="list-inline-item"><a class="text-white" target="_blank" href="mailto:tue.ngominh@gmail.com"><i class="fa fa-envelope fa-lg"></i></a></li>
+                <li class="list-inline-item"><a class="text-white" target="_blank" href="https://www.linkedin.com/in/tue-m-ngo-2b544489/"><i class="fa fa-linkedin-square fa-lg"></i></a></li>
+                <li class="list-inline-item"><a class="text-white" target="_blank" href="https://github.com/tuengominh"><i class="fa fa-github fa-lg"></i></a></li>
+                <li class="list-inline-item"><a class="text-white" target="_blank" href="https://instagram.com/tuengominh"><i class="fa fa-instagram fa-lg"></i></a></li>
+                <li class="list-inline-item"><a class="text-white" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ml"><i class="fa fa-creative-commons fa-lg"></i></a></li>
+                <li class="list-inline-item"><p class="m-0" style="color: darkgray; font-weight: lighter;">BY-NC-SA 4.0</p></li>
+        </ul>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

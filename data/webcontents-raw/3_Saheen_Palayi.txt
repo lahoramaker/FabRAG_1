@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3 | Computer Controlled Cutting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link href="./images/favicon.ico" rel="icon" type="image/x-icon">
+  <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.2/css/pro.min.css">
+  <link href="../css/assignment.css" rel="stylesheet" type="text/css" media="screen, projection" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="../images/favicon.ico" rel="icon" type="image/x-icon">
+</head>
+
+
+<body>
+  <div class="navigation">
+    <a href="../index.html"><i class="fal fa-home-alt"></i> Home</a>
+
+  </div>
+
+  <div class="sidenav">
+    <h5>Computer Controlled Cutting</h5>
+
+    <button class="dropdown-btn">
+
+      <i class="fal fa-users-cog"></i> Group Work<i class="far fa-chevron-down "></i>
+
+    </button>
+    <div class="dropdown-container">
+      <a href="#overview">Overview</a>
+      <a href="#lasercutting">Laser Cutting</a>
+      <a href="#lasermachine">Trotec Speedy100</a>
+      <a href="#kerf">Kerf</a>
+      <a href="#pressfit">Press Fit Test</a>
+      <a href="#vinal cutting">vinal Cutting</a>
+      <a href="#vinylmachine">Roland GX 24</a>
+      <a href="#fab-mods">FAB MODS</a>
+
+    </div>
+    <button class="dropdown-btn">
+
+      <i class="fa fa-fw fa-cut"></i> Vinyl Cutting
+      <i class="far fa-chevron-down"></i>
+
+    </button>
+    <div class="dropdown-container">
+      <a href="#logo">making a vector logo </a>
+      <a href="#rolandplot">Cutting in roland</a>
+      <a href="#applying">Applying the vinyl sticker</a>
+
+
+    </div>
+
+
+    <button class="dropdown-btn">
+
+      <i class="fal fa-grin-stars"></i> FAB Mods
+      <i class="far fa-chevron-down "></i>
+
+    </button>
+    <div class="dropdown-container">
+      <a href="#instal">Installation</a>
+
+
+
+    </div>
+
+    <button class="dropdown-btn">
+
+      <i class="fal fa-tshirt"></i> Logo on T shirt
+      <i class="far fa-chevron-down"></i>
+
+    </button>
+    <div class="dropdown-container">
+      <a href="#logo-on-t-shirt">Overview </a>
+
+
+    </div>
+
+
+    <button class="dropdown-btn">
+
+      <i class="fa fa-fw fa-print"></i> Laser Cutting
+      <i class="far fa-chevron-down "></i>
+
+    </button>
+    <div class="dropdown-container">
+      <a href="#press-fit">construction Kit</a>
+
+    </div>
+    <button class="dropdown-btn">
+
+      <i class="fal fa-download"></i> Resources
+      <i class="far fa-chevron-down "></i>
+
+    </button>
+    <div class="dropdown-container">
+      <a href="#refrence">Reference</a>
+      <a href="#downlo">Downloads</a>
+
+    </div>
+
+    <a href="./week2.html">
+      <div class="icon arrow l"><i class="far fa-chevron-left"></i></div>
+    </a>
+    <a href="./week4.html">
+      <div class="icon arrow r"><i class="far fa-chevron-right"></i> </div>
+    </a>
+
+  </div>
+
+  <div class="main">
+    <h1> Computer Controlled Cutting </h1>
+    <div class="post-meta font-inc">
+      By Saheen Palayi | 11 February 2021 | FAB Academy 2021 </div>
+    <br>
+    <p><b>week 3</b> group assignment is to characterize our lasercutter's focus, power, speed, rate,
+      kerf, joint clearance and types
+    </p>
+
+    <h3 id="overview">Overview</h3>
+    <p>So this week we are gonna design and make 2D objects by using cutting machines.Mainly focused on Vinal cutting
+      and Laser cutting process. So with the the help of the instructors we Learned about the machines that we are gonna
+      use this week. </p>
+    <h3 id="lasercutting">Laser Cutting</h3>
+    <p>Laser cutting is a type of thermal cutting process which use a focused laser beam in the cutting area to melt the
+      material and then a gas or Air used to eject the molten material for making it cut.</p>
+    <br>
+    <figure>
+      <img src="../images/week3/laser-cutting-process.png" alt="laser-cutting-process" width="40%">
+      <figcaption>From <a
+          href="https://www.open.edu/openlearn/science-maths-technology/engineering-technology/manupedia/laser-cutting"
+          target="_blank">open.edu</a> article</figcaption>
+    </figure>
+    <br>
+    <p>The above figure shows a basic components of the laser cutting machine's nozzle. The machine is based on a 2 axis
+      CNC it will have two motors to drive each access according to the given x,y coordinates. Laser machines are widely
+      using today we can see them near by Acrylic or wood working shops. They available in different shapes and
+      different power that totally depends the material being used to the cutting process.</p>
+    <h3 id="lasermachine">Trotec Speedy100</h3>
+
+    <p>In Our FAB LAB we have two different types of Laser cutting machines.One is used for the FAB academy it can Cut
+      Acrylic,wood,cardboard...etc. The other one is Fiber laser cutting machine part of the Super Fab Lab It can
+      engrave circuits to make PCB. Both are manufactures by same company But,little more power full than the other one
+    </p>
+    <br>
+    <img src="../images/week3/speedy-100-lasermachine.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>In the figure shows the Laser cutting machine setup from Trotec using in our LAB Mainly it has two component one
+      tis the Trotec Speedy100 CO2 laser cutting Machine and another one is a Fume extractor & Filter which connected to
+      the Laser cutting machine.
+      It helps to extract the fumes which creates during the process then it filter the fumes to remove the carbon
+      contents </p>
+    <br>
+    <img src="../images/week3/trotec-speedy.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>The other machine at the super Fablab named Speedy400 quit powerful than the speedy100 as shown in above and also
+      have larger work area</p>
+    <br>
+    <img src="../images/week3/trotec-topview.png" alt="laser-cutter" width="65%">
+    <br>
+    <p>These are the main user components to aware the Transparent lid and inside a hexagonal mesh bed ,moving laser
+      head,control panel etc..</p>
+    <br>
+    <img src="../images/week3/trotec-control-panel.png" alt="laser-cutter" width="45%">
+    <br>
+    <p>This is the control panel for users to move the laser head for selecting the work area. And also some other
+      controls as well to control FAN ,pausing controls,z axis bed leveling control etc.. </p>
+    <br>
+    <img src="../images/week3/foccus-key.png" alt="laser-cutter" width="45%">
+    <br>
+    <p>To cut different thick material the laser head and the work needs to be in focus distance.This tool is the focus
+      distance of the speedy-100-laser machine. We have to set the focus manually for each different thick material</p>
+
+    <h3 id="kerf">Kerf of the laser cutter</h3>
+    <p>like I said laser cutting is a kind of burning process. So, burning melt the material which cause shrinkage and
+      material loosing effect on the cutting material. this phenomena will effect the end results.So, we should adjust
+      the loosing measurements in the design and that is called kerf. </p>
+    <br>
+    <img src="../images/week3/kerf-design.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>We created a vector file of a 20 mm square inside a 40 square in Inkscape .The test is all about measuring the
+      square inside the 40 mm square without Inside Fill and find out how much the width of the laser beam passing
+      line.Then changes it's stroke color to proper RED and Stroke style width to 0.1 mm</p>
+    <br>
+    <img src="../images/week3/inkscape-print.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>Then we send the file to Trotec interface software from inkscape like we used to print by selecting File >>
+      Print.Then selected the 'Trotec Engraver v10.4.0' and opened the preference </p>
+    <br>
+    <img src="../images/week3/inkscape-trotec-setuppng" alt="laser-cutter" width="70%">
+    <br>
+    <p>In the preference window we can select the material and other properties we are cutting on a cardboard sheet.
+      After selecting updated the setup by clicking the Trotec 'JC' logo button.</p>
+    <br>
+    <img src="../images/week3/treotec-opening.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>After clicking the print the Trotec software opened automatically with the file</p>
+    <br>
+    <img src="../images/week3/trotec-software.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>The softwares shows the dimensions of the Engraver's bed and also shows the material selections and power,speed
+      etc.. On left we can see the file in te job list .So as next step we connected the laser by turning the Engraver's
+      power switch on and then hitting the connect button in the software.It's mandatory to close the lid of the
+      Engraver to complete the intital homing setup.</p>
+    <br>
+    <img src="../images/week3/connected-speedy100.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>After the software made a connection with the speedy100 the pointer which represent the laser head show up on the
+      software's work area.we can manually move and can decide where to cut it also moves in software </p>
+    <br>
+    <img src="../images/week3/placing-cardbord-on-speedy100.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>Then we placed a pice of card board on the bed which is smaller than the bed size . And then we rise the bed
+      towards to the laser head using the Z axis bed up-down arrow keys on the control panel.</p>
+    <br>
+    <img src="../images/week3/focusing-speedy100.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>When the focus distance were aprox 15-20cm we placed the focus tool on the laser head and continues rise the bed
+      slowly till the tool touches the cardboard</p>
+    <br>
+    <img src="../images/week3/redy-to-cut-speedy100.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>After the focusing is done we moved the head to origin position manually. A small red color laser dots helps to
+      show the cutting point on the job</p>
+    <br>
+    <img src="../images/week3/drag-and-place.png" alt="laser-cutter" width="70%">
+    <br>
+
+    <p>Then we drag the kerf-cutting-file from Jobs section in the Trotec software towards the pointer on the screen</p>
+    <br>
+    <img src="../images/week3/opening-in-tortec.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>If we double click on the job we can see and double check the file before cutting.</p>
+
+    <br>
+    <img src="../images/week3/cutting-setting.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>This is the Engraver cutting setup the red color is for cutting job. velocity 1 is set for the 3.4 mm cardboard
+    </p>
+    <br>
+    <img src="../images/week3/turn-on-filter.png" alt="laser-cutter" width="60%">
+    <br>
+    <p>we turned on the filter before hit send to cut . Normally the Filter will turn on automatically when we send the
+      file But in our FAB LAB not connected to machine to teach students the importance of the filter</p>
+    <br>
+    <video width="65%" controls autoplay loop>
+      <source src="../images/week3/laser-kerf.mp4" type="video/mp4">
+    </video>
+    <br>
+    <p>After sending the file the laser head moved to home position and started cut.And it finished in 14 sec (the above
+      video is 2X times faster)</p>
+    <br>
+    <img src="../images/week3/kerf-result.png" alt="laser-cutter" width="50%">
+    <br>
+    <P>Then we taken out the laser cut cardboard parts from the bed and measures using a digital vernier caliper</P>
+    <br>
+    <img src="../images/week3/kerf-mesure.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>So we did math decreasing the outer dimension from inner dimension</p>
+    <ul>
+      <li>20.19-19.73= <b>0.46</b> </li>
+      <li>o.46 is the total kerf </li>
+      <li>kerf=0.46/2 </li>
+      <li>kerf=<b>0.23</b></li>
+    </ul>
+    <p>we also tried out other materials as well 1.8 mm acrylic and 3.83 mm Birch wood and calculated the kerf</p>
+    <br>
+    <img src="../images/week3/kerf-results.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>The cutting power of each material is also different all the information according to the material given below
+    </p>
+    <h4>Cutting and Kerf Details:-</h4>
+    <ul>
+
+      <li>3.4 mm cardboard</li>
+      <ul>
+        <li>power = 100 %</li>
+        <li>Speed/velocity = 1.0</li>
+        <li>Frequency = 5000 </li>
+        <li>kerf=<b>0.23</b>
+      </ul>
+      <li>3.83 mm Birch Wood</li>
+      <ul>
+        <li>power = 100 %</li>
+        <li>Speed/velocity = 0.35</li>
+        <li>Frequency = 5000 </li>
+        <li>kerf=<b>0.155</b>
+      </ul>
+      <li>1.8 mm Acrylic ( clear )</li>
+      <ul>
+        <li>power = 100 %</li>
+        <li>Speed/velocity = 0.5</li>
+        <li>Frequency = 5000 </li>
+        <li>kerf=<b>0.13</b>
+      </ul>
+    </ul>
+
+    <h3 id="pressfit">Press Fit Test</h3>
+    <p>For making a good joints in laser its good to know the press fit tolerances of each material. To test that we
+      designed a Test jig design in fusion 360.</p>
+    <br>
+    <img src="../images/week3/pressfit-jig-design.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>The design made with parametric thickness and kerf variables.So we can change the design for any material to
+      check its press fit.</p>
+    <br>
+    <img src="../images/week3/pressfit-jig-design-dxf.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>we created a new sketch on the surface and saved in dxf format to cut in laser</p>
+    <br>
+    <img src="../images/week3/kerf-jig-designs.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>Then opened each dxf in Inkscape and added measurement details to engrave on top of it.The engraving job kept in
+      black color and cutting kept in red</p>
+    <br>
+    <img src="../images/week3/engraving-setting.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>Opened each in the Trotec software and setup the engrave settings, then Engraved and cuts them out starting with
+      cardboard</p>
+    <br>
+    <img src="../images/week3/kerf-jig-results.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>The engrave speed vary according to the material just like the cutting speed here the cardboard engraved more
+      than other two and the clear acrylic jig is the less visible because of it's material property</p>
+    <br>
+    <img src="../images/week3/kerf-jig-pressfit-results.png" alt="laser-cutter" width="70%">
+    <br>
+    <p>We tested each jig with a pice of material which we cuts for finding kerf and found the press-fit values</p>
+    <h4>Engraving and Press-Fit Details:-</h4>
+    <ul>
+      <li>3.4 mm cardboard</li>
+      <ul>
+        <li>power = 20</li>
+        <li>Speed/velocity = 20</li>
+        <li>Frequency = 1000 </li>
+        <li>Press-fit=(thick-kerf-0.3)3.4-0.23-0.3=<b>2.87</b>
+      </ul>
+      <li>3.83 mm Birch Wood</li>
+      <ul>
+        <li>power = 75 %</li>
+        <li>Speed/velocity = 80</li>
+        <li>Frequency = 1000 </li>
+        <li>Press-fit=(thick-kerf-0.1)3.4-0.23-0.1=<b>3.575</b>
+      </ul>
+      <li>1.8 mm Acrylic ( clear )</li>
+      <ul>
+        <li>power = 75 %</li>
+        <li>Speed/velocity = 60</li>
+        <li>Frequency = 1000 </li>
+        <li>Press-fit=(thick-kerf)1.8-0.13=<b>1.67</b>
+      </ul>
+
+      <h3 id=imag_editors>Vinyl Cutting</h3>
+      <p>Vinyl cutting is one of interesting process that we can cut any 2D images or vectors in vinyl with a computer
+        controlled cnc machine which has a controllable pen knife </p>
+      <h3 id="vinylmachine">Roland GX-24 Vinyl cutter machine</h3>
+      <br>
+      <img src="../images/week3/roland_GX-24-min.png" alt="roland_GX-24" width="70%">
+      <br>
+
+      <p>This is the type of vinyl cutting machine used in the lab. When we talk about vinyl cutting machine basically
+        two
+        type of machines available
+        .One is <b>active</b> and other one is <b>Passive</b>. In the active machine the cutting blade turnings
+        controlled
+        by a controlled servo mechanism.
+        but in passive the turning technology is like a roller coaster tyre .If it the entire head moves across a plan
+        the
+        blade will turn to that direction. Roland GX-24 is a passive blade type machine</p>
+      <figure>
+        <img src="../images/week3/roland_GX-24_dls.png" alt="roland_GX-24" width="80%">
+        <figcaption>From <a href="https://www.rolanddga.com/support/products/cutting/camm-1-gx-24-24-vinyl-cutter"
+            target="_blank">roland_GX-24</a> User guide</figcaption>
+      </figure>
+      <p>The above picture shows the part details of the roland GX-24 machine.It's a servo motor based high speed
+        machine
+      </p>
+
+
+      <p>Blades are very pointy and sharp for cutting with 45 degree angle to the cutting direction like in the picture.
+        Blades cutting angle also available in 30° and 60° also,In Fab we use 45° cutting angle blades</p>
+      <br>
+      <img src="../images/week3/Passive-blades.png" alt="Passive-blades" width="55%">
+      <br>
+      <p>There are two parameter which needs to be adjust while we cutting vinyl according to the material
+        specifications.</p>
+      <ul>
+        <li><b>Force</b> </li>
+        <li><b>Speed</b></li>
+      </ul>
+      <p>Speed is depend the force we are cutting in the machine also depend the material surface and quality.Also we
+        cant give too much force that will damage the entire vinyl and also damage the vinyl cutter tool.So we did a
+        Force test on the vinyl sticker from our Lab's Inventory. </p>
+      <br>
+      <img src="../images/week3/vinyl-force-test.png" alt="Passive-blades" width="55%">
+      <br>
+      <p>The test success is calculated to remove the circle shape without damaging the inner square shape like in the
+        above figure. In the figure theres 5 different tests with different forces. From the result 80g is the best to
+        cut in this material </p>
+        <h4>Roland Cutting specifications:-</h4>
+        <ul>
+          <li><b>Force: </b>80 g</li>
+          <li><b>Speed :</b> 10 cm/s</li>
+        </ul>
+        <p>The force will vary if we increase the speed thats' also leaves uncut edges or over cuts sometimes. we can change those speed and force in the Machine menu and also there is a button for test cuts.</p>
+      <br>
+      <h3 id="fab-mods">FAB MODS</h3>
+      <p>Fab mods is an open source web app program which used as machine softwares or driver works with web socket
+        technology.
+        the mods replaces the window software to the machine which provides the machine manufactures to cut or mill the
+        given image or vector file.so the prof.Neil mentioned about it to try out
+        the fab mods from github in our pc.So I cloned a copy of the project into my PC and given a try to cut the vinyl
+        using the FAB cutting machine called Roland GX-24
+      </p>
+      <img src="../images/week3/FAB-Mods.png" alt="FAB-Mods" width="70%">
+      <p>I tried to install the fab mods in to my pc.But didn't works out.while I spending time for the fab modes
+        installation our mentor Mr.Rahul Rajan said that is not a part of this week of assignment.Then I skipped the
+        part
+        started to cutting the vinyl using FAB-Mods ,which already installed in the FAB LAB Computer
+        I found the files and repository from <a href="https://github.com/fabfoundation/mods">here</a>
+        . Will try later with my own PC</p>
+
+      <p><b>week 3</b> assignment is to cut something on the vinyl cutter.
+        And then design, laser cut, and document a parametric construction kit,
+        accounting for the laser cutter kerf,
+        which can be assembled in multiple ways,
+        and for extra credit include elements that aren't flat
+      </p>
+
+      <h3 id="logo">Logo Making in Inkscape</h3>
+      <p>I decided to make a logo of FAB LAB Kerala and I got the PNG file Already. Then opened in Inkscape for giving
+        size and tracing bitmap</p>
+      <br>
+      <img src="../images/week3/fablab_vinyl.png" alt="vinyl_cutting" width="70%">
+      <br>
+      <P>The logo contains 3 color Red,Green and Blue so I'm gonna cut the logo in 3 different color which is Red,Green
+        and Blue vinyl all are in stock our FAB LAB </P>
+      <br>
+      <img src="../images/week3/vinyl_cutting.png" alt="vinyl_cutting" width="70%">
+      <br>
+      <p>After tracing the Bitmap vector image I filled 'inside fill' with black color and given a size I wanted.It is
+        important to give a dark fill in design.Other wise the machine will plot at the edges of the stroke line. Then
+        saved
+        as "fab_lab_logo.svg" </p>
+
+      <h3 id="rolandplot">cutting in Roland</h3>
+      <p>Now the SVG file is ready to cut so I opened the FAB Mods for Roland GX-24 and loaded the SVG file into it
+      </p>
+      <br>
+      <img src="../images/week3/fab-mods-vinyl-cutting.png" alt="vinyl_cutting" width="70%">
+      <br>
+      <p>'png' file also supported but I chose vector file.Then I turned ON the Roland GX-24 and loaded a reel of Red
+        Color vinyl</p>
+      <br>
+      <img src="../images/week3/vinyl-loading-adjusting.png" alt="vinyl_cutting" width="70%">
+      <br>
+      <p>Then I aligned the vinyl with adjusting the roller guides in the white marked area. (the unmarked areas doesn't
+        have grip to hold or push the vinyl ).</p>
+      <br>
+      <img src="../images/week3/select-role.png" alt="vinyl_cutting" width="70%">
+      <br>
+      <p>I selected role option menu because I'm using a role then it measured the length of the vinyl itself and
+        displays
+        dimensions.</p>
+      <br>
+      <img src="../images/week3/fabmods-calculate-vinyl.png" alt="vinyl_cutting" width="70%">
+      <br>
+      <p>After loading the Vinyl roll I calculated the tool path in fab mods. The tool diameter already given by default
+      </p>
+      <br>
+      <img src="../images/week3/toolpath-fabmods.png" alt="vinyl_cutting" width="70%">
+      <br>
+      <p>If we Click the view button in 'vectorize module' after calculation that will show the vinyl cutter tool path
+        in
+        New Tab</p>
+      <br>
+      <img src="../images/week3/fab-mods-vinyl-modules.png" alt="vinyl_cutting" width="70%">
+      <br>
+      <p>The other modules shows offset and how much detail we can get and etc...</p>
+      <br>
+      <img src="../images/week3/roland-orgin-set.png" alt="vinyl_cutting" width="70%">
+      <br>
+      <p>So to plot the logo I moved the cutting head to an end position and updated the origin position to the machine
+        by
+        long pressing origin set button.</p>
+      <br>
+      <img src="../images/week3/roland-orgin-set-.png" alt="vinyl_cutting" width="40%">
+      <br>
+      <p>Then I send the file to roland by clicking 'Send File to Device' button on mods</p>
+      <br>
+      <img src="../images/week3/send-the-file-fabmods.png" alt="vinyl_cutting" width="70%">
+      <br>
+      <p>The cutting so fast it finished in 36 sec.You can see the cutting process in the video below which is 2X faster
+      </p>
+      <br>
+      <video width="65%" controls autoplay loop>
+        <source src="../images/week3/vinyl-cutting.mp4" type="video/mp4">
+
+      </video>
+      <br>
+      <p>After this I repeated the process for cutting Blue and Green vinyl and cuts out from the roll</p>
+
+      <br>
+      <img src="../images/week3/vinyl-cuttting-results.png" alt="vinyl_cutting" width="70%">
+      <br>
+
+      <h3 id="applying">Applying the vinyl sticker</h3>
+      <p>I decided to stick it on a book face which I got from FAB LAB when joined the academy.Also need to align all
+        the
+        color in place to get the mixed result of the logo </p>
+      <br>
+      <img src="../images/week3/fablab-handbook.png" alt="vinyl_cutting" width="40%">
+      <br>
+      <p>The book is about the fab machinery and nice hand book done by Rahul Rajan.</p>
+      <br>
+      <img src="../images/week3/tools-vinyl-applying.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>So first step is to remove the unwanted parts from the vinyl stickers I did with the help of tweezer and a Pen
+        Knife.</p>
+      <br>
+      <img src="../images/week3/remove-unwanted-vinyl.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>All ready for applying. To stick stickers on surface a type tape is required which has less stickiness and
+        Transparent. </p>
+      <br>
+      <img src="../images/week3/cooling-applying-vinyl.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>Unfortunately in our fablab the Transparent sticker is ran out.So I got a pice of cooling stickers from local
+        stores and cuts the sticker into 3 small rectangle piece as same as the vinyl.</p>
+      <br>
+      <img src="../images/week3/removed-fablab-vinyl.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>Then I peeled away unwanted letters and portions as per the logo also left something for common reference.</p>
+      <br>
+      <img src="../images/week3/blue-cooling-apply.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>As a first step of applying vinyl I'm started with the blue sticker.pealed the cooling sticker and sticks over
+        the blue sticker like in the picture.</p>
+      <br>
+      <img src="../images/week3/blue-pealing.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>Then I pealed the cooling with vinyl.it came out very easily and without any misalignments.</p>
+      <br>
+      <img src="../images/week3/blue-vinyl-applying.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>And then I sticked on the top of the Hand book and applied a wiped pressure all over.After I pealed the cooling
+        sticker away so the vinyl blue log are in place.</p>
+      <br>
+      <img src="../images/week3/blue-marked.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>Then I marked the logo's unwanted portion which I left for aligning and removed the blue portion.</p>
+      <br>
+      <img src="../images/week3/red-vinyl-applying.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>I did with the same process with red vinyl following the blue</p>
+      <br>
+      <img src="../images/week3/red-marked.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>This time I'm also marked and removed the letter B with the logo portion.</p>
+      <br>
+      <img src="../images/week3/green-vinyl-applying.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>And the I applied the green vinyl sticker carefully and pealed away the cooling sticker.</p>
+      <br>
+      <img src="../images/week3/vinyl-result.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>The results is great have some misalignments to te book but its Ok I love it!.</p>
+
+      <h3 id="instal">Back to FAB MODs</h3>
+      <p>After the vinal I tried to install the fab mods agin here I'm explaining how I did it step by step.</p>
+      <br>
+      <img src="../images/week3/github-copying.png" alt="Passive-blades" width="70%">
+      <br>
+      <p>I copied the Cloning link from the <a href="https://github.com/fabfoundation/mods">Mods</a> GitHub repository
+      </p>
+      <pre class="code_pre"><code>git clone https://github.com/fabfoundation/mods.git</code></pre>
+
+      <p>In terminal I created a directory called 'FAB_MODS' then I cloned the repository into the folder using above
+        git
+        clone command</p>
+      <br>
+      <img src="../images/week3/fabmodescommunity.png" alt="Passive-blades" width="70%">
+      <br>
+      <p>After cloning I changed the terminal directory into 'mods' then I installed the mods by running the command
+        found
+        on the github documentation</p>
+      <pre class="code_pre"><code>bash install-mods</code></pre>
+      <br>
+      <img src="../images/week3/mode-instalation.png" alt="Passive-blades" width="70%">
+      <br>
+      <p>After the installation it shows some package.json missing error.but any way I decided to run the fab modes</p>
+      <pre class="code_pre"><code>bash mods</code></pre>
+      <p>by running the above command into the terminal it opens a new webpage window on my Browser</p>
+      <br>
+      <img src="../images/week3/fabmods-firstlook.png" alt="Passive-blades" width="70%">
+      <br>
+      <p>This is how I installed the fab mods we can exit from the server anytime by pressing 'Ctrl+C' in the terminal
+      </p>
+      <br>
+      <img src="../images/week3/killing-the server.png" alt="Passive-blades" width="70%">
+      <br>
+      <p>But I face problem while using this with the roland_GX-24 vinal cutter it doesn't connecting properly I checked
+        the installation process and find out the missing error of the 'package.json' is the problem </p>
+      <p>The fab mods works like a server app in my pc so it runs on Node.js server program it need npm to install and
+        run.so in order to get the 'package.json' file I used this below command in terminal</p>
+      <pre class="code_pre"><code>npm init -y</code></pre>
+      <p>This command creates a package.json file in the folder</p>
+      <br>
+      <img src="../images/week3/npm-init-inmods.png" alt="Passive-blades" width="70%">
+      <br>
+      <p>After this I run the installation of mods command again and this time installation finished with out any error
+      </p>
+      <br>
+      <img src="../images/week3/installation-success.png" alt="Passive-blades" width="70%">
+      <br>
+      <p>This time It works well with the vinyl cutter finally I have my own FAB mods in my PC!. But actually this
+        solution dose not solves the connecting problem That I had </p>
+      <br>
+      <img src="../images/week3/error-fabmods.png" alt="Passive-blades" width="70%">
+      <br>
+      <p>I noticed the Port selection of the mods Roland's module It was lp0 by default may be my pc has different port
+        so i ran the command below to see all ports which connected to the pc.</p>
+      <pre class="code_pre"><code>dmesg</code></pre>
+      <br>
+      <img src="../images/week3/roland-usb-terminal.png" alt="Passive-blades" width="70%">
+      <br>
+      <p>After I give the comand in the terminal that listed the USB device detials which is connected to the PC and it
+        shows that The Port was actually named 'uslpb1' so I changed the '/dev/usb/lp0' to '/dev/usb/lp1' in-order to
+        made it work</p>
+
+      <h3 id="logo-on-t-shirt">Logo on A T shirt</h3>
+      <p>During the fab Wednesdays session I heard that we can embed Vinyl stickers on a t shirt via heat transfer. So I
+        got inspired by the process and decided to try my own found an tutorial written by Adrian Torres during his Fab
+        Academy.check out his <a href="http://fabacademy.org/2020/labs/leon/students/adrian-torres/week03.html"
+          target="_blank">Week3</a> </p>
+      <p>Actually the method is pretty simple, First of all we need some materials and equipments specially used for
+        this process.Vinyl sheet isn't the same as we are using in the lab. Specially made vinyl sheets available in the
+        market.</p>
+      <br>
+      <img src="../images/week3/vinyal-printing-samples.png" alt="vinyl_cutting" width="70%">
+      <br>
+      <p>So I cuts out our Fab LAB Kerala's logo and the name same as before but the dimensions are different . for the
+        dimension I was taken reference from an old shirt of mine which I got from community hackathon. Note that the
+        name is in mirrored because we are not sticking the on the shirt ,The other side stick with the shirt .</p>
+      <br>
+      <img src="../images/week3/shirts-and-tracing-paper.png" alt="vinyl_cutting" width="70%">
+      <br>
+      <p>I bought two low cost basic T-shirt from Decathalon . its only cost just 129 Indian Rupees (near 2 US Dollar)
+        per one shirt.Also bought transparent tracing paper which is also capable of handling the heat and the
+        transparency helps to see the vinyl cut align. We can grab them from the market its available in std sizes like
+        A4,A3..etc..</p>
+
+      <br>
+      <img src="../images/week3/logo-on-tracing-paper.png" alt="vinyl_cutting" width="50%">
+      <br>
+      <p>Then I applied the logo in colored order on the tracing paper like I did before and followed same method to
+        arrange in position</p>
+      <br>
+      <img src="../images/week3/placing-ironing-and-applying.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>After that I placed the tracing paper on the t shirt in position which is the logo vinyl face down. Then heated
+        on top with pressure by an ordinary Iron box from my home. This Iron box is an older technology and it's weigher
+        than new types of iron boxes also heats well.</p>
+
+      <br>
+      <img src="../images/week3/t-shirt-finished.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>Then I pealed off the tracing paper from the T-shirt after made sure the logo sticked on the shirt well.That
+        went well some sticky gum feel on the logo but I thing that can be remove in washing process.</p>
+      <br>
+      <img src="../images/week3/name-on-tracing-paper.png" alt="vinyl_cutting" width="60%">
+      <br>
+      <p>Then I also tried to stick the name on the top back of the shirt but that ain't went well very hard to stick
+        smaller detailed objects without correct equipments and vinyl.</p>
+      <br>
+      <img src="../images/week3/hero-shot-saheen-palayi.png" alt="vinyl_cutting" width="30%">
+      <br>
+      <p>Here is the hero shot of I'm wearing the shirt in a mirrored view . The logo was mirrored forgot to arrange in
+        correct way while arranging on the tracing paper. Also washed the shirt before wearing because u can see in the
+        previous picture some dust line on the shirt.The vinyl logo was really sticked well even after I wash I think it
+        gonna last for 100+ wash and use.</p>
+      <p>I really enjoyed learning the T shirt vinyl printing.. with available facilities and material whi is also helps
+        me to understand the process.I really recommended to all fabians to try out this to create your own brand shirts
+        in low cost. also checkout above mentioned documentation from Adrian Torres for more accurate method of T-shirt
+        vinyl printing.</p>
+      <br>
+      <br>
+
+
+      <h3 id="press-fit">Press-Fit Construction Kit</h3>
+      <p>Based on the Data we collected during the group assignment I started to design my own press fit construction
+        kit in Autodesk Fusion 360</p>
+      <br>
+      <img src="../images/week3/press-fit-parameters.png" alt="press-fit" width="70%">
+      <br>
+      <p>I created some parameters in fusion like length,thickness,kerf and pressfit clearance and I added the values
+        which we got from the press fit, Kerf testing</p>
+      <p></p>
+      <br>
+      <img src="../images/week3/press-fit-sketch.png" alt="press-fit" width="70%">
+      <br>
+      <p>Then created a sketch of a hexagonal shape and a rectangle stick shape using the parameters.</p>
+      <br>
+      <img src="../images/week3/press-fit-extrude.png" alt="press-fit" width="70%">
+      <br>
+      <p>After selected sketch and extrude to the thickness that I given in parameters.</p>
+      <br>
+      <img src="../images/week3/press-fit-project.png" alt="press-fit" width="70%">
+      <br>
+      <p>For saving The 2D vector created a new sketch on the hexagonal shape and projected the rectangle shape in to
+        the sketch then fished the sketch.</p>
+      <br>
+      <img src="../images/week3/press-fit-save-dxf.png" alt="press-fit" width="70%">
+      <br>
+      <p>In the sketch directory on left side the newly created sketch shows, by right clicking on it and selecting the
+        'Save AS DXF' option and saved in to my PC. </p>
+      <br>
+      <img src="../images/week3/press-fit-test-ink-scape.png" alt="press-fit" width="70%">
+      <br>
+      <p>Then I opened the saved DXF file in the Inkscape and changed the stroke color to Red for cutting and send to
+        Trotec software.</p>
+      <br>
+      <img src="../images/week3/press-fit-trotec.png" alt="press-fit" width="70%">
+      <br>
+      <p>Firstly only cutting one set for Test so selected the cutting settings for 3.4 mm cardboard and cut it out.</p>
+      <br>
+      <img src="../images/week3/press-fit-test.png" alt="press-fit" width="70%">
+      <br>
+      <p>It cuts beautifully then I take out the parts and try to fit them together. </p>
+      <br>
+      <img src="../images/week3/press-fit-testing.png" alt="press-fit" width="70%">
+      <br>
+      <p> Fits well in both ways good press-fit all.Then I decided to try the Parametric capabilities by cutting in
+        different thick Material</p>
+      <br>
+      <img src="../images/week3/constrection-kit-parametric-test.png" alt="press-fit" width="70%">
+      <br>
+      <p>I changes the parameters in the design for cutting in wood based on the detials collected during group
+        assignment for checking parametric capabilities of the design. Then exported to dxf</p>
+      <br>
+      <img src="../images/week3/constretion-kit-wood.png" alt="press-fit" width="70%">
+      <br>
+      <p>Then I cut out the parts and checked for the joints and press fit. All good for mass production! But Cant do in
+        Wood because it's not that cheap to use here. </p>
+      <br>
+      <img src="../images/week3/press-fit-nested-massproduction.png" alt="press-fit" width="70%">
+      <br>
+      <p>I nested the parts as many as I need in a 1 square feet (approximately) document in Inkscape and stroke set to
+        red and made it thin line (0.1 mm).</p>
+      <br>
+      <img src="../images/week3/press-fit-kit-trotec.png" alt="press-fit" width="70%">
+      <br>
+      <p>Then loaded in to trotec software and set the origin position and cutting setups then hits play button.</p>
+      <br>
+      <img src="../images/week3/press-fit-nested.png" alt="press-fit" width="70%">
+      <br>
+      <p>Cutting the cardboard is not accurate if it has bends so in that cases we should make it flat as possible and
+        also recommended to adjust the velocity of cutting settings from 1 to 0.9 or 0.8.</p>
+      <br>
+      <img src="../images/week3/press-fit-construction-kit.png" alt="press-fit" width="70%">
+      <br>
+      <p>So all set to build!. I've tried 2-3 times to collect all of these components Because of the bends in card
+        boards. Then starts to build something out of it</p>
+      <br>
+      <img src="../images/week3/press-fit-assembled.png" alt="press-fit" width="70%">
+      <br>
+      <p>I constructed more than one or two things out of it. Built a robotic shape , a plane , a snake and a vehicle
+        chassis I did not have any idea That I can build and end up with these thing when I started to build with the
+        kit</p>
+      <br>
+      <img src="../images/week3/press-fit-construction-kit-result.png" alt="press-fit" width="70%">
+      <br>
+      <p>So theses the all the thing I built this week its very Interesting! to play with the construction Kit</p>
+      <br>
+      <img src="../images/week3/wood-construction.png" alt="press-fit" width="60%">
+      <br>
+      <p>This wooden structure was a bonus for me I've collected older cut pice from the lab and did cut the parts on it
+        one by one depends the area available on the pice. it's look nice!</p>
+      <h3>Resources</h3>
+
+
+      <div class="resources">
+        <h4 id="refrence">References</h4>
+
+        <ul>
+          <li><a href="http://academy.cba.mit.edu/classes/computer_cutting/index.html" target="_blank">Fab Academy
+              Computer-Controlled Cutting classes</a></li>
+          <li><a href="https://www.troteclaser.com/en/laser-machines/laser-engravers-speedy-series/"
+              target="_blank">Trotec Speedy Laser Engraving Machine</a></li>
+          <li><a href="https://www.rolanddga.com/support/products/cutting/camm-1-gx-24-24-vinyl-cutter"
+              target="_blank">Roland GX-24 Vinyl Cutter</a> </li>
+          <li><a
+              href="https://www.open.edu/openlearn/science-maths-technology/engineering-technology/manupedia/laser-cutting"
+              target="_blank">Laser Cutting Process</a></li>
+          <li><a href="https://github.com/fabfoundation/mods" target="_blank">FAB MODS GitHub</a></li>
+          <li><a href="http://fabacademy.org/2020/labs/leon/students/adrian-torres/week03.html" target="_blank">Adrian
+              Torres's week03</a></li>
+
+
+        </ul>
+        <br>
+        <h4 id="downlo">Downloads</h4>
+        <ul>
+          <li>kerf test</li>
+          <ul>
+            <li><a href="../images/week3/Assets/kerf.svg" target="_blank">kerf.svg <i
+                  class="fal fa-arrow-to-bottom"></i></a></li>
+
+          </ul>
+          <li>Press-Fit jig Files
+            <ul>
+              <li><a href="../images/week3/Assets/FAB_Press_Fit_Jig.f3d" target="_blank">Fusion 360 Design files <i
+                    class="fal fa-arrow-to-bottom"></i></a></li>
+
+              <li><a href="../images/week3/Assets/3.4_mm_cardboard_Jig.svg" target="_blank">3.4 mm cardboard Jig <i
+                    class="fal fa-arrow-to-bottom"></i></a></li>
+              <li><a href="../images/week3/Assets/3.83_mm_Brich_wood_Jig.svg" target="_blank">3.83 mm Birch wood Jig <i
+                    class="fal fa-arrow-to-bottom"></i></a></li>
+
+              <li><a href="../images/week3/Assets/1.8_mm_Acrylic_Jig.svg" target="_blank">1.8 mm Acrylic Jig <i
+                    class="fal fa-arrow-to-bottom"></i></a></li>
+
+            </ul>
+          </li>
+          <li>Vinyl cut Files</li>
+          <ul>
+            <li><a href="../images/week3/Assets/fab_lab_log.png" target="_blank">fab_lab_logo.png <i
+                  class="fal fa-arrow-to-bottom"></i></a></li>
+            <li><a href="../images/week3/Assets/fab_lab_logo.svg" target="_blank">fab_lab_logo.svg <i
+                  class="fal fa-arrow-to-bottom"></i></a></li>
+            <li><a href="../images/week3/Assets/fab_lab_logo_for_T-Shirt_Printing.svg"
+                target="_blank">fab_lab_logo_for_T-Shirt_Printing.svg <i class="fal fa-arrow-to-bottom"></i></a></li>
+
+          </ul>
+          <li>Press-Fit construction kit Files
+            <ul>
+              <li><a href="../images/week3/Assets/FAB_PARAMETRIC_PRESS_FIT_KIT.f3d" target="_blank">Fusion 360 Design
+                  files <i class="fal fa-arrow-to-bottom"></i></a></li>
+              <li><a href="../images/week3/Assets/Press-fit_test.svg" target="_blank">Press-fit_test.svg <i
+                    class="fal fa-arrow-to-bottom"></i></a></li>
+
+              <li><a href="../images/week3/Assets/Nested_press-fit_kit.svg" target="_blank">Nested_press-fit_kit.svg <i
+                    class="fal fa-arrow-to-bottom"></i></a></li>
+
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <a class="top-link hide" href="" id="js-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+      <path d="M12 6H0l6-6z" />
+    </svg>
+    <span class="screen-reader-text">Back to top</span>
+  </a>
+
+  <footer class="blog-footer">
+    <p>Copyright ©
+      <span class="full-year">2021</span> Saheen's FAB <a
+        href="http://fab.academany.org/2021/labs/kochi/students/saheem-palayi/students.md">student agreement</a>
+      All rights reserved
+    </p>
+  </footer>
+  <script src="../js/assignment.js"></script>
+  <script src="../js/copy.js"></script>
+
+  <script src="../js/backtotop.JS"></script>
+
+
+</body>
+
+
+</html>

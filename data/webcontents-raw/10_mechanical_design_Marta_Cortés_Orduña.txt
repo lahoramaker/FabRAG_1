@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MCO Fab Academy 2018</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome and Pixeden Icon Stroke icon fonts-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+    <!-- Google fonts - Roboto-->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,700">
+    <!-- lightbox-->
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">
+      <div role="navigation" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header"><img class="pull-left navbar-brand" src="img/fabacademyslogo.png"><a href="index.html" class="navbar-brand">Marta Cortés Orduña</a><span class="navbar-brand"> <a target="_blank" href="http://www.oulu.fi/fablab/">(@FabLab Oulu)</a></span>
+            <div class="navbar-buttons">
+              <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle navbar-btn">Menu<i class="fa fa-align-justify"></i></button>
+            </div>
+          </div>
+          <div id="navigation" class="collapse navbar-collapse navbar-right">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Assignments</a></li>
+              <li><a href="final_project.html">Final Project</a></li>
+
+              <li><a href="aboutme.html">About me</a></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Jump to... <b class="caret"></b></a>
+                <ul class="dropdown-menu scroll-menu">
+                  <li><a href="assignment01.html">1. Principles and Practices</a></li>
+                  <li><a href="assignment02.html">2. Project management</a></li>
+                  <li><a href="assignment03.html">3. Computer-aided design</a></li>
+                  <li><a href="assignment04.html">4. Computer-controlled cutting</a></li>
+                  <li><a href="assignment05.html">5. Electronics production</a></li>
+                  <li><a href="assignment06.html">6. 3D scanning and printing</a></li>
+                  <li><a href="assignment07.html">7. Electronics design</a></li>
+                  <li><a href="assignment08.html">8. Computer-controlled machining</a></li>
+                  <li><a href="assignment09.html">9. Embedded programming</a></li>
+                  <li><a href="assignment10.html">10. Molding and casting</a></li>
+                  <li><a href="assignment11.html">11. Input devices</a></li>
+                  <li><a href="assignment12.html">12. Output devices</a></li>
+                  <li><a href="assignment13.html">13. Interface and application programming</a></li>
+                  <li><a href="assignment14.html">14. Networking and communications</a></li>
+                  <li><a href="assignment15.html">15. Mechanical design</a></li>
+                  <li><a href="assignment16.html">16. Machine design</a></li>
+                  <li><a href="assignment17.html">17. Wildcard week</a></li>                  
+                  <li><a href="assignment18.html">18. Applications and Implications</a></li>
+                  <li><a href="assignment19.html">19. Invention, intellectual property and income</a></li>
+                  <li><a href="assignment20.html">20. Project Development</a></li>
+                  <li class="divider"></li>
+                  <li><a href="final.html#ideas">Final project idea</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!--<a href="#" data-toggle="modal" data-target="#login-modal" class="btn navbar-btn btn-ghost"><i class="fa fa-sign-in"></i>Log in</a>-->
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="background-gray-lightest section_p_bottom">
+      <div class="container">
+        <div class="breadcrumbs">
+          <ul class="breadcrumb">
+            <li><a href="index.html">Assignments</a></li>
+            <li>Week 15</li>
+          </ul>
+        </div>
+        <h1 class="heading">15. Mechanical design</h1>
+        <p class="lead">This  week we need to design a machine in a group.</p>
+
+<!--Page Navigation bar-->
+      <nav class="navbar  navbar-inverse">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#tasks">ToDo</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The "Doing"<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#thedoing1" >the doing 1</a></li>
+                  <li><a href="#thedoing2">the doing 2</a></li>
+                  <!--<li><a href="#project">Defining the project</a></li>-->
+                </ul>
+              </li>
+              <li><a href="#resources">Resources</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Once Done<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#summary">Summary</a></li>
+                  <li><a href="#difficulties">Difficulties and Learnings</a></li>
+                  <li><a href="#tips">Tips</a></li>
+                  <li><a href="#files">Files</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+<!--/.Page Navigation bar-->
+      </div>
+
+    </section>
+
+    <!--<figure class="full-image"><img src="img/jumbotron1.jpg" alt="">
+      <figcaption>Caption of the Image </figcaption>
+    </figure>-->
+ 
+    <section class="blog-post background-gray-lightest section_p_top">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-11">
+            <div class="post-content">
+              <p>During this week I have participated in the group assignment with the team  <a href="http://fab.academany.org/2018/labs/fablaboulu/machine_week_group2.html">Apple Peeler</a> </p>
+              <h2 id="tasks">To Do</h2>
+              <ol>
+                <li>Participate in the group work</li>
+                <li>Document my part.</li>
+              </ol>
+
+              <h2>The "Doing"</h2>
+              <h3  id="thedoing1">What have I done?</h3>
+              <section class="section_assign">
+                At some parts, it is quite difficult to make clear divisions of the work, because we have participated in smaller or bigger subgroups in almost all of the steps of the design. <br/>
+                I was with Megumi trying to find an idea for a second group and thinking about the mechanism of a Lathe machine, I started to see a peeling arm and a fruit as the 3d shape. Then we asked Eino about it, and he thought it was good enough for the assignment. And then Behnaz, Heidi and Peetu liked the idea and joined us. 
+                Here is the summary of what I have participated in for the machining design:
+                <ul>
+                  <li>I came up with the idea when talking with Megumi: From Lathe machine to apple peeler</li>
+
+                  <li>I participated in the design of the structure: taking into account which parts we had from previous year's projects</li>
+
+ <a href="img/assignment15/IMG_20180503_133729.jpg" title="" data-lightbox="portfolio" data-title="design"> <img src="img/assignment15/IMG_20180503_133729.jpg" alt="design" class="img-responsive img-border"></a><div class="caption"></div>
+
+                  <li>I chose the parts needed from previous project to define an structure</li>
+                   <a href="img/assignment15/IMG_20180503_133723.jpg" title="" data-lightbox="portfolio" data-title="design"> <img src="img/assignment15/IMG_20180503_133723.jpg" alt="design" class="img-responsive img-border"></a><div class="caption"></div>
+                  <li>I participated in the first assembling of the pieces: I put together the base of the L structure so they would move as one back and forwards</li>
+
+                  <li>I participated in the design of the piece to the rotating structure: I measure the parts to be joint together </li>
+                  <a href="img/assignment15/Picture4.jpg" title="" data-lightbox="portfolio" data-title="design"> <img src="img/assignment15/Picture4.jpg" alt="design" class="img-responsive img-border"></a><div class="caption"></div>
+                  <li>I started building the peeling mechanism (Use the metallic fold and how) 
+                    <a href="img/assignment15/IMG_20180509_124302.jpg" title="" data-lightbox="portfolio" data-title="design"> <img src="img/assignment15/IMG_20180509_124302.jpg" alt="design" class="img-responsive img-border"></a><div class="caption"></div>
+                    <ul><li> First, I cut a piece of the fold to test if just by hand I could peel the apple</li>
+                    <li>I did the first prototype, attaching with tape to an MDF plate the blade and simulate the mechanism to see if it would work and how could it be attached to the structure</li>
+                    <li>I came with the idea of how to attach the blade to the MDF and, together with Megumi, got the measurements to design and then cut the MDF plate</li></ul></li>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                      <a href="img/assignment15/IMG_20180507_143752.jpg" title="" data-lightbox="portfolio" data-title="design"> <img src="img/assignment15/IMG_20180507_143752.jpg" alt="design" class="img-responsive img-border"></a><div class="caption"></div>
+                                           </div> 
+                      <div class="col-md-6">
+                      <a href="img/assignment15/IMG_20180509_132129.jpg" title="" data-lightbox="portfolio" data-title="design"> <img src="img/assignment15/IMG_20180509_132129.jpg" alt="design" class="img-responsive img-border"></a><div class="caption"></div>
+                     </div> 
+                     </div> 
+                  <li>I have done most of the layout, organization and documentation in the group page</li>
+                </ul>
+
+                There are still many things missing and many parts that wold need some revisiting during the next week.
+              </section>
+              
+              <h2 id="resources">Resources</h2>
+              <section class="section_assign">
+                <ul>
+                  <li>disassembled material from lasts years projects</li>
+                  <li>Inspiration from <a href="https://www.amazon.com/Johnny-Peeler-VICTORIO-VKP1010-Suction/dp/B001DLTD1C">this commercial peeler</a></li>
+                </ul>
+              </section>
+
+              <h2>Once done</h2>
+              <h3  id="summary">Summary</h3>
+              <section class="section_assign">
+                <ul>
+                  <li>I have participated in a group designing a fun machine</li>
+                </ul>
+              </section>
+              <h3  id="difficulties">Difficulties and Learnings</h3>
+              <section class="section_assign">
+                <ul>
+                  <li>Main difficulty for me was in the description of the individual tasks. It is difficult to describe owns participation as completely independent from others because we have been designing and doing on the go, with several try and error tests.</li>
+                  <li>Main learning for next week is to maybe completely divide the tasks from the beginning</li>
+                </ul>
+              </section>
+              <h3  id="tips">Tips</h3>
+              <section class="section_assign">
+              </section>
+              <h3  id="files">Files</h3>
+              <section class="section_assign">
+                  All the files are in the group work page.
+              </section>
+
+          <!--    <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+              </blockquote>
+              <h3>Header Level 3</h3>
+              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                <li>Aliquam tincidunt mauris eu risus.</li>
+              </ul>
+              <p><img src="img/blog1.jpg" alt="Example blog post alt" class="img-responsive"></p>
+              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>-->
+            
+            </div>
+            <!-- /.post-content-->
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+
+      <div class="footer__copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <!--<p>&copy;2018 Marta Cortés Orduña</p>-->
+              <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+            </div>
+            <div class="col-md-6">
+              <p class="credit">Code <a href="https://bootstrapious.com/e-commerce-templates" class="external">Bootstrapious</a></p>
+              <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a id="back-to-top" href="#" class="back-to-top" role="button" title="" data-toggle="tooltip" data-placement="left" data-original-title="Click to return on the top page" style="display: none;"><i class="fa fa-arrow-circle-o-up fa-4x" aria-hidden="true"></i></a>
+    <!-- anchor class="btn btn-primary btn-lg "-->
+    <!-- Javascript files-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"> </script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/front.js"></script>
+    <script src="js/custom.js"></script>
+        <script type="text/javascript">
+     $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+&& location.hostname == this.hostname) {
+
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 75 //offsets for fixed header
+        }, 1000);
+        return false;
+      }
+    }
+  });
+  //Executed on page load with URL containing an anchor tag.
+  if($(location.href.split("#")[1])) {
+      var target = $('#'+location.href.split("#")[1]);
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 75 //offset height of header here too.
+        }, 1000);
+        return false;
+      }
+    }
+});
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Giada-Allocca</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <style>
+div {
+    text-align: center;
+    text-align: justify;
+    text-justify: inter-word;
+}
+</style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Giada Allocca</a></h1>
+          <h2>Fab Academy 2018</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">About me</a></li>
+          <li><a href="examples.html">My final project</a></li>
+          <li class="selected"><a href="page.html">Exercises</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="banner"></div>
+	  <div id="sidebar_container">
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3 align="center" style="background-color: lightgreen"><b>Summary</b></h3>
+            <p align="center"><a href="#1">Scan an object</a></p>
+            <p align="center"><a href="#2">Modelling</a></p>
+            <p align="center"><a href="#3">Printing</a></p>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3 align= " center" style="background-color: lightgreen"><b>Useful links</b></h3>
+            <p align="center"><a href="http://www.agisoft.com/pdf/photoscan-pro_1_4_en.pdf">Agisoft manual</a></p>
+            <p align="center"><a href="http://www.agisoft.com/pdf/PS_1.1%20-Tutorial%20(BL)%20-%203D-model.pdf">Tutorial beginner</a></p>
+            <p align="center"><a href="https://ultimaker.com/en/resources/22225-how-to-print-with-ultimaker-pla">Ultimaker site</a></p>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3 align= " center" style="background-color: lightgreen"><b>Download files</b></h3>
+            <p align="center"><a href="week 6/Data/Inkwell.zip">Rhinoceros file</a></p>
+              <p align="center"><a href="week 6/Data/3d model Agisoft.zip">3d model Agisoft</a></p>
+                <p align="center"><a href="week 6/Data/inkwell.7z">gcode file</a></p>
+
+            <form method="post" action="#" id="search_form">
+            </form>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+<br>
+<p align="center"><font face="verdana" color="green" size="6">Week5: 3D scanning and printing</font></p>
+<div><font face="verdana" color="black" size="3">
+
+
+
+       <b> Group assignment:<a href="http://fab.academany.org/2018/labs/fablabsiena/group-assignments/week6.html">
+        test the design rules for your 3D printer(s)</a></b><br>
+          <b> Individual assignment: design and 3D print an object that could not be made subtractively; 3D scan an object
+            (and optionally print it) </b>
+            <br>
+            <br>
+            <div id="1" class="container-fluid">
+            <p align="center"><font face="verdana" color="green" size="5">Scan an object</font></p></div>
+      <p>The assignment of the week was to scan an object and make it a 3d image. In our lab the scanner is broken so we took
+        a series of photos to an object and using the program Agisoft Photo Scan to make the images into a 3d model. I chose
+        this statue found in the lab.</p>
+      <p><img style="width:500px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/IMG_0589.JPG"/></p>
+      <p>After downloading the program Agisoft PhotoScan I read the
+        <a href="http://www.agisoft.com/pdf/photoscan-pro_1_4_en.pdf"> manual </a> to understand how the program works. Then I looked this
+        <a href="http://www.agisoft.com/pdf/PS_1.1%20-Tutorial%20(BL)%20-%203D-model.pdf"> tutorial </a>. I did a lot of photos to my
+        subject and I uploaded them by <b> add photos </b>; this create a chunk, then I clicked upon it the right mouse's
+        button<b>--> process-->align photos-->medium</b>, so I waited the end of the process</p>
+    <p><img style="width:500px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/interfaccia%20di%20photoscan.JPG"/></p>
+    I aligned the photos, so the program can arrange the photos in the right order to rebuild the 3D model.
+    <p align= "center"><a href="week 6/1.JPG" data-lity data-lity-target="week 6/1.JPG"><img src="week 6/1.JPG" width="700px" class="img-rounded"></a></p>
+
+    <p> This was the first result. As you can see isn't quite satisfactory</p>
+    <p align= "center"><a href="week 6/2.JPG" data-lity data-lity-target="week 6/2.JPG"><img src="week 6/2.JPG" width="700px" class="img-rounded"></a></p>
+
+    <p> I aligned the pictures again, this time with high accuracy and this time it seems that the result will be good</p>
+    <p align= "center"><a href="week 6/3.JPG" data-lity data-lity-target="week 6/3.JPG"><img src="week 6/3.JPG" width="700px" class="img-rounded"></a></p>
+
+    <p>PhotoScan allows to generate and visualize a dense point cloud model. Based on the estimated camera positions the program calculates
+       depth information for each camera to be combined into a single dense point cloud. So i did <b> process--> build dense cloud </b>
+       and this was the result, so many dots and a figure not quite defined, this is because we are in the display mode point cloud,
+       to see the dense point cloud we have to click on this button.</p>
+       <p align= "center"><a href="week 6/4.JPG" data-lity data-lity-target="week 6/4.JPG"><img src="week 6/4.JPG" width="700px" class="img-rounded"></a></p>
+       <p align= "center"><a href="week 6/5.JPG" data-lity data-lity-target="week 6/5.JPG"><img src="week 6/5.JPG" width="700px" class="img-rounded"></a></p>
+
+    <p>Based on the point cloud information, PhotoScan can reconstruct polygonal model - mesh, so I did these steps.</p>
+    <p align= "center"><a href="week 6/6.JPG" data-lity data-lity-target="week 6/6.JPG"><img src="week 6/6.JPG" width="700px" class="img-rounded"></a></p>
+    I used these parameters
+<br>
+<br>
+    <p><img style="width:700px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/build%20mesh%20parametri.jpg"/></p>
+    <p> Waiting...</p>
+    <p><img style="width:700px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/waiting%20for%20the%20mesh.jpg"/></p>
+    <p>At this point, to get an idea of what will be the final model, you have to go in shaded display mode </p>
+    <p><img style="width:700px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/result.JPG"/></p>
+    <p><img style="width:700px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/Shaded%20view.JPG"/></p>
+    <p>Now lastly we must create the texture of the model thanks to newly created mesh, by following these steps </p>
+    <p align= "center"><a href="week 6/7.JPG" data-lity data-lity-target="week 6/7.JPG"><img src="week 6/7.JPG" width="700px" class="img-rounded"></a></p>
+
+
+    <p><img style="width:700px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/parametri%20model%20texture.jpg"/></p>
+    <p>To see the results click the <b>textured button</b></p>
+    <p><img style="width:700px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/texture.JPG"/></p>
+    <p> And this is the result. For me it is quite satisfactory. I'd like to use this tool to make more accurate scans in the future </p>
+    <p><img style="width:700px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/texture%202.JPG"/></p>
+
+
+
+    <div id="2" class="container-fluid">
+    <p align="center"><font face="verdana" color="green" size="5">Modelling</font></p></div>
+
+  We have two 3D printer in the lab (Multimaker 2 and 3) and I used both. For the assignment I decided to model and print an
+       inkwell. First I created a truncated cone with Rhinoceros 6, I selected the top of the solid and used the
+       command <b> shell </b>, then I fixed the small hole in the top where I have to insert the quill.
+
+       As you can see I made the inkwell oblique, so it could not be made subtractively.
+       Wanting to do a test before printing it in full size I made the object smaller to speed up the printing.
+       Then I exported the file in STL version.
+       <br>
+       <br>
+
+    <p><img style="width:700px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/inkwell%20on%20rhino%206.JPG"/></p>
+    <br>
+    <br>
+
+    <div id="3" class="container-fluid">
+    <p align="center"><font face="verdana" color="green" size="5">Printing</font></p></div>
+
+
+
+I downloaded and installed and Cura, the software to set the parameters of the 3D printer. From here, I opened the STL file and I chose the parameters for the Ultimaker 3</p>
+<br>
+<br>
+    <p><img style="width:700px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/ho%20caricato%20il%20file.JPG"/></p>
+
+    The Cura software has preset parameters: more accurate is the print, even more is time of printing.
+    If you want to change the parameters to your liking you have to choose the custom setting. <a href="https://ultimaker.com/en/resources/52480-how-to-get-started-with-custom-mode">this</a> video shows what to do.
+  <br>
+    These are the parameters i used for my first 3D printing.
+I chose a low infill because the print would have been faster, since it was a test.
+I set the parameters to get a normal quality, so I didn't change the speed but I added the 5 mm brim to better print and detach the object from the plate when it will be printed.
+<br>
+<br>
+    <p><img style="width:300px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/parametri.JPG"/></p>
+    <p><img style="width:300px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/parametri%202.JPG"/></p>
+    <p><img style="width:300px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/parametri%203.JPG"/></p>
+    <p><img style="width:400px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/parametri%204.JPG"/></p>
+    To make the print first of all you have to clean building plate, calibrating it and ensuring that the extruder was working fine, as done in
+     the <a href="http://fab.academany.org/2018/labs/fablabsiena/group-assignments/week6.html"> group assignment.</a>
+    After this preparation, I just uploaded the gcode file in a pendrive and loaded it in the Ultimaker 3 printer.
+    <p>And this is the result</p>
+    <p><img style="width:400px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/IMG_0596.JPG"/></p>
+    <br>
+    I must say that I expected a more precise result, in some places the press did not come smooth. Probably it depends on the temperature used or the printing speed, I will find out with the second print.
+    <br>
+    <br>
+    <p><img style="width:400px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/IMG_0597.JPG"/></p>
+    So I opened the file again on Cura and I changed the size to print the final model, this time with Ultimaker 2 (because it was the only available at that time).
+    I scaled the model of 550% and checked that it was all ok through the <b>layer view</b>.
+     I also chose the fine profile and lowered the printing speed from 80 to 60 and travel speed from 250 to 80. I left the 20% infill because my object is thick enough and does not need to be filled to be stable.
+     <br>
+     <br>
+
+    <p align= "center"><a href="week 6/8.JPG" data-lity data-lity-target="week 6/8.JPG"><img src="week 6/8.JPG" width="700px" class="img-rounded"></a></p>
+
+    <br>
+    <br>
+    <p>After setting the parameters I saved the print files on the SD and I started printing</p>
+    <br>
+
+    <p><img style="width:500px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/IMG_0601.JPG"/></p>
+    With these parameters the print has improved slightly in accuracy but it is not as smooth as I hoped it would be, so I think the parameters to change are the thickness of the wall and layer height.
+    But the result could also be influenced by the inclination of the object and the temperature of the extruder.
+    In fact, at the beginning the machine does not immediately reach the right temperature, and this affects the printing quality.
+<br>
+<br>
+    <p><img style="width:500px" src="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/IMG_0602.JPG"/></p>
+    <br>
+    I also used the 3d printer for some part of my final project -> <a href="examples.html">page</a>
+  </font></div>
+
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      <p><a href="index.html">Home</a> | <a href="examples.html">My final project</a> | <a href="page.html">Exercise</a>
+      <p>Copyright &copy; simplestyle_banner | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">HTML5 Web Templates</a></p>
+    </div>
+  </div>
+</body>
+</html>
+
+PRINTING MY OBJECT
+ I used a free software for 3D printing, named Cura. This is the parameters for my first 3D printing!

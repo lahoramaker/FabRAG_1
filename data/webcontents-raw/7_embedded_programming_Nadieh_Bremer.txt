@@ -1,0 +1,2211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='This week the programming became real! After a brief (but not easy to get working) taste during the &amp;ldquo;Electronics Design&amp;rdquo; week to test my board, I now learned a lot more about how to program my board and make it do some fun and simple tasks, often involving the LED.
+'><title>Embedded Programming</title>
+
+<link rel='canonical' href='http://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/'>
+
+<link rel="stylesheet" href="../../scss/style.min.css"><meta property='og:title' content='Embedded Programming'>
+<meta property='og:description' content='This week the programming became real! After a brief (but not easy to get working) taste during the &amp;ldquo;Electronics Design&amp;rdquo; week to test my board, I now learned a lot more about how to program my board and make it do some fun and simple tasks, often involving the LED.
+'>
+<meta property='og:url' content='http://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/'>
+<meta property='og:site_name' content='Nadieh&#39;s Fab Academy'>
+<meta property='og:type' content='article'><meta property='article:section' content='Blog' /><meta property='article:tag' content='arduino' /><meta property='article:tag' content='attiny412' /><meta property='article:tag' content='platformio' /><meta property='article:tag' content='programming' /><meta property='article:tag' content='nodemcu' /><meta property='article:tag' content='esp8266' /><meta property='article:tag' content='esp32' /><meta property='article:published_time' content='2021-03-17T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-03-24T00:00:00&#43;00:00'/><meta property='og:image' content='http://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/header.jpg' />
+<meta name="twitter:site" content="NadiehBremer"><meta name="twitter:title" content="Embedded Programming">
+<meta name="twitter:description" content="This week the programming became real! After a brief (but not easy to get working) taste during the &amp;ldquo;Electronics Design&amp;rdquo; week to test my board, I now learned a lot more about how to program my board and make it do some fun and simple tasks, often involving the LED.
+"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/header.jpg' /><link rel="shortcut icon" href='../../img/favicon.ico' /><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,400&family=Lobster+Two:wght@700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        <h1 class="site-name"><a href="http://fabacademy.org/2021/labs/waag/students/nadieh-bremer/">Nadieh&#39;s Fab Academy</a></h1>
+        <p class="site-description">Keeping track of my documentation for each week of Fab Academy 2021</p>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='../../'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='../../about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='../../blog'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-notebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" />
+  <line x1="13" y1="8" x2="15" y2="8" />
+  <line x1="13" y1="12" x2="15" y2="12" />
+</svg>
+                
+                <span>Weekly Assignments</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='../../final-project'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-puzzle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" />
+</svg>
+                
+                <span>Final Project</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='../../commands'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-terminal" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 7l5 5l-5 5" />
+  <line x1="12" y1="19" x2="19" y2="19" />
+</svg>
+                
+                <span>Commands</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href='../../blog' class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="../../blog/week-8/">
+                
+
+                    <img src="../../blog/week-8/header.jpg"
+                        
+                        width="1000" 
+                        height="571" 
+                        loading="lazy"
+                        alt="Featured image of post Embedded Programming" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details"><div class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Mar 17, 2021</time>
+    </div>
+    <div class="article-category">
+        
+            <a href="../../categories/electronics/">
+                Electronics
+            </a>
+        
+            <a href="../../categories/programming/">
+                Programming
+            </a>
+        
+    </div>
+    
+
+    <h1 class="article-title">
+        <a href="../../blog/week-8/">Embedded Programming</a>
+    </h1>
+
+    
+    <h3 class="article-week">
+        Week 8</h3>
+    
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>This week the programming became real! After a brief (but not easy to get working) taste during the &ldquo;Electronics Design&rdquo; week to test my board, I now learned a lot more about how to program my board and make it do some fun and simple tasks, often involving the LED.</p>
+<h2 id="assignments">Assignments</h2>
+<p>Our tasks for this week are:</p>
+<ul>
+<li>Individual assignment:
+<ul>
+<li>Read a microcontroller data sheet</li>
+<li>Program your board to do something, with as many different programming languages and programming environments as possible</li>
+</ul>
+</li>
+<li>Group assignment: compare the performance and development workflows for other architectures</li>
+</ul>
+<h2 id="hero-shots">Hero Shots</h2>
+<p>Showing a final result that I programmed on my board for the <code>tl;dr</code> and hopefully showing you why the rest of this very long blog could be interesting to read <span class="kaomoji">(⌐■_■)</span>
+</p>
+
+<figure >
+    
+        <video class='controls' controls="true" playsinline ><source src='phototransistor_daylight_blink.mp4' type="video/mp4"></video>
+     
+    
+    <figcaption>The blinking frequency changes with the amount of light that the phototransistor senses</figcaption>
+    
+</figure>
+<h2 id="programming-my-board">Programming My Board</h2>
+<p>Two weeks ago, during the <a class="link" href="../../blog/week-6/" >Electronics Design week</a> Henk had created a schematic that included an ATtiny412 microcontroller, an LED, button, phototransistor, and a UPDI and FTDI connection (and two resistors and a capacitor), which we&rsquo;d all turned into an actual board.</p>
+<p>I had already <a class="link" href="../../blog/week-6/#testing-the-board" >tested</a> my tiny hexagon board to run a simple <a class="link" href="http://academy.cba.mit.edu/classes/embedded_programming/t412/hello.t412.echo.ino"  target="_blank" rel="noopener"
+    ><em>echo</em></a> program that returned whatever I typed.</p>
+<p>It was now time to make the board do more and start tinkering with our own code. This is generally easiest to pick up while using the <em>Arduino IDE</em>, combined with the <em>megaTinyCore</em> board manager for it. I&rsquo;d already installed both of these two weeks ago when testing my board.</p>
+<p>I opened the Arduino app and started a new file. As a reminder:</p>
+<ul>
+<li>I set the <em>Board</em> under <em>Tools</em> to <em>ATtiny412</em>, which updates a whole array of things.</li>
+<li>I set the <em>Port</em> to my UPDI (being <code>D30A3T7I</code>).</li>
+<li>I should <em>not</em> forget that the <em>Programmer</em> should be set to <em>Serial Port and 4.7k</em>, otherwise you could end up seeing only <code>java.nullExceptionError</code> type results being returned when trying to upload a program to the board.</li>
+</ul>
+<h3 id="a-blinking-led">A Blinking LED</h3>
+<p>I was really eager to start with my LED, to make it blink. During instruction day at the lab, Henk showed an example of a tiny script to make the LED go on and off after specific intervals. In that example it uses pin number 7 (<code>int led_pin = 7;</code>). However, I already knew that on our boards things were different, because the schematic that we followed had switched the default <em>TX</em> and <em>RX</em> pins to their alternate positions. Thankfully, many pins can be programmed to take on different functions. Only the pin connected to power <code>VCC</code> and ground <code>GND</code> are fixed.</p>
+<p>I therefore had to figure out the pin number on our board connected to the LED. Having learned from the testing that the <em>megaTinyCore</em> website contains a wealth of information, I started looking there, and quickly found the section about <a class="link" href="https://github.com/SpenceKonde/megaTinyCore#how-to-refer-to-pins"  target="_blank" rel="noopener"
+    >&ldquo;How to refer to pins&rdquo;</a>. Although it sadly doesn&rsquo;t share actual code snippets, it said <strong>&ldquo;Defines are provided of form PIN_Pxn, where x is A, B, or C, and n is a number 0-7&rdquo;</strong>. Looking at our schematic, I saw the the LED was connected to pin <code>PA6</code>, and thus I updated my code to:</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">// Blink the LED on and off every two seconds
+</span><span class="c1"></span>
+<span class="cp">#define led_pin PIN_PA6 </span><span class="c1">// This uses the ATtiny pin number
+</span><span class="c1">//const int led_pin = 0; // This uses the Arduino pin number instead
+</span><span class="c1"></span>
+<span class="c1">// The setup function only runs once when you press reset or power the board
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Use the alternate pin positions due to swapped TX&amp;RX pins
+</span><span class="c1"></span>  <span class="n">Serial</span><span class="p">.</span><span class="n">swap</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> 
+  <span class="c1">// Initialize digital pin led_pin as an output
+</span><span class="c1"></span>  <span class="n">pinMode</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// The loop function runs over and over again forever
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>   <span class="c1">// Turn the LED on (HIGH is the voltage level)
+</span><span class="c1"></span>  <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>                   <span class="c1">// Wait for a second (= 1000 microseconds)
+</span><span class="c1"></span>  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>    <span class="c1">// Turn the LED off by making the voltage LOW
+</span><span class="c1"></span>  <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>                   <span class="c1">// Wait for a second
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>The code above is an Arduino flavor mixed around <em>C</em>. <em>C</em> is a low-level programming language that is very efficient and fast, but that&rsquo;s not quite as easy for mere humans to write and understand. Therefore, many many programs have written wrappers around this that are more human friendly, such as <em>python</em>, but also <em>Arduino</em>. In Arduino these are wrapped into <em>libraries</em>. These libraries contain functions (e.g. <code>digitalWrite</code> is  function) that help you perform a specific task in only 1 line. Under the hood, that function could consist of a few to hundreds of lines of C code that <em>actually</em> do the work in the end.</p>
+<p>Libraries therefore make it easy for humans to get started and write code, but it does mean that those libraries need to be added to the script you&rsquo;re writing when they&rsquo;re being uploaded to the microcontroller, increasing its size. The fact that the library needs to do the &ldquo;translation&rdquo; to <em>C</em> for you, also means that it&rsquo;s (much) slower than if the script was written in pure <em>C</em>.</p>
+<p>If you&rsquo;re script is small, and you don&rsquo;t need ultra fast processing, then using the libraries is no problem. But in case you do run into performance issues, it might be time to look into ditching the libraries and writing your code in pure <em>C</em>.</p>
+<p>Getting back to my script. I pressed the <em>Verify</em> button (the circle with the check mark) which gave no compiler issues. I then pressed the <em>Upload</em> button (the circle with the right-pointing arrow next to the <em>Verify</em> button) to compile and upload the program to my board. It took a few seconds, but the output I was seeing from the console was indicating that all was going well.</p>
+<p><figure style="flex-grow: 108; flex-basis: 261px">
+		<a href="../../blog/week-8/led_blink_arduino_compilation.png" data-size="892x819">
+			
+			<img src="../../blog/week-8/led_blink_arduino_compilation.png"
+				
+				width="892"
+				height="819"
+				loading="lazy"
+				alt="The console output from uploading the &ldquo;blink&rdquo; code to my board">
+		</a>
+		
+		<figcaption>The console output from uploading the “blink” code to my board</figcaption>
+		
+	</figure></p>
+<p>I looked at my board and saw <em>a blinking LED</em>! <span class="kaomoji">(　＾∇＾)</span>
+</p>
+
+<figure >
+    
+        <video class='controls' controls="true" playsinline ><source src='led_blink_hexagon_board.mp4' type="video/mp4"></video>
+     
+    
+    <figcaption>The LED on my board was blinking</figcaption>
+    
+</figure>
+<p>Although using <code>delay</code> works for this dummy example, it wouldn&rsquo;t be a smart approach to use in generally, because the <code>delay</code> blocks the system from doing anything else in the meantime. You instead want to work with <em>timers</em>, but I&rsquo;ll hopefully get to that later.</p>
+<h3 id="pin-numbers">Pin Numbers</h3>
+<p>In general, the microcontroller controls the signal (the voltage) to its pins, and there are two ways of controlling this, via <em>analog</em> or <em>digital</em> means.</p>
+<p>In the datasheet there is a tiny image on page 14 of the ATtiny412 called the <em>pinout</em> with some base functions of the different pins.</p>
+<p><figure style="flex-grow: 132; flex-basis: 319px">
+		<a href="../../blog/week-8/pins_attiny.png" data-size="500x376">
+			
+			<img src="../../blog/week-8/pins_attiny.png"
+				
+				width="500"
+				height="376"
+				loading="lazy"
+				alt="The &ldquo;pinout&rdquo; overview from the ATtiny412 datasheet">
+		</a>
+		
+		<figcaption>The “pinout” overview from the ATtiny412 datasheet</figcaption>
+		
+	</figure></p>
+<p>I tried to gather what all these pin options meant:</p>
+<ul>
+<li><strong>VCC</strong> | Power supply</li>
+<li><strong>GND</strong> | Ground</li>
+<li><strong>PA</strong> | The name for <em>digital</em> pins, which all of these pins are</li>
+<li><strong>PB</strong> | The name for (purely?) <em>analog</em> pins, which the ATtiny412 doesn&rsquo;t have, but the green indicates an <em>analog functions</em> that five of the pins have. I <em>think</em> this means that they can all do <em>ADC</em> or Analog <em>Digital Conversion</em></li>
+<li><strong>RESET</strong> | Through this pin you can reset the microcontroller</li>
+<li><strong>UPDI</strong> | Through this pin you can program the board via a UPDI connection - this is linked with the <em>RESET</em></li>
+<li><strong>EXTCLK</strong> | <em>External Clock</em> | Where you can connect this pin to an external clock, such as a resonator</li>
+<li><strong>GPIO VDD power domain</strong> | I wasn&rsquo;t able to find a clear answer online about what this means, but I think it means that the microcontroller can set a voltage on each of these pins?</li>
+</ul>
+<p>To see what Arduino pin numbers are associated to it, you need to find the <em>Arduino pinout</em> overview. I googled &ldquo;<em>ATtiny412 Arduino pinout</em>&rdquo; to see if I could also make the blinking work while using the pin number that the LED is connected to according to Arduino/<em>megaTinyCore</em>.</p>
+<p>I found several Fab Academy websites that showed images of the pinout <span class="kaomoji">(^▽^)</span>
+. One site pointed to the source of the pinout in the <a class="link" href="https://github.com/SpenceKonde/megaTinyCore/blob/master/megaavr/extras/ATtiny_x12.md"  target="_blank" rel="noopener"
+    ><em>megaTinyCore</em> documents</a>:</p>
+<p><figure style="flex-grow: 312; flex-basis: 751px">
+		<a href="../../blog/week-8/pins_arduino.png" data-size="1064x340">
+			
+			<img src="../../blog/week-8/pins_arduino.png"
+				
+				width="1064"
+				height="340"
+				loading="lazy"
+				alt="The &ldquo;pinout&rdquo; of the ATtinyX12">
+		</a>
+		
+		<figcaption>The “pinout” of the ATtinyX12</figcaption>
+		
+	</figure></p>
+<p>Here I saw that the <code>PA6</code> pin was probably the number <code>0</code> pin according to the <em>megaTinyCore</em> library. I commented out the <code>#define led_pin PIN_PA6</code> line and instead added <code>int led_pin = 0;</code>. I uploaded it to my board and it all worked, no errors, and my LED started blinking again. Nice!</p>
+<p>From the Arduino pinout I have a few new pin names, which I think mean the following:</p>
+<ul>
+<li><strong>MISO</strong> |  <em>Master In Slave Out</em> | Which is the pin to use to send data from the slave to the maser.</li>
+<li><strong>MOSI</strong> | <em>Master Out Slave In</em> | Which is the pin to use to send data from the master to the slave / peripherals.</li>
+<li><strong>SCK</strong> | <em>Serial Clock</em> | Which are the clock pulses that synchronize data transmission generated by the master.</li>
+<li><strong>SCL</strong> | <em>Serial Clock Line</em> | The same as the <em>SCK</em>, but this one is used for an <em>I2C</em> I believe, while <em>SCK</em> is used for <em>SPI</em> communication.</li>
+<li><strong>SDA</strong> | <em>Serial Data</em> | The pin that carries the data when using <em>I2C</em> I think?</li>
+<li><strong>DAC</strong> | <em>Digital Analog Conversion</em> | This allows you to convert digital (numeric) values into analog signals so you can have output voltages that are variable between 0 and 5V, instead of only either 0 or 5V. From the ATtiny412 datasheet there is one DAC pin (PA6, connected to our LED), which is 8-bit.</li>
+<li><strong>ADC</strong> | <em>Analog Digital Conversion</em> | This is doing the reverse from above, where the incoming analog signal is converted into a digital one. This has to be in steps, and the higher the number of steps, the higher the resolution. With a <em>10-bit</em> ADC you can detect 1024 (being <code>2^10</code>) discrete analog levels, while <em>8-bit</em> can detect 256 (<code>2^8</code>) discrete levels. If I understand the ATtiny datasheet correctly (from the <em>Peripheral Summary</em>), then all 6 (non <em>VCC/GND</em>) pins are <em>ADC</em> (at 10-bit 115ksps).</li>
+<li><strong>TXD</strong> | <em>Transmit</em> | The transmitting pin to do serial communication (<em>UART</em> or <em>USART</em> I think? Which is serial over USB).</li>
+<li><strong>RXD</strong> | <em>Receive</em> | The receiving pin to do serial communication.</li>
+</ul>
+<p>And there are a few extra marks, such as the tilde (~) meaning a <strong>PWM</strong> pin (Pulse Width Modulation), which I&rsquo;ll get to in the <em>fading</em> LED example below, and the alternate locations of the <em>TXD, RXD</em> and <em>MOSI, MISO</em> which I&rsquo;d already discovered during my testing, because our board is making use of these alternate positions. I&rsquo;m not quite sure what the <em>async interrupt</em> truly means.</p>
+<h3 id="a-fading-led">A Fading LED</h3>
+<p>To create an LED that seems as if it&rsquo;s fading, you can use the <strong>PWM</strong> pins. Pulse Width Modulation is a technique for getting analog results with digital means. It&rsquo;s explained well on <a class="link" href="https://www.arduino.cc/en/Tutorial/Foundations/PWM"  target="_blank" rel="noopener"
+    >this</a> Arduino page. It comes down to varying the amount of time during a <em>pulse</em> that the signal is <em>HIGH</em> / ON.</p>
+<p><figure style="flex-grow: 91; flex-basis: 219px">
+		<a href="../../blog/week-8/led_fade_pwm.gif" data-size="400x438">
+			
+			<img src="../../blog/week-8/led_fade_pwm.gif"
+				
+				width="400"
+				height="438"
+				loading="lazy"
+				alt="Pulse Width Modulation - from the Arduino website">
+		</a>
+		
+		<figcaption>Pulse Width Modulation - from the Arduino website</figcaption>
+		
+	</figure></p>
+<p>There is a handy <a class="link" href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fading"  target="_blank" rel="noopener"
+    >Fading Example</a> on the Arduino website that uses this <em>PWM</em> technique, using the <code>analogWrite</code> function (instead of the <code>digitalWrite</code> function from the &ldquo;blink&rdquo; example). The <code>analogWrite</code> function can take integers between a value of <code>0 - 255</code>, where the higher, the brighter the LED should become.</p>
+<p><em>However</em>, I noticed that the pin that our LED is connected to, pin <code>PA6</code> <strong>does not have PWM</strong>. Another sad by-effect from having switched the <em>TX</em> and <em>RX</em> pins. Using the <code>analogWrite</code> function, and the &ldquo;fade&rdquo; example therefore didn&rsquo;t work. I compiled and uploaded it, but my LED remained off.</p>
+<p>I therefore had to mimic a <em>PWM</em> through purely software means. This is done by using the <code>digitalWrite</code> function combined with the <code>delay</code> to basically create your own pulses. You make your own pulses of width <code>X</code> milliseconds long, and using the <code>digitalWrite</code> you turn it on for, say 20% of the time of that pulse and off for the remaining 80% of the time of a pulse.</p>
+<p>I definitely needed a first starting example to wrap my head around it, but eventually it clicked and I understood what was happening and adjusted the examples to my own version:</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">// Using &#34;software PWM&#34; to fade my LED
+</span><span class="c1">// Loosely based on: https://forum.arduino.cc/index.php?topic=104572.0
+</span><span class="c1"></span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">led_pin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">steps</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span> <span class="c1">// The max time of each step
+</span><span class="c1"></span><span class="kt">float</span> <span class="n">fade_step</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span>
+<span class="c1">// It takes (steps / fade_step) steps to go from OFF to ON
+</span><span class="c1">// the &#34;delay()&#34; function should take &#34;unsigned long&#34;
+</span><span class="c1">// but I really need 0.5 milliseconds or less
+</span><span class="c1">// and using the delayMicroSeconds() doesn&#39;t work,
+</span><span class="c1">// because it can&#39;t handle numbers above a few thousand microseconds
+</span><span class="c1">// which is only a few milliseconds
+</span><span class="c1"></span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">swap</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">//Because I have swapped TX/RX pins
+</span><span class="c1"></span>  <span class="n">pinMode</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">//void setup
+</span><span class="c1"></span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">(){</span>
+  <span class="c1">// Fade to bright | Runs from 0% -&gt; 100%
+</span><span class="c1"></span>  <span class="k">for</span><span class="p">(</span><span class="kt">float</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">steps</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="n">fade_step</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>         <span class="c1">// ON for this long
+</span><span class="c1"></span>    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span> 
+    <span class="n">delay</span><span class="p">(</span><span class="n">steps</span> <span class="o">-</span> <span class="n">i</span><span class="p">);</span> <span class="c1">// OFF for this long, the remaining &#34;pulse width&#34;
+</span><span class="c1"></span>  <span class="p">}</span><span class="c1">//for
+</span><span class="c1"></span>
+  <span class="c1">// Stay on for a while
+</span><span class="c1"></span>  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+  
+  <span class="c1">// Fade to dim | Runs from 100% -&gt; 0%
+</span><span class="c1"></span>  <span class="k">for</span><span class="p">(</span><span class="kt">float</span> <span class="n">i</span> <span class="o">=</span> <span class="n">steps</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">-=</span> <span class="n">fade_step</span><span class="p">){</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="n">steps</span> <span class="o">-</span> <span class="n">i</span><span class="p">);</span>
+  <span class="p">}</span><span class="c1">//for
+</span><span class="c1"></span>
+  <span class="c1">// Stay off for a while
+</span><span class="c1"></span>  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">//void loop
+</span></code></pre></div><p>Which made my LED fade nicely:</p>
+
+<figure >
+    
+        <video class='controls' controls="true" playsinline ><source src='led_fade_hexagon_board.mp4' type="video/mp4"></video>
+     
+    
+    <figcaption>The LED was fading using a software mimicking PWM</figcaption>
+    
+</figure>
+<p>The code above isn&rsquo;t <em>totally</em> neat code, because the <code>delay</code> functions wants an <code>unsigned long</code> as a value, whereas I&rsquo;m giving it a <code>float</code>. However, if I increased the step size from <code>0.5</code> to <code>1</code> the visual result was a very jagged fading on and off, whereas using <code>0.5</code> shows a pretty nice smooth fading.
+I also couldn&rsquo;t use the <code>delayMicroSeconds</code> function, because according to the <a class="link" href="https://www.arduino.cc/reference/en/language/functions/time/delaymicroseconds/"  target="_blank" rel="noopener"
+    >docs</a> <em>&ldquo;the largest value that will produce an accurate delay is 16383. For delays longer than a few thousand microseconds, you should use delay() instead.&quot;</em>, and I&rsquo;d need about <code>25000</code>.</p>
+
+<figure >
+    
+        <video class='controls' controls="true" playsinline ><source src='led_fade_jagged_hexagon_board.mp4' type="video/mp4"></video>
+     
+    
+    <figcaption>If the delays are too long, your eyes will notice the jagged steps</figcaption>
+    
+</figure>
+<h3 id="sending-print-statements">Sending Print Statements</h3>
+<p>In the next section about wanting to integrate my button I ran into some weird errors. I therefore wanted to use <em>print</em> statements to investigate what was happening (also because I don&rsquo;t yet have a logic analyzer at home).</p>
+<p>I searched for an example on how to output the results from <code>Serial.print()</code> statements and found <a class="link" href="https://www.programmingelectronics.com/using-the-print-function-with-arduino-part-1/"  target="_blank" rel="noopener"
+    >this</a> blog, that says I only have to open the <em>Serial Monitor</em> (under <em>Tools</em> in the Arduino IDE), and that I would see the print statements there. I tried that with a very simple example (using the <code>printf</code> statement example I found on the <em>megaTinyCore</em> website), but the window remained empty.</p>
+<p><figure style="flex-grow: 174; flex-basis: 419px">
+		<a href="../../blog/week-8/serial_megatinycore_example.png" data-size="1536x879">
+			
+			<img src="../../blog/week-8/serial_megatinycore_example.png"
+				
+				width="1536"
+				height="879"
+				loading="lazy"
+				alt="Nothing appears in my Serial Monitor to the right">
+		</a>
+		
+		<figcaption>Nothing appears in my Serial Monitor to the right</figcaption>
+		
+	</figure></p>
+<p>Looking at the slides from the instruction day, I saw that the <code>SoftwareSerial</code> library was used. I looked up some <a class="link" href="https://www.arduino.cc/en/Tutorial/LibraryExamples/SoftwareSerialExample"  target="_blank" rel="noopener"
+    >examples</a> to learn how to implement it, and then tried running a very basic example, but again, my monitoring window remained empty.</p>
+<p><figure style="flex-grow: 174; flex-basis: 419px">
+		<a href="../../blog/week-8/serial_softwareserial_example.png" data-size="1536x878">
+			
+			<img src="../../blog/week-8/serial_softwareserial_example.png"
+				
+				width="1536"
+				height="878"
+				loading="lazy"
+				alt="Using &ldquo;SoftwareSerial&rdquo; also didn&rsquo;t return anything">
+		</a>
+		
+		<figcaption>Using “SoftwareSerial” also didn’t return anything</figcaption>
+		
+	</figure></p>
+<p>I tried tweaking both scripts, changing the order of the <em>TX</em> and <em>RX</em> pin numbers, changing the <em>baud rates</em>, but nothing ever appeared in the monitor. I searched for reasons as to why this could be happening. I couldn&rsquo;t find a clear answer, but I slowly started getting the idea that it had to do something with the USB?</p>
+<p>I decided to check the long <em>megaTinyCore</em> page again, and found this passage: <em>&ldquo;Note that this does not give you serial monitor&rdquo;</em> in the &ldquo;From a USB-Serial adapter (pyupdi-style)&rdquo; section. I couldn&rsquo;t understand the rest of that section, but it slowly started dawning on me. I was using the <em>UPDI</em> to program my board, and the <em>Port</em> was set to my UPDI in the Arduino IDE. The Monitor was thus set to listen to my UPDI. However, the serial communication was happening on the <em>TX</em> and <em>RX</em> pins of my <em>FTDI</em>. I was thus listening <em>on the wrong port</em>!</p>
+<p>I didn&rsquo;t want to have to switch the port on my Arduino IDE every time I wanted to program my board (with the UPDI) and then get back the print statements (with the FTDI). I therefore started searching for a way to listen to ports through my terminal. I found <a class="link" href="https://learn.sparkfun.com/tutorials/terminal-basics/all#command-line-windows-mac-linux"  target="_blank" rel="noopener"
+    >this</a> page that explains that I can use:</p>
+<pre><code class="language-console" data-lang="console"># screen &lt;port_name&gt; &lt;baud_rate&gt;
+screen /dev/tty.usbserial-D30A3T7C 9600
+</code></pre><p>Make sure that the <em>baud rate</em> that you use in the statement above is the same as the one you supply in the <code>Serial.begin(&lt;&lt;baud rate&gt;&gt;);</code> statement within your Arduino script.</p>
+<p>And it worked! <span class="kaomoji">(๑•̀ㅂ•́)ง✧</span>
+ My terminal started showing hundreds of lines with <em>hello</em>.</p>
+<p><figure style="flex-grow: 82; flex-basis: 198px">
+		<a href="../../blog/week-8/serial_screen_print_statements_working.png" data-size="609x737">
+			
+			<img src="../../blog/week-8/serial_screen_print_statements_working.png"
+				
+				width="609"
+				height="737"
+				loading="lazy"
+				alt="Finally seeing some &ldquo;hello&#34;s when connecting to my FTDI">
+		</a>
+		
+		<figcaption>Finally seeing some “hello&quot;s when connecting to my FTDI</figcaption>
+		
+	</figure></p>
+<p>To disconnect to the FTDI, type <code>CTRL+a</code> followed by <code>CTRL+\</code>. The screen will then ask if you are sure you want to disconnect, say <code>y</code>.</p>
+<p><strong>Note</strong> | If you close the tab in <em>iTerm</em> you won&rsquo;t have closed the connection to the FTDI. So if you try and run the <code>screen</code> command again, it will tell you that it&rsquo;s busy. You really have to close the connection with the <code>CTRL+a</code> followed by <code>CTRL+\</code> command while in tha tab that shows the connection to the FTDI. If you <em>have</em> closed the tab, then you need to end the process. From the terminal, run <code>lsof | grep usbserial</code>. If the port is in use, you will get a response like this (otherwise it will return nothing):</p>
+<pre><code class="language-console" data-lang="console">screen 13411 nadieh 5u CHR 22,8 0t4 765 /dev/tty.usbserial-D30A3T7C
+</code></pre><p>Note the session number, which in my case was <code>13411</code>. Run <code>screen -x 13411</code> (but with your own session number) to close the session.</p>
+<p>While I was struggling with all this, I&rsquo;d also asked Quentin Bolsee for help. If I was maybe missing something to see the output from the print statements. I explained that I eventually had it working, and he replied that I should really try and <strong>avoid using the <code>SoftwareSerial</code> library</strong>. Sure, it can turn any pin into an <em>TX/RX</em> combination, but it&rsquo;s apparently slow and you can&rsquo;t get hardware interrupts according to Quentin (I&rsquo;m not totally sure what that latter really implies). I also noticed that including it took up a significant portion of my ATtiny&rsquo;s storage space.</p>
+<p>I therefore rewrote my example to be based on the default <code>Serial</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Initialize serial communications at 9600 bps
+</span><span class="c1"></span>  <span class="c1">// Only used for debug
+</span><span class="c1"></span>  <span class="n">Serial</span><span class="p">.</span><span class="n">swap</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+  <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">// void setup
+</span><span class="c1"></span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">// void loop
+</span></code></pre></div><p>And that worked as well, and took a little less space. Still a decent amount of space, about 30%-ish, so using <code>Serial</code> in my code should be something I <strong>reserve for debugging purposes only</strong>, but should really take out as soon as I&rsquo;m finalizing the code.</p>
+<p><strong>Note</strong> | Quentin said that you can also open up a second Arduino IDE, set the port to the FTDI, open up the <em>Serial Monitor</em>, and then you can also see the print statements. But I think I prefer the ease of the <code>screen</code> command in my terminal now.</p>
+<h3 id="pressing-the-button">Pressing the Button</h3>
+<p>To integrate the push button on our board to have an effect on the LED, I started with the <a class="link" href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/Button"  target="_blank" rel="noopener"
+    >button</a> example from the Arduino website.</p>
+<p>In this case the button is an <em>input</em> for the ATtiny, and thus we have a <code>pinMode(button_pin, INPUT)</code>. After that I use a <code>digitalRead</code> on the pin connected to the button in the function that loops forever to ask the state of the button, and with that I decide if the LED pin should be set to high or low.</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define led_pin 0 </span><span class="c1">// Arduino number | ATtiny PA6
+</span><span class="c1"></span><span class="cp">#define button_pin 4 </span><span class="c1">// Arduino number | ATtiny PA3
+</span><span class="c1"></span>
+<span class="kt">int</span> <span class="n">button_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Initialize serial communications at 9600 bps
+</span><span class="c1"></span>  <span class="c1">// Only used for debug
+</span><span class="c1"></span>  <span class="n">Serial</span><span class="p">.</span><span class="n">swap</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+  <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">);</span>
+
+  <span class="c1">// Initialize the LED pin as an output
+</span><span class="c1"></span>  <span class="n">pinMode</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="c1">// Initialize the button pin as an input
+</span><span class="c1"></span>  <span class="n">pinMode</span><span class="p">(</span><span class="n">button_pin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">// void setup
+</span><span class="c1"></span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Read the state of the pushbutton value
+</span><span class="c1"></span>  <span class="c1">// If it is pressed the button_state is LOW
+</span><span class="c1"></span>  <span class="c1">// When the button is open (unpressed) there is no connection between the two
+</span><span class="c1"></span>  <span class="c1">// legs of the button, so the pin is connected to 5V and we read a HIGH.
+</span><span class="c1"></span>  <span class="n">button_state</span> <span class="o">=</span> <span class="n">digitalRead</span><span class="p">(</span><span class="n">button_pin</span><span class="p">);</span>
+  
+  <span class="c1">// Check if the button is pressed
+</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="n">button_state</span> <span class="o">==</span> <span class="n">HIGH</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="p">}</span><span class="c1">//else
+</span><span class="c1"></span>
+  <span class="c1">//Only used for debug
+</span><span class="c1"></span>  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">button_state</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">// void loop
+</span></code></pre></div><p>As you can see, I also added a <code>Serial.print</code> statement to see the <code>button_state</code>. That&rsquo;s because my button press worked like a charm to turn the LED off. <em>However</em>, the LED would remain off for at least a second longer. And the longer I pressed, the longer the LED remains off, and I had <em>no</em> idea why that was happening <span class="kaomoji">(⊙_☉)</span>
+</p>
+
+<figure >
+    
+        <video class='controls' controls="true" playsinline ><source src='button_lag_hexagon_board.mp4' type="video/mp4"></video>
+     
+    
+    <figcaption>The button remains off a bit longer after I stop pressing it</figcaption>
+    
+</figure>
+<p>I therefore added the <code>Serial</code> statements to see the value of the <code>button_state</code> during this time. Was the button still sending along a <code>LOW</code> after I stopped pushing?</p>
+<p>And that did indeed seem to happen. After I stopped pressing the button, the value of <code>button_state</code> kept on being <code>0</code>. And even more odd, it would often start alternating between <code>0</code> and <code>1</code> either immediately after I stopped pushing, or a little while after I stopped pushing, before finally settling on being <code>1</code>.</p>
+
+<figure >
+    
+        <video class='controls' controls="true" playsinline ><source src='button_state_serial.mp4' type="video/mp4"></video>
+     
+    
+    <figcaption>The button state would continue to be 0 and then alternate before becoming 1</figcaption>
+    
+</figure>
+<p>I noticed that if I was <em>holding</em> my board with one finger on the button and another finger on the bottom of the PCB that the <code>button_state</code> would return back to <code>0</code> almost immediately.</p>
+<p>Some time later I looked at the slides that Henk had send us from the instruction day at the lab, and noticed that sometimes the input pin would be set with <code>INPUT_PULLUP</code> instead of <code>INPUT</code> and I wondered what the difference was, so I looked it up on the <a class="link" href="https://www.arduino.cc/en/Tutorial/Foundations/DigitalPins"  target="_blank" rel="noopener"
+    >Arduino website</a>. Here I found a paragraph that said: <em>&ldquo;pins configured as pinMode(pin, INPUT) with nothing connected to them, [&hellip;] will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin.&quot;</em> Which sounded quite a lot like my button problem I thought!</p>
+<p>The page then continues to say that it&rsquo;s a good idea to have a <em>pullup</em> or <em>pulldown</em> resistor coupled to the input device to remove that noise. Well, my button didn&rsquo;t have that, it was a direct connection to the ATtiny on one side and ground on the other. <em>BUT</em>, the page continues to explain that the ATmega chip has built-in pullup resistors that can be accessed by setting the <code>pinMode()</code> to <code>INPUT_PULLUP</code>. Interesting! The page also explains that <em>&ldquo;When connecting a sensor to a pin configured with INPUT_PULLUP, the other end should be connected to ground. In the case of a simple switch, this causes the pin to read HIGH when the switch is open, and LOW when the switch is pressed.&quot;</em></p>
+<p>I thus changed my <code>INPUT</code> to <code>INPUT_PULLUP</code>, compiled my code and send it to my board:</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define led_pin 0 </span><span class="c1">// Arduino number | ATtiny PA6
+</span><span class="c1"></span><span class="cp">#define button_pin 4 </span><span class="c1">// Arduino number | ATtiny PA3
+</span><span class="c1"></span>
+<span class="kt">int</span> <span class="n">button_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Initialize the LED pin as an output
+</span><span class="c1"></span>  <span class="n">pinMode</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="c1">// Initialize the button pin as an input
+</span><span class="c1"></span>  <span class="n">pinMode</span><span class="p">(</span><span class="n">button_pin</span><span class="p">,</span> <span class="n">INPUT_PULLUP</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">// void setup
+</span><span class="c1"></span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Read the state of the pushbutton value
+</span><span class="c1"></span>  <span class="c1">// If it is pressed the button_state becomes LOW
+</span><span class="c1"></span>  <span class="n">button_state</span> <span class="o">=</span> <span class="n">digitalRead</span><span class="p">(</span><span class="n">button_pin</span><span class="p">);</span>
+  
+  <span class="c1">// Check if the button is pressed
+</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="n">button_state</span> <span class="o">==</span> <span class="n">HIGH</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="p">}</span><span class="c1">//else
+</span><span class="c1"></span><span class="p">}</span><span class="c1">// void loop
+</span></code></pre></div><p>And it worked! My button was coming back on immediately after I stopped pressing the button, every time I tried <span class="kaomoji">(^▽^)</span>
+</p>
+
+<figure >
+    
+        <video class='controls' controls="true" playsinline ><source src='button_hexagon_board.mp4' type="video/mp4"></video>
+     
+    
+    <figcaption>The working button!</figcaption>
+    
+</figure>
+<h3 id="using-the-phototransistor">Using the Phototransistor</h3>
+<p>The final component on my board that I hadn&rsquo;t incorporated through code yet was the phototransistor. The instruction slides from Henk had one example that used a sensor, which I used to write my starting code, together with the <a class="link" href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/AnalogInOutSerial"  target="_blank" rel="noopener"
+    >AnalogInOutSerial</a> example from the Arduino website:</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define led_pin 0 </span><span class="c1">// ATtiny PA6
+</span><span class="c1"></span><span class="cp">#define photo_pin 1 </span><span class="c1">//ATtiny PA7
+</span><span class="c1"></span>
+<span class="kt">int</span> <span class="n">sensor_value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Initialize digital pin led_pin as an output
+</span><span class="c1"></span>  <span class="n">pinMode</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="c1">// Initialize the phototransistor pin as an input
+</span><span class="c1"></span>  <span class="n">pinMode</span><span class="p">(</span><span class="n">photo_pin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">//void setup
+</span><span class="c1"></span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Read the analog value coming in from the phototransistor
+</span><span class="c1"></span>  <span class="c1">// The input is 10-bit (2^10) which gives 1024 values -&gt; between 0 - 1023
+</span><span class="c1"></span>  <span class="n">sensor_value</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">photo_pin</span><span class="p">);</span>
+
+  <span class="c1">//If the sensor value is greater than 500, have the LED on
+</span><span class="c1"></span>  <span class="k">if</span><span class="p">(</span><span class="n">sensor_value</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="p">}</span><span class="c1">//else
+</span><span class="c1"></span><span class="p">}</span><span class="c1">//void loop
+</span></code></pre></div><p>I had no idea if the phototransistor would show a high number when it was dark of bright, but I grabbed a flashlight and could use my finger to block the phototransistor to test and see what would happen.</p>
+
+<figure >
+    
+        <video class='controls' controls="true" playsinline ><source src='phototransistor_ir_flashlight_on_off.mp4' type="video/mp4"></video>
+     
+    
+    <figcaption>The LED went off when I shined a bright light on the phototransistor</figcaption>
+    
+</figure>
+<p>The first step was working, but I now wanted to make the LED blink: the brighter it became, the slower it should blink, while the darker it became, the faster it should blink until it was seemingly fully on when the phototransistor was blocked from light.</p>
+<p>I first wanted to get a sense for the sensor values that were being output by the phototransistor. I therefore added a few <code>Serial.print()</code> statements to my code (I had also added a <code>map</code> function to go from the <code>0 - 1023</code> to a <code>delay</code> frequency that I could use to blink the LED with, which I called <code>output_value</code>).</p>
+<p>The first time I uploaded the program with the print statements, the sensor and output values came flying by on my terminal screen <em>so fast</em> that I couldn&rsquo;t even read them. Of course, I&rsquo;d forgotten how fast that <em>loop</em> function must go. After a bit of searching I found an example to have the print statement only run every <em>X</em> milliseconds.</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="k">static</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">refresh_interval</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span> <span class="c1">// milliseconds
+</span><span class="c1"></span><span class="k">static</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">last_refresh_time</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="cp">#define led_pin 0 </span><span class="c1">// ATtiny PA6
+</span><span class="c1"></span><span class="cp">#define photo_pin 1 </span><span class="c1">//ATtiny PA7
+</span><span class="c1"></span><span class="kt">int</span> <span class="n">sensor_value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">output_value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Initialize serial communications at 9600 bps:
+</span><span class="c1"></span>  <span class="n">Serial</span><span class="p">.</span><span class="n">swap</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+  <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">);</span>
+  
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">photo_pin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">//void setup
+</span><span class="c1"></span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Read the analog value coming in from the phototransistor
+</span><span class="c1"></span>  <span class="n">sensor_value</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">photo_pin</span><span class="p">);</span>
+  <span class="c1">// Map from 0 - 1023 to 1 - 1000
+</span><span class="c1"></span>  <span class="n">output_value</span> <span class="o">=</span> <span class="n">map</span><span class="p">(</span><span class="n">sensor_value</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1023</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
+
+ <span class="k">if</span><span class="p">(</span><span class="n">millis</span><span class="p">()</span> <span class="o">-</span> <span class="n">last_refresh_time</span> <span class="o">&gt;=</span> <span class="n">refresh_interval</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">&#34;sensor: &#34;</span><span class="p">));</span>
+   <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">sensor_value</span><span class="p">);</span>
+
+   <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">&#34;output: &#34;</span><span class="p">));</span>
+   <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">output_value</span><span class="p">);</span>
+
+   <span class="n">last_refresh_time</span> <span class="o">+=</span> <span class="n">refresh_interval</span><span class="p">;</span>
+ <span class="p">}</span><span class="c1">//if
+</span><span class="c1"></span><span class="p">}</span><span class="c1">//void loop
+</span></code></pre></div><p>I saw that the base level in my room was about <code>1000</code>, which I found odd, since I also saw that &ldquo;dark&rdquo; was <code>1023</code> and I really wasn&rsquo;t sitting in the near dark in my room. I did see that shining my flashlight on the sensor would bring the sensor value down, and if I pressed the flashlight almost on top of the sensor it could reach <code>0</code> (ignore the <em>output</em> lines in the image below for now):</p>
+<p><figure style="flex-grow: 49; flex-basis: 117px">
+		<a href="../../blog/week-8/phototransistor_ir_sensor_values.png" data-size="168x342">
+			
+			<img src="../../blog/week-8/phototransistor_ir_sensor_values.png"
+				
+				width="168"
+				height="342"
+				loading="lazy"
+				alt="The sensor values when shining a flashlight on the phototransistor and the base level at the bottom">
+		</a>
+		
+		<figcaption>The sensor values when shining a flashlight on the phototransistor and the base level at the bottom</figcaption>
+		
+	</figure></p>
+<p>I still found it odd that my phototransistor was so heavily skewed that the section between normal lighting and dark was only ±23 steps, but between normal and very bright was the remaining 1000 <span class="kaomoji">(◎_◎;)</span>
+ Perhaps I could use some easing function to &ldquo;squeeze&rdquo; the part from <code>0 - 1000</code> and &ldquo;extend&rdquo; the section between <code>1000 - 1023</code>?</p>
+<p>I used <a class="link" href="https://easings.net/"  target="_blank" rel="noopener"
+    >this</a> website with visual examples to figure out what kind of easing I wanted. Something like an exponential or 5-order polynomial seemed good. I then found <a class="link" href="https://www.gizma.com/easing"  target="_blank" rel="noopener"
+    >some</a> <a class="link" href="https://github.com/warrenm/AHEasing/blob/master/AHEasing/easing.c"  target="_blank" rel="noopener"
+    >examples</a> of these easing functions (the latter written in <em>C</em>) that I could use for my own function.</p>
+<p>I created another variable <code>output_value_ease</code> that would be the result from the easing between the <code>0 - 1000</code> interval. I also added this to the <code>Serial.print()</code> statements so I could check the eased value. However, when I tried to compile the code I kept on getting very vague errors about &ldquo;text not fitting&rdquo;.
+I first thought that I was not handling my variables well, that my function was expecting an <code>int</code> in its arguments, but I was supplying a <code>float</code>, or that I was doing integer division (although I figured that shouldn&rsquo;t give any errors).</p>
+<p><figure style="flex-grow: 995; flex-basis: 2389px">
+		<a href="../../blog/week-8/phototransistor_ir_compilation_errors.png" data-size="1384x139">
+			
+			<img src="../../blog/week-8/phototransistor_ir_compilation_errors.png"
+				
+				width="1384"
+				height="139"
+				loading="lazy"
+				alt="The same error kept appearing when I tried to compile my phototransistor program">
+		</a>
+		
+		<figcaption>The same error kept appearing when I tried to compile my phototransistor program</figcaption>
+		
+	</figure></p>
+<p>But even when I removed the function and did the math within the general <em>loop</em> function it still didn&rsquo;t solve anything. If I took out the lines with the new <code>output_value_ease</code> the code would compile though. I kept in struggling with that for a while, thinking it was errors in my math and usage of variable types.</p>
+<p>Eventually I decided to search online on the one small section of text that seemed even remotely intelligible from the error statement <code>'.text' will not fit in region 'text' during compile</code> and was surprised to find results; apparently <strong>my program was too big</strong>! Really?! Had I already filled up my ATtiny with only ±40 lines of code? <em>That</em> I hadn&rsquo;t expected at all, I had totally not been paying attention to the percentage value that the compiler shows (when it <em>does</em> compile) that is being taken up of the program storage space.</p>
+<p>I searched for tips on how to reduce the size of my script in Arduino and found some useful tips on <a class="link" href="https://create.arduino.cc/projecthub/john-bradnam/reducing-your-memory-usage-26ca05"  target="_blank" rel="noopener"
+    >this</a> page. Such as using <code>#define led_pin 0</code> to set compiler constants instead of using <code>int led_pin = 0;</code>. Or to use <code>int8_t</code> to initialize an <code>int</code> that you know will stay within <code>-128</code> and <code>128</code> (all of my <code>int</code> variables could get bigger sadly). Or to wrap any purely text print statement with <code>F</code>, such as <code>Serial.print(F(&quot;sensor: &quot;))</code>. But most of the other tips I didn&rsquo;t quite understand <span class="kaomoji">(*^▽^*)ゞ</span>
+</p>
+<p>While I was working on this I got the note from Quentin to not use <code>SoftwareSerial</code> anymore (which I was using till this point) and rewrote my prints to the default <code>Serial</code>, and <em>finally</em> my program wanted to compile again, pfew!</p>
+<p>As a test I commented out all the <code>Serial</code> statements, and the storage space dropped from 80% to 51%. Damn, that was <em>a lot</em> of space taken up by <code>Serial</code>.</p>
+<p>With the compilation errors gone, I had the easing function working on my board. It was blinking really fast as a default, would blink so fast that it seemed fully on when I placed my finger on the phototransistor, and blinked really slow when I shined my flashlight on it</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define led_pin 0 </span><span class="c1">// ATtiny PA6
+</span><span class="c1"></span><span class="cp">#define photo_pin 1 </span><span class="c1">//ATtiny PA7
+</span><span class="c1"></span><span class="kt">int</span> <span class="n">sensor_value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">output_value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">output_value_ease</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">photo_pin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">//void setup
+</span><span class="c1"></span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Read the analog value coming in from the phototransistor
+</span><span class="c1"></span>  <span class="n">sensor_value</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">photo_pin</span><span class="p">);</span>
+  <span class="c1">//Map to 1 - 1000 and then ease that value
+</span><span class="c1"></span>  <span class="n">output_value</span> <span class="o">=</span> <span class="n">map</span><span class="p">(</span><span class="n">sensor_value</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1023</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
+  <span class="n">output_value_ease</span> <span class="o">=</span> <span class="n">easeOut</span><span class="p">(</span><span class="n">output_value</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">);</span>
+
+  <span class="c1">// Blink the LED with a 2*output_value_ease timing
+</span><span class="c1"></span>  <span class="n">blinkLED</span><span class="p">(</span><span class="n">output_value_ease</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">//void loop
+</span><span class="c1"></span>
+<span class="c1">//t = current value, b = start value, d = end value
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">easeOut</span><span class="p">(</span><span class="kt">int</span> <span class="n">t</span><span class="p">,</span> <span class="kt">float</span> <span class="n">b</span><span class="p">,</span> <span class="kt">float</span> <span class="n">d</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">float</span> <span class="n">n</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">d</span> <span class="o">-</span> <span class="n">b</span><span class="p">);</span>
+  <span class="k">return</span><span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">d</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span><span class="c1">// int easeOut
+</span><span class="c1"></span>
+<span class="c1">// Make the LED blink with a delay of delay_time
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">blinkLED</span><span class="p">(</span><span class="kt">int</span> <span class="n">delay_time</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="n">delay_time</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="n">delay_time</span><span class="p">);</span> 
+<span class="p">}</span><span class="c1">// void blink
+</span></code></pre></div><p>Apologies for the crappy video below, I couldn&rsquo;t point my phone camera directly at the board, because it messed up the blinking signal. I&rsquo;ll explain a little further below why this happened.</p>
+
+<figure >
+    
+        <video class='controls' controls="true" playsinline ><source src='phototransistor_ir_blinking_different_intervals.mp4' type="video/mp4"></video>
+     
+    
+    <figcaption>The speed of the blinking LED changes depending on the amount of light shining on it</figcaption>
+    
+</figure>
+<p><strong>Side Note</strong> | I noticed at some point that the my LED was still flashing when I kept my finger on it. I didn&rsquo;t know why that had appeared all of a sudden. But later I found that when I slowed down the time during which the <em>print</em> statements were being run, that the flashing was also slower. Ah! So <strong>the print statements were interfering with the speed at which the loop could run</strong>. Commenting out my <code>Serial</code> statements fixed the issue indeed.</p>
+<p>I kept on fiddling with my easing function, because I wanted the default blinking to go slower. But I couldn&rsquo;t quite get it to work, the easing was getting quite extreme with a 7-th order polynomial. But I figured that it was good enough for now to at least take a video. But as soon as I pointed my phone&rsquo;s camera at my board the blinking frequency became a bit erratic, jumping between different Hz. Coincidentally, around that time I was still chatting with Quentin, and told him about my phototransistor registering my room as almost completely dark, more as a joke. But he immediately asked if I perhaps didn&rsquo;t have an <em>infrared</em> (IR) phototransistor. O no&hellip;. Did I&hellip;.? <span class="kaomoji">✖_✖</span>
+</p>
+<p>I thought I remembered that it was the only tiny box at the Waag that had the name <em>phototransistor</em> without also having <em>IR</em> in the name: <em>Phototransistor NPN SMD PLCC-2</em>, specifically with part number <em>365-1162-1-ND</em>. I searched online for some information and found <a class="link" href="http://dkc3.digikey.com/PDF/TW092-10/P2237.pdf"  target="_blank" rel="noopener"
+    >a PDF</a> that put that specific part number in the infrared. Dammit!</p>
+<p>I now understood the reason why my camera was messing with the blinking frequency. To focus, many camera&rsquo;s use an infrared signal. Thus as soon as I pointed my camera at the board, the IR phototransistor would register a slight increase of the sensor value. And because I was using a high-order polynomial in my easing function to <em>really</em> stretch out the area around ±1000, it made a <em>big</em> difference in the decrease in speed at which the LED was blinking.</p>
+<h4 id="using-a-visible-light-phototransistor">Using a Visible Light Phototransistor</h4>
+<p>I asked Henk if I was supposed to use an IR phototransistor, but he said it was supposed to be visible light.</p>
+<p>Thus, back at the Waag after the weekend, I checked the wall with the little electronics boxes again, and saw that there was indeed one that said <em>Phototransistor Visible 940nm</em>. Hmmmm, perhaps I had been confused two weeks ago, because <code>940nm</code> lies smack damn in the Infrared range (blue is <code>±450nm</code> and red is <code>700nm</code>). The box right next ot it even said <em>Phototransistor <strong>IR</strong> 940nm</em>.</p>
+<p>But after an online search by Henk, looking at the parts list of the Fab Academy, he found that the <em>Visible 940nm</em> was indeed the one I was supposed to use. On the <a class="link" href="https://www.digikey.nl/product-detail/en/everlight-electronics-co-ltd/PT15-21C-TR8/1080-1380-1-ND/2676114"  target="_blank" rel="noopener"
+    >Digi-Key website</a> you can see the <a class="link" href="https://www.digikey.nl/htmldatasheets/production/854336/0/0/1/pt15-21c-tr8.html"  target="_blank" rel="noopener"
+    >datasheet</a> of piece <em>1080-1380-1-ND</em>, which shows the <em>Range of Spectral Bandwidth</em> to lie between <code>530nm - 1030nm</code>, with the peak sensitivity at <code>940nm</code>.</p>
+<p>In all honesty, I wouldn&rsquo;t say that was <em>completely</em> visible, because the shortest wavelength it can handle is green-ish, which is about halfway through the spectrum that the human eye can see. Whereas it does pick up a large portion of the IR spectrum. But ok, better something than nothing.</p>
+<p>I used the heat gun to melt the soldering connections to my IR phototransistor, grabbing onto the phototransistor with tweezers and holding it up, supposedly letting gravity and heat do the rest. At first it just <em>would not</em> come off. My board was heating up, the paper sheet that was lying a little below where I was holding the board was turning brown even!</p>
+<p>I stopped and looked at the tip of the heat gun and noticed that I was missing the small baffle that points the hot air into a thin stream, oops <span class="kaomoji">✖‿✖</span>
+</p>
+<p>After putting the baffle on the heatgun and trying again, the board fell away from the phototransistor that I was holding after only a few seconds (<em>such</em> a difference!)</p>
+<p>From the datasheet I had seen that the <em>collector</em> side was marked wit two green stripes, which was the side that should point towards the ATtiny.</p>
+<p><figure style="flex-grow: 168; flex-basis: 404px">
+		<a href="../../blog/week-8/phototransistor_visible_orientation.jpg" data-size="500x297">
+			
+			<img src="../../blog/week-8/phototransistor_visible_orientation.jpg"
+				
+				width="500"
+				height="297"
+				loading="lazy"
+				alt="Figuring out the correct orientation of the new phototransistor">
+		</a>
+		
+		<figcaption>Figuring out the correct orientation of the new phototransistor</figcaption>
+		
+	</figure> <figure style="flex-grow: 100; flex-basis: 240px">
+		<a href="../../blog/week-8/phototransistor_visible_component.jpg" data-size="500x500">
+			
+			<img src="../../blog/week-8/phototransistor_visible_component.jpg"
+				
+				width="500"
+				height="500"
+				loading="lazy"
+				alt="The phototransistor with the &ldquo;collector&rdquo; mark in green on the left">
+		</a>
+		
+		<figcaption>The phototransistor with the “collector” mark in green on the left</figcaption>
+		
+	</figure></p>
+<p>I soldered on the new phototransistor, and set my computer and UPDI and FTDI up to program my board. This time the phototransistor reported values of around <code>400 - 600</code> as the base of the room (although this was at te Waag not at home), which was much more along the lines I had initially expected.</p>
+<p>I deleted the original easing function, and instead created a second-order polynomial function (<code>y = a*x^2 + b*x + c</code>) using R that converts the <code>0 - 1023</code> range to a delay frequency range of <code>1000 - 1</code>, clamped to 1 at <code>900</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1"># Get a second-order polynomial fit trough</span>
+<span class="c1"># these preferred points</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">500</span><span class="p">,</span> <span class="m">900</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span> <span class="m">200</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+
+<span class="c1"># Fit a regression curve</span>
+<span class="n">fit2</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">y</span><span class="o">~</span><span class="nf">poly</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="n">raw</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span> <span class="c1">#second degree polynomial</span>
+
+<span class="c1"># Plot the results</span>
+<span class="n">xx</span> <span class="o">&lt;-</span> <span class="nf">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1000</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="m">50</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">pch</span><span class="o">=</span><span class="m">19</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1500</span><span class="p">))</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="nf">predict</span><span class="p">(</span><span class="n">fit2</span><span class="p">,</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">xx</span><span class="p">)),</span> <span class="n">col</span><span class="o">=</span><span class="s">&#34;green&#34;</span><span class="p">)</span>
+
+<span class="c1"># Get the coefficients</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">fit2</span><span class="p">)</span>
+</code></pre></div><p>I added the coefficients of the polynomial to a new function called <code>curveFit</code>, and uploaded it to my board.</p>
+<div class="highlight"><pre class="chroma"><code class="language-C" data-lang="C"><span class="cp">#define led_pin 0 </span><span class="c1">// ATtiny PA6
+</span><span class="c1"></span><span class="cp">#define photo_pin 1 </span><span class="c1">//ATtiny PA7
+</span><span class="c1"></span><span class="kt">int</span> <span class="n">sensor_value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">output_value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>  
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">photo_pin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">//void setup
+</span><span class="c1"></span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Read the analog value from the phototransistor, between 0 - 1023
+</span><span class="c1"></span>  <span class="n">sensor_value</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">photo_pin</span><span class="p">);</span>
+
+  <span class="c1">// Map the sensor value to the range 1000 - 1
+</span><span class="c1"></span>  <span class="c1">// using a second-order polynomial
+</span><span class="c1"></span>  <span class="n">output_value</span> <span class="o">=</span> <span class="n">curveFit</span><span class="p">(</span><span class="n">sensor_value</span><span class="p">);</span>
+
+  <span class="c1">// Blink the LED with a 2*output_value timing
+</span><span class="c1"></span>  <span class="n">blinkLED</span><span class="p">(</span><span class="n">max</span><span class="p">(</span><span class="n">output_value</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span>
+<span class="p">}</span><span class="c1">//void loop
+</span><span class="c1"></span>
+<span class="kt">int</span> <span class="nf">curveFit</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="mf">0.001225</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">n</span> <span class="o">-</span> <span class="mf">2.212</span><span class="o">*</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">// int curveFit
+</span><span class="c1"></span>
+<span class="c1">// Make the LED blink with a delay of delay_time
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">blinkLED</span><span class="p">(</span><span class="kt">int</span> <span class="n">delay_time</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="n">delay_time</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="n">delay_time</span><span class="p">);</span> 
+<span class="p">}</span><span class="c1">// void blink
+</span></code></pre></div><p>And then my LED was showing some nice behavior with blinking while at base level, moving to seemingly full on when covered and blinking much slower when I shine a flashlight on it.</p>
+
+<figure >
+    
+        <video class='controls' controls="true" playsinline ><source src='phototransistor_visible_blinking.mp4' type="video/mp4"></video>
+     
+    
+    <figcaption>The blinking speed of the LED changes with how much light the phototransistor picks up</figcaption>
+    
+</figure>
+<p>I did notice that IR (heat) had an effect on the phototransistor (which I see through the blink frequency of the LED). For example, there&rsquo;s a difference if I use my finger to block the phototransistor (you can still see that it flashes), or a piece of cardboard (the LED seems always on). Or that it matters how close my arm is in general.</p>
+<p>Not feeling quite right about the spectral range, I tested the sensor values again while back in my office, and damn, they were back at <code>1000</code> <span class="kaomoji">(￣ー￣)</span>
+. I then checked the spectral range of that first phototransistor that was on my board, and saw that <em>it was basically the same</em>, running from about <code>450nm - 1100nm</code>, with a peak at <code>±900nm</code>. So now I&rsquo;m just very confused about &ldquo;visible light&rdquo; phototransistors, not fully capturing visible light, but secretly adding a bulk of the IR range.</p>
+<h3 id="programming-with-platformio">Programming With PlatformIO</h3>
+<p>Besides the Arduino IDE I also wanted to try a few other tools for doing embedded programming, one of which was the <a class="link" href="https://platformio.org/"  target="_blank" rel="noopener"
+    >PlatformIO IDE</a>. This is an extension for <em>Visual Studio Code</em> (VSC), which is my main code editor, so I was pleasantly surprised, and installed <em>PlatformIO</em> through the extensions tab from VSC.</p>
+<p>I followed the <a class="link" href="https://docs.platformio.org/en/latest/integration/ide/vscode.html#quick-start"  target="_blank" rel="noopener"
+    >Quick start guide</a>. You can open the PlatformIO Home tab by clicking on the tiny house icon that was now visible on the bottom info row of VSC.</p>
+<p><figure style="flex-grow: 119; flex-basis: 285px">
+		<a href="../../blog/week-8/platformio_overview.jpg" data-size="762x640">
+			
+			<img src="../../blog/week-8/platformio_overview.jpg"
+				
+				width="762"
+				height="640"
+				loading="lazy"
+				alt="The PlatformIO buttons that appear at the bottom of VSC">
+		</a>
+		
+		<figcaption>The PlatformIO buttons that appear at the bottom of VSC</figcaption>
+		
+	</figure></p>
+<p>Which will bring you to a new tab from PlatformIO. Click on <em>New Project</em>, which opens a new window that asks for the project name, and the board and framework to use. It says by default that almost 900 boards are supported and thankfully the ATtiny412 is one of those.</p>
+<p><figure style="flex-grow: 139; flex-basis: 335px">
+		<a href="../../blog/week-8/platformio_home.png" data-size="1047x749">
+			
+			<img src="../../blog/week-8/platformio_home.png"
+				
+				width="1047"
+				height="749"
+				loading="lazy"
+				alt="The home tab of PlatformIO within Visual Studio Code">
+		</a>
+		
+		<figcaption>The home tab of PlatformIO within Visual Studio Code</figcaption>
+		
+	</figure> <figure style="flex-grow: 128; flex-basis: 308px">
+		<a href="../../blog/week-8/platformio_new_project.jpg" data-size="500x389">
+			
+			<img src="../../blog/week-8/platformio_new_project.jpg"
+				
+				width="500"
+				height="389"
+				loading="lazy"
+				alt="Creating a new project">
+		</a>
+		
+		<figcaption>Creating a new project</figcaption>
+		
+	</figure></p>
+<p>After it&rsquo;s done with that (it might take a minute for the very first project ever), you should open up the <code>main.cpp</code> file in the <code>src</code> folder.</p>
+<p><figure style="flex-grow: 236; flex-basis: 566px">
+		<a href="../../blog/week-8/platformio_main.png" data-size="911x386">
+			
+			<img src="../../blog/week-8/platformio_main.png"
+				
+				width="911"
+				height="386"
+				loading="lazy"
+				alt="The empty &ldquo;main.cpp&rdquo; file">
+		</a>
+		
+		<figcaption>The empty “main.cpp” file</figcaption>
+		
+	</figure></p>
+<p>I copied the default &ldquo;Blink&rdquo; example from the PlatformIO Quick start, only changing the <code>LED_BUILTIN</code> variable to <code>#define led_pin 0</code>. I clicked the little &ldquo;check mark&rdquo; icon to compile (or <em>Build</em> as it&rsquo;s named here) the program, and that all went smoothly.</p>
+<p><figure style="flex-grow: 78; flex-basis: 188px">
+		<a href="../../blog/week-8/platformio_compile_success.png" data-size="1135x1445">
+			
+			<img src="../../blog/week-8/platformio_compile_success.png"
+				
+				width="1135"
+				height="1445"
+				loading="lazy"
+				alt="Compiling the simple &ldquo;Blink&rdquo; program worked">
+		</a>
+		
+		<figcaption>Compiling the simple “Blink” program worked</figcaption>
+		
+	</figure></p>
+<p>I figured I might as well click the <em>Upload</em> icon next (the &ldquo;right-arrow&rdquo; icon) and see what happens. This time I wasn&rsquo;t so lucky, and got an error:</p>
+<p><figure style="flex-grow: 120; flex-basis: 289px">
+		<a href="../../blog/week-8/platformio_upload_error.png" data-size="856x710">
+			
+			<img src="../../blog/week-8/platformio_upload_error.png"
+				
+				width="856"
+				height="710"
+				loading="lazy"
+				alt="Getting an error during the upload of the &ldquo;Blink&rdquo; program">
+		</a>
+		
+		<figcaption>Getting an error during the upload of the “Blink” program</figcaption>
+		
+	</figure></p>
+<p>I inspected the log and the start seemed good indeed, but then I was confused to read <code>jtag2updi</code> upload protocol. I was expecting to see something about <code>pyupdi</code>. I did notice that it was using my UPDI in the <code>Auto-detect: /dev/cu.usbserial-D30A3T7I</code> line, whereas I never actually selected my port I realized.</p>
+<p>I read a little into this, and learned that PlatformIO will try and select the correct port for you. I found that you can see a list of the available ports/devices from the PlatformIO home page by clicking on the <em>Devices</em> tab along the left:</p>
+<p><figure style="flex-grow: 144; flex-basis: 345px">
+		<a href="../../blog/week-8/platformio_devices.png" data-size="1109x770">
+			
+			<img src="../../blog/week-8/platformio_devices.png"
+				
+				width="1109"
+				height="770"
+				loading="lazy"
+				alt="The available ports / devices can be found in the &ldquo;Devices&rdquo; tab">
+		</a>
+		
+		<figcaption>The available ports / devices can be found in the “Devices” tab</figcaption>
+		
+	</figure></p>
+<p>But since this was going correctly, I had to look elsewhere for my upload error.</p>
+<p>I found the <a class="link" href="https://github.com/platformio/platform-atmelmegaavr"  target="_blank" rel="noopener"
+    >Atmel megaAVR</a> plugin/library for PlatformIO, which led me to its documentation within the PlatformIO docs. And there I found a section on <a class="link" href="https://docs.platformio.org/en/latest/platforms/atmelmegaavr.html#upload-using-pyupdi"  target="_blank" rel="noopener"
+    >&ldquo;Upload using pyupdi&rdquo;</a>. It seemed that I had to use a custom <code>upload_command</code> in my project&rsquo;s <code>platform.ini</code> file.</p>
+<p>I thus opened the <code>platform.ini</code> file in VSC and added the <code>upload_speed</code>, <code>upload_flags</code>, and <code>upload_command</code> lines to it:</p>
+<div class="highlight"><pre class="chroma"><code class="language-ini" data-lang="ini"><span class="k">[env:ATtiny412]</span>
+<span class="na">platform</span> <span class="o">=</span> <span class="s">atmelmegaavr</span>
+<span class="na">board</span> <span class="o">=</span> <span class="s">ATtiny412</span>
+<span class="na">framework</span> <span class="o">=</span> <span class="s">arduino</span>
+<span class="na">upload_speed</span> <span class="o">=</span> <span class="s">115200</span>
+<span class="na">upload_flags</span> <span class="o">=</span><span class="s">
+</span><span class="s">    -d
+</span><span class="s">    tiny412
+</span><span class="s">    -c
+</span><span class="s">    $UPLOAD_PORT
+</span><span class="s">    -b
+</span><span class="s">    $UPLOAD_SPEED</span>
+<span class="na">upload_command</span> <span class="o">=</span> <span class="s">pyupdi $UPLOAD_FLAGS -f $SOURCE</span>
+</code></pre></div><p>I <em>really</em> wasn&rsquo;t sure if that would be enough. I pressed the <em>Upload</em> button again, and it worked, ending with a <em>SUCCESS</em> statement and blinking LED on my board <span class="kaomoji">(๑•̀ㅂ•́)ง✧</span>
+</p>
+<p><figure style="flex-grow: 175; flex-basis: 420px">
+		<a href="../../blog/week-8/platformio_upload_successful.png" data-size="1033x589">
+			
+			<img src="../../blog/week-8/platformio_upload_successful.png"
+				
+				width="1033"
+				height="589"
+				loading="lazy"
+				alt="Successfully uploaded my program via PlatformIO">
+		</a>
+		
+		<figcaption>Successfully uploaded my program via PlatformIO</figcaption>
+		
+	</figure></p>
+<p><strong>Note</strong> | By pressing the little &ldquo;electrical plug&rdquo; icon (the <strong>Serial Monitor</strong>) brings up the terminal window in VSC where it tells you the available ports and by selecting a number it will open that port for you, really handy!</p>
+<p><figure style="flex-grow: 277; flex-basis: 664px">
+		<a href="../../blog/week-8/platformio_serial_monitor.png" data-size="820x296">
+			
+			<img src="../../blog/week-8/platformio_serial_monitor.png"
+				
+				width="820"
+				height="296"
+				loading="lazy"
+				alt="The Serial Monitor options with PlatformIO">
+		</a>
+		
+		<figcaption>The Serial Monitor options with PlatformIO</figcaption>
+		
+	</figure></p>
+<p><strong>Note</strong> | I found that there is a dedicated page for each AVR chip on the PlatformIO docs, such as the <a class="link" href="https://docs.platformio.org/en/latest/boards/atmelmegaavr/ATtiny412.html#board-atmelmegaavr-attiny412"  target="_blank" rel="noopener"
+    >ATtiny412</a></p>
+<p>Seeing that I could get PlatformIO working, I left it at that, choosing to remain with the Arduino IDE for this week.</p>
+<h3 id="programming-with-python">Programming With Python</h3>
+<p>I also took a quick look at using <a class="link" href="https://micropython.org/"  target="_blank" rel="noopener"
+    ><em>MicroPython</em></a> or <a class="link" href="https://github.com/adafruit/circuitpython"  target="_blank" rel="noopener"
+    ><em>CircuitPython</em></a> (which is based on MicroPython). However, I quickly found this line on the MicroPython website: <em>&ldquo;Yet it is compact enough to fit and run within just 256K of code space and 16K of RAM&rdquo;</em>. However, our ATtiny412 has 4KB of <em>Flash</em> and only 256B of <em>SRAM</em>. I therefore understood it as being not possible to use these python methods of programming my board, and let them be.</p>
+<p>Maybe if I choose to use a <em>ESP8266</em> or <em>ESP32</em> development board in the future I could look into this again (using <a class="link" href="https://randomnerdtutorials.com/getting-started-micropython-esp32-esp8266/"  target="_blank" rel="noopener"
+    >this</a>, <a class="link" href="https://randomnerdtutorials.com/install-upycraft-ide-mac-os-x-instructions/"  target="_blank" rel="noopener"
+    >this</a>, and <a class="link" href="https://randomnerdtutorials.com/flash-upload-micropython-firmware-esp32-esp8266/"  target="_blank" rel="noopener"
+    >this</a> tutorial perhaps).</p>
+<h2 id="the-attiny412-datasheet">The ATtiny412 Datasheet</h2>
+<p>Part of our individual assignment this week was to read/skim through the entire datasheet of the microcontroller that we&rsquo;re using on our boards, so we know what kind of data can be found in it. The <a class="link" href="https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny212-214-412-414-416-DataSheet-DS40002287A.pdf"  target="_blank" rel="noopener"
+    >datasheet</a> of the ATtiny412 is almost 600 pages, and I&rsquo;ve understood that 1000 pages isn&rsquo;t that odd to have for other microcontrollers, so I guess I should consider myself lucky <span class="kaomoji">(◍•﹏•)</span>
+</p>
+<p>The first page of the datasheet lists the technical specifications of the tinyAVR 1-series, but I have to admit that the relevance of the specs still eludes me for most of the lines.</p>
+<p><strong>Section 2</strong> shows a table with the <em>Peripheral summary</em>, where I know at least some of the words, such as there being 1 <em>USART</em>, but also an <em>SPI</em> and <em>I2C</em> connections, six ADC and one DAC connection.</p>
+<p>The <em>Block Diagram</em> in <strong>section 3</strong> gives a peek inside the microcontroller. I&rsquo;m starting to read/recognize some parts in here now, but it&rsquo;s still mostly an unknown to me.</p>
+<p><figure style="flex-grow: 86; flex-basis: 208px">
+		<a href="../../blog/week-8/attiny412_block_diagram.png" data-size="952x1096">
+			
+			<img src="../../blog/week-8/attiny412_block_diagram.png"
+				
+				width="952"
+				height="1096"
+				loading="lazy"
+				alt="The ATtiny Block Diagram showing what&rsquo;s inside the microcontroller">
+		</a>
+		
+		<figcaption>The ATtiny Block Diagram showing what’s inside the microcontroller</figcaption>
+		
+	</figure></p>
+<p><strong>Section 4</strong> is the <em>Pinout</em> which I&rsquo;ve referenced before already. I&rsquo;m not quite sure why this pinout image is so sparse with the pin info that it gives. But at least they do seem to give a lot more info on what functions each pin can do in the <em>Multiplexed Signals</em> table of <strong>section 5</strong>, which is the table that made me realize that we have our <em>TX</em> and <em>RX</em> pins mapped to their alternate positions.</p>
+<p><figure style="flex-grow: 132; flex-basis: 319px">
+		<a href="../../blog/week-8/pins_attiny.png" data-size="500x376">
+			
+			<img src="../../blog/week-8/pins_attiny.png"
+				
+				width="500"
+				height="376"
+				loading="lazy"
+				alt="The &ldquo;Pinout&rdquo; overview">
+		</a>
+		
+		<figcaption>The “Pinout” overview</figcaption>
+		
+	</figure> <figure style="flex-grow: 204; flex-basis: 491px">
+		<a href="../../blog/week-8/attiny412_multiplexing_table.png" data-size="1048x512">
+			
+			<img src="../../blog/week-8/attiny412_multiplexing_table.png"
+				
+				width="1048"
+				height="512"
+				loading="lazy"
+				alt="&ldquo;Port Function Multiplexing&rdquo; table">
+		</a>
+		
+		<figcaption>“Port Function Multiplexing” table</figcaption>
+		
+	</figure></p>
+<p><strong>Section 6</strong> gives an expanded overview of the different types of memories; <em>Flash</em>, <em>SRAM</em> and <em>EEPROM</em>. These can be separated into two types: <em>Volatile memory</em> where the stored data is lost when it loses power and <em>Non-Volatile memory</em> where it remembers the information even if the power to it is turned off. <em>SRAM</em> is volatile, while <em>Flash</em> and <em>EEPROM</em> are non-volatile.</p>
+<p>The <strong>Flash memory</strong> is 4KB and is the space available for the storage of the program I upload through the UPDI. It seems that part of this 4KB is taken up by the bootloader, while the rest gets used by the actual code and the &ldquo;application data&rdquo;.</p>
+<p>The <strong>EEPROM Memory</strong>, Electrically Erasable Programmable Read-Only Memory, of 128 bytes is, I believe, used to store small amounts of data, such as the states of certain input and output devices connected to the MC that need to be stored for longer periods of time (e.g. it needs to be remembered for when the board powers up again for example).</p>
+<p>The <strong>SRAM Data Memory</strong>, which stands for Static Random Access Memory, is 256 bytes. I believe this is the memory that is used to hold the variables and functions in memory while the chip executes its tasks.</p>
+<p>I found <a class="link" href="https://www.circuitbasics.com/types-of-memory-on-the-arduino/"  target="_blank" rel="noopener"
+    >this</a> explanation and <a class="link" href="https://www.youtube.com/watch?v=4WnTTL_7a1g"  target="_blank" rel="noopener"
+    >this</a> video on the differences between the types of memory to be helpful.</p>
+<p>The rest of section 6 goes deeper into the specifics of these types of memories, which was beyond my knowledge at this point.</p>
+<p><strong>Section 7</strong> shows a table of the &ldquo;Peripheral Module Address Map&rdquo;, with the base address for each peripheral. However, I don&rsquo;t know what a <em>base address</em> is though, nor an <em>Interrupt Flag</em>&hellip;</p>
+<p><figure style="flex-grow: 247; flex-basis: 594px">
+		<a href="../../blog/week-8/attiny412_peripheral_module_address_map.png" data-size="916x370">
+			
+			<img src="../../blog/week-8/attiny412_peripheral_module_address_map.png"
+				
+				width="916"
+				height="370"
+				loading="lazy"
+				alt="The first few rows of the &ldquo;Peripheral Module Address Map&rdquo;">
+		</a>
+		
+		<figcaption>The first few rows of the “Peripheral Module Address Map”</figcaption>
+		
+	</figure></p>
+<p><strong>Section 8</strong> goes into the <em>AVR CPU</em>, giving the technical specs (e.g. it&rsquo;s 8-bit, and uses a <em>Harvard architecture</em> that separates program and data memory). The docs say that <em>&ldquo;The CPU is able to access memories, perform calculations, control peripherals, and execute instructions in the program memory&rdquo;</em> and <em>&ldquo;While one instruction is being executed, the next instruction is pre-fetched from the program memory. This enables instructions to be executed on every clock cycle.&quot;</em></p>
+<p>The CPU has an <em>ALU</em>, Arithmetic Logic Unit which does the math and logic operations. Thanks to a <em>Hardware Multiplier</em> it can multiply two 8-bit numbers into a 16-bit result (section 8.4.1), and it also goes into <em>Stacks</em> and <em>Registers</em>.</p>
+<p><strong>Section 9</strong> goes into the <em>Non Volatile Memory Controller</em> (NVMCTRL), the interface between the device, the <em>Flash</em>, and the <em>EEPROM</em>. From the docs: <em>&ldquo;The Flash and EEPROM are reprogrammable memory blocks that retain their values even when not powered. The Flash is mainly used for program storage, but can also be used for data storage. The EEPROM is used for data storage and can be programmed while the CPU is running the program from the Flash.&quot;</em> The section then goes into the <em>Flash</em> and <em>EEPROM</em> memories again, talking about <em>write</em> and <em>erase</em> commands.</p>
+<p><strong>Section 10</strong> is about the <em>Clock Controller</em> (CLKCTRL) where the ATtiny412 has a <code>20Mhz</code> oscillator (and also a <code>32KHz</code> Ultra Low Power oscillator), however it can also handle an external clock. The Clock Controller peripheral controls, distributes, and pre-scales the clock signals from the available oscillators. It supports internal and external clock sources. There are several types of clocks I believe, with a main clock, <em>CLK_MAIN</em> that is used by the CPU, RAM, Flash and all peripherals connected to IO?</p>
+<p><strong>Section 11</strong> goes into the <em>Sleep Controller</em> (SLPCTRL) where there are three sleep modes; Idle, Standby and Power Down (the remaining mode is the Active mode). The docs explain it is <em>&ldquo;Sleep modes are used to shut down peripherals and clock domains in the device in order to save power. The Sleep Controller controls and handles the transitions between active mode and sleep mode.&quot;</em> Depending on the type of sleep mode different types of peripherals and clocks are turned off. Interrupts are used to wake up again, but if there are no interrupts enabled when going to sleep, the device cannot wake up again. Only a reset will allow it to continue operation.</p>
+<p>During <em>Idle</em> mode the CPU stops executing code, but no peripherals are disabled and all interrupt sources can wake it up. In the <em>Standby</em> mode, the user can configure any peripheral to be enabled or not, giving the user control over the power consumptions (see 11.3.2.1 for the interrupt options). Finally, in <em>Power Down</em> mode only the <em>WDT</em> and <em>PIT</em> are active and the only wake-up sources are the pin change interrupt and TWI address match (whatever those may mean).</p>
+<p><figure style="flex-grow: 119; flex-basis: 286px">
+		<a href="../../blog/week-8/attiny412_sleep_mode_activity_overview.png" data-size="944x791">
+			
+			<img src="../../blog/week-8/attiny412_sleep_mode_activity_overview.png"
+				
+				width="944"
+				height="791"
+				loading="lazy"
+				alt="The &ldquo;Sleep Mode Activity Overview&rdquo; table from section 11.2">
+		</a>
+		
+		<figcaption>The “Sleep Mode Activity Overview” table from section 11.2</figcaption>
+		
+	</figure></p>
+<p><strong>Section 12</strong> is the <em>Reset Controller</em> (RSTCTRL) which can reset the device to its initial state. The sources for doing such a reset are the:</p>
+<ul>
+<li>Power supply Reset sources - caused by changes in the power supply voltage: <em>Brownout Detect</em> (BOD), <em>Power On Reset</em> (POR)</li>
+<li>User Reset sources - issued by the application, debug operations or by pin changes: <em>External Reset pin</em> (RESET), <em>Watchdog Reset</em> (WDT), <em>Software Reset</em> (SW) and <em>UPDI Reset</em></li>
+</ul>
+<p>Where I think that I&rsquo;ve only used the <em>UPDI Reset</em>. The start of this section goes deeper into what the different kinds of reset sources are.</p>
+<p><strong>Section 13</strong> goes into the <em>CPU Interrupt Controller</em> (CPUINT). The datasheet explains it as <em>&ldquo;An interrupt request signals a change of state inside a peripheral, and can be used to alter program execution. Peripherals can have one or more interrupts, and all are individually enabled and configured.
+When an interrupt is enabled and configured, it will generate an interrupt request when the interrupt condition occurs.&quot;</em> The <em>CPUINT</em> also looks at the priority level of incoming interrupts and decides to act or keep them pending, depending on how it compares to any ongoing interrupts.</p>
+<p><strong>Section 14</strong> explains the <em>Event System</em> (EVSYS), which allows a change in one peripheral (the Event Generator) to trigger actions in other peripherals through <em>Event channels</em> without using the CPU.</p>
+<p>In <strong>Section 15</strong> there is the <em>Port Multiplexer</em> (PORTMUX), which I tried to understand while testing my board two weeks ago, and seeing the <em>TX</em>/<em>RX</em> port swap. I do understand (more about) the concept of port multiplexing now, where you have the option to change the functionality of pins, such as using alternative pins for the <em>TX</em> and <em>RX</em>.</p>
+<p><strong>Section 16</strong> is about the <em>I/O Pin Configuration</em>, which are the six General Purpose Input and Output (GPIO) pins. But I have to admit that I didn&rsquo;t understand much about what was being explained in the overview about this.</p>
+<p><strong>Section 17</strong> explains the <em>Brownout Detector</em> (BOD) that I come by in section 12 before as a way to cause a <em>reset</em>. The Brownout detection monitors the power supply to avoid operation below a programmable level. The threshold defines when to generate a <em>reset</em>.</p>
+<p><strong>Section 18</strong> is the <em>Voltage Reference</em> (VREF) which provides an accurate, low noise, constant output voltage that is used by several peripherals (the default reference voltages are 0.55V). I couldn&rsquo;t quite understand <em>why</em> to use this though (even after searching online for it, none of it was <em>noob</em> enough).</p>
+<p><strong>Section 19</strong> goes into the <em>Watchdog Timer</em> (WDT) which is also a <em>reset</em> source. <em>&ldquo;It allows to recover from situations such as runaway or deadlocked code, by issuing a reset. When enabled, the WDT is a constantly running timer configured to a predefined timeout period. If the WDT is not reset within the timeout period, it will issue a System Reset. [&hellip;] When enabled, the WDT will run in active mode and all sleep modes.&quot;</em></p>
+<p>The next three chapters go into a few different types of timers/counter, with <strong>section 20</strong> about the <em>TCA</em>, a <em>16-bit PWM Timer/Counter type A</em>. A TCA consists of a base counter and a set of compare channels: <em>&ldquo;The base counter can be used to count clock cycles or events [&hellip;] The compare channels can be used together with the base counter to do compare match control, frequency generation, and pulse width waveform modulation.&quot;</em> And there are some explanations in this section about different types of <em>PWM</em> generation. <strong>Section 21</strong> is about <em>TCB</em>, the <em>type B</em> timer/counter which includes frequency and waveform generation. The TCB consists of a base counter and control logic which can be set in one of eight different modes, each mode providing unique functionality, that are explains in section 21.3.3.1. Finally there is the <em>TCD</em>, the <em>type D</em> timer/counter and is <em>&ldquo;a high performance waveform controller that consists of an asynchronous counter, a pre-scaler, compare logic, capture logic, and control logic. The purpose of the TCD is to control power applications like LED, motor control, H-bridge and power converters.&quot;</em></p>
+<p><strong>Section 23</strong> is about the <em>Real Time Counter</em> (RTC), which I didn&rsquo;t understand.</p>
+<p><strong>Section 24</strong> is about the <em>USART</em> or <em>Universal Synchronous and Asynchronous Receiver and Transmitter</em>, the connection that I&rsquo;ve been using to receive and transmit (serial) information with to my board via that <em>TX</em> and <em>RX</em> pins. Communication is frame based and a serial frame consists of:</p>
+<ul>
+<li>1 start bit</li>
+<li>5, 6, 7, 8, or 9 data bits</li>
+<li>Parity bit: even, odd, or none</li>
+<li>1 or 2 stop bits</li>
+</ul>
+<p>It can apparently also be set to one-wire mode, where the transmitter and receiver share the same <em>TxD</em> pin. The rest of the section goes into elaborate detail.</p>
+<p><strong>Section 25</strong> is the <em>Serial Peripheral Interface</em> or <em>SPI</em> and <em>&ldquo;is a high-speed synchronous data transfer interface using three or four pins. It allows full duplex communication between an AVR device and peripheral devices or between several microcontrollers. The SPI peripheral can be configured as either Master or Slave. The master initiates and controls all data transactions.&quot;</em>. I haven&rsquo;t worked with <em>SPI</em> before I believe, but that might still come in the next weeks, where I might learn more about the <em>MISO</em>, <em>MOSI</em>, <em>SCK</em> and <em>SS</em> ports.</p>
+<p>Yet another communication interface is described in <strong>section 26</strong>: the <em>Two Wire Interface</em> (TWI), which is a bidirectional, two-wire communication interface, and is <em>I2C</em> compatible. The latter being  another term that I&rsquo;ve been hearing here and there and think I&rsquo;ll learn more about in upcoming weeks. This section also goes into extreme detail how <em>TWI</em> works.</p>
+<p>And then for something completely different in <strong>section 27</strong> with the <em>Cyclic Redundancy Check Memory Scan</em> (CRCSCAN), which can be used to detect errors in program memory.</p>
+<p><strong>Section 28</strong> is about <em>Configurable Custom Logic</em> (CCL), which is a programmable logic peripheral, which I believe could be a powerful way to bypass the CPU for doing logic tasks?</p>
+<p><strong>Section 29</strong> goes into the <em>Analog Comparator</em> or <em>AC</em> which compares the voltage levels on two inputs and gives a digital output based on this comparison, of which the ATtiny412 has one output pin <em>PA3</em> (and <em>PA6</em> and <em>PA7</em> should be used as the input pins?)?</p>
+<p>All pins besides the <em>VCC</em> and <em>GND</em> pins are capable of <em>Analog to Digital Converter</em> (ADC) which is explained in <strong>section 30</strong>, with a resolution of 10-bit (and a sampling rate up to 115ksps).</p>
+<p>In <strong>section 31</strong> we read about the inverse direction, the <em>Digital to Analog Converter</em> (DAC, of which the ATtiny412 has one pin (<em>PA6</em>), of 8-bit resolution capable of converting 350,000 samples per second (350ksps).</p>
+<p><strong>Section 32</strong> is about the <em>UPDI</em> or <em>Unified Program and Debug Interface</em>. The process / interface that I&rsquo;ve been using to program the ATtiny412. There is some really extensive documentation in this section that goes way beyond my knowledge.</p>
+<p>And with that I think the datasheet had explained all the peripherals and goes into the <em>Electrical Characteristics</em> in <strong>section 33</strong>. Such as the <em>minimum and maximum</em> of the power supply and currents, at what <em>frequencies</em> the clock can run depending on the voltage and temperature, what the <em>power consumption</em> is at different clock frequencies and voltages, and much more having to do with voltages and frequencies when using any of the peripherals.</p>
+<p>In <strong>section 34</strong> we finally see some charts! Such as the current versus the frequency for different voltage levels. But there are many more charts comparing current, voltage, frequency and temperature in different ways, and for different peripherals. This seems like info useful for the <em>really</em> expert readers.</p>
+<p>The remaining chapters go into ordering information, packaging, with <strong>section 36</strong> finally giving an image of the actual ATtiny with top, side and top-side views. But also recommendations for the footprint settings I believe.</p>
+<p><figure style="flex-grow: 146; flex-basis: 351px">
+		<a href="../../blog/week-8/attiny412_schematic_image.png" data-size="520x355">
+			
+			<img src="../../blog/week-8/attiny412_schematic_image.png"
+				
+				width="520"
+				height="355"
+				loading="lazy"
+				alt="A schematic image of the ATtiny 1-series">
+		</a>
+		
+		<figcaption>A schematic image of the ATtiny 1-series</figcaption>
+		
+	</figure></p>
+<p>And <em>Arithmetic and Logic Instructions</em> in <strong>section 37</strong> which sounds interesting, but where you need some background knowledge to make sense of.</p>
+<p>A kind of <em>glossary</em> in <strong>sections 38 and 39</strong> and that&rsquo;s about it. Finally!</p>
+<h2 id="programming-other-boards">Programming Other Boards</h2>
+<p>During the instruction day at the Waag, we got to play and program several other boards that Henk had available. I didn&rsquo;t get to program them all, but let me describe the boards that were there. For the programming, I teamed up with Loes.</p>
+<h3 id="arduino-boards">Arduino Boards</h3>
+<p>Possibly the most well known brand in boards (although there&rsquo;s Raspberry Pi too of course). Over the years many different boards have been created, in different sizes. You can program an Arduino board without using any kind of extra board libraries within the <em>Arduino IDE</em> because all these boards are pre-installed.</p>
+<p><figure style="flex-grow: 71; flex-basis: 170px">
+		<a href="../../blog/week-8/arduino_installed_boards.jpg" data-size="450x632">
+			
+			<img src="../../blog/week-8/arduino_installed_boards.jpg"
+				
+				width="450"
+				height="632"
+				loading="lazy"
+				alt="The Arduino boards pre-installed with the Arduino IDE">
+		</a>
+		
+		<figcaption>The Arduino boards pre-installed with the Arduino IDE</figcaption>
+		
+	</figure></p>
+<h4 id="arduino-uno">Arduino UNO</h4>
+<p>The Arduino UNO is a great board to getting started with electronics and programming a board. Its microcontroller is an <a class="link" href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf"  target="_blank" rel="noopener"
+    >ATmega328P</a>, which has 32 KB of memory (with 0.5 KB occupied by the bootloader). You can find a wealth of useful information about this board on the <a class="link" href="https://store.arduino.cc/arduino-uno-rev3"  target="_blank" rel="noopener"
+    >Arduino</a> website.</p>
+<p><figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="../../blog/week-8/arduino_uno.jpg" data-size="820x615">
+			
+			<img src="../../blog/week-8/arduino_uno.jpg"
+				
+				width="820"
+				height="615"
+				loading="lazy"
+				alt="The Arduino Uno">
+		</a>
+		
+		<figcaption>The Arduino Uno</figcaption>
+		
+	</figure></p>
+<p>Some of the most important components of the board are:</p>
+<ul>
+<li>14 digital input/output pins, labelled 0 - 13
+<ul>
+<li>They all operate at 5 volts</li>
+<li>Of these 6 can be used as 8-bit PWM outputs, those with the <code>~</code> mark next to them: 3, 5, 6, 9, 10, and 11</li>
+<li>Each pin can provide or receive 20 mA</li>
+<li>Each pin has an internal pull-up resistor of 20-50k Ω (disconnected by default)</li>
+<li>Pins 0 and 1 are used for <em>RX</em> and <em>TX</em> respectively</li>
+</ul>
+</li>
+<li>6 analog inputs, labelled A0 - A5
+<ul>
+<li>They provide 10 bits of resolution</li>
+</ul>
+</li>
+<li>a 16 MHz ceramic resonator</li>
+<li>a built-in LED on pin 13</li>
+<li>a USB connection, type B strangely</li>
+<li>a power jack</li>
+<li>two ICSP (In-Circuit Serial Programming) headers (the two connectors with 6 pins pointing upward)</li>
+<li>a reset button</li>
+</ul>
+<p>An extended overview of the <em>pinout</em> can be found <a class="link" href="https://content.arduino.cc/assets/Pinout-UNOrev3_latest.pdf"  target="_blank" rel="noopener"
+    >here</a>. To go into a bit more detail about the power pins, taken from the Arduino website:</p>
+<ul>
+<li><em>Vin</em> | The input voltage to the Arduino board when it&rsquo;s using an external power source (as opposed to 5 volts from the USB connection or other regulated power source). You can supply voltage through this pin, or, if supplying voltage via the power jack, access it through this pin.</li>
+<li><em>5V</em> | This pin outputs a regulated 5V from the regulator on the board. The board can be supplied with power either from the DC power jack (7 - 12V), the USB connector (5V), or the VIN pin of the board (7-12V). Supplying voltage via the 5V or 3.3V pins bypasses the regulator, and can damage your board. We don&rsquo;t advise it.</li>
+<li><em>3V3</em> | A 3.3 volt supply generated by the on-board regulator. Maximum current drawn is 50 mA.</li>
+</ul>
+<p>You use the USB connection to both power the board via a laptop, but also to program it. However, you can use the jack connection for external power as well. The recommended range is 7 to 12 volts.</p>
+<p>The Arduino Uno comes with a bootloader installed so we don&rsquo;t have to use an external hardware programmer to upload new code to it (which I believe means we don&rsquo;t need a UPDI to program it?). But you can by-pass this bootloader by using the <em>ICSP</em> connection.</p>
+<p>I loved playing with the different Arduino&rsquo;s during this afternoon so much, that I ordered an Arduino Uno that very evening! <span class="kaomoji">(^ᗨ^)</span>
+ (although I actually never got to play with the Uno during the day).</p>
+<h4 id="arduino-mega">Arduino Mega</h4>
+<p>I think the Waag has the original version of the <em>Arduino Mega</em>, but let me talk about the <em>Arduino Mega 2560 Rev 3</em>, because that&rsquo;s the newest one at this moment. The microcontroller on the Mega is a <a class="link" href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2549-8-bit-AVR-Microcontroller-ATmega640-1280-1281-2560-2561_datasheet.pdf"  target="_blank" rel="noopener"
+    >ATmega2560</a> with a memory of 256 KB. An extended overview of the <em>pinout</em> can be found <a class="link" href="https://content.arduino.cc/assets/Pinout-Mega2560rev3_latest.pdf"  target="_blank" rel="noopener"
+    >here</a>.</p>
+<p><figure style="flex-grow: 167; flex-basis: 402px">
+		<a href="../../blog/week-8/arduino_mega.jpg" data-size="820x489">
+			
+			<img src="../../blog/week-8/arduino_mega.jpg"
+				
+				width="820"
+				height="489"
+				loading="lazy"
+				alt="The Arduino Mega 2560">
+		</a>
+		
+		<figcaption>The Arduino Mega 2560</figcaption>
+		
+	</figure></p>
+<ul>
+<li>54 digital input/output pins!
+<ul>
+<li>They all operate at 5 volts</li>
+<li>Of these 15 can be used as 8-bit PWM outputs, those with the <code>~</code> mark next to them: 2 to 13 and 44 to 46</li>
+<li>Each pin can provide or receive 20 mA</li>
+<li>4 <em>UARTS</em>: Serial pins: 0 (RX) and 1 (TX) | 19 (RX) and 18 (TX) | 17 (RX) and 16 (TX) | 15 (RX) and 14 (TX)</li>
+</ul>
+</li>
+<li>16 analog inputs, labelled A0 - A15
+<ul>
+<li>They provide 10 bits of resolution</li>
+</ul>
+</li>
+<li>a 16 MHz crystal oscillator</li>
+<li>a USB connection, type B</li>
+<li>a power jack</li>
+<li>an ICSP header</li>
+<li>a reset button</li>
+</ul>
+<p>As with the <em>Arduino Uno</em>, this board can be powered via the USB or the jack connection, and programmed via the USB (or ICSP header to bypass the bootloader). Some other things are also the same for the <em>Arduino Mega</em> and the <em>Arduino Uno</em>, such as the power pins and supply, so please check the <em>Arduino Uno</em> section for more info. And you can find more info about the <em>Arduino Mega</em> on the <a class="link" href="https://store.arduino.cc/arduino-mega-2560-rev3"  target="_blank" rel="noopener"
+    >Arduino website</a>.</p>
+<p>Loes and I picked up the <em>Arduino Mega</em> as our first board to play with. Using a USB B cable to connect it to Loes' Mac. Opened up the Arduino IDE, selected the <em>Blink</em> example. This uses the <code>LED_BUILTIN</code> variable for the internal LED pin, so you don&rsquo;t have to figure out the pin number.</p>
+<p><figure style="flex-grow: 78; flex-basis: 188px">
+		<a href="../../blog/week-8/arduino_mega_choose_board.jpg" data-size="500x637">
+			
+			<img src="../../blog/week-8/arduino_mega_choose_board.jpg"
+				
+				width="500"
+				height="637"
+				loading="lazy"
+				alt="Choosing the Arduino Mega board - With the standard &ldquo;Blink&rdquo; program loaded">
+		</a>
+		
+		<figcaption>Choosing the Arduino Mega board - With the standard “Blink” program loaded</figcaption>
+		
+	</figure></p>
+<p>That all went smoothly, so we wanted to try with an external LED. The <a class="link" href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink"  target="_blank" rel="noopener"
+    >Arduino website</a> mentions that you need to attach a resistor to the LED. However, we&rsquo;d seen Henk push an LED into the <code>GND</code> and another pin during the instructions that morning, so we did the same (perhaps the pins internal pullup resistor gets turned on automatically in that case?)</p>
+<p>We switched from the <code>LED_BUILTIN</code> variable to setting our own <code>int led_pin = 10;</code> and voila, the LED turned on after compiling and uploading the program.</p>
+<p><figure style="flex-grow: 191; flex-basis: 459px">
+		<a href="../../blog/week-8/arduino_mega_led_direct.jpg" data-size="820x428">
+			
+			<img src="../../blog/week-8/arduino_mega_led_direct.jpg"
+				
+				width="820"
+				height="428"
+				loading="lazy"
+				alt="A working LED by pushing it straight into the pins of the Arduino Mega">
+		</a>
+		
+		<figcaption>A working LED by pushing it straight into the pins of the Arduino Mega</figcaption>
+		
+	</figure></p>
+<p>We copied the <a class="link" href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fading"  target="_blank" rel="noopener"
+    >Fading</a> example next, and played a little with the <code>delay</code> values and the incremental values of the two <code>loop</code> functions to see how it would affect the timing of the fade.</p>
+<p>Next, we wanted to play with a <em>breadboard</em>! We&rsquo;d seen Henk set up a simple example that morning, and it seemed like fun. We learned that the 5 pins per row (there are two sections of five) are interconnected. We thus plugged in a cable from <code>GND</code> to row 29, pushed the LED with one leg into that row as well and another leg in the row 28, and finally a pin going from row 28 back to the Arduino pin 10. I did put in the LED the wrong way around the first time, but a quick switch and the LED started fading <span class="kaomoji">(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧</span>
+</p>
+<p>That went so well, that we figured we wanted to expand on the fade and add another LED that would fade in reverse (go on while the red one went off and vice versa). We plugged in a green LED into rows 24 and 25, added another wire from row 29 to row 25 for the <em>GND</em> and added one final wire to connect the LED from row 24 to the Arduino pin 9.</p>
+<p><figure style="flex-grow: 155; flex-basis: 373px">
+		<a href="../../blog/week-8/arduino_mega_breadboard_two_leds.jpg" data-size="820x527">
+			
+			<img src="../../blog/week-8/arduino_mega_breadboard_two_leds.jpg"
+				
+				width="820"
+				height="527"
+				loading="lazy"
+				alt="Plugging in a green and red LED to the Arduino via a breadboard">
+		</a>
+		
+		<figcaption>Plugging in a green and red LED to the Arduino via a breadboard</figcaption>
+		
+	</figure></p>
+<p>And adjusted our code to include the green LED:</p>
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="k">const</span> <span class="kt">int</span> <span class="n">led_pin_red</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">led_pin_green</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">max_value</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//nothing
+</span><span class="c1"></span><span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//fade from 0 to max_value in increments of 5
+</span><span class="c1"></span>    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">fade_value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">fade_value</span> <span class="o">&lt;=</span> <span class="n">max_value</span><span class="p">;</span> <span class="n">fade_value</span> <span class="o">+=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">analogWrite</span><span class="p">(</span><span class="n">led_pin_red</span><span class="p">,</span> <span class="n">max_value</span> <span class="o">-</span> <span class="n">fade_value</span><span class="p">);</span>
+        <span class="n">analogWrite</span><span class="p">(</span><span class="n">led_pin_green</span><span class="p">,</span> <span class="n">fade_value</span><span class="p">);</span>
+        <span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+    <span class="p">}</span><span class="c1">//for
+</span><span class="c1"></span>
+    <span class="c1">//fade from max_value to 0 in increments of 5
+</span><span class="c1"></span>    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">fade_value</span> <span class="o">=</span> <span class="n">max_value</span><span class="p">;</span> <span class="n">fade_value</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">fade_value</span> <span class="o">-=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">analogWrite</span><span class="p">(</span><span class="n">led_pin_red</span><span class="p">,</span> <span class="n">max_value</span> <span class="o">-</span> <span class="n">fade_value</span><span class="p">);</span>
+        <span class="n">analogWrite</span><span class="p">(</span><span class="n">led_pin_green</span><span class="p">,</span> <span class="n">fade_value</span><span class="p">);</span>
+        <span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+    <span class="p">}</span><span class="c1">//for    
+</span><span class="c1"></span><span class="p">}</span><span class="c1">//void loop
+</span></code></pre></div><p>Which made our green and red LED cross fade from each other:</p>
+
+<figure >
+    
+        <video class='controls' controls="true" playsinline ><source src='arduino_mega_cross_fade.mp4' type="video/mp4"></video>
+     
+    
+    <figcaption>Cross fading LEDs!</figcaption>
+    
+</figure>
+<p>At that point we felt it was time to try some other boards as well.</p>
+<h4 id="arduino-yun">Arduino YUN</h4>
+<p>I didn&rsquo;t get to play with the <em>Arduino Yún</em>, which is the original version. Because there is now a <em>Rev 2</em> version, let me go into the technical aspects of the updated one. It runs on a <a class="link" href="http://www.atmel.com/Images/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf"  target="_blank" rel="noopener"
+    >ATmega32U4</a>, same as the old version. The special thing about the <em>Yun</em> is that it has loads of connections, including Wi-fi, and it has a second microprocessor (the <a class="link" href="https://www.openhacks.com/uploadsproductos/ar9331_datasheet.pdf"  target="_blank" rel="noopener"
+    >Atheros AR9331</a>) that runs on Linux with <em>python</em> preinstalled. You can find an extensive pinout of the board <a class="link" href="https://content.arduino.cc/assets/Pinout-YUNREV2_latest.pdf"  target="_blank" rel="noopener"
+    >here</a>.</p>
+<p><figure style="flex-grow: 128; flex-basis: 309px">
+		<a href="../../blog/week-8/arduino_yun.jpg" data-size="500x388">
+			
+			<img src="../../blog/week-8/arduino_yun.jpg"
+				
+				width="500"
+				height="388"
+				loading="lazy"
+				alt="The original Arduino YUN found at the Waag">
+		</a>
+		
+		<figcaption>The original Arduino YUN found at the Waag</figcaption>
+		
+	</figure></p>
+<p>Here are some of the most important components:</p>
+<ul>
+<li>14 digital input/output pins
+<ul>
+<li>Of these 7 can be used as 8-bit PWM outputs, those with the <code>~</code> mark next to them</li>
+<li>Each pin can provide or receive 40 mA</li>
+<li>Pins 0 and 1 are used for <em>RX</em> and <em>TX</em> respectively</li>
+</ul>
+</li>
+<li>6 analog inputs, labelled A0 - A6</li>
+<li>a 16 MHz crystal oscillator</li>
+<li>a standard USB connection</li>
+<li>a micro USB connection</li>
+<li>an ethernet connection</li>
+<li>a microSD slot for external storage</li>
+<li>three reset buttons; for the WiFi, the Arduino chip and the Linux chip</li>
+</ul>
+<p>For more information, see the <a class="link" href="https://store.arduino.cc/arduino-yun-rev-2"  target="_blank" rel="noopener"
+    >Arduino website</a>.</p>
+<h4 id="arduino-nano">Arduino Nano</h4>
+<p>Henk said that he had the <em>Arduino Mini</em>, but when we investigated photos of the Mini we noticed that the one we were holding looked slightly different, and found that we had in fact and <em>Arduino Nano</em>.</p>
+<p><figure style="flex-grow: 193; flex-basis: 464px">
+		<a href="../../blog/week-8/arduino_nano.jpg" data-size="820x424">
+			
+			<img src="../../blog/week-8/arduino_nano.jpg"
+				
+				width="820"
+				height="424"
+				loading="lazy"
+				alt="The Arduino Nano">
+		</a>
+		
+		<figcaption>The Arduino Nano</figcaption>
+		
+	</figure></p>
+<p>And actually, after investigating for this documentation, I <em>think</em> that it&rsquo;s a clone of the <em>Arduino Nano V3</em>, because it looks exactly like <a class="link" href="https://www.otronic.nl/a-60871666/arduino/nano-v3-arduino-compatible-ch340-voorgesoldeerd"  target="_blank" rel="noopener"
+    >this one</a>, whereas the <a class="link" href="https://www.elektor.nl/arduino-nano-v3"  target="_blank" rel="noopener"
+    >original V3</a> looks just a bit different. They both have a ATmega328 microcontroller with 32 KB of memory though, just like the <em>Arduino Uno</em>. I think <a class="link" href="https://content.arduino.cc/assets/Pinout-NANOevery_latest.pdf"  target="_blank" rel="noopener"
+    >this</a> pinout schema would still be the one to apply to the V3? Some other facts about the Nano:</p>
+<ul>
+<li>14 digital input/output pins
+<ul>
+<li>Of these 6 can be used as PWM outputs</li>
+<li>Each pin can provide or receive 40 mA</li>
+<li>Pins 0 and 1 are used for <em>RX</em> and <em>TX</em> respectively</li>
+</ul>
+</li>
+<li>8 analog inputs, labelled as A0 - A7</li>
+<li>a 16 MHz crystal oscillator</li>
+<li>a mini-USB connection</li>
+<li>a reset button</li>
+</ul>
+<p>This is the cheapest Arduino PCB and really tiny, making it more ideal than the Uno in case there isn&rsquo;t a lot of space available in the project you&rsquo;re building. It&rsquo;s size also makes it fit onto a breadboard if you use pin headers.</p>
+<p>Loes and I did experiment with this board for a bit. We plugged the Mini-B USB cable into the laptop, selected the <em>Arduino Nano</em> from the <em>Boards</em>, and wanted to upload the standard &ldquo;Blink&rdquo; script, but it failed the first time.</p>
+<p><figure style="flex-grow: 174; flex-basis: 418px">
+		<a href="../../blog/week-8/arduino_nano_blink_compile_error.jpg" data-size="820x470">
+			
+			<img src="../../blog/week-8/arduino_nano_blink_compile_error.jpg"
+				
+				width="820"
+				height="470"
+				loading="lazy"
+				alt="The compile error for the Arduino Nano">
+		</a>
+		
+		<figcaption>The compile error for the Arduino Nano</figcaption>
+		
+	</figure></p>
+<p>After a short online search, I found a <a class="link" href="https://www.arduino.cc/en/Guide/ArduinoNano"  target="_blank" rel="noopener"
+    >&ldquo;Getting started with the Arduino Nano&rdquo;</a> tutorial, that mentioned that for old boards you had to select the <em>ATmega328P (Old Bootloader)</em> as the <em>Processor</em>. We tried this, and it worked, the build-in LED started blinking. Ok, so we had an old <em>Arduino Nano</em> it seemed.</p>
+<p>We next looped the wires from the breadboard that we had set-up already from playing with the <em>Arduino Mega</em> through the holes of the <em>GND</em> and two of the digital pins, labelled <em>D9</em> and <em>D10</em>, both of which can do <em>PWM</em> (but that was a happy coincidence, because we didn&rsquo;t understand <em>PWM</em> enough at that time <span class="kaomoji">(*^▽^*)ゞ</span>
+), uploaded the fading program, and the two LEDs started fading again.</p>
+<p><figure style="flex-grow: 141; flex-basis: 339px">
+		<a href="../../blog/week-8/arduino_nano_fading_leds.jpg" data-size="820x579">
+			
+			<img src="../../blog/week-8/arduino_nano_fading_leds.jpg"
+				
+				width="820"
+				height="579"
+				loading="lazy"
+				alt="Connecting our breadboard set-up to the Arduino Nano">
+		</a>
+		
+		<figcaption>Connecting our breadboard set-up to the Arduino Nano</figcaption>
+		
+	</figure></p>
+<h3 id="esp-boards">ESP Boards</h3>
+<p>There were two boards with <em>ESP</em> microcontrollers that were lying on the table for us to play with, the <em>ESP8266</em> and its newer iterations the <em>ESP32</em>. These both have WiFi, whereas the <em>ESP32</em> also has Bluetooth.</p>
+<h4 id="nodemcu-esp8266">NodeMCU ESP8266</h4>
+<p>The <em>NodeMCU</em> is a development board that holds the <em>ESP8266</em> microchip having the <em>Tensilica Xtensa® 32-bit LX106 RISC</em> microprocessor. There is 128 KB of memory.</p>
+<p><figure style="flex-grow: 141; flex-basis: 339px">
+		<a href="../../blog/week-8/nodemcu_esp8266.jpg" data-size="500x353">
+			
+			<img src="../../blog/week-8/nodemcu_esp8266.jpg"
+				
+				width="500"
+				height="353"
+				loading="lazy"
+				alt="The NodeMCU ESP8266 V1.0">
+		</a>
+		
+		<figcaption>The NodeMCU ESP8266 V1.0</figcaption>
+		
+	</figure></p>
+<ul>
+<li>Operates at 3.3V</li>
+<li>17 digital input/output pins, labelled as D0 - D8, RX, TX, CLK, CMD, SD0 - SD3
+<ul>
+<li>Of these 4 can be used as <em>PWM</em>, being D2, D5, D6 and D8</li>
+<li>Each can be configured to be an internal pull-up or pull-down resistor</li>
+</ul>
+</li>
+<li>1 analog input, labelled as A0</li>
+<li>2 <em>UART</em> interfaces</li>
+<li>a micro-USB connection</li>
+</ul>
+<p>Here is an overview of the <em>pinout</em>, from <em>LastMinuteEngineers.com</em></p>
+<p><figure style="flex-grow: 122; flex-basis: 293px">
+		<a href="../../blog/week-8/nodemcu_esp8266_pinout.png" data-size="666x545">
+			
+			<img src="../../blog/week-8/nodemcu_esp8266_pinout.png"
+				
+				width="666"
+				height="545"
+				loading="lazy"
+				alt="The pinout of the NodeMCU ESP8266">
+		</a>
+		
+		<figcaption>The pinout of the NodeMCU ESP8266</figcaption>
+		
+	</figure></p>
+<p>The ESP8266 can both connect to a WiFi network and also set up a network of its own, allowing other devices to connect directly to it.</p>
+<p>You can program and power the <em>ESP8266 NodeMCU</em> via the micro-USB connector. Alternatively, if you have a 5V voltage source, the <code>VIN</code> pin can be used to directly supply the ESP8266 and its peripherals.</p>
+<p><a class="link" href="https://lastminuteengineers.com/esp8266-nodemcu-arduino-tutorial/"  target="_blank" rel="noopener"
+    >This</a> website has a lot more technical specifications and explanations about the <em>NodeMCU ESP8266</em>.</p>
+<p>After playing with two Arduino&rsquo;s we were ready to try a different type of board and picked the <em>NodeMCU ESP8266</em>.</p>
+<p>This board wasn&rsquo;t in the available boards of the Arduino IDE, but we found a <a class="link" href="https://randomnerdtutorials.com/how-to-install-esp8266-board-arduino-ide/"  target="_blank" rel="noopener"
+    >tutorial</a> on how to install the <em>ESP8266</em> to the boards. From the Arduino <em>Preferences</em> add <code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code> to the <em>Board Manager URLs</em></p>
+<p><figure style="flex-grow: 141; flex-basis: 340px">
+		<a href="../../blog/week-8/nodemcu_adding_board_manager.png" data-size="820x578">
+			
+			<img src="../../blog/week-8/nodemcu_adding_board_manager.png"
+				
+				width="820"
+				height="578"
+				loading="lazy"
+				alt="Adding the &ldquo;ESP8266&rdquo; to the Arduino IDE board managers">
+		</a>
+		
+		<figcaption>Adding the “ESP8266” to the Arduino IDE board managers</figcaption>
+		
+	</figure></p>
+<p>Next, go to <em>Tools</em> -&gt; <em>Board</em> -&gt; <em>Board Manager</em>. In the new window search for <em>ESP8266</em> and install <em>ESP8266</em> by <em>ESP8266 Community</em>.</p>
+<p>Once that is installed, there should now be another option to choose from under <em>Board</em>, the <em>ESP8266 Boards</em>. Loes and I noticed that there is a <em>NodeMCU 0.9</em> and <em>NodeMCU 1.0</em> option available. A quick image search and comparing to the one on our desk later and we knew that ours was the <em>1.0</em> version.</p>
+<p><figure style="flex-grow: 254; flex-basis: 611px">
+		<a href="../../blog/week-8/nodemcu_picking_board.jpg" data-size="820x322">
+			
+			<img src="../../blog/week-8/nodemcu_picking_board.jpg"
+				
+				width="820"
+				height="322"
+				loading="lazy"
+				alt="Selecting the &ldquo;NodeMCU 1.0&rdquo; board">
+		</a>
+		
+		<figcaption>Selecting the “NodeMCU 1.0” board</figcaption>
+		
+	</figure></p>
+<p>With the correct board selected, we also selected the <em>Port</em> of the <em>NodeMCU</em>, labelled as <code>/dev/cu.usbserial-0001</code>.</p>
+<p><figure style="flex-grow: 433; flex-basis: 1041px">
+		<a href="../../blog/week-8/nodemcu_select_port.png" data-size="642x148">
+			
+			<img src="../../blog/week-8/nodemcu_select_port.png"
+				
+				width="642"
+				height="148"
+				loading="lazy"
+				alt="Set the &ldquo;Port&rdquo; to the Micro-USB connection to the &ldquo;NodeMCU&rdquo;">
+		</a>
+		
+		<figcaption>Set the “Port” to the Micro-USB connection to the “NodeMCU”</figcaption>
+		
+	</figure></p>
+<p>However, when trying to upload the simple program from the tutorial to make the internal LED blink, we ran into an error about <code>pyserial or esptool directories not found</code>. I eventually found a solution to this on the <a class="link" href="https://forum.arduino.cc/index.php?topic=702144.0"  target="_blank" rel="noopener"
+    >Arduino forum</a>. Having to replace some very specific lines within the <code>list_ports_osx.py</code> file:</p>
+<p><figure style="flex-grow: 159; flex-basis: 381px">
+		<a href="../../blog/week-8/nodemcu_error_fix.png" data-size="945x594">
+			
+			<img src="../../blog/week-8/nodemcu_error_fix.png"
+				
+				width="945"
+				height="594"
+				loading="lazy"
+				alt="How to fix the error in the &ldquo;ESP8266&rdquo; library">
+		</a>
+		
+		<figcaption>How to fix the error in the “ESP8266” library</figcaption>
+		
+	</figure></p>
+<p>We didn&rsquo;t expect that to work in one go, but it actually did, and the internal LED started blinking!</p>
+<p><figure style="flex-grow: 168; flex-basis: 404px">
+		<a href="../../blog/week-8/nodemcu_blinking_internal_led.jpg" data-size="820x486">
+			
+			<img src="../../blog/week-8/nodemcu_blinking_internal_led.jpg"
+				
+				width="820"
+				height="486"
+				loading="lazy"
+				alt="Getting the internal LED to blink on the NodeMCU ESP8266">
+		</a>
+		
+		<figcaption>Getting the internal LED to blink on the NodeMCU ESP8266</figcaption>
+		
+	</figure></p>
+<p>Next, we plugged the header pins underneath the <em>NodeMCU</em> into the breadboard and connected the wires the <em>GND</em> and two <em>Dx</em> rows (randomly choose for <em>D2</em> and <em>D7</em>, which had pin numbers <em>13</em> and <em>4</em>). Strangely though pin <em>13</em> does not have <em>PWM</em> according to the pinout schema from above, but when we loaded the <em>Fade</em> program, both the red and green LED were fading nicely.</p>
+
+<figure >
+    
+        <video class='controls' controls="true" playsinline ><source src='nodemcu_fading_leds.mp4' type="video/mp4"></video>
+     
+    
+    <figcaption>Cross fading LEDs with the &#39;NodeMCU ESP8266&#39;</figcaption>
+    
+</figure>
+<p>Loes did have to keep her finger pressed on the <em>NodeMCU</em> board, otherwise the contact with the breadboard was lost.</p>
+<h4 id="esp82-ai-thinker">ESP82 AI-Thinker</h4>
+<p>The other ESP board was an <a class="link" href="https://github.com/raphaelbs/esp32-cam-ai-thinker/blob/master/assets/ESP32-CAM_Product_Specification.pdf"  target="_blank" rel="noopener"
+    ><em>ESP32-CAM AI-Thinker</em></a>. This has a tiny camera, a microSD card slot, and a very bright on-board LED. The <em>ESP32</em> has WiFi (like the <em>ESP8266</em>), but the <em>ESP32</em> also has Bluetooth. There is 512 KB of memory.</p>
+<p><figure style="flex-grow: 93; flex-basis: 224px">
+		<a href="../../blog/week-8/esp32_cam_ai_thinker.jpg" data-size="500x535">
+			
+			<img src="../../blog/week-8/esp32_cam_ai_thinker.jpg"
+				
+				width="500"
+				height="535"
+				loading="lazy"
+				alt="The ESP32-CAM AI-Thinker board">
+		</a>
+		
+		<figcaption>The ESP32-CAM AI-Thinker board</figcaption>
+		
+	</figure></p>
+<ul>
+<li>10 digital input/output pins</li>
+<li>1 <em>UART</em> interface, labelled as <em>U0R</em> and <em>U0T</em></li>
+<li>a micro-SD card slot</li>
+<li>a tiny camera</li>
+</ul>
+<p><a class="link" href="https://randomnerdtutorials.com/esp32-cam-ai-thinker-pinout/"  target="_blank" rel="noopener"
+    >This</a> page on the <em>ESP32-CAM AI Thinker</em> has a lot of technical information, including the <em>pinout</em>:</p>
+<p><figure style="flex-grow: 226; flex-basis: 542px">
+		<a href="../../blog/week-8/esp32_pinout.png" data-size="999x442">
+			
+			<img src="../../blog/week-8/esp32_pinout.png"
+				
+				width="999"
+				height="442"
+				loading="lazy"
+				alt="The ESP32-CAM AI-Thinker pinout | From RandomNerdTutorials">
+		</a>
+		
+		<figcaption>The ESP32-CAM AI-Thinker pinout | From RandomNerdTutorials</figcaption>
+		
+	</figure></p>
+<p>I found <a class="link" href="https://randomnerdtutorials.com/program-upload-code-esp32-cam/"  target="_blank" rel="noopener"
+    >this</a> tutorial to program the <em>ESP32-CAM</em> with the Arduino IDE. It has a very handy example on how the <em>ESP32</em> needs to be connected to an FTDI (it doesn&rsquo;t have a USB connection of its own):</p>
+<p><figure style="flex-grow: 225; flex-basis: 542px">
+		<a href="../../blog/week-8/esp32_connection_guide_ftdi.jpg" data-size="820x363">
+			
+			<img src="../../blog/week-8/esp32_connection_guide_ftdi.jpg"
+				
+				width="820"
+				height="363"
+				loading="lazy"
+				alt="How to connect the &ldquo;ESP-32 CAM&rdquo; to an FTDI | From RandomNerdTutorials">
+		</a>
+		
+		<figcaption>How to connect the “ESP-32 CAM” to an FTDI | From RandomNerdTutorials</figcaption>
+		
+	</figure></p>
+<p>And you might miss it, but <strong>the <code>GPIO 0</code> pin needs to be connected the a <code>GND</code> pin</strong> as well. Only when this connection is made does the <em>ESP32</em> go into flashing mode and you can upload code to the board.</p>
+<p>I carefully recreated the setup from the image, using the <a class="link" href="http://academy.cba.mit.edu/classes/embedded_programming/FTDI/USB-FT230XS-serial.png"  target="_blank" rel="noopener"
+    >FTDI board schematic</a> to check what each pin represented. Making sure to connect the <code>GND</code> pins first, and to <em>not</em> connect the <code>5V</code> pin to <code>GND</code>!</p>
+<p><figure style="flex-grow: 160; flex-basis: 384px">
+		<a href="../../blog/week-8/esp32_connect_ftdi.jpg" data-size="820x512">
+			
+			<img src="../../blog/week-8/esp32_connect_ftdi.jpg"
+				
+				width="820"
+				height="512"
+				loading="lazy"
+				alt="Connecting the ESP32-CAM board to my FTDI">
+		</a>
+		
+		<figcaption>Connecting the ESP32-CAM board to my FTDI</figcaption>
+		
+	</figure></p>
+<p>To install the <em>ESP32</em> library in the Arduino IDE, follow the same steps as for any library: Go to the Arduino IDE <em>Preferences</em> and in the <em>Board Manager urls</em> add <code>https://dl.espressif.com/dl/package_esp32_index.json</code>. Then under <em>Tools</em> -&gt; <em>Board</em> -&gt; <em>Board Manager</em> install <em>ESP32</em> by <em>Espressif Systems</em></p>
+<p>I could then select the <em>AI Thinker ESP32-CAM</em> under <em>Boards</em> from the <em>very</em> long list of <em>ESP32</em> boards.</p>
+<p><figure style="flex-grow: 209; flex-basis: 501px">
+		<a href="../../blog/week-8/esp32_board_selection.png" data-size="765x366">
+			
+			<img src="../../blog/week-8/esp32_board_selection.png"
+				
+				width="765"
+				height="366"
+				loading="lazy"
+				alt="Select the &ldquo;ESP32-CAM AI-Thinker&rdquo; board">
+		</a>
+		
+		<figcaption>Select the “ESP32-CAM AI-Thinker” board</figcaption>
+		
+	</figure></p>
+<p>Don&rsquo;t forget to <strong>set the <em>Port</em> to my FTDI</strong>, since I was now using the FTDI to upload a program to the <em>ESP32</em>.</p>
+<p>I started with an empty program, just to make sure that I could make it upload. At first I got an error that <code>Resource busy: '/dev/cu.usbserial-D30A3T7C'</code>. O right! I still had the <code>screen</code> command running. I closed it (with <code>CTRL+a</code> + <code>CTRL+\</code>) and uploaded my program again.</p>
+<p>This time I saw that a connection was trying to be made with the board and saw a bunch of <code>....._____....._____</code> slowly appear on my screen. After waiting for a while an error appeared about a <em>time out</em>:</p>
+<p><figure style="flex-grow: 216; flex-basis: 519px">
+		<a href="../../blog/week-8/esp32_error_time_out.png" data-size="1108x512">
+			
+			<img src="../../blog/week-8/esp32_error_time_out.png"
+				
+				width="1108"
+				height="512"
+				loading="lazy"
+				alt="A time out error">
+		</a>
+		
+		<figcaption>A time out error</figcaption>
+		
+	</figure></p>
+<p>I <em>really</em> should&rsquo;ve kept on reading the tutorial, because the next sentence was literally <em>&ldquo;When you start to see some dots on the debugging window, <strong>press the on-board RST button</strong>.&quot;</em> <span class="kaomoji">(*^▽^*)ゞ </span>
+</p>
+<p>I uploaded the code again, and pressed the tiny <code>RST</code> button on the back when I saw the <code>....____</code> pattern appear. A second later the connection was made and my empty program was loaded onto the board.</p>
+<p><figure style="flex-grow: 100; flex-basis: 240px">
+		<a href="../../blog/week-8/esp32_back_rst_button.jpg" data-size="500x500">
+			
+			<img src="../../blog/week-8/esp32_back_rst_button.jpg"
+				
+				width="500"
+				height="500"
+				loading="lazy"
+				alt="The back of the &ldquo;ESP32-CAM&rdquo; board with the reset button in the lower-left">
+		</a>
+		
+		<figcaption>The back of the “ESP32-CAM” board with the reset button in the lower-left</figcaption>
+		
+	</figure></p>
+<p>I made sure to read the rest of the tutorial, but thankfully it was only one more step after the program was done uploading: <strong>Disconnect the <code>GPIO 0</code> pin from <code>GND</code> and press the <code>RST</code> button</strong> to run the new code.</p>
+<p>With my empty program I didn&rsquo;t know if that last step went ok, so I connected the <code>GPIO 0</code> pin to <code>GND</code> again and opened the default &ldquo;blink&rdquo; example. I found online that the flashlight LED is connected to pin <code>GPIO 4</code>, I thus set <code>#define led_pin 4</code> and uploaded the program.</p>
+<p>I was watching the LED from close by, not considering the giant size of this LED, because when it started flashing, it was <em>bright</em> and I got blinded for a second <span class="kaomoji">(O_O)</span>
+</p>
+<p><figure style="flex-grow: 100; flex-basis: 240px">
+		<a href="../../blog/week-8/esp32_bright_led.jpg" data-size="500x500">
+			
+			<img src="../../blog/week-8/esp32_bright_led.jpg"
+				
+				width="500"
+				height="500"
+				loading="lazy"
+				alt="Using the &ldquo;blink&rdquo; program on the VERY bright LED of the ESP32-CAM">
+		</a>
+		
+		<figcaption>Using the “blink” program on the VERY bright LED of the ESP32-CAM</figcaption>
+		
+	</figure></p>
+<p>After taking a photo and video I quickly uploaded the empty program again, just to make the flashing stop <span class="kaomoji">✖‿✖</span>
+ Only then did I find that the tiny built-in LED was set to port <code>GPIO 33</code>.</p>
+<!-- raw HTML omitted -->
+<p>I had heard Loes talking about a <em>WiFi scan</em> example that seemed interesting to try. Within the Arduino IDE I opened the <em>Examples</em> -&gt; <em>WiFi</em> -&gt; <em>WiFiScan</em> example, and without changing anything I uploaded it to the board.</p>
+<p>This time I <em>could</em> use the <em>Serial Monitor</em> from the Arduino IDE because I was both uploading my program to the <em>ESP32</em> with the FTDI and listening to incoming messages. I saw that the Waag has <em>a lot</em> of wifi signals in the neighborhood!</p>
+<p><figure style="flex-grow: 150; flex-basis: 361px">
+		<a href="../../blog/week-8/esp32_wifiscan.png" data-size="1318x874">
+			
+			<img src="../../blog/week-8/esp32_wifiscan.png"
+				
+				width="1318"
+				height="874"
+				loading="lazy"
+				alt="Running the WiFi scan example">
+		</a>
+		
+		<figcaption>Running the WiFi scan example</figcaption>
+		
+	</figure></p>
+<p>Finally, I wanted to try and access the camera. I found a <a class="link" href="https://randomnerdtutorials.com/esp32-cam-video-streaming-face-recognition-arduino-ide/"  target="_blank" rel="noopener"
+    >tutorial</a> that walked me through the (few) required steps. Such as selecting the <em>Examples</em> -&gt; <em>ESP32</em> -&gt; <em>Camera</em> -&gt; <em>CameraWebServer</em>. Next, I had to input the name and password of the wifi I was currently on at the Waag, and finally, I had to select the correct camera model by commenting the line with <code>#define CAMERE_MODEL_WROVER_KIT</code> and uncommenting <code>#define CAMERA_MODEL_AI_THINKER</code>.</p>
+<p>I uploaded the code, and in the <em>Serial Monitor</em> that I still had open, I saw that the camera was ready, and I could access it from a certain IP address.</p>
+<p>The address did work, and I was seeing images (after pressing <em>Start Stream</em>), but there was definitely <em>something</em> still not set up correctly with it <span class="kaomoji">σ_σ</span>
+</p>
+<p><figure style="flex-grow: 139; flex-basis: 335px">
+		<a href="../../blog/week-8/esp32_camera_online.jpg" data-size="820x586">
+			
+			<img src="../../blog/week-8/esp32_camera_online.jpg"
+				
+				width="820"
+				height="586"
+				loading="lazy"
+				alt="The camera was giving a pretty odd image (showing my hexagonal PCB board)">
+		</a>
+		
+		<figcaption>The camera was giving a pretty odd image (showing my hexagonal PCB board)</figcaption>
+		
+	</figure></p>
+<p>I tried adjusting all the sliders and buttons along the left, but nothing made the image any better. After a few minutes I figured that it was ok, I&rsquo;d done enough for now, and closed the web server and disconnected the <em>ESP32</em> from my FTDI.</p>
+<h2 id="reflections">Reflections</h2>
+<p>This was both a very fun and, at times, very frustrating week. Trying to figure out the errors in the code, while not yet having the knowledge to really know what to look for. But eventually I got to play with all of the input/output devices on my board.</p>
+<h4 id="what-went-wrong">What went wrong</h4>
+<p>I really wish that I had remembered that one final setting in the Arduino IDE to use <em>megaTinyCore</em>, so that my three fellow students hadn&rsquo;t been stuck on a vague <code>java</code> error for 2-3 hours during the Thursday instructions class <span class="kaomoji">(╥_╥)</span>
+</p>
+<p>I also still feel that I have a mostly-IR phototransistor on my board that doesn&rsquo;t work well with the LED lights in our house (which shine mostly in the blue spectrum). But that&rsquo;s only minor, since it&rsquo;s only purpose was to play with it using code.</p>
+<h4 id="what-went-well">What went well</h4>
+<p>Since I had already tested my board two weeks ago, I&rsquo;d already gone through most of the troubles of getting my board and software set-up. So uploading my programs went quite well this week, and I could focus on learning more about the <em>code</em> side of things.</p>
+<h4 id="what-i-would-do-differently">What I would do differently</h4>
+<p>I should&rsquo;ve compared the spectral bandwidth of my old phototransistor with the new one so I would&rsquo;ve seen that these were basically the same, so there would be no use in switching them.</p>
+<h4 id="wrapping-up">Wrapping up</h4>
+<p>I&rsquo;m glad that we&rsquo;ve gotten to the point where we can program our boards <span class="kaomoji">(^▽^)</span>
+ However, this week was really simple, only playing with a blinking LED, button, and one input device (the phototransistor). I&rsquo;m therefore a bit nervous about next week&rsquo;s &ldquo;Machine Week&rdquo; in which we need to go from a blinking LED to a <em>bloody moving machine</em> that can perform much more complex tasks <span class="kaomoji">(●__●)</span>
+</p>
+<h2 id="all-files-together">All Files Together</h2>
+<p>No separate files this week, because I all of my functions can be found throughout this week&rsquo;s documentation.</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="../../tags/arduino/">arduino</a>
+        
+            <a href="../../tags/attiny412/">attiny412</a>
+        
+            <a href="../../tags/platformio/">platformio</a>
+        
+            <a href="../../tags/programming/">programming</a>
+        
+            <a href="../../tags/nodemcu/">nodemcu</a>
+        
+            <a href="../../tags/esp8266/">esp8266</a>
+        
+            <a href="../../tags/esp32/">esp32</a>
+        
+    </section>
+
+
+    <section class="article-social-icons">
+        <a class="share_icon" title="Follow me on Twitter" href="https://twitter.com/NadiehBremer"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg></a>
+        <a class="share_icon" title="Follow me on Instagram" href="https://instagram.com/NadiehBremer"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="4" y="4" width="16" height="16" rx="4" />
+  <circle cx="12" cy="12" r="3" />
+  <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+</svg></a>
+    </section><section class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span class="article-time--modified">
+            Last updated on Mar 24, 2021
+        </span>
+    </section></footer>
+
+    
+</article>
+
+    <div class="prev-next--wrapper">
+    
+        <a href="http://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-7/" class="prev-post">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Previous</span>
+        </a>
+    
+
+    
+    <a href="http://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-9/" class="next-post">
+        <span>Next</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M24,24H0V0h24V24z"/>
+    <polyline points="9,18 15,12 9,6 "/>
+</svg>
+
+    </a>
+    
+</div>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="../../blog/week-13/">
+        
+        
+            <div class="article-image">
+                
+                    
+                    <img src="../../blog/week-13/header.18145a90dacb6c16b41b8d7713bebdd5.jpg" 
+                        width="820" 
+                        height="427" 
+                        loading="lazy" 
+                        data-key="week-13" 
+                        data-hash="md5-GBRakNrLbBa0G413E7691Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Output Devices</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="../../blog/week-14/">
+        
+        
+            <div class="article-image">
+                
+                    
+                    <img src="../../blog/week-14/header.c129087f3d52f0230d74a82fd2868b09.jpg" 
+                        width="820" 
+                        height="586" 
+                        loading="lazy" 
+                        data-key="week-14" 
+                        data-hash="md5-wSkIfz1S8CMNdKgv0oaLCQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Networking &amp; Communications</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="../../blog/week-11/">
+        
+        
+            <div class="article-image">
+                
+                    
+                    <img src="../../blog/week-11/header.eb3e9ebdf669c6b2194afd6206c5b3ec.jpg" 
+                        width="1000" 
+                        height="651" 
+                        loading="lazy" 
+                        data-key="week-11" 
+                        data-hash="md5-6z6evfZpxrIZSv1iBsWz7A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Input Devices</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2021 Nadieh&#39;s Fab Academy | <a href="../../student-agreement">Student Agreement</a>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> | Using a personally adjusted version of the theme <a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="%s">Stack</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+    <section class="widget toc">
+        <h2 class="widget-title section-title">TABLE OF CONTENTS</h2>
+        <div id="toc-wrapper">
+            <h3 class="page-title">Embedded Programming</h3>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#assignments">Assignments</a></li>
+    <li><a href="#hero-shots">Hero Shots</a></li>
+    <li><a href="#programming-my-board">Programming My Board</a>
+      <ul>
+        <li><a href="#a-blinking-led">A Blinking LED</a></li>
+        <li><a href="#pin-numbers">Pin Numbers</a></li>
+        <li><a href="#a-fading-led">A Fading LED</a></li>
+        <li><a href="#sending-print-statements">Sending Print Statements</a></li>
+        <li><a href="#pressing-the-button">Pressing the Button</a></li>
+        <li><a href="#using-the-phototransistor">Using the Phototransistor</a></li>
+        <li><a href="#programming-with-platformio">Programming With PlatformIO</a></li>
+        <li><a href="#programming-with-python">Programming With Python</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-attiny412-datasheet">The ATtiny412 Datasheet</a></li>
+    <li><a href="#programming-other-boards">Programming Other Boards</a>
+      <ul>
+        <li><a href="#arduino-boards">Arduino Boards</a></li>
+        <li><a href="#esp-boards">ESP Boards</a></li>
+      </ul>
+    </li>
+    <li><a href="#reflections">Reflections</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#all-files-together">All Files Together</a></li>
+  </ul>
+</nav>
+        </div>
+    </section>
+</aside>
+
+<script>
+    
+    
+    window.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    clearActiveStatesInTableOfContents()
+                    document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+                } else {
+                    
+                }
+            });
+        });
+    
+        
+        document.querySelectorAll('h2[id], h3[id]').forEach((section) => {
+            observer.observe(section);
+        });
+        
+    });
+
+    function clearActiveStatesInTableOfContents() {
+        document.querySelectorAll('aside #TableOfContents li').forEach((section) => {
+            section.classList.remove('active');
+        });
+    }
+</script>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="../../ts/main.js" defer></script>
+
+<script>
+    
+    
+    let table = document.getElementsByTagName("table")
+
+    if(table.length > 0) {
+        for(let i = 0; i < table.length; i++) {
+            table[i].addEventListener("click", (e) => {
+                let target = e.target
+                if(target.localName === "code") {
+                    let range = document.createRange()
+                    range.selectNodeContents(target)  
+                    let sel = document.getSelection()
+                    sel.removeAllRanges()
+                    sel.addRange(range)
+        
+                    document.execCommand('copy')
+                    sel.removeAllRanges()
+
+                    
+                    target.classList.add('copy-animate')
+                    setTimeout(() => {
+                        target.classList.remove('copy-animate')
+                    }, 400)
+                }
+            })
+        }
+    }
+</script>
+    </body>
+</html>

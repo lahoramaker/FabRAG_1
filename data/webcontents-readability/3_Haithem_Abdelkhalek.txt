@@ -1,0 +1,10 @@
+Title: FAB ACADEMY 2018 - HAITHEM ABDELKHALEK
+
+Content:
+From the resulting test map:
+For engraving we can pick the speed and power depending on the how dark we want the burning to be.
+For cutting it was clear that at POWER=75% and SPEED=15 the cut was clean and lowest burning for the edges.
+Tips From Regional Review! -
+The minimum power is used to cut points (like corners), while max power is used along lines. It is noticed from the above photo that we are using too much power for "min" as if the corner of the test squaresare rounded. So we might need to lower the minimum power and for better test, we can use longer lines (i.e: bigger dimensions).
+Tips From Regional Review! -
+It is noticed that the power used for cutting the test part might be high as so much burn is there. As a Recommendation power can be lowered and use tape at the back of the wood piece, it would get you much neat look.

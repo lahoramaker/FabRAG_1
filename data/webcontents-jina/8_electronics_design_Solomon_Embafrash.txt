@@ -1,0 +1,177 @@
+Title: Fab Academy 2018- Solomon Embafrash
+
+URL Source: http://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/exercise06.html
+
+Markdown Content:
+Week 6. Electronic design
+
+
+---------------------------
+
+*   [Tasks](http://fab.academany.org/2018/labs/fablabaalto/students/solomon-embafrash/exercise06.html#tasks)
+*   [Process](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/fab.academany.org/2018/labs/fablabaalto/students/solomon-embafrash/exercise06.html#process)
+*   [Resources](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/fab.academany.org/2018/labs/fablabaalto/students/solomon-embafrash/exercise06.html#resources)
+*   [Reflection](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/fab.academany.org/2018/labs/fablabaalto/students/solomon-embafrash/exercise06.html#Reflection)
+*   [Models files](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/fab.academany.org/2018/labs/fablabaalto/students/solomon-embafrash/exercise06.html#models)
+
+During this week I designed, fabricated and tested a basic board for the ATtiny44 from scratch.
+
+![Image 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/23.png)
+
+Tasks
+-----
+
+*   Redraw the echo hello-world board, adding at least one button and a LED
+*   Fabricate the board
+*   Test the board
+*   Measure its operation
+
+Process explanation
+-------------------
+
+### Design a Hello-World board using Eagle
+
+I decided to create a board utilizing the Hello World FTDI as an example (Figure 1). I decided to use [Autodesk Eagle](http://www.autodesk.com/education/free-software/eagle) as a EDA (Electronic design automation) to design my board. It is one of the most utilized tool for the hobbyists all around the world. In the future I might try other alternatives. My board should include in addition to the previous components:
+
+*   A Green LED programmable from the ATTiny
+*   A button with a simple debouncing circuit (that is, to avoid glitches in the transitions)
+*   A RED LED indicating the circuit is powered
+*   A set of extra headers connected to free pins in order to connect external sensor and actuators. The TX and RX signals of the FDTI will be utilized when not in use it for programming/using serial port.
+
+![Image 2: Eagle design 1](http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/img/week6/design0.jpg)
+
+The lists of components to use are:
+
+*   Atmel ATtiny44 microcontroller
+*   20Mhz Crystal
+*   SPI headers pins
+*   FTDI header pins
+*   Pull up resistor for RESET signal (10K)
+*   Decoupling capacitor: 1uF
+*   Omron switch
+*   Debouncing circuit: two resistors of 49.9k and one Capacitor of 1nF
+*   Yellow programmable LED + its current limiting resistor (499)
+*   Red power LED + its current limiting resistor (499)
+*   6 pins header (SPI MISO, SPI MOSI, FTDI TX, FTDI RX, 2 pins free left from ATtiny)
+
+I installed Autodesk Eagle 8.6.3 in my mac machine. Next, I had to install the Fab Lab components library ( [fab.lbr](http://archive.fabacademy.org/archives/2017/doc/electronics/fab.lbr) ) containing majority of components from the [Fabinventory](http://fab.cba.mit.edu/about/fab/inv.html) . I just downloaded the library and placed in the "library folder" of my Eagle installation. Actually, you can set where Eagle looks for your personal libraries in Options>Directories. Finally, in order to be able to to use the library, I should select it on the left menu, click with the right button and select Use. Other option is to click on the gray button located at the right of the library name.
+
+![Image 3: Eagle library](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/3.png) ![Image 4: Eagle fab.lbr activation](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/4.png)
+
+Figure 2 Setting the adequate directory for the fab.lbrlibrary and activating it
+
+After creating a new project File>New>Project, I need to create the schematics: Put the mouse on the new created project> Right button>New>SchematicA schematic diagram, is a representation of the components of a circuit using graphic symbols (simple shapes). It shows also the lines which connects the components and through which the electricity flow. Figure 4 shows the main buttons of the UI. When you press the button Add componentyou select a component from the libraries in use to be added to the schematics. In order to simplify the search of components (reduce the number of options) i marked as used just the fab.lbr and the supply1.lbr. I marked the rest as not used by clicking on the green button.
+
+![Image 5: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/5.png)
+
+Figure 3 Creating a new schematics.
+
+![Image 6: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/10.png)
+
+Figure 4 Main elements of the user interface.
+
+When you add a component (using the Add component button) is very important that you choose adequate encapsulation. We are not using throughhole components but surface mounted ones, so we must be sure that we select that encapsulation. Usually, components in the fab inventory contains the FAB suffix somewhere. When you add a component (press Enter button when you have selected the correct component), the ADD window opens again. If you want to remove this window just press ESC button. If you cannot find the adequate component, you can use the Search button.
+
+![Image 7: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/9.png)
+
+Figure 5 Choosing the right encapsulation for the ATtiny microcontroller.
+
+If you want to move a component, just press the Move button from the Menu and click on the cross located inside the component you desire to move. If you want to rotate a component, select a component using the Move tool and press the right button of the mouse.
+
+![Image 8: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/27.png)
+
+Figure 5 Choosing the right encapsulation for the ATtiny microcontroller.
+
+I added all the components and give them adequate Name and Value using the buttons on the Menu. The name is the reference name of the component (e.g. R1) while the value is the real value of the component. For the components that does not have a value (e.g. LED) you must add a significant characteristic (e.g. color of the LED).
+
+![Image 9: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/12.png)
+
+Figure 6 Adding components, names and values to the schematics.
+
+After that you must create the connections among the components. To that end, I used theNet tool and NOT the wire/linetool. In order to simplify the circuit I gave names to some of those Nets using the Name tool. Two netswith the same value will be linked in the board file (they belong to the same electrical line). In order to visualize the name of the nets use the Label button.
+
+![Image 10: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/28.png)
+
+Figure 7 Final version of schematics
+
+After creating all the connections, I run the ERC (Electrical Rule Check) to check that there are no problems with the signals. I got two warnings (Figure 8), but they were caused by the way I drew the circuit. After the schematics was correct I moved to the board view pressing the button Generate/switch to board view. This view permits drawing the traces for the circuit. The main tools I utilized are shown in Figure 9.
+
+![Image 11: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/29.png)
+
+Figure 8. Checking the ERC. Important to check also the warnings!!!
+
+![Image 12: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/13.png)
+
+Figure 9. Board view UI components
+
+I made sure that the traces had the correct size. We are using a milling bit of 1/64. We have to be sure that the isolation lines are of the correct size. Considering that we are using several offsets of 50% we cannot choose a width for the line much smaller than the milling bit. Hence, I thougth that 0.015 mils was a good size. Go Settings>Widthand be sure that it is marked 0.016. You can move the components using the Move button. I placed all the components in my candidate initial position before starting any traces. I had to move from the schematics to the board view several times in order to check the names of the components. I finally opted to print the schematics in paper to make my life easier.
+
+I created manually all routes using the Route button. However, before starting the manual work I pressed the Ratnest button. This button calculate the shortest airwire for the current position of all the components. Once you are drawing a route you can select multiple wire bends (straight angle, non-straight angle, linear, round ... They are quite helpful in order to draw adequate lines. By default, Eagle use a snap grid to place the routes. You can define the grid size pressing the Grid button. In addition, by pressing Alt while creating the route you can define a finer position. You can also set up the Alt resolution in the Grid tool(Figure 10). For some routes I had to set the grid to 0.025 inches with an Alt resolution of 0.005 inches.
+
+The whole process took me quite a lot of time. It was really difficult to imagine which was the best position to place the components initially to reduce the paths and do not have routes that cross each other. I could not manage to create a network without crossing so I had to use 1 0Ohm Resistor to overcome one line cross. Actually, I also realized that having the MISO and MOSI pins of the SPI available in the pin header for external connections (I called it GPIOT) was really problematic, so I finally decided to remove those connections. The new pin header GPIOT had only 4 connections: TXD, RXD, GPIO1, and GPIO2. The current version of the board is shwon in Figure 11.
+
+![Image 13: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/30.png)
+
+Figure 10. My grid size.
+
+![Image 14: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/17.png)
+
+Figure 11. Current version of the board
+
+Once the board was ready I firs inspected visually, using the Show object button, that all the connections were correct. After that, I run the Design Rule Check to check if the clearances were correct. Before I had to configure those values in the Clearance tab of the DRC(Figure 12). I set all the values to 16mil (the size of the milling bit: 1/64 inches)
+
+![Image 15: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/21.png)
+
+Figure 12. Clearances values
+
+The clearance test return several errors, because some lines were really close one from each other (Figure 13), or very close to the pads. To solve the errors I had to move the lines, change the wire bend in some of them and use a finer position for the grid (0.01 inches) in order to position more accurately the traces.
+
+![Image 16: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/31.png)
+
+Figure 13. Clearances errors
+
+After I managed to remove all clearance errors, I removed all unnecessary layers using the Show/Edit/Hide layers button. I just left the Top layer (the one containing the lines and the Pads). In order to show again a hidden layer you must click on the layer number from the Menu (Figure 14)
+
+![Image 17: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/32.png)
+
+Figure 14. Showing just top layer.
+
+The final result is shown in the following figure:
+
+![Image 18: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/33.png)
+
+Figure 15. Final board file. It is ready to mill.
+
+Next we had to edit a little bit the files before being able to send it to Fabmodules so it creates the .rml. The process is as follows:
+
+1.  Export the files from Eagle as.png. The resolution I used was _1500dpi_. Be sure that you select Monochrome in the Export Menu.
+2.  To create the cutout and the traces files
+    1.  Open the previous generated .png file in GIMP.
+    2.  Create a new layer using black as background
+    3.  Modify the size of the layer ( Set Layer to Boundary Size ). We want to make bigger the .png file so we take into account the material milled away by the CNC when cutting the board (1/32in=>0.8 mm). So, we extend the height and the width 1.6 mm. Center the layer in the canvas.
+    4.  Resize the canvas to the layer's size ( Image>Fit Canvas to Layer )
+    5.  Fill the empty area of the bottom layer with black. The visible image is our traces image.
+    6.  Fill the traces layer with white. This is the cutout image.
+    7.  You can create new layers to add images / text. You can create it as an external file if you want to mill it with other settings.
+
+![Image 19: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/34.png)
+
+Figure 16. The traces and cutout files.
+
+After creating the .rml file I noticed that some of the traces were so close, that it could only do one offset, instead of 4 (Figure 17). Hence, I decided to go back to Eagle and reduce the width of some of the most problematics line from 0.016 to 0.012. Furthermore, I redo some of the bends to ensure more distance among tracks. The new .rmlfile managed to have at least 2 offsets in all the lines. Final version in Figure 18.
+
+![Image 20: Eagle design 1](http://archive.fabacademy.org/archives/2017/fablaboulu/students/77/img/week6/design18.png)
+
+Figure 17. The .rml visualization shows areas that might produce problems in Production.
+
+![Image 21: Eagle design 1](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/17.png)
+
+Figure 18. New version of the board.
+
+### Fabricate the board using the Roland CNC precision milling machine
+
+I used the same method as in [Week 4 assignment](http://fab.academany.org/2018/labs/fablabaalto/students/solomon-embafrash/exercise04.html) . I had some problems with the board, since it look like that the FSR1 was a little bit bent. Hence, I had to mill it twice, the second time with a depth of 0.25 instead of 0.15 that is the default one that we use for our machine setup. The final board is shown in the following figure
+
+![Image 22](https://fabacademy.org/2018/labs/fablabaalto/students/solomon-embafrash/media/Pictures/06.ElectronicsDesign/screenshots/24.png)
+
+Figure 19. Board after milling and cleaning.

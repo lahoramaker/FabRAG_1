@@ -1,0 +1,64 @@
+Title: Al-Zubair | Week 12
+
+URL Source: http://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/Week12.html
+
+Markdown Content:
+1-Piezo Buzzer
+--------------
+
+I found this buzzer in the lab, sadly nothing was written on it so i didnt know what model it was, i just recognized the buzzer because i was looking for one earlier on google to get one for this week. and i tested it on the arduino, sure enough, it makes noise. xD
+
+![Image 1](https://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/img/Week12/buzzer.jpeg)I tried to look for the buzzer datasheet, it is not clear but i think i got the right [datasheet](https://www.mouser.com/ds/2/400/ef532_ps-13444.pdf), i just looked for the buzzer that looked almost exactly the same to find some more information about it, that did not help a lot, i only found out it can take upto 30 volts of maximum input volatage.
+
+### Board Design
+
+I used eagle again for this week, and started working on the schematics, first i had to know what components i needed, sure enough i made a list.
+
+![Image 2](https://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/img/Week12/list.PNG)I didnt use a resonator on this one, i was gonna use the internal clock 8Mhz, and i only used 3 pins of the FTDI header because i only wanted to use that as a power source.
+
+#### 1-Schematics
+
+Same process of the schematics, just adding components from the fab library i already downloaded, connecting everything together and done.
+
+![Image 3](https://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/img/Week12/Schematic.PNG)
+
+#### 2-Board Design
+
+For the board design i used autoroute to do the traces after moving the components to where i wanted them to be.
+
+![Image 4](https://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/img/Week12/autoroute.PNG)100%! I love to see that, traces were perfect in one button click. Just had to make sure everything is alright, that didnt take a long time, i dont have many components.
+
+![Image 5](https://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/img/Week12/PCB.PNG)Everything looks great!
+
+#### 3-Milling the board
+
+You need to export the board into a PNG so that you can convert that to RML, i use [fabmodules](http://fabmodules.org/) for that. before you export the board, you need to turn off all the layers except the top layer, thats all you need. After you choose all the right configurations on fabmodules and calculate, just click save to download the rml file.
+
+for the outline or the board cut area, I use MicrosoftPaint, I open the traces PNG file previously exported from eagle, then I just cover the board with a filled white square and make sure thre is just enough black borders for The CNC to cut, and i save it as Outline, then i go on with the fabmodules process and choose 1/32 mill bit instead of 1/64 for the traces.
+
+![Image 6](https://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/img/Week12/boardwithoutcomponents.jpeg)Board looks great! time to solder the components.
+
+![Image 7](https://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/img/Week12/Solderedboard.jpeg)
+
+4-Programming the board
+-----------------------
+
+I found this amazing [tutorial](http://www.instructables.com/id/How-to-use-a-Buzzer-Arduino-Tutorial/) that explained what you need in order to program a buzzer with an example code.
+
+/\* Arduino tutorial - Buzzer / Piezo Speaker More info and circuit: http://www.ardumotive.com/how-to-use-a-buzzer-en.html Dev: Michalis Vasilakis // Date: 9/6/2015 // www.ardumotive.com \*/ const int buzzer = 9; //buzzer to arduino pin 9 void setup(){ pinMode(buzzer, OUTPUT); // Set buzzer - pin 9 as an output } void loop(){ tone(buzzer, 1000); // Send 1KHz sound signal... delay(1000); // ...for 1 sec noTone(buzzer); // Stop sound... delay(1000); // ...for 1sec }So apparently what i am looking for are these functions below.
+
+tone() noTone()A quick search for the [function page](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/) and you understand some more details, like "It is not possible to generate tones lower than 31Hz."
+
+I modified the code so that it can go through frequencies from 31Hz to 1000Hz with a delay between them.
+
+//Fab Academy 2018 //Alzubair Alshehhi const int buzzer = 7; //buzzer to arduino pin 7 int k = 31; void setup(){ pinMode(buzzer, OUTPUT); // Set buzzer - pin 7 as an output } void loop(){ //Loops through the frequencies from 31Hz to 1000Hz or 1KHz for (k=31; k""=1000; k++){ //Download the code to see the missing lessthan condition. tone(buzzer, k); // Send 1KHz sound signal... delay(100); noTone(buzzer); // Stop sound... delay(100); } }
+
+I understand that there is no reset for the k variable, once it reaches 1000 it will stop. but it will take some times and it is okay.
+
+It works!
+
+ Your browser does not support the video tag.Download the Arduino Code [here](https://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/img/Week12/AlzubairFab18buzzeroutput/AlzubairFab18buzzeroutput.ino).  
+Download the Schematics [here](https://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/img/Week12/AlzubairFab18buzz.sch).  
+Download the Board Design [here](https://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/img/Week12/AlzubairFab18buzz.brd).
+
+I will measure the power consumption of an output device on [Week20](https://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/Week20.html) Will be there as soon as I am done with it. and i will probably update this later.

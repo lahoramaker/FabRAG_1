@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Week 13. Invention, Intellectual Property and Business Models.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/LOGO%20fablab.png" alt="" /></span><span class="title">Adrián Torres</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="assignments.html">Assignments</a></li>
+							<li><a href="project.html">Final Project</a></li>
+                            <li><a href="adrianino.html">Adrianino</a></li>
+                            <li><a href="samdino.html">SAMDino</a></li>
+                            <li><a href="fabxiao.html">Fab-Xiao</a></li>
+							<li><a href="about.html">About me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Week 13. Invention, Intellectual Property and Business Models. </h1>
+							
+                            <p>This week there is one type of assignment; only individual.</p> 
+                            
+                            <p>Here are the Assesment Criteria of this Assignment.</p>
+                                <ul><li> Develop a plan for dissemination of your final project. ✔
+                                    <li> Prepare drafts of your summary slide (presentation.png, 1920x1080) and video clip (presentation.mp4, 1080p HTML5, < ~minute, < ~10 MB and put them in your root directory. ✔
+                                    <li> Formulate future opportunities. ✔ 
+                                    <li> Outlined future possibilities and described how to make them probabilities. ✔  
+                                    <li> Prepared a draft summary slide and video. ✔      
+                            </ul>  
+                            
+                            
+                            <p>Like every week, my weekly schedule. 😊 </p>
+                              
+                            <p><img src="images/week13/week13.01.jpg" width="80%"; max-width="700" /></p>  
+                            
+                            <p style="color:orangered;"> <i>Although this week seems easy, but it isn't. It is important that you will do with your project once you finish the Fab Academy, if you are going to make it public and in what way. About the slide and the video, although I have not started the project by shutdown by the COVID-19, I am going to try to make a video with the tests that I have been doing during the past assignments.</i> 😅</p>
+                            
+                            
+                            <h1>Invention</h1>
+                            <p><b>Fab Train Model</b> is the name of my project. It is a set of modules that are part of a model. Since 2002 I have participated in the exhibitions of modular models. This system is not my invention, it was thanks to <b>Antonio G. Portas.</b> In 1997, he created the <a href="http://maquetren.net/wp-content/uploads/2019/04/Modulos-Maquetren-H0-via-unica-recto-MQ40.pdf"><b>Club Módulos Maquetren Regulations,</b></a> where he wanted the Spanish to create modular models in their homes, following <a href="https://www.fremo-net.eu/en/home/"><b>Fremo's standards</b></a> and that those models could join in events at a national level. And he got it. This is an example of the Fremo meetings on the left and on the right one carried out by the <a href="https://modelswitchersclubdotcom.wordpress.com/page/1/"><b>ModelSwitcher's Club</b></a> (with the reglamentations of Club Módulos Maquetren) held at the <b>Fab Lab León.</b></p>
+                            
+                           <span class="image main"><img src="images/week13/week13.02.jpg" alt="" /></span> 
+                            
+                            <p>For the <b>Fab Model Train</b>, I use the <b>Maquetren standard,</b> I adapt it to be able to use digital manufacturing in its construction. The structure is still made of wood, but I am innovating in the use of <b>composites</b> to make the landscape, much lighter and stronger.</p>
+                            <p>In the electronics part, many manufacturers already sell <b>train detection systems</b> and act on different elements of the model, a level crossing, a station, lights ... But thanks to the <b>Fab Academy</b> opportunity, I can manufacture, test and use them myself. And once they are valid, they can be used by my <b>Modeling group.</b></p>
+                            <p>There is also the creation of different elements to <b>decorate</b> the model, using for example 3D printing or laser cutting, designed and manufactured by me. In this case, these objects are exclusive and their sale or distribution would only be done by me.</p>
+                            
+                            
+                            <h1>Intellectual Property</h1>
+                            
+                            <p>In my case and like that of all Fab Academy students, all our work is backed by the <a href="https://opensource.org/licenses/mit-license.php/"><b>MIT License,</b></a> which is an Open Source initiative. Anyone who enters my website can use my documentation without restrictions can use, copy, modify, merge, publish, distribute and even sell copies of the software.</p>
+
+                            <p>As everything I do is for public use, in my case I particularly want to use a Creative Commons license. In the following <a href="https://creativecommons.org/choose/"><b>link,</b></a> responding very easily to a questionnaire gives you a result of the license that best suits your project.</p>
+                            
+                            <p>I plan to use the following license for my project.</p>
+                            
+                            <p align="center"> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><b>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</b></a>.
+                                
+                            <p><b>And why do I choose this type of license?</b></p>
+                            <p>It means that you are <b>free</b> to <b>share it</b> and <b>adapt it</b> or transform it, but under the following terms:</p>
+                            <ul><li><b>Attribution:</b> You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+                                <li><b>NonCommercial:</b> You may not use the material for commercial purposes.
+                                <li><b>ShareAlike:</b> If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.    
+                            </ul>    
+                            
+                    
+                            <h1>Business Models</h1>
+                            
+                            <p>As I have explained in the Invention section, I belong to the ModelSwitcher's Club and with these models we do not profit, what we want is to spread the hobby.</p>
+                            <p>To do this, one way to disseminate the knowledge of this project would be to write an article in the <a href="https://maquetren.net/"><b>Maquetren magazine,</b></a> explaining the steps I have followed to build the model with the new digital manufacturing techniques and redirecting them to the Fab Academy page.</p>
+                            <p>I can also create an <a href="https://www.instructables.com/"><b>Instructable</b></a> and that anyone can create at home, a modular model, following the steps in the documentation.</p>
+
+                            <p>But for example the issue of boards for the control and detection of the train, which is something that some manufacturers already do, I can market it myself. A board for train detection sensors and a board for actuators.</p>
+                            <p>For this you could use platforms such as <a href="https://www.kickstarter.com/"><b>Kickstarter</b></a> to sell through crowdfunding the boards already manufactured by <a href="https://www.seeedstudio.com/fusion_pcb.html"><b>Seeed Studio</b></a> or another PCB manufacturer. Because surely he would manufacture them much faster than me at the Fab Lab.;)😅</p>
+
+                            <p>And who knows, just in the future I find that someone from <b>#fablabnetwork</b> has created a modular model, with everything I have documented on my page and that if possible, travel with our models to a Fab Event and let's play trains together. I would be very proud. 😍🚄🚂🤗 </p>
+                            
+                           
+                        
+                            <h1>The slide and video clip of my Final Project.</h1>
+                            
+                            <p>For the creation of the Slide I have used <b>GIMP</b>, as I did in <a href="week02.html"> <b> Week 02</b></a>, through photos of some processes and the render that I have of that week I am going to do the final composition of the slide.</p>
+
+                            <p>For the video, as I am a <a href="https://www.youtube.com/adriantrain"> <b> YouTuber,</b></a> I already used Pinnacle Studio, so I'm going to create the video with that program.</p>
+                            
+                            <p><span class="image main"><img src="images/week13/week13.03.png" alt="" /></span></p> 
+                            
+                            
+                            <iframe src="https://player.vimeo.com/video/414304264" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            
+                            
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+                        
+                         <p align="center"> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><b>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</b></a>
+                        
+                        
+                        
+                        
+						<div class="inner">
+							
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/Adrian_Towy" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/adriantrains" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/adrian_towy/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.linkedin.com/in/adri%C3%A1n-torres-oma%C3%B1a/" class="icon brands style2 fa-linkedin"><span class="label">Linkedin</span></a></li>
+						
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

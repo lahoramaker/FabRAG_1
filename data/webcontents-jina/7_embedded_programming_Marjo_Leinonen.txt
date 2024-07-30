@@ -1,0 +1,161 @@
+Title: 9. Embedded programming - Fab Academy Marjo Leinonen
+
+URL Source: http://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/assignments/week09/
+
+Markdown Content:
+#### Group assignment[¶](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/assignments/week09/#group-assignment "Permanent link")
+
+Compare the performance and development workflows for other architectures
+
+#### Individual assignment[¶](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/assignments/week09/#individual-assignment "Permanent link")
+
+Read a microcontroller data sheet.  
+Program your board to do something, with as many different programming languages and programming environments as possible.
+
+Group assignment[¶](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/assignments/week09/#group-assignment_1 "Permanent link")
+------------------------------------------------------------------------------------------------------------------------------------------
+
+We worked together with whole Oulu Academy group.
+
+We tested STM32 Nucleo-64 development board with STM32F401RE MCU and ESP32 board using Arduino IDE.
+
+![Image 1](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/Nucleo.jpg)
+
+![Image 2](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/board1.jpg)
+
+We tested the STM32 Nucleo-64 development board with STM32F401RE MCU and ESP32 LOLIN32 development board using Arduino IDE. ST32 is a family of 32-bit microcontroller integrated circuits by STMicroelectronics. This group is related to same 32 bit ARM processor. The STM32 F4-series is the first group of STM32 microcontrollers based on the ARM Cortex-M4F core. The F4-series is also the first STM32 series to have DSP and floating point instructions. The F4 is pin-to-pin compatible with the STM32 F2-series and adds higher clock speed, 64 KB CCM static RAM, full duplex, improved real-time clock, and faster ADCs. All devices offer one 12-bit ADC, a low-power RTC, six general-purpose 16-bit timers including one PWM timer for motor control, two general-purpose 32-bit timers. They also feature standard and advanced communication interfaces.
+
+*   Up to three I2Cs
+*   Up to four SPIs
+*   Two full duplex I2Ss. To achieve audio class accuracy, the I2S peripherals can be clocked via a dedicated internal audio PLL or via an external clock to allow synchronization.
+*   Three USARTs
+*   SDIO interface
+*   USB 2.0 OTG full speed interface
+
+See the [data sheet STM32F401x](https://www.st.com/resource/en/datasheet/stm32f401re.pdf) for more information.
+
+ESP32 is a series of low-cost, low-power system on a chip microcontrollers with integrated Wi-Fi and dual-mode Bluetooth. The ESP32 series employs a Tensilica Xtensa LX6 microprocessor in both dual-core and single-core variations and includes in-built antenna switches, RF balun, power amplifier, low-noise receive amplifier, filters, and power-management modules. ESP32 is created and developed by Espressif Systems, a Shanghai-based Chinese company, and is manufactured by TSMC using their 40 nm process. See the more details about [ESP32 LOLIN32](https://wiki.wemos.cc/products:lolin32:lolin32#tutorials) in the link.
+
+We installed Board Manager for the Nucleo board
+
+![Image 3](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/test1.jpg)
+
+Then we defined the board information (Board and Board number) in Tools
+
+![Image 4](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/test3.jpg)
+
+![Image 5](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/test4.jpg)
+
+and run the blinking test code for the board
+
+![Image 6](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/test5.jpg)
+
+[Video of the blinking](https://gitlab.fabcloud.org/academany/fabacademy/2019/labs/oulu/students/marjo-leinonen/blob/master/docs/images/week09/smtblink.mp4)
+
+![Image 7](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/smtblink.mp4)
+
+With very similar steps and using ESP32 we were able to make some LEDs fading. We just had to taking into account pin numbers, find proper and connect them with LED stripes.
+
+![Image 8](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/esp1.jpg)
+
+![Image 9](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/esp2.jpg)
+
+![Image 10](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/esp3.jpg)
+
+Individual assignment[¶](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/assignments/week09/#individual-assignment_1 "Permanent link")
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+#### Read ATTiny datasheet[¶](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/assignments/week09/#read-attiny-datasheet "Permanent link")
+
+[ATTiny datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf) has 238 pages. I scanned it briefly to understand what it contains, so that I can come back to it when needed. I read more detailed the [short version of the datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/8183S.pdf) (22 pages) that gives a quick reference on the microprosessor features, lists Registers and Commands.
+
+ATtiny24A/44A/84A is a low-power CMOS 8-bit microcontroller based on the AVR enhanced RISC architecture. By executing powerful in structions in a single clock cycle, the ATtiny24A/44A/84A achieves throughputs up to 1 MIPS per MHz allowing the system designer to optimize power consumption versus processing speed.
+
+Figure 1-1. shows the Pinout of ATtiny24A/44A/84A and Block Diagram (Figure 2-1.) gives an overview of the architechture. More detailed Pin descriptions are in chapter 1.1
+
+Resources like drivers, application notes, data sheets and descriptions on development tools are available for download at http://www.atmel.com/avr.
+
+The documentation contains simple code examples that briefly show how to use various parts of the device. Examples are written in c-code.
+
+#### Programming my board[¶](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/assignments/week09/#programming-my-board "Permanent link")
+
+First I installed [Arduino 1.8.8](https://www.arduino.cc/en/Main/Software).
+
+Then I copied Boards Manager installation url from [GitHub SpeceKonde](https://github.com/SpenceKonde/ATTinyCore/blob/master/Installation.md). I opened Arduino File/Preferences and pasted the url in Additional Boards Manager URLs.
+
+![Image 11](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/arduino1.jpg)
+
+Then I opened Boards Manager and installed ATTinyCore by SpenceKonde.
+
+![Image 12](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/arduino2.jpg)
+
+Next I opened Tools and defined Board and Chip to ATTiny44, Clock to 20mHz and Programmer as USBTinyISP.
+
+![Image 13](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/arduino3.jpg)
+
+Then I did Burn Bootloader. When using a chip for the first time, or after changing the clock speed or BOD settings, you must do “burn bootloader” to set the fuses.
+
+I attached my board to my laptop with FTDI cable to provide the power. Then I inserted my USB programmer to my laptop and connected the ISP cable between the programmer and the board.
+
+![Image 14](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/arduino4.jpg)
+
+I opened Button code in File / Examples / Digital. I set the pin numbers according to my board pins, I have PA7 and PB2 as my button and led ports in ATTiny44A.
+
+const int buttonPin = 7; // the number of the pushbutton pin  
+const int ledPin = 8; // the number of the LED pin
+
+I checked the correct pin numbers from [ATTiny Pinout map](https://github.com/SpenceKonde/ATTinyCore)
+
+![Image 15](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/attiny%20pinout.jpg)
+
+and ran the code by pushing arrow.
+
+![Image 16](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/arduino8.jpg)
+
+I got an error message, that USBtiny was not found. What could be the problem?
+
+![Image 17](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/arduino7.jpg)
+
+I checked all the settings again and saw that all the changes I made to ATTiny in Tools were lost. I did the changes again (Board and Chip to ATTiny44, Clock to 20mHz and Programmer as USBTinyISP).
+
+I saved and ran the code again. Now led was turned on. Led will be off when pushing the button.
+
+![Image 18](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/arduino5.jpg)
+
+In the code, if the buttonState is HIGH, LED is turned on, else LED is turned off.
+
+if (buttonState == HIGH) {  
+// turn LED on:  
+digitalWrite(ledPin, HIGH);  
+} else {  
+// turn LED off:  
+digitalWrite(ledPin, LOW);
+
+I modified the code so that if buttonState is HIGH, LED is turned off.
+
+if (buttonState == HIGH) {  
+// turn LED off:  
+digitalWrite(ledPin, LOW);  
+} else {  
+// turn LED on:  
+digitalWrite(ledPin, HIGH);
+
+Now the led is on only when the button is pushed.
+
+![Image 19](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/images/week09/arduino6.jpg)
+
+I also tried the Arduino examples for LED blinking and LED fading. I modified the example codes to have correct pin numbers and I also changed the blinking interval and the fade amount to see how the changes are affecting. Everything was working as expected.
+
+Reflections[¶](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/assignments/week09/#reflections "Permanent link")
+------------------------------------------------------------------------------------------------------------------------------
+
+Embedded programming is completely new to me and I have learned a lot during this week. Luckily the Arduino example codes are very simple, so it is easy to understand what is the program doing and what needs to be changed in the code when working with different microcontroller (ATTiny44).
+
+There are several phases in the programming of the board and every detail and setting needs to be correct to make programming successful. Data sheet is needed, especially the pin descriptions for this assignment. I am sure that in further assignments I will get more deep with the programming and data sheets, it is needed for my final project. Looking forward to that :).
+
+Files[¶](https://fabacademy.org/2019/labs/oulu/students/marjo-leinonen/assignments/week09/#files "Permanent link")
+------------------------------------------------------------------------------------------------------------------
+
+[Arduino Button code](https://gitlab.fabcloud.org/academany/fabacademy/2019/labs/oulu/students/marjo-leinonen/raw/master/docs/images/week09/Button_code/Button_code.ino)  
+[Arduino Blink code](https://gitlab.fabcloud.org/academany/fabacademy/2019/labs/oulu/students/marjo-leinonen/raw/master/docs/images/week09/Blink5000Delay/Blink5000Delay.ino)  
+[Arduino Fade code](https://gitlab.fabcloud.org/academany/fabacademy/2019/labs/oulu/students/marjo-leinonen/raw/master/docs/images/week09/LEDFade/LEDFade.ino)

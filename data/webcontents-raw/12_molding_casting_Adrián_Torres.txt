@@ -1,0 +1,443 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Week 15. Molding and Casting</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/LOGO%20fablab.png" alt="" /></span><span class="title">Adrián Torres</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul><li><a href="index.html">Home</a></li>
+							<li><a href="assignments.html">Assignments</a></li>
+							<li><a href="project.html">Final Project</a></li>
+                            <li><a href="adrianino.html">Adrianino</a></li>
+                            <li><a href="samdino.html">SAMDino</a></li>
+                            <li><a href="fabxiao.html">Fab-Xiao</a></li>
+							<li><a href="about.html">About me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Week 15. Molding and Casting</h1>
+							<p>Like the previous week, there are two types of assignments, one group and one individual. In my case being alone in the Fab Lab, I do both.</p>
+                            
+                            <ul><li> Review the safety data sheets for each of your molding and casting materials. ✔
+                                <li> Make and compare test casts with each of them. ✔ 
+                                <li> Design a 3D mould around the stock and tooling that you'll be using, mill it (rough cut + (at least) three-axis finish cut), and use it to cast parts. ✔ 
+                                <li> Linked to the group assignment page. ✔   
+                                <li> Reviewed the safety data sheets for each of your molding and casting materials, then made and compared test casts with each of them. ✔    
+                                <li> Documented how you designed your 3D mould and created your rough and finish toolpaths for machining, including machine settings. ✔ 
+                                <li> Shown how you made your mould and cast the parts. ✔     
+                                <li> Described problems and how you fixed them. ✔
+                                <li> Included your design files and ‘hero shot’ of the mould and the final object. ✔ 
+                            </ul>
+                            
+                            <p>Like every week, my weekly schedule. 😊 </p>
+                              
+                            <p><img src="images/week15/week15.01.jpg" width="80%"; max-width="700" /></p>  
+                            
+                            <p style="color:orangered;"> <i>This week is a fun week. Because you can replicate a 3D design, much faster than with a printer and in different materials. I'm going to try to create a two-part mold, shaped like a train. And I want to use food silicone to create chocolate in the shape of the train ... And something else that I can think of. </i> 😊</p>
+                            
+                            <h1>Group Assignment. Reviewing the safety data sheets for molding and casting materials. </h1>  
+                            <p>The <b>Group Assignment page</b> is at the following <a href="http://academany.fabcloud.io/fabacademy/2020/labs/leon/leon-group-assignments/"><b>link.</b></a></p>
+                            
+                            
+                            <p>In the Fab Lab León there is a <b>filing cabinet</b>, where all the data sheets and safety data sheets of the different silicones and resins that I am going to use in this Assignment are kept.</p>
+                            
+                            <p>In the following photo you can see on the left the silicones that I am going to use and on the right the resin that I am going to use.</p>
+                            
+                            <span class="image main"><img src="images/week15/week15.02.jpg" alt="" /></span>
+                            
+                            <p>All the products are from the <a href="https://www.smooth-on.com/"><b>Smooth-On</b></a> brand, where I can locate the safety data sheets, although it is always better to have it on paper, faster to search. 😃 </p>
+                            
+                            <p>The <b>silicone models</b> that I am going to use are the following:</p>
+                            <h2>VytaFlex® 40</h2> 
+                            <ul><li>It is a liquid urethane silicone. 
+                                <li>It has a <b>pot life</b> of 30 minutes and a <b>cure</b> of 16 hours.
+                                <li>It is recommended to use a <b>release agent.</b>    
+                                <li>Within the <b>security aspect,</b> good ventilation is recommended, wearing safety glasses, rubber gloves and long sleeves. As we are in COVID-19 period, I use the mask. 😷
+                                <li>Pre Mix the Part B before using. After dispensing equal amounts of Parts A and B into mixing container, mix thoroughly for at least 3 minutes making sure that you scrape the sides and bottom of the mixing container several times. 
+                                <li><b>Mix ratio</b> is: 1 Part A : 1 Part B by weight or volume.    
+                                <li><b>Curing</b> Allow rubber to cure a minimum of 16 – 24 hours at room temperature 23°C before demolding.
+                                <li><b>Post Curing</b> Optional... Following an overnight cure, heating the rubber to 65°C for 4 to 8 hours will increase physical properties and performance. 
+                                <li> More information, <a href="https://www.smooth-on.com/products/vytaflex-40/"><b>here.</b></a>    
+                            </ul>
+                            <p>This is the result of mixing the two parts, it gives us a soft, <b>caramel brown silicone.</b> Next I make a summary with the <b>safety pictograms.</b> (Gloves, glasses, and an apron or long sleeve are mandatory. Causes skin irritation, causes serious eye irritation, may cause respiratory irritation.) </p>
+                            
+                            <p><img src="images/week15/week15.38.jpg" width="60%"; max-width="700" /></p>  
+                            
+                            <h2>Smooth-Sil® 940 </h2> 
+                            <ul><li>It is a Platinum Silicone Rubber. For Food Related Applications 
+                                <li>It has a <b>pot life</b> of 30 minutes and a <b>cure</b> of 24 hours.   
+                                <li>Within the <b>security aspect,</b> good ventilation is recommended, wearing safety glasses, vynil gloves and long sleeves. Wear vinyl gloves only. Latex gloves will inhibit the cure of the rubber. As we are in COVID-19 period, I use the mask. 😷
+                                <li><b>Mix ratio</b> is: 100 Part A : 10 Part B by weight or volume.    
+                                <li><b>Curing</b> Allow rubber to cure a minimum of 24 hours at room temperature 23°C before demolding.
+                                <li><b>Post Curing</b> Optional... Post curing the mold will aid in quickly attaining maximum physical and performance properties. After curing at room temperature, expose the rubber to 100°C for four hours. 
+                                <li>Let cool and wash mold cavity thoroughly with dishwashing detergent/water solution. Rinse thoroughly and allow drying before using.    
+                                <li> More information, <a href="https://www.smooth-on.com/products/smooth-sil-940/"><b>here.</b></a>    
+                            </ul>
+                            <p>This is the result of mixing the two parts, it gives us a soft, <b>light pink silicone.</b> Next I make a summary with the <b>safety pictograms.</b> (Gloves, glasses, and an apron or long sleeve are mandatory.) </p>
+                            
+                            <p><img src="images/week15/week15.39.jpg" width="60%"; max-width="700" /></p>
+                            
+                            <p>The <b>resin models</b> that I am going to use are the following:</p>
+                            <h2>Smooth-Cast® 300</h2> 
+                            <ul><li>Low viscosity polyurethane resin, which produces bright white pieces. Dyes can be used.
+                                <li>It has a <b>pot life</b> of 3 minutes and a <b>cure</b> of 10 minutes.    
+                                <li>Within the <b>security aspect,</b> good ventilation is recommended, wearing safety glasses, rubber gloves and long sleeves. Beware of possible burns, since the mixture of the two parts generates an <b>exothermic reaction.</b> As we are in COVID-19 period, I use the mask. 😷
+                                <li>Pre Mix both parts before using. After dispensing equal amounts of Parts A and B into mixing container, mix thoroughly for at least 1 minutes making sure that you scrape the sides and bottom of the mixing container several times. 
+                                <li><b>Mix ratio</b> is: 1 Part A : 1 Part B by volume.    
+                                <li> More information, <a href="https://www.smooth-on.com/products/smooth-cast-300/"><b>here.</b></a>    
+                            </ul>
+                            
+                            <p>This is the result of mixing the two parts, it gives us a hard <b>white piece</b>, which can be dyed. Next I make a summary with the <b>safety pictograms.</b> (Gloves, glasses, and an apron or long sleeve are mandatory. Causes skin irritation, causes serious eye irritation, may cause respiratory irritation.) </p>
+                            
+                            <p><img src="images/week15/week15.40.jpg" width="60%"; max-width="700" /></p>
+                            
+                            <h2>Smooth-Cast® ONYX™ FAST</h2>
+                            <ul><li>Mercury-free urethane resin, which produces deep black pieces.
+                                <li>It has a <b>pot life</b> of 2.5 minutes and a <b>cure</b> of 10-15 minutes.    
+                                <li>Within the <b>security aspect,</b> good ventilation is recommended, wearing safety glasses, rubber gloves and long sleeves. Beware of possible burns, since the mixture of the two parts generates an <b>exothermic reaction.</b> As we are in COVID-19 period, I use the mask. 😷
+                                <li>Pre Mix both parts before using. After dispensing equal amounts of Parts A and B into mixing container, mix thoroughly for at least 1 minutes making sure that you scrape the sides and bottom of the mixing container several times. 
+                                <li><b>Mix ratio</b> is: 1 Part A : 1 Part B by volume.    
+                                <li> More information, <a href="https://www.smooth-on.com/products/smooth-cast-onyx-fast/"><b>here.</b></a>    
+                            </ul>
+                            <p>This is the result of mixing the two parts, it gives us a extra hard <b>black piece.</b> Next I make a summary with the <b>safety pictograms.</b> (Gloves, glasses, and an apron or long sleeve are mandatory. Causes skin irritation, causes serious eye irritation, may cause respiratory irritation.) </p>
+                            
+                            <p><img src="images/week15/week15.41.jpg" width="60%"; max-width="700" /></p>
+                            
+                            <h2>PLASTICRETE (STONE-LIKE FINISH)</h2>
+                            <ul><li>Two-component acrylic system based on ecological resin + mineral filler.
+                                <li>It has a <b>pot life</b> of 30 minutes and a <b>cure</b> of 4-8 hours.    
+                                <li>Within the <b>security aspect,</b> wearing safety glasses, rubber gloves and long sleeves. As we are in COVID-19 period, I use the mask. 😷
+                                <li><b>Mix ratio:</b> Percentage of mixture in weight: 100 powder + 60 liquid. (45 liquid more viscous)    
+                                <li> More information, <a href="https://www.elantas.com/europe/products/tooling-composites/tooling-prototyping-materials.html"><b>here.</b></a>    
+                            </ul>
+                            <p>This is the result of mixing the two parts, it gives us a hard <b>gray cement.</b> Next I make a summary with the <b>safety pictograms.</b> (Gloves, glasses, and an apron or long sleeve are mandatory.) </p>
+                            
+                            <p><img src="images/week15/week15.42.jpg" width="60%"; max-width="700" /></p>
+                          
+        
+                            
+                            
+                    
+                            <h1>Designing a mold</h1>
+                            
+                            <p>As you know and you will have seen in my documentation, I like trains. 😂 🚂 So in this assignment I'm going to try to make a two-piece mold and create a little train. To do this I am inspired by two small models made of wood that I have in my room.</p>
+                            
+                            
+                            <p><img src="images/week15/week15.03.jpg" width="60%"; max-width="700" /></p> 
+                            
+                            <p>To make the design of the mold I use <b>Rhinoceros.</b> I create the train, by extruding planes or using spheres. As it is going to be a mold in two parts, I cut the final shape of the train in half using a Boolean difference with a flat surface. Then I prepare the wax mold, that is, I empty a prism and add spheres that are the <b>registration</b> to join the two parts. It is through the wheels that I am going to introduce the resin; on both wheels I create a kind of funnel, one to fill and the other so that the air comes out.</p>
+                            
+                            <span class="image main"><img src="images/week15/week15.04.jpg" alt="" /></span>
+                            
+                            <p><b>Important.</b> My instructors Nuria and Pablo recommended that I create a small step surrounding the entire mold. This is to improve the extraction of the final silicone and not have to use a knife or something to pry and damage the mold.</p>
+                            
+                            <p>And this is the result of the mold, below is the link to download the file.</p>
+                            
+                            <p><div class="sketchfab-embed-wrapper">
+    <iframe title="A 3D model" width="420" height="320" src="https://sketchfab.com/models/4d8519ae2baa407da3b251241ea7904f/embed?preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+        <a href="https://sketchfab.com/3d-models/molding-and-casting-train-4d8519ae2baa407da3b251241ea7904f?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Molding and Casting Train.</a>
+        by <a href="https://sketchfab.com/adriantrains?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">adriantrains</a>
+        on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+                            </p></div></p>
+
+                            
+                            
+                            <h1>3D Milling</h1>
+                        
+                            <p>At the Fab Lab León we have two types of <b>mill ball end</b>, one of 3,175 mm and the other of 2 mm. The 2 mm one has the shortest cutting edge and also has a little conical shape. I'm going to use the 3,175mm bur because it has the longest shank, and I'm afraid it will collide the mandrel with the wax block, in addition to the conical shape of the mill.</p>
+                        
+                            <p><img src="images/week15/week15.06.jpg" width="50%"; max-width="700" /></p> 
+                            
+                            <p>I'm going to use <a href="https://github.com/fabfoundation/mods"><b>Mods CE 😎</b></a> to mill the mold, which is the program that I used to create the boards with the Roland MDX-20A that I explained in <a href="week04.html"><b>week 04</b></a>. Fran has been working on updating the interface. Although there is currently no program available for the Roland MDX-20A. So I test the simulation on the Monofab SRM-20. I put that I use a mill of 3,175 mm.</p>
+                            
+                            <span class="image main"><img src="images/week15/week15.05.jpg" alt="" /></span>
+               
+                            <p>Before using Mods CE in the Fab Lab León, it was used <a href="http://fabmodules.org/"><b>Fab Modules.</b></a> It is an old version of Mods, but it works for the Modela and also gives you the time of the works.</p>
+                        
+                            <p>For this I open the terminal:
+                            <ul><li> Run <b>fab</b>
+                                <li> In the panel I choose the piece in this case the <b>.stl</b> of the train, the <b>Roland MDX-20</b> and <b>400 px</b> machine. 
+                                <li> I open <b>Make_STL_RML.</b> At the top of the page there is a menu where I choose the <b>1/8 mill, wax, rough.</b>
+                                <li> I verify the <b>diameter</b> of the tool, in this case it is 3.175 mm. The wax milling <b>speed</b> is 20 mm / s (if we wanted to mill polystyrene it would be 30 mm / s).
+                                <li> I choose the <b>origin</b> X = 6 Y = 6.
+                                <li> And finally we click on <b>Make PNG</b> -> <b>Make Path</b> -> <b>Make RML.</b> If the simulation is correct, click on <b>Send It!</b> 🤞</ul>
+                            
+                            <span class="image main"><img src="images/week15/week15.07.jpg" alt="" /></span>
+                            
+                        
+                            <p>With this we get a <b>rough</b> first milling, we remove more chips faster. And remember, all the shaving you get, save it because you can create a new block of wax if you <b>melt it.</b></p>
+                        
+                            <span class="image main"><img src="images/week15/week15.08.jpg" alt="" /></span>
+                        
+                        
+                            <p>After 45 minutes and cleaning the wax mold, this is the result of rough milling.</p>
+                        
+                            <p><img src="images/week15/week15.09.jpg" width="70%"; max-width="700" /></p> 
+                        
+                            <p>Once the rough milling phase has finished, on the same screen we choose <b>1/8 wax finish.</b> We check the tool diameter. We choose the type of ball end; and this is important in the overlap we put 0.9 to get a fine finish. We recalculate the simulation: <b>Make PNG</b> -> <b>Make Path</b> -> <b>Make RML.</b> If the simulation is correct, click on <b>Send It!</b></p>
+                        
+                            <span class="image main"><img src="images/week15/week15.10.jpg" alt="" /></span>
+                        
+                            <p>After almost 2 hours of milling, this is the result. 😍</p>
+                        
+                            <p><img src="images/week15/week15.11.jpg" width="70%"; max-width="700" /></p> 
+                        
+                            <p>It was too late to start with silicones. The next day, I realize that the 3,175mm cutter did not fit into one part of the design. Excessively narrow the distance between the train and the mold wall. This reminds me, that <b>you have to design for the machine or the tool.</b> So the solution I plan to use to correct it is to use the <b>Dremel</b> with the 2mm mill. And works. 😅 <b>Manual milling.</b> 🤣</p>
+                            
+                            <span class="image main"><img src="images/week15/week15.12.jpg" alt="" /></span>
+                            
+                            <h1>Calculate the volume of the mold.</h1> 
+                        
+                            <p>Once we have milled the wax mold, we have to calculate the volume of silicone that we are going to need. To do this by reviewing documentation from other students, there are two options. Use <b>rice</b> or use <b>water.</b></p>
+
+                            <p>If we use rice, following the documentation by <a href="http://fabacademy.org/2019/labs/leon/students/alejandro-ausejo/week10.html"><b>Alejandro Ulecia,</b></a> which is based on filling the molds with rice, emptying this rice in a plastic cup and marking this volume and then filling it. I mark the plastic cup and weigh its contents, it is 66 grams with the plastic cup (the cup weighs 6 grams).</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.13.jpg" alt="" /></span>
+                        
+                            <p>But this system doesn't convince me much because the rice grains do not enter all the holes in the wax mold, so I discard using it.</p>
+                        
+                            <p>The other way is to use water, in this case I use <a href="https://fabacademy.org/archives/2013/students/nunez.pablo/weeks/week7.html"><b>Pablo Nuñez</b></a> documentation. In which the mold is filled with water and that amount of water is weighed. In theory, the density of water and weight are the same. In my case it is 80 grams with the plastic cup, which is equivalent to 80 milliliters.</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.14.jpg" alt="" /></span>
+                        
+                            <p>Once I have calculated the volume of the mold, <b>protecting</b> the work area and myself, I go to work with the silicones. The apron has the <a href="https://textile-academy.org/"><b>Fabricademy </b></a> logo. 😍 </p>
+                        
+                            <p><img src="images/week15/week15.15.jpg" width="70%"; max-width="700" /></p>
+                        
+                        
+                            <h1>Silicone mold.</h1>
+                            
+                            <h2>VytaFlex® 40</h2>
+                            
+                            <p>As I have explained in the Group Assignment part and what the manufacturer tells us, this silicone should be mixed: <b>1 Part A: 1 Part B</b> by weight or volume. So after measuring the volume of the mold and giving me 80 grams with the cup (5 grams), I decided to round and put 40 grams of Part A and 40 grams of Part B. This is the result, it is always difficult to adjust liquids with different viscosities. 😅</p>
+                            
+                            <span class="image main"><img src="images/week15/week15.16.jpg" alt="" /></span>
+                        
+                            <p>Before mixing the two parts, spray the wax mold with the <a href="https://www.smooth-on.com/products/universal-mold-release/"><b>Smooth On Universal Mold Release.</b></a> A small layer is sufficient.</p>
+                        
+                            <p><img src="images/week15/week15.17.jpg" width="60%"; max-width="700" /></p>
+                        
+                            <p>Once the release agent is done, I mix the two parts very carefully not to cause bubbles, for about 2 minutes. Then I pour it slowly with the help of the mixing stick. The next thing I do is tap around so that the bubbles are removed and rise upwards. I leave the mold like this for 16 hours.</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.18.jpg" alt="" /></span>
+                        
+                            <p>After more than 16 hours had passed, I removed the silicone from the wax mold. Thanks to the edge that you leave around, it is removed very well. There are no bubbles left, and the fit with the registrations is fine. I will need to use elastic bands to hold the two parts and the openings to pour the resin and let the air out will be enough.</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.19.jpg" alt="" /></span>
+                        
+                            <p>This silicone is ready for use with the resins.</p>
+                        
+                            <h2>Smooth-Sil® 940</h2>
+                        
+                            <p>This silicone serves to be able to use as final casting foods, such as gum, ice or chocolate. As I have explained in the Group Assignment and as the manufacturer explains, this silicone should be mixed: <b>100 Part A: 10 Part B</b> by weight or volume. So after measuring the volume of the mold and giving me 80 grams with the cup (5 grams), I decided to round and put 80 grams of Part A and 8 grams of Part B. Part A is very thick, and hard to get out of container. 💪 </p>
+                            
+                            <span class="image main"><img src="images/week15/week15.20.jpg" alt="" /></span>
+                        
+                            <p>For this silicone, it is not necessary to use a release agent. I mix the two parts very carefully not to cause bubbles, for about 2 minutes. Then I pour it slowly with the help of the mixing stick and we can use a brush to paint the internal areas of the mold. This time I adjusted the quantities a lot, I should have added more, I hope the silicone comes out of the mold. 😬 The next thing I do is tap around so that the bubbles are removed and rise upwards. I leave the mold like this for 24 hours.</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.21.jpg" alt="" /></span>
+                        
+                            <p>After more than 24 hours have passed, I remove the silicone from the wax mold. It was perfect, I want to make a little train of chocolate. 😋</p>
+                        
+                            <p><img src="images/week15/week15.31.jpg" width="70%"; max-width="700" /></p>    
+                        
+                            <h1>Castings</h1>
+                        
+                            <h2>Smooth-Cast® 300</h2>
+                        
+                            <p>The first casting that I am going to do is with VytaFlex® 40 silicone and low viscosity polyurethane resin. As I explained in the Group Assignment, this resin is very fast to cure and creates an exothermic reaction, so you have to be very careful.</p>
+                            <p>As the manufacturer explains, this resin has a pot life of 3 minutes and a cure of 10 minutes. The mix ratio is: <b>1 Part A: 1 Part B</b> by volume. The fact is that now I do not have to use the measure of 80 grams (this was to create the silicone). Since I want to leave a sample of the material and there are more silicones that I can fill, I make a mixture of 40 grams of each part, because the volume of this resin is similar. <b>Important:</b> As Neil explains in class, if we have leftover material from both parts, we must mix it and make the reaction, if we throw it without mixing it can be dangerous.</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.22.jpg" alt="" /></span>
+                        
+                            <p>Before mixing the two parts, I prepare the silicone, joining the two parts with <b>elastic bands.</b></p>
+                        
+                            <p><img src="images/week15/week15.23.jpg" width="60%"; max-width="700" /></p> 
+                        
+                            <p>I mix the two parts in less than 2 minutes, and slowly pour it into the silicone. And the bubbles begin to rise outwards. What happens is that this resin is quite old and has not been well closed at some point and the reaction is not the same, more material comes out. Once 10 minutes have passed, I remove the silicone and the train has gone well. 🤗</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.24.jpg" alt="" /></span>
+                        
+                            <p>The train will need post-processing to remove the excess material.</p>
+                        
+                            <p>At the Fab Lab León we also have dyes to dye the resin pieces, it is called <a href="https://www.smooth-on.com/products/so-strong/"><b>SO-Strong™</b></a> and it is from the Smooth-on brand. And Pablo had blue fluorescent powders, it glows in the dark. I make two other 10 gram mixes of each part A and B again; one I dye blue and the other I put the fluorescent powders.</p>
+                        
+                            
+                            <span class="image main"><img src="images/week15/week15.25.jpg" alt="" /></span>
+                        
+                            <p>Once I have the three trains, the white, the blue and the one with the powders that glow in the dark, I start to remove the excess material with files and sandpaper.</p>
+                        
+                            <p><img src="images/week15/week15.26.jpg" width="60%"; max-width="700" /></p>
+                            
+                            <p>And this is the result of the three trains. I love the one that <b>glows in the dark,</b> it's incredible. 😍</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.27.jpg" alt="" /></span>
+                        
+                        
+                            <h2>Smooth-Cast® ONYX™ FAST</h2>
+                            
+                            <p>Thanks to <a href="http://fabacademy.org/archives/2015/eu/students/diosdado_barroso.raul/index.html"><b>Raul Diosdado</b></a> (student of the Fab Academy in 2015), I can use this resin, because he sent it to us from Extremadura. Thank you very much Raul. 🤗</p>
+                        
+                            <p>This resin is similar to Smooth-Cast® 300, although much faster, it has a pot life of 2.5 minutes and cures in 10 minutes. The pieces are black. The mix ratio is: <b>1 Part A: 1 Part B</b> by volume. In this case, by weighing you can see that the volume is not equal to the weight, part A is more liquid and needs more quantity.</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.32.jpg" alt="" /></span>
+                        
+                            <p>I mix the two parts in less than 1 minute, and slowly pour it into the silicone. The material that I have left is a sample for the Group Assignment. Like the other Smooth-Cast® 300 resin, it creates an exothermic reaction, so be careful. After 10 minutes, remove the silicone mold carefully, if we leave it much more we can damage the silicone because this resin is very hard. The result is perfect, you have to remove the excess material.</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.33.jpg" alt="" /></span>
+                        
+                            <p>After filing and sanding the little train (I have to say it is a super hard material 😅), it is very cool in black.</p>
+                            
+                            <p><img src="images/week15/week15.34.jpg" width="60%"; max-width="700" /></p>
+                            
+                        
+                            <h2>Candle wax</h2>
+                        
+                            <p>At the Fab Lab León we had scented candles, so I thought, I can make a <b>candle</b> in the shape of my little train. So I put to heat water in the pot and inside I put a container where the original candle will melt. In Spain this process is called <b>"Baño Maria".</b> <b>Important:</b> Be careful with hot water and melted wax. 🔥🔥</p>
+                        
+                            <p><img src="images/week15/week15.28.jpg" width="60%"; max-width="700" /></p>
+                        
+                            <p>Since I have no wick, I reuse the one that came in the candle, and put it inside the silicone. I close the silicone with elastic bands and let the wick protrude from the chimney of the train.</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.29.jpg" alt="" /></span>
+                        
+                            <p>Once the liquid wax has been poured, I let it cool, and so that it finishes cooling completely, I put it in the <b>refrigerator.</b> This is the little candle on the little train. It is sad to light it hehe.</p>
+                            
+                            <p><img src="images/week15/week15.30.jpg" width="70%"; max-width="700" /></p>
+                        
+                            <h2>Chocolate</h2>
+                        
+                            <p>The coolest moment of this week has arrived. 😋 Create a <b>chocolate</b> in the shape of the little train. 🍫 🚂</p>
+                            <p>The first thing to do is <b>wash</b> the food silicone with soap and water. Then, we will butter the mold so that the chocolate does not stick and we can not release it. While we bring water to a boil and in another saucepan, add the chocolate (just like the candle, to the "Baño Maria").</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.37.jpg" alt="" /></span>
+                        
+                            <p>Then we will put it in the freezer for a couple of hours (the first test I did in the fridge and it does not work, the chocolate is still soft). And we already have our little chocolate train.😋 Be careful with the fireplace, which breaks easily.</p>
+                        
+                            <p><img src="images/week15/week15.43.jpg" width="70%"; max-width="700" /></p>
+                            
+                        
+                            <h2>PLASTICRETE (STONE-LIKE FINISH)</h2>
+                            
+                            <p>The next resin I use is acrylic, which when it dries its finish imitates the stone of the sculptures. They are two components, one powder and the other in liquid. Percentage of mixture in weight: 100 powder + 60 liquid. I put 26 grams of powder and 18 grams of liquid.</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.35.jpg" alt="" /></span>
+                        
+                            <p>I mix both components and pour it little by little into the silicone. After a curing of more than 8 hours, I notice that enough liquid has come out of the silicone, as if the piece had "sweat". I open the mold and see that the material has shrunk and that material is missing, that it is outside the mold. 🤯</p>
+                        
+                            <span class="image main"><img src="images/week15/week15.36.jpg" alt="" /></span>
+                            
+                        
+                            <p>And this is the result. Material was missing and the chimney was broken. Reading further the manufacturer's instructions, he comments that the proportion of the <b>liquid</b> can be varied to <b>45 parts</b> and obtain a more viscous resin where the time of use decreases, the drying time of the product accelerates, the piece will be less porous and valid for the outside. When the lock-down is over, I will try it again with more time.</p>
+                        
+                            
+                            
+                        
+                            <h1>Conclusions.</h1>
+                        
+                            <p>For me this is one of the most fun Fab Academy classes and that at the same time you do things with your hands, you investigate and you seem like a little scientist. </p>
+                        
+                            <p>Surely in the not too distant future, I will apply this manufacturing process to the possibility of creating several model pieces, much faster and in greater detail than 3D printing.</p>
+                        
+                            <p>This is the progress and result of everything I have applied this week. I am very proud and have had a lot of fun. 😊</p>
+                        
+                        
+                        
+                            <span class="image main"><img src="images/week15/week15.44.jpg" alt="" /></span>
+                        
+                            
+                        
+                        
+                          <h1>Review of the class</h1>
+                            <p>During the review of this class I volunteered with the train glows in the dark in the minute 1:22:00. 😊 </p>
+                
+                            <iframe src="https://player.vimeo.com/video/420785948" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/420785948">20200520 molding review</a> from <a href="https://vimeo.com/academany">Academany</a> on <a href="https://vimeo.com">Vimeo</a>.</p>               
+                            
+                            
+        
+                            
+                            <h1>Files</h1>
+                            <p>Find below the files that I made for this assignment.</p>
+                            <ul><li><a href="assignments/week15/little_train.stl"> <b>Little Train Mold</b></a>
+                                 
+                                </ul>
+                        
+                          
+                            
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+                        
+                         <p align="center"> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><b>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</b></a>
+                        
+                 
+                        
+						<div class="inner">
+							
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/Adrian_Towy" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/adriantrains" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/adrian_towy/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.linkedin.com/in/adri%C3%A1n-torres-oma%C3%B1a/" class="icon brands style2 fa-linkedin"><span class="label">Linkedin</span></a></li>
+						
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>electronics_production</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <header>
+          <nav>
+              <ul>
+              <li><a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/">Home</a></li>
+              <div class="dropdown">
+                   <li><a href="#">Final page</a></li>
+                  <div class="dropdown-content">
+                    <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week1/principles_and_practice.html">Brain Storming</a>
+                    <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/final_project/detail_page.html">Detail page</a>
+                    <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/final_project/final_project.html">Final project</a>
+                    </div>
+                    </div>
+                  <div class="dropdown">
+                       <li><a href="#">Assignments</a></li>
+                      <div class="dropdown-content">
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week1/principles_and_practice.html">Principles and practice</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week1/project_management.html">Project management</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week2/computer-aided-design.html">Computer aided design </a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week3/computer-controlled-cutting.html">Computer controlled cutting</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week4/electronics_production.html">Electronics production</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week5/3dweek.html"> 3D scanning and printing</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week6/electronics_design.html">Electronics design </a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week7/computer_controlled_machining.html">Computer controlled machining</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week8/embedded_programming.html">Embedded programming</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week9/input_devices.html">Input devices</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week10/applications_and_implications.html">Applications and Implications</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week11/output_devices.html">Output devices</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week15/molding.html">Molding and casting</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week12/networking_and_communications.html">Networking and communication</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week13/interface.html">Interface and application programming</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week17/machine.html">Mechanical design</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week16/wildcard.html">Wild card week</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week14/invention.html">Invention, intellectual property and income</a>
+                          <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/week18/project_development.html">Project development</a>
+                      </div>
+                  </div>
+              </ul>
+          </nav>
+      </header>
+</head>
+<body>
+<h1 id="week-4-electronics-production"><strong>WEEK 4: Electronics Production</strong></h1>
+<p>The Fourth week of fab academy focused on electronics Production. Our goals for this week were the following:</p>
+<h4 id="group-assignment">Group Assignment:</h4>
+<ul>
+<li>Characterize the design rules for your PCB production process</li>
+</ul>
+<h4 id="individual-assignment">Individual Assignment:</h4>
+<ul>
+<li><p>Make an in-circuit programmer by milling the PCB, program it, then optionally, trying other processes</p></li>
+<li><p>Document everything!</p></li>
+</ul>
+<h4 id="learning-outcomes">Learning outcomes:</h4>
+<ul>
+<li><p>Described the process of milling, stuffing, de-bugging and programming</p></li>
+<li><p>Demonstrate correct workflows and identify areas for improvement if required</p></li>
+</ul>
+<hr />
+<p>ISP [in-system programmer] is a chip or a component that allows in-circuit serial programming. Which is the ability to program devices while being installed in a complete system rather than obtaining a pre-programmed chip and installing it to the system.</p>
+<p>This week’s task was to fabricate and program the FabTinyISP with reference to the <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">tutorial</a> provided.</p>
+<hr />
+<h3 id="using-the-milling-machine"><strong>Using the milling machine</strong></h3>
+<h5 id="step-1-get-the-schematics-right">Step 1: Get the Schematics right!</h5>
+<p>The first step to fabricate this particular ISP is to obtain the traces and the board outlines for the chip from provided in the tutorial.</p>
+<p><img src="photos/png.jpg" /></p>
+<p><img src="photos/tracesrml.jpg" /></p>
+<p>Both pictures shown above have <code>.PNG</code> file extensions, which is not suitable, as the software used for the milling machines only reads files with <code>.rml</code> [Red line markup language file] extension. Therefore, the files need to converted to the correct type using an online tool called <a href="http://fabmodules.org/"><em>FAB modules</em></a>. The file conversion is performed as following:</p>
+<ol type="1">
+<li>Select the input format to be read – <strong>PNG</strong> in our case.</li>
+<li>Upload the PNG image from the computer.</li>
+<li>Select the output format – because we are using a Rolland milling machine we select <strong>Roland mill (.rml)</strong> as our option.</li>
+<li>Select the process to be done – Here we declare whether we are processing the image of the traces or the outline of the PCB. This step is done twice.</li>
+</ol>
+<ol type="i">
+<li><p><strong>PCB Traces (1/64)</strong> – refers to the traces milling bit size.</p></li>
+<li><p><strong>PCB Outline (1/32)</strong> – refers to the outline milling bit size.</p></li>
+</ol>
+<ol start="5" type="1">
+<li>Enter the settings for the output format:</li>
+</ol>
+<ul>
+<li>Machine: SRM-20 – The milling machine used in FABLAB UAE.</li>
+<li>X0, Y0, Z0 = 0 mm.</li>
+</ul>
+<ol start="6" type="1">
+<li>click on <strong>calculate</strong> [note: it would take a minute or two for the file to be produced] and then <strong>save</strong>.</li>
+</ol>
+<p><img src="photos/fabmodules.jpg" /></p>
+<p><img src="photos/outputsettings.jpg" /></p>
+<h5 id="step-2-set-up-the-milling-machine.">Step 2: Set up the milling machine.</h5>
+<p>To fabricate the ISP chip, we are using a Roland SRM 20 machine to engrave the traces and the outlines on an FR1 [copper clad Flame Retardant 1] printed circuit board. We are using the FR1 boards instead of the commercially found FR4 due to their safer nature, as inhaling the milling dust of an FR4 fiberglass material may lead to serious health hazards.</p>
+<p><img src="photos/rolandsrm20.jpg" /></p>
+<p>First, we mounted the FR1 plate on a medium density fiberboard (MDF) to secure the plate while milling as well to keep it levelled. The plate is adhered to the MDF using strong double sided tape where the plate is then pressed to adhere and level up properly.</p>
+<p><img src="photos/mdf.jpg" /></p>
+<p>The following steps describe the process of calibrating the machine for the milling.</p>
+<ol type="1">
+<li>Place the MDF board inside the Roland milling machine and secure it using the existing screws <em>[note: make sure to tighten diagonal screws at a time to ensure even surface]</em></li>
+</ol>
+<p><img src="photos/securingmdf.jpg" /></p>
+<ol start="2" type="1">
+<li>Insert the milling bit into the collet and secure it in place carefully so the milling bit doesn’t fall and break the tip. we have used two different milling bits:</li>
+</ol>
+<ol type="a">
+<li>1/64 SE 2FL ALTIN COATED milling bit for the <strong>traces</strong></li>
+<li>1/32 SE 2FL ALTIN COATED milling bit for the <strong>outlines</strong></li>
+</ol>
+<p><img src="photos/millingbits.jpg" /></p>
+<ol start="3" type="1">
+<li>Using Ronald software <em>Vpanel for SRM-20</em> on a computer connected to the machine we changed the coordinates of <strong>X and Y</strong> to choose a starting point (preferably at the left lower corner of the FR1 board) remembering to set the values after changing them.</li>
+</ol>
+<p><img src="photos/xy.jpg" /></p>
+<ol start="4" type="1">
+<li>As for calibrating the <strong>Z axis</strong>, we lowered the milling bit enough for us to reach but not close enough to the board. We then un-screw the milling bit bringing its tip close to the surface to touch it slightly and then tightened it back, and set the Z value. This step is done to ensure that the milling bit will be able to touch the surface enough to start engraving, but not be pressed into the board enough for the tip to break.</li>
+</ol>
+<h5 id="step-3-start-milling">Step 3: Start milling!</h5>
+<p>Before going and choosing the pattern to be engraved, we can perform an experimental engrave to ensure that the milling bit tip is close enough to the surface to engrave properly. This is done by pressing the <code>ON</code> button under <code>spindle</code> on the software page. The milling machine launches, and if the Z axis was calibrated correctly we can observe the machine engraving an indentation on the origin point and dust starting to gather.</p>
+<p>Once the experimental engrave is done, we can then click on the <code>cut</code> button which opens another window. Then the existing operations should be deleted and we should add our <strong>traces</strong> pattern file in <code>.rml</code> and finally click on <code>output</code> to launch the machine. The milling bit is then changed again following the previous steps of <code>setting up the machine</code> and the steps in the software are repeated to engrave the outlines.</p>
+<blockquote>
+<p><strong>Important point:</strong> The inner pattern [traces] should always be engraved before the outer pattern [outlines]. As engraving the outer pattern first releases the chip or the piece from its place, making it difficult to engrave the inner patterns without overly moving.</p>
+</blockquote>
+<p><img src="photos/removingpiece.jpg" /></p>
+<h5 id="step-4-soldering">Step 4: Soldering!</h5>
+<p>Ahead of welding, we should prepare our stations and components used. I made sure that everything was close by in my station having good source of light and good ventilation for the welding fumes.</p>
+<p><img src="photos/station.jpg" /></p>
+<p>The components I used are listed below:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Quantity</th>
+<th>Component</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet-Summary.pdf">Atiny 45</a> 8 bit microcontroller.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1k Ohm Resistors.</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>499 Ohm Resistors.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>49 Ohm Resistors.</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>3.3 Volts Zener Diodes.</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Green LED.</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Red LED.</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>100 nano-Farads Capacitor.</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>2X3 Pin Holder.</td>
+</tr>
+</tbody>
+</table>
+<p>I started soldering the components on paying attention to the orientation of some components. For example, the <strong>LEDs</strong> have a slight green line on one end indicating the side connecting to ground. The <strong>Zener diodes</strong> also have in indication to the ground which is a fade sliver line on one end [which can be a tad difficult to see if not under a direct source of light]. The <strong>Atiny 45</strong> microcontroller chip has a dot that indicates the first pin and the orientation of the chip.</p>
+<p>while soldering, I came across times where I would apply too much solder melt on a component, thus I used the de-soldering wire to remove the extra melt and prevent any damage or short circuit.</p>
+<p><img src="photos/desolder.jpg" /></p>
+<p>And finally I checked with a multimeter for any shorts between VCC and ground points, and fortunately it yielded a success! (phew!)</p>
+<p><img src="photos/multimeter.jpg" /></p>
+<blockquote>
+<p><strong>Note:</strong> Remove the extra layer of copper on the tip of the “USB” as it may cause a short circuit.</p>
+</blockquote>
+<p><img src="photos/finalsolder.jpg" /></p>
+<h5 id="step-5-programming">Step 5: Programming</h5>
+<p>Since the platform I’m working on is Windows 10, it means that I need to setup my development environment to be able to build the program into the board. I have used the <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/windows_avr.html">tutorial</a> as a guide to install the toolchain into my windows system.</p>
+<p>The programs that I have installed are the following:</p>
+<ol type="1">
+<li><a href="https://www.microchip.com/mplab/avr-support/avr-and-arm-toolchains-c-compilers">Atmel GNU Toolchain</a></li>
+<li><a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/make-3.81.exe">GNU make</a></li>
+<li><a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/avrdude-win-64bit.zip">AVRdude</a> (in case this doesn’t work, see the update at the end of the documentation.)</li>
+<li><a href="https://zadig.akeo.ie/">Zadig</a></li>
+<li><a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/fts_firmware_bdm_v1.zip">FTS firmware</a></li>
+</ol>
+<p>I have downloaded each file/software tool and unzipped/placed them as instructed. Then I added the paths of GNU toolchain, GNU make and AVRdude by going to the <code>control panel</code> &gt;&gt; <code>system and security</code> &gt;&gt; <code>system</code> &gt;&gt; <code>advanced system settings</code> &gt;&gt; <code>environment variable</code> &gt;&gt; double click on <code>paths</code> &gt;&gt; and add the new paths.</p>
+<p>(or to make life simple, just search for <code>environment variables</code> in the search bar and follow up from there!)</p>
+<blockquote>
+<p><strong>Important note:</strong> Copy the file path of your <em>own</em> saved files instead of the paths provided in the tutorial as sometimes the paths can be outdated, or the files can have different titles.</p>
+</blockquote>
+<p>Next, I have launched Zadig, checked for my device and re-installed the driver.</p>
+<p><img src="photos/zadig.jpg" /></p>
+<p>Then I had to check whether the programs were installed correctly. That is done by accessing git bash tool and typing <code>make  -v</code> to check for the GNU make software, <code>avr-gcc --version</code> to check for the GNU toolchain, and <code>avrdude -c usbtiny -p t45</code> to check for AVRdude software. However in my case, running the AVRdude command doesn’t show or do anything, this issue will later be discussed in the “problems faced” section.</p>
+<p><img src="photos/maketool1.jpg" /></p>
+<p>Next, I opened the firmware directory in gitbash and ran <code>run make</code> to create a <code>.hex</code> file.</p>
+<p><img src="photos/make.jpg" /></p>
+<p>Once the hex file was created, I carefully plugged in my USB connector and the ISP board provided by Hashim connected along a ribbon to my own ISP board and observed as the red light on both boards went on with no problems.</p>
+<blockquote>
+<p>To create the ribbon cable, I used a 6 color wire cable, and two 2x3 connectors. I inserted each end of the cable into a connector head, and hammered the head to secure the wires, making sure that the color order are identical at each end.</p>
+</blockquote>
+<p>The main point of connecting the two ISPs via the ribbon is that the VCC and the GND points should be connected the same along the two ends of the ribbon as shown below:</p>
+<p><img src="photos/ribbon1.jpg" /></p>
+<p>Then I ran the commands <code>make flash</code> in gitbash. The command erases the target chip (my board) and programs its flash memory with the contents of the <code>.hex</code> file created previously.</p>
+<p>Unfortunately, hence this step requires Avrdude to be completed, the process was forced off due to Avrdude not working on my laptop. Thus, I have used Hashim’s Laptop to perform this step along with the following few steps.</p>
+<p>Next, I ran the command <code>make fuses</code> which sets all the fuses except the one that disables the reset pin.</p>
+<p><img src="photos/makeflash1.jpg" /></p>
+<p><img src="photos/makefuses1.jpg" /></p>
+<p>To check the USB functionality, I had to plug in my own board directly and check if my computer detects the device. That is done by accessing the <code>device manager</code> and checking under <code>libusbK USB devices</code>.</p>
+<p><img src="photos/device_manager.jpg" /></p>
+<p>The last step of programming the ISP is to blow the reset fuse by running <code>make rstdisbl</code>. This command will disable the ability to re-program the board in the future by changing the reset pin of the board to a general purpose input output pin.</p>
+<p>To check that the ISP board is working properly as a programmer, I had a friend use it to perform the commands above to program hers and thankfully it worked properly!</p>
+<hr />
+<h3 id="flexible-pcb"><strong>Flexible PCB!</strong></h3>
+<p>As an extra step, we decided to try producing a flexible ISP using the Vinyl cutter and copper sheets. Honestly, when I saw the documentations of previous students in fab academy, I thought that producing a flexible ISP would be much easier, and less time consuming than using the milling machine.</p>
+<p>Well, I was wrong. We spent a good amount of time trying to find out the best cutting settings that would produce a sustainable chip. Everyone pitched in with ideas for our trials and errors and the process turned into a group work which can be found in our <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/site/eproduction/epro.html">Group Assignment page</a>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>A summery of the production process that worked best for us:</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<ol type="1">
+<li>Adhere the copper sheet to a piece of double sided tape, and then place the other side of the tape on a transparent transfer paper.</li>
+<li>Insert the sheet into the vinyl cutter.</li>
+<li>Choose <code>Piece</code> so the vinyl cutter can take the dimensions of the sheet.</li>
+<li>Set the force between <code>140 % ~ 150 %</code>.</li>
+<li>Import the board image in <strong>JPG</strong> directly to <strong>Roland cut studio</strong> (refer to <a href="https://www.youtube.com/watch?v=mQjLP4vibVA">this tutorial</a>)</li>
+<li>Check the image dimensions to make sure that the pads and traces will fit the components. Refer to the image dimensions in fab-modules for comparison.</li>
+<li>Use the bitmap tool to change the image from raster to vector.</li>
+<li>Perform the cutting process by pressing on the <code>cutting</code> icon on the top tool bar.</li>
+</ol>
+<p>The process of weeding and soldering the components were done individually, thus is documented in details below.</p>
+<p>This is the chip I produced for using the vinyl machine. It is noticed that it’s looks much better than its decedents, as the traces and pads are clear and wide enough for soldering.</p>
+<p><img src="photos/image1.jpg" /></p>
+<p>The next step was the weeding, where I carefully pulled the excess copper around the pads and the traces. <strong>A useful tip</strong> is to use a good pier of tweezers to remove the large parts, x-acto knife to release any parts that might get stuck, and some small scissors to cut large pieces as you weed away the copper.</p>
+<p><img src="photos/image2.jpg" /></p>
+<p>Next, I applied some double-sided tape to the back of the tracing paper and adhered it to a piece of acrylic I’ve cut previously using the milling machine. And finally removed the excess tape and excess copper on the sides.</p>
+<p><img src="photos/image3.jpg" /></p>
+<p>Next was the soldering. Now this step was a bit more difficult to compared to the chip produced using the milling machine.</p>
+<p>When soldering, the traces or the pads (sometimes both!) would lift off the tracing paper, the soldering bits would not stick to the copper so I was extra careful and patient in soldering the components. Also, settings the temperature of the soldering iron too high caused the tracing paper underneath to melt so I kept the temperature at <code>350</code> which was ideal for my soldering.</p>
+<p><img src="photos/image6.jpg" /></p>
+<p>Then it was the time for programming. I used the previously mentioned steps to program my ISP. However, when I tried plugging the ribbon off, the traces came out with it :( and I had to apply some solder on it to fix it again!</p>
+<p><img src="photos/image7.jpg" /></p>
+<hr />
+<h3 id="producing-an-isp-using-the-fiber-laser-machine"><strong>Producing an ISP using the fiber laser machine</strong></h3>
+<p>This step (like many others!) was full of successes, failures, frustrations and proud satisfaction.</p>
+<p>We tested our Trotec fiber laser machine to characterize it’s cutting settings before producing our own chips. All the details for the process along with the results are documented in the <a href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/site/eproduction/epro.html">Group Assignment page</a>.</p>
+<p>To produce my own chip, I worked with my fellow student and friend Fatima to test the settings on for the ISP chip. We have used <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/bootcamp/spicy/blob/master/PCB_on_fiber.md">this page</a> as a reference.</p>
+<p>For our first trial, we replaced the <code>C02</code> lens in our trotec machine with the <code>fiber laser</code> lens.</p>
+<p><img src="photos/lens.jpg" /></p>
+<p>Then we uploaded the traces on <code>CoralDraw</code> keeping the color as it is (black) for the purpose of engraving, and clicked on print. The detailed process of using the Trotec laser machine can be found in <a href="">Week 4</a> page.</p>
+<p><strong>Attempt 1: The start</strong></p>
+<p>The settings that we used for this test are the following:</p>
+<ul>
+<li>Power: 60</li>
+<li>Speed: 10</li>
+<li>PPI: 30000 HZ</li>
+<li>Passes: 4</li>
+<li>Correction: 10</li>
+<li>Under custom: Check <em>High Quality</em> and <em>Correction</em></li>
+<li>Position: Top right of the bed.</li>
+</ul>
+<p>And the result was this:</p>
+<p><img src="photos/attempt1.jpg" /></p>
+<p>The traces and the pads of the PCB were clearly visible and well marked. However, a good amount of copper remained on the surface of chip causing short circuits to almost every single connection when tested using the multi-meter. <strong>Verdict: Absolute fail</strong>.</p>
+<p><strong>Attempt 2: The success!</strong></p>
+<p>For the second attempt, we kept all the settings used previously, and increased the <strong>passes</strong> to <strong>10</strong> as it proved a good result in our group assignment test.</p>
+<p>And the results?</p>
+<p><img src="photos/attempt_perfection.jpg" /></p>
+<p>They were amazing! Traces and pads fully outlined perfectly, not a single short circuit when tested using the Multimeter. <strong>Verdict: SUCCESS!!!!</strong>.</p>
+<p><strong>Attempts 3 + 4: The disappointment !</strong></p>
+<p>Hence the previous settings worked perfectly for us, we decided to engrave another board (since we worked together to produce the chip). And well, this is how I felt.</p>
+<p><img src="https://media.giphy.com/media/xKgpQqi9rs5Ms/giphy.gif" /></p>
+<p>We engraved the boards using the <strong>EXACT SAME SETTINGS</strong>, but we missed the fact that the FR1 plate was <strong>not levelled properly</strong> on the MDF board, thus resulting in improper removal of the copper and short circuits. <strong>Verdict: Disappointing fail</strong></p>
+<p><img src="photos/attempt3.jpg" /></p>
+<p><strong>Attempt 5: The cut trial</strong></p>
+<p>The FR1 plate had to be changed, since there wasn’t enough space for another engrave. But before that we decided to try cutting our successful PCB attempt.</p>
+<p>We changed the lens back to the CO2 lens., and we’ve used the cutting settings provided in the tutorial. And it <em>almost</em> worked.</p>
+<p><img src="photos/attempt5.jpg" /></p>
+<p>The outlines were very charred, and only one side of the outlines was properly cut hence the reference point was lost.</p>
+<blockquote>
+<p><strong>A TIP :</strong> Try not to move the placement of the engraving job on the software, or else the outlines would be offset-ed and you’ll have to manually guess the reference point .. which proved to be a bad idea.</p>
+</blockquote>
+<p><strong>Verdict: fail</strong>.</p>
+<p><strong>Attempt 6: Another trial</strong></p>
+<p>We came back to the Trotec machine after a very much needed break. And decided to engrave a several ISP chips again. We used the <em>successful engrave settings</em> and it yielded perfect results! The process of took about 1 hour and 27 minutes.</p>
+<p>Then we replaced the fiber lens with the CO2 lens (again) to attempt the cutting again. And used the previous cut settings. The outlines were not cut! We tried different settings, varying the power, speed and the passes every time but the outlines just wont cut!!</p>
+<p>So after thoroughly looking at the causes of the error, we found out that the lens was not installed properly, thus the focus was wrong. <strong>After</strong> fixing the lens and trying again, several times, it still didn’t cut the traces.</p>
+<p><img src="https://media.giphy.com/media/sUo3Ud27QWHfy/giphy.gif" /></p>
+<p>This is what it looked like after all the trials:</p>
+<p><img src="photos/laserfinal.jpg" /></p>
+<p>We decided that by this point, we had two options. Either we can take the risk of cutting the outlines using the milling machine, trying to use our luck to manually locate the reference point and cut it. Or, we could use a saw to cut the outlines.</p>
+<p>So I went with the easier one (in my opinion!), the milling machine option. I tried to locate the reference point by eye and I started cutting. The results were considered pretty good.</p>
+<p><img src="photos/laser_individual.jpg" /></p>
+<hr />
+<h3 id="problems-faced-mostly-in-programming">Problems Faced (mostly in programming)</h3>
+<blockquote>
+<p>Because what’s life without a set of challenges!</p>
+</blockquote>
+<ol type="1">
+<li><em>Outdated program installation links</em></li>
+</ol>
+<p>Some of the software required installation in windows had outdated links in the tutorial guide which lead us to manually search for the software and choose the version that best suited our computer systems (links for the updated programs are mentioned above under programming.)</p>
+<ol start="2" type="1">
+<li><em>Outdated paths</em></li>
+</ol>
+<p>Much like the outdated installation links, the paths in the tutorial were outdated and referred to older versions of the software. Thus copying the exact path from the tutorial rendered a fail in the system recognizing the software. The solution to this is to copy the file path directly of the downloaded software files.</p>
+<ol start="3" type="1">
+<li><em>The solder jumper</em></li>
+</ol>
+<p>The solder jumper! Something that I completely missed on while soldering my components! When I plugged on my ISP chip to the ribbon and the programming ISP borrowed from Hashim, I noticed that the red light was not turning on and the commands I ran rendered no results! Soon I discovered that the jumper solder was not even soldered! thus not completing the circuit and not providing power to the rest of the components. The only solution to this was to go back and solder the part, so I did just that!</p>
+<ol start="4" type="1">
+<li><em>The AVRdude problem</em></li>
+</ol>
+<p>One of the main tools required to set up my ISP was not working as it should be. After re-installing the files, and checking the paths for any errors, I tried running the command to recognize the tool on Gitbash, but the results shown were nothing, not confirmation of the existence of the tool nor an error message.</p>
+<p>Assuming that I can skip this step, I moved forward to the next few commands and was stopped again by an error message when I tried running the <code>make flash</code> command which required the usage of Avrdude tool.</p>
+<p><img src="photos/everdude.jpg" /></p>
+<p>The problem is apparently exists for all my colleagues with a windows 10 x64 bit systems installed. The problem main cause and solution is yet to be known.</p>
+<hr />
+<h3 id="update-march-15-2020"><strong>Update March 15, 2020</strong></h3>
+<p>I tried re-installing the AVR Gnu tool-chain using <a href="http://fabacademy.org/2020/labs/barcelona/students/hala-amer/weeks/w05.html">Hala’s</a> wonderful and very useful documentation to solve my AVR-dude problem.</p>
+<p>The steps that I followed:</p>
+<ol type="1">
+<li><p>Install <a href="https://sourceforge.net/projects/winavr/">WinAVR 20100110</a> and launch it.</p></li>
+<li><p>Open the WinAVR folder and find the folder bin. Then delete or move these two files elsewhere: <strong>avrdude.conf</strong> and <strong>avrdude</strong>.</p></li>
+<li><p>Replace the deleted folders with the newer version of them <a href="http://download.savannah.gnu.org/releases/avrdude/">Version 6.3 2016</a>.</p></li>
+</ol>
+<p><img src="photos/avrdude3.jpg" /></p>
+<ol start="4" type="1">
+<li><p>In <code>control panel</code> &gt; <code>systems</code> &gt; <code>advanced system settings</code> &gt; <code>environmental variables</code> &gt; <code>path</code> &gt; <code>edit</code> &gt; delete the old AVR (if installed) path and add the new path (../WinAvr/bin).</p></li>
+<li><p>Connect the ISP programmer to the laptop, and launch Zadig, select the programming &gt; select “libsub-win32 (v1.2.6.0)” &gt; replace driver.</p></li>
+<li><p>Open the fts_firmware_bdm_v1 folder and open GitBash.</p></li>
+<li><p>Make sure that all the driver are installed properly:</p></li>
+</ol>
+<blockquote>
+<p>Make -v</p>
+</blockquote>
+<p><img src="photos/make2.jpg" /></p>
+<blockquote>
+<p>Avr-gcc –version</p>
+</blockquote>
+<p><img src="photos/Avr2.jpg" /></p>
+<blockquote>
+<p>avrdude -c usbtiny -p t45</p>
+</blockquote>
+<p>This time the AVRdude was installed properly as shown.</p>
+<p><img src="photos/avrdude2.jpg" /></p>
+<ol start="8" type="1">
+<li>Follow the steps of programming the ISP by following the steps mentioned earlier in the documentation.</li>
+</ol>
+<blockquote>
+<p>make flash<br />
+make fuses<br />
+make rstdisbl</p>
+</blockquote>
+<hr />
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br /><span data-xmlns:dct="http://purl.org/dc/terms/" data-property="dct:title">This work </span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/" rel="dct:source">http://academany.fabcloud.io/fabacademy/2020/labs/uae/students/meha-hashmi/</a>
+</center>
+<p><br /></p>
+</body>
+</html>

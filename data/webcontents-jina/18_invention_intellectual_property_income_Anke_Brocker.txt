@@ -1,0 +1,78 @@
+Title: Fab Academy 2018 - Assignment 17
+
+URL Source: http://fabacademy.org/2018/labs/fablabaachen/students/anke-brocker/assignment17.html
+
+Markdown Content:
+Invention, Intellectual Property, & Income
+------------------------------------------
+
+![Image 1](https://fabacademy.org/2018/labs/fablabaachen/students/anke-brocker/images/assignment17/Intellectual-Property.jpg)
+
+[Intellectual Property](http://www.wsuventures.org/get-started/protecting-intellectual-property-ippatents)
+
+After designing and fabricating so many different objects over the last months several question arise what we want to do with our materials and how we can handle them when sharing with others:
+
+*   How can we spread it?
+*   How can we protect it in terms of copyright, patents and licenses?
+*   How can we assure that our name will always be attached?
+
+* * *
+
+#### Licenses
+
+Definition by [techopedia](https://www.techopedia.com/definition/17177/license): _'A license is an agreement that allows someone to copy, use, or resell a commodity, such as digital content.'_  
+Moreover, by online search I found out that there exist several characteristics that a license can have to fit all kinds of need of the owners. Owners need to assure they understand these characteristics and choose the option that covers most of their needs.
+
+* * *
+
+##### License Comparison
+
+To achieve a feeling for the different types of licenses we were asked to compare different approaches of licenses. I decided to compare the 'LGPL', the 'Creative Commons' and the 'Apache license, version 2.0' approach.
+
+**a.) LPGL**
+
+LGPL (Lesser General Public License) gives developers and companies the opportunity to integrate software released under the LGPL into their software. But they are not required by the terms of a strong copyleft license to release the source code of their own components. I.e. the code is not available for others to work with it and change it. The code just has to be available for other users.  
+**Copyleft definition:** people have the right to freely distribute copies and modified versions of a work with the condition that the same rights be preserved in derivative works down the line.
+
+**b.) Creative Commons**
+
+[Creative Commons](https://creativecommons.org/) is a nonprofit organisation that offers copyright licenses for digital work.  
+Several licenses are offered, from which designers can select which of the licenses best fits their purpose. For other people to know they mark their work accordingly. This way others are able to read detailed terms and conditions. The Creative Commons organisation provides option that picture the maker movement thought very close.  
+These six categories of licenses are present (definitions taken from [here](http://whatis.techtarget.com/definition/Creative-Commons-copyright)):
+
+*   **Attribution** - lets others distribute, remix, tweak and build upon work, even commercially, as long as they credit the creator for the original work.
+*   **Attribution-NoDerivs** - allows for commercial and non-commercial redistribution, as long as the work is passed along unchanged and in whole, crediting the creator.
+*   **Attribution-NonCommercial-ShareAlike** - lets others remix, tweak, and build upon work for non-commercial purposes, as long as they credit the creator and license any new creations under the identical terms.
+*   **Attribution-ShareAlike** - lets others remix, tweak, and build upon work for commercial and non-commercial purposes, as long as they credit the creator and license new creations under the identical terms.
+*   **Attribution-NonCommercial** - lets others remix, tweak, and build upon work for non-commercial purposes, crediting the creator. Derivative works do not have to be licensed under the same terms.
+*   **Attribution-NonCommercial-NoDerivs** - allows others to download work and share it as long as they credit the creator, don't change the work in any way or use it for commercial purposes.
+
+**c.) Apache license, version 2.0**
+
+The Apache License is a free and open source software (FOSS) licensing agreement from the Apache Software Foundation.
+
+*   Software can be freely used, reproduced, modified, distributed or sold.
+*   Software can be combined with other products and sold as together.
+*   Products derived or modified from licensed software can be distributed under other licenses.
+*   A copy of the license must be distributed along with any Apache software as well.
+
+Basically, the point of commercial use and sale cannot be taken away from the Apache license. This is a problem for me, as I do not want others to make money with my body of thought.
+
+* * *
+
+##### Which license is the best one for me?
+
+For my assignments and final project I have chosen to use the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license. The characteristics of this license provide exactly the important rules which I want to be effective for my material.  
+I chose the suitable license based on the definitions in the paragraph above. To double check my decision I used the tool of the [Creative Commons website](https://creativecommons.org/choose/).
+
+![Image 2](https://fabacademy.org/2018/labs/fablabaachen/students/anke-brocker/images/assignment17/license.png)
+
+Result of questionnaire to check suitable Creative Commons license.
+
+I decided to not let my material be used commercial as this is not a part of the maker-methodology. Knowledge should be disseminated free of costs to assure everybody gets a chance to use it. Paying money for the material would restrict the knowledge spreading to a certain group of people.
+
+* * *
+
+#### Dissemination of Project
+
+Nowadays exist various options to 'advertise' and disseminate a project for free. Social platforms, e.g. Twitter, Instagram, Snapchat or Facebook can easily be used to show your friends your project. Additionally, website like [Thingiverse](https://www.thingiverse.com/) allow you to share your project with other people. Of course, the license discussion has also been present on these websites as reported in [this article](https://www.makerbot.com/media-center/2016/03/14/thingiverse-creative-commons-licenses-explained). With the help of these platforms I would start spread my project. If after I assume 5-6 months I do not receive feedback that the project reached people I would try to find maker meet-ups nearby and bring the project along. One step further would be visiting a Maker Faire but I personally do not intend to actuate so much effort if the social media platforms and regional meet-ups are not enough to spread the project. Maybe that means that the project does need more improvement.

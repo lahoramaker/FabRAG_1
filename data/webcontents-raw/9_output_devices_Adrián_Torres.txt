@@ -1,0 +1,666 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Week 11. Output Devices</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/LOGO%20fablab.png" alt="" /></span><span class="title">Adrián Torres</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul><li><a href="index.html">Home</a></li>
+							<li><a href="assignments.html">Assignments</a></li>
+							<li><a href="project.html">Final Project</a></li>
+                            <li><a href="adrianino.html">Adrianino</a></li>
+                            <li><a href="samdino.html">SAMDino</a></li>
+                            <li><a href="fabxiao.html">Fab-Xiao</a></li>
+							<li><a href="about.html">About me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Week 11. Output Devices</h1>
+							
+                            <p>This week there are also two types of assignments, one group and one individual. In my case being alone in the Fab Lab, I do both.</p>
+                            
+                            <ul><li> Measure the power consumption of an output device. ✔
+                                <li> Document your work (in a group or individually). ✔
+                                <li> Add an output device to a microcontroller board you've designed and program it to do something. ✔ 
+                                <li> Linked to the group assignment page. ✔  
+                                <li> Documented how you determined power consumption of an output device with your group. ✔
+                                <li> Documented what you learned from interfacing output device(s) to microcontroller and controlling the device(s). ✔  
+                                <li> Described your design and fabrication process or linked to previous examples. ✔    
+                                <li> Explained the programming process/es you used. ✔
+                                <li> Outlined problems and how you fixed them. ✔
+                                <li> Included original design files and code. ✔
+                                <li> Included a ‘hero shot/video’ of your board. ✔       
+                            </ul>  
+                            
+                            
+                            <p>Like every week, my weekly schedule. 😊 </p>
+                            <p><img src="images/week11/week11.01.jpg" width="80%"; max-width="700" /></p>   
+                            
+                            <p style="color:orangered;"> <i>I start the Output Devices week after randomly going out on review Wednesday, Neil recommended that I try to network my project. This week I will try to do two outputs, one Hello Servo and another Hello LED. My idea is to try to test the outputs that I am going to use for my final project. Also I am going to add to the I2C the Serial connection (TX, RX). </i> 😅</p>
+                            
+                            <h1>Group Assignment</h1>  
+                            <p>The <b>Group Assignment page</b> is at the following <a href="http://academany.fabcloud.io/fabacademy/2020/labs/leon/leon-group-assignments/"><b>link.</b></a></p>
+                            <p>If you click on this <a href="#group"><b>link,</b></a> you go to the Group Assignment section that I have done for this week.</p>
+                            
+                            
+                            <h1>Hello Servo</h1>
+                            <h2>Design</h2>
+                            
+                            <p>For the Hello Servo I am going to use the <b>ATtiny 1614</b> with Eagle (in <a href="week09.html"><b>week 09</b></a> of Input Devices I download the footprint of the microcontroller). I'm going to use a 9V battery to power the board, so I need to use a voltage regulator. Looking at the inventory of the Fab Lab León there is the <a href="http://www.ti.com/lit/ds/symlink/lm2940-n.pdf"><b>LM2940.</b></a> We must be careful when we place the component in the schematic, because the pinning does not match and we must look at the Datasheet. In this case I use package SOT223.</p>
+                            
+                            <span class="image main"><img src="images/week11/week11.02.jpg" alt="" /></span>
+                            
+                            <p>As a recommendation from Nuria and Pablo, it is always good to guide the Inputs or Outputs boards for the Networking week. In the week of Inputs, the Hello Reflect board set the I2C protocol and through the FTDI I could connect it to the Serial Bus (TX and RX). For the Hello Servo I will also incorporate the I2C and the Serial Bus (this time with a separate connector). Here is the schematic and the board.</p>
+                            
+                            <p><img src="images/week11/week11.03.jpg" width="80%"; max-width="700" /></p> 
+                            
+                            <h2>Making</h2>
+                            
+                            <p>And these are the two images ready to use in the Modela.</p>
+                            
+                            <p><img src="images/week11/week11.04.jpg" width="70%"; max-width="700" /></p>
+                            
+                            
+                            <p>With Mods CE and the Modela, I mill the board. The starting reference points are X = 2 Y = 2; but apparently the machine when it did the milling with the 1/32 milling cutter did not take that origin. 😥 </p>
+                            
+                            <p><img src="images/week11/week11.05.jpg" width="50%"; max-width="700" /></p>
+                            
+                            <p>I don't know why strange reason lost the origin of the Modela. As the board does not enter me again, I take advantage of it for the other board. I put another new copper board back and it looks good.</p>
+                            
+                            <span class="image main"><img src="images/week11/week11.06.jpg" alt="" /></span>
+                            
+                            <p>For this board this is the list of components for this board, an ATtiny1614, the LM2940 voltage regulator, the 1uF capacitor, the resistors 4,99K for the I2C and various connection pins.</p>
+                            
+                            <p><img src="images/week11/week11.07.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>And since we are confined at home 🏠, this is my desk converted into a <b>Lab</b> (any day my mother will kick me out of the house)😅😂. And the result of the board finished soldering.</p>
+                            
+                            <span class="image main"><img src="images/week11/week11.08.jpg" alt="" /></span>
+                            
+                            <p>The time-lapse of the ATtiny1614 soldering process for servos.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/408624783" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <p>The <b>servo connection</b> is important, for this I follow the connection instructions on the <a href="https://www.luisllamas.es/controlar-un-servo-con-arduino/"><b> Luis Llamas website.</b></a></p>
+                            
+                            <p><img src="images/week11/week11.09.jpg" width="40%"; max-width="700" /></p>
+                            
+                            <h2>Programming: Arduino + Linux.</h2>
+                            
+                            <p>For the programming of the ATtiny1614 I am going to use the program that <a href="http://fabacademy.org/2019/labs/leon/students/elena-cardiel/week12.html"><b>Elena Cardiel</b></a> used to move a servo in its week of output. In my case the outputs of the ATiny1614 are <b>PA6</b> (Pin 2 of Arduino) and <b>PA7</b> (Pin 3 of Arduino).</p>
+                            <p>For programming I follow the steps as in <a href="week08.html"><b>week 08.</b></a> I compile the Arduino program, copy the .hex file and paste it in the Pyupdi folder. Through the Pyserial and UPDI I program the board, and the programming is successful.</p>
+                                
+                            <span class="image main"><img src="images/week11/week11.10.jpg" alt="" /></span>
+                            
+                            <p>After programming is complete, I disconnect the UPDI and connect the servo with the FTDI cable attached. The servo goes very slow and freezes, it no longer moves. 😬 It was so fast that I don't have time to record it. I think it is a power problem, so with the FTDI connected I connect the 9V battery. Nothing remains the same, the servo is blocked. I try to program it again and it gives me the following error. 😫</p>
+                            
+                            <p><img src="images/week11/week11.11.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>I mention it to my instructor Nuria and she recommends several things. Let it <b>re-soldering</b> the board (done); to <b>measure</b> the battery voltage (8.5V) so that the regulator works (sometimes if it is not more than 5V the regulators do not work); measure with the multimeter whether the regulator does its job (it is correct); measure with the oscilloscope the ATtiny outputs going to the servos (it gives a continuous signal of 0.8V and 5v respectively, and a servo has to be pulses). I have also looked at the following <a href="https://github.com/mraardvark/pyupdi/issues/12"><b>link</b></a> where the same error occurs <b>"UPDI not OK - reinitialisation required"</b> and they recommend disconnecting the microcontroller for about 20 seconds to reprogram it and nothing. Also in this <a href="https://www.avrfreaks.net/forum/pyupdi-atmega4808"><b>link</b></a> they say to use a cable to program with an FTDI 232 and it does not work either. I think my ATtiny1614 is <b>dead.</b> 💀</p>
+                            
+                            <p>That same afternoon I wrote an <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/class/issues/37"><b>Issue</b></a> in class to see if anyone had happened to it. Neil wrote to me and said it could be a lack of power for the servo.</p>
+                            
+                            <p>This is the connection and the servo moves a little bit and then stops.</p>
+                            
+                            <p><img src="images/week11/week11.12.jpg" width="70%"; max-width="700" /></p>
+                            
+                            
+                            <p>After turning my head at night 😴, I wake up on Saturday thinking that I may have made a mistake in choosing the pins to activate the servos because the PA6 and PA7 have no PWM output. So I redesigned the board again, changing the output pins to PA4 and PA5. Nuria tells me to mill the new design of the board, but to <b>replace</b> the <b>ATtiny1614</b> that doesn't work with a new one.</p>
+                            <p>Pablo asks me to show him the code, and he tells me that by using the Arduino "Servo" library; it is not necessary to assign specific pins, since software creates a virtual PWM. Here is the <a href="https://www.arduino.cc/en/Reference/Servo"><b>link</b></a> of this information. </p>
+                            
+                            <p>These are the <b>two new boards</b> that I have created in case the ATtiny1614 replacement doesn't work for me. It has changed the PA6 and PA7 pins for the PA4 and PA5, which do have PWM.</p>
+                            
+                            <p><img src="images/week11/week11.25.jpg" width="70%"; max-width="700" /></p>
+                            
+                            
+                            <p>So the first step is to desolder the ATtiny with the <b>heat gun.</b></p>
+                            
+                            <span class="image main"><img src="images/week11/week11.21.jpg" alt="" /></span>
+                            
+                            
+                            <p>The little ATtiny is already in place, it costs a bit because you have to see that all the pins are seated on the board. 😅 </p>
+                            
+                            <span class="image main"><img src="images/week11/week11.22.jpg" alt="" /></span>
+                            
+                            <p>Once the new ATtiny1614 is soldered, I start programming it. This time I take the example of Arduino and modify only the output pin, in this case PA7 (Pin 3 of Arduino). I load the program and everything is correct.</p>
+                            
+                            <span class="image main"><img src="images/week11/week11.23.jpg" alt="" /></span>
+                            
+                            <p>And works 😊; It moves well and does not crash. 💪</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/409234857" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <pre><code>//Modified by Adrián Torres Omaña
+//Fab Academy 2020
+//Fab Lab León 
+
+/* Sweep
+ by BARRAGAN <http://barraganstudio.com>
+ This example code is in the public domain.
+
+ modified 8 Nov 2013
+ by Scott Fitzgerald
+ http://www.arduino.cc/en/Tutorial/Sweep
+*/
+
+#include <Servo.h>
+
+Servo myservo;  // create servo object to control a servo
+// twelve servo objects can be created on most boards
+
+int pos = 0;    // variable to store the servo position
+
+void setup() {
+  myservo.attach(3);  // attaches the servo on pin 3 to the servo object
+}
+
+void loop() {
+  for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
+    // in steps of 1 degree
+    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+  for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+}</code></pre>
+                            
+                            <p>To check if it works perfectly, I load another program, this time so that two servos move at the same time in each output, both on PA6 (Pin 2 of Arduino) and PA7 (Pin 3 of Arduino). The program loads correctly.</p>
+                            
+                            <span class="image main"><img src="images/week11/week11.24.jpg" alt="" /></span>
+                            
+                            <p>Here the video of the movement of the servos. The first video is with <b>9V power</b> from the battery.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/409235114" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <p>This is powered from the <b>FTDI</b>, and it also works correctly.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/409235487" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <p>And this is powered by both the <b>9V battery</b> and the <b>FTDI.</b> No problem, both feeds can work at the same time.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/409235719" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <pre><code>//Modified by Adrián Torres Omaña
+//Fab Academy 2020
+//Fab Lab León 
+
+/* Sweep
+ by BARRAGAN <http://barraganstudio.com>
+ This example code is in the public domain.
+
+ modified 8 Nov 2013
+ by Scott Fitzgerald
+ http://www.arduino.cc/en/Tutorial/Sweep
+*/
+
+#include <Servo.h>
+
+Servo myservo1;
+Servo myservo2;
+// create servo object to control a servo
+// twelve servo objects can be created on most boards
+
+int pos = 0;    // variable to store the servo position
+
+void setup() {
+  myservo1.attach(2);  // attaches the servo on pin 2 to the servo object
+  myservo2.attach(3);  // attaches the servo on pin 3 to the servo object
+}
+
+void loop() {
+  for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
+    // in steps of 1 degree
+    myservo1.write(pos);              // tell servo to go to position in variable 'pos'
+    myservo2.write(pos);
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+  for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+    myservo1.write(pos);              // tell servo to go to position in variable 'pos'
+    myservo2.write(pos);
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+}</code></pre>
+                            
+                            <h2>Conclusions.</h2>
+
+                            <p>It is strange that this has happened to me, but it could have been that the servo was blocked and it entered intensity by the signal pin of the ATtiny1614 (PA7) and something internally broke. The regulator was working properly and the voltages were correct. </p>
+                            <p>What I have learned is that I must always configure the outputs in <b>PWM</b> for what I can use and that when I get the error in the terminal <b>"UPDI not ok reinittialisation required"</b> is that the ATtiny has died. 😣 </p>
+                            
+                    
+                            <p>Here is the files to download.</p>
+                            <ul><li><a href="assignments/week11/Hello_Servo_1614_BUS_traces.png"> <b>Hello Servo Traces</b></a>
+                                <li><a href="assignments/week11/Hello_Servo_1614_BUS_interior.png"> <b>Hello Servo interior</b></a>
+                                <li><a href="assignments/week11/Hello_Servo_1614_bus.zip"> <b>Hello Servo Schematic and Board ATtiny1614</b></a> 
+                                <li><a href="assignments/week11/Hello_servo2/Hello_servo2.ino"> <b>Arduino Program Hello Servo</b></a>
+                                <li><a href="assignments/week11/Hello_servo_dos_servos/Hello_servo_dos_servos.ino"> <b>Arduino Program Hello 2 x Servos</b></a>
+                                </ul>
+                            
+                            
+                            <h1>Hello LED's</h1>
+                            <h2>Design</h2>
+                            <p>For the Hello LED I am going to use the <b>ATtiny412</b>, because I only need to light two LED's that I am going to use for the <b>warning signs</b> of the level crossing of my final project. To make the schematic the first thing I do is look for the footprint in the library, but there is no ATtiny412. Neither does Digikey or Octopart. So using Eagle, I edit an ATtiny45 and convert it to an ATtiny412 and save it in my library.</p>
+                            
+                            <p><img src="images/week11/week11.13.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>Once I have the ATtiny412 design, I do the rest of the circuit. In this case I am not going to use a voltage regulator, because I plan to power this board, through the Serial Bus because this board is going to be a slave. For the tests I will connect it through the FTDI. This is the schematic and the board.</p>
+                            
+                            <p><img src="images/week11/week11.14.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <h2>Making</h2>
+                            
+                            <p>And these are the two images ready to use in the Modela.</p>
+                            
+                            <p><img src="images/week11/week11.15.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>As with the previous board, I use CE Mods. And I try to reuse the board that went wrong, because it fits. But ... I am so "ruinas" (Spanish expression), the mill broke and I try to take advantage of it, leaving the board very skinned. 😬</p>
+                            
+                            <p><img src="images/week11/week11.16.jpg" width="50%"; max-width="700" /></p>
+                            
+                            <p>So the board that I was going to reuse at the end nothing. Sorry Nuria.😢 How did I start another new board for the previous board, because I ended up using it. I also repeated the displacement of the origin, in this case I had X = 48 and Y = 2; In order not to lose all the work, I move the origin by eye and place it at X = 50 and Y = 2. Even so, the board was a bit tight on the left side, but I managed to save it.</p>
+                            
+                            <span class="image main"><img src="images/week11/week11.17.jpg" alt="" /></span>
+                            
+                            <p>For this board this is the list of components for this board, an ATtiny412, the 1uF capacitor, the resistors 1K for the LED's, two red LED's and various connection pins.</p>
+                            
+                            <p><img src="images/week11/week11.18.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>And this is the result of soldering, a tiny board and reused to the maximum the ATtiny412.💪 I have placed pins in the design to connect them to the signaling of the level crossing that I manufactured in <a href="week05.html"><b>week 05</b></a> of 3D printing.</p>
+                            
+                            <p><img src="images/week11/week11.19.jpg" width="70%"; max-width="700" /></p>
+                            
+                            
+                            <p>This is the ATtiny412 soldering process video.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/408624880" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <h2>Programming: Arduino + Linux.</h2>
+                            <p>To program the Hello LED's board with the ATtiny412 I am going to use Arduino. In this case the LEDs are located on PA6 (Pin 0 of Arduino) and PA7 (Pin 1 of Arduino). The program is very simple, it alternates each LED with a certain cadence.</p>
+                            
+                            <p>For programming I follow the steps as in <a href="week08.html"><b>week 08.</b></a> I compile the Arduino program, copy the .hex file and paste it in the Pyupdi folder. Through the Pyserial and UPDI I program the board, and the programming is successful.</p>
+                            
+                            <span class="image main"><img src="images/week11/week11.20.jpg" alt="" /></span>
+                            
+                            <p>This is the result of programming.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/409236930" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            
+                            <pre><code>//Adrián Torres Fab Academy 2020
+
+
+int ledPin1 = 0; //led1
+int ledPin2 =1; //led2
+
+void setup() {
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+}
+ 
+void loop() {
+     digitalWrite(ledPin1, HIGH);
+     digitalWrite(ledPin2, LOW);
+     delay(750); 
+     digitalWrite(ledPin1, LOW);
+     digitalWrite(ledPin2, HIGH);
+     delay(750);
+}</code></pre>
+                            
+                            
+                            
+                            <p>Here is the files to download.</p>
+                            <ul><li><a href="assignments/week11/Hello_Light_PN_Bus_traces.png"> <b>Hello LED's Traces</b></a>
+                                <li><a href="assignments/week11/Hello_Light_PN_Bus_interior.png"> <b>Hello LED's interior</b></a>
+                                <li><a href="assignments/week11/Hello_light_paso_nivel_BUS.zip"> <b>Hello LED's Schematic and Board ATtiny412</b></a>    
+                                <li><a href="assignments/week11/Hello_led_pn/Hello_led_pn.ino"> <b>Arduino Program Hello LED's</b></a>
+                                </ul>
+                            
+                            <h1><a id="group"></a>Group Assignment.</h1>  
+                            <h2>Measure the power consumption of an output device. </h2>
+                            <p>The <b>Group Assignment page</b> is at the following <a href="http://academany.fabcloud.io/fabacademy/2020/labs/leon/leon-group-assignments/"><b>link.</b></a></p>
+                            <p>To measure the consumption of any electrical or electronic element, we will use a <b>multimeter.</b> Within the multimeter there is the <b>Ammeter</b>, which will serve us to know the consumption of a circuit or a component.</p> 
+                            <p><b>Important:</b> We must always measure in <b>series,</b> that is, the circuit will be closed through the multimeter, so we must connect it correctly and always on a high scale or where we have the protection fuse (normally 10A).</p>
+                            
+                            <p>The first thing I will measure is the total consumption of the Hello Servo board. This is how I connect it. The GND in the stack passes through the ammeter.</p>
+                            
+                            <p><img src="images/week11/week11.26.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>Here is the video of the measure. As the servo is also connected, the milliamps vary between 2.1 and 3.9 mA. To know the power, we use the following formula <b> P = V x I.</b> </p>
+                            
+                            <pre><code>The regulator has a voltage of <b>4.8 V</b> and we take the consumption greater than <b>3.9 mA.</b>
+                            We pass milliamps to amps.
+                            P = 4.8 x 0,0039 = <b>0,018 W.</b></code></pre>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/409236710" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <p>Then I measure the servo consumption only. In the drawing I explain the connection of the ammeter. In this case I insert the ammeter in the VCC of the servo.</p>
+                            
+                            <p><img src="images/week11/week11.27.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>Here is the video of the measure. The consumption of the servo varies between 2.8 and 1.1 mA. To know the power, we use the following formula <b> P = V x I.</b></p>
+                            
+                            <pre><code>The regulator has a voltage of <b>4.8 V</b> and we take the consumption greater than <b>2.8 mA.</b>
+                            We pass milliamps to amps.
+                            P = 4.8 x 0,0028 = <b>0,013 W.</b></code></pre>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/409236799" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <p>As after having the problem with the ATtiny1614 that it did not move, as I have the <b>oscilloscope</b> at home it measured and gave me a continuous signal of 0.8V. Once the ATtiny was replaced, I measured the output pin of the microcontroller that goes to the servo to see the variation of the frequencies for the movement and it works correctly. Here is the video that shows it.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/409235942" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            
+                            <h1>Final Project Test</h1>
+                            <p>The two outputs that I have created this week are very oriented to my final project, the servo and the LEDs. For this I want to test them to see if they work for me.</p>
+                            
+                            <h2>Hello Servo + Level crossing barriers</h2>
+                            <p>To adapt the servo to the base of the model, I was inspired by fastening the servos from the manufacturer <a href="https://peco-uk.com/products/single-servo-motor?_pos=1&_sid=51a208149&_ss=r"><b>PECO.</b></a> Since I have the Prusa at home, I make a quick design to attach the servo to the base and have some regulation.</p>
+                            
+                            
+                            <span class="image main"><img src="images/week11/week11.28.jpg" alt="" /></span>
+                            
+                            <p>Using a wire, I move the barrier. But I realize that it twists a lot, because it is not making the turn on the axis, in the position that I have placed it it is out of phase. So a quick prototyping and I glue a piece of styrene and re-regulate everything. Now better.</p>
+                            
+                            <span class="image main"><img src="images/week11/week11.29.jpg" alt="" /></span>
+                            
+                            <p>Once everything is adjusted, I load the following Arduino program and that's how it works in the video. Now I have to keep trying different speeds and positions.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/409236858" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <pre><code>//Adrián Torres Fab Academy 2020
+
+#include <Servo.h>
+
+
+Servo myservo;  // crea el objeto servo
+ 
+int pos = 0;    // posicion del servo
+ 
+void setup() {
+
+  myservo.attach(3);  // vincula el servo al pin digital PA7
+}
+ 
+void loop() {
+   //varia la posicion de 8 a 37, con esperas de --ms
+   for (pos = 8; pos <= 37; pos += 2) 
+   {
+      myservo.write(pos);              
+      delay(80);                       
+   }
+ 
+   //varia la posicion de 8 a 37, con esperas de --ms
+   for (pos = 37; pos >= 8; pos -= 2) 
+   {
+      myservo.write(pos);              
+      delay(80);                       
+   }
+}</code></pre>
+
+                            <h2>Hello LED's + Level crossing signals</h2>
+                            
+                            <p>When designing this board, place connectors to connect the level crossing signals. The program I use is the same as in this assignment.</p>
+
+                            <p>Since the signal cables are so thin, I have a piece of rigid cable soldered and resistors to the 470 ohm LEDs. The circuit has 1K resistors, but I keep the resistance at 470 ohms because they are very small LEDs and I still damage them. Here the video of the operation.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/409236997" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            
+                            <h1>LCD - I2C</h1>
+                            <h2>01/08/2020</h2>
+                            <p>During the FabAcademy I bought several objects that I wanted to use, among them is an LCD module with interface for I2C communication protocol. In my case, I bought it through Amazon from AZDelivery, here is the <a href="https://www.amazon.es/gp/product/B07CQG6CMT/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1"><b>link.</b></a> This company has a multitude of very interesting tutorials, including that of the <a href="https://www.az-delivery.de/es/products/hd44780-2004-blaues-display-bundle-kostenfreies-e-book?variant=18717479403616"><b>LCD module with I2C.</b></a></p>
+                            
+                            <p>I will use the board that I designed for the <a href="week09.html"><b>Input</b></a> with the phototransistor and that by including an I2C port I can connect the LCD. This is my connection of the two components.</p>
+                            
+                            <p><img src="images/week11/week11.30.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>When we use the I2C communication protocol, the first thing we must do is identify the different slaves that we connect to the bus. The same happens when we connect an input or an output, they have to have a name to identify themselves on the bus; is usually 0x... To do this I use <b>Neil's program</b> to see what number the I2C interface of the LCD uses.</p>
+                            
+                            <pre><code>//
+// hello.I2C.ino
+//
+// I2C hello-world scanner
+//
+// Neil Gershenfeld 12/8/19
+//
+// This work may be reproduced, modified, distributed,
+// performed, and displayed for any purpose, but must
+// acknowledge this project. Copyright is retained and
+// must be preserved. The work is provided as is; no
+// warranty is provided, and users accept all liability.
+//
+
+#include Wire.h
+
+void setup() {
+   Serial.begin(115200);
+   Wire.begin();
+   }
+
+uint8_t address,count;
+
+void loop() {
+   count = 0;
+   Serial.println("start scan ...");
+   for (address = 1; address < 127; address++) {
+      Wire.beginTransmission (address);
+      if (Wire.endTransmission () == 0) {
+         count += 1;
+         Serial.print("   found ");
+         Serial.print(address,DEC);
+         Serial.print(" (0x");
+         Serial.print(address,HEX);
+         Serial.println (")");
+         }
+      }
+   if (count == 0)
+      Serial.println("   no devices found");
+   delay(1000);
+   }
+   </code></pre>
+                            
+                            <p>Once the program is loaded through the UPDI, we connect the LCD to the board and the FTDI to the computer. In the terminal we execute the instruction to see the number on the LCD. Listen the serial port <b><i> python -m serial.tools.miniterm /dev/ttyUSB0 115200</i></b></p>
+                            <p>In my case the number is <b>0x27.</b></p>
+                            
+                            <p><img src="images/week11/week11.31.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>Once I know what the LCD number is, I go on to test Neil's program, Hello_LCD.</p>
+                            
+                            <pre><code>//
+// hello.LCD.I2C.ino
+//
+// LCD I2C hello-world
+//
+// Neil Gershenfeld 12/8/19
+//
+// This work may be reproduced, modified, distributed,
+// performed, and displayed for any purpose, but must
+// acknowledge this project. Copyright is retained and
+// must be preserved. The work is provided as is; no
+// warranty is provided, and users accept all liability.
+//
+
+#include LiquidCrystal_PCF8574.h
+#include Wire.h
+
+LiquidCrystal_PCF8574 lcd(0x27); // set LCD address 0x27
+int count = 0;
+
+void setup() {
+   lcd.begin(16,2); // initialize 16x2 LCD
+   //lcd.begin(20,4); // initialize 20x4 LCD
+   lcd.setBacklight(255); // turn on backlight
+   lcd.home(); // go home
+   lcd.clear(); // clear display
+   lcd.print("Hello World!"); // print text
+   lcd.setCursor(0,1); // move cursor
+   lcd.print("Count: ");
+   }
+
+void loop() {
+   lcd.print(count);
+   lcd.setCursor(7,1);
+   count += 1;
+   }
+   </code></pre>
+                            
+                            
+                            <p>This is the video of the operation.</p>
+                            <p><iframe src="https://player.vimeo.com/video/446192136" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <p>The next step is to connect the <b>phototransistor</b> to the board. With the sensor connected I want to map the values and at a certain value it will show to turn the light on or off. 😅</p>
+                            
+                            <p>Using the following code, I initialize the LCD, map the sensor values and write to the LCD. I was inspired by the code with the following project that I found on the Arduino page, here is the <a href="https://create.arduino.cc/projecthub/Guitarman1/displaying-sensor-values-on-lcd-c0c44f"><b>link.</b></a> </p>
+                            
+                            <pre><code>//Adrián Torres Fab Academy 2020
+//Fab Lab León
+//
+
+#include LiquidCrystal_PCF8574.h
+#include Wire.h
+
+LiquidCrystal_PCF8574 lcd(0x27); // set LCD address 0x27
+
+int sensorPin = 1;    // analog input pin to hook the sensor to
+int sensorValue = 0;  // variable to store the value coming from the sensor
+ 
+
+void setup() {
+    Serial.begin(115200); // initialize serial communications
+   lcd.begin(16,2); // initialize 16x2 LCD
+   //lcd.begin(20,4); // initialize 20x4 LCD
+   lcd.setBacklight(255); // turn on backlight
+   lcd.home(); // go home
+   lcd.clear(); // clear display
+   lcd.print("Light!"); // print text
+   lcd.setCursor(0,1); // move cursor
+   //lcd.print("Lux: ");
+   }
+
+void loop() {
+  sensorValue = analogRead(sensorPin); // read the value from the sensor
+  sensorValue = map(sensorValue, 0, 1024, 1024, 0);
+  Serial.println(sensorValue); // print value to Serial Monitor
+   if (sensorValue <= 350) {  //if the value is equal to or less than 350
+    lcd.clear();          // clear the LCD
+    lcd.print("Light!"); // print text "Light"
+    lcd.setCursor(4,1); //at the fourth cursor of the second line
+    lcd.print("TURN ON"); //print text "TURN ON"
+    delay(500);  
+    }
+   else{                  //if the value is equal to or more than 350
+    lcd.clear();          // clear the LCD
+    lcd.print("Light!"); // print text "Light"
+    lcd.setCursor(4,1); //at the fourth cursor of the second line
+    lcd.print("TURN OFF"); //at the fourth cursor of the second line
+    delay(500);  
+   }  
+}
+</code></pre>
+                            
+                            <p>This would be the phototransistor connection, just like in the <a href="week09.html"><b>Input Devices</b></a> week.</p>
+                            
+                            <p><img src="images/week11/week11.32.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>And this is the video of the operation. The code to download is at the bottom of the page.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/446197695" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                
+                   
+                            
+                            <h1>Files</h1>
+                            <p>Find below the files that I made for this assignment.</p>
+                            <ul><li><a href="assignments/week11/Hello_Servo_1614_BUS_traces.png"> <b>Hello Servo Traces</b></a>
+                                <li><a href="assignments/week11/Hello_Servo_1614_BUS_interior.png"> <b>Hello Servo interior</b></a>
+                                <li><a href="assignments/week11/Hello_Servo_1614_bus.zip"> <b>Hello Servo Schematic and Board ATtiny1614</b></a>
+                                <li><a href="assignments/week11/Hello_servo2/Hello_servo2.ino"> <b>Arduino Program Hello Servo</b></a>
+                                <li><a href="assignments/week11/Hello_servo_dos_servos/Hello_servo_dos_servos.ino"> <b>Arduino Program Hello 2 x Servos</b></a>
+                                <li><a href="assignments/week11/Hello_Light_PN_Bus_traces.png"> <b>Hello LED's Traces</b></a>
+                                <li><a href="assignments/week11/Hello_Light_PN_Bus_interior.png"> <b>Hello LED's interior</b></a>
+                                <li><a href="assignments/week11/Hello_light_paso_nivel_BUS.zip"> <b>Hello LED's Schematic and Board ATtiny412</b></a>    
+                                <li><a href="assignments/week11/Hello_led_pn/Hello_led_pn.ino"> <b>Arduino Program Hello LED's</b></a>
+                                <li><a href="assignments/week11/servo2.stl"> <b>Support 3D servo</b></a>
+                                <li><a href="assignments/week11/Hello_servo_barrera/Hello_servo_barrera.ino"> <b>Arduino Program Servo Level crossing barriers</b></a>
+                                <li><a href="assignments/week11/Hello_I2C/Hello_I2C.ino"> <b>Arduino Program I2C</b></a>
+                                <li><a href="assignments/week11/LCD_Hello/LCD_Hello.ino"> <b>Arduino Program LCD Hello World</b></a>
+                                <li><a href="assignments/week11/LCD_sensor2/LCD_sensor2.ino"> <b>Arduino LCD-Sensor</b></a>
+                                </ul>
+                                
+                                
+                                
+                                
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+                    
+                     <p align="center"> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><b>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</b></a>
+                    
+                    
+						<div class="inner">
+							
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/Adrian_Towy" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/adriantrains" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/adrian_towy/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.linkedin.com/in/adri%C3%A1n-torres-oma%C3%B1a/" class="icon brands style2 fa-linkedin"><span class="label">Linkedin</span></a></li>
+						
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,100 @@
+Title: Giada-Allocca
+
+URL Source: http://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week5.html
+
+Markdown Content:
+Week5: 3D scanning and printing
+
+**Group assignment: [test the design rules for your 3D printer(s)](http://fab.academany.org/2018/labs/fablabsiena/group-assignments/week6.html)**  
+**Individual assignment: design and 3D print an object that could not be made subtractively; 3D scan an object (and optionally print it)**
+
+Scan an object
+
+The assignment of the week was to scan an object and make it a 3d image. In our lab the scanner is broken so we took a series of photos to an object and using the program Agisoft Photo Scan to make the images into a 3d model. I chose this statue found in the lab.
+
+![Image 1](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/IMG_0589.JPG)
+
+After downloading the program Agisoft PhotoScan I read the [manual](http://www.agisoft.com/pdf/photoscan-pro_1_4_en.pdf) to understand how the program works. Then I looked this [tutorial](http://www.agisoft.com/pdf/PS_1.1%20-Tutorial%20/(BL/)%20-%203D-model.pdf) . I did a lot of photos to my subject and I uploaded them by **add photos** ; this create a chunk, then I clicked upon it the right mouse's button**\--> process-->align photos-->medium**, so I waited the end of the process
+
+![Image 2](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/interfaccia%20di%20photoscan.JPG)
+
+I aligned the photos, so the program can arrange the photos in the right order to rebuild the 3D model.[![Image 3](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/1.JPG)](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/1.JPG)
+
+This was the first result. As you can see isn't quite satisfactory
+
+[![Image 4](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/2.JPG)](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/2.JPG)
+
+I aligned the pictures again, this time with high accuracy and this time it seems that the result will be good
+
+[![Image 5](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/3.JPG)](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/3.JPG)
+
+PhotoScan allows to generate and visualize a dense point cloud model. Based on the estimated camera positions the program calculates depth information for each camera to be combined into a single dense point cloud. So i did **process--> build dense cloud** and this was the result, so many dots and a figure not quite defined, this is because we are in the display mode point cloud, to see the dense point cloud we have to click on this button.
+
+[![Image 6](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/4.JPG)](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/4.JPG)
+
+[![Image 7](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/5.JPG)](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/5.JPG)
+
+Based on the point cloud information, PhotoScan can reconstruct polygonal model - mesh, so I did these steps.
+
+[![Image 8](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/6.JPG)](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/6.JPG)
+
+I used these parameters![Image 9](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/build%20mesh%20parametri.jpg)
+
+Waiting...
+
+![Image 10](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/waiting%20for%20the%20mesh.jpg)
+
+At this point, to get an idea of what will be the final model, you have to go in shaded display mode
+
+![Image 11](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/result.JPG)
+
+![Image 12](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/Shaded%20view.JPG)
+
+Now lastly we must create the texture of the model thanks to newly created mesh, by following these steps
+
+[![Image 13](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/7.JPG)](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/7.JPG)
+
+![Image 14](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/parametri%20model%20texture.jpg)
+
+To see the results click the **textured button**
+
+![Image 15](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/texture.JPG)
+
+And this is the result. For me it is quite satisfactory. I'd like to use this tool to make more accurate scans in the future
+
+![Image 16](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/texture%202.JPG)
+
+Modelling
+
+We have two 3D printer in the lab (Multimaker 2 and 3) and I used both. For the assignment I decided to model and print an inkwell. First I created a truncated cone with Rhinoceros 6, I selected the top of the solid and used the command **shell** , then I fixed the small hole in the top where I have to insert the quill. As you can see I made the inkwell oblique, so it could not be made subtractively. Wanting to do a test before printing it in full size I made the object smaller to speed up the printing. Then I exported the file in STL version.![Image 17](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/inkwell%20on%20rhino%206.JPG)
+
+Printing
+
+I downloaded and installed and Cura, the software to set the parameters of the 3D printer. From here, I opened the STL file and I chose the parameters for the Ultimaker 3![Image 18](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/ho%20caricato%20il%20file.JPG)
+
+The Cura software has preset parameters: more accurate is the print, even more is time of printing. If you want to change the parameters to your liking you have to choose the custom setting. [this](https://ultimaker.com/en/resources/52480-how-to-get-started-with-custom-mode) video shows what to do.  
+These are the parameters i used for my first 3D printing. I chose a low infill because the print would have been faster, since it was a test. I set the parameters to get a normal quality, so I didn't change the speed but I added the 5 mm brim to better print and detach the object from the plate when it will be printed.![Image 19](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/parametri.JPG)
+
+![Image 20](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/parametri%202.JPG)
+
+![Image 21](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/parametri%203.JPG)
+
+![Image 22](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/parametri%204.JPG)
+
+To make the print first of all you have to clean building plate, calibrating it and ensuring that the extruder was working fine, as done in the [group assignment.](http://fab.academany.org/2018/labs/fablabsiena/group-assignments/week6.html) After this preparation, I just uploaded the gcode file in a pendrive and loaded it in the Ultimaker 3 printer.And this is the result
+
+![Image 23](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/IMG_0596.JPG)
+
+  
+I must say that I expected a more precise result, in some places the press did not come smooth. Probably it depends on the temperature used or the printing speed, I will find out with the second print.![Image 24](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/IMG_0597.JPG)
+
+So I opened the file again on Cura and I changed the size to print the final model, this time with Ultimaker 2 (because it was the only available at that time). I scaled the model of 550% and checked that it was all ok through the **layer view**. I also chose the fine profile and lowered the printing speed from 80 to 60 and travel speed from 250 to 80. I left the 20% infill because my object is thick enough and does not need to be filled to be stable.[![Image 25](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/8.JPG)](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/week%206/8.JPG)
+
+After setting the parameters I saved the print files on the SD and I started printing
+
+![Image 26](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/IMG_0601.JPG)
+
+With these parameters the print has improved slightly in accuracy but it is not as smooth as I hoped it would be, so I think the parameters to change are the thickness of the wall and layer height. But the result could also be influenced by the inclination of the object and the temperature of the extruder. In fact, at the beginning the machine does not immediately reach the right temperature, and this affects the printing quality.![Image 27](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/fablabsiena/students/giada-allocca/raw/master/week%206/IMG_0602.JPG)
+
+  
+I also used the 3d printer for some part of my final project -> [page](https://fabacademy.org/2018/labs/fablabsiena/students/giada-allocca/examples.html)

@@ -1,0 +1,1907 @@
+Title: Final Project
+
+URL Source: http://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/
+
+Markdown Content:
+For my final project I’m aiming to create:
+
+> A jigsaw puzzle where placing each piece correctly will spark a mini light show.
+
+Many people enjoy the feeling of clicking / pushing each piece into a puzzle, me included. For my final project **I want to make the act of puzzling and placing each piece correctly even more fun** and exhilarating for any puzzle enthusiast.
+
+Final Result
+------------
+
+![Image 1: NOVA | My final project](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/presentation.png)
+
+Video of NOVA
+
+The music in the video is by [Nordgroove](https://icons8.com/music/author/nordgroove). We had to get the file size of a ±1-minute 1920x1080 video below 10Mb, so apologies for the poor quality (for a video created during this time and age (>﹏<) )
+
+Below is the command I used to get my 180Mb video of 71 seconds to be smaller than 10Mb:
+
+```
+ffmpeg -i nova.mp4 -vcodec libx264 -crf 34 -preset veryslow -vf fps=24 output.mp4
+```
+
+### Hero Shots
+
+[![Image 2: My camera is actually not able to properly capture the actual lights my eyes see, but it’s very colorful indeed](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_overview.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_overview.jpg)
+
+My camera is actually not able to properly capture the actual lights my eyes see, but it’s very colorful indeed
+
+[![Image 3: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_pieces_light_zoom.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_pieces_light_zoom.jpg)
+
+[![Image 4: Puzzle pieces from ±5mm thick milky white acrylic](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_pieces_from_bag.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_pieces_from_bag.jpg)
+
+Puzzle pieces from ±5mm thick milky white acrylic
+
+[![Image 5: A spirograph design etched from the top and copper bridges along the bottom](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_pieces_close.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_pieces_close.jpg)
+
+A spirograph design etched from the top and copper bridges along the bottom
+
+[![Image 6: A “living hinge” of 3mm wood wrapped around the outside](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_living_hinge.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_living_hinge.jpg)
+
+A “living hinge” of 3mm wood wrapped around the outside
+
+[![Image 7: Looking through the holes in the living hinge, you can still see the electronics inside](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_look_inside.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_look_inside.jpg)
+
+Looking through the holes in the living hinge, you can still see the electronics inside
+
+[![Image 8: The spirograph design milled out of the bottom](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_bottom_spirograph.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_bottom_spirograph.jpg)
+
+The spirograph design milled out of the bottom
+
+[![Image 9: After some sanding, the pattern became quite nice](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_bottom_spirograph_filed_zoom.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_bottom_spirograph_filed_zoom.jpg)
+
+After some sanding, the pattern became quite nice
+
+[![Image 10: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_top.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_top.jpg)
+
+[![Image 11: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_puzzle_disassembly_1.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_puzzle_disassembly_1.jpg)
+
+[![Image 12: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_puzzle_disassembly_2.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_puzzle_disassembly_2.jpg)
+
+[![Image 13: Disassembling the puzzle enclosure in 5 steps](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_puzzle_disassembly_3.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_puzzle_disassembly_3.jpg)
+
+Disassembling the puzzle enclosure in 5 steps
+
+[![Image 14: The top section as seen from the bottom](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_puzzle_disassembly_4.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_puzzle_disassembly_4.jpg)
+
+The top section as seen from the bottom
+
+[![Image 15: The acrylic center](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_puzzle_disassembly_5.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/hero_puzzle_disassembly_5.jpg)
+
+The acrylic center
+
+Sketch & Idea
+-------------
+
+This would be a puzzle where each piece is made of some semi-see-through material. Each piece would either contain a light, or the location below each piece (the board on which you assemble the puzzle) would have a light. When you correctly place a piece, it would spark a mini light show Preferably, the more pieces you’ve already assembled, the more elaborate the light show becomes. In the final result I did make some changes and continuously show a light show, but have a “spark” that goes through the board whenever a new piece is placed.
+
+Below you can see a (very) rough sketch of the puzzle that I made at the start of this journey:
+
+[![Image 16: A rough top and top-side view of the puzzle idea](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/light_puzzle_sketch.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/light_puzzle_sketch.jpg)
+
+A rough top and top-side view of the puzzle idea
+
+I tried finding what other people have done that is similar to this in the Fab Academy search. However, it came up empty, I wasn’t able to find anybody that previously combined the idea of jigsaw puzzles and light. I like that though (\*≧▽≦) It means that I’m not biased by earlier designs, that I have nothing to live up to, and I can really see this as something that I’ll have built myself (well, my partner, and Henk, helped a lot with being my brainstorming partner on how to handle some of the more practical things of putting it all together.)
+
+Searching for “light jigsaw puzzle” more generally on the web even came up empty. I only found puzzles about the aurora, and a specific type of lamp called “IQ Light Jigsaw Lamp”, which has nothing to do with my project. This [LED Jigsaw Puzzle Light](https://www.instructables.com/LED-Jigsaw-Puzzle-Light-Acrylic-Laser-Cut/) probably came the closest, but it’s still far off from my idea. It uses etched acrylic with a light source from the side of the puzzle to show a pattern. However I want to be able to control the lights individually below each piece, so the light will need to come from the bottom, instead of one fixed light along the sides. I also found this [Tetris Lamp](https://www.bol.com/nl/p/kleurige-tetris-lamp-3d-puzzles-lamp-stapelbare-led-tafellamp-sfeerlicht-retro-tetrislamp-licht-bouwstenen-jigsaw-puzzle-nachtlampje-puzzels-lamp/9300000007980388/) where each Tetris piece is a light source, which light up when stacked together. Although a cool idea, these Tetris blocks are much bigger than what I intend my puzzle pieces to be, and they only emit one color of light.
+
+_You can read much more details about the puzzle idea in my [Principles and Practices](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-1b/) blog._
+
+3D Model
+--------
+
+Below you can see a 3D model of my idea. I used a hexagonal shape for the interior and kept the puzzle pieces straightforward (and not unique) yet, because I feel that I first need to figure out how I will do the electronics before I can settle on the type of puzzle piece design.
+
+[![Image 17: A render of my “puzzle box” in Blender](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/3D_blender_final_static.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/3D_blender_final_static.jpg)
+
+A render of my “puzzle box” in Blender
+
+The model from Fusion 360 turned out the most complete, which I imported into Blender to create a nice final render with.
+
+However, now that I can better see the result in 3D, **I’m not that sure anymore if I want the cubby holes** along the side. If the puzzle pieces turn out to become very thick, than even those holes will not be enough to stow away all the pieces. So I might have to rethink that part and perhaps work with some sort of cover that goes over the top of the box that doesn’t go all the way down, and where you’d keep the puzzle pieces in a nice (velvet) bag in the middle of the box.
+
+Another reason for possibly taking out the cubby holes is that I also don’t want the puzzle box to become too big, and the cubby holes are making it bigger.
+
+_You can read much more details about the creation of this 3D model in my [Computer-Aided Design](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/) blog._
+
+Input Sensor Tests
+------------------
+
+During the “Input Devices” week I wanted to **explore ways in which I could detect puzzle pieces being placed on my board**.
+
+For a while before this week started I was considering using **RFID chips** to detect the pieces. It would have the benefit of being able to detect exactly which piece was being placed. However, there were a few downsides I started to realize when talking to other people: the scanners aren’t meant to handle multiple chips at once, and it would be very very likely that you got noise and interference. You could know _that_ a piece was placed, but you’d need a separate scanner at each puzzle piece location to know _where_ it had been placed, which would be very complex, and probably multiple scanners would pick up the same piece. There were even more reasons to not use RFID, and when I realized that **I don’t necessarily need to know if the puzzle piece being placed is correct. I need to make sure that each puzzle piece is unique and can only fit in one location** I abandoned RFID as an option.
+
+Instead I looked two other ways to sense if a puzzle piece was placed on the board: **simple switches** and **capacitive touch/sensing**.
+
+I did get the capacitive touch sensors to work on the board that I’d created during the “Input Devices” week. However, I felt that the results of this type of sensor were a bit unreliable and a bit complex. Both in their design but also in their coding. Furthermore, I didn’t need to use _touch_ of a human, I could use the puzzle pieces themselves to go for a much simpler and more reliable type of sensor; a switch.
+
+For the **switch**, I imagine to **create two contact points for each puzzle piece location on the board**. One of these points is connected to a microcontroller pin, while the other is connected to ground. On the bottom of the puzzle piece there will be a small “bridge” that creates a connection between the contact points on the board when placed.
+
+[![Image 18: My “input sensor” test board](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/input_sensor_board.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/input_sensor_board.jpg)
+
+My “input sensor” test board
+
+[![Image 19: Setting up to test one of the two “external switches”](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/input_sensor_switch_setup.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/input_sensor_switch_setup.jpg)
+
+Setting up to test one of the two “external switches”
+
+I then read out the state of all the pins connected to contact points, and can read the following: which pieces are already on the board (creating connections), if a piece was recently placed (very important, because this initiates the “light show”), and which places are still empty. For example, checking the state of one pin can be as straightforward as:
+
+```
+//Read the state of a pin
+#define pin_switch 7
+
+void setup() {
+  pinMode(pin_switch, INPUT_PULLUP); //use the internal pullup resistor
+}//void setup
+
+void loop() {
+  //Get the value from the switch sensor, 1 = no connection
+  int sensor_switch = digitalRead(pin_switch);
+  //Do something with it...
+}//void loop
+```
+
+_You can read much more details about the test performed for the input sensors in my [Input Devices](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-11/) blog._
+
+The Puzzle Pieces
+-----------------
+
+Once I made the decision that my puzzle pieces would only act as simple switches, creating a connection between two contact points on the bottom puzzle plate, not needing any complex electronics inside of them, I tried to think of how I could embed that “connection” into a puzzle piece.
+
+### Copper Plate Bridges
+
+My first idea was to create a tiny bridge from the standard copper plate that we use for PCBs, etch out that same shape from the puzzle piece and glue it in there. That meant that the etching had to be done to quite an exact depth, otherwise the copper bridge would be too deep, or stick out too far, making the piece wobble and result in a bad contact point.
+
+[![Image 20: Milled out tiny contact points and bridge from standard copper plates](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_first_test_copper_circles.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_first_test_copper_circles.jpg)
+
+Milled out tiny contact points and bridge from standard copper plates
+
+I milled a simple prototype of two contact points and “bridge” to connect them from some copper plate.
+
+With the same image of the tiny bridge I created a file with some copies of the shape and different speed and power outputs in text next to it. I used a “reference acrylic sheet” that hangs to the right of the laser cutter to see around what speed/power the etching seems to go deep enough and around what values I should do these tests to fine-tune the depth.
+
+Within _LightBurn_, the laser cutter software, I learned how to do an _engraving_, by setting the _mode_ to _Image_. You then get a lot more options in the _Cut Settings_ window, such as choosing how close together the lines should be with the _Line Interval_. The other quite important setting is the _Image Mode_, where you can choose how the machine should handle gradients; using half-tone or dithering for example.
+
+[![Image 21: Setting up several etching tests in LightBurn and different power and speed settings](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_etching_lightburn.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_etching_lightburn.jpg)
+
+Setting up several etching tests in LightBurn and different power and speed settings
+
+After each etching I would test the depth with a caliper and with the tiny bridge. I noticed that I had to make the bridge shape itself about 3px bigger, otherwise the copper bridge wouldn’t fit inside. Finally, at around a speed of 260 and power of 250 did I get to a depth that was _just_ a little smaller than the height of the copper bridge.
+
+[![Image 22: Running some etching tests](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_etching_test_1.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_etching_test_1.jpg)
+
+Running some etching tests
+
+[![Image 23: After even more etching tests](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_etching_test_2.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_etching_test_2.jpg)
+
+After even more etching tests
+
+I grabbed a standard SVG puzzle piece shape from somewhere online, etched the bridge into a thick piece of acrylic and then cut out the puzzle shape (using _way_ too high settings, badly burning the piece itself (there was no cover on the acrylic anymore)).
+
+[![Image 24: A (badly burned) first dummy puzzle piece](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_first_dummy.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_first_dummy.jpg)
+
+A (badly burned) first dummy puzzle piece
+
+However, later I completely abandoned this idea with using copper plate etched into the piece. It was just too much of a risk with having to etch out the _exact_ depth on each piece, with the laser cutter not always giving the same output at every location along the laser bed.
+
+### Drawing the Pieces
+
+To take my mind off how to create the “connector bridge” for a bit, I wanted to design the puzzle pieces themselves. To go from a dummy “prototype” piece to the actual puzzle I used [_Affinity Designer_](https://affinity.serif.com/en-gb/) to draw them by hand, because I needed each piece to be unique, but also because I personally love puzzles the most if they have non-standard pieces.
+
+The reason why I felt like Affinity Designer was a good tool to draw the puzzle pieces with is because:
+
+*   It’s mostly like Adobe Illustrator, in that it can work with vectors, and thus SVGs, which I’d need to cut the pieces with a laser cutter.
+*   It _also_ has a Adobe PhotoShop element to it, using pixels instead of vectors. You can thus have pixel layers and vectors layers in the same file, which I could use to _draw_ each piece by hand.
+*   Its iPad app is really good, so I could use my Apple pen to draw the pieces by hand, but digitally.
+
+On the iPad app I started with a blank canvas of 300x300mm and drew a grey hexagon that was 280mm in diameter, the exact size I’d defined for my puzzle area. Next, I made a _pixel_ layer, selected a simple _pencil-like_ brush and drew rough lines to split the hexagon into separate sections. Once I had a division of the hexagon that I liked, I saw it had 38 pieces, which seemed like a good number.
+
+Adding a new _pixel_ layer I drew the puzzle pieces more detailed, including the puzzle ears.
+
+[![Image 25: Dividing the puzzle area into rough shapes per piece](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_affinity_rough_areas.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_affinity_rough_areas.png)
+
+Dividing the puzzle area into rough shapes per piece
+
+[![Image 26: Drawing the ears of each puzzle piece](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_affinity_sketched.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_affinity_sketched.png)
+
+Drawing the ears of each puzzle piece
+
+Finally, I added a _vector_ layer on top and selected the _pen tool_ to draw all those lines as vectors. There’s a really nice function in Affinity that lets you draw smooth lines, by using something called a “rope”, where there’s a tiny imaginary rope going from the point where the pen’s tip is to the actual line. While you’re drawing, you’re pulling that rope along, as if it’s moving through some thick mud behind it. This basically smooths out the jiggles in your hand to create nicer curves. [This](https://affinity.serif.com/en-us/tutorials/designer/ipad/video/272749894/) tutorial shows the concept _much_ better than me trying to explain it in words.
+
+The downside is that it also smooths out the line you’ve drawn, it’s not really meant for the “puzzle ears”, so I had to do _a lot_ of adjusting of the drawn line to truly have it follow the sketched version; adding extra nodes along the line, fine-tuning their orientations and such.
+
+[![Image 27: An adjusted SVG line with all the “nodes” visible that determine the curves](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_affinity_line_nodes.PNG)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_affinity_line_nodes.PNG)
+
+An adjusted SVG line with all the “nodes” visible that determine the curves
+
+A few hours of tweaking later and I had recreated the sketch as SVG lines.
+
+[![Image 28: Having redrawn all the sketched lines as SVG lines](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_affinity_final.PNG)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_affinity_final.PNG)
+
+Having redrawn all the sketched lines as SVG lines
+
+I gave each piece an ID that I would be using during the further development and while programming the lights.
+
+[![Image 29: The ID of each piece](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_numbering.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_numbering.png)
+
+The ID of each piece
+
+### Prototyping
+
+I wanted to create a first test from cardboard. I didn’t need my pieces to have a super tight fit, they didn’t need to _lock_ together so tightly that you had to use force, but should nicely fit inside each other. On the other hand, it also shouldn’t be _too_ loose of a fit. I was wondering if the extra material that the laser cuts away, the _kerf_, would result in a nice, or a too loose of a fit.
+
+I loaded the puzzle SVG into the laser cutting software, placed a cardboard sheet on the bed and did a framing to see if the remaining space on the cardboard was big enough. And the laser head just kept moving down, down, down, until it reached the end of the bed. Thankfully, there were software _end stops_ so the head didn’t try and go beyond its limits.
+
+I checked the size of the SVG loaded into LightBurn and saw that it was _way_ too big! I had a vague memory that fellow students had this issue as well in the first laser cutting week, something to do with scaling.
+
+I opened up the SVG file in _Visual Studio Code_ and noticed that the width and height of the SVG were set as `width="100%" height="100%"`. That wasn’t very helpful. I therefore changed it to `width="30cm" height="30cm"`, reloaded it into LightBurn, and now it was appearing at the right size.
+
+[![Image 30: Making sure to have the width and height set to actual “cm” values not “%"](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_svg_setting.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_svg_setting.png)
+
+Making sure to have the width and height set to actual “cm” values not “%"
+
+I made the mistake of setting the speed of the laser cutter too high (speed 60, max power of 35%), which made the curves jiggly and crooked. Thankfully, that didn’t _really_ matter for this test, and I’d be using much lower speeds for acrylic (but still good to remember to go as slow as possible the next time).
+
+I noticed during the cutting that, while the laser followed the lines, some parts of the cardboard were already partially cut out and fell to the bottom, whereas there were still some internal lines to cut. Those final internal lines seemed to result in thicker lines having been cut away (due to them being just out of focus). You can notice it a little on some lines in the image below having larger black gaps in between them.
+
+[![Image 31: Having cut the pieces from cardboard](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_cardboard_test.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_cardboard_test.jpg)
+
+Having cut the pieces from cardboard
+
+This was probably partly due to the cardboard not being perfectly flat. However, I didn’t expect this to be much of an issue for acrylic, since that’s quite flat and wouldn’t “fall away” like the cardboard did.
+
+I had expected that the `±0.17mm` _kerf_ of the laser would result in a _nice_ fit of these puzzle pieces, but it was actually quite loose, bordering on _too_ loose. I guess I really had to do a small test with some acrylic to see how the intended material would respond.
+
+I adjusted the SVG to only contain three pieces so I could do a test in acrylic (without waisting too much acrylic). I found some nice 5mm thick milky white acrylic that I’d want for my actual puzzle pieces. Through some tiny tests I found that using a speed of 10, ax power of 45% / min power of 10% was _just_ enough to still cut the pieces from the acrylic.
+
+[![Image 32: Three test pieces from 5mm acrylic](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_acrylic_piece_test.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_acrylic_piece_test.jpg)
+
+Three test pieces from 5mm acrylic
+
+The resulting three pieces still had quite a lot of “freedom” to move around while connected. I didn’t think it was _too_ loose though. I just had to make sure that the strip of copper that would need to run along the bottom would use circles that were large enough to handle some “freedom of movement” of each piece. I really preferred to cut all the pieces as a whole, instead of separating out each piece (the latter option allowing me to take the _kerf_ into account).
+
+I also did some tiny _engraving_ tests on the acrylic sheet to test for the spirograph I wanted to etch out of the puzzle pieces. Trying different speed, power and _dpi_ tests until I had something I was happy with. I created a super simple PNG of a rectangle with rounded ends, to test both curves and straight lines.
+
+I noticed that going up in DPI was resulting in a very rough surface along the engraving, while using a DPI that came down to the _kerf_ of the laser (the width of the laser) of 149DPI created a quite smooth result. I eventually settled on using a speed of 80, max power of 15% / min power of 10%, and DPI of 149 for a result that _just_ smoothly etched the top, without taking too much away.
+
+[![Image 33: Keeping track of the different settings for each engraving test](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_engraving_tests.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_engraving_tests.jpg)
+
+Keeping track of the different settings for each engraving test
+
+[![Image 34: High DPI results in rougher engravings (left) than a DPI that’s ±he size of the laser’s diameter](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_engraving_test_zoom.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_engraving_test_zoom.jpg)
+
+High DPI results in rougher engravings (left) than a DPI that’s ±he size of the laser’s diameter
+
+### Copper Contact Bridges
+
+I felt like I’d done enough tests by now, and it was time to flesh out the puzzle pieces; to create both the spirograph engraving on top, and also the etching for the contact points that had to go on the bottom of each piece.
+
+I loaded the SVG for the puzzle pieces into Fusion 360, but found that it was scaled much too big. I’d had this issue before during the “[Computer-Aided Design](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-2/#fusion-360)” week. That week it wasn’t too bad to downscale the image in Fusion 360 by eye. However, this time I wanted to make sure that the SVG was loaded without any rescaling having to be done.
+
+Thankfully, after some searching I found [an answer](https://forums.autodesk.com/t5/fusion-360-design-validate/import-svg-scale/td-p/5949937) on the Autodesk forum that showed _exactly_ what advanced settings to use for Affinity Designer! The tool that I’d been using! Following those settings I saved a new SVG, imported it into Fusion 360 and it was scaled correctly.
+
+[![Image 35: The precise “advanced” settings to use in Affinity Designer](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_affinity_settings.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_affinity_settings.png)
+
+The precise “advanced” settings to use in Affinity Designer
+
+I started with the “contact bridges”, the copper strips that would close the connection from a pin on the microcontroller to ground in the puzzle plate. I’d need to etch these shapes out of the _bottom_ of the puzzle pieces so I’d know exactly where to place the copper. You can read more about how I made those copper contact points in the bottom plate farther below.
+
+I copied the sketch that contained all the contact points to a new one, removed all the “third” contact points that I added only for stability, but that were not connected to a wire. For the remaining 38 pairs of points I increased the size of the circles to 5mm. The contact points in the bottom plate are about 2mm in diameter. However, there is quite some movement possible of the puzzle pieces. I therefore did some rough tests with my three prototype puzzle pieces and felt that they moved about 5mm up and down max.
+
+I connected each pair of contact points with a rectangle of 1mm width. However, that created a sharp angle between the 5mm circle and the rectangle. Henk had told me that fellow student Erwin had tried using the vinyl cutter to create a flexible PCB, but that he’d had some issues where the blade pulled away the traces at the corners. I therefore wanted to make my bridges without any sharp angles.
+
+Thankfully, there is a constraint in Fusion 360 that is called _Tangent_ which positions two arced lines in such a way that they touch at the tangent, resulting in a smooth transition from one line to the next. Using a _3-Point arc_ I would roughly pick a point along the outsides of the 5mm circle, and another along the rectangle. I’d then use the _Tangent_ constrain to place those to touch points at the perfect place along both the circle and rectangle.
+
+Finally, I’d mirror the line to the other side of the circle, and next to the circle at the other side of the bridge.
+
+[![Image 36: Creating a smooth transition from the circle to the rectangle that connects each pair of circles](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_contact_bridge_design.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_contact_bridge_design.png)
+
+Creating a smooth transition from the circle to the rectangle that connects each pair of circles
+
+Setting up all these lines, constraints and whatnot took ±3 minutes per bridge, thus with 38 of them I was busy for a while…
+
+Afterwards I extruded all the contact bridges, projected those shapes back into a new sketch and exported it to a `.dxf` file. In Illustrator I then repositioned all of the contact points in rows so I’d be wasting as little copper tape as possible during the cutting.
+
+[![Image 37: Rearranging all the contact bridges into two rows to save space, using each piece’s ID to define the order](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_contact_bridge_rearrange.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_contact_bridge_rearrange.jpg)
+
+Rearranging all the contact bridges into two rows to save space, using each piece’s ID to define the order
+
+In the lab I saw that I could position three rows of contact points next to each other. I therefore rearranged the two rows into three, saved it as an SVG, and loaded it into _mods_ to cut on the _Roland_ vinyl cutter. I first did a test cut using `90g` (and 2 cm/s), which made a nice clean cut without going too deep.
+
+[![Image 38: The vinyl cutter working on the 38 contact bridges](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_contact_bridge_cut_copper.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_contact_bridge_cut_copper.jpg)
+
+The vinyl cutter working on the 38 contact bridges
+
+The cutting went perfectly. The blade did slightly carve into the copper in between some contact bridges because the copper tape bulges upward a little. However, it was only minor.
+
+### Spirograph Design
+
+I wanted to etch out a spirograph from the _front_ of the pieces, to subtly act as the “image” that is usually found on almost every puzzle. I _really_ like spirographs, and have often played with them while using my pen plotter. I’ve created several JavaScript programs to randomly create spirographs for me, following certain rules. Such as the number of “wheels” to use (the ones most of us know as a child have two wheels).
+
+I looked back at some of the spirographs I’ve created in the past and felt that using 4 wheels would probably get me some interestingly complex spirographs that could be scaled well to ±30cm in diameter.
+
+I set up my program and refreshed the page to see a grid of random spirographs. If I liked one, I could hover over it, and in the devTools console of the browser I could copy a piece of code that contained the settings for that spirograph. I then used those settings in a different script that I wrote to show just that spirograph, together with a hexagon and circle that represent the outline of the puzzle box.
+
+[![Image 39: My program creates a grid of random spirographs, from which I can choose which I want to keep](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_random_grid.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_random_grid.jpg)
+
+My program creates a grid of random spirographs, from which I can choose which I want to keep
+
+However, I noticed that I was almost only getting spirographs that were prime-symmetrical: 2, 3, 5, 7, 11, etc. petals. I couldn’t find a single 6-fold symmetry spirograph. I’d never noticed that before, but this time I really needed a 6-fold symmetry in my spirographs. Using [this](http://www.eddaardvark.co.uk/python_patterns/spirograph.html) page I refreshed my math on spirographs and how you can calculate the symmetry from the settings of each wheel.
+
+I adjusted my code so it would keep going with randomly trying spirograph wheel settings until it had found a full grid of only 6-fold symmetric spirographs. I refreshed several dozen times, kept the ones that I thought looked interesting, and inspected how it looked when it was much bigger:
+
+[![Image 40: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_1.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_1.jpg)
+
+[![Image 41: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_2.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_2.jpg)
+
+[![Image 42: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_3.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_3.jpg)
+
+[![Image 43: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_4.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_4.jpg)
+
+[![Image 44: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_5.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_5.jpg)
+
+[![Image 45: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_6.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_6.jpg)
+
+I was looking for a spirograph that would (hopefully) cross over each puzzle piece, and that would subtly go outside of the hexagon to also etch into the wood. It was a hard choice, but I went for the bottom-right image from the six options above.
+
+I downloaded the SVG, opened it up in Illustrator, together with my puzzle pieces, scaling its size and line thickness to something that I felt looked good.
+
+[![Image 46: Finding a good scale and stroke thickness for the spirograph](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_positioning.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_spirograph_positioning.png)
+
+Finding a good scale and stroke thickness for the spirograph
+
+### Laser Cutting
+
+You might’ve realized that I wanted to use the laser to mark something on both the front and back of the puzzle pieces; the copper contact bridge placement on the back and engrave the spirograph design on the front. At first I had no idea how to do the alignment once I’d flipped the puzzle pieces on their back. Then Henk had the great idea to also cut out a shape (square, hexagon) around the puzzle. If I taped the full acrylic sheet to the laser bed, I could simply flip the entire puzzle, plus the outside shape that was symmetrical, and place it back into the square/hexagonal hole. Brilliant!
+
+Because I felt that the copper contact bridge location needed to be more precise w.r.t. the puzzle piece itself than the spirograph, I decided to first etch out those shapes while cutting out all the puzzle pieces, then rotate the puzzle and finally etch out the spirograph from the top.
+
+Thankfully, I realized that this meant that I had to mirror the puzzle pieces and contact points! Since I’d be cutting them “from the bottom up” in a way. I did this step in Illustrator, but later found that LightBurn also has a _reflect_ option.
+
+[![Image 47: Creating a reflection of the puzzle pieces and contact points](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_mirror_shapes.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_mirror_shapes.jpg)
+
+Creating a reflection of the puzzle pieces and contact points
+
+I used the same milky white ±5mm thick acrylic sheet that I’d used for the three prototype pieces before. Using duct tape I taped the top-left corner of the acrylic sheet. I did some tiny rectangle tests to check if I had to update the settings that seemed to go so perfect during the prototyping. I was surprised that I had to crank up the power to 50% / 55% instead of 45% to fully cut through the acrylic (speed of 10%, corner power of 10%).
+
+While the laser cutter was working on my puzzle pieces I noticed something I was _not_ happy with to say the least (°Д°) I’d taken these puzzle piece lines from the Fusion 360 file. However, Fusion had cut up many of the long lines into short segments, and the laser was randomly cutting these tiny strips. Although the laser cutter was precise, I knew this meant that you would be able to see tiny bumps at the points where each small line segment touched the next. I guess I should’ve used the original SVG that I created in Affinity Designer.
+
+However, it seemed that I would get a chance to fix that mistake, because when I peeled the puzzle from the plate it wasn’t fully cut through along the bottom side. The full bottom half of the puzzle was still one piece! Strangely you could see that in the top-left corner the laser had been _much_ too powerful, creating burn stains along the plastic cover. That was a distance of only ±10cm in which the laser went from too powerful, to not powerful enough ✖\_✖ That wasn’t much reliability…
+
+[![Image 48: The laser had been too powerful in the top-left, but the full bottom side was still one piece](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_first_laser_cut_wrong.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_first_laser_cut_wrong.jpg)
+
+The laser had been too powerful in the top-left, but the full bottom side was still one piece
+
+I showed Henk and he started checking and fine-tuning the laser. He thought that the laser was partly pointing to the inside of the laser’s head, because the head felt warm still. After some testing he told me to try again, and use even higher settings (speed of 10, max power of 70%, and a corner power to 20%).
+
+In the meantime I took that original puzzle outline SVG from my laptop and loaded it into LightBurn, replacing the puzzle pieces from Fusion 360 (I used the Fusion 360 version to check the placement of the original outline).
+
+I re-taped the acrylic sheet to the laser bed, and set-up for a second go. I noticed that the setting was too powerful due to the orange color appearing below the acrylic as the laser cut through the sheet. The benefit at least was that it had cut through at all lines.
+
+[![Image 49: Taping the acrylic sheet to the laser bed](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_taped_acrylic.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_taped_acrylic.jpg)
+
+Taping the acrylic sheet to the laser bed
+
+[![Image 50: Having flipped the cut shapes back into the shape](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_laser_flipped.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_laser_flipped.jpg)
+
+Having flipped the cut shapes back into the shape
+
+Timelapse of cutting the puzzle pieces
+
+I took the puzzle out of the hexagon shape, flipped it around (revealing the severe burn marks on the plastic), reassembled the full puzzle and pressed it back into the hexagon on the sheet.
+
+I took a cropped version of the spirograph PNG (so I wouldn’t engrave too far outside of the actual puzzle and thus ruin more acrylic). Setting the machine at using a speed of 75, with a max power of 15% and 149 DPI.
+
+[![Image 51: The settings of all the tests and puzzle parts in LightBurn](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_lightburn_settings.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_lightburn_settings.jpg)
+
+The settings of all the tests and puzzle parts in LightBurn
+
+I hadn’t done any large engraving before, and didn’t realize _how slow_ it is! I think it was about an hour before it had fully engraved the spirograph. I did stop the engraving after about 10 minutes. I was afraid that the engraving wasn’t going through the paper cover, because the (burned) plastic cover wasn’t being removed by the engraving. It was a bit of a hassle to try and remove one piece while not moving the plate. Thankfully, once I had a piece I saw that the engraving was leaving a nice effect. Although I did notice that the blue parts of the plastic were resulting in somewhat blue-ish engravings. Hopefully I could wash it off later.
+
+While engraving the spirograph
+
+[![Image 52: After the spirograph was engraved into the pieces](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_engraving.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_engraving.jpg)
+
+After the spirograph was engraved into the pieces
+
+#### Cleaning the Pieces
+
+With the front and back of the pieces done, they had to be cleaned and gosh, that _wasn’t_ easy! Due to the engraving, the plastic cover was sort-of stuck to the acrylic. I had to scratch and peel along the entire engraving. I slowly ground down two nails while peeling the 38 pieces! (I also filed the sharp edges of the acrylic a bit)
+
+I noticed that the pieces seemed a little darker along the edge parts that were engraved. Since I had some time to think while doing all the cleaning I realized that if I _theoretically_ would do it again, I’d do it quite differently: **I’d first do the engraving, on the white plastic sheet’s side. Next I would cut out the puzzle pieces. I’d then flip around the puzzle pieces and finally etch the copper bridge outline on the back**. That way the engraving wouldn’t mess with the sides of the already cut pieces. Furthermore, I saw that the puzzle fitted quite snugly when I flipped it, so I wasn’t that afraid that the copper contacts would be etched too far off.
+
+[![Image 53: Cleaning the pieces](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_cleaning.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_cleaning.jpg)
+
+Cleaning the pieces
+
+[![Image 54: I lost two nails from all the peeling](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_lost_nails.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_lost_nails.jpg)
+
+I lost two nails from all the peeling
+
+After cleaning all pieces two hours later I finally assembled the full puzzle for the first time. However, as I was assembling the pieces I noticed that the areas around the edges of each puzzle piece looked awful; they had a big brown-yellow color to them (╥﹏╥)
+
+I couldn’t quite capture it in a photo, but I tried:
+
+[![Image 55: After cleaning the pieces showed a clear brown-yellow cast along all the lines](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_cut_brown_cast.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_cut_brown_cast.jpg)
+
+After cleaning the pieces showed a clear brown-yellow cast along all the lines
+
+When you picked up a piece you couldn’t see any brown cast. However, once it was placed back in the whole puzzle, the brown cast was very apparent. Henk grabbed some cotton tips and acetone and we tried two edges (on the puzzle pieces that went wrong), and there did seem to be some improvement.
+
+The next morning I took some cotton tips and old socks, put on some gloves and respirator and carefully cleaned each puzzle piece with acetone. I used a sock for the outsides and “outer” puzzle ears, while using cotton tips to clean inside any “inner” puzzle ear/pocket (and cleaning in water afterwards).
+
+[![Image 56: The second phase of the cleaning while using acetone](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_cleaning_acetone.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_cleaning_acetone.jpg)
+
+The second phase of the cleaning while using acetone
+
+Another two hours and dry eyes later and the worst of the brown cast was gone, although it wasn’t _totally_ gone. Again, I can’t quite capture it right with my camera, but here is how it looked after the second cleaning phase:
+
+[![Image 57: The brown cast along the edges was reduced, but not all gone after cleaning with acetone](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_cut_after_acetone.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_cut_after_acetone.jpg)
+
+The brown cast along the edges was reduced, but not all gone after cleaning with acetone
+
+I figured that I couldn’t really do anything about the darker cast that was remaining along the puzzle edges using cleaning. I should probably use the NeoPixels instead; I initially though that you’d only see the light show when a new puzzle piece was placed, but now **I’d have the light always one beneath the pieces already placed, but when a new pieces was placed, you’d get a bit of a show**.
+
+I grabbed the copper bridges and used the (very) light etched copper outlines on the back of each piece to stick them on in (hopefully) the right place.
+
+[![Image 58: The hardly visible etch of the copper bridge on the front piece and a copper bridge placed onto the back piece](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_contact_bridge_placed.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_contact_bridge_placed.jpg)
+
+The hardly visible etch of the copper bridge on the front piece and a copper bridge placed onto the back piece
+
+I suddenly realized that I’d made a stupid mistake. The center puzzle piece is a hexagon. It can thus be placed in 6 different orientations. however, only _one_ of those would result in the copper bridge being placed correctly ✖‿✖
+
+I figured that I should redesign the copper bridge for that piece. However, I didn’t want to create a bridge that was too big (in surface area) because it would block too much light. I therefore created a triangle instead. That way the puzzle piece would still create a contact in 50% of the orientations (\*^▽^\*)ゞ
+
+[![Image 59: The updated copper contact bridge](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_hexagon_copper_bridge.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_hexagon_copper_bridge.jpg)
+
+The updated copper contact bridge
+
+I took the pieces home and assembled them on the bottom puzzle plate (at this point I’d already assembled the bottom plates, which you can read about in later sections):
+
+[![Image 60: The puzzle assembled on the bottom plate that have all the contact points in it](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_fully_assembled_on_plate.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_fully_assembled_on_plate.jpg)
+
+The puzzle assembled on the bottom plate that have all the contact points in it
+
+### The Bag
+
+I wanted to store the puzzle pieces in a nice black bag. I have zero sewing skills, so this wasn’t something I would make myself. After some searching online I was able to find a black velvet bag of 18x24cm, which I guessed would be big enough to hold all 38 pieces.
+
+Since I had to buy at least 5 bags, I figured I could do some tests and see if I could burn a hexagon and spirograph design into it.
+
+I stuck some paper to the bottom of the laser cutter and had it mark a rectangle that was the size of the bag, so I would know exactly where to place the bag.
+
+I couldn’t let the laser go _too_ fast, because then it becomes too inaccurate in doing curves (for the spirograph shape). Eventually I settled on using a speed of 100, max and min power of 10% (because lower isn’t possible), and use the _Perforation Mode_ of 3mm cut with a 1mm dash. The perforation trick I learned from my Wildcard week, working with paper and origami, makes a real difference to make sure that places with cuts don’t tear any further.
+
+You can barely see the result, but I’m happy that I did add a little personal touch to the bag.
+
+[![Image 61: Laser cutting the spirograph and hexagon design into the bag](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_bag_laser_cut.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_bag_laser_cut.jpg)
+
+Laser cutting the spirograph and hexagon design into the bag
+
+The PCBs
+--------
+
+Due to the large number of puzzle pieces, where each needs to be connected to its own pin from a microcontroller, I had to use _multiplexers_ to increase the number of GPIO pins.
+
+Thankfully, there were _PCA9555D 16-bit I2C-bus and SMBus I/O port_ devices at the lab. The [PCA9555D](https://www.nxp.com/part/PCA9555D#/) uses I2C and gives you access to 16 more GPIO pins, which can be set as both _input_ and _output_.
+
+[![Image 62: The pinout of the PCA9555D](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pcb_pca9555d_pinout.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pcb_pca9555d_pinout.png)
+
+The pinout of the PCA9555D
+
+Once I figured out that the puzzle would have 38 puzzle pieces, I started to design the PCB for my final project using two PCA9555Ds to get 32 GPIO pins and a central [ATtiny3216](https://github.com/SpenceKonde/megaTinyCore/blob/master/megaavr/extras/ATtiny_x16.md), using 6 more of its pins to detect puzzle pieces.
+
+[![Image 63: The Arduino pinout for the ATtiny3216 | From megaTinyCore](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pcb_attiny3216_pinout_arduino.gif)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pcb_attiny3216_pinout_arduino.gif)
+
+The Arduino pinout for the ATtiny3216 | From megaTinyCore
+
+I created my schematic in KiCad, making sure to pay attention to which connections needed pullup resistors, such as the _SDA_ and _SCL_ lines of the I2C connection, but also the _INT_ pins of the two PCA9555Ds, and finally, to make sure that each PCA9555D had its own address by using the three _A_ pins and setting them all to _GND_ for one pin, resulting in a `0x20` address, and setting _A0_ to _5V_ on the other PCA9555D, resulting in a `0x21` address.
+
+Below you can see the final schematic from KiCad. I’ve highlighted some of the major areas (outside of the ATtiny3216 in the upper-left).
+
+[![Image 64: The final schematic from KiCad](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pcb_kicad_schematic.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pcb_kicad_schematic.jpg)
+
+The final schematic from KiCad
+
+Below is a table with the components used:
+
+| Component | Full Label in KiCad | Reference | Specific Orientation |
+| --- | --- | --- | --- |
+| ATtiny3216 | Microcontroller\_ATtiny3216-SFR | U1 | Yes - Dot in one corner |
+| 2x PCAA9555D I2C GPIO expander | PCAA9555D | U2 & U3 | Yes - Dot in one corner |
+| 1x 01x03 Female connector | Conn\_01x03\_Male (I couldn’t find a female symbol in the _fab_ library) | J10 | Yes |
+| 8x 01x04 Male connector | Conn\_01x04\_Male | J3, J4, J5, J8, J13, J14, J15, J16 | Yes |
+| 4x 01x05 Male connector | Conn\_01x05\_Male | J1, J2, J9, J12 | Yes |
+| 1x 01x06 Male connector | Conn\_01x06\_Male | J11 | Yes |
+| UPDI | Conn\_UPDI\_01x02\_Male | J6 | Yes |
+| FTDI | Conn\_FTDI\_01x06\_Male | J7 | Yes |
+| Capacitor 1μF | C\_1206 | C1 | No |
+| 3x LED - various colors | LED\_1206 | D1 - D3 | Yes - Green marking on top pointing to _cathode_ |
+| 11x Resistors - various values | R\_1206 | R1 - R11 | No |
+
+With 38 connectors for the puzzle pieces, 5 for the FTDI, 2 for the UPDI, 1 for the NeoPixel grid of LEDs and 2 more for _5V_ and _GND_ (just to be sure), I needed 48 connections going outward! That required quite some space, and I ended up splitting up all the components across three separate boards; one main one with the ATtiny3216, and one for each PCA9555D and its components and connectors:
+
+[![Image 65: Final PCB layout in KiCad](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pcb_layout.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pcb_layout.png)
+
+Final PCB layout in KiCad
+
+Hexagonal shaped of course (⌐■\_■)
+
+The milling and soldering of the boards went without any major issues. Except that I made a mistake for my second PCA9555D board in terms of the available height left on the copper plate, and ended up with one missing corner because the copper plate _just_ wasn’t big enough ಥ﹏ಥ
+
+I used jumper wires to connect the two PCA9555D boards back to the main board. Shortening them and then trying to braid them together to reduce any “wire mess”
+
+[![Image 66: Connecting the three boards together with shortened (and braided) wires](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pcb_boards_connected.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pcb_boards_connected.jpg)
+
+Connecting the three boards together with shortened (and braided) wires
+
+Once I finished the _NeoPixel_ plate, which you can read about in the next section, I put some double sided tape on the backs of the three boards and stuck them to the back of the NeoPixel plate.
+
+To easily create a “common ground” area for the many _GND_ wires coming from the puzzle piece plate I added strips of copper tape in between the boards.
+
+[![Image 67: Having stuck the three PCBs to the back of the NeoPixel acrylic plate](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pcb_stuck_to_neopixel_plate.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pcb_stuck_to_neopixel_plate.jpg)
+
+Having stuck the three PCBs to the back of the NeoPixel acrylic plate
+
+_You can read more details about the design and creation of my PCBs in my [Networking & Communications](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-14/#designing-my-board) blog._
+
+The NeoPixel Grid
+-----------------
+
+For the “light show” of my project I needed a grid with LEDs that I could control separately. To do this, _NeoPixels_ seemed like a great approach, and Henk got me a 5 meter long LED strip of NeoPixels, specifically the [_WS2812E_](https://cdn-shop.adafruit.com/datasheets/WS2812.pdf). These are RGB LEDs where each “pixel” has its own _driver chip_ to control its color and brightness (with PWM). They therefore **only require _one_ data line connection** to a microcontroller to be able to control meters long of NeoPixels (your microcontroller does need to have enough SRAM to hold the information for each pixel though, needing 3 bytes per pixel). Furthermore, you can **cut a strip of NeoPixels _after each pixel_**, making it possible to create intricate grids of pixels.
+
+The packaging said that this 5 meter long strip was 90W! Although whichever way I tried, I could never get the NeoPixels to draw more than ±6-7A even at full white + brightness (at 5V that’s `5 * 7 = 35W` max). However, that still meant that I’d have to power the NeoPixels from a separate adapter, not directly from a PCB.
+
+The NeoPixel strip is 10mm wide and with 60 LEDs per meter, the LEDs were 16.67mm apart. It needs three connections: _5V_, _GND_ and a _DATA_ line, the latter of which is used to program the strip.
+
+[![Image 68: The NeoPixel strip has a 5V (red), DATA (green) and GND (white) connection](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_neopixels.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_neopixels.jpg)
+
+The NeoPixel strip has a 5V (red), DATA (green) and GND (white) connection
+
+There is an [Uberguide to NeoPixels](https://learn.adafruit.com/adafruit-neopixel-uberguide) on the Adafruit website, and a [Best Practices](https://learn.adafruit.com/adafruit-neopixel-uberguide/best-practices). The most important notes for my final project (I think) are:
+
+*   Add a 1000μF, 6.3 V or higher capacitor to the _5V_ and _GND_ of the power supply terminals to prevent the initial onrush of current from damaging the pixels.
+*   Add a 300 - 500Ω resistor between the microcontroller’s data output pin and the input of the first NeoPixel. The resistor should be at the end of the wire closest to the NeoPixel(s), not the microcontroller.
+*   NeoPixels powered by 5V require a 5V data signal.
+*   If your microcontroller and NeoPixels are powered from two different sources, there must be a ground connection between the two.
+
+I had to convert the 5 meter long strip into a _grid_ to be placed below the entire puzzle bottom. I wanted to lay it out as a _hexagonal_ grid; with a hexagonal grid each NeoPixel will be _exactly_ the same distance from all six of its neighbors. It therefore has the most even spreading of the light.
+
+I went to _the_ [“guide of hexagon coordinates”](https://www.redblobgames.com/grids/hexagons/#coordinates) to help me with my math. I realized that a _pointy topped_ grid wouldn’t work with the NeoPixels, since two strips would then have the be placed closer together than the width of one strip. The _flat topped_ grid version was a good match though, where each strip had to be placed 14.43mm apart, thus leaving 4.43mm in between each strip.
+
+I drew the design of the grid and NeoPixel plate in Fusion 360. At the end I counted the number of NeoPixels this would total too and was surprised that the grid contained a whopping 217 NeoPixels, or 3.6meters of NeoPixel! (⊙.⊙) I guess I wouldn’t have too little light.
+
+[![Image 69: Trying to figure out the math of the hexagonal grid](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_math.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_math.jpg)
+
+Trying to figure out the math of the hexagonal grid
+
+[![Image 70: The design of the NeoPixel grid in Fusion 360](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_fusion_design.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_fusion_design.png)
+
+The design of the NeoPixel grid in Fusion 360
+
+I first made a cardboard prototype, and when that all looked good I had the NeoPixel plate cut from white acrylic. I first _etched_ a thin line for the positions of each NeoPixel strip, to help me with the placement, after which I cut out all the holes. The holes along the internal sections are meant for the wires coming down from the contact points in the plate that forms the bottom of the puzzle (I go into this in the next section).
+
+I cut the NeoPixel string into smaller strips for each column of the grid. Next came the arduous process of soldering wires to each separate strip so I could connect each back to a “main _5V_” line, and a “main _GND_” line, and finally connect all the _DATA_ points together again.
+
+It took me about 8 hours on one day, slowly stripping wires, soldering them to the strips, joining the wires together again, etc. etc. Below you can see a timelapse of the board slowly coming together.
+
+[![Image 71: A “timelapse” of the creation of the NeoPixel grid](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_build_up_timelapse.gif)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_build_up_timelapse.gif)
+
+A “timelapse” of the creation of the NeoPixel grid
+
+What was nerve-wracking from the moment I made the first cut of the strip in the morning, is that I truly wasn’t sure if I’d done all the reconnecting correctly again _until_ it was all soldered and I hooked it up to an adapter ⊙﹏⊙
+
+I had shaky hands from the nerves when I plugged the adapter into the power…
+
+But the full grid turned on! (ﾉ◕ヮ◕)ﾉ\*:・ﾟ✧
+
+[![Image 72: The NeoPixels all still worked!](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_rainbow_works.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_rainbow_works.jpg)
+
+The NeoPixels all still worked!
+
+Now came the hard task of **creating light patterns within this hexagonal _grid_, when the LEDs on the NeoPixel were all connected in one long _string_**. I looked through the [hexagon guide](https://www.redblobgames.com/grids/hexagons/#coordinates-cube) again and decided that going for the _cube coordinate_ version would make most sense, and make calculations easiest.
+
+I recreated my hexagon grid in _Affinity Designer_ and manually typed in the coordinates that I’d need to go from a _string of pixels_ to a _grid of pixels_. For example, NeoPixel `163` would be grid coordinate `(4,3,-7)`:
+
+[![Image 73: Meticulously making a mapping from NeoPixel index to grid coordinates](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_coordinates_mapping.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_coordinates_mapping.jpg)
+
+Meticulously making a mapping from NeoPixel index to grid coordinates
+
+I converted that mapping to variables in my code so I could map between an `x`, `y` and `z` position and get back the `index` of the NeoPixel that should do something.
+
+It still took some effort to convert the math and JavaScript example of working with a _cube coordinate_ grid back to an array of NeoPixel indices, but eventually I had a small ring of light showing on the grid:
+
+[![Image 74: Having a small ring of lights on](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_small_ring.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_small_ring.jpg)
+
+Having a small ring of lights on
+
+[![Image 75: At bigger radii some NeoPixels just did whatever they wanted](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_big_ring_weirdness.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_big_ring_weirdness.jpg)
+
+At bigger radii some NeoPixels just did whatever they wanted
+
+Strangely, when I increased the ring to 7 grid points, some of the final NeoPixels started to behave incredibly odd, having a mind of their own. I was stuck on this for _hours_, trying different things to understand what the underlying reason was, not getting any close to understanding or finding a pattern.
+
+Thankfully, fellow student Erwin told me that it could be an _overflow of the dynamic memory_, because it only affected the end of the NeoPixel string. That the program was trying to address “memory” after the official dynamic memory (the _SRAM_ I believe), which would result in nonsense values. Well, that was something I’d never experienced before in my daily work coding in R or JavaScript (●\_\_●)
+
+At this time I’d actually been using an Arduino to program the NeoPixels, because the uploading went so much faster than with the ATtiny’s. When I switched to my ATtiny3216 board, just to test, it all looked fine, no weird NeoPixels!
+
+I added some color and made some funky, overly vibrant rainbow displays once I finally had my full grid of NeoPixels working properly (⌐■\_■)
+
+[![Image 76: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_rainbow_randomness_square.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_rainbow_randomness_square.jpg)
+
+[![Image 77: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_rainbow_randomness_zoom.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/grid_rainbow_randomness_zoom.jpg)
+
+_You can read a much more detailed explanation about the design, creation, and first programming of my NeoPixel grid in my [Output Devices](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-13/#creating-my-neopixel-grid) blog._
+
+To figure out how to create the contact points on the bottom of the puzzle, which would connect back to the microcontroller below the NeoPixel plate, I tried several things.
+
+### Contact Point Prototypes
+
+I started by milling two tiny 5mm circles from a general copper plate, used for making PCBs, with a hole in the center (to solder a wire to). However, I didn’t like the look of the circles, they weren’t perfectly round, and they felt kind of big, especially when needing 76 of them (twice the number of puzzle pieces). I was also very wary of the fact that I had to _etch_ out a section of the acrylic that had the be very exact and to an exact depth, so the copper would not fall in too deep or stick out too much.
+
+[![Image 78: Copper plate](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_first_test_copper_circles.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/pieces_first_test_copper_circles.jpg)
+
+Copper plate
+
+[![Image 79: Stripped wires glued in holes](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_wires_glued.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_wires_glued.jpg)
+
+Stripped wires glued in holes
+
+[![Image 80: Rivets with wires soldered at the ends](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_rivet_test.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_rivet_test.jpg)
+
+Rivets with wires soldered at the ends
+
+As a second test I made tiny, tiny holes in a small piece of acrylic and glued stripped wires into them of different thicknesses and materials (middle image above). These tiny points sticking from the top worked as contact points. However, the glue made a bit of a mess on the bottom side, and the points at the top didn’t look _that_ nice, those clipped points.
+
+Finally, Henk suggested to use _copper rivets_ instead. These are generally used to create _vias_ for double sided copper plates. I did a small test with the smallest acrylic plate at the lab (about 1.8mm), which was sadly still too thick to be able to flatten the other side with a rivet tool. Nevertheless, I did manage to solder stripped wires to the other side of the rivets to use them as contact points (right-most image above).
+
+The rivets seemed like a good option. They looked nice, had only the tiniest of bump on top of the acrylic, and they were all exactly the same thickness above the acrylic. With two rivets there was still a little wobble when I placed a puzzle piece on top. I therefore decided that I’d need _three_ rivets per puzzle piece, one of which wouldn’t have a wire running to it, but only there to create the balance.
+
+[![Image 81: The tiny copper rivets at 0.6mm, 0.8mm & 1.0mm](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_rivets.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_rivets.jpg)
+
+The tiny copper rivets at 0.6mm, 0.8mm & 1.0mm
+
+[![Image 82: Using three rivets (here at 0.8 and 1mm) to be able to balance the puzzle piece on top](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_three_point_rivet_test.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_three_point_rivet_test.jpg)
+
+Using three rivets (here at 0.8 and 1mm) to be able to balance the puzzle piece on top
+
+I learned that I couldn’t solder a wire to a rivet in a thicker acrylic plate (±3mm) which I wanted to use for the bottom plate. I therefore had to create the rivet+wire combination in some other way and then string them through a hole in the bottom of the puzzle plate. That meant that I had to use the 1mm rivet, which had a hole of 1.5mm diameter, because the jumper wires wouldn’t fit through smaller holes.
+
+Doing a small test with the 1mm rivets soldered to wires, showed that the contact points worked well when a “dummy” copper strip was placed on top to act as the switch closing.
+
+[![Image 83: The set-up for a test of the rivet contact points (imagine a puzzle piece being placed on top of the white plate eventually)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_connection_test.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_connection_test.jpg)
+
+The set-up for a test of the rivet contact points (imagine a puzzle piece being placed on top of the white plate eventually)
+
+_You can read much more details about the prototypes I created and tested for the contact points in my puzzle bottom plate in my [Networking & Communications](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-14/#puzzle-contact-points) blog._
+
+### Creating the Contact Plate
+
+Knowing that I wanted to use the rivets as the contact points in the bottom puzzle plate, I created a new sketch in Fusion 360 to design the bottom plate, using a hexagon of the same size as the NeoPixel plate.
+
+With the sketch that contained the puzzle pieces visible I added 114 tiny holes for the rivets. I tried to position them so they’d hopefully keep a puzzle piece in balance; a triangle with the center of gravity contained somewhere within.
+
+In another new sketch I drew a straight line between two of the three rivet holes per puzzle piece. I would etch that line within the acrylic to mark which two holes should be connected; one going to ground and the other to a microcontroller pin.
+
+[![Image 84: The design for the bottom plate of the puzzle with all the contact points](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_plate_design.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_plate_design.png)
+
+The design for the bottom plate of the puzzle with all the contact points
+
+At the lab I’d already picked out an acrylic sheet while I still had the NeoPixel strip there. It was milky white, but let through light as well without being transparent.
+
+Before, I’d used an acrylic sheet of only 1.8mm and I created a test file through Cuttle. This milky white sheet was 4mm, and the design came from Fusion 360 instead. I therefore redid tiny tests to make sure that the holes were _just_ big enough to fit a 1mm rivet; a small rectangle with one or more holes in it.
+
+[![Image 85: Setting up tests and the contact plate in LightBurn](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_lightburn_settings.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_lightburn_settings.jpg)
+
+Setting up tests and the contact plate in LightBurn
+
+Henk had mentioned that the laser cutter performed much more dependable across larger areas when you placed the material in the center of the bed. But because I didn’t fully trust the laser cutter yet, I always did a test in the top-left _and_ bottom-right corner.
+
+I had to do four tests before I found that using a rivet hole diameter of 1.1mm in Fusion 360 resulted in holes that fitted the rivets somewhat snugly (1.0mm was too tight). I found this to be strange because the rivets were actually 1.4mm in diameter, and my Cuttle test before had shown that 1.5mm was the right match for the other acrylic sheet. I was using a _kerf_ of 0.1mm, so I didn’t think that was it either.
+
+[![Image 86: The many tiny tests I did before finding the right hole setting](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_hole_tests.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_hole_tests.jpg)
+
+The many tiny tests I did before finding the right hole setting
+
+But trusting the tests, I went ahead and cut out the full plate using the 1.1mm diameter in my Fusion 360 design. Making the etchings first, with the tiny holes next, and finally the bigger holes and outside as a third layer, all with their own settings.
+
+[![Image 87: The cut out bottom plate with >100 tiny holes for the rivets](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_laser_cut_plate.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_laser_cut_plate.jpg)
+
+The cut out bottom plate with >100 tiny holes for the rivets
+
+[![Image 88: Looking close and you can see the etchings](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_rivet_etchings.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_rivet_etchings.jpg)
+
+Looking close and you can see the etchings
+
+When the cutting was done and I looked at the plate, I was reminded of a star map with constellations, especially with those thin etched lines running between some of the holes.
+
+### Soldering & Glueing the Rivets
+
+Next came the extremely tedious task of soldering a wire to 76 rivets (and soldering the remaining 38 rivets closed, so no glue would run through it). In Dutch we call this “monnikenwerk”. I set up a small “rivet station” on my desk, using a _third hand_ to hold a copper rectangle shape in which I’d milled 3x3 tiny holes, while the other hand held one wire. My process for the next few hours became as follows:
+
+*   Cut 10 strips of wire and strip ±5mm from one end.
+*   Place ±5 rivets in the copper rectangle and (try to) put some flux inside.
+*   Fix a wire in the other “hand”, put some flux on the tip and place it inside the rivet. Not too far inside, it shouldn’t stick out.
+*   Heat the underside of the wire just where it goes into the rivet and move in the solder from above. Let the solder flow into the rivet, but not too much, it shouldn’t come out on the other end and discolor the copper rivet.
+*   Check if the rivet and wire are stuck together.
+    *   If not, repeat the step above.
+    *   If yes, take out the wire+rivet and place a new wire.
+
+[![Image 89: Tediously soldering wires to rivets for each puzzle piece](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_rivet_soldering.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_rivet_soldering.jpg)
+
+Tediously soldering wires to rivets for each puzzle piece
+
+Thankfully, I managed to solder 40 black wires, 40 red wires, and closed 40 rivets before the day ended at the lab.
+
+The next day I looped all the rivet-wires through the puzzle plate, using books to create a raised plateau with enough room below it for all the wires to hang freely.
+
+[![Image 90: While looping all the soldered rivet-wires through the holes](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_wiring_rivets.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_wiring_rivets.jpg)
+
+While looping all the soldered rivet-wires through the holes
+
+I’m glad I made two extra rivet-wires for both colors, because one wire fell off, and another rivet wouldn’t fit because I’d soldered the wire too crooked somehow.
+
+Once all the rivets were placed (and it looked like a jellyfish), I placed a stiff mat on top and flipped it upside down to glue all the rivets in place. I used a toothpick and general glue, putting a little blob on/into each hole, hoping it would do the trick, and letting it sit for several hours.
+
+[![Image 91: All the wires placed - looking like a jellyfish](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_wires_looped.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_wires_looped.jpg)
+
+All the wires placed - looking like a jellyfish
+
+[![Image 92: The plate upside down to glue the rivets](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_wires_flipped.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_wires_flipped.jpg)
+
+The plate upside down to glue the rivets
+
+After a few hours I inspected the underside of the plate, and saw that some of the rivets had moved upwards _just_ a little. Darn it! I guess the sheet wasn’t pressed down well enough, specifically in the middle.
+
+With the help of my partner, and some arduous labor, we slowly peeled off the glue from the ±20-30 of the rivets (_not_ easy with all the wires in the way!). He then said that I should reglue those rivets and put more weight on the outsides _and_ on the middle. Thankfully, we had a very high glass container that could enclose the length of the wires. And at the end of the evening, I had the following set-up on my room waiting to dry during the night:
+
+[![Image 93: Having set up the bottom plate for the second round of glueing](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_reglue.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_reglue.jpg)
+
+Having set up the bottom plate for the second round of glueing
+
+The following morning I saw that the re-glueing had worked great, and all rivets had stayed down!
+
+**PS** | In case you’re wondering why I have 8 of the same book (\*^▽^\*)ゞ It’s a book that I wrote and was recently released, so I got a bunch of them from the publisher, but due to the pandemic I haven’t had a change to sell/give them away.
+
+The next task turned out to be _quite_ exhausting as well due to how much concentration it required from me, and how much precise movement, with the fear that I might break a wire at any point (them being solid core wires). I had to **move the NeoPixel plate down onto the bottom plate** while all of the wires were being looped through the holes in the NeoPixel plate.
+
+[![Image 94: Starting out high and having looped a few of the longest wires](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_stringing_wires_high.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_stringing_wires_high.jpg)
+
+Starting out high and having looped a few of the longest wires
+
+[![Image 95: After an hour or two of squishing, moving and looping later](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_stringing_wires_medium.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_stringing_wires_medium.jpg)
+
+After an hour or two of squishing, moving and looping later
+
+With all of the wires in the way, it was quite hard to position the middle wires to fit through the closest hole (I didn’t want the wires to block the NeoPixels). To assist me in getting the alignment right while the NeoPixel plate was still quite high, I positioned myself directly under a light that was shining straight down, and hung a wire+weight from it.
+
+That way I could use the shadows and light falling onto the bottom plate to check my precision. It still wasn’t easy, because the wires touching the plate would try to push the NeoPixel plate in all kinds of directions. The lower the NeoPixel plate got, the harder it was for me to move and change wires.
+
+After ±2-3 hours of semi-frustrating work, I had fixed the NeoPixel plate on top with no wires having broken! (๑•̀ㅂ•́)ง✧ I was now left with a porcupine, yay! (I had bought some M5x40mm bolts and M5 nuts to make the two plates float a little above one another).
+
+[![Image 96: Having latched the NeoPixel plate onto the bottom puzzle plate](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_neopixel_attached.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_neopixel_attached.jpg)
+
+Having latched the NeoPixel plate onto the bottom puzzle plate
+
+I’d made a guess of setting the distance between the two plates at 18mm. However, to be sure, I hooked up the NeoPixel plate to assess how the light was looking through the plate and if that distance felt good (it did).
+
+[![Image 97: The NeoPixels seen through the bottom puzzle plate](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_neopixel_on_1.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_neopixel_on_1.jpg)
+
+The NeoPixels seen through the bottom puzzle plate
+
+[![Image 98: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_neopixel_on_3.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_neopixel_on_3.jpg)
+
+[![Image 99: Looking through the little space between the two plates](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_neopixel_inbetween.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_neopixel_inbetween.jpg)
+
+Looking through the little space between the two plates
+
+### Connecting to the Pins
+
+The next step was to connect the 38 black and red wires to the boards/pins of the three PCBs. The black wires, the _GND_, could all be soldered to the copper tape lines that I’d stuck along the back of the NeoPixel plate.
+
+Just to be sure that the copper tape would remain sticky even after it was heated by soldering, I created a tiny test with a spare piece of acrylic. Thankfully, the tape held on really well even after having to use quite a lot of solder before it finally stuck to both the copper tape and wire.
+
+[![Image 100: A small test to check that the copper tape held on after soldering](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_soldering_test.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_soldering_test.jpg)
+
+A small test to check that the copper tape held on after soldering
+
+I folded all the black wires towards the copper tape, cut them to size and stripped the section to about the width of the copper tape, trying to make sure that the black wires weren’t obstructing any of the pins on the PCBs.
+
+[![Image 101: Having cut and stripped all GND wires](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_ground_wires_cut_stripped.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_ground_wires_cut_stripped.jpg)
+
+Having cut and stripped all GND wires
+
+The soldering went pretty easily. As with the test, I had to add quite some solder before it stuck to both the copper tape and the wire.
+
+[![Image 102: Having soldered the GND wires to the copper tape](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_ground_wires_soldered.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_ground_wires_soldered.jpg)
+
+Having soldered the GND wires to the copper tape
+
+If only the red wires would be that easy to solder as well…. o(╥﹏╥)o
+
+With all the black wires out of the way and fixed to the copper tape I started on “routing” the red wires to the (header) pins on the PCBs. Trying to figure out which wires to solder to which pins so the overall distance from the wires to the pins was as short as possible, that it wasn’t blocking any other pins, that the wire was long enough in the first place.
+
+Knowing to which group of 4 pins each wire should be soldered I started the _extremely slow_ process of pushing the wire into position to align straight to the pin, to cut the wire so it would end at the start of the pin, to strip the wire, and then, to _somehow_ solder the wire to the pin (while keeping the shrink tube far enough back).
+
+The wire and the pin did _not_ want to stick together. I had to try quite a lot of times per pin to make them stick, but the pin would often just jump back up after I slightly touched it, or it would come loose as I was working on another pin ( ≧Д≦)
+
+With only 8 pins having taken about 1.5-2 hours (not kidding), I remembered that I had a flux pen. It didn’t really seem to work when I tried it on PCBs, but I was desperate enough to try it again with this. Although it wasn’t magical like the soldering paste in the lab had been, it _did_ make a bit of a difference. It was still difficult to solder the wire to the pin, but once the connection was made, it seemed to be more sturdy, able to handle more stress.
+
+Using a multimeter I made sure to check the connection of each soldered pin to the rivet in the puzzle plate.
+
+About an hour later (at midnight) I finished soldering all the wires to the `0x21` board (the one on the right):
+
+[![Image 103: Having FINALLY soldered 16 of the 38 wires to the pins on board 0x21](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_red_wires_halfway.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_red_wires_halfway.jpg)
+
+Having FINALLY soldered 16 of the 38 wires to the pins on board 0x21
+
+I didn’t have a heat gun to close the shrink tubes, and my attempt with a lighter on the first 4 pins was….. not smart to redo. I therefore asked Loes if I could borrow hers the next time we saw each other.
+
+The next morning it took 2-3 more hours to position, cut, strip, curse, and solder the remaining 22 red wires to their pins. I’m not sure if the result would be labelled as a “wire mess” or not (\*^▽^\*)ゞ
+
+[![Image 104: Having connected all of the black and red wires](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_red_wires_finished.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_red_wires_finished.jpg)
+
+Having connected all of the black and red wires
+
+One benefit of this over having possibly used upright pin headers (that I wasn’t aware of when I designed the PCBs), is that this wiring takes up very little height. The bolts are sticking up from the bottom more than the wiring, so I can flip the plates upside down without it resting on the wiring.
+
+[![Image 105: A side view shows how flat all the wiring remains](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_red_wires_finished_side.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_red_wires_finished_side.jpg)
+
+A side view shows how flat all the wiring remains
+
+I’d gotten the copper tape that acted as my “general ground” from my partner and he said that the carbon backside of the tape was conductive. I could stick the tape on top of each other and the current would flow from one strip to the next. I’d therefore used several smaller copper strips to connect the bigger strips to the PCBs.
+
+I wanted to check this. Using a multimeter I did a continuity test on two strips that were stuck onto each other, but I didn’t get a _biep_ sound. My partner said that I shouldn’t trust that test too much. I therefore attached my FTDI to the main board, to supply the power. I measured the voltage from my _VCC_ to the different _GND_ areas and noticed that it was 5V along the PCBs, but didn’t register for the copper tape sections.
+
+I guess the copper tape’s backing _wasn’t_ conductive in my case (my partner mentioned that in their lab they did use 25,000V! so maybe that’s what made the difference). I removed the copper tape bridges and instead used some leftover black wire to solder the different copper strips together and back to the main PCB. Thankfully, then I did get a proper reading of 5V when measuring the voltage from the copper tape to _VCC_.
+
+### Testing the Connections
+
+With both the black and red the wires now seemingly properly connected it was time to check if it all worked through my ATtiny3216. I flipped the puzzle plate right-side-up, connected the FTDI and UPDI to the PCB at the underside and started from the simple code I’d written for the “Networking & Communications” week to communicate with the PCA9555Ds.
+
+Strangely, my ATtiny didn’t seem to react to any new uploaded code. I kept commenting more and more in my code, to simply turning on a LED, to only printing “hey” in the Serial Monitor, but everything I tried resulted in utter silence from my board.
+
+I had no issues with uploading, so the UPDI wasn’t the issue. I flipped the board back around to check if there was power running along the right lines using a multimeter, and this all seemed fine too. I unplugged the FTDI for a bit and I _think_ that did the trick… a little? My board finally started responding and printing “hey” in the Serial Monitor. I got a LED to turn on, but as I was uncommenting more of my original program, it stopped responding again. I would then re-comment that last step I did, upload the new program, but it would remain silent still. _Even though I knew that code worked a minute ago_. Unplugging the FTDI a few times and just trying again and again, and at some point it _would_ work.
+
+I’m truly not sure why my ATtiny would sometimes not execute anything anymore after a new upload, while it would work fine a bit later, but _eventually_ I managed to get it to take my full code and still work after the upload. Thankfully, although I don’t know why, it didn’t act this weird ever again.
+
+One nasty thing I noticed when I flipped the plates (to have the wiring pointing up again) to check why my board wasn’t responding, was that my UPDI pin header was almost falling from the PCB! (⑉⊙ȏ⊙) It was literally hanging by its traces!
+
+It hadn’t completely broken any traces thankfully (only lifted them up), so I gently unplugged my UPDI and glued the black bottom of the UPDI pin header to the PCB. Not wanting to mess up those traces while the glue was drying I hooked up some of my logic analyzer grabbers to the _UPDI_ and _GND_ lines of my UPDI to their respective pins on the ATtiny board so I could keep uploading new code:
+
+[![Image 106: Using grabbers to connect my UPDI to my ATtiny](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_updi_hooks.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_updi_hooks.jpg)
+
+Using grabbers to connect my UPDI to my ATtiny
+
+The FTDI, thankfully having six connections, hadn’t fallen off. Nevertheless, I taped the USB cable to the bottom of the board with painters tape so the pressure would be taken off from the FTDI pin headers.
+
+I’d written a simple piece of code that outputted the state of all 38 puzzle pins as a long string which I called in the `loop` function:
+
+```
+void checkPins() {
+  byte n = 0;
+
+  //Check pin states of ATtiny
+  for (i = 1; i <= 6; i++) {
+    Serial.print(digitalRead(i));
+    n++;
+  }//for i
+
+  //Check pin states of 0x20 board
+  for (i = 0; i < 16; i++) {
+    Serial.print(board_0x20.digitalRead(i));
+    n++;
+  }//for i
+
+  //Check pin states of 0x21 board
+  for (i = 0; i < 16; i++) {
+    Serial.print(board_0x21.digitalRead(i));
+    n++;
+  }//for i
+
+  Serial.println("");
+}//void checkPins
+```
+
+It _should_ print a long string of `1`s, since I’d not placed any puzzle piece/connection on top. But I was seeing a `0` at the end:
+
+```
+11111111111111111111111111111111111110
+```
+
+Apparently the 16th pin (_OI1\_7_) of the `0x21` board felt that it was connected/closed. I had no idea where on the puzzle plate that position was though.
+
+I therefore adjusted my code to report a change in state from any of the pins; removing the `Serial.print` from each for loop in the code above and replacing it by:
+
+```
+state_current = digitalRead(i);
+if(state_current != pin_state[n]) {
+    Serial.print("ATtiny board: ");
+    Serial.println(i);
+    pin_state[n] = state_current;
+}//if
+```
+
+With the board right-side-up again I grabbed a piece of copper and placed it on the different rivets to see which area belonged to which pin. Thankfully the very lightly etched lines in the plate, showing which two rivets were a “pair”, made it straightforward for me to know how to place the copper strip.
+
+The video below shows how the terminal shows when a connection is made or broken using the copper strip on the rivets (apologies for the crappy video, I couldn’t quite angle my phone correctly to see the plate, but also the terminal on my screen).
+
+I definitely need to do something about the _debounce_, since placing the copper onto the rivets generally resulted in several notifications about a new connection in my terminal. This isn’t due to noise I think, because I’m using internal pullup resistors, but due to my imperfect _human_ hand moving the copper around as I’m placing it on the rivets I think.
+
+My AxiDraw busy drawing out the patterns
+
+Except for that one connection all the other 37 pins were registering in the terminal (　＾∇＾)
+
+I’d marked the one connection that wasn’t showing up with some painters tape, and took out my multimeter to start with some continuity tests. I found that one rivet was connected to the pin, but a little later I found that it was _also_ connected to _GND_!
+
+[![Image 107: Having marked the connection that wasn’t working and going to investigate with the multimeter](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_investigating_connection.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_investigating_connection.jpg)
+
+Having marked the connection that wasn’t working and going to investigate with the multimeter
+
+It seemed rather unlikely that this ground connection came from the rivet and wire itself, they were clearly separated from everything else. Perhaps the trace or pin on the PCA9555D board was badly soldered? Looking closer, I thought I saw some tiny specs. I cleaned the area between the traces with the pointy tip of the multimeter’s probes, and that was apparently it! After the cleaning the pin was no longer connected to _GND_ and the contact point started responding to placing a piece of copper on the rivets.
+
+Great! I _finally_ finished the bottom of the puzzle plate, with the contact points and all connected to my PCBs at the bottom ᕦ(ò\_óˇ)ᕤ
+
+After I also finished the living hinge to wrap around the acrylic inner parts (you can read about this in the next section), I shortened the main power and NeoPixel data line, hooked it up to a plug (and a 1000μF capacitor), which then ran towards the 5V power adapter plug (see the top of the image below).
+
+[![Image 108: The main power comes from the side and goes into the two plugs which then go to the NeoPixels and my board](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_plug_power_full.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/contact_plug_power_full.jpg)
+
+The main power comes from the side and goes into the two plugs which then go to the NeoPixels and my board
+
+The reason why I have a plug connection _within_ the wooden enclosure is that I can also hook up the 5V power adapter straight to the NeoPixels and my PCBs without having to go through the opening in the wooden enclosure (in case I had to do some serious debugging/fixing while continuing to work on my project); in short, I can hook up the power while the electronics are taken out of the wooden enclosure.
+
+The Wooden Enclosure
+--------------------
+
+With the “electronic” side finished (not the programming of the NeoPixels though), it was time to truly design and create the (wooden) enclosure.
+
+### Living Hinges
+
+Since I wanted the outer shape to be a circle, I started by investigating _living hinges_, which is a technique to cut sturdy material in such a way that it becomes (really) flexible.
+
+I’d been intrigued when I first learned about it during the “Computer-Controlled Cutting” week. I didn’t have the time to work with living hinges then, so I was looking actually forward that I’d have the chance now.
+
+After some searching (and a few Fab Academy sites from past years), I came [across](https://www.instructables.com/Curved-laser-bent-wood/) [several](https://obrary.com/products/living-hinge-patterns) [pages](https://denzilmakes.com/collections/plans/products/living-hinge-pattern-dxf-file) that seem to be _the_ source of most living hinge patterns found online ([this](https://fabacademy.org/2019/labs/irbid/students/tarek-asfour/week3.html) student has investigated how well some of those patterns bend, very handy).
+
+I was a bit surprised that I couldn’t find pages that explained “the math” behind living hinges. Basically the “how to” of designing a new pattern, what to keep in mind. Therefore, I tried to just find as many patterns that I liked to see what they had in common, and how to remix them into my own design later.
+
+In general I saw that patterns with a cut from one side to _almost_ the other side were very flexible. As a start, I created an ellipse in Fusion 360 with a whole array of rectangles from one end to another, and extruded along a zigzag pattern.
+
+[![Image 109: The design for my first living hinge](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_earring_fusion360.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_earring_fusion360.png)
+
+The design for my first living hinge
+
+[![Image 110: Cutting the pattern](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_cutting_earring.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_cutting_earring.jpg)
+
+Cutting the pattern
+
+I was _amazed_ by how well it came out, it was _soooo_ flexible! If wood worked this well, I wondered if acrylic would work as well, it being so sturdy (and not flexible). I cut the same pattern from a small piece of red acrylic, and it was just as flexible, easily bending 180° backwards.
+
+[![Image 111: The first wooden and acrylic cuts](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_earring_result_flat.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_earring_result_flat.jpg)
+
+The first wooden and acrylic cuts
+
+[![Image 112: Folded backward into earrings](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_earring_result_bended.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_earring_result_bended.jpg)
+
+Folded backward into earrings
+
+Why this oval shape and not simple rectangles as most tests that I saw online. Well, when I cut one more of each, bend them backward, and voila, I’d have some really cool earrings! (⌐■\_■)
+
+With this first test having gone so well, I designed two more possible living hinge patterns, based on some designs I’d seen on the web that I liked. My goal was to make a pattern featuring hexagons (of course), but I also liked some patterns featuring ovals.
+
+My oval pattern didn’t feature cuts from one side to almost the other and the result was that the 10cm strip _barely_ bended. Not a good pattern thus.
+
+[![Image 113: Lots of ovals](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_oval_pattern.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_oval_pattern.jpg)
+
+Lots of ovals
+
+[![Image 114: This didn’t bend any better than the plain wood](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_oval_pattern_bended.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_oval_pattern_bended.jpg)
+
+This didn’t bend any better than the plain wood
+
+I based my hexagon design on a [bracelet](https://www.etsy.com/jp/listing/510930100/flexible-laser-cut-bracelet-vector-art) I’d seen online, which featured circles along the cuts. I changed those to hexagons. When I laser cut it, I noticed that I’d barely left any space in between all the holes. That hadn’t been very obvious to me when looking at the design in Fusion 360. As a result, it bended _extremely_ well.
+
+[![Image 115: A design featuring hexagons](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_small.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_small.jpg)
+
+A design featuring hexagons
+
+[![Image 116: This pattern was extremely flexible](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_small_bended.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_small_bended.jpg)
+
+This pattern was extremely flexible
+
+I quite liked the hexagon design, but I didn’t need such flexibility and would instead want more strength in the wood (i.e. less holes). I removed some hexagons along the columns, going from a `4-3-4-...` pattern to a `3-2-3-...` pattern, and increased the space between each pattern to `11mm`.
+
+[![Image 117: Less hexagons and more spacing between the pattern](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern.jpg)
+
+Less hexagons and more spacing between the pattern
+
+[![Image 118: Less flexible, but bending more than enough](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_bended.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_bended.jpg)
+
+Less flexible, but bending more than enough
+
+The result was much sturdier, but still easy enough to bend around the circle radius that I needed for my puzzle box.
+
+Next came the more difficult part of the design. I wanted to “fix” this living hinge between two circular plates, using joints; one plate along the top and one along the bottom. The one at the top would be flush with the bottom puzzle plate, the one at the bottom would be what the internal “NeoPixel & puzzle plate” would rest upon. Plus, I needed to have the start and end of the living hinge lock together somehow.
+
+I’d seen a [few](https://www.instructables.com/Laser-cut-enclosure-with-living-hinge-lid/) [examples](https://nl.pinterest.com/pin/817544138608965741/) of living hinges incorporating joints. Using these as examples, I adjusted my design in Fusion 360 to include joints. It was quite a gamble how often along the edge I’d need joints, and if a joint of 4.5mm in width would be enough (the joint was made 3mm high, the height of the wood I intended for the top and bottom plates).
+
+[![Image 119: Adding joints to the design](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_joint_fusion360.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_joint_fusion360.png)
+
+Adding joints to the design
+
+For the interlocking mechanism along both edges I created, in style with this project, puzzle ears (⌐■\_■) . I’d basically already “tested” how to create puzzle ears in Fusion 360 during my [“Molding & Casting](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-12/#a-hexagonal-puzzle-piece)” week during which I’d made a self-fitting puzzle piece shape.
+
+I also created a short section of arc with the radius of my puzzle box including the joints. For this I could use the _arc length_ formula to calculate the right place for each joint; along the living hinge each joint was `55mm` apart. With the arc length I could thus get the angle in between each joint as `θ = s / R = 55mm / (190mm - 3mm) = 0.29 rad = 16.9°`.
+
+Part of me was afraid that if I’d create a living hinge that was `X` cm long according to `X = 2πR`, that the circle it would loop into was either bigger or smaller than `R` in radius due to it stretching or the material that had been lasered away in between the slits.
+
+Thankfully, the short section that I made curved really nicely along the joints. I guess the flexibility of the living hinge meant that it was able to form to a range of radii around the original `R`.
+
+[![Image 120: Testing the joints](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_joint_test.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_joint_test.jpg)
+
+Testing the joints
+
+I’d used a _kerf_ of `0.1mm`. That was _just_ working for the joints, it was quite tight, but with some pushing I could fit them. The puzzle ears on the other hand weren’t fitting at all, much too tight. I therefore did a quick kerf test on this wood, and the wood that I intended for the final living hinge. This showed me that the light wood had a kerf of only `0.035mm`, while the darker wood had `0.065mm`.
+
+[![Image 121: Doing a kerf test for two types of wood](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_kerf_test.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_kerf_test.jpg)
+
+Doing a kerf test for two types of wood
+
+Making another test with these values showed that the puzzle ears fitted nicely. Although I did find that the joints were just a bit too loose (they were really tiny), so I’d probably have to increase the kerf value of the top and bottom plate to create a tighter fit.
+
+There was one final thing to incorporate/test in the living hinge before I could create the full design; the opening for the power. I had a bought a nice round plug that fitted the (male) adapter of the 5V power supply. I had to update the design in one location, closing some of the hexagons and adding a bigger circular hole. I hoped that the wood would still be bendable enough around that area.
+
+Lasercutting a short section showed that the wood was indeed less bendable, but that it wasn’t really noticeable when it was placed along the radius I intended.
+
+[![Image 122: Opening for a plug](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_plug_fusion360.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_plug_fusion360.jpg)
+
+Opening for a plug
+
+[![Image 123: The plug fitted through the hole](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_plug_test.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_plug_test.jpg)
+
+The plug fitted through the hole
+
+With all of these elements now figured out, I set out to create the full 1175mm long section of living hinge (`2πR -> 2π * (190mm - 3mm)`).
+
+I quickly stumbled upon performance issues with Fusion 360 as I increased the hexagon pattern. Every little step that I took inside the _Sketch_ would result in a several second lag. I then remembered that I’d come across a similar issue during the “Mechanical & Machine Design” week, as I was creating a hexagonal grid for the lamp’s inside. Apparently it’s very performance costly to create large patterns while in the _Sketch_ environment.
+
+[![Image 124: Slow performance when creating a big pattern in a sketch](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_sketch_fusion360.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_sketch_fusion360.jpg)
+
+Slow performance when creating a big pattern in a sketch
+
+Instead, you should create the pattern while in the standard _Design_ environment. However, that creates a bit of a funny working logic. In the _Design_ environment you can only pattern _objects_. Since I wanted to have hexagonal _holes_ and slices in my design I basically had to take the following steps:
+
+*   Create one hexagon from the column with 3 hexagons, along with the tiny hexagon at the top and the tiny rectangle that is the slit. Do the same for the column with only 2 hexagons.
+
+[![Image 125: The base pattern in the Sketch](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_better_fusion360.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_better_fusion360.png)
+
+The base pattern in the Sketch
+
+*   Extrude that one hexagon from the row with 3 hexagons and turn that into 3 hexagons using the _Rectangular Pattern_ option. Extrude the tiny hexagon and the rectangle, and join it with the 3 hexagons.
+*   Repeat the process for the other column that has two large hexagons. You then have two bodies that constitute the full base pattern.
+*   Use the _Rectangular Pattern_ to duplicate this base pattern however often you need (106 times in my case).
+
+[![Image 126: Extruded one hexagon and used a Rectangular Pattern to create three](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_extrude_1.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_extrude_1.png)
+
+Extruded one hexagon and used a Rectangular Pattern to create three
+
+[![Image 127: Continue the extrusion, patterning and join to create the base pattern](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_extrude_2.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_extrude_2.png)
+
+Continue the extrusion, patterning and join to create the base pattern
+
+*   Finally, make a new sketch with _just_ the rectangle of the full 1175mm length. Extrude this, and use the _Combine_ command to cut out all the pattern bodies (the _Tools_ can be discarded).
+
+[![Image 128: Use combine to cut all the hexagon patterns from a rectangle](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_cut_fusion360.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_hex_pattern_cut_fusion360.png)
+
+Use combine to cut all the hexagon patterns from a rectangle
+
+A few more steps than simply creating a pattern in a _Sketch_ and extruding the right sections. However, although not fast, this was at least doable, even with hundreds of patterns.
+
+Doing the joints and the puzzle ears followed a similar process to create through a simple sketch, extruding it and only then making the pattern to extrude from the base rectangle.
+
+After I’d finally created the full body of the living hinge it took a few minutes to _Project_ it into a _Sketch_. I then right-clicked the sketch and clicked “save as DXF”. And then I waited… and waited… I had experienced Fusion 360 needing some to export sketches, but after an hour I forcibly quit the program to try and work on some other parts. Perhaps I could retry exporting the living hinge sketch during the night when I was asleep.
+
+Voicing my frustrations with Fusion with Michelle she asked if I’d tried exporting a sketch using the _Drawings_ environment; where you generally create technical drawings. That seemed like a very interesting approach! I turned my living hinge body into a _Drawing_, using the largest preset of A0 for the “paper size” and selecting the “top” view. I found that you can easily remove all the notes and lines that are on the drawing by default by simply selecting them and pressing backspace.
+
+[![Image 129: Using the “Drawing” environment to create a .dxf file of the full living hinge](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_drawing.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_drawing.png)
+
+Using the “Drawing” environment to create a .dxf file of the full living hinge
+
+With only my living hinge left on the “drawing” I went to _Export_ -> _Export sheet as DXF_, crossed my fingers that it would work, waited a minute and it was done! (๑•̀ㅂ•́)ง✧ If only I’d known _that_ before!
+
+I picked a nice sheet of ±3mm rustic brown multiplex that was about 1400mm long. Since that was quite a distance, and the laser doesn’t have an even power output along its bed I started with some tests along both ends of the wood. I finally settled on using a speed of 20, max power of 65% and min power of 20%, using a kerf of 0.065mm.
+
+It took about 25 minutes for the machine to cut out all the lines and hexagons. Thankfully, it had cut out the pattern fully even at the far side (there was a clear difference if you looked at the back of the wood, with one end having lots of black burn marks, while the other end had barely any soot on it).
+
+Cutting the final living hinge
+
+I forgot to take a photo, but as I picked up all 1175mm of the living hinge along both ends, I was surprised how flexible it was, with the middle section drooping far down.
+
+### Joint Plates
+
+The two plates that would fit inside the joints along the living hinge at the top and bottom were quite simple. The top plate would lie flush with the bottom puzzle plate, while the bottom plate would be a ring on which the internal acrylic plates would rest. I added six holes so I could eventually use bolts to hold the outer plates (and final top and bottom plates) together.
+
+The only tricky part was to set-up the joints at the correct intervals. Thankfully, I’d already done this partly while making the small test arc with joints before.
+
+[![Image 130: Having designed the top and bottom “joint plates” that go around the central “puzzle area”](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_joint_plates_fusion360.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_joint_plates_fusion360.png)
+
+Having designed the top and bottom “joint plates” that go around the central “puzzle area”
+
+I did do several smaller arc tests (like I had made before) to figure out a good setting for the kerf on the joint plates so it would fit quit snugly inside the holes along the living hinge. I eventually settled on a kerf of `0.07mm` using a white piece of wood.
+
+It took some wiggling, but the living hinge eventually fitted quite beautifully around the bottom joint plate (^▽^)
+
+[![Image 131: The living hinge fitted around the bottom joint plate](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_bottom_joint_plate.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_bottom_joint_plate.jpg)
+
+The living hinge fitted around the bottom joint plate
+
+I couldn’t find any other “cheaper” 3mm multiplex apart from the nice rustic wooden plates, and the living hinge was designed for 3mm thick wood. I therefore had to cut the top joint plate from the nice wood, even though that plate wouldn’t even be visible from the outside once the full puzzle box was assembled. I did do some kerf tests again, and settled on using `0.09mm`.
+
+After the laser was done and I’d wiggled the other side of the holes around the joints, the living hinge circle had become quite a sturdy cylinder. Fellow student Phil recommended to use some wax or oil to rub into the living hinge’s wood and that Michelle had recently done some tests. After she showed me the tests and where to find the oil, I took the Beeswax oil, and rubbed it along the wood, nicely darkening the rustic tint.
+
+[![Image 132: Rubbing the living hinge with beeswax for protection and a darker color](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_beeswax.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_beeswax.jpg)
+
+Rubbing the living hinge with beeswax for protection and a darker color
+
+While I was working on this I suddenly noticed that I’d made a mistake in the top and bottom joint plates; the holes didn’t align! I tried to see if it was just a matter of flipping a plate around, but that wasn’t it. I knew this was a mistake that came from having made the living hinge in a different file than the joint plates. However, with the complexity of the living hinge (and how it already affected the performance of Fusion 360), I couldn’t really have done it differently.
+
+Comparing the actual plates with my design showed that I’d offset the joints on the bottom plate one too far upward. The joints happened every 55mm. With 1175mm in circumference that meant I couldn’t perfectly wrap it around, since `1175 / 55 = 21.36`, not a round number. However, that was a good thing, since I needed some extra space for the puzzle ear connections along both ends of the living hinge. I now realized that I’d put that “extra bit of space”, that `0.36` of leftover space, just a little too far upwards.
+
+After fixing my mistake, I cut out a new bottom joint plate, and this time the holes thankfully did align. I took the same piece of rustic 3mm multiplex to cut out the bottom of the full puzzle box; a circle of 380mm in diameter with 6 holes, quite simple. I also rubbed the bottom with beeswax.
+
+I was really happy with the resulting wooden enclosure (ﾉ◕ヮ◕)ﾉ\*:・ﾟ✧ It reminded me of old radio sets that had such nice wooden exteriors.
+
+[![Image 133: The living hinge enclosure](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_box_together.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_box_together.jpg)
+
+The living hinge enclosure
+
+[![Image 134: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_box_together_zoom.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_box_together_zoom.jpg)
+
+Only while in the metro back home did I remember that I forgot to take a bit of “spacing” into account to make the top joint plate fit around the acrylic puzzle plate. I’d set a rather large kerf on the wooden plate, so I guessed the wooden plate wouldn’t fit around the acrylic right now (╥﹏╥)
+
+And indeed, as I tried to fit the wooden plate around the acrylic hexagon, it clearly wasn’t big enough. Sanding down the edges of the wooden plate took quite some time; trying to see where it still wasn’t fitting, where it needed to be sanded more, checking every minute if it was enough already (no, it wasn’t), and repeat. But after about half an hour I was finally able to fit the wood around the acrylic, with it not being _too_ tight of a fit.
+
+I’d bought some M5 60mm long sunken bolts to go into the bottom plate (and eventually connect it to the top plate) and my partner showed me how to turn the 6mm wide holes in the bottom plate into tapered holes with a special drilling head.
+
+[![Image 135: Creating tapered holes for the sunken bolts](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_sunken_bolts.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_sunken_bolts.jpg)
+
+Creating tapered holes for the sunken bolts
+
+I lowered the acrylic section (with the puzzle plate, the NeoPixel plate, and all the electronics) into the wood and it thankfully all fit together!
+
+[![Image 136: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_including_acrylic.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_including_acrylic.jpg)
+
+[![Image 137: The wooden enclosure around the internal puzzle area](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_including_acrylic_side.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/living_hinge_including_acrylic_side.jpg)
+
+The wooden enclosure around the internal puzzle area
+
+### Top Plate
+
+The last part of the wooden enclosure was the plate to go on the top, that had the outline of the puzzle cut out of the center. Because I didn’t want any holes (for bolts to hold the top and bottom together) visible on the top of the wood I’d bought _insert_ nuts that had thread on the inside
+
+[![Image 138: The insert nuts that can be screwed into wood and have thread on the inside](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_inserts.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_inserts.jpg)
+
+The insert nuts that can be screwed into wood and have thread on the inside
+
+These nuts are 10mm high. I already had a 3mm plate, the top joint plate, into which these inserts would be screwed, however I needed at least 7mm on top of it. Preferably several millimeters more so I’d not run the risk of seeing the insert come out the other side of the wood because I’d screwed them in too far.
+
+In short, I already wanted a thick top plate because I felt that it would look nice, I now also _needed_ it to fit the inserts.
+
+I first thought about milling the top plate from a 12mm thick multiplex plate. However, the odd shapes of my puzzle ears meant that I’d need _really_ small milling bit. I therefore wanted to investigate the laser cutter first.
+
+#### Laser Cutting the Top Plate
+
+I took a piece of 12mm leftover multiplex wood from what we’d used during the “Computer-Controlled Machining” week. I had no idea what settings to use. The thickest piece of reference wood was only 4mm thick. I started with a speed of 10, max power of 100% and min power of 25%. I truly wasn’t sure if the wood would start to burn, so I kept my hand over the _STOP_ button during the entire time. Thankfully, no fire started.
+
+It didn’t cut through fully. Using a piece of paper I could measure that the cut went 9mm deep. Using a speed of 5 went nicely through it. I also tried doing two passes with a speed of 10. However, that charred the inside a whole lot more, making the wood look a lot less nice. I therefore knew that multiple passes weren’t an option.
+
+I did get a large burn shadow on top of the wood with those settings. To try and reduce it I covered the top with painters tape, which did stop some of the burns, but not all, and it made it look rather uneven.
+
+[![Image 139: Masking the top with a layer of painters tape to reduce burn marks](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_painters_tape_test.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_painters_tape_test.jpg)
+
+Masking the top with a layer of painters tape to reduce burn marks
+
+[![Image 140: Some of the 9mm and 12mm tests](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_12mm_tests.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_12mm_tests.jpg)
+
+Some of the 9mm and 12mm tests
+
+I also made a tiny test of some puzzle ears. The laser could cut through, but it wasn’t a really nice result. I therefore tried the same tests with a 9mm thick sheet of multiplex. Using a speed of 8, max power of 100% and min power of 25% could cut through. I was surprised that it was about the same as the 12mm sheet. Perhaps the 9mm wood was a bit harder?
+
+However, all the tests didn’t look very nice. The burn shadows on the top and the blackness of the sides weren’t what I wanted.
+
+I therefore made a change to my design. The lab didn’t have the nice looking wood I’d used for my living hinge in a thicker size than 3mm. However, I saw online that I could get 5.5mm hardwood multiplex (which I’d guessed was the material I’d used for my living hinge) at the Gamma, the local home depot. Perhaps I could use two of these layers, one with the puzzle outline, which would then lie flush with the 5mm thick puzzle pieces, and another layer on top with a wider hexagon taken out of the inside, which would add to the thickness I required for the inserts.
+
+[![Image 141: Adjusting the design of the top plate into two 5.5mm high plates](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_new_laser_design_fusion360.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_new_laser_design_fusion360.jpg)
+
+Adjusting the design of the top plate into two 5.5mm high plates
+
+The next morning I bought a 5.5mm (and 9mm plate, which I’ll get back to later) wooden plate of 61cm x 122cm at the Gamma (my partner helped with carrying it for the section we had to bike before reaching public transport), which would give me three tries to create the two plates.
+
+I started with a bunch of tests to figure out the settings that would cut through the wood from the top-left to the bottom-right section, what the kerf was, what kerf would work well with my actual puzzle pieces. I was really surprised that at first I had to use a speed of 6, max power of 100% and min power of 30% to even cut through the 5.5mm sheet. That was what I’d needed for the 12mm multiplex! (●\_\_●) I guess the hardwood, which was only a veneer on the top and bottom, was giving the laser a hard time, because the inside of the wood looked absolutely _charred deep black_. It looked even worse than the 9mm and 12mm tests from before… (◎\_◎;)
+
+I did manage to almost set my wood on fire while I was doing tests in the bottom-right corner. I was having trouble getting through the wood, and did a second test of a tiny rectangle at almost the same place as the first test. The place where the lines of the first rectangle and second rectangle intersected started smoldering (⑉⊙ȏ⊙) Henk was at the scene quickly and shut down the laser cutter, stopping the flow of air, which let the smoldering die down.
+
+Henk said I should pay more attention to really getting the focus even along the whole area. Using the _Frame_ button for a dozen times together with the wooden stick we use to set the focus, I kept checking if the distance between the wood and the laser was correct, placing more and more weights along the sides to push down the wood.
+
+[![Image 142: Using lots of weights to even out the wooden plate](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_evening_wood.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_evening_wood.jpg)
+
+Using lots of weights to even out the wooden plate
+
+Eventually I felt that the focus was good along the whole area. I started with engraving the spirograph into the wood. The examples hanging next to the laser cutter showed me that etching the full area, as I’d done for the puzzle pieces, looked darn ugly with wood. I therefore figured I’d increase the DPI so much that the laser would only “hatch” the pattern. I did a quick test on a tiny rectangle with a DPI of 20 which looked quite nice.
+
+Using a speed of 25, max power of 25% and min power of 10%, plus a DPI of 20, and a _Scan Angle_ of 45°, I had the spirograph hatched into the wood. I was really happy with this result, which would be the only thing I’d be happy with during the remaining process of using the laser cutter for the top plate…
+
+[![Image 143: The spirographs hatched into the wood](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_spirograph_etched.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_spirograph_etched.jpg)
+
+The spirographs hatched into the wood
+
+[![Image 144: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_spirograph_etched_zoom.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_spirograph_etched_zoom.jpg)
+
+The next step was to cut out the puzzle pieces, the holes for the inserts, and the outside circle. To protect the cut of the puzzle ears, which was the only area truly visible in the end, I taped the path with painters tape. I used a speed of 9, max power of 100% and min power of 25%, plus a kerf of….. 1mm!
+
+[![Image 145: Trying to protect the top from burn marks with painters tape](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_painters_tape.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_painters_tape.jpg)
+
+Trying to protect the top from burn marks with painters tape
+
+[![Image 146: The result after the cutting was done](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_painters_tape_cut.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_painters_tape_cut.jpg)
+
+The result after the cutting was done
+
+My very early tests had shown that I’d needed an insane kerf of 1mm to make the puzzle pieces fit well. But I guess I had the focus wrong at that time, or did something else wrong, because I already noticed during the cut of the puzzle that the ears looked too off. When I cleaned some soot from the sides of the plate and tried to fit a puzzle piece in, it was _much_ too big o(╥﹏╥)o
+
+Another thing that I noticed was that this wood was splintering like _crazy_! It didn’t just splinter along the sides, as I pulled away the painters tape, it took away splinters from the top as well. And painters tape isn’t even that sticky! Trying to sand the wood only resulted on an endless barrage of splinters, as you sanded splinters away, new ones would pop up continuously ( ≧Д≦)
+
+Well, that was my one “failure” option I had for this board…
+
+I set up everything again to cut out the plate again, using a kerf of 0.1 this time. I wasn’t quite sure if that would be ok, but I wasn’t trusting my tests anymore either. After the laser was done I tried to properly clean some of the black soot from the sides, enough to not make it smudge my puzzle pieces (too much). I also did a bit of sanding to try and reduce the splinters and finally rubbed it with beeswax. All of this turned the plate into a much darker and grey-ish piece of wood. It wasn’t necessarily bad, but the terrible charring of the sides, and the constant roughness and tiny splinters coming from the wood hadn’t made this a success.
+
+[![Image 147: The puzzle pieces thankfully fitted into the wood, only just](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_laser_cut_puzzle_pieces_1.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_laser_cut_puzzle_pieces_1.jpg)
+
+The puzzle pieces thankfully fitted into the wood, only just
+
+[![Image 148: Testing the plates on the actual puzzle enclosure](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_laser_cut_puzzle_pieces_2.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_laser_cut_puzzle_pieces_2.jpg)
+
+Testing the plates on the actual puzzle enclosure
+
+The simple top plate thankfully went correctly in the first go (no kerf that might mess things up). I cleaned, sanded and waxed it the same as the first plate.
+
+I now had _something_ that _could_ potentially work (although I’d still needed to align these wooden layers perfectly with the puzzle bottom layer so the puzzle pieces would be placed correctly, so it could still go horribly wrong later). But I wasn’t very happy, it just didn’t look good enough, especially since this was the top section, not something partially hidden away.
+
+#### Milling the Top Plate
+
+Henk had found some 1mm milling bits that were 10mm long the day before. I felt that 1mm in diameter _could_ work for milling the puzzle ears. I’d therefore also bought a 9mm thick hardwood multiplex sheet at the Gamma, in case the laser cutting results weren’t good enough. The 9mm plate together with the 3mm plate below it would only give me a 12mm thick plate in total for the 10mm _inserts_, so I’d probably not screw in the inserts all the way.
+
+I figured I would use a 3mm ballhead mill to lightly carve out the spirograph from the top. Then use the 1mm flathead milling bit to slowly mill out the puzzle ears, and finally use the 5mm flathead milling bit to mill out the outside circle.
+
+Milling the spirograph design meant that I had to import it into Fusion 360 to combine with the rest of the top plate. I did have to use some very specific offsets and scales to (hopefully) align it to my project.
+
+[![Image 149: Odd settings to use to import my spirograph into Fusion 360](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_importing_spirograph.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_importing_spirograph.jpg)
+
+Odd settings to use to import my spirograph into Fusion 360
+
+I used the steps outlined in my “[Computer-Controlled Machining](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-7/#vcarve-pro)” week to set-up the toolpaths for the ShopBot in VCarve Pro. I wasn’t quite sure what speeds and feed rates to use for the top spirograph and what allowance to use for the puzzle pieces. I therefore created a few test circles and set each to a different combination of speeds and feed rates.
+
+However, I started with 6 holes to screw the wooden plate to the sacrificial layer. To operate the ShopBot I followed the steps I wrote down in my “[Computer-Controlled Machining](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-7/#cnc-milling)” week.
+
+[![Image 150: Setting up test path & the top plate in VCarve Pro](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_vcarve_setup.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_vcarve_setup.jpg)
+
+Setting up test path & the top plate in VCarve Pro
+
+[![Image 151: Having milled the drilling holes and screwed the wood to the bed](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_setup_wood.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_setup_wood.jpg)
+
+Having milled the drilling holes and screwed the wood to the bed
+
+Next, I switched to the 3mm ballhead milling bit and did the circle tests. I didn’t see much difference, each resulted in quite rough surfaces with lots of “fuzz” that had to be sanded off.
+
+[![Image 152: Testing different spindle speeds and feed rates with the 3mm ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_speed_feed_rate_tests_raw.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_speed_feed_rate_tests_raw.jpg)
+
+Testing different spindle speeds and feed rates with the 3mm
+
+[![Image 153: After filing the edges they all looked quite similar](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_speed_feed_rate_tests_filed.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_speed_feed_rate_tests_filed.jpg)
+
+After filing the edges they all looked quite similar
+
+I decided to use a spindle speed of 16k (somewhat random) and a feed rate of `10mm/s`, because I did feel that slower created somewhat better rounded circles. In VCarve I selected the _2D Profile Toolpath_, set the depth to 1.5mm, so only 1 pass. For the _Machine Vectors_ I did _On_, since I wanted to carve out the line exactly.
+
+Timelapse of cutting the puzzle pieces
+
+It was rather fun to see the milling machine carve out the spirograph. Although the sound was awful, a really high scraping sound. I think because the ballhead doesn’t really have (good) knives on the top 1.5mm ball side, so it wasn’t cutting that smoothly?
+
+When the machine was done, I was left with a lovely spirograph design, which still needed quite some effort to properly, but gently, sand away the wood fuzz along all the lines. Thankfully though, this wooden sheet was _much_ better than the 5.5mm sheet I used before on the laser cutter. This one didn’t splinter that easily.
+
+[![Image 154: The spirograph still needed quite some (gentle) sanding](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_spirograph_raw.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_spirograph_raw.jpg)
+
+The spirograph still needed quite some (gentle) sanding
+
+[![Image 155: After having sanded all edges](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_spirograph_filed_zoom.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_spirograph_filed_zoom.jpg)
+
+After having sanded all edges
+
+I switched to the tiny 1mm flathead milling bit. Henk had advised me to set the spindle speed as fast as possible, 18k on our ShopBot. I didn’t yet know what feed rate to use though. Slower was better, but too slow and I’d need more time than was left in the day. I also didn’t know what _Allowance offset_ to set for the path to make it truly fit the acrylic puzzle pieces.
+
+I started out with using the _Allowance offset_ that we’d used for the 5mm flathead, `-0.3mm` and a feed rate of `10mm/s`.
+
+As it was slowly carving out my test piece I thought I heard something while it was at around 6mm depth. I couldn’t really see though due to the dust skirt around the milling head. When the milling head did another pass, I heard a quick metal-on-metal sound and knew that the milling head must be broken and the head had just scraped the broken milling bit again. I stopped the job and as I moved the milling head out of the way I could see that the milling bit had broken in the corner of one puzzle ear.
+
+[![Image 156: The broken 1mm milling bit sticking from the wood](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_1mm_broken.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_1mm_broken.jpg)
+
+The broken 1mm milling bit sticking from the wood
+
+[![Image 157: The second milling bit broken](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_1mm_broken_head.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_1mm_broken_head.jpg)
+
+The second milling bit broken
+
+I halved the speed to `5mm/s`, switched to a new 1mm milling head, z-aligned again, and let the machine start on another puzzle piece test. Sadly, around 8.3mm depth I heard a noise again which I now knew was the breaking of the milling bit ಥ\_ಥ I figured I’d give it _one_ more try at `2.5mm/s` since at `5mm/s` it had been _so_ close to fully cutting through the wood. Sadly, again at 8.3mm depth it broke as well o(╥﹏╥)o
+
+[![Image 158: All the milling tests](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_milling_tests.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_milling_tests.jpg)
+
+All the milling tests
+
+Milling a 9mm thick sheet using a 1mm milling bit just wasn’t going to work, the friction from the walls as the milling bit went deeper just became too much.
+
+It felt wasteful to leave that spirograph etched into the wood, so I just milled it out of the plate. I wasn’t quite sure what to do with it, but I figured I’d find a use for it later (it became the bottom plate eventually!). The ShopBot software crashed on me as I finished the z-leveling of the 5mm flathead mill. Thankfully I’d taken a photo of the zero-point that I’d set for my job, so I could easily set it up again, pfew!
+
+[![Image 159: Having milled out the spirograph, without any puzzle outlines](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_spirograph_circle.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_spirograph_circle.jpg)
+
+Having milled out the spirograph, without any puzzle outlines
+
+Since I had space to mill out two more circles, I decided to mill out another circle with a large hexagon taken out of it. Perhaps this could function as the top layer, although I’d still need a wooden layer below with the actual puzzle outlines.
+
+[![Image 160: The wood “fuzz” left along the edges after the milling](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_wood_fuzz.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_wood_fuzz.jpg)
+
+The wood “fuzz” left along the edges after the milling
+
+[![Image 161: A possible top layer](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_9mm_outer_layer.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_9mm_outer_layer.jpg)
+
+A possible top layer
+
+As a quick test I placed the 9mm sheet in the laser cutter and used the highest setting that I was comfortable with; speed of 9, max power at 100% and min power at 25% to see what would happen. It cut 7mm deep. So no laser cutting on this wooden sheet it seemed.
+
+Instead I placed another sheet of that lovely 3mm dark wood that I’d used for the living hinge into the laser cutter. I did a few tests to see what kerf to use for the puzzle pieces to fit. It seemed that `0.07mm` was a good match. Making sure that the wooden sheet was pushed down along the full circle, using weights and duck tape, I first engraved the spirograph into the wood (using a speed of 25, max power of 15% and min power of 10%). I then cut out the puzzle pieces, as well as some holes (6 for the insert nuts, and 6 to wrap around the bolt heads that stuck out from the acrylic plates).
+
+However, after it was done and fitted my puzzle pieces they didn’t fit! ✖\_✖ It was _just_ a bit too tight. Strange, I’d checked the kerf before right? Had I accidentally set the kerf in a different layer, but did my test with 0 kerf instead? I did another test with 0 kerf and compared it with my original test using the caliper. It was _exactly_ the same. I guess I had done the original test at 0 kerf after all….
+
+Sad that I’d now wasted a nice piece of wood, I set everything up again on a different section of the wooden sheet. Did the spirograph, did the cuts (at 0 kerf) and thankfully, this time the puzzle pieces fitted nicely (amazing that a difference of 0.07mm can make such a difference!)
+
+[![Image 162: The (first) top layer that holds the puzzle outlines](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_3mm_puzzle_layer.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_3mm_puzzle_layer.jpg)
+
+The (first) top layer that holds the puzzle outlines
+
+The circle-with-missing-inner-hexagon that I’d milled out of the 9mm plate had its hexagon too big to hide the holes of the plate in the image above (the ones around the bolt heads). I therefore milled one more possible top plate out of the 9mm sheet that would fall over those holes. It did mean that I’d first have to mill the hexagon shape from the wood.
+
+[![Image 163: The new design for a possible top plate out of the 9mm sheet](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_9mm_second_design.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_9mm_second_design.jpg)
+
+The new design for a possible top plate out of the 9mm sheet
+
+[![Image 164: After the milling was done](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_9mm_second_design_milled.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_9mm_second_design_milled.jpg)
+
+After the milling was done
+
+Sadly, this section of the wooden plate had faired a bit worse from the milling, along the sides many big chunks of wood were missing from the top, and the spirograph sections still remaining along the outline looked much less nice that my previous result.
+
+When I placed it on my puzzle box I knew that this wasn’t it, it didn’t mesh well with the layer below it (plus that I wasn’t happy with the quality).
+
+[![Image 165: The 9mm thick sheet on top of the 3mm wooden sheet](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_9mm_second_design_placed.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_9mm_second_design_placed.jpg)
+
+The 9mm thick sheet on top of the 3mm wooden sheet
+
+I therefore laser cut two more circles from the 3mm wood, each with a hexagon that was increasingly larger (but covering any potential holes). This left me with two possibilities on how the final top could look; either layer the 3 sheets of 3mm on top of each other, or replacing the top layer with the 9mm thick circle that I had milled before (that had a bigger hexagonal hole than the spirograph).
+
+[![Image 166: Using three layers of the 3mm wood](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_3_layers_3mm.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_3_layers_3mm.jpg)
+
+Using three layers of the 3mm wood
+
+[![Image 167: Having a top layer of the 9mm wood](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_3_layers_9mm.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_3_layers_9mm.jpg)
+
+Having a top layer of the 9mm wood
+
+Eventually, I decided to go for the 3mm top layer, it just better fit with the other two 3mm layers below it.
+
+Because I had to use the insert nuts in the top layers I had to glue them together, using wood glue. Due to the size of the circles and my lack of enough/big enough glue clamps I instead created a big tower of my heaviest books on top of the plates.
+
+[![Image 168: A tower of (dataviz) books on top of the wooden plates to glue](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_glueing_tower.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_glueing_tower.jpg)
+
+A tower of (dataviz) books on top of the wooden plates to glue
+
+Once I had three layers of the 3mm wood glued together, creating a stack of 9mm high, did I screw in the inserts. My partner helped me to make sure the inserts were going in as vertical as possible
+
+[![Image 169: Having added insert nuts](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_insert_nut_top.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_insert_nut_top.jpg)
+
+Having added insert nuts
+
+[![Image 170: How it looks from the bottom](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_insert_nut_bottom.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_insert_nut_bottom.jpg)
+
+How it looks from the bottom
+
+I had calculated that the 60mm bolts would be _just_ a bit too long, and after an actual check I saw that I’d need to remove 3mm from all the bolts.
+
+[![Image 171: My 60mm were (expectedly) 2-3mm too long](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_bolts_too_long.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_bolts_too_long.jpg)
+
+My 60mm were (expectedly) 2-3mm too long
+
+I asked my partner to do the actual sawing of the bolts, because I appear to be dreadfully bad at sawing (using a drill also).
+
+With the bolts now at the correct length I glued on the top layer to hide the insert holes, and after drying for a few hours, put it all together again.
+
+[![Image 172: The look of thee puzzle box with the final top layer glued on, hiding the inserts](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_final_choice.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/top_final_choice.jpg)
+
+The look of thee puzzle box with the final top layer glued on, hiding the inserts
+
+#### Lid
+
+With the three levels of the ±3mm wood on top of each other, it suddenly became clear to me that I could use the inner hexagon that was cut out as a lid for the whole box.
+
+However, with the hexagon perfectly fitting into the top hexagon, it was a bit hard to take out. I therefore cut out part of a circle from it.
+
+To be able to re-align the wooden lid in the laser, I first taped a piece of paper to the bed and had the hexagon shape cut into it. I didn’t need the circle to take out to be _perfectly_ aligned, so doing it with paper this way was more than enough.
+
+I then placed my wooden lid on top of the paper, and had the circular “bite” taken out.
+
+[![Image 173: Using paper to be to (re-)align the lid](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/lid_aligning_laser.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/lid_aligning_laser.jpg)
+
+Using paper to be to (re-)align the lid
+
+[![Image 174: The little missing “bite” from the lid](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/lid_piece_removed.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/lid_piece_removed.jpg)
+
+The little missing “bite” from the lid
+
+And with that the physical exterior of my final project was finally done! (ﾉ◕ヮ◕)ﾉ\*:・ﾟ✧
+
+Programming
+-----------
+
+To be able to program my ATtiny3216, and read out the Serial Monitor, while the puzzle was upright and closed, I added some Male-Female jumper wires to the UPDI and FTDI header pins on my board. For the UPDI I connected wires to both the _GND_ (white) and _UPDI_ (yellow) pins, while for the FTDI I only connected wires to _GND_ (black) and the _RX_ (blue) line, since I would now power my board with the 5V adapter, and I only needed to read out my board.
+
+Quite handy, those holes in my living hinge design, which allowed me to poke the wires outside.
+
+[![Image 175: Adding two wires to the UPDI and FTDI header pins to connect my UPDI and FTDI to and program the puzzle](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_wires_outside.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_wires_outside.jpg)
+
+Adding two wires to the UPDI and FTDI header pins to connect my UPDI and FTDI to and program the puzzle
+
+Now that I had to make my NeoPixels and puzzle contacts work together, I adjusted my map of the NeoPixel grid to include the puzzle pieces. Next, I assigned each NeoPixel to one of these puzzle pieces. I decided to assign a NeoPixel to only 1 puzzle piece, even if it was along a puzzle edge. A true 50/50 split between two puzzle pieces didn’t happen very often, usually the NeoPixel would lie mostly below one piece.
+
+[![Image 176: Each puzzle piece got an ID, and each NeoPixel got assigned to one puzzle ID](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_puzzle_id.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_puzzle_id.png)
+
+Each puzzle piece got an ID, and each NeoPixel got assigned to one puzzle ID
+
+Thankfully, the `megaTinyCore` library had been updated to version 2.3.2 that saw a major increase in the uploading speed, which was perfectly timed for me, and which I was immensely grateful for.
+
+I did have to choose the _SLOW_ setting of the _Serial-UPDI_ versions of the _Programmer_, because the upload would always crash with the faster versions (I’d get `Error with stxxxxx` kinds of errors otherwise at a random point during the upload). However, this version was still way faster than the old uploader from the previous `megaTinyCore` version.
+
+[![Image 177: The programmer I had to choose for my UPDI to work](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_megatinycore_programmer.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_megatinycore_programmer.png)
+
+The programmer I had to choose for my UPDI to work
+
+I checked if there were perhaps other libraries that worked with NeoPixels besides the `AdaFruit_NeoPixel` library I’d been using till now, and found the [`FastLed`](https://github.com/FastLED/FastLED) library. This seemed like a great library, because it has more advanced functionality and options than the AdaFruit library. Sadly though, it doesn’t work for the ATtiny Series-0 and Series-1, even with `megaTinyCore`. I tried compiling the most simple of programs, but it failed indeed (and found [other students](http://fab.academany.org/2020/labs/kannai/students/tatsuro-homma/assignment/week11.html) that also tried with the new ATtiny’s and failed).
+
+I did discover that `megaTinyCore` has its own version of the AdaFruit library that’s optimized for the ATtiny’s! I’m therefore now using the [`tinyNeoPixel_Static`](https://github.com/SpenceKonde/megaTinyCore/blob/master/megaavr/extras/tinyNeoPixel.md) library. There are a few tiny differences in how the library is initialized. You can create a strip with:
+
+```
+#define led_count 217
+byte pixels[led_count * 3];
+tinyNeoPixel strip = tinyNeoPixel(led_count, pin_NEO, NEO_GRB, pixels);
+```
+
+And you need to specifically set `pinMode(pin_NEO, OUTPUT)` instead of using `strip.begin()` as you do with the original `AdaFruit_NeoPixel` library. With the `tinyNeoPixel` library you can set the clock speed back to 20Mhz, instead of the 16MHz that had to be used before. It also reports the Global-variable-used SRAM accurately (which the original library doesn’t).
+
+### Splitting the Code
+
+I wanted to bring my NeoPixel and the PCA9555D code together. However, the main `.ino` file was getting quite big. I instead preferred to have most of the NeoPixel code and functions and the PCA9555D code and functions in separate files and only call those functions from the main file.
+
+I had no idea how to split code and be able to access both functions and global variables across files though. After searching online I found that you can put code in other files, preferably with a file type of `.cpp` (for _C++_), and use a _header_ file, with a file type of `.h` that contains any function (and variable) declarations. I won’t go into the details, and I can’t share a specific page that explained it all to me. Instead I slowly gathered the knowledge from many different pages.
+
+One thing that I do want to point out is the use of `extern`, which I found to be _the_ way to share variables across files. I created one “base” header file in which I would _declare_ any variable that I needed across files, such as:
+
+```
+  //Pins  
+  #define num_pieces 38
+  extern byte pin_state[];
+  extern byte pin_state_old[];
+  extern byte debounce_delay;
+
+  //Define the two PCA9555D multiplexers
+  extern PCA9555 board_0x20; //16 GPIO pins
+  extern PCA9555 board_0x21; //16 GPIO pins
+
+  //NeoPixels
+  #define pin_NEO 0
+  #define led_count 217
+
+  // extern Adafruit_NeoPixel strip;
+  extern byte pixels[];
+  extern tinyNeoPixel strip;
+```
+
+Next, within a `.cpp` (or the main `.ino`) file I would _define_ the variable, e.g.
+
+```
+byte pin_state[num_pieces];
+byte pin_state_old[num_pieces];
+
+PCA9555 board_0x20(0x20);
+PCA9555 board_0x21(0x21);
+```
+
+Even though I defined the `pin_state` only in my PCA9555D file, I could use it in the main `.ino` file as well.
+
+### Simplex Noise Patterns
+
+I had an idea of what I roughly wanted to happen beneath the puzzle pieces in terms of light; I wanted to use _Perlin_ (or _Simplex_) noise to create a slowly undulating flow of colors moving across the board. I’ve briefly used Perlin noise before with my `p5.js` example in the “[Interface & Application Programming](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-15/#p5js)” week.
+
+For my case I was looking for 3-dimensional noise; I’d need two dimensions for the grid itself, and a third dimension for _time_, to be able to have a moving noise field. And it seems noise isn’t of much interest in the Arduino community. I was able to find some simple snippets of code shared across forum posts that were usually 1-, sometimes 2-dimensional. There is a [`SimplexNoise` library](https://github.com/jshaw/SimplexNoise), but it’s only 2D. I found that the `FastLed` library _did_ have (fast) 3-dimensional noise functions. Damn! Yet _another_ reason I wish it would work on my ATtiny ಥ﹏ಥ
+
+I finally came across some code for 3D Simplex Noise on [this](https://forum.arduino.cc/t/perlin-noise-generator/7099/2) forum post. However, after some tests, I found that the values are not well spread between `[-1,1]`; they hardly ever got above `0.8`.
+
+I therefore expanded my search for general _C++_ libraries. Most were too complex code that I didn’t expect I could rewrite to work for my Sketch in Arduino. However, [this](https://github.com/SRombauts/SimplexNoise) `SimplexNoise` library was promising. I downloaded the `SimplexNoise.h` and `SimplexNoise.cpp` files from the `src` folder and placed them in a `SimplexNoise` folder within my Arduino `libraries` folder.
+
+I started out with compilation errors of course. But after deleting the `#pragma once` from the `.h` file and replacing the `#include <cstddef>` with `#include "Arduino.h" #include "stdlib.h"` it worked! These noise values _did_ seem to run between `[-1,1]`, and it felt a little faster too.
+
+I first applied the noise value to the brightness of the NeoPixels. Simply looping over all of them and using their hexagonal grid coordinates as the `x` and `y` values of the `noise` function.
+
+```
+delta_time += 0.0004;
+for(byte p = 0; p < led_count; p++) {
+    float value = SimplexNoise::noise((float)x_grid[p]/5., 
+                                      (float)y_grid[p]/5.,
+                                    delta_time);
+    //An adjusted map function that works on floats
+    float brightness = mapf(value, -1., 1., 0., 1.);
+    strip.setPixelColor(p, 255*brightness, 0, 0);
+}//for p
+```
+
+I actually had to se the overall brightness quite low before you could see the resulting pattern. And my camera was almost unable to detect it, I hope you can see it in the video below:
+
+Using Simplex noise to adjust the brightness across the grid
+
+The noise pattern became much more visible once I used it to adjust the _hue_ of each NeoPixel:
+
+Using Simplex noise to adjust the color across the grid was much more visible
+
+I didn’t quite like the green color, so I adjusted the hue scale so green would lie on the outskirts of the hue (so the value would need to be near -1 or 1 to become green). Since _hue_ cycles through all the colors (see [this](https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use#hsv-hue-saturation-value-colors-dot-dot-dot-3024464-41) helpful diagram on the AdaFruit website), I could easily move the `0` point of the _hue_ to lie around pink:
+
+```
+    value = SimplexNoise::noise(...);
+    //Map to (a section of) hue, which goes to 0 - 65535
+    //Moving green to the outer reaches
+    hue = (long)mapf(value, -1., 1., -45000., 22000.);
+    //Get a gamma corrected RGB color from the hue and set to the NeoPixel
+    uint32_t rgb_color = strip.gamma32(strip.ColorHSV(hue, 255, 255));
+    strip.setPixelColor(index, rgb_color);
+```
+
+[![Image 178: A mostly red/green color palette](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_red_green.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_red_green.jpg)
+
+A mostly red/green color palette
+
+[![Image 179: I settled on a pink/purple vibe](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_pink_purple.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_pink_purple.jpg)
+
+I settled on a pink/purple vibe
+
+### Reacting to Pieces
+
+My next step was to only turn on the NeoPixels that were assigned to puzzle pieces placed on the board.
+
+I looked into using the _interrupt_ pins that I had assigned on my PCA555D multiplexers, using:
+
+```
+//The interrupt pins of the PCA9555Ds
+#define PIN_INT_0x20 7
+#define PIN_INT_0x21 10
+
+PCA9555 board_0x20(0x20, PIN_INT_0x20);
+PCA9555 board_0x21(0x21, PIN_INT_0x21);
+```
+
+However, every time I placed a puzzle piece, my code would freeze, and I had no idea what to do with this. I looked into the code of the [`clsPCA9555` library](https://github.com/nicoverduin/PCA9555/blob/master/clsPCA9555.cpp), where the `alertISR()` function is called. I checked out the [`attachInterrupt`](https://www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/) function, which seemed to indicate that the program should _not_ stop. I also checked out the [pin interrupts](https://github.com/SpenceKonde/megaTinyCore/blob/master/megaavr/extras/PinInterrupts.md) on the `megaTinyCore` docs. However, in the end I had no idea how to proceed and decided to not use those to interrupt pins at all, and just keep doing a `digitalRead` of all the pins on each loop.
+
+I significantly changed my code. Instead of looping over each NeoPixel, I looped over each _puzzle piece_. I check if that pin’s state indicates a puzzle is placed. If no, move one and keep the associated NeoPixels off, if yes, request the `noise` value and set all associated NeoPixels to their colors.
+
+To keep the details short, I created an array for each piece that holds the NeoPixels `id` associated with them:
+
+```
+//Which NeoPixels belong to which puzzle piece
+byte piece_0[] = {0,17,18,19,20,40};
+byte piece_1[] = {1,2,3,14,15,16,23};
+//etc...
+```
+
+Next, I made a `struct` so I could put all these pieces into an array, together with some other variables I wanted to keep track off per puzzle piece.
+
+```
+#define numElements(x) (sizeof(x) / sizeof(x[0]))
+
+typedef struct {
+    byte *pieces;
+    byte num_elements; //number of NeoPixels
+    const byte center_id; //the "center" NeoPixel id
+    byte pin_index; //the pin id this piece belongs to
+    byte piece_state; //the state of that pin
+    bool piece_placed; //is the piece just placed
+    unsigned long last_debounce_time; //used for debouncing
+} pieces;
+
+//Put all the puzzle piece IDs into a struct array
+pieces piece_matrix[] = {
+    {piece_0,  numElements(piece_0),  15, 1, 0},
+    {piece_1,  numElements(piece_1),  14, 1, 0},
+    //etc...
+]
+```
+
+I only managed to figure out how to use a `struct` in such a handy manner to combine puzzle pieces with a different number of NeoPixels assigned to them, with the help of [this](https://forum.arduino.cc/t/multi-dimensional-arrays-with-different-number-of-elements/557252/2) forum answer.
+
+I could then loop over each puzzle piece and their internal NeoPixels (even though each puzzle piece had a different number of NeoPixels):
+
+```
+//Some code to check the pin states
+//...
+
+//Check which NeoPixels to turn on
+//Loop over each puzzle piece
+for(byte p = 0; p < num_pieces; p++) {
+    //Check if the puzzle is on the puzzle plate
+    if(piece_matrix[p].piece_state == 0) {
+        //Loop over the puzzle pieces
+        for(byte l = 0; l < piece_matrix[p].num_elements; l++) {
+            //Get the 0-217 index of the NeoPixel
+            index = piece_matrix[p].pieces[l];
+            //Get a Simplex Noise value for that coordinate in the hex grid
+            value = SimplexNoise::noise(...);
+            //etc..
+            //...
+            //...
+        }//for l
+    }//if
+}//for p
+```
+
+I placed a few pieces on my board, and it worked as I hoped! (ﾉ◕ヮ◕)ﾉ\*:・ﾟ✧
+
+**Note** | My camera seems to be completely unable to properly capture the colors that I’m seeing with my eyes. The colors in the photos are more …. jagged? sharp? Whereas my eyes are seeing much more nuanced colors fading into each other.
+
+[![Image 180: ](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_puzzle_only_light.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_puzzle_only_light.jpg)
+
+[![Image 181: The NeoPixels are only on below the pieces placed](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_puzzle_only_light_more.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_puzzle_only_light_more.jpg)
+
+The NeoPixels are only on below the pieces placed
+
+Because of the acrylic layer diffusing the light, it scatters farther than the edge of the puzzle piece. I’d expected this already, and I actually quite liked the look.
+
+Because I would move the puzzle pieces a little as I was placing new ones, the light below already placed pieces often flickered as I placed new pieces. I therefore implemented the _debounce_ technique from the [Arduino examples](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Debounce). This uses a time delay to check if a state change of a pin lasts long enough before acting on it. I _really_ didn’t want any flickering, so I set the `debounce_delay` quite long to `500ms`.
+
+Placing new pieces now didn’t make the already placed pieces flicker anymore.
+
+Placing new pieces lights up their NeoPixels
+
+Eventually I decided to keep a puzzle piece location as “placed” once a piece had been registered there. Taking the puzzle piece away, thereby breaking the contact, would keep the NeoPixels on. I had to do this, because it was just too easy to move pieces around while you placed new pieces, and pieces placed on the board long ago could then turn off after all.
+
+I’d have preferred it if my project would always register the piece when placed, but I already knew that the contacts I’d made wouldn’t perform perfectly. Generally, people making a jigsaw puzzle don’t remove pieces once placed, so this solution seemed like the best way to remedy my issue.
+
+### Dynamic Memory Overflow
+
+Around this time I started running into issues where I’d upload my code, but the microcontroller crashed somewhere, it only did a few steps of a function and then… nothing…
+
+Knowing that I was up against the max of my SRAM/Dynamic memory, I figured I’d have overflown it during run time. I therefore started looking for ways to optimize my usage of SRAM. One of the solutions was to place as many _constant_ variables in the _PROGMEM_ memory (the Flash), and then retrieve whatever value you need during runtime, instead of having the full variable in SRAM all the time.
+
+By now I’d learned to _first_ search the `megaTinyCore` docs, where I indeed found a section on [_PROGMEM_](https://github.com/SpenceKonde/megaTinyCore#memory-mapped-flash-no-need-to-declare-progmem). It mentions that you don’t need to specifically call `PROGMEM` to allocate variables I want to store in the _Flash_. Instead I can simply define them as `const` (that page explains why). I therefore turned all (global) variables that were really constant to `const`. I think the compiler had already been quite smart and turned some of those variables to `const` for me, because the “Dynamic Memory %” that the compiler outputs only went down by 10%, but that did fix the issue for now.
+
+I continued to run up / battle against dynamic memory overflow issues from this moment forward. Having to jump through hoops to make an animation work while not creating new variables that were too big. I have to admit, it didn’t make the coding very fun, having to constantly downsize an idea in my head to something much simpler because I couldn’t make the variables that I’d need for them (e.g. there was no space to save the previous color of all NeoPixels, so I could do gradual changes, or have two animations flow into each other).
+
+#### Color Issues
+
+For one of my effects I wanted to have an “explosion” of light starting from the center of a newly placed puzzle piece radiating outward. To be able to let this ripple through the Simplex noise color field I had to save the color of each NeoPixel that I wanted to pass the ripple through, so I could set it back after the ripple had passed. If I only used a ripple of one NeoPixel wide, the largest ripple would contain `8*6=64` NeoPixels (the maximum radius is 8), for which I’d require `64*3=144` bytes to save the color and `64` more bytes to save the index location, totalling to `208` bytes, which was just about what I could still use.
+
+[![Image 182: Starting with a simple “spark” pattern when no other lights are on](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_light_spark_white.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_light_spark_white.jpg)
+
+Starting with a simple “spark” pattern when no other lights are on
+
+It took some time to make this work, and eventually I though I had it, making use of `strip.getPixelColor(i)` to get the color that was set to NeoPixel `i`. However, once I used the color I retrieved to set the NeoPixel back to it’s original color, it wasn’t right. It looked much whiter.
+
+I therefore made a simple test; I set one pixel to a known RGB value, I then requested the color of that NeoPixel with `getPixelColor()` and printed out the separate red, green, and blue values.
+
+```
+strip.setPixelColor(10, 124, 156, 187);  
+uint32_t old_color = strip.getPixelColor(10);
+Serial.print("r: ");
+Serial.print((uint8_t)(old_color >> 16)); //pixels[l*3+1];
+Serial.print(" g: ");
+Serial.print((uint8_t)(old_color >> 8));  //pixels[l*3];
+Serial.print(" b: ");
+Serial.println((uint8_t)(old_color >> 0));  //pixels[l*3+2];
+```
+
+But the printed RGB values were _not_ the same as `124, 156, 187`, instead it was `125, 220, 186`. Strange…. I knew that there was _something_ with `setBrightness` that I used during the `setup` function to lower the overall brightness of the NeoPixels. I therefore started an online search.
+
+I discovered through two [forum](https://forums.adafruit.com/viewtopic.php?f=47&t=69758) [posts](https://github.com/adafruit/Adafruit_NeoPixel/issues/191) that you can use `setBrightness` and `getPixelColor` separately, but never in the same code. The `setBrightness` does things to the color send to the pixel that cannot be retrieved/restored when `getPixelColor` is used.
+
+I deactivated `setBrightness` and indeed, now the Serial print statements where giving back the same color as I’d set the pixel at. I didn’t need full brightness though, it actually made the colors look washed out, because they all started to diffuse so much that they blended towards white. Instead, I used the fact that the last parameter in the NeoPixel library’s `ColorHSV(hue, saturation, value)` is the _brightness_ of a color. I played around a little and found that using a `value` of `160` was about similar to what I had before when using `setBrightness` to lower the overall brightness.
+
+In the video below you can see a random “light spark” going across the board, setting the already on NeoPixels back to their original color after the spark has passed:
+
+Placing new pieces lights up their NeoPixels
+
+In the video the spark is always white, but I later adjusted it to run from yellow-orange-red-pink-purple-blue as the radius increases. The spark goes by so fast that you hardly notice, but I feel that it looks a bit better than just white.
+
+### Start Animation
+
+I iterated with a few possible animations that happen when you plug in the power. A small “look, I’m working” signal that was also fun. I started by using the same (white) light spark I created for placing a new puzzle piece, but always starting from the central NeoPixel.
+
+I then moved on to making the NeoPixels turn on an off following a spiral pattern, where the colors were following the rainbow (without green again)
+
+Testing an animation that turns on the NeoPixels along a spiral, with rainbow colors
+
+However, I felt that it took too long, and increasing its speed wasn’t making it better. I therefore returned to the idea of a “spark” radiating outward from the center, and combined both ideas. Instead of turning each NeoPixel on one at a time, I turned a full ring on. It was still a rainbow, but it looked more like an elaborate spark effect.
+
+Turning the NeoPixels on per radius, not per separate NeoPixel
+
+I liked the look, and after some tinkering with timings I was happy with the result.
+
+With that I’d made all the animations I had in mind, taking the fact into account that I couldn’t do everything I originally had in mind, due to not having the space available in memory. I now had an animation for when the power was turned on, when a puzzle piece was on the board, when a new piece was placed, and when the final piece was placed, which felt like enough.
+
+Strange to get to this point, but with the programming completed my project was done! (　＾∇＾) **I’ve called in _NOVA_**, because I’m an astronomer and have a bias for all things space. A nova is a sudden increase in the light of a star, usually a “tiny” explosion, but not so bad that it explodes/implodes the star (which is a _supernova_). The tiny light spark that happens when you place a new piece on the board reminded me of a _nova_ ｡◕‿◕｡
+
+[![Image 183: A “hero shot” of NOVA](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_final.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/program_final.jpg)
+
+A “hero shot” of NOVA
+
+I spend two days creating the final presentation video and slide. I’m not at all used to creating videos. I don’t think I’ve ever created a proper video before (I focus on static images), so I had no knowledge in this area. I stuck with _iMovie_, since it was already on my MacBook and it seemed easy enough to figure out quickly. I did run into some issues with the limitations of the program (you can only have one picture-in-picture effect at the same time, text titles that were just not good enough). I also didn’t have any proper equipment, using a ladder, tape, a tiny tripod and my phone camera instead. But I hope my video is able to convey the journey and end result of working on this project (^▽^)
+
+[![Image 184: The “set-up” for taking some shots for the final video](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/video_setup_living_room.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/video_setup_living_room.jpg)
+
+The “set-up” for taking some shots for the final video
+
+[![Image 185: The even more “professional” setup in my bathroom](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/video_setup_bathroom.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/video_setup_bathroom.jpg)
+
+The even more “professional” setup in my bathroom
+
+Evaluation & Implications
+-------------------------
+
+During the “[Applications and Implications](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-17/#evaluation)” week I’d described how I see the evaluation of this project:
+
+*   **Overall** | In the most general sense I see my final project as **a success if people will have a fun time** putting the puzzle together. Even better if they find it _even more special_ than putting together a normal cardboard puzzle.
+    
+    *   _Result_ | After having shown the puzzle to a few people (and due to the pandemic, only having it actual be put together my even less people), it definitely made puzzling fun for me and the others that tried (ﾉ◕ヮ◕)ﾉ\*:・ﾟ✧ . The light coming through the pieces is quite nice to look at, and it’s also mesmerizing to watch the patterns change. I was also looking forward to another short “light spark” and seeing more lights turn on with each new piece being placed.
+*   **Appearance** | From my personal perfectionist side and the importance that I put on how something “looks”, **I also want my project to look beautiful**. No “acrylic box” around some internal electronics. Instead, the way every part looks (especially if it’s visible from the outside) will be as important to me as how the electronics will work internally.
+    
+    *   _Result_ | Tastes differ per person of course, but I’m personally really happy with how it _looks_. I’m especially happy with the living hinge wrapping around the outside. I may not have gotten that one-thick-wooden-top plate that I aimed for, but I’m now quite happy with the 3-plates-of-3mm compromise that I went for. The puzzle pieces also look very nice, being quite thick with 5mm, the milky-white color, and with the spirograph lightly etched out of it. And the Simplex noise pattern that appears below the puzzle plate as you make the puzzle is quite lovely.
+*   **Technological** | From a technical side, my final project will be a success if it **manages to create a light show beneath all the puzzle pieces already on the board**, to change its light show when a new puzzle piece is placed, and that no LEDs beneath empty places turn on, or LEDs beneath already placed pieces turn off or flicker.
+    
+    *   _Result_ | This part isn’t 100% perfect sadly. The connections between the copper tape at the bottom of the puzzle pieces and the rivets in the bottom is quite easy to disturb and disconnect. This results in both puzzle pieces being placed that aren’t registered until you move the piece around a bit, and already placed pieces losing their connection as you push other pieces into place. The latter issue I could solve by making sure that once a piece is placed, I always set its state to “placed, keep NeoPixels on”. However, for the part where not all pieces being placed are immediately registered, I can only tell people making the puzzle to expect this, and try to wiggle a piece if its NeoPixels remain off. Using a _debounce_ technique I do make sure that no flickering occurs. However, I’d still say that overall I’ve succeeded here as well, having to wiggle some puzzle pieces a little when placed hasn’t really taken much of the fun experience away I find (^▽^)
+
+I really only made this project for myself, and friends & family, to play. I have no intention of turning it into a product/company.
+
+### Things to Improve
+
+Below are a few things that I think would improve the overall way the puzzle works and looks.
+
+*   The copper pads below each piece cast a bit of a shadow that’s noticeable. I don’t know _how_ to change it, but it would be perfect if nothing “light blocking” had to be placed on the puzzle piece at all (while still being registered as being placed).
+*   It’s too easy for some of the pieces to loose contact with the copper rivets. It would be better to use something such as tiny springs instead that would be gently pushed down as a puzzle piece was being placed onto it.
+*   It would be _even_ better if I could’ve hidden the connection beneath the puzzle bottom layer, so there wouldn’t be 114 tiny dark circles in there. But again, I have no idea what technique would make that possible and reacts well and reliable.
+*   I used horizontal header pins to create all of my connections from the microcontroller/PCA9555D pins to wires. In general, it would’ve probably been better to use a different way to connect wires and pins. However, the way that I ended up doing it had the unexpected bonus that my electronics was _really_ flat, fitting inside the puzzle’s bottom area.
+
+Bill of Materials
+-----------------
+
+Below I’ve outlined all of the components that are in my final project. You’ll also need some wires to solder between the copper rivets and the PCBs, a soldering iron and solder.
+
+#### PCBs
+
+| Component | Qty. | Price p.p. | Shop | Notes |
+| --- | --- | --- | --- | --- |
+| FR1 6"x8” single side | 1 | €1.15 | [Inventables](https://www.inventables.com/categories/materials/circuit-board-blanks) | $42.72 for 25 packs of 6 boards |
+| ATtiny3216 | 1 | €0.94 | [Digi-Key](https://www.digikey.nl/product-detail/en/microchip-technology/ATTINY3216-SFR/ATTINY3216-SFRCT-ND/9477802) |  |
+| PCAA9555D I2C GPIO expander | 2 | €1.55 | [Digi-Key](https://www.digikey.nl/products/en?keywords=PCA9555D) |  |
+| 01x03 Female connector | 1 | €0.47 | [Digi-Key](https://www.digikey.nl/product-detail/en/gct/BG300-03-A-L-A/2073-BG300-03-A-L-ACT-ND/9859664) |  |
+| Male 1 row connector | 2 | €3.50 | [Digi-Key](https://www.digikey.nl/products/en?keywords=S1143E-36-ND) | Split into 1x 2, 8x 4, 4x 5 and 2x 6 pins |
+| Headerpins stackable 4 pins | 8 | €0.25 | [Bits & Parts](https://www.bitsandparts.nl/Headerpins-stackable-11mm-4-pins-p106521) |  |
+| Capacitor 1μF | 1 | €0.23 | [Digi-Key](https://www.digikey.nl/products/en?keywords=445-1423-1-ND) |  |
+| LED - red | 1 | €0.05 | [Digi-Key](https://www.digikey.nl/product-detail/en/lumex-opto-components-inc/SML-LX1206IC-TR/67-1356-2-ND/229140) |  |
+| LED - white | 1 | €0.50 | [Digi-Key](https://www.digikey.nl/products/en?keywords=160-1737-1-ND) |  |
+| LED - blue | 1 | €0.31 | [Digi-Key](https://www.digikey.nl/products/en?keywords=160-1889-1-ND) |  |
+| Resistor 0 Ω | 2 | €0.08 | [Digi-Key](https://www.digikey.nl/products/en?keywords=311-0.0ERCT-ND) |  |
+| Resistor 470 Ω | 4 | €0.08 | [Digi-Key](https://www.digikey.nl/products/en?keywords=311-499FRCT-ND) |  |
+| Resistor 5k Ω | 4 | €0.08 | [Digi-Key](https://www.digikey.nl/products/en?keywords=311-4.99KFRCT-ND) |  |
+| Resistor 10k Ω | 1 | €0.08 | [Digi-Key](https://www.digikey.nl/products/en?keywords=311-10.0KFRCT-ND) |  |
+
+#### Power
+
+| Component | Qty. | Price p.p. | Shop | Notes |
+| --- | --- | --- | --- | --- |
+| DC 5V Power Supply - 5V 8A 40W | 1 | €12.63 | [AliExpress](https://nl.aliexpress.com/item/32810906485.html?spm=a2g0s.9042311.0.0.e8ce4c4dkJMNY7) |  |
+| DC Female Plug - Terminal block 5.5x2.1mm | 1 | €2.49 | [Online Kabelshop](https://www.onlinekabelshop.nl/dc-voeding-schroef-connector-v-2-1mm-x-5-5mm) |  |
+| DC Female Plug - Panel - 2.1mm | 1 | €1.99 | [Online Kabelshop](https://www.onlinekabelshop.nl/soldeerbare-vrouwelijke-dc-inbouw-connector-2-1mm-voor-paneelmontage) |  |
+| DC Male Plug - 5.5x2.1mm | 1 | €1.99 | [Online Kabelshop](https://www.onlinekabelshop.nl/soldeerbare-mannelijke-dc-connector-2-1mm-x-5-5mm-9mm) |  |
+
+#### NeoPixel plate
+
+| Component | Qty. | Price p.p. | Shop | Notes |
+| --- | --- | --- | --- | --- |
+| WS2812B NeoPixels | 217 | €0.06 | [AliExpress](https://nl.aliexpress.com/item/2036819167.html) | €18.61 per 5m (300 NeoPixels) |
+| Acrylic sheet - White - 4mm | 350x350mm | €8.97 | [Dokter Plexiglass](https://www.dokter-plexiglas.nl/plexiglas-opaal-5mm) |  |
+
+#### Puzzle plate
+
+| Component | Qty. | Price p.p. | Shop | Notes |
+| --- | --- | --- | --- | --- |
+| Copper PCB RIVETS 1.0mm | 114 | €0.04 | [VPC](https://www.vpcinc.com/Category/Favorit-Through-Hole-Rivets-104.cfm) | $50 per 1000 |
+| Acrylic sheet - Opal - 4mm | 350x350mm | €6.96 | [Dokter Plexiglass](https://www.dokter-plexiglas.nl/plexiglas-opaal-4mm) |  |
+
+#### Puzzle Pieces
+
+| Component | Qty. | Price p.p. | Shop | Notes |
+| --- | --- | --- | --- | --- |
+| Copper Foil with conductive adhesive | 6"x6" | €0.93 | [Budnick](https://www.budnick.com/Products/advanced-search#textSearch=3M%20%231126) | $246.04 per 36 yrds |
+| Acrylic sheet - Opal - 5mm | 350x350mm | €9.52 | [Dokter Plexiglass](https://www.dokter-plexiglas.nl/plexiglas-opaal-4mm) |  |
+
+#### (Wooden) Enclosure
+
+| Component | Qty. | Price p.p. | Shop | Notes |
+| --- | --- | --- | --- | --- |
+| Hardwood Multiplex 3mm sheet | 2 \* 610x1220mm | €4.49 | [Praxis](https://www.praxis.nl/bouwmaterialen/hout/multiplex/hardhouten-multiplex-61x122cm-3-6mm/5661362) |  |
+| Hardwood Multiplex 9mm sheet | 610x1220mm | €7.19 | [Gamma](https://www.gamma.nl/assortiment/multiplex-hardhout-122x61-cm-9-mm/p/B437779) |  |
+| M5 60mm sunken bolt + nut | 6 | €0.23 | [Praxis](https://www.praxis.nl/gereedschap-installatiemateriaal/ijzerwaren/bouten/sencys-metaalschroef-verzonken-kop-en-moer-gegalvaniseerd-m5-60mm-10-stuks/5367457) | €2.29 per 10 |
+| M5 10mm insert nut | 6 | €0.49 | Praxis | Not online |
+| M5 40mm bolt + nut | 6 | €0.19 | [Praxis](https://www.praxis.nl/gereedschap-installatiemateriaal/ijzerwaren/bouten/sencys-zeskantbout-gegalvaniseerd-met-moer-m5-40mm-10-stuks/5367557) | €1.86 per 10 |
+| M5 nut | 12 | €0.06 | [Praxis](https://www.praxis.nl/gereedschap-installatiemateriaal/ijzerwaren/moeren/sencys-zeskantmoer-m5-40-stuks/5367596) | €2.54 per 40 |
+| Wood glue 75g - Transparent | 1 | €2.49 | [Gamma](https://www.gamma.nl/assortiment/bison-houtlijm-flacon-75-gram/p/B457042) |  |
+
+#### Other
+
+| Component | Qty. | Price p.p. | Shop | Notes |
+| --- | --- | --- | --- | --- |
+| Black Velvet Bag | 1 | €0.80 | [Saketos](https://saketos.nl/1066-fluwelen-zakjes-18x24-cm-5st-zwart-5902565684921.html) | €3.99 per 5 |
+
+This totals to €106. Not taking into account the hours required to make it all of course. A pricey puzzle indeed. But one of a kind (^.~)
+
+All the Files Together
+----------------------
+
+*   **Puzzle Pieces**
+    
+    *   SVG file of the puzzle pieces - Laser Cut | [SVG](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/puzzle_pieces_cut.svg)
+    *   SVG file of the copper contacts - Vinyl Cut | [SVG](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/puzzle_pieces_copper_contacts.svg)
+*   **Contact Plate**
+    
+    *   DXF file of the line etchings - Laser Cut | [DXF](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/contact_plate_line_etches.dxf)
+    *   DXF file of the plate - Laser Cut | [DXF](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/contact_plate_cuts.dxf)
+*   **NeoPixel Plate**
+    
+    *   DXF file of NeoPixel strip etchings - Laser Cut | [DXF](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/neopixel_plate_etches.dxf)
+    *   DXF file of the NeoPixel plate - Laser Cut | [DXF](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/neopixel_plate_cuts.dxf)
+*   **Wooden Enclosure**
+    
+    *   DXF file of the bottom plate - CNC Milling | [DXF](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/enclosure_bottom_plate_mill.dxf)
+    *   DXF file of the bottom living hinge joint plate - Laser Cut | [DXF](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/enclosure_bottom_joint_plate_cut.dxf)
+    *   DXF file of living hinge - Laser Cut | [DXF](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/enclosure_living_hinge.dxf)
+    *   DXF file of the top living hing joint plate - Laser Cut | [DXF](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/enclosure_top_joint_plate.dxf)
+    *   DXF file of the top plate - puzzle outline layer - Laser Cut | [DXF](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/enclosure_top_plate_puzzle_cut.dxf)
+    *   DXF file of the top plate - middle layer - Laser Cut | [DXF](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/enclosure_top_plate_middle_cut.dxf)
+    *   DXF file of the top plate - top layer - Laser Cut | [DXF](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/enclosure_top_plate_top_cut.dxf)
+*   **Spirograph**
+    
+    *   PNG to use for engraving the puzzle pieces and three top plate layers - Laser Cut | [PNG](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/spirograph.png)
+    *   SVG of the spirograph pattern | [SVG](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/spirograph.svg)
+*   **Electronics**
+    
+    *   KiCad Schematic | [PDF](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/kicad_schematic.pdf)
+    *   KiCad design files | [ZIP](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/kicad_files.zip)
+    *   PCB Traces & Interior files | [ZIP](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/kicad_traces_interior.zip)
+*   **Design**
+    
+    *   Mapping of the NeoPixels to hexagonal grid coordinates and puzzle IDs | [AFDESIGN](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/mapping_hexagonal_grid.afdesign)
+    *   Fusion 360 STL model of the puzzle box (minus the living hinge and puzzle pieces) | [STL](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/design_fusion360.stl)
+*   **Programming**
+    
+    *   Arduino code with all separate files | [ZIP](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/final-project/files/arduino_code.zip)
+
+License
+-------
+
+This project is shared under the [**Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** license](https://creativecommons.org/licenses/by-nc-sa/4.0/)

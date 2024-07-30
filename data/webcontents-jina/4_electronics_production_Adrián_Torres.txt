@@ -1,0 +1,299 @@
+Title: Week 04. Electronics Production
+
+URL Source: http://fabacademy.org/2020/labs/leon/students/adrian-torres/week04.html
+
+Markdown Content:
+Included a ‘hero shot’ of your board. ✔Like every week, my weekly schedule. 😊
+
+![Image 1](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.01.jpg)
+
+_I studied electronics during my **vocational training**, but I always used a **trough-hole component**. When I discovered the Fab Lab León, I saw that I could create my own boards and use smaller components, type SMD._
+
+A very important work within the Fab Academy is the **inventory.** New components are added every year, more modern and others begin to become obsolete. For this, the inventory of the Fab Lab León must be updated; so I help my instructor Nuria what components we need and to order the new ones in boxes. 💪
+
+![Image 2](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.02.jpg)
+
+Group Assignment
+----------------
+
+The **Group Assignment page** is at the following [**link.**](http://academany.fabcloud.io/fabacademy/2020/labs/leon/leon-group-assignments/)
+
+26/04/2022
+----------
+
+[**ATtiny402**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/week04.html#board_house) process in a Board House.
+
+The machine and the PCB production process
+------------------------------------------
+
+The CNC Milling Machine that exists in the Fab Lab León is the following model.
+
+*   **Model:** Roland MDX-20A
+*   **Software:** Mods / Mods CE 😎
+*   **Settings:** Detailed in the section “Milling a PCB”
+*   **Specifications:** Max. operation area: 203 mm (X) x 152 mm (Y) x 2 9,5 mm (Z), Mechanical Resolution 0.00625 mm/step, Revolution speed 6500 rpm
+*   **Tools:** Milling bit 0,4 mm (1/64”); Milling bit 0,8 mm (1/32”)
+*   **Material:** FR-1 Printed Circuit Board 75 x 50 mm.
+
+![Image 3](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.03.jpg)
+
+ROLAND MDX-20A MODELA + MODS
+----------------------------
+
+**20/01/2020**
+
+First, I place the new copper board on the spoil board of wood in the machine. For this I use double-sided tape to fix it. It is recommended that it is very straight and well glued, but when we mill it will move and we will lose all the work. When we mount the mill we will only fix a screw and with the rod until the end. When we go to make the Z we go down and when we have about 3-4 mm we stop, we put our fingers as in the photo and we loosened the mill so that it leans on the copper. We tighten the two screws.
+
+![Image 4](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.09.jpg)In the Fab Lab León until this year, [**Fab Modules**](http://fabmodules.org/) , the old and obsolete version of Mods, had been used. To do this, my instructor Pablo set up a computer with Linux and installed and **Mods CE** from Fran of [**The Beach Lab.**](https://github.com/TheBeachLab)
+
+To start using Mods, I use the following tutorials: [**Mods**](https://github.com/fabfoundation/mods) and [**Mods connection**](http://fabacademy.org/2019/docs/FabAcademy-Tutorials/week02_computer_aided_design/fabmodules_html5_linux.html)
+
+From terminal I open Mods, I connect the Modela to the computer using the **original black DB25 cable.** In Mods I open the Roland MDX-20 PCB program. At the bottom is the **WebSockect Python serial** module where we must open it to connect to the Modela. To do this **IMPORTANT** you have to start the servers in the mods folder: _hs start-servers._
+
+Once the port is open, I try to set an X: 1 and Y: 1 origin. And she moves. 🤩
+
+![Image 5](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.10.jpg)
+
+The first test I'm going to do to see if Mods really works is to mill the **USB-FT230XS FTDI programmer.** To do this I upload the PNG of the traces, I choose the mill 1/64 under the speed at 1 mm / s, I simulate and finally the Flow Control I set it to None. I send it to the machine and start making triangles. Something is wrong. 😣
+
+I try again by changing the Flow Control to DSRDTR and it doesn't work either. Following the threads of the modules, I try to change the Toolpath module and it also does not work and hangs up to the browser. I pass to try the Mods of Neil, the machine is connected, but when you send the work it continues making the triangles. 😭
+
+![Image 6](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.11.jpg)Nuria informed me that the same thing happened to her years ago, she made triangles and weird routes. Apparently it was cable problem. In the Fab Lab there was another cable a DB25 adapted with a USB, called Startech or similar Serial to USB cable. Thanks Nuria, you are the best. 😇
+
+So I disconnect the original DB25 cable and connect the new one, I modify the connection module. Step from Websocket Python Serial to WebSocket Serial. I send the work of the USB-FT230XS FTDI programmer again but with a used mill and it **WORKS**
+
+![Image 7](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.12.jpg)**21/02/2020**
+
+After the day before I managed to configure Mods, make him communicate with the Modela and do a test; It was time to take action. So I start again to send the work to the Modela and what is my surprise that with the cable that worked yesterday at the last time it gave me problems again, rare trajectories again. 😣
+
+I review all the steps in the tutorial again and I realize that I am configuring the port with the Serial-USB cable with the WebSocket Python Serial configuration. OMG 😱 And all this for **not reading the steps well.** The syndrome of TL, DR or RTFM. Nuria and I came to the conclusion that I was not doing well yesterday, except once I get it right. 😪
+
+Once the error of today and yesterday has been detected, I configure the original DB25 cable with the python server and it works. 😌
+
+![Image 8](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.13.jpg)
+
+To learn a little more about the **Roland MDX-20A**, I'm going to take the **line test** that Neil taught us in [**class.**](http://academy.cba.mit.edu/classes/electronics_production/index.html)
+
+![Image 9](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.04.jpg)So I send the trace width test, at the point X = 2, Y = 35 and with a speed of 1 mm / s for the milling cutter of 1/64. Once I finish milling the interior strokes, I vacuum the FR1 board and replace the mill with that of 1/32 with the same parameters X = 2, Y = 35 and speed 1 mm / s. Being a **different mill**, you have to do the **Z again.**
+
+![Image 10](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.14.jpg) ![Image 11](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.15.jpg)And this is the final result of the test, the fine lines of the end are maintained, which are as fine as those of the UPDI (USB-Serial FT230X).
+
+![Image 12](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.16.JPG)
+
+USED MILL SUPPORT
+-----------------
+
+When we are milling several PCB we always use two types of mills (1/64 or 1/32). And as they are already used, so as not to mix them with the new ones I have designed a support to keep them. I leave here both files, the support and the protective case. [**Support**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/used%20mill%20support%20%201.stl) and [**Protective case**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/used%20mill%20support%20%202.stl)
+
+![Image 13](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.39.jpg)
+
+UPDI (USB-Serial FT230X)
+------------------------
+
+After the setup of Mods, I'm going to make the programmer for the new Attiny; the **USB-Serial FT230X programmer.** The first thing I do is download the PNG files that contain the inner and outer tracks.
+
+![Image 14](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.17.jpg)I begin with the internal milling of tracks with the milling cutter of 1/64 (0.04 mm) and a speed of 1 mm / s so as not to break the mill. For the outside I use the mill of 1/32 (0.08 mm) and a speed of 1 mm / s. This is the end result of milled PCB and components. **REMEMBER** to remove the small piece of copper on the tip of the USB with a cutter.
+
+![Image 15](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.18.jpg)This is the end result of the milled programmer.It is important to have the components well identified, because for example the capacitors are the same externally and we can easily confuse them, so it is advisable to make the **list on paper** and stick them with tape.
+
+![Image 16](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.19.jpg)
+
+When we have to weld small components, the ideal is to have a well-lit space and that we can work well. With a small 3D printed vise fastened the PCB. With the scheme and the photos on the computer and a lot of patience and pulse I start welding.
+
+![Image 17](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.20.jpg)
+
+The first thing to weld is the driver and then the smaller components and the center out. I have never welded a component with pins as thin as the FT230X. 😱 Nuria recommends that I apply Flux to ensure that tin is well taken. As I explain in the Neil class, the ideal for these components is to tin all the pins, and with a [**desoldering**](https://www.amazon.com/Velleman-VTDESOL3U-Vacuum-Desoldering-Heater/dp/B00B88FRME) iron remove the tin you don't need and **it works.**
+
+![Image 18](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.21.jpg)Once the driver is welded, I weld the other components. For the FTDI pins I recommend bending them a little so that it rests the connector on the board.
+
+![Image 19](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.22.jpg)
+
+Here a small **timelapse** of USB-Serial FT230X welding.
+
+Once the board is finished, I try to connect it to the computer to see if it recognizes it and does not. Something is wrong, so check it out. 😪
+
+**22/02/2020**
+
+After turning it around all night it could be, and writing in the **Telegram Regional Review group** where **Fab Lab BCN** is, **Santi** and **Eduardo Chamorro** recommend me to check the driver welds. **Thank you guys.** So with the polymeter I check all the tracks and I see that there is a lack of continuity in the USP and R2 pin (which was the first one to weld to hold the driver) and the 3V3 pin with VID. Welding looks good with the magnifying glass, but does not make contact. So I re-tinned and removed the excess (here I have to sacrifice the capacitor).
+
+![Image 20](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.23.jpg)
+
+Once the USB-Serial FT230X is repaired, I connect it to the Nuria Mac and **recognize it.** Its serial number is **D3075E2Z.**
+
+As it lacks space for good USB contact, I design a **3D printed case.** Here is the [**file**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/case%20ftdi%20usb.stl) in case anyone needs it.
+
+![Image 21](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.24.jpg)
+
+Vinyl copper. Hello ATtiny 412.
+-------------------------------
+
+_I've always wanted to make an electronic circuit with copper vinyl. I have seen Nuria use it in the Fabricademy and the Poderosas in her small projects and **I love it.**_
+
+I need a board to check the USB-Serial FT230X programmer that I have manufactured. The first thing I do is download the PNG files of the **Hello ATtiny 412** of the week of [**Electronics Desgin.**](http://academy.cba.mit.edu/classes/embedded_programming/index.html#echo) In this case I just need the traces. I open **Inkscape** to vectorize the image and take out only the vectors; I save it as a PDF.
+
+![Image 22](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.25.jpg)
+
+After vectorizing I import it into Rhinoceros where I am going to cut it with the Roland GX-24 vinyl cutter I used last week. Nuria has documented the parameters for copper vinyl cutting, so I can start testing on estimated values. Thanks Nuria. 😘 _I found the right part when I had already done the board._ 😅
+
+![Image 23](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.26.jpg)
+
+I use **3M™ Copper Foil Tape**. Start testing with 40 gr of force, 1 mm / s of speed and +2 of the pen force with a standard 45º blade. The test performed well, but the board lifted all the copper. I keep varying different parameters and nothing. I decide to change the blade for a 30º and the head that has regulation. I modify the force parameter to 30, 40 and 50 gr of force. Also the speed of 1 to 5 cm / s. I note that the best is the 40 gr that cuts but not quite (at 30 it doesn't cut and at 50 it rises). The final parameter is with the **blade of 30º (yellow) 40 gr of force and 1 cm / s.**
+
+![Image 24](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.27.jpg)Once the copper has been cut, I try to peel it directly from the tape. And it's complicated that it doesn't break any lines. 😅 So I remove the entire square and transfer it to **3M ™ Epoxy Film Electrical Tape.**
+
+![Image 25](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.28.jpg)
+
+So little by little I start to remove the copper that I don't need to leave the board ready. The previous photo was taken by Nuria because of the difficult position I had in the chair and the laughter of the **funny moment** 🤣 ; because otherwise you have to have fun with the Fab Academy. 😄
+
+![Image 26](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.29.jpg)Once the board is ready, I look for the components of the Hello ATtiny 412, to start placing them.
+
+![Image 27](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.30.jpg)
+
+Here is a small video of the process, from cutting with the vinyl cutter, peeling and welding of the components. 😃
+
+And this is the final result of my first board welded on copper vinyl. It's amazing. 😍
+
+![Image 28](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.31.jpg)
+
+Nuria explained that I could now apply this board to a **flexible surface,** such as polypropylene or fabric. Thanks Nuria.😘 So with **felt** that it is a fabric based on pressed fibers. I cut it with the laser cutter and with the vinyl cutter and vinyl textile make a **badge** of the Hello ATtiny 412.
+
+![Image 29](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.32.jpg)
+
+Here I leave the Hello Board line archive in [**SVG**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/hello%20vinyl%20board.svg)
+
+Programming the Hello ATtiny 412 with the UPDI (USB-Serial FT230X)
+------------------------------------------------------------------
+
+**23/02/2020. Windows.**
+
+Using the new UPDI programmer (USB-Serial FT230X) I am going to program Hello with the ATtiny 412 that I created with copper vinyl. To do this, I connect the board as follows.
+
+![Image 30](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.33.jpg)
+
+Although it is not this week, I try to program Hello with the program that Neil has as an example. For this I use Arduino, I connect the programmer and recognize it in the COM4 port. I set up the Arduino for the ATtiny 412 (20MHz internal Clock) and as Neil puts in the example video with the Atmel-ICE programmer (AVR). I compile the program and charge it. It keeps going up and several errors appear in the Arduino information screen.
+
+![Image 31](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.34.jpg)**25/02/2020**
+
+As I have seen that on Mac I needed to know where the .hex file is, I look for it in Windows and it is in the following path: _C:\\Users\\Adrián\\AppData\\Local\\Temp\\arduino\_build\_198605_ I copy it and put it in the folder "pyupdi". With Gitbash I execute the same command as in Mac and in Windows _**python3 pyupdi.py -d tiny412 -c /dev/ttyUSB0 -b 19200 -f hello.t412.ino.hex -v**_
+
+I still can't get it, I get an error in git bash or in terminal running python3; I don't know if it will be something of the permits, I don't know. **Keep investigating.**
+
+**24/02/2020. Linux.**
+
+As in Windows I did not manage to program Hello, I will try Linux. I follow the [**tutorial**](https://gitlab.fabcloud.org/academany/fabacademy/2020/bootcamp/spicy/blob/master/Program1614.md) that Pablo taught me that they used in the **Bootcamp in India** that **Santi** from **Fab Lab BCN** created.
+
+*   1\. For this I install Arduino and download the blink.ino from Neil. I select the ATtiny 412 and 20Mhz internal Crystal microcontroller. I check it, compile it and save it (save it in .hex and .ino).
+*   2\. I download [**"pyupdi".**](https://github.com/mraardvark/pyupdi)
+*   3\. Open terminal. Install dependeces: **_pip3 install intelhex pylint pyserial_**
+*   4\. I connect the USB-FTDI to the Hello ATtiny 412.
+*   5\. I run **_dmesg -w_**
+*   6\. Connect and disconet the ftdi cable and take note of the "port name" where:
+
+![Image 32](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.40.jpg)
+
+*   7\. Go into the "pyupdi" folder.
+*   8\. Program the board using python -> run **_sudo python3 pyupdi.py -d tiny412 -c /dev/ttyUSB0 -b 19200 -f Hello\_neil.ino.hex -v_**
+
+And here I get the following error, which does not locate the .hex file even by putting it in the "pyupdi" folder.
+
+![Image 33](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.42.jpg)
+
+**25/02/2019**
+
+The error was that I was trying to load the **.hex folder** and not the **.hex file.** I also have to look for it in the **temporary Arduino folder**, copy it and paste it in the "pyupdi" folder. And it works, here a video. 💪
+
+**24/02/2020. Mac.**
+
+After trying it with Linux, Nuria got me to try it with her Mac, because she had also made a Hello Board with the ATtiny 412.
+
+*   1\. You have to have the .hex file inside the "pyupdi-master" folder (the one that we download at [**"pyupdi".**](https://github.com/mraardvark/pyupdi))
+*   2\. We have to know exactly where that file is, so we move through the terminal to the pyupdi folder.
+*   3\. We list the devices with **_ls / dev / tty\*_**
+*   4\. My programmer is **_tty.usbserial-D3075E2Z_** We copy it.
+*   5\. We run: **_sudo python3 pyupdi.py -d tiny412 -c /dev/tty.usbserial-D3075E2Z -b 19200 -f hello.t412.blink.ino.hex -v_**
+
+It works, a great job of Nuria and mine. Thank you Nuria 😊 A video of the load and operation.
+
+Nuria wanted to change the blink speed, so she modified the delays, but she didn't save the .hex extension. To do this he had to configure the Arduino so that it only compiles and the file .hex .elf .bin .eep and .lst saves it by default in a temporary folder. So you have to find it and take it back to the "pyupdi" folder to load it again.
+
+As the board made of copper vinyl works, I decide to apply **nail polish** so that the tracks do not come loose and hold the components.
+
+![Image 34](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.41.jpg)
+
+FabISP of Brian
+---------------
+
+The second programmer I'm going to try to make is Brian's. In this link is the [**tutorial**](http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html) that I will follow.
+
+For this, the first thing I need is the PNG files for the **traces** and the **board outline.** Then on a sheet I place all the components that I will need with tape..
+
+![Image 35](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.05.jpg)I begin with the internal milling of tracks with the milling cutter of 1/64 (0.04 mm) and a speed of 1 mm / s so as not to break the mill. For the outside I use the mill of 1/32 (0.08 mm) and a speed of 1 mm / s. This is the end result of milled PCB and components. **REMEMBER** to remove the small piece of copper on the tip of the USB with a cutter.
+
+![Image 36](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.06.jpg)
+
+Now begins the part that needs more patience and pulse, weld SMD 1206 components. As my instructor Nuria has told me, the smaller and center components are welded out, leaving the larger ones for the end. Thank you, Nuria. 😘 The first to weld is the Attiny45. A small point of tin on the first track and we will heat it to join the pin of the Attiny45. Once all the pins of the Attiny45 are soldered, I check the continuity of the tracks with the polymeter.
+
+![Image 37](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.07.jpg)Once the Attiny45 was well welded, I started welding the resistors and the LEDs. A small trick to identify the polarity of LEDs is to use the multimeter and paint on paper, which is the positive and the negative. I check them with the polymeter once soldiers. Then I solder the capacitors (they don't have polarity), the two Zener diodes and the resistors. Finally I solder the 2 x 3 male ISP connector. **Remember** to tin the small bridge.
+
+![Image 38](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.08.jpg)Here a small **timelapse** of FabISP welding.
+
+Program the FabISP
+------------------
+
+As I use Windows I will follow the steps in this [**tutorial**](http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/windows_avr.html) to program my FabISP.
+
+The first thing I do is download an Atmel AVR Toolchain, the AVR 8-bit Toolchain version v3.62 - Windows. Then the GNU Make and the AVRDUDE. I have to modify the **path** of my computer. It is very important, but it will not work.
+
+![Image 39](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.35.jpg)
+
+Then we install the Zadig driver. Once we have all this, we go to the **Git Bash terminal** from which we will program the FabISP. We plug the "FabISP mother" to our computer and our FabISP to an external power supply.
+
+![Image 40](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.36.jpg)First we will do **"make flash"**, then **"make fuses"** in Git Bash. Then we disconnect the **"FabISP mother"** from the computer and connect my FabISP. The new device appears in the Control Panel.💪 Then you **"make rstdisbl".** Once the installation is completed and the **jumper removed** the FabISP is ready!!
+
+![Image 41](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.37.jpg)
+
+Programming the Hello Light with the FabISP
+-------------------------------------------
+
+Nuria give me a **Hello Board** with two Led´s. So I'm going to load a program with Arduino that makes a Led gradually increase or decrease its luminosity. The board had a blink loaded on a Led. I connect the Hello Light with an FTDI-USB to an external power supply and through the ISP pins I connect it with the flat cable to my FabISP.
+
+![Image 42](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.38.jpg)
+
+Once I have configured the Arduino for the ATtiny44 and I have the program I charge it. Here is the video of the process and how the Hello Light works.
+
+As for the other programmer, for FabISP I also designed and printed another **case** in 3D. Here's the [**file.**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/case%20FabISP.stl)
+
+Board house
+-----------
+
+Given the situation of out of stock and the increase in the price of the Arduino Nano, at Fab Lab León we thought of designing our own programmable board for the projects of the Young Makers.
+
+![Image 43](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.43.jpg)
+
+Once the design was tested by milling on the Modela MDX-20, I sent the Gerber to the [**JLCPCB factory.**](https://jlcpcb.com/) Afterwards, with the Solder Paste and the Hot Air technique, I solder the components. Using acrylic, I create a base to solder the pins.
+
+![Image 44](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.44.jpg)Now we have a custom and cheaper board to be able to attach it to the Arduino Nano Shields so that Young Makers can use it in their projects.
+
+![Image 45](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week04/week04.45.jpg)
+
+Here you can find the files
+
+*   [**ATtiny412 Gerber**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/ATtiny412_shield_gerber.zip)
+*   [**Hello ATtiny412 Traces**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/Hello_412_traces.png)
+*   [**Hello ATtiny412 Drills**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/Hello_412_drills.png)
+*   [**Hello ATtiny412 Interior**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/Hello_412_interior.png)
+
+Files
+-----
+
+Find below the files that I made for this assignment.
+
+*   [**Case FabISP**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/case%20FabISP.stl)
+*   [**Case FTDI-USB**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/case%20ftdi%20usb.stl)
+*   [**Hello Vinyl SVG**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/hello%20vinyl%20board.svg)
+*   [**Used Mill Support 1**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/used%20mill%20support%20%201.stl)
+*   [**Used Mill Support 2**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/used%20mill%20support%20%202.stl)
+*   [**ATtiny412 Gerber**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/ATtiny412_shield_gerber.zip)
+*   [**Hello ATtiny412 Traces**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/Hello_412_traces.png)
+*   [**Hello ATtiny412 Drills**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/Hello_412_drills.png)
+*   [**Hello ATtiny412 Interior**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/assignments/week04/Hello_412_interior.png)

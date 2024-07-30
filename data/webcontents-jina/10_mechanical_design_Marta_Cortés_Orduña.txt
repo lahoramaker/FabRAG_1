@@ -1,0 +1,134 @@
+Title: MCO Fab Academy 2018
+
+URL Source: http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html
+
+Markdown Content:
+MCO Fab Academy 2018
+===============
+                    
+
+![Image 1](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/fabacademyslogo.png)[Marta Cortés Orduña](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/index.html) [(@FabLab Oulu)](http://www.oulu.fi/fablab/)
+
+Menu
+
+*   [Assignments](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/index.html)
+*   [Final Project](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/final_project.html)
+*   [About me](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/aboutme.html)
+*   [Jump to...](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html#)
+    *   [1\. Principles and Practices](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment01.html)
+    *   [2\. Project management](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment02.html)
+    *   [3\. Computer-aided design](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment03.html)
+    *   [4\. Computer-controlled cutting](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment04.html)
+    *   [5\. Electronics production](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment05.html)
+    *   [6\. 3D scanning and printing](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment06.html)
+    *   [7\. Electronics design](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment07.html)
+    *   [8\. Computer-controlled machining](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment08.html)
+    *   [9\. Embedded programming](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment09.html)
+    *   [10\. Molding and casting](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment10.html)
+    *   [11\. Input devices](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment11.html)
+    *   [12\. Output devices](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment12.html)
+    *   [13\. Interface and application programming](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment13.html)
+    *   [14\. Networking and communications](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment14.html)
+    *   [15\. Mechanical design](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html)
+    *   [16\. Machine design](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment16.html)
+    *   [17\. Wildcard week](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment17.html)
+    *   [18\. Applications and Implications](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment18.html)
+    *   [19\. Invention, intellectual property and income](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment19.html)
+    *   [20\. Project Development](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment20.html)
+    
+    *   [Final project idea](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/final.html#ideas)
+
+*   [Assignments](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/index.html)
+*   Week 15
+
+15\. Mechanical design
+======================
+
+This week we need to design a machine in a group.
+
+Toggle navigation
+
+*   [ToDo](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html#tasks)
+*   [The "Doing"](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html#)
+    *   [the doing 1](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html#thedoing1)
+    *   [the doing 2](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html#thedoing2)
+*   [Resources](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html#resources)
+*   [Once Done](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html#)
+    *   [Summary](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html#summary)
+    *   [Difficulties and Learnings](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html#difficulties)
+    *   [Tips](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html#tips)
+    *   [Files](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html#files)
+
+During this week I have participated in the group assignment with the team [Apple Peeler](http://fab.academany.org/2018/labs/fablaboulu/machine_week_group2.html)
+
+To Do
+-----
+
+1.  Participate in the group work
+2.  Document my part.
+
+The "Doing"
+-----------
+
+### What have I done?
+
+At some parts, it is quite difficult to make clear divisions of the work, because we have participated in smaller or bigger subgroups in almost all of the steps of the design.  
+I was with Megumi trying to find an idea for a second group and thinking about the mechanism of a Lathe machine, I started to see a peeling arm and a fruit as the 3d shape. Then we asked Eino about it, and he thought it was good enough for the assignment. And then Behnaz, Heidi and Peetu liked the idea and joined us. Here is the summary of what I have participated in for the machining design:
+
+*   I came up with the idea when talking with Megumi: From Lathe machine to apple peeler
+*   I participated in the design of the structure: taking into account which parts we had from previous year's projects
+[![Image 2: design](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment15/IMG_20180503_133729.jpg)](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment15/IMG_20180503_133729.jpg)
+
+*   I chose the parts needed from previous project to define an structure
+[![Image 3: design](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment15/IMG_20180503_133723.jpg)](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment15/IMG_20180503_133723.jpg)
+
+*   I participated in the first assembling of the pieces: I put together the base of the L structure so they would move as one back and forwards
+*   I participated in the design of the piece to the rotating structure: I measure the parts to be joint together
+[![Image 4: design](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment15/Picture4.jpg)](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment15/Picture4.jpg)
+
+*   I started building the peeling mechanism (Use the metallic fold and how) [![Image 5: design](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment15/IMG_20180509_124302.jpg)](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment15/IMG_20180509_124302.jpg)
+    
+    *   First, I cut a piece of the fold to test if just by hand I could peel the apple
+    *   I did the first prototype, attaching with tape to an MDF plate the blade and simulate the mechanism to see if it would work and how could it be attached to the structure
+    *   I came with the idea of how to attach the blade to the MDF and, together with Megumi, got the measurements to design and then cut the MDF plate
+
+[![Image 6: design](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment15/IMG_20180507_143752.jpg)](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment15/IMG_20180507_143752.jpg)
+
+[![Image 7: design](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment15/IMG_20180509_132129.jpg)](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment15/IMG_20180509_132129.jpg)
+
+*   I have done most of the layout, organization and documentation in the group page
+
+There are still many things missing and many parts that wold need some revisiting during the next week.
+
+Resources
+---------
+
+*   disassembled material from lasts years projects
+*   Inspiration from [this commercial peeler](https://www.amazon.com/Johnny-Peeler-VICTORIO-VKP1010-Suction/dp/B001DLTD1C)
+
+Once done
+---------
+
+### Summary
+
+*   I have participated in a group designing a fun machine
+
+### Difficulties and Learnings
+
+*   Main difficulty for me was in the description of the individual tasks. It is difficult to describe owns participation as completely independent from others because we have been designing and doing on the go, with several try and error tests.
+*   Main learning for next week is to maybe completely divide the tasks from the beginning
+
+### Tips
+
+### Files
+
+All the files are in the group work page.
+
+[![Image 8: Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)  
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+Code [Bootstrapious](https://bootstrapious.com/e-commerce-templates)
+
+[](http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment15.html#)
+
+![Image 9](blob:http://fabacademy.org/2ae2cc6f0544e8fcceb52fb6a599a7ea)

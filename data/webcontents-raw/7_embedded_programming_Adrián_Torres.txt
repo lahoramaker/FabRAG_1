@@ -1,0 +1,538 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Week 08. Embedded Programming</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/LOGO%20fablab.png" alt="" /></span><span class="title">Adrián Torres</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul><li><a href="index.html">Home</a></li>
+							<li><a href="assignments.html">Assignments</a></li>
+							<li><a href="project.html">Final Project</a></li>
+                            <li><a href="adrianino.html">Adrianino</a></li>
+                            <li><a href="samdino.html">SAMDino</a></li>
+                            <li><a href="fabxiao.html">Fab-Xiao</a></li>
+							<li><a href="about.html">About me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Week 08. Embedded Programming</h1>
+							
+							
+                            <p>Like the previous week, there are two types of assignments, one group and one individual. In my case being alone in the Fab Lab, I do both.</p>
+                            
+                            <ul><li> Compare the performance and development workflows for different microcontroller families. ✔
+                                <li> Document your work (in a group or individually). ✔ 
+                                <li> Read the datasheet for the microcontroller you are programming. ✔ 
+                                <li> Program the board you have made to do something, with as many different programming languages and programming environments as possible. ✔ 
+                                <li> Linked to the group assignment page. ✔ 
+                                <li> Documented what you learned from reading a microcontroller datasheet. ✔ 
+                                <li> Programmed your board. ✔  
+                                <li> Described the programming process/es you used. ✔   
+                                <li> Included your source code. ✔ 
+                                <li> Included a short ‘hero video’ of your board. ✔      
+                                    
+                                    
+                                    
+                            </ul>
+                            
+                            <p>Like every week, my weekly schedule. 😊 </p>
+                              
+                            <p><img src="images/week08/week08.01.jpg" width="80%"; max-width="700" /></p>  
+                            
+                            <p style="color:orangered;"> <i>Well, the coronavirus arrived in Spain and it is time to be locked up at home by quarantine. Fortunately, I took all the boards and devices I needed for this assignment. Stay at home.</i> 😷</p>
+                            
+                            <h1>Group Assignment</h1>  
+                            <p>The <b>Group Assignment page</b> is at the following <a href="http://academany.fabcloud.io/fabacademy/2020/labs/leon/leon-group-assignments/"><b>link.</b></a></p>
+                            <p>If you click on this <a href="#group"><b>link,</b></a> you go to the Group Assignment section that I have done for this week.</p>
+                            
+                            
+                            <h1>Datasheet: ATtiny412 and ATtiny1614</h1>
+                            <p>Within the tinyAVR-1series family there are several models, the ones I am using at the Fab Academy are the ATtiny 412 and the ATtiny 1614. One of their differences is memory, as we can see in the following graph which is taken from the <b>Datasheet.</b></p>
+                            
+                            <p><img src="images/week08/week08.02.jpg" width="60%"; max-width="700" /></p>
+                            
+                            <h2>ATtiny412</h2>
+                            <p>This little microcontroller with only 8 pins has a lot to offer us:</p>
+                            <ul><li><b>8 pin</b> package.
+                                <li>Two internal clocks 16 and <b>20 MHz.</b>
+                                <li>4 KB Flash Memory.
+                                <li>128 B EEPROM.
+                                <li>256 B SRAM.
+                                <li>Maximum voltage: 6V; minimum voltage -0.5 V. </ul>
+                            
+                            <p>After looking at the basic features, you will find the pinning of the microcontroller. I combine the Datasheet image with the one from the <a href="https://github.com/SpenceKonde/megaTinyCore/blob/master/megaavr/extras/ATtiny_x12.md"><b>SpenceKonde website</b></a> on the ATtiny412.</p>
+                            
+                            <span class="image main"><img src="images/week08/week08.03.jpg" alt="" /></span>
+                            
+                            <ul><li><b>VDD:</b> Supply voltage.
+                                <li><b>GND:</b> Ground.
+                                <li><b>Digital pins:</b> PA0, PA1, PA2, PA3, PA4, PA5, PA6.
+                                <li><b>Analog pins:</b> PA1, PA2, PA3, PA4, PA5, PA6. 
+                                <li><b>UPDI Programming pin:</b> PA0 (physical pin number 6).
+                                <li><b>External Clock Pin:</b> PA3.   </ul>
+                            <p>All I/O pins can be configured with <b>internal pullup resistance.</b></p>
+                          
+                            <p>Within the communications section there are different types and their pins are different. It is clear that the different communication protocols cannot all be used at the same time, because they have pins in common.</p>
+                            <ul><li><b>USART - Universal Synchronous and Asynchronous Receiver and
+                                Transmitter: </b> It has the <b>RX</b> (PA1) and the <b>TX</b> (PA2).
+                                <li><b>SPI - Serial Peripheral Interface:</b> It has only <b>MOSI</b> (PA1), <b>MISO</b> (PA2) and <b>SCK</b> (PA3).
+                                <li><b>TWI - Two Wire Interface (I2C):</b> It has <b>SDA</b> (PA1) and <b>SCL</b> (PA2).
+                            </ul>
+                            
+                            <p>Another important thing that the datasheet is telling us is that you have to keep in mind which kind of input component you are using, digital or analog: for instance, if you are using a temperature sensor (analog component) you have to connect it to an ACD (analog to digital converter) port otherwise the microcontroller isn't able to transform the information that is receiving from the sensor to a digital data.</p>
+                          
+                             <h2>ATtiny1614</h2>
+                            <p>As we have looked at the graph, there are more microcontrollers within the tinyAVR-1series family. Another ATtiny I use is the 1614. I combine the Datasheet image with the one from the <a href="https://github.com/SpenceKonde/megaTinyCore/blob/master/megaavr/extras/ATtiny_x14.md"><b>SpenceKonde website</b></a> on the ATtiny1614.</p>
+                            <ul><li><b>14 pin</b> package.
+                                <li>Two internal clocks 16 and <b>20 MHz.</b>
+                                <li>16 KB Flash Memory.
+                                <li>256 B EEPROM.
+                                <li>2 KB SRAM.
+                                <li>Maximum voltage: 6V; minimum voltage -0.5 V. </ul>
+                            
+                            <p>After looking at the basic features, you will find the pinning of the microcontroller.</p>
+                            
+                            <span class="image main"><img src="images/week08/week08.04.jpg" alt="" /></span>
+                            
+                            <ul><li><b>VDD:</b> Supply voltage.
+                                <li><b>GND:</b> Ground.
+                                <li><b>Digital pins:</b> Port A: PA0, PA1, PA2, PA3, PA4, PA5, PA6, PA7. Port B: PB0, PB1, PB2, PB3.  
+                                <li><b>Analog pins:</b> PA1, PA2, PA3, PA4, PA5, PA6, PA7. Port B: PB0, PB1.  
+                                <li><b>UPDI Programming pin:</b> PA0 (physical pin number 10).
+                                <li><b>External Clock Pin:</b> PA3.   </ul>
+                            <p>All I/O pins can be configured with <b>internal pullup resistance.</b></p>
+                          
+                            <p>Within the communications section there are different types and their pins are different. It is clear that the different communication protocols cannot all be used at the same time, because they have pins in common.</p>
+                            <ul><li><b>USART - Universal Synchronous and Asynchronous Receiver and
+                                Transmitter: </b> It has the <b>RX</b> (PB2 or PA2) and the <b>TX</b> (PB3 or PA1).
+                                <li><b>SPI - Serial Peripheral Interface:</b> It has only <b>MOSI</b> (PA1), <b>MISO</b> (PA2), <b>SCK</b> (PA3), <b>SS</b> (PA4) .
+                                <li><b>TWI - Two Wire Interface (I2C):</b> It has <b>SDA</b> (PB1 or PA1) and <b>SCL</b> (PB0 or PA2).
+                            </ul>
+                            <p>Another important thing that the datasheet is telling us is that you have to keep in mind which kind of input component you are using, digital or analog: for instance, if you are using a temperature sensor (analog component) you have to connect it to an ACD (analog to digital converter) port otherwise the microcontroller isn't able to transform the information that is receiving from the sensor to a digital data.</p>
+                            
+                            
+                            <h2><b>29/03/2020</b></h2>
+                            <h2>ATtiny3216</h2>
+                            <p>Since last week I looked at the datsheet of the other microcontrollers, this time it's time to look at everyone's "big brother", the ATtiny3216.. I combine the Datasheet image with the one from the <a href="https://github.com/SpenceKonde/megaTinyCore/blob/master/megaavr/extras/ATtiny_x16.md"><b>SpenceKonde website</b></a> on the ATtiny3216.</p>
+                            <ul><li><b>20 pin</b> package.
+                                <li>Internal clocks 1/4/5/8/10/16 <b>20 MHz.</b>
+                                <li>32768 bytes Flash Memory.
+                                <li>256 bytes EEPROM.
+                                <li>2048 bytes SRAM.
+                                <li>Maximum voltage: 6V; minimum voltage -0.5 V. </ul>
+                            
+                            <p>After looking at the basic features, you will find the pinning of the microcontroller.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.26.jpg" alt="" /></span>
+                            
+                            <ul><li><b>VDD:</b> Supply voltage.
+                                <li><b>GND:</b> Ground.
+                                <li><b>Digital pins:</b> Port A: PA0, PA1, PA2, PA3, PA4, PA5, PA6, PA7. Port B: PB0, PB1, PB2, PB3, PB4, PB5. Port C: PC0, PC1, PC2, PC3.  
+                                <li><b>Analog pins:</b> Port A: PA0, PA1, PA2, PA3, PA4, PA5, PA6, PA7. Port B: PB0, PB1, PB4, PB5.   
+                                <li><b>UPDI Programming pin:</b> PA0 (physical pin number 16).
+                            </ul>
+                            <p>All I/O pins can be configured with <b>internal pullup resistance.</b></p>
+                            
+                            <p>Within the communications section there are different types and their pins are different. It is clear that the different communication protocols cannot all be used at the same time, because they have pins in common.</p>
+                            <ul><li><b>USART - Universal Synchronous and Asynchronous Receiver and
+                                Transmitter: </b> It has the <b>RX</b> (PB3 or PA2) and the <b>TX</b> (PB2 or PA1).
+                                <li><b>SPI - Serial Peripheral Interface:</b> It has only <b>MOSI</b> (PA1 or PC2), <b>MISO</b> (PA2 or PC1), <b>SCK</b> (PA3 or PC0), <b>SS</b> (PA4 or PC3) .
+                                <li><b>TWI - Two Wire Interface (I2C):</b> It has <b>SDA</b> (PB1 or PA1) and <b>SCL</b> (PB0 or PA2).
+                            </ul>
+                            
+                            
+                            
+                            
+                            
+                            <h2>UPDI - Unified Program and Debug Interface</h2>
+                            
+                            <p>To program these two microcontrollers, only one cable and GND are necessary. Here is the process, for some reason it takes so long to load the programs. 😅</p>
+                            
+                            <span class="image main"><img src="images/week08/week08.05.jpg" alt="" /></span>
+                            
+
+                            
+                            
+                            
+                            
+                            
+                            <h1>Programming</h1>
+                            <h1>Linux + Arduino + PyUPDI</h1>
+                            <h2>ATtiny1614</h2>
+                            <p>I follow the <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/bootcamp/spicy/blob/master/Program1614.md"><b>tutorial</b></a>  that Pablo taught me that they used in the <b>Bootcamp in India</b> that <b>Santi</b> from <b>Fab Lab BCN</b> created.</p>
+                            
+                            <ul><li>1. For this I install Arduino. Within Arduino, in the preferences tab we will add the URL to load the Arduino IDE with other cards or microcontrollers. <a href="https://github.com/SpenceKonde/megaTinyCore"><b> Spence Konde tutorial</b></a></li></ul>  
+                                <p><img src="images/week08/week08.06.jpg" width="80%"; max-width="700" /></p>
+                            <ul><li>2. I download <a href="https://github.com/mraardvark/pyupdi"><b>"pyupdi".</b></a> 
+                                <li>3. Open terminal. Install dependeces: <b><i>pip3 install intelhex pylint pyserial</i></b> (I have had to install it on my Ubuntu LTS and do screenshot, because I did not do it when I was working on the computer with Linux.) 😪 </ul>
+                                    <p><img src="images/week08/week08.14.jpg" width="80%"; max-width="700" /></p>
+                            <ul><li>4. I connect the USB-FTDI.
+                                <li>5. I run <b><i>dmesg -w</i></b>
+                                <li>6. Connect and disconet the ftdi cable and take note of the "port name" where:</ul>        
+                                <p><img src="images/week04/week04.40.jpg" width="80%"; max-width="700" /></p>
+                            <ul><li>7. I configure the Arduino IDE for the ATtiny 1614; I configure the clock to 20MHz, the TX and RX ports and in my case the communication port with the <b>/dev/ttyUSB0</b> microcontroller.</ul>
+                                <p><img src="images/week08/week08.07.jpg" width="80%"; max-width="700" /></p>
+                            <ul><li>8. Only the code is <b>compiled.</b> In the Arduino IDE dialog box, we will see where the temporary files are located.</ul> 
+                                <p><img src="images/week08/week08.08.jpg" width="80%"; max-width="700" /></p>
+                            <ul><li>9. We look for the <b>.hex file</b> which is the one we need, it is in a temporary folder. Once located, we copy it and paste it in the <b>pyupdi folder.</b> </ul>
+                                <p><img src="images/week08/week08.09.jpg" width="80%"; max-width="700" /></p>     
+                            <ul><li>10. I connect it as follows.<b> USB-Serial-FT230X + Serial-UPDI.FT230X + hello_train +  USB-FTDI (this just for power and ground).</b></ul> 
+                                <p><img src="images/week06/week06.27.jpg" width="60%"; max-width="700" /></p>   
+                            <ul><li>11. Go into the "pyupdi" folder.
+                                <li>12. Program the board using python -> run <b><i>sudo python3 pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 19200 -f Hello_train_button_led.ino.hex -v</i></b></ul>
+                           
+                            <p>Now it works, here is a small video of the operation when I press the button on the board.  🚂 🚂 🚂 😍 </p>
+                            
+                            <iframe src="https://player.vimeo.com/video/399451481" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            
+                            <p>Here is the <a href="assignments/week08/hello_train_button_led.ino"> <b>Arduino program</b></a> to download.</p>
+                            
+                        
+                            <pre><code>//Adrián Torres - Fab Academy 2020 - Fab Lab León
+//tiny1614 hello_train
+//
+//Original code:Neil Gershenfeld 12/8/19
+// This work may be reproduced, modified, distributed,
+// performed, and displayed for any purpose, but must
+// acknowledge this project. Copyright is retained and
+// must be preserved. The work is provided as is; no
+// warranty is provided, and users accept all liability.
+//
+const int ledPin1 = 3;//first light
+const int ledPin2 = 6;//white light
+const int ledPin3 = 7;//white light
+const int ledPin4 = 1;//red light
+const int ledPin5 = 2;//red light
+const int buttonPin = 0;// button pin
+int buttonState = 0;//initial state of the button
+int i = 0; //variable intensity led
+
+void setup() { //declaration of inputs and outputs
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+  pinMode(ledPin3, OUTPUT);
+  pinMode(ledPin4, OUTPUT);
+  pinMode(ledPin5, OUTPUT);
+  pinMode(buttonPin, INPUT);
+}
+void loop() {
+  buttonState = digitalRead(buttonPin);// we read the state of the button
+  if (buttonState == HIGH) { //if we press the button
+  digitalWrite(ledPin2, HIGH);
+  digitalWrite(ledPin3, HIGH);
+  delay(2000);                       
+  digitalWrite(ledPin4, HIGH);
+  digitalWrite(ledPin5, HIGH);    
+  delay(2000);
+  digitalWrite(ledPin1, HIGH);    
+  delay(5000);
+  digitalWrite(ledPin1, LOW);    
+  delay(1000);
+  digitalWrite(ledPin4, LOW);
+  digitalWrite(ledPin5, LOW);
+  delay(2000);                       
+  digitalWrite(ledPin2, LOW); 
+  digitalWrite(ledPin3, LOW);    
+  delay(1000);
+  
+}
+  else {  //if we don't press the button
+  digitalWrite(ledPin1, LOW);
+  digitalWrite(ledPin2, LOW);
+  digitalWrite(ledPin3, LOW);
+  digitalWrite(ledPin4, LOW);
+  digitalWrite(ledPin5, LOW);
+  }
+}</code></pre>
+                            
+                            <h2>ATtiny412</h2>
+                            <p>At Electronics Production Week make a board out of copper vinyl and an ATtiny412. I'm going to program it too.</p>
+                            <ul><li>1. I open Arduino. I configure the Arduino IDE for the ATtiny 412; I configure the clock to 20MHz, the TX and RX ports and in my case the communication port with the <b>/dev/ttyUSB0</b> microcontroller. </ul>
+                                <p><img src="images/week08/week08.10.jpg" width="80%"; max-width="700" /></p>
+                            <ul><li>2. Only the code is <b>compiled.</b> In the Arduino IDE dialog box, we will see where the temporary files are located.</ul> 
+                                <p><img src="images/week08/week08.11.jpg" width="80%"; max-width="700" /></p>
+                            <ul><li>3. We look for the <b>.hex file</b> which is the one we need, it is in a temporary folder. Once located, we copy it and paste it in the <b>pyupdi folder.</b> 
+                                <li>4. I connect it as follows.<b> USB-Serial-FT230X + hello_ATtiny412.</b></ul> 
+                                <p><img src="images/week08/week08.12.jpg" width="60%"; max-width="700" /></p>   
+                            <ul><li>5. Go into the "pyupdi" folder.
+                                <li>6. Program the board using python -> run <b><i>sudo python3 pyupdi.py -d tiny412 -c /dev/ttyUSB0 -b 19200 -f Hello_blynk.ino.hex -v</i></b></ul>
+                            <p>Then change the name of Hello_blynk to Hello_intensity</p>
+                            <p>Now it works, here is a small video. 😍 </p>
+                            
+                            <iframe src="https://player.vimeo.com/video/399452231" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            
+                            <p>Here is the <a href="assignments/week08/hello_intensity.ino"> <b>Arduino program</b></a> to download.</p>
+                            
+                            
+                            <pre><code>//Adrián Torres - Fab Academy 2020 - Fab Lab León
+//tiny412 hello_blynk
+//
+//Original code:Neil Gershenfeld 12/8/19
+// This work may be reproduced, modified, distributed,
+// performed, and displayed for any purpose, but must
+// acknowledge this project. Copyright is retained and
+// must be preserved. The work is provided as is; no
+// warranty is provided, and users accept all liability.
+//
+int ledpwm = 3;//pinout of the attiny412
+
+int i = 0;//variable that will make the work cycle increase
+
+void setup(){
+ pinMode(ledpwm,OUTPUT); 
+}
+void loop(){
+  for(i = 0; i <= 255 ; i++){
+   analogWrite(ledpwm,i); 
+   analogWrite(5,255-i);
+   delay(25);
+  }
+   for(i = 255; i>= 0 ; i--){
+   analogWrite(ledpwm,i); 
+   analogWrite(5,255-i);
+   delay(25);
+  } 
+} 
+</code></pre>
+                            
+                            
+                            
+                            <h1>Atmel Studio 7</h1>
+                            <p>The first thing I do is download the latest version for Windows and 64-bit Atmel Studio 7 software. It has a very clean interface, and on the left you have to create the projects with different templates to program in C, C ++, or Arduino. For this I follow the following <a href="https://www.youtube.com/watch?v=vG7Lh7Kg_sI&list=PL9B4edd-p2ajbkbFpi47P9PfMtQuV0OwQ&index=9"><b>Microchip video tutorial.</b></a></p>
+                            
+                            <span class="image main"><img src="images/week08/week08.13.jpg" alt="" /></span>
+                            
+                            <p>Since I have already used Arduino, I am going to use a <b>C template.</b> So the first thing I do is configure the device that I am going to use. In this case I want to use ATtiny1614; When you choose it, the Datasheet will appear, all the basic information and with which programmers you can use. Interesting. 🧐</p>
+                            
+                            <p><img src="images/week08/week08.15.jpg" width="60%"; max-width="700" /></p>
+                            
+                            <p>Once the device is configured; I go on to create the C program based on Neil's, but adding more LEDs. The program is very <b>predictive</b> and it tells you which port to use or the instruction auto-completes.</p>
+                            
+                            <p><img src="images/week08/week08.16.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>Once I have the program I debug, and it gives me a <b>little error.</b> It tells me that I am missing the file "GccApplication.1.elf". However, I am going to try to connect the board and try to pass the code to the microcontroller.</p>
+                            
+                            <p><img src="images/week08/week08.17.jpg" width="80%"; max-width="700" /></p>
+                            
+                            
+                            <p>So I click on the Device Programming icon (a microcontroller with a lightning bolt) and the following screen appears where it only allows me to simulate, when I have connected my programmer and the board. I do not understand it, it is more my computer has recognized me the programmer and I have it in the COM4 port.</p>
+                            
+                            <p><img src="images/week08/week08.18.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>While I find out more about why my programmer does not recognize me, I go to configure the <b>simulator toolchain.</b> I set the ATtiny1614 to have the 20Mhz clock.</p>
+                            
+                            <p><img src="images/week08/week08.19.jpg" width="80%"; max-width="700" /></p>
+                             
+                            <p>But I can't do anything, because it keeps giving me the same error, I am missing the file that ends in .elf. That file is very important because it groups together the toolchain as well as the .hex and the .makefile that are generated when debugging.</p>
+                             
+                            <p>So since I can't simulate, I keep investigating the software and suddenly find that a target can be added to the tools menu. And it recognizes a <b>STK500</b> that I have connected to my computer in <b>COM4.</b> Yuhuuu. 😃</p>
+                            
+                            <p><img src="images/week08/week08.20.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>But ... when configuring the toolchain, there is no ATtiny1614 and neither is ATtiny412, so I can't do anything else. I have updated it and neither does ATtiny´s appear.</p>
+                            
+                            <p><img src="images/week08/week08.21.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>So, in conclusion it has a good working environment, predictive, it has the datasheet, simulator ... but it doesn't work for me, it could be the <b>.elf file.</b></p>
+                            
+                            
+                            <h1><a id="group"></a>Group Assignment. Different microcontroller families.</h1>
+                            
+                            <h2>PIC</h2>
+                            <p>During my <b>professional training</b> we study the PICs and to program in <b>assembler.</b> It used <b>PIC 16F84A.</b> And I had the following list of instructions to program. Loading instructions, arithmetic, logic, jumps, subroutines and specials. Here I leave my sheet of notes, sorry for the state, he is 11 years old.</p>
+                            
+                            <p><img src="images/week08/week08.22.jpg" width="50%"; max-width="700" /></p>
+                            
+                            <p>This is an example of a program to generate a <b>1kHz signal on Port B6</b></p>
+                            
+                            
+                            <pre><code>
+                            _CONFIG _CP_0F& _WDT_OFF&_PWRTE_ON&_XT_OSC; recorder settings
+                            LIST   P=16F84A
+                            INCLUDE<P16F841.INC>
+                            
+                            ORG0
+                START       bsf STATUS,RP0
+                            clrf TRSIB
+                            movlw b'00011111'
+                            movwf TRISA
+                            clrf OPTION_REG
+                            bcf STATUS, RP0
+                            
+                PRINCIPAL   bcf PORTB,6
+                THERE       movlw d'6'
+                                    movwf TMR0
+                HERE        btfss INTCON,2
+                                    goto HERE
+                                    comf PORTB, 6
+                                    bcf INTCON, 2
+                                    goto THERE
+                                    
+                                    
+                                    END
+                            </code></pre>
+                            
+                            <p>At the time of programming we used <a href="https://www.microchip.com/mplab/mplab-x-ide"><b>Microchip's MPLAB</b></a> to compile and obtain the hexadecimal file. Once we had the hexadecimal file with the <a href="http://www.ic-prog.com/"><b>IC-Prog application</b></a> through <b>Serial</b> connection and the photo programmer transferred the hexadecimal file. Then we had a <b>simulation board</b> where we could see the different states of the Ports.</p>
+                            
+                            <p><img src="images/week08/week08.23.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>As my computer does not have a Serial connection, but I had some PICs programmed, I have put the simulation board back into operation. The video program is of a prototype of a <b>tram</b> that moved in a straight line section forwards and backwards. I used PWM, that's why the LED lights up from less to more and vice versa. 🚃</p>
+                            
+                            <iframe src="https://player.vimeo.com/video/399611481" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            
+                            <h2>Micro:bit</h2>
+                            <p>Well, in the Fab Lab León we have this small board with many features. Young Makers use it in their projects. In my case, I follow this <a href="https://www.youtube.com/watch?v=MY4jDrN9_cc"><b>BricoGeek</b></a> video tutorial to get to know it a little more.</p>
+                            
+                            <p>Before connecting the board to the computer, I go into the browser to search for <a href="https://makecode.microbit.org/#editor"><b>Micro:bit Editor.</b></a> The board appears to simulate on the left, a central column with the different basic instructions and on the right the area of the program where you can do it in blocks or in JavaScript.</p>
+                            
+                            <p><img src="images/week08/week08.24.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>Then it is as simple as seeing if we want to do routines, or a single cycle. I make a basic program that when I turn on the Micro:bit says Hello! If I press button A it makes me a ✔ and button B makes me ❌. If I press both buttons A + B it tells me the temperature of the room. Once the program is finished, it is as easy as saving and downloading it. The file is a <b>.hex file</b> that we will copy into the folder that appears on the computer when we connect the Micro:bit.</p>
+                            
+                            <span class="image main"><img src="images/week08/week08.25.jpg" alt="" /></span>
+                            
+                            <p>Once the .hex file has been copied to the Micro: bit, it does the following in the video.</p>
+                            
+                            <iframe src="https://player.vimeo.com/video/399616818" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            
+                            <p>Here is the <a href="assignments/week08/microbit-Prueba_Adri%C3%A1n.zip"> <b>Micro:bit program</b></a> to download.</p>
+                            
+                            <h2>FPGA</h2>
+                            <p>An FPGA is a field programmable logic gate array. In Spain there is a movement that encourages the use of free FPGA's created by <a href="https://github.com/Obijuan"><b> Obijuan.</b></a> Thanks to Obijuan, I create a <a href="https://github.com/Obijuan/digital-electronics-with-open-FPGAs-tutorial/wiki"><b> Jedi Academy,</b></a><b></b> using GitHub and video tutorials to learn this programmable electronics.</p>
+                            <p>In 2016, <b>Eladio Delgado</b> created the <a href="https://github.com/FPGAwars/icezum/wiki"><b> Icezum Alhambra.</b></a> If you want to buy it, here is the <a href="https://alhambrabits.com/buy/"><b> link.</b></a></p>
+                            
+                            <p>The first Icezum Alhambra were <b>crowdfunding,</b> in this case Nuria sponsored one. 😍</p>
+                            
+                            <p><img src="images/week08/week08.27.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>This is the pinout of the board.</p>
+                            
+                            <p><img src="images/week08/week08.26.jpg" width="50%"; max-width="700" /></p>
+                            
+                            <p>To program it we need the <b>Icestudio,</b> which we will download from the following <a href="https://github.com/FPGAwars/icestudio/releases"><b> link.</b></a>  Once installed, we have to choose the board, in this case the Icezum Alhambra. Then we must install the <b> Toolchain,</b>  in the Tools menu.</p>
+                            
+                            <span class="image main"><img src="images/week08/week08.28.jpg" alt="" /></span>
+                            
+                            <p>Once the toolchain is installed, the first thing the tutorials recommend is to open a simple program. They are small blocks of inputs / outputs, logic gates, signal generators ... In this case I am going to light LED 0.</p>
+                            
+                            <span class="image main"><img src="images/week08/week08.29.jpg" alt="" /></span>
+                            
+                            <p>Now it's time to connect the board to the computer using a mini-USB cable. As soon as we connect, this message appears, where we must configure the FTDI. We will install the drivers with the Zadig tool <b>(Interface 0)</b> (importantly we will always connect the board to the same USB).</p>
+                            
+                            <p><img src="images/week08/week08.30.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>Inside the Tools menu is the Upload button. We press it and we get this on the board. LED0 illuminated. 😊</p>
+                            
+                            <p><img src="images/week08/week08.31.jpg" width="80%"; max-width="700" /></p>
+                            
+                            <p>Once I have discovered the tool and the handling, I decide to make a simple program, I want the even LEDs to light up and the odd ones off and vice versa in a sequence. I use a random blink program as a reference and start adding more LEDs. Then I combine NOT, NAND and XOR gates to create the following program. From here I want to thank <a href="https://github.com/jcarolinares/fpga-biorobots"><b>Julián Caro Linares</b></a> for solving any questions telematically.</p>
+                            
+                            <span class="image main"><img src="images/week08/week08.32.jpg" alt="" /></span>
+                            
+                            <p>Once loaded this is the video result. 🤗</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/399680912" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            
+                            <p>FPGA is very interesting, a very powerful tool that can be programmed very easily with logic gates.</p>
+                            <p>Here is the <a href="assignments/week08/8%20LEDs%20alternate%20blink.zip"> <b>Alternative blink program</b></a> to download.</p>
+                            
+                            
+                             <h1>Review of the class</h1>
+                            <p>During the review of this class I volunteered with the FPGA in the minute 1:13:00. 😊 </p>
+                            
+                            <iframe src="https://player.vimeo.com/video/400771541" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/400771541">20200325 Embedded Programming review</a> from <a href="https://vimeo.com/academany">Academany</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                            
+                            
+                            
+                            
+                            
+                            
+                            <h1>Files</h1>
+                            <p>Find below the files that I made for this assignment.</p>
+                            <ul><li><a href="assignments/week08/hello_train_button_led.ino"> <b>Hello Train</b></a></li>
+                                <li><a href="assignments/week08/hello_intensity.ino"> <b>Hello Intensity</b></a></li>
+                                <li><a href="assignments/week08/microbit-Prueba_Adri%C3%A1n.zip"> <b>Micro:bit program</b></a></li>
+                                <li><a href="assignments/week08/8%20LEDs%20alternate%20blink.zip"> <b>Alternative blink program</b></a></li>
+                                
+                                
+                            </ul>
+                            
+                           
+                            
+                            
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+                        
+                         <p align="center"> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><b>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</b></a>
+                        
+                        
+						<div class="inner">
+							
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/Adrian_Towy" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/adriantrains" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/adrian_towy/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.linkedin.com/in/adri%C3%A1n-torres-oma%C3%B1a/" class="icon brands style2 fa-linkedin"><span class="label">Linkedin</span></a></li>
+						
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

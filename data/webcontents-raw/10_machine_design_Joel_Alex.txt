@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class='no-js' >
+	
+	<head>
+		
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	
+		<title>Week 17 - Machine design </title>
+		
+		<!--[if lt IE 9]>
+		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		
+		<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/owl.carousel.css' >
+		<link rel='stylesheet' type='text/css' href='css/owl.theme.css' >
+		<link rel='stylesheet' type='text/css' href='css/owl.transitions.css' >
+		<link rel='stylesheet' type='text/css' href='css/style.css' >
+		<link rel='stylesheet' type='text/css' href='css/color-default.css' >
+		
+		
+	</head>
+	
+	<body>
+		
+		
+		<!--close button-->
+		<a href='index.html' class='close-btn' >
+			<span></span>
+			<span></span>
+		</a>
+		<!--/close button-->
+		
+		
+		<!--preloader-->
+		<div id='preloader' >
+		
+			<div class='loader' >
+				<img src='img/fablablogo3.gif' alt='symp' >
+			</div>
+			
+		</div>
+		<!--/preloader-->
+		
+		
+		<div id='wrapper' >
+			
+			<section class='single-work' >
+				
+				<div class='container' >
+                <div class='section-header text-center' >
+								
+									<h2 class='animate text-over-block' >Week 17 - Machine Design</h2>
+									
+									<!--divider-->
+									<div class='divider-draft center' ></div>
+									<!--/divider-->
+                    <p> 
+                    </p>
+									
+                    <p>  Individual assignment:
+      Actuate and automate your machine
+ </p>
+                    
+                   
+                  
+                    <p>  Group assignment:
+      Document the group project and your individual contribution
+ </p>
+                 
+								
+								</div>
+                    
+					
+					
+					<div class='work-content' >
+						
+						<div class='block' >
+							
+						
+                            
+                       
+                            <p> .</p>
+                            <h3>Design concept of the game</h3>
+                            
+                            <p> The logic of the game was to move a ball along a path without letting it fall into the pit in the surface. Rewards will be given if the ball is moved into the desired pit. The desired pit will be indicated though lights. The mechanism is a stepper and belt controlled mechanical slider which moves as per the control given from joystick. Two joysticks can be used to control the two sides of the slider which then moves the ball as per the players intention along the path. If the ball falls in the required gap, then player wins.and ball falls in the backside and returns to the gaming position through the return mechanism</p>
+                            <center><img src='img/week17/1.jpeg'  alt='symp' style="height:500px;"></center>
+                            <p>.</p> <p> .</p>
+                            <center><i><h>Design criteria of the acrylic panel</h></i></center>
+                             <p> .</p> 
+                            <center><img src='img/week17/2.png'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                            <p>.</p>
+                            <p>In Week 15 we had decided to make an arcade game and carved and  which surprisingly turned out to be an existing game called 'Ice cold beer'. This week we split our work between the teammembers. I had focussed on designing the game board,it's designs etc.</p>
+                                <h3 id="icehold">Ice cold beer - The front end design</h3>
+                            <p>The whole logic of the game was to move the ball to the required hole without making it slip through any other holes. So my first task was to finalise the size of the ball. I decided take out the ball from castor wheel which was of 14mm diameter. So all the holes in the panel of the game will having a diameter above the ball. Next task was to arrange the holes properly and to create a path so that the ball could move properly and reach it's destination. </p>
+                            <p>On Week 15 we had planned the concept of te game, designed the basic models for working and tested. The game mainly contained game playing interface , then a support structure, then the control mechanism. </p>
+                            <p>The designing was done on fusion 360 (ofcourse) following the design concept</p>
+                            <p> .</p>
+                            <center><i><h>Arrangement for testing the movement of stepper motor,pulley and belt</h></i></center>
+                             <p> .</p> 
+                            <center><img src='img/week17/3.jpeg'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                            <p> .</p>
+                            <center><i><h>Testing the sample program for the movement</h></i></center>
+                             <p> .</p> 
+                            <center><img src='img/week17/4.jpeg'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                       
+<p>The testing came to be fine. The next step was to finalise the logic of the game. Our team had the main programmer Akhil joseph who we had assigned the programming works. We had discussed the algorithm of the game and wrote a simple flowchart for same   </p>
+                            <p>.</p>
+                            <p> .</p>
+                            <center><i><h>Algorithm of the game</h></i></center>
+                             <p> .</p> 
+                             <p>.</p> <center><img src='img/week17/5.jpg'  alt='symp' style="height:800px;"></center>
+                            <p> .</p>
+                            <p>So the panel contained 2 stepper motors, pulleys, belt, limit switches for limiting the movement through rail,belt between the pulleys, slider for holding the central rod and the rod itself for holding the ball.</p>
+                            <p>The slider was designed as below in order to accomodate the belt.Lot of deeisgn were experimented and from that one of them was finalised</p>
+                            <p> .</p> 
+                            <center><img src='img/week17/7.png'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                            <p> .</p> 
+                            <center><img src='img/week17/8.png'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                            <p> .</p>
+                            <center><i><h>OUTPUT 3D slider</h></i></center>
+                             <p> .</p> 
+                            <p> .</p> 
+                            <center><img src='img/week17/9.jpeg'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                             
+                            <p> .</p>
+                            <center><i><h>The previous design broke easily and also belt was tight on the position ,so the design was changed and width was increased to have smooth movement of belt and slider</h></i></center>
+                            <p> .</p> 
+                            <center><img src='img/week17/10.png'  alt='symp' style="height:500px;"></center>
+                            <p> .</p> 
+                             <p> .</p>
+                            <center><img src='img/week17/11.jpeg'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                            <p>Next step was to add a vintage feel to the game, so a design was selected and modified and was decided to be engraved into the acrylic sheet</p>
+                            <p>The below image was used for engraving in the central acrylic sheet</p>
+                            <p> .</p>
+                            <center><img src='img/week17/12.png'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                            <center><i><h>INKSCAPE DESIGNING FOR LASERCUT</h></i></center>
+                            <p> .</p>
+                            <center><img src='img/week17/13.png'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                            <p> .</p>
+                            <center><img src='img/week17/14.jpeg'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                            <p>Since the game required a return mechanism for ball to start from the beginning a hole was made for the purpose at the bottom. The designing of return mechanism when the central rod comes to bottom position was a good task and the solution was to have a perpendicular structure which will be activated by the central rod and will be back in position when the ball returns. A spiral and perpendicular design was done for the return mechanism. The spiral structure seems to be great but was inefficient for holding the ball firm, when the ball returns back to the return hole in acrylic sheet  </p>
+                            <p> .</p>
+                            <center><img src='img/week17/15.png'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                            <p> .</p>
+                            <center><img src='img/week17/16.png'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                            <p> .</p>
+                            <center><i><h>GAME TESTING VIDEO</h></i></center>
+                             <p> .</p>
+                            <center><iframe width="560" height="315" src="https://www.youtube.com/embed/n2H2SxiytsE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+                            <p>.</p>
+                          <p>The programming was done by akhil joseph <a href='http://fabacademy.org/2019/labs/kochi/students/akhil-joseph/'>Akhil joseph</a> and board was designed by <a href='http://fabacademy.org/2019/labs/kochi/students/jofin-thomas/'>Jofin thomas</a>. Rest of the docum  ntation can be viewed from their accounts</p>
+                             
+                             <p>.</p>
+                            <center><p>FINAL 3D FILE</p></center>
+<p> .</p>
+                            <center><img src='img/week17/18.JPG'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                             <p>.</p>
+                            <center><p>FINAL OUTPUT</p></center>
+<p> .</p>
+                            <center><img src='img/week17/18.jpeg'  alt='symp' style="height:500px;"></center>
+                            <p>.</p>
+                            <p>In future we are planning to add features like display with timer,scores notification,also to provide some rewards like point/food products etc.  A startup company had showm interest in commercializing the machine and giving their product as reward for winning the game</p>
+                            
+                            
+                            <center><p>DESIGN FILES CAN BE DOWNLOADED FROM <a href="img/week17/files/acrylic%20board.svg">HERE1</a></p></center>
+                            <center><p>DESIGN FILES CAN BE DOWNLOADED FROM <a href="img/week17/files/Downloads.zip">HERE2</a></p></center>
+                            <center><p>Sharing the public link from fusion 360 <a href='https://a360.co/2WOhroz'> here1</a>
+                                <a href='https://a360.co/2x0xRzR'>here2</a></p></center>
+                        
+					</div>
+					
+					
+				</div>
+				
+			</section>
+            
+            <!--next page loader-->
+       <div class='section-header text-center' >
+            <div class='row' >
+							
+							<div class='col-md-3' >
+								
+								<div class='process' >
+									
+									<div class='number' >
+                                       <span> <a href='week13.html'. > 13 </a> </span>
+									</div>
+									
+									<div class='content' >
+										
+										<h4>Week 13</h4>
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							<div class='col-md-3' >
+								
+								<div class='process' >
+									
+									<div class='number' >
+										<span><a href='week14.html' > 14 </a></span>
+									</div>
+									
+									<div class='content' >
+										
+										<h4>Week 14</h4>
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							<div class='col-md-3' >
+								
+								<div class='process' >
+									
+									<div class='number' >
+										<span><a href='week15.html' > 15 </a></span>
+									</div>
+									
+									<div class='content' >
+										
+										<h4>Week 15</h4>
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							<div class='col-md-3' >
+								
+								<div class='process last' >
+									
+									<div class='number' >
+                                        <span><a href='week16.html' >16</a></span>
+									</div>
+									
+									<div class='content' >
+										
+										<h4>Week 16</h4>
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							
+						</div>
+            </div>
+             <!--/next page loader-->
+			
+			
+			<div class='footer bg-lightgray section-block' >
+				
+				<div class='container' >
+					
+					<div class='row' >
+						
+						<div class='col-md-6 text-left' >
+							<h4>Joel George Alex</h4>
+						</div>
+						
+					</div>
+					
+					
+				</div>
+				
+			</div>
+			
+			
+			
+		</div>
+		
+		<script src='js/jquery.min.js' ></script>
+		<script src='js/jquery.stellar.min.js' ></script>
+		<script src='js/modernizr.js' ></script>
+		<script src='js/owl.carousel.min.js' ></script>
+		<script src='js/jquery.shuffle.min.js' ></script>
+		<script src='js/jquery.magnific-popup.min.js' ></script>
+		<script src='js/validator.min.js' ></script>
+		<script src='js/smoothscroll.js' ></script>
+		<script src='js/script.js' ></script>
+		
+	</body>
+	
+</html>

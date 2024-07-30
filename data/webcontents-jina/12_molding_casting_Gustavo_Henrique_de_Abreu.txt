@@ -1,0 +1,243 @@
+Title: 10. Molding and Casting - Fab Academy 2019 Gustavo Abreu
+
+URL Source: http://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/assignments/week10/
+
+Markdown Content:
+_assignments_
+
+_group assignment:_
+
+*   review the safety data sheets for each of your molding and casting materials, then make and compare test casts with each of them
+
+_individual assignment:_
+
+*   design a 3D mold around the stock and tooling that you’ll be using, mill it, and use it to cast parts
+
+Molding and Casting class[¶](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/assignments/week10/#molding-and-casting-class "Permanent link")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+We started the week with a class showing different materials and the process of molding and casting.
+
+![Image 1](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/class.jpg)
+
+Our first test was with a translucent silicon mold.
+
+![Image 2](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/silicon_label.jpg)
+
+After reading the datasheet, started measuring the quantities we needed.
+
+![Image 3](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/measuring_silicon.jpg)
+
+It needed to me mixed a lot, so we improvised a tool for it.
+
+![Image 4](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/mixing_silicon.jpg)
+
+Then, we wanted to take the bubbles out, so we put the container inside a vacuum chamber, but, it expanded so much almost all of it went out of the cup.
+
+![Image 5](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/mess.jpg)
+
+Then, poured it into the mold and let it rest for the day.
+
+![Image 6](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/pouring_silicon.jpg)
+
+Then, for the second try with the vacuum, we covered the base and one of the students stayed controlling the valve to let some air in / reduce the pressure, whenever the material was approaching the limit.
+
+![Image 7](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/vacuum.jpg)
+
+![Image 8](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/protect_vacuum.jpg)
+
+![Image 9](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/bubbles.jpg)
+
+Then, after one day, we had all our pieces ready to be displayed.
+
+![Image 10](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/tests.jpg)
+
+Final project test[¶](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/assignments/week10/#final-project-test "Permanent link")
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+I wanted to test the silicon as a transparent display cover, since the resin we have is really toxic, I’d be nice to find an alternative.
+
+I started taping the display into a clear acrylic board.
+
+![Image 11](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/taped_display.jpg)
+
+Then, poured the silicon but got a few bubbles. So it went into the vacuum chamber a couple of times before looking nice.
+
+![Image 12](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/display_vaccum.jpg)
+
+![Image 13](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/poured_display.jpg)
+
+After one night, it was ready and it seems that is an option to use instead of the resin. Still need to make water resistance tests.
+
+![Image 14](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/ready_display.jpg)
+
+![Image 15](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/working_display.jpg)
+
+But, since I sprayed the release agent on top of the whole piece (somewhat intended), I was able to take it off.
+
+![Image 16](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/peeled_display.jpg)
+
+3D milling[¶](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/assignments/week10/#3d-milling "Permanent link")
+----------------------------------------------------------------------------------------------------------------------------------
+
+I spent the weekend trying to think of useful ways to spend this week with my final project, but most of them needed me to design the whole project again in order to cast something. So, I decided to look for a model online and just learn the process. Witch it seems to be a lot of information to digest.
+
+Found [this design](https://www.thingiverse.com/thing:802925) on thingiverse. Since we had material size restrictions, I had to scale it down a lot. So I 3d printed it to make sure it would work.
+
+![Image 17](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/moai_3d.jpg)
+
+Since it looks like it, I’m going to go for it.
+
+I took me actually a lot of time to manage to understand every step of the process, and how I should design everything.
+
+It is a bit difficult at first to visualize the the positive wax, then the negative mold, and finally the piece. Specially because fabmodules works with height maps, so that was bending my mind a bit.
+
+Since this is just a simple setup, I skipped the heavy cads and went into tinkercad, I find it really easy and fast to test concepts that don’t need a lot of modeling.
+
+![Image 18](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/tinkercad.png)
+
+To make the CAM files for milling, Fab Lab Barcelona had a great [documentation](https://speakerdeck.com/santifu/molding-and-casting) for the whole process.
+
+To resume, these were the steps:
+
+Import model into Fab Modules  
+Adjust units (Inches/mm) and resolution  
+Calculate height map  
+Generate rough cut and then finish cut
+
+![Image 19](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/height_map.png)
+
+![Image 20](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/fabmodules.png)
+
+Everything seemed fine, but when I started the job, it was way off the stock.
+
+![Image 21](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/first_attempt.jpg)
+
+It was late and I did not want to generate a new file (fabmodules took a lot of time to process this), so I just eyeballed it and moved the axis by a couple of clicks. This made the home position be out of the stock completely.
+
+![Image 22](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/offset.jpg)
+
+I was really lucky, the job turned out great. And I was only a few mm off the edge.
+
+![Image 23](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/first_rough.jpg)
+
+It even has a little hole that I’ll need to cover before making the mold.
+
+![Image 24](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/hole.jpg)
+
+Since the tool was out of the stock, I decided to not change the tool to a ball end. It was actually a good test to see if a flat end mill was able to do decent rounded corners.
+
+![Image 25](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/first_half.jpg)
+
+Everything seemed fine. So now for the second part.
+
+One thing I changed other than mirroring the piece, was to make the walls thinner, so I’d have a smaller travel.
+
+### Fab modules offset[¶](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/assignments/week10/#fab-modules-offset "Permanent link")
+
+In order to accurately position your piece over the stock, fabmodules have a x and y offset option. The starting point is at the bottom left corner.
+
+![Image 26](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/fabmodules_offset.png)
+
+### Second piece fail[¶](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/assignments/week10/#second-piece-fail "Permanent link")
+
+After setting everything up, started the job and the machine just plumbed all the way to the bottom.
+
+Thankfully, it has sensors all over and it stoped because the motors were overloaded.
+
+![Image 27](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/plunge.jpg)
+
+After checking everything, the only two possible problems would be for the machine to have started the old finishing job or the cam generated an odd file.
+
+So I did everything again, tested with an air pass beforehand and then it seemed to work fine.
+
+Now to make the resin mold.
+
+Making the silicon mold[¶](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/assignments/week10/#making-the-silicon-mold "Permanent link")
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+We have a [heat resistant silicon](https://www.smooth-on.com/products/mold-max-60/), that holds up to almost 300ºC. Since we have a low melting temperature metal here. I’ll try to use it.
+
+Pot Life: 40 minutes  
+Cure Time: 24 hours  
+Mix Ratio: 100A:3B
+
+Safety:
+
+Use in a ventilated space, without contact to skin or eyes.
+
+![Image 28](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/mold_max_60.jpg)
+
+Placed a layer of release agent to the wax, before starting everything.
+
+![Image 29](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/release_agent.jpg)
+
+Then, after reading the instructions, started measuring and mixing the silicon.
+
+![Image 30](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/measuring.jpg)
+
+Mixed for 3 minutes
+
+![Image 31](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/mixing.jpg)
+
+Then, let it for 3 more minutes under the vacuum
+
+![Image 32](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/vacuum_heat_silicon.jpg)
+
+The mixture started to get hard quickly, making pouring properly difficult.
+
+![Image 33](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/pouring_heat_silicon.jpg)
+
+Looks a bit ugly, but since I used the vacuum, I hope not to have any bubbles on the inside.
+
+![Image 34](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/finished_pour.jpg)
+
+Then, the datasheet states that the complete curing cycle is 24hors. So I let it rest for a day.
+
+![Image 35](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/molds_cured.jpg)
+
+Using the air compressor was fairly easy to take it out.
+
+![Image 36](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/molds.jpg)
+
+Bubble free mold!
+
+![Image 37](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/mold_closeup.jpg)
+
+After trimming, time to get into action
+
+![Image 38](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/trimming_mold.jpg)
+
+It is recommended to use powder as a release agent
+
+![Image 39](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/powder.jpg)
+
+We had a 88% Bismuth, 12% Tin metal, it has a low melting point. Perfect for our application
+
+![Image 40](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/metal.jpg)
+
+Now, to melting the metal
+
+![Image 41](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/melting_metal.jpg)
+
+Pouring needs to be quick, since the edges of the metal tend to cool quickly
+
+![Image 42](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/poured_metal.jpg)
+
+To speed up the process of cooling, we soaked it into water
+
+![Image 43](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/cooling_metal.jpg)
+
+Then, in just about 5 minutes after melting the metal, I had the piece
+
+![Image 44](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/cooled_metal.jpg)
+
+After just rubbing it with a rag with soap, it looked nice and shiny
+
+![Image 45](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/moai.jpg)
+
+Now I have a great sunglass support
+
+![Image 46](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/images/week10/glasses_moai.jpg)
+
+[Download files](https://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/files/week10/Moai%20glass%20holder.zip)

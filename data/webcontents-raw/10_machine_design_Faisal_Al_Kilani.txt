@@ -1,0 +1,525 @@
+<h1 id="18-machine-design">18. Machine design</h1>
+<h2 id="-arduino-cnc-machine-foam-cutting-"><strong>Arduino CNC Machine Foam Cutting</strong></h2>
+<h2 id="assignments-for-week-17-">Assignments for week 17 :</h2>
+<ul>
+<li><p>This week we have a group assignment only .</p>
+</li>
+<li><p>The group assignment for this week is  to design a machine that includes mechanism +actuation +automation</p>
+</li>
+<li><p>build the mechanical parts and operate it manually</p>
+</li>
+<li><p>document the group project and your individual contribution</p>
+</li>
+</ul>
+<h2 id="file-download">File Download</h2>
+<ol>
+<li><p><a href="https://reprapworld.com/datasheets/datasheet%20drv8825.pdf">DRV8825 driver module datasheet</a>  </p>
+</li>
+<li><p><a href="https://github.com/gnea/grbl">GRBL firmware</a>  </p>
+</li>
+<li><p><a href="https://winder.github.io/ugs_website/">Universal G-code Sender</a>  </p>
+</li>
+<li><p><a href="../images/week18/3D files.rar">3D printed and modified parts</a></p>
+</li>
+</ol>
+<h2 id="the-idea-behind-the-machine-">The idea behind the machine :</h2>
+<ul>
+<li>We have chosen to make this machine because its not available in the lab also because it can make easy and beautiful 3D,2D parts</li>
+</ul>
+<h2 id="arduino-cnc-machine-foam-cutting-mechanical-part-">Arduino CNC Machine Foam Cutting Mechanical part :</h2>
+<p>In this week we worked on a CNC Foam Cutting Machine, with 3-axis, where the machine moves in two axis forward and backward, and rotate around the Z-axis.  </p>
+<p> <img src="assets/img/machine/degrees_of_freedom.png" alt="degrees_of_freedom"></p>
+<p>This machine can cut 2D shapes, as well as 2.5D shapes or 3D symmetrical shapes.  </p>
+<h2 id="arduino-cnc-foam-cutting-machine-">Arduino CNC Foam Cutting Machine :</h2>
+<p>We based our design on <a href="https://howtomechatronics.com/projects/arduino-cnc-foam-cutting-machine/">Arduino CNC Foam Cutting Machine</a>, because the machine uses <em>aluminum extrusion profiles 2020</em> easier to assemble, also reduces the time building the machine because of the COVID-19 pandemic and lockdown.</p>
+<p>And made some upgrades on the machine rail system to be more rigid, where the new design has one more rail on each side and the 3D files were changed also to be adjusted to the new design.</p>
+<h3 id="-original-design-"><strong>Original design !!</strong> :</h3>
+<blockquote>
+<p>Overall, in terms of construction and rigidity the design is probably not that good, but In my opinion making a function machine with minimum parts possible and still to be able to get the job done.</p>
+</blockquote>
+<p> <img src="assets/img/machine/Orginal_ver.jpg" alt="Original design"></p>
+<h3 id="-modified-design-"><strong>Modified design !!</strong>:</h3>
+<p>In this design we wanted the machine to be more rigid so we have made those changes :</p>
+<ul>
+<li><p>First we have added one more linear rail for each moving axis in each side .</p>
+</li>
+<li><p>Second we have edited the 3D models in order to fit the new design .</p>
+</li>
+<li><p>Third we have used a flexible Coupler instead of the shaft Coupler <em>(printed one)</em> .</p>
+</li>
+<li><p>Finally we have replaced the linear rod from 10mm to 8mm and the bearings also .</p>
+</li>
+<li><p>And you can see the changes we have made in the picture below, <em>the red parts !!</em> .</p>
+<p><img src="assets/img/machine/modified_ver.jpg" alt="Modified version"></p>
+</li>
+</ul>
+<h3 id="bill-of-material-for-screws-">Bill of material for screws :</h3>
+<table>
+<thead>
+<tr>
+<th>Screw type</th>
+<th>Qty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M3x30</td>
+<td>14</td>
+</tr>
+<tr>
+<td>M4x25</td>
+<td>10</td>
+</tr>
+<tr>
+<td>M4x30</td>
+<td>10</td>
+</tr>
+<tr>
+<td>M5x10/12</td>
+<td>46</td>
+</tr>
+<tr>
+<td>M5x15</td>
+<td>14</td>
+</tr>
+<tr>
+<td>M5x25</td>
+<td>10</td>
+</tr>
+<tr>
+<td>M5x30</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bill-of-material-for-3d-printed-files-">Bill of material for 3D printed files :</h3>
+<table>
+<thead>
+<tr>
+<th>Screw type</th>
+<th>Qty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Foam tightener</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Shaft clamp 8mm</td>
+<td>4</td>
+</tr>
+<tr>
+<td>X-axis bracket 3 (v2 for 5mm pulleys).STL</td>
+<td>1</td>
+</tr>
+<tr>
+<td>X-axis stepper mounting bracket</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Z-axis motor mounting bracket</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Z-axis platform</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Micro switches holder</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Sliding Block side 1- X-axis</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Sliding Block side 2- X-axis</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Y-axis bracket bearing</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Y-axis bracket motor</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Y-axis sliding block</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Arduino case</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Extra parts</td>
+<td></td>
+</tr>
+<tr>
+<td>corner for profile 2020</td>
+<td>2</td>
+</tr>
+<tr>
+<td>spacer</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-">Challenges :</h2>
+<p>We have faced some challenges while making this machine and here is a list of what we have faced :</p>
+<ul>
+<li><p>The main problem we have faced is that the store we have ordered the pieces from got delayed to reach us because of the lockdown, also we have received some parts that were not as we ordered which caused a lot of missing time and delayed us even more in remodifying the mechanical pieces  .</p>
+</li>
+<li><p>Also there were some pieces that we could not find in stores so we designed those parts and 3D printed them, <em>However we know that 3D printing those partswas not the best solution</em> .</p>
+</li>
+</ul>
+<h2 id="arduino-cnc-machine-electronics-part-">Arduino CNC Machine Electronics part :</h2>
+<p>In this part we will build Arduino CNC Foam Cutting Machine. The machine is inspired by the work found <a href="https://howtomechatronics.com/projects/arduino-cnc-foam-cutting-machine/">here</a>.</p>
+<p>This is a team working task and different students will be working on different parts. My part and my colleague Aziz is to work on electronics and softwares, including drivers, boards, motors, hot wire and control programs.</p>
+<h3 id="electronics-bom">Electronics BOM</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Qty.</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ARDUINO UNO - R3</td>
+<td>1 pcs.</td>
+<td><a href="https://mikroelectron.com/Product/Arduino-Uno-R3-original-chip/">Local market</a></td>
+</tr>
+<tr>
+<td>ARDUINO CNC SHIELD V3</td>
+<td>1 pcs.</td>
+<td><a href="https://mikroelectron.com/Product/ARDUINO-CNC-SHIELD-V3/">Local market</a></td>
+</tr>
+<tr>
+<td>DRV8825 STEPPER MOTOR DRIVER MODULE</td>
+<td>4 pcs.</td>
+<td><a href="https://mikroelectron.com/Product/DRV8825-Stepper-Motor-Driver-Module/">Local market</a></td>
+</tr>
+<tr>
+<td>STEPPER MOTOR 1.8° PER STEP, 1.7 A, 0.36 N.M (NEMA17)</td>
+<td>3 pcs.</td>
+<td><a href="https://mikroelectron.com/Product/Stepper-motor-1-8-per-step-1-7-A-0-36-N-m-NEMA17/">Local market</a></td>
+</tr>
+<tr>
+<td>DC-DC STEP DOWN15A CONVERTER 4-32V 12V TO 1.2-32V BUCK ADJUSTABLE</td>
+<td>1 pcs.</td>
+<td><a href="https://mikroelectron.com/Product/DC-DC-Step-Down15A-Converter-4-32V-12V-to-1-2-32V-Buck-Adjustable/">Local market</a></td>
+</tr>
+<tr>
+<td>MICRO NORMALLY OPEN CLOSE LIMIT SWITCH</td>
+<td>2 pcs.</td>
+<td><a href="https://mikroelectron.com/Product/Micro-Normally-Open-Close-Limit-Switch/">Local market</a></td>
+</tr>
+<tr>
+<td>Hot wire</td>
+<td>2 m</td>
+<td>Local hardware store</td>
+</tr>
+<tr>
+<td>ADAPTER 12V 5A POWER SUPPLY AC/DC</td>
+<td>1 pcs.</td>
+<td><a href="https://mikroelectron.com/Product/ADAPTER-12V-5A-POWER-SUPPLY-AC-DC/">Local market</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>The Arduino Uno is where the GRBL will be installed and will control the machine.</p>
+<p><img src="assets/img/machine/electronics2.jpg" alt=""></p>
+</li>
+<li><p>DRV8825 drivers will control the steppers which provide motion.</p>
+<p><img src="assets/img/machine/electronics3.jpg" alt=""></p>
+</li>
+<li><p>Arduino CNC shield interfaces DRV8825 drivers to Arduino board.</p>
+<p><img src="assets/img/machine/electronics4.jpg" alt=""></p>
+</li>
+<li><p>DC-DC converter will control the temperature of the hot wire</p>
+<p><img src="assets/img/machine/electronics5.jpg" alt=""></p>
+</li>
+<li><p>Limit switches will define the zero or home position of +X and +Y axes.</p>
+<p><img src="assets/img/machine/electronics06.jpg" alt=""></p>
+</li>
+<li><p>Hot wire will heat cut the foam. Hot wire should maintain uniform temperature along its length when it heats up.</p>
+<p><img src="assets/img/machine/electronics07.jpg" alt=""></p>
+</li>
+<li><p>And finally, the adaptor will supply power to the whole system.</p>
+<p><img src="assets/img/machine/electronics8.jpg" alt=""></p>
+</li>
+</ul>
+<h3 id="circuit-diagram-">Circuit Diagram :</h3>
+<ul>
+<li><p>The image below shows how different components are connected to each other. Note how all components are interfaced to Arduino board using the CNC shield. This will make connected compact and easier to complete.</p>
+<p><img src="assets/img/machine/electronics1.jpg" alt="">  </p>
+<p><a href="https://howtomechatronics.com/projects/arduino-cnc-foam-cutting-machine/">Source</a></p>
+</li>
+</ul>
+<h3 id="driver-resolution-">Driver Resolution :</h3>
+<ul>
+<li><p>The DRV8825 driver can be set to drive stepper motors at different resolutions. The driver resolution selectors have 100 kOhm pull-down resistors, which makes them level LOW if there are left unconnected.</p>
+<p><img src="assets/img/machine/electronics9.jpg" alt=""></p>
+</li>
+<li><p>The CNC shield has connections to resolution selectors and jumpers can be used to set the required resolution. A connected jumper will drive the selector pin (M0, M1, M2) to level high. The image below shows some examples for driver resolution for DRV8825. In our machine will use 1/16 stepper resolution.</p>
+<p><img src="assets/img/machine/electronics10.jpg" alt=""></p>
+</li>
+</ul>
+<h2 id="arduino-cnc-machine-software-">Arduino CNC machine Software :</h2>
+<ul>
+<li><p>Two programs will be used to control the machine. The first is GRBL firmware which will installed into Arduino board and enable it to understand g-codes, and the other is g-code sender that will be installed to PC and communicate with Arduino board and send g-codes.</p>
+<p><img src="assets/img/machine/electronics11.jpg" alt=""></p>
+</li>
+</ul>
+<h3 id="grbl-firmware-">GRBL Firmware :</h3>
+<p> GRBL is a firmware for Arduino board running on ATmega328P microprocessor. GRBL accepts g-code as inputs and generates outputs at Arduino board pins. Compared to industrial CNC machines, when GRBL is used there is no need for any ports to control the machine, only the USB port connected to Arduino board. In other words, when GRBL firmware is installed to Arduino board, it will read g-codes and control the machine accordingly. To know more about GRBL, check the <a href="https://github.com/gnea/grbl">project page</a>.</p>
+<ul>
+<li><p>Step 1: Download GRBL firmware and extract it and copy the folder &quot;grbl-master&quot;. Do not copy this folder to &quot;Arduino library directory!&quot;</p>
+<p><img src="assets/img/machine/electronics12.jpg" alt=""></p>
+</li>
+<li><p>Step 2: In Arduino IDE go to &quot;Sketch &gt; Include Library &gt; Add .ZIP Library...&quot; and from inside &quot;grbl-master&quot; folder locate &quot;grbl&quot; folder. Click open.</p>
+<p><img src="assets/img/machine/electronics13.jpg" alt=""></p>
+</li>
+<li><p>You should receive the message below.</p>
+<p><img src="assets/img/machine/electronics14.jpg" alt=""></p>
+</li>
+<li><p>Step 3: Go to &quot;File &gt; Examples &gt; grbl &gt; grblUpload&quot;, select the Arduino board (UNO in our case) and the COM port, click upload.</p>
+<p><img src="assets/img/machine/electronics15.jpg" alt=""></p>
+</li>
+<li><p>Note that the firmware used most of the board memory.</p>
+<p><img src="assets/img/machine/electronics16.jpg" alt=""></p>
+</li>
+<li><p>Step 4: Open the &quot;Serial Monitor&quot; and set baud rate to 115200. You should see &quot;Grbl 1.1h [&#39;$&#39; for help]
+&quot; in serial monitor. Type &quot;$$&quot; and send, settings list will appear. We will modify these settings to fit with our machine using the GRBL controller software or g-code sender.</p>
+</li>
+<li><p>Step 5: Since we don&#39;t have a Z-axis switch, we should define that in the config.h file of GRBL. Go to &quot;Arduino library directory &gt; grbl&quot; and open config.h, then find the following parts</p>
+</li>
+</ul>
+<pre><code>// NOTE: Defaults are <span class="hljs-keyword">set</span> <span class="hljs-keyword">for</span> a traditional <span class="hljs-number">3</span>-axis CNC machine. Z-axis <span class="hljs-keyword">first</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">clear</span>, followed <span class="hljs-keyword">by</span> X &amp; Y.
+#<span class="hljs-keyword">define</span> HOMING_CYCLE_0 (<span class="hljs-number">1</span>&lt;&lt;Z_AXIS)                // <span class="hljs-keyword">REQUIRED</span>: <span class="hljs-keyword">First</span> <span class="hljs-keyword">move</span> Z <span class="hljs-keyword">to</span> <span class="hljs-keyword">clear</span> workspace.
+#<span class="hljs-keyword">define</span> HOMING_CYCLE_1 ((<span class="hljs-number">1</span>&lt;&lt;X_AXIS)|(<span class="hljs-number">1</span>&lt;&lt;Y_AXIS))  // OPTIONAL: <span class="hljs-keyword">Then</span> <span class="hljs-keyword">move</span> X,Y <span class="hljs-keyword">at</span> the same time.
+// #<span class="hljs-keyword">define</span> HOMING_CYCLE_2                         // OPTIONAL: Uncomment <span class="hljs-keyword">and</span> <span class="hljs-keyword">add</span> axes <span class="hljs-keyword">mask</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">enable</span>
+
+// NOTE: The <span class="hljs-keyword">following</span> <span class="hljs-keyword">are</span> two examples <span class="hljs-keyword">to</span> setup homing <span class="hljs-keyword">for</span> <span class="hljs-number">2</span>-axis machines.
+// #<span class="hljs-keyword">define</span> HOMING_CYCLE_0 ((<span class="hljs-number">1</span>&lt;&lt;X_AXIS)|(<span class="hljs-number">1</span>&lt;&lt;Y_AXIS))  // <span class="hljs-keyword">NOT</span> COMPATIBLE <span class="hljs-keyword">WITH</span> COREXY: Homes <span class="hljs-keyword">both</span> X-Y <span class="hljs-keyword">in</span> one cycle.
+
+// #<span class="hljs-keyword">define</span> HOMING_CYCLE_0 (<span class="hljs-number">1</span>&lt;&lt;X_AXIS)  // COREXY COMPATIBLE: <span class="hljs-keyword">First</span> home X
+// #<span class="hljs-keyword">define</span> HOMING_CYCLE_1 (<span class="hljs-number">1</span>&lt;&lt;Y_AXIS)  // COREXY COMPATIBLE: <span class="hljs-keyword">Then</span> home Y
+</code></pre><p>and change it to</p>
+<pre><code>// NOTE: Defaults are <span class="hljs-keyword">set</span> <span class="hljs-keyword">for</span> a traditional <span class="hljs-number">3</span>-axis CNC machine. Z-axis <span class="hljs-keyword">first</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">clear</span>, followed <span class="hljs-keyword">by</span> X &amp; Y.
+//#<span class="hljs-keyword">define</span> HOMING_CYCLE_0 (<span class="hljs-number">1</span>&lt;&lt;Z_AXIS)                // <span class="hljs-keyword">REQUIRED</span>: <span class="hljs-keyword">First</span> <span class="hljs-keyword">move</span> Z <span class="hljs-keyword">to</span> <span class="hljs-keyword">clear</span> workspace.
+//#<span class="hljs-keyword">define</span> HOMING_CYCLE_1 ((<span class="hljs-number">1</span>&lt;&lt;X_AXIS)|(<span class="hljs-number">1</span>&lt;&lt;Y_AXIS))  // OPTIONAL: <span class="hljs-keyword">Then</span> <span class="hljs-keyword">move</span> X,Y <span class="hljs-keyword">at</span> the same time.
+// #<span class="hljs-keyword">define</span> HOMING_CYCLE_2                         // OPTIONAL: Uncomment <span class="hljs-keyword">and</span> <span class="hljs-keyword">add</span> axes <span class="hljs-keyword">mask</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">enable</span>
+
+// NOTE: The <span class="hljs-keyword">following</span> <span class="hljs-keyword">are</span> two examples <span class="hljs-keyword">to</span> setup homing <span class="hljs-keyword">for</span> <span class="hljs-number">2</span>-axis machines.
+// #<span class="hljs-keyword">define</span> HOMING_CYCLE_0 ((<span class="hljs-number">1</span>&lt;&lt;X_AXIS)|(<span class="hljs-number">1</span>&lt;&lt;Y_AXIS))  // <span class="hljs-keyword">NOT</span> COMPATIBLE <span class="hljs-keyword">WITH</span> COREXY: Homes <span class="hljs-keyword">both</span> X-Y <span class="hljs-keyword">in</span> one cycle.
+
+#<span class="hljs-keyword">define</span> HOMING_CYCLE_0 (<span class="hljs-number">1</span>&lt;&lt;X_AXIS)  // COREXY COMPATIBLE: <span class="hljs-keyword">First</span> home X
+#<span class="hljs-keyword">define</span> HOMING_CYCLE_1 (<span class="hljs-number">1</span>&lt;&lt;Y_AXIS)  // COREXY COMPATIBLE: <span class="hljs-keyword">Then</span> home Y
+</code></pre><ul>
+<li>Save the file and reupload the &quot;grblUpload&quot; sketch to our Arduino board.</li>
+</ul>
+<h3 id="grbl-controller-software-g-code-sender-">GRBL Controller Software (g-code Sender) :</h3>
+<p>This software will generate g-codes according to job and send those codes to Arduino board (which knows how to read g-codes now!). We will use <a href="https://winder.github.io/ugs_website/">Universal G-code Sender</a>.</p>
+<ul>
+<li><p>Step 1: Install JAVA Runtime Environment to your PC from <a href="https://www.oracle.com/java/technologies/javase-jre8-downloads.html">here</a>. The GRBL controller is a JAVA program and runtime environment should be installed. You may need to create an account.</p>
+</li>
+<li><p>Step 2: Go to <a href="https://winder.github.io/ugs_website/download/">download page</a> and download 2.0 Platform version and extract the zip file. Inside extracted file open &quot;ugsplatfrom &gt; bin&quot; and run one of the executable files (ugsplatform64 in my case).</p>
+<p><img src="assets/img/machine/electronics17.jpg" alt=""></p>
+</li>
+<li><p>Step 3: Connect to Arduino board. Set baud rate to 115200 and the right COM port. Click on &quot;Connect/Disconnect&quot; button. In the console window you should see connection confirmation and defined settings.</p>
+<p><img src="assets/img/machine/electronics18.jpg" alt="">  </p>
+</li>
+<li><p>Step 4: To configure the machine, we will use the built in setup wizard. Go to &quot;Machine &gt; Setup wizard...&quot;. A new window will appear, which will confirm connection to GRBL.</p>
+<p><img src="assets/img/machine/electronics19.jpg" alt="">  </p>
+</li>
+</ul>
+<h2 id="testing-system-component-">Testing System Component :</h2>
+<h3 id="steppers-and-limit-switches-">Steppers and Limit Switches :</h3>
+<ul>
+<li><p>We tested system components before assembly to the mechanical part of the machine.</p>
+</li>
+<li><p>First we connected the CNC shield to Arduino board and put a jumper to M2 pins for each axis (1/16 resolution), then connected the DRV8825 stepper driver.</p>
+<p><img src="assets/img/machine/electronics20.jpg" alt=""></p>
+</li>
+<li><p>Then we connected stepper motors, limit switches for +X and +Y axes, powered the shield with +12 VDC and connected Arduino USB cable.</p>
+<p><img src="assets/img/machine/electronics21.jpg" alt=""></p>
+</li>
+<li><p>To test steppers and limit switches, we used the g-code sender. We ran the setup wizard and connected to GRBL in Arduino. In &quot;Motor wiring&quot;, we tested the operation for each stepper and tried to reverse direction.</p>
+<p><img src="../images/week18/electronics22.jpg" alt=""></p>
+</li>
+<li><p>And we used the &quot;Limit switches&quot; section to test +X and +Y home switches. First limit switches were enabled. Note that the Z axis is rotational and has no home position. In hardware we have normally closed switches. In normal position when the switches are not actuated the switch box will be in green, and should turn into red when the switch is actuated. &quot;Invert limit switches&quot; checkbox is checked to achieve this.</p>
+<p><img src="assets/img/machine/electronics23.jpg" alt=""></p>
+</li>
+</ul>
+<h3 id="hot-wire-">Hot wire :</h3>
+<ul>
+<li><p>First we tested the hot wire using the DC-DC stepdown converter. We tried the hot wire at different voltages. The maximum output we could achieve from the converter was 8.17 VDC, and was not enough to have a good cut.</p>
+<p><img src="assets/img/machine/electronics24.jpg" alt=""></p>
+</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rrKoQxZ00aw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<ul>
+<li><p>Then we connected the hot wire to +12 VDC, and removed the converter from the system and directly connected the hot wire to system power adapter. Cutting results were better and acceptable.</p>
+<p><img src="assets/img/machine/electronics25.jpg" alt=""></p>
+</li>
+</ul>
+<h2 id="hero-shoot-for-machine-electronics-part-">Hero Shoot for Machine Electronics part :</h2>
+<ul>
+<li>This video shows steppers testing. The X-axis stepper was rotating in reverse direction compared to Y and Z axes steppers. We reversed the rotation of X-axis stepper using the g-code sender.</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JsuBDxtoM_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<ul>
+<li>This video shows limit switches. When actuated, switches colors turn into red in g-code sender programs. We inverted switches since we are using NC ones.</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0fqptowenB0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<ul>
+<li>This video shows the hot wire cutting test using +12 VDC.</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z4XEu0U4WJ0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<h2 id="arduino-cnc-machine-foam-cutting-designing-part-">Arduino CNC Machine Foam Cutting Designing part :</h2>
+<ul>
+<li><p>then tried to modify Shaft clamp 10mm to fit the 2 parallel rods ad first prototype and printing it using same settings :</p>
+<p><img src="assets/img/machine/2a.jpg" alt=""></p>
+</li>
+<li><p>but sadly it was structurally not the best after trying the physical assembly so the design had been modified :</p>
+<p><img src="assets/img/machine/2b.jpg" alt=""></p>
+</li>
+<li><p>Printing the new design :</p>
+<p><img src="assets/img/machine/2c.jpg" alt=""></p>
+</li>
+<li><p>comparison between 2 designs :</p>
+<p><img src="assets/img/machine/3c.jpg" alt=""></p>
+</li>
+<li><p>Rechecking on the Shaft clamp modified design and it&#39;s measurement :</p>
+<p><img src="assets/img/machine/3d.jpg" alt=""></p>
+</li>
+<li><p>Arduino Case design STL and  printed perfect fit from first Time :</p>
+<p><img src="assets/img/machine/4.jpg" alt=""></p>
+</li>
+<li><p>checking the fit between 3D printed parts and ordered metallic mechanical parts :</p>
+<p><img src="assets/img/machine/5.jpg" alt=""></p>
+</li>
+<li><p>Here are the foam tightener :</p>
+<p><img src="assets/img/machine/6.jpg" alt=""></p>
+</li>
+<li><p>Y Axis sliding block :</p>
+<p><img src="assets/img/machine/7.jpg" alt=""></p>
+</li>
+</ul>
+<h3 id="settings-for-the-3d-printed-parts-">Settings for the 3D printed parts :</h3>
+<pre><code>Quality
+Layer <span class="hljs-string">Height:</span> <span class="hljs-number">0.15</span> mm
+
+
+Shell
+Wall <span class="hljs-string">Thickness:</span> <span class="hljs-number">0.7</span> mm
+Top/Bottom <span class="hljs-string">Thickness:</span> <span class="hljs-number">0.75</span> mm
+
+Infill
+Infill <span class="hljs-string">Density:</span> <span class="hljs-number">18</span>%
+Infill <span class="hljs-string">Pattern:</span> Grid
+
+Material
+Printing <span class="hljs-string">Temperature:</span> <span class="hljs-number">200</span> °C
+Build Plate <span class="hljs-string">Temperature:</span> <span class="hljs-number">60</span> °C
+
+Speed
+Print <span class="hljs-string">Speed:</span> <span class="hljs-number">45</span> mm/s
+
+Travel
+Enable <span class="hljs-string">Retraction:</span> Yes
+Travel <span class="hljs-string">speed :</span> <span class="hljs-number">150</span>
+
+
+Cooling
+Enable Print <span class="hljs-string">Cooling:</span> Yes
+Fan <span class="hljs-string">Speed:</span> <span class="hljs-number">100</span>%
+
+
+Build Plate Adhesion
+Build Plate Adhesion <span class="hljs-string">Type:</span> Skirt
+</code></pre><h2 id="arduino-cnc-machine-foam-cutting-assembling-">Arduino CNC Machine Foam Cutting Assembling :</h2>
+<h3 id="here-you-can-see-how-we-assembled-the-machine-">Here you can see how we assembled the machine :</h3>
+<iframe src="https://giphy.com/embed/jQyStoIWM52sajkMqr" width="550" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/jQyStoIWM52sajkMqr"></a></p>
+
+- First we started with the profile :
+
+ <img src="assets/img/machine/A20.jpg" alt="">
+
+- Next we started to hold the motors :
+
+ <img src="assets/img/machine/A4.jpg" alt="">
+
+- And here you can see the final Assemble :
+
+<iframe src="https://giphy.com/embed/JsVl4lblKcQqglBtFt" width="550" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/JsVl4lblKcQqglBtFt"></a></p>
+
+### Manually moving the machine :
+
+- Here you can see how we started to test manually if the machine is moving properly :
+
+ <iframe src="https://giphy.com/embed/efDRMKwyW2pS93SSkZ" width="550" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/efDRMKwyW2pS93SSkZ"></a></p>
+
+- Here you can see how we put the belt and started to test if its moving properly :
+
+<iframe src="https://giphy.com/embed/YmiJ1aNLfQI6pV6vNq" width="550" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/YmiJ1aNLfQI6pV6vNq"></a></p>
+
+### Automatically moving the machine :
+
+- Here you can see how the machine is moving automatically :
+
+ <iframe src="https://giphy.com/embed/VeSpk0pE8JdLzPjn3e" width="550" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/VeSpk0pE8JdLzPjn3e"></a></p>
+
+
+### Testing the hot wire :
+
+- Here you can see how we tested and measured the right voltage in order to cut the foam :
+
+<iframe src="https://giphy.com/embed/SvLIs5Uqx0dQmUXEQx" width="550" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/SvLIs5Uqx0dQmUXEQx"></a></p>
+
+### Cutting the foam using the hot wire :
+
+ <iframe src="https://giphy.com/embed/WtOai0L7thV4n3DxfS" width="550" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/WtOai0L7thV4n3DxfS"></a></p>
+
+## Hero shots for this week assignment :
+
+- Here you can see the X axis moving :
+
+<iframe src="https://giphy.com/embed/XfmqShzLgw0qQxvN4C" width="550" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/XfmqShzLgw0qQxvN4C"></a></p>
+
+- Here you can see the Y axis moving :
+
+<iframe src="https://giphy.com/embed/QsDoHO4zdSsEc3LRU6" width="550" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/QsDoHO4zdSsEc3LRU6"></a></p>
+
+- Here you can see the Z Axis moving :
+
+<iframe src="https://giphy.com/embed/Kci1yba97DNFTAG01k" width="550" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Kci1yba97DNFTAG01k"></a></p>
+
+
+- And here you can see how to connect the Hot wire it must has been connected using springs, however the available strings are not flexible enough therefore we connected them directly to the screws  :
+
+ <img src="assets/img/machine/C1.jpg" alt="">
+
+  <img src="assets/img/machine/C2.jpg" alt="">
+
+
+- Finally me, <a href="http://fabacademy.org/2020/labs/techworks/students/hani-alawamleh/">Hani</a>, <a href="http://fabacademy.org/2020/labs/techworks/students/aziz-wadi/">Aziz</a> and <a href="http://fabacademy.org/2020/labs/techworks/students/faisal-alkilani/">Faisal</a> completed the machine and successfully managed to run the machine and cut a mickey mouse shape, Here is a video showing the way the machine cut : <iframe width="560" height="315" src="https://www.youtube.com/embed/JVsRtdympx0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<ul>
+<li><p>And here is a picture showing the final cut :</p>
+<p> <img src="assets/img/machine/Q1.JPG" alt=""></p>
+</li>
+</ul>
+<ul>
+<li>By that we have finished the machine week </li>
+</ul>

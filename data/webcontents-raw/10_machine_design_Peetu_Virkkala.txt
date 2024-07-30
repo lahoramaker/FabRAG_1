@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Week_16</title>
+  </head>
+  <body>
+	<h1> Assignment 16&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp; 9.5.2018<br>
+	</h1>
+	<h2>Topic: Machine design</h2>
+	Goals of this week:<br>
+	<ul>
+	  <li>Actuate and automate your machine (Group) (<a href="http://fab.academany.org/2018/labs/fablaboulu/machine_week_group2.html">LINK</a>)<br></li>
+	  <li> Document the group project and your individual contribution (Group) (<a href="http://fab.academany.org/2018/labs/fablaboulu/machine_week_group2.html">LINK</a>)</li>
+	</ul>
+	<h2>What I did this week</h2>
+	During this week, I developed our peeler machine as follows:<br>
+	<ul>
+    <li>Lasercut and attached boxes for the motor</li>
+    <br>
+    I used boxes py to create 3 boxes: 1 for motor and 2 for surface. Boxes were super precise so they attached well together when I hammered<br>
+    pieces together. I also lasercut mdf surface top of the cardboard surface to limit bending. I used wood glue and sticker pads to attach<br>
+    these pieces together. Finally, everything was attached to the cardboard surface:<br>
+    <br>
+    <img src="images/Week16-MachineDesign/motor_box_3.jpg" alt="3" width="600"
+	  height="200"><br>
+	 <img src="images/Week16-MachineDesign/motor_box_4.jpg" alt="4" width="600"
+	  height="200"><br>
+	 <img src="images/Week16-MachineDesign/motor_box_5.jpg" alt="5" width="600"
+	  height="200"><br>
+	<br>
+	<br>
+     <li>Connected clutch with the motor</li>
+     To connect the clutch with the motor, I used wool to stuck the motor inside and screws to hold it there. The end result was fine:<br>
+     <br>
+     <img src="images/Week16-MachineDesign/Kiinni.jpg" alt="5" width="600"
+	 height="300"><br>
+	 <br>
+	 <br>
+     <li>Designed, cut and assembled peeler holder </li>
+     <br>
+     Our plastic container had already 3.5mm diameter holes between 19mm engraved to it, so I created corresponding hole-pattern<br>
+     in Fusion 360. In total, it took me few tries to get kerf and the sizes correct, but in a end I came up with good design:<br>
+     <br>
+     <img src="images/Week16-MachineDesign/PeelerHolder.jpg" alt="5" width="400"
+	  height="400"><br>
+	  <br>
+	 I screwed the peeler holder to plastic part with bolts. The connection was durable:<br>
+	 <br>
+	 <img src="images/Week16-MachineDesign/Screwed.jpg" alt="5" width="250"
+	  height="300"><br>
+    </ul>
+	<h2>FILES made THIS WEEK</h2>
+	<ul>
+	<li><a href="Files/Week16/Stick.pdf" alt="1">Peeler stick pdf. file</a><br></li>
+	<li><a href="Files/Week16/Boxi1.pdf" alt="1">Box1 pdf. file</a><br></li>
+	<li><a href="Files/Week16/Boxi23.pdf" alt="1">Box2 and Box 3 pdf. file</a><br></li>
+	</ul>
+	<br>
+	<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+
+
+	

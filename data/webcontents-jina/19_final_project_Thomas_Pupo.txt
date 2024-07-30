@@ -1,0 +1,118 @@
+Title: Final Project
+
+URL Source: http://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/assignments/final-project.html
+
+Markdown Content:
+**ArchiBlox**
+
+The concept for ArchiBlox is a high quality, beautifully crafted table top modular building block toy that resembles the classic designs of Froebel blocks. Hidden in the blocks and in the tiled board are a series of sensors and processors that wirelessly transmit the design of the tile, the rotational orientation of the tile, and the placement in the board grid to a virtual interface. As a child makes a space using the blocks, a 2D floorplan is populated in the software where they can drag and drop different components to design an interior space. For future development and versions, we would also have the software generate a 3D model of the space as a digital twin, with various 3D components and more capabilites for customizing the digital version with materials and finishes. For the final future version, AR can be utilized to overlay the digital customizations over the physical objects. For the proof of concept to be built during FabAcademy, I will focus on building the physical components, electonic systems, and basic user interface that virtually represents a 2D floorplan of the physical blocks.
+
+![Image 1: Archiblox Sketch](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/images/archibloxsketch.jpg) ![Image 2: Archiblox Section](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/images/archiblox-section.jpg) ![Image 3: Conceptual Diagram](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/images/tp-finalproject-concept.jpg) ![Image 4: Archiblox 3D Model](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/images/rhino-model.jpeg) ![Image 5: Archiblox Rendering](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/images/archiblox-render.jpg)
+
+**Schedule** ![Image 6: Schedule](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/images/finalproject-gantt.jpg)
+
+Project Process:
+----------------
+
+Tile 3D Design & 3D Printing
+----------------------------
+
+The Tiles were designed with Rhinocerous3D and printed with Marble PLA on a Bambulabs X1C. Magnets were press-fit into the bottom.
+
+Detailed process can be reviewed in:  
+[**Computer Aided Design Week Documentation**](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/assignments/tp-week2.html)
+
+This browser does not support HTML video.
+
+Circuit Design and Fabrication
+------------------------------
+
+The custom circuit boards were designed in KiCAD and programmed on Thonny using CircuitPython.  
+Detailed process can be reviewed in:
+
+[**Electornics Design Documentation**](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/assignments/tp-week8.html)  
+[**Input Devices Documentation**](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/assignments/tp-week12.html)
+
+This browser does not support HTML video.
+
+Programming the ESP32-S3 and Communicating with Web Interface
+-------------------------------------------------------------
+
+The ESP32-S3 was programmed using Circuit Python in Thonny and the web interface was coded in HTML in Visual Studio Code.  
+Detailed process can be reviewed in:
+
+[**Output Devices Documentation**](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/assignments/tp-week9.html)  
+[**Networking & Communications Documentation**](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/assignments/tp-week14.html)  
+[**Interface & Application Programming Documentation**](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/assignments/tp-week15.html)
+
+This browser does not support HTML video.
+
+Fabricating the Enclosure
+-------------------------
+
+The board top was laser cut using a Full Spectrum Laser PS36. The board case was CNC milled on a Shop Sabre 4896. CAD on Rhino3D and CAM in RhinoCAM. The circuit boards fit perfectly snug in the case.
+
+This browser does not support HTML video.  
+
+### Integrated Systems
+
+![Image 7: Integrated System](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/images/integrated-sytem.jpg)
+
+The Finished Build
+------------------
+
+The final build successfully showcased the technology with two tiles. Its implications span from educational play, to role-playing gameplay, to the architectural design industry and more.
+
+This browser does not support HTML video.
+
+Final Project Description
+-------------------------
+
+  
+
+**What does it do?**  
+Archiblox discreetly senses a physical 3-dimensional tile placed on a build board and wirelessly transmits the 2-dimensional floorplan of the tile on a web app.
+
+**Who's done what beforehand?**  
+The concept builds on the educational values of Froebel Blocks for free play, but combines it with technology to nurture advanced spatial thinking. There are other technology toys on the market that use QR codes for an AR view of a digital 3D object on a physical object through a smartphone or virtual reality/augmented reality glasses. This concept marries the best of both worlds allowing for tactile physical creativity and unlocking 2d digital play - both synced live.
+
+**What did you design?**  
+I designed the Custom PCB boards, the Build Board, the 3-Dimensional tile variations, and the basic web interface the sensors transmit to.
+
+**What materials and components were used?**  
+The build board is made up of solid wood, to harken back to the crafted toy experience, and the tiles are made of PLA with a marble composite aesthetic.
+
+**Where did they come from?**  
+Pine is prevalent in South Florida as many lumber yards source these locally. The Bambulabs PLA, electronic components, and magnets were imported.
+
+**How much did they cost?**  
+My final 2-tile mini board prototype has a total material cost of $45.75 (refer to the bill of materials linked below) but this does not account for the sunk costs of tooling, additional quantities of components sold in bulk packs, and other overhead costs.
+
+**What parts and systems were made?**  
+The custom pcbs were made on a Bantam Tools precision CNC, the build board was made on a Shop Sabre CNC router, and the individual tiles were made on a Bambulabs 3D Printer.
+
+**What processes were used?**  
+The board code was programmed using CircuitPython on Thonny, The PCBs were designed on KiCad and milled using the Bantam Tools CAM software. The build board was designed in Rhinocerous3D and sliced in Bambulabs slicer, and the top of the board was laser etched using a Full Spectrum Laser running RetinaEngrave V3. Soldering was done using paste and a handheld heat gun for reflow. Magnets were press-fit into the tiles and secured with adhesive.
+
+**What questions were answered?**  
+This prototype illustrates the possibility of a new hybrid physical and digital play workflow. It also validates the concept of using hall sensors and magnets to trigger the synchronized play environment.
+
+**What worked? What didn't?**  
+The four magnet/hall array worked really well in quickly transmitting the type of tile, the orientation of the tile, as well as it's position on the board. After caching the images in the code, the response time was very fast and natural. To build beyond a two tile board, I would need a microcomputer with significantly more inputs. I experimented with a multiplexor to extend the capability of the Xiao ESP32S3 but ran into digital/analog problems which resulted in any single hall sensor triggering an all on or all off response. I concluded that for the larger 3x3 tile board, I would need to utilize a Raspberry Pi to have enough inputs to handle the quantity of hall sensors.
+
+**How was it evaluated?**  
+The prototype was evaluated by its ability to deliver the hybrid 3d and 2d live creative play experience. In that fact, it was a success. But the limitation to two tiles warrants continued development and a more robust web app would unlock much more play potential in the 2D environment.
+
+**What are the implications?**  
+Archiblox would be a versatile modular system for the following markets: Educational play as a building toy, Creative play for older gaming enthusiasts including role-playing games or other map-based play, and for the Architectural Design industry to quickly mock up a layout with a client in real-time. The next version could have different customized themed-tile types to fit each market, and the web app can also have various modes to support these various use-cases.
+
+![Image 8: Archiblox Sketch](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/presentation.png)
+
+Final Presentation Video
+------------------------
+
+This browser does not support HTML video.**Files**  
+[Download Tiles 3D Model](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/assignments/%E2%80%9D../files/archiblox.3dm%E2%80%9D) [Download Case 3D Model](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/assignments/%E2%80%9D../files/ARCHIBLOX-CASE.3dm%E2%80%9D) [Download Code](https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/assignments/%E2%80%9D../files/ARCHIBLOX-CODE.zip%E2%80%9D)
+
+Copyright 2024 Thomas Pupo - Creative Commons Attribution Non Commercial  
+Source code hosted at [fabcloud/fabacademy/2024/thomas-pupo](https://gitlab.fabcloud.org/academany/fabacademy/2024/labs/hopelab/students/thomas-pupo)

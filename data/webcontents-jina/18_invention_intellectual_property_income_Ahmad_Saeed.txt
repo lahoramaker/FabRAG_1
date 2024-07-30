@@ -1,0 +1,143 @@
+Title: Saeed's Week 14
+
+URL Source: http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W14P1.html
+
+Markdown Content:
+Saeed's Week 14
+===============
+        
+
+  
+  
+
+[Assignment](http://academy.cba.mit.edu/classes/invention_IP_business/index.html) 
+
+*   Develop a plan for dissemination of your [final project](http://academy.cba.mit.edu/classes/project_development/index.html)
+*   Prepare drafts of your summary slide (presentation.png, 1920x1080)  
+    and video clip (presentation.mp4, 1080p [HTML5](http://academy.cba.mit.edu/classes/computer_design/video.html), < ~minute, < ~10 MB)  
+    and put them in your root directory
+
+[Evaluation Standards](http://fabacademy.org/2020/docs/fabacademy-assessment/invention,_intellectual_property_and_business_mode.html) 
+
+*   Outline future possibilities and describe how to make them probabilities
+*   Prepare a draft summary slide and video
+
+Output Preview  
+
+  
+
+[![Image 1: Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)  
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+  
+
+Dissemination Plan
+
+I wish I would be able to convert my final project into a product kit. It would still be open-source, but I'd like to have the exclusive credit for any commercial thing.  
+  
+I started exploring the lisences randomly till I found those two resources:
+
+*   [https://choosealicense.com/licenses/](https://choosealicense.com/licenses/)
+*   [https://creativecommons.org/choose/](https://creativecommons.org/choose/)
+
+I decided I would use:  
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/)  
+  
+Using the mentioned lisence will make other users able to:
+
+*   Copy and redistribute the material in any medium or format
+*   Remix, transform, and build upon the material
+
+Under the following terms:
+
+*   An appropriate credit must be given to the creator and the lisence
+*   No commercial use for the material
+*   Remixed versions must be distributed under the same license as the original
+
+The creativecommons website also provided me with an HTML code that I can add to the pages:
+
+                                    ```
+
+<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+<br />This work is licensed under a 
+<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+                                    
+```
+                                
+
+Final Project Media
+
+Check [Final Project Presentation](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/project_presentation.html) Page
+
+  
+
+*   Week 14
+*   |
+*   Project
+*   |
+*   [Home](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/index.html)
+
+Invention, Intellectual Property, and Income
+
+  
+
+*    [Requirements](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W14P1.html#a0)
+*    [Dissemination Plan](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W14P1.html#a1)
+*    [Final Project Media](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W14P1.html#a2)
+
+  
+  
+
+Created in the time of a pandemic
+
+* * *
+
+[](https://www.instagram.com/ahmadsaaed/)[](https://twitter.com/_ahmad_saeed)[](https://www.facebook.com/profile.php?id=100000543669687)[](https://www.linkedin.com/in/ahmadsaaed/)[](https://github.com/ahmad-saeed)
+
+![Image 2](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/presentation.png)
+
+[Summary and Final Presentation](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/project_presentation.html) [Progress Documentation](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/project_documentation.html)
+
+[![Image 3](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/2.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W2P1.html)
+
+[![Image 4](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/4.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W4P1.html)
+
+[![Image 5](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/17.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W17P1.html)
+
+[![Image 6](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/3.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W3P1.html)
+
+[![Image 7](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/6.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W6P1.html)
+
+[![Image 8](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/13.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W13P1.html)
+
+[![Image 9](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/5.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W5P1.html)
+
+[![Image 10](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/8.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W8P1.html)
+
+[![Image 11](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/1b.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W1P2.html)
+
+[![Image 12](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/7.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W7P1.html)
+
+[![Image 13](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/9.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W9P1.html)
+
+[![Image 14](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/1a.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W1P1.html)
+
+[![Image 15](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/16.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W16P1.html)
+
+[![Image 16](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/12.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W12P1.html)
+
+[![Image 17](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/10.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W10P1.html)
+
+[![Image 18](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/18.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W18P1.html)
+
+[![Image 19](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/15.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W15P1.html)
+
+[![Image 20](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/media/menu/14.png)](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W14P1.html)
+
+[01: Principles and Practices](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W1P1.html) [01: Project Management](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W1P2.html) [02: Computer-Aided Design](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W2P1.html) [03: Computer-Controlled Cutting](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W3P1.html) [04: Electronics Production](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W4P1.html) [05: 3D Scanning and Printing](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W5P1.html) [06: Electronics Design](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W6P1.html) [07: Computer-Controlled Machining](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W7P1.html) [08: Embedded Programming](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W8P1.html) [09: Input Devices](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W9P1.html) [10: Applications and Implications](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W10P1.html)
+
+* * *
+
+[12: Output Devices](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W12P1.html) [13: Interface and Application Programming](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W13P1.html) [14: Invention, Intellectual Property, and Income](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W14P1.html) [15: Networking and Communications](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W15P1.html) [16: Molding and Casting](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W16P1.html) [17: Wildcard Week](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W17P1.html) [18: Mechanical Design, Machine Design](http://fabacademy.org/2020/labs/egypt/students/ahmad-saeed/entries/W18P1.html)

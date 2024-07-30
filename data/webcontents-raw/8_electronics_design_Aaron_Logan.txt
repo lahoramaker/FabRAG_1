@@ -1,0 +1,1453 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Fab Academy documentation site for Aaron Logan">
+      
+      
+        <meta name="author" content="Aaron Logan">
+      
+      
+        <link rel="canonical" href="https://fabacademy.org/2022/labs/charlotte/students/aaron-logan/assignments/week07/">
+      
+      <link rel="icon" href="../../images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.2.7">
+    
+    
+      
+        <title>7. Electronics Design - Aaron Logan - Fab Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9d5733d3.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#7-electronics-design" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Aaron Logan - Fab Academy" class="md-header__button md-logo" aria-label="Aaron Logan - Fab Academy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Aaron Logan - Fab Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              7. Electronics Design
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/charlotte/students/aaron-logan" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    aaron-logan/Site
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Fab%20Academy%20Prep/" class="md-tabs__link md-tabs__link--active">
+        Assignments
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../projects/final-project/" class="md-tabs__link">
+        Projects
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Aaron Logan - Fab Academy" class="md-nav__button md-logo" aria-label="Aaron Logan - Fab Academy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+
+    </a>
+    Aaron Logan - Fab Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://gitlab.fabcloud.org/academany/fabacademy/2022/labs/charlotte/students/aaron-logan" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    aaron-logan/Site
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About me
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/agreement/" class="md-nav__link">
+        Student Agreement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/reflection/" class="md-nav__link">
+        Reflection
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Assignments
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Assignments" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Assignments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fab%20Academy%20Prep/" class="md-nav__link">
+        Building 3D Printer and Fusion 360
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week01/" class="md-nav__link">
+        1. Principles and Practice
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week02/" class="md-nav__link">
+        2. Project Managment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week03/" class="md-nav__link">
+        3. Computer Aided Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week04/" class="md-nav__link">
+        4. Computer Controlled Cutting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week05/" class="md-nav__link">
+        5. Electronics Production
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week06/" class="md-nav__link">
+        6. 3D Printing and Scanning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          7. Electronics Design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        7. Electronics Design
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-kicad" class="md-nav__link">
+    Downloading KiCad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-sided-pcb-in-kicad" class="md-nav__link">
+    Single Sided PCB in KiCad
+  </a>
+  
+    <nav class="md-nav" aria-label="Single Sided PCB in KiCad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea" class="md-nav__link">
+    Idea
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kicad-schematic-editor" class="md-nav__link">
+    KiCad Schematic Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kicad-pcb-editor" class="md-nav__link">
+    KiCad PCB Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting" class="md-nav__link">
+    Exporting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milling" class="md-nav__link">
+    Milling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coding" class="md-nav__link">
+    Coding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#double-sided-pcb-in-kicad" class="md-nav__link">
+    Double Sided PCB in KiCad
+  </a>
+  
+    <nav class="md-nav" aria-label="Double Sided PCB in KiCad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kicad-schematic-editor_1" class="md-nav__link">
+    KiCad Schematic Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kicad-pcb-editor_1" class="md-nav__link">
+    KiCad PCB Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copper-pour" class="md-nav__link">
+    Copper Pour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-vias" class="md-nav__link">
+    Adding Vias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting_1" class="md-nav__link">
+    Exporting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milling_1" class="md-nav__link">
+    Milling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems-i-ran-into" class="md-nav__link">
+    Problems I Ran Into
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-i-learned" class="md-nav__link">
+    What I learned
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment" class="md-nav__link">
+    Group Assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week08/" class="md-nav__link">
+        8. Computer controlled machining
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week09/" class="md-nav__link">
+        9. Embedded Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week10/" class="md-nav__link">
+        10. Molding and Casting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week11/" class="md-nav__link">
+        11. Input Devices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week12/" class="md-nav__link">
+        12. Output Devices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week13/" class="md-nav__link">
+        13. Applications and Implications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week14/" class="md-nav__link">
+        14. Networking and Communications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week15/" class="md-nav__link">
+        15-16. Mechanical and Machine Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week16/" class="md-nav__link">
+        17. Interface and Application Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week18/" class="md-nav__link">
+        18. Wildcard Week
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week19/" class="md-nav__link">
+        19. Invention, Intellectual Property, and Income
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week20/" class="md-nav__link">
+        20. Project Development
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projects" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/final-project/" class="md-nav__link">
+        Final Project: Automatic Glasses Cleaner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/senior_project/" class="md-nav__link">
+        Senior Project: Wireless Bluetooth Clock
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-kicad" class="md-nav__link">
+    Downloading KiCad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-sided-pcb-in-kicad" class="md-nav__link">
+    Single Sided PCB in KiCad
+  </a>
+  
+    <nav class="md-nav" aria-label="Single Sided PCB in KiCad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea" class="md-nav__link">
+    Idea
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kicad-schematic-editor" class="md-nav__link">
+    KiCad Schematic Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kicad-pcb-editor" class="md-nav__link">
+    KiCad PCB Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting" class="md-nav__link">
+    Exporting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milling" class="md-nav__link">
+    Milling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coding" class="md-nav__link">
+    Coding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#double-sided-pcb-in-kicad" class="md-nav__link">
+    Double Sided PCB in KiCad
+  </a>
+  
+    <nav class="md-nav" aria-label="Double Sided PCB in KiCad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kicad-schematic-editor_1" class="md-nav__link">
+    KiCad Schematic Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kicad-pcb-editor_1" class="md-nav__link">
+    KiCad PCB Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copper-pour" class="md-nav__link">
+    Copper Pour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-vias" class="md-nav__link">
+    Adding Vias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting_1" class="md-nav__link">
+    Exporting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#milling_1" class="md-nav__link">
+    Milling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems-i-ran-into" class="md-nav__link">
+    Problems I Ran Into
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-i-learned" class="md-nav__link">
+    What I learned
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment" class="md-nav__link">
+    Group Assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="7-electronics-design">7. Electronics Design<a class="headerlink" href="#7-electronics-design" title="Permanent link">&para;</a></h1>
+<p><strong>Assignment</strong> redraw an <a href="http://academy.cba.mit.edu/classes/embedded_programming/index.html#echo">echo hello-world board</a>, add (at least) a <a href="http://search.digikey.com/scripts/DkSearch/dksus.dll?Detail&amp;name=SW262CT-ND">button</a> and LED (with current-limiting resistor) check the design rules, make it, and test that it can communicate
+extra credit: simulate its operation</p>
+<h2 id="downloading-kicad">Downloading KiCad<a class="headerlink" href="#downloading-kicad" title="Permanent link">&para;</a></h2>
+<p>I went to the <a href="https://www.kicad.org/download/">KiCad</a> website and downloaded the worldwide OSDN versio for windows. To get more familiar with the software I watched tutorial videos provided by <a href="https://app.techexplorations.com/courses/kicad-like-a-pro-3e/">Tech Explorations</a></p>
+<h2 id="single-sided-pcb-in-kicad">Single Sided PCB in KiCad<a class="headerlink" href="#single-sided-pcb-in-kicad" title="Permanent link">&para;</a></h2>
+<p>My plan was to create a board with a button that didn&rsquo;t act as a kill switch but as an input. The plan was for the LED to stay on unless the button was pushed.</p>
+<h3 id="idea">Idea<a class="headerlink" href="#idea" title="Permanent link">&para;</a></h3>
+<p>I used my <a href="../week05/">earlier documentation</a> on my blinky board as a reference for this. Except this week I was tasked to add a button. The button couldn’t act as a kill switch but as an input for the ATTiny412. The components I would use from the previous board would be:</p>
+<ul>
+<li>ATTiny412</li>
+<li>4 Pin Button</li>
+<li>LED</li>
+<li>330 Ohm Resistor</li>
+<li>3 Pin Header</li>
+<li>1 UF Capacitor</li>
+</ul>
+<h3 id="kicad-schematic-editor">KiCad Schematic Editor<a class="headerlink" href="#kicad-schematic-editor" title="Permanent link">&para;</a></h3>
+<p>I first had to download the component library for Fab Academy first. I used this <a href="https://gitlab.fabcloud.org/pub/libraries/electronics/kicad">GitLab</a> link to download the library. Once I downloaded the zip, I extracted the files and loaded it into a separate directory. To incorporate it into KiCad. I performed the following steps:</p>
+<ol>
+<li>Preferences &gt; Symbol Library &gt; Select <strong>fab.kicad_sym</strong>. This uploaded the symbols</li>
+<li>Preferences &gt; Manage Footprint Library &gt; <strong>Select the directory labled fab.pretty</strong></li>
+<li>Preferences &gt; Configure path &gt; Select directory where the files are downloaded</li>
+<li><strong>Don&rsquo;t change the nickname of the file</strong></li>
+</ol>
+<p>I then started adding the symbols into the schematic editor. Most of the symbols already came with footprints.  I added the following, most of the component are from the Fab library</p>
+<ul>
+<li>ATTiny412 chip</li>
+<li>Unpolarized Capacitor</li>
+<li>Normal Resistor</li>
+<li>LED</li>
+<li>Male Connector</li>
+<li>4 Pin Button</li>
+</ul>
+<p>I connected these components together. Important things to note, the power and ground had to go from the header to the capacitor then to the microcontroller. This helps the microcontroller not reset if there is a dip in power. I then drew another wire from the power wire into the LED then into the resistor then into the pin. For the button, I had to connect one wire to the ground and the other end to the ground. The last step was the UPDI, and I had one wire go directly from the pin to the UPDI pin. The next step was to edit the microcontroller symbol so I wouldn’t receive any errors after the ERC. I did this by</p>
+<p>For pins</p>
+<ol>
+<li>Select on the pin to  </li>
+<li>Electrical type: Unconnected</li>
+<li>Select Invisible</li>
+</ol>
+<p>For the Power and Ground</p>
+<ol>
+<li>Electrical type power input</li>
+</ol>
+<p>Save and close</p>
+<p><img alt="image" src="../../images/week07/WorkingSymbol_6_11zon.jpg" /></p>
+<p>The microcontroller should save the edit but to make sure, I ran the ERC but there was still one error regarding the power and ground. This occurred because the ERC couldn’t find a power source such as a battery. Mr. Dubick informed us that we had to add power flags to the vcc and ground to correct this error. I saved this schematic and uploaded it into the PCB editor.</p>
+<h3 id="kicad-pcb-editor">KiCad PCB Editor<a class="headerlink" href="#kicad-pcb-editor" title="Permanent link">&para;</a></h3>
+<p>This process was simple but was difficult.  I simply had to connect wires to the different components. The difficulties I experienced were placing the components in the right area and not having the wires overlap or be too close together. To help me through this I created constraints for the tracks by performing the following</p>
+<p><img alt="image" src="../../images/week07/Screenshot%202022-03-02%20205256_1_11zon.jpg" /><figcaption>The schematic right after uploading into PCB editor</figcaption></p>
+<p>File &gt; board setup &gt; design rules &gt; constraints and I made <strong>minimum clearance 0.4 mm</strong> and the <strong>minimum track width 0.5 mm</strong></p>
+<p><img alt="image" src="../../images/week07/boardSetup_8_11zon.jpg" /></p>
+<p>At multiple points throughout the process, I had to change the pin of the button so that it wouldn’t cross over any wires. I went through multiple designs, but I was able to figure out one that worked. One crucial thing that I did was <strong>label the power, ground and UPDI pins on the microcontroller and the pins</strong>. This made it much easier to connect the right pins.  </p>
+<p>To check that my design was good I selected the ERC and the only errors I received were silkscreen errors which were nothing to work about.</p>
+<p><img alt="image" src="../../images/week07/WorkingSchematic_5_11zon.jpg" /><figcaption>My working schematic</figcaption></p>
+<h3 id="exporting">Exporting<a class="headerlink" href="#exporting" title="Permanent link">&para;</a></h3>
+<p>I checked that the PCB was ready to export by</p>
+<ul>
+<li>Making sure all of the components were on the F.Cu or the <em>front copper layer</em></li>
+<li>Creating a box around my PCB on the Edge.Cuts layer.</li>
+<li>Check the 3D Viewer</li>
+</ul>
+<p>To export the file I had to select <strong>File &gt; Plot &gt; Select the layers to plot (Usually the F.Cu and Edge. Cuts) &gt; Plot</strong>.</p>
+<p><img alt="image" src="../../images/week07/SETTINGS_2_11zon.jpg" /></p>
+<p>The files showed up in the directory where I saved the schematic and the pcb design.</p>
+<p><img alt="image" src="../../images/week07/ShowingGbrFile_4_11zon.jpg" /></p>
+<h3 id="milling">Milling<a class="headerlink" href="#milling" title="Permanent link">&para;</a></h3>
+<p>I uploaded the files into bantam tools milled out the board using my <a href="../week05/">earlier documentation</a> to mill the board. Once I hit mill all visable my board was complete.</p>
+<video width="700" controls>
+  <source src="../../images/week07\videos\Milling_Blinky.mp4" type="video/mp4" />
+</video>
+
+<p><img alt="image" src="../../images/week07/MilledPCB_11zon.jpg" /></p>
+<p><img alt="image" src="../../images/week07/FullySolderedPCB_11zon.jpg" /></p>
+<h3 id="coding">Coding<a class="headerlink" href="#coding" title="Permanent link">&para;</a></h3>
+<p>I used example code from <a href="https://fabacademy.org/2021/labs/charlotte/students/graham-smith/assignments/4ElectronicProduction/">Graham Smith&rsquo;s documentation</a>. I wanted the LED to stay on constantly but only turn off when I pressed the button. I made the pin the button was connected act as a pull up resistor. I then made the pin that the LED was connected to stay LOW (so the LED would turn on) unless the pin that the button was connected to receive a LOW signal (the button is pressed) which would make the LED pin run high (or stop the flow of power). I edited the pin numbers but an error I received was that the code couldn’t run with an ATTiny412 chip.</p>
+<p><img alt="image" src="../../images/week07/errorforcomplingATTinyFull_10_11zon.jpg" /></p>
+<p>I realized that the error was because my pins were wrong. In the code I had defined a pin as “7” but when looking at the pinout of the microcontroller, pin 7 doesn’t exists, it’s only a label. The real pin was pin 4. I changed this and the code compressed.</p>
+<p>Here is the code</p>
+<div class="codehilite"><pre><span></span><code>int ledPin = 1;
+
+void setup()
+{
+    pinMode(ledPin, OUTPUT);  // Defines the LED pin
+    pinMode(4, INPUT_PULLUP); // Makes the button pin read as HIGH if button isn&#39;t pushed
+}
+
+void loop()
+{
+    if (digitalRead(4) == HIGH) // Button Isn&#39;t Pushed
+    {
+        digitalWrite(ledPin, LOW); // LED will stay on
+    }
+    else
+    {
+        digitalWrite(ledPin, HIGH); // LED turns off
+    }
+}
+</code></pre></div>
+
+<p>I plugged in <a href="../week05/">my programmer</a> into the PCB, connecting the power, ground, and UPDI. I configured the tools in arduino using my <a href="../week05/">earlier documentation</a> on the ATTiny412 blinky. I ran the code and my board worked.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WmLtZVQt3J4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="double-sided-pcb-in-kicad">Double Sided PCB in KiCad<a class="headerlink" href="#double-sided-pcb-in-kicad" title="Permanent link">&para;</a></h2>
+<p>This board is based off of a future project. A 7-Segment digital clock that encoporates two bluetooth speakers. Something for my senior year before I graduate from Charlotte Latin. The code I was using was built for an Arduino so I used an AtMega328P for my chip. My materials list is below</p>
+<ul>
+<li>AtMega328P</li>
+<li>Red LED 2x</li>
+<li>330 Ohm Resistor 2x</li>
+<li>1 uF Capacitor</li>
+<li>2 Pin Header 4x</li>
+<li>3 Pin Header 3x</li>
+<li>4 Pin Header</li>
+</ul>
+<h3 id="kicad-schematic-editor_1">KiCad Schematic Editor<a class="headerlink" href="#kicad-schematic-editor_1" title="Permanent link">&para;</a></h3>
+<p>My goal for this board was to have everything run through it, PWR, GND, Data, and PGR. With this in mind I decided that each component should have their respective PWR and GND headers, and not just having ground headers and power headers connected creating a wire mess. I realized this while finishing my <a href="../../projects/final-project/">final project</a>.</p>
+<p>Following similar steps to my single sided PCB documentation above, I created a power LED indicator and I also create a small programming LED so I can test some simple code. Then I added the capacitor and connected that to the main PWR, GND, and UPDI line. Finally I connected all of the pins and to their repsective component headers whether it was I2C or FTDI or the Neopixels I was using. For a double sided PCBs the schematic editor doesn&rsquo;t really change, its just most of the planning that goes into the design.</p>
+<p><img alt="pcb_double_sided" src="../../images/week07/Double_Sided/Double_Sided_Schematic.jpg" /></p>
+<h3 id="kicad-pcb-editor_1">KiCad PCB Editor<a class="headerlink" href="#kicad-pcb-editor_1" title="Permanent link">&para;</a></h3>
+<p>This is where I had to do some research on double sided PCBs with KiCad. I learned that to make a double sided PCB I needed a <em>Via</em> or a connector between layers of a PCB since my PCB was only two layers I could simply use a through hole via I used this image below on figuring out which type of Via I needed</p>
+<p><img alt="Type_of_via" src="../../images/week07/Double_Sided/Types_of_Vias.jpeg" /></p>
+<p>Next I had to figue out exactly how to encoporate this into KiCad. To figure that out, I went to Youtube and found a couple of useful videos. The first one is from <a href="https://www.youtube.com/@aaltofablab3504">Aalto Fablab</a> and the second is from <a href="https://www.youtube.com/@PhilsLab">Phil&rsquo;s Lab</a>. I recommend watching both videos fully as they are very helpful. Aalto Fablab&rsquo;s video explains how to encoporate a Via into KiCad. Phil&rsquo;s video goes into more depth about adding a copper pour, a large area of copper that can act as a ground plane in some cases, skip to <a href="https://youtu.be/aVUqaB0IMh4?t=5245">1:27:25</a> to see him add the Vias. I was confused initially about copper pours so I used this <a href="https://madpcb.com/glossary/copper-pour/">link</a> to help explain it along with this image.</p>
+<p><a href="../../images/week07/Double_Sided/Copper_Pour_example.png">copper pour example</a></p>
+<p>Here are the videos I mentioned earlier</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZbP9FEIVfaw?start=4936" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aVUqaB0IMh4?start=4820" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="copper-pour">Copper Pour<a class="headerlink" href="#copper-pour" title="Permanent link">&para;</a></h3>
+<p>For my PCB I needed a copper pour and one trace on the back of the PCB. For the pour I followed the steps in the video above. First I clicked <strong>Add filled zone</strong> and then proceeded to click on a starting point to trace the whole outline. </p>
+<p><img alt="copper zone" src="../../images/week07/Double_Sided/Add_Filled_Zone.jpg" /></p>
+<p>After that I was brought up with <strong>copper zone properties</strong>. I made sure to select <em>GND</em> as the traces and <em>B.Cu</em> </p>
+<p><img alt="image" src="../../images/week07/Double_Sided/Copper_Zone_Properties.jpg" /></p>
+<p>Then I traced an outline of the whole design.</p>
+<p><img alt="image" src="../../images/week07/Double_Sided/Copper_Zone_Outline.jpg" /></p>
+<p>Once I was finished with that <strong>I pressed &ldquo;B&rdquo;</strong> to fill the zone and I was finished with the copper pour.</p>
+<p><img alt="image" src="../images/week07/Double_Sided/Copper_zone_filled.jpg" /></p>
+<p>This got pretty annoying to design around so I clicked <strong>Show only zone boundaries</strong> to hide the filled zone</p>
+<p><img alt="image" src="../../images/week07/Double_Sided/Hidding_Copper_Zone.jpg" /></p>
+<h3 id="adding-vias">Adding Vias<a class="headerlink" href="#adding-vias" title="Permanent link">&para;</a></h3>
+<p>The next thing I had to do was connect all of the ground pins to the back zone using a via. First I clicked on a trace on the F.Cu like normal then rooted a small trace outward, then I <strong>pressed &ldquo;V&rdquo; to insert a via</strong>. With the via connected I double clicked it and the via was set.</p>
+<p><img alt="image" src="../../images/week07/Double_Sided/Adding_Via.jpg" /></p>
+<p><img alt="image" src="../../images/week07/Double_Sided/Finished_Via.jpg" /></p>
+<p>I had to make sure that the via settings were correct with the ones we had in the lab so I double clicked on the via to make sure I had the right settings. The via hole is the actual size of the rivet and I&rsquo;m using .8 mm rivets. The via diameter should be twice the size of the via hole.</p>
+<ul>
+<li>Via Hole: 0.8 mm</li>
+<li>Via Diameter: 1.6 mm</li>
+</ul>
+<p>Next I had to connect a VCC trace to another side of the board using a via so similar to the steps above I rooted a trace then added a via, but this time instead of double clicking I created a trace on the B.Cu then moved it toward its intended location. </p>
+<p><img alt="image" src="../../images/week07/Double_Sided/Rooting_out_back_trace.jpg" /></p>
+<p>Then I added another via to bring me back to the F.Cu then connected that trace to its intended area. </p>
+<p><img alt="image" src="../../images/week07/Double_Sided/Adding_back_via.jpg" /></p>
+<p><img alt="image" src="../../images/week07/Double_Sided/Back_trace_fully_connected.jpg" /></p>
+<p><strong>IMPORTANT</strong></p>
+<p>Since I added a pour earlier I had <strong>press &ldquo;B&rdquo;</strong>  to fill the zone again but this time with the new trace I created on the back layer. If I didn&rsquo;t do this, then the trace wouldn&rsquo;t show up on the B.Cu and it would just be the vias.</p>
+<p><img alt="image" src="../../images/week07/Double_Sided/Copper_zone_with_trace.jpg" /></p>
+<h3 id="exporting_1">Exporting<a class="headerlink" href="#exporting_1" title="Permanent link">&para;</a></h3>
+<p>Similar to the documentation for the single sidded PCB I ran the DRC and everything checked out ok. Then I hit Plot and I checked the following</p>
+<ul>
+<li>F.Cu</li>
+<li>B.Cu</li>
+<li>Edge.Cuts</li>
+</ul>
+<p><img alt="image" src="../../images/week07/Double_Sided/Plot_double_sided_PCB.jpg" /></p>
+<p>After that I clicked plot</p>
+<p>Since I had vias I had to also click <strong>generate drill files</strong> on the same menu. After clicking that I made sure to check the following</p>
+<ul>
+<li>PTH and NPTH in single file</li>
+<li>Drill Units: Millimeters</li>
+</ul>
+<p><img alt="image" src="../../images/week07/Double_Sided/Generate_drill_files.jpg" /></p>
+<p>Then I hit generate drill files. I saw a .drl file in the project directory and I was done exporting.</p>
+<h3 id="milling_1">Milling<a class="headerlink" href="#milling_1" title="Permanent link">&para;</a></h3>
+<p>For this step I used my <a href="../week05/">PCB Production</a> documentation on double sided PCBs and after that I was done with designing aspect of the PCB.</p>
+<h2 id="problems-i-ran-into">Problems I Ran Into<a class="headerlink" href="#problems-i-ran-into" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Finding the correct symbols with footprints</li>
+<li>Creating constraints</li>
+<li>Wiring the PCB so the wires don’t cross</li>
+<li>Editing the pins on the microcontroller so the wiring in the PCB editor wouldn’t cross over.</li>
+</ul>
+<h2 id="what-i-learned">What I learned<a class="headerlink" href="#what-i-learned" title="Permanent link">&para;</a></h2>
+<p>This week I learned a lot about pull up and pull-down resistors. The microcontroller that we use <a href="https://www.bing.com/search?q=atitny412&amp;cvid=6c44eb7919a044ff808d18c5ae5dc904&amp;aqs=edge..69i57j0l4j69i59j0l3.4154j0j1&amp;pglt=2211&amp;FORM=ANNTA1&amp;PC=W037">ATTiny412</a> has a built-in resistor that when called upon can act as a pull up resistor. Because of this I didn’t have to include a resistor in our designs. I also learned that adding symbols in the schematic editor doesn’t really correlate to anything unless it has a footprint assigned to it. The importance of having the correct wires connected in the schematic editor is critical for the PCB editor. This is because the PCB editor won’t allow you to connect any wires unless they are connected in the schematic editor. In the PCB editor it doesn’t tell you how to connect the wires, but where. Because of this I almost connected my power pin directly into the microcontroller and then into the capacitor (which would make the capacitor useless). I realized this and was careful that the wires were connected as intended in the schematic editor</p>
+<h2 id="group-assignment">Group Assignment<a class="headerlink" href="#group-assignment" title="Permanent link">&para;</a></h2>
+<p>The group assignment this week was to learn how to operate an oscilloscope and a multimeter. I have used a multimeter before, so the equipment was very familiar, but the oscilloscope was new to me. We were able to judge the analog signal of the LED in the programmers. Unlike a multimeter, which provides an average value when using, an oscilloscope provides real-time adjustments to the LED. The site is located <a href="https://fabacademy.org/2022/labs/charlotte/assignments/week07/">here</a>.</p>
+<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The files to the schematic, PCB and gerber&rsquo;s are <a href="../../images/week07/Button%20Blinky.zip">here</a></li>
+<li>The coding files are <a href="../../images/week07/Code_Week07.zip">here</a></li>
+</ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 27, 2023</span>
+      
+    
+  </small>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../week06/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 6. 3D Printing and Scanning" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              6. 3D Printing and Scanning
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../week08/" class="md-footer__link md-footer__link--next" aria-label="Next: 8. Computer controlled machining" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              8. Computer controlled machining
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright 2022 Aaron Logan - Creative Commons Attribution Non Commercial
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://instagram.com/fabacademany" target="_blank" rel="noopener" title="instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://facebook.com/fabacademany" target="_blank" rel="noopener" title="facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ASteeleLogan" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/aaron-steele-logan-2b6535205/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.5e67fbfe.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e87a5f81.min.js"></script>
+      
+    
+  </body>
+</html>

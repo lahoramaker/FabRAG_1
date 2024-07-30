@@ -1,0 +1,61 @@
+Title: MCO Fab Academy 2018
+
+URL Source: http://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/assignment16.html
+
+Markdown Content:
+This week I am programming the motors. We have decided to go with Gestalt. From [Ilan Ellison Moyer´s Master's thesis](http://pygestalt.org/VMC_IEM.pdf) "Gestalt is an accessible and flexible control framework which aims to augment the ability of individuals to create new automated tools, and to thus self-extend their abilities to create objects which would be too tedious or impossible to create by hand." A good place that helps to get started is [this tutorial](http://fabacademy.org/archives/2015/doc/MachineMakingNotes.html) from fabacademy
+
+To Do
+-----
+
+1.  Prepare the environment for using Gestalt nodes
+2.  First test
+3.  Do the programming and testing
+
+The "Doing"
+-----------
+
+### Programming environment
+
+Gestalt framework is python based. Specifically, python 2.7 is needed. Actually, the list of things to be done is:
+
+### Preparing and testing
+
+Physical layer is called [Fabnet](http://mtm.cba.mit.edu/fabinabox/dev/fabnet/overview.html), "a multi-drop network, meaning that multiple modules (a.k.a. nodes) share a single set of communication wires. Signalling is differential based on the RS-485 specification." It is implemented with an RS485 bus. A bridge between it and fabnet is needed. Luckily, there was already a board prepared from last year. So I prepared the setting to test first just one motor: [![Image 1](https://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment16/IMG_20180511_161025.jpg)](https://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment16/IMG_20180511_161025.jpg)
+
+12 V is needed from the ´power source and I adjust the Ilimit to 0.600mA [![Image 2](https://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment16/IMG_20180514_092423.jpg)](https://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment16/IMG_20180514_092423.jpg) And prepared to run the `single_node.py` example. I just had to change the `portName` at the `def initInterfaces(self)` of the `virtualmachine` with my COM port number which was COM13 most of the timesAt first it was not working. I checked, double checked, triple checked I had downloaded all the code needed and that I had the pins correctly connected. Nothing. I was almost sure it should be a connection, but not idea where. I could not get the blue led tinkle. I was very frustrated because it everything seemed to be very straightforward, but I got stuck in this point. Finally, another eyes (Jari) spotted the incorrect connection. And it worked as expected: blue led started tinkling, I pressed the buttonon the node to set it as the axis and it moved!
+
+[![Image 3](https://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment16/single_node_example.png)](https://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment16/single_node_example.png)
+
+[![Image 4](https://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment16/IMG_20180514_092836.jpg)](https://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment16/IMG_20180514_092836.jpg)
+
+### Programming the motors
+
+Once I was able to move one motor, I went on to test the two motors. For that, I connected the two motors we had already prepared from last week: [![Image 5](https://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment16/IMG_20180514_163758.jpg)](https://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment16/IMG_20180514_163758.jpg) ... and started testing the `xy_plotter.py` example. [![Image 6](https://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment16/xx_plotter_example.png)](https://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/img/assignment16/xx_plotter_example.png) I then started to modify that code. I started looking to the output screen, trying to understand what was going on. Then, I set different points, first trying to adjust the horizontal movement to the actual length we needed. Then, I set different speeds for each node, testing them to see what worked better. Finally, setting the same slow velocity to both nodes (finally 2), was working better.First demo with motors
+
+[Fruit Peeler Team](https://vimeo.com/269864333) from [Marta](https://vimeo.com/macordu) on [Vimeo](https://vimeo.com/).
+
+Resources
+---------
+
+*   Gestalt nodes and [software](https://github.com/imoyer/gestalt)
+*   [this tutorial](http://fabacademy.org/archives/2015/doc/MachineMakingNotes.html) from fabacademy
+*   Corresponding assignment from [Yrjö](http://archive.fabacademy.org/archives/2017/fablaboulu/students/55/assignment_11.html)
+
+Once done
+---------
+
+### Summary
+
+*   I have programmed the gestalt nodes
+*   I have done documentation on the page and organized the layout
+*   I have participated in testing different solutions for the blades
+*   I have participated in testing different solutions for holding the fruit
+
+### Difficulties
+
+*   Main difficulty was a small but time consuming one: find the wrong cable when the gestalt motors were not working at first
+
+### Files
+
+*   [python code for the machine](https://fabacademy.org/2018/labs/fablaboulu/students/marta-cortesorduna/files/assignment16/apple_peeler.py) adapted from example xy\_plotter.py

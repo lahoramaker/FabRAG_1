@@ -1,0 +1,1001 @@
+Title: Computer-Controlled Cutting
+
+Content:
+First machine week! We’re learning how to handle a laser and vinyl cutter, and gosh did I enjoy working with the laser cutter!
+Assignments
+Our tasks for this week are:
+Group assignment: characterize your lasercutter’s focus, power, speed, rate, kerf, and joint clearance document your work.
+Individual assignments:
+Design, lasercut, and document a
+parametric press-fit construction kit
+, which can be
+assembled in multiple ways
+while accounting for the lasercutter
+kerf
+.
+Cut something on the vinylcutter.
+Hero Shots
+Showing some final results for the
+tl;dr
+and hopefully showing you why the rest of this very long blog could be interesting to read
+(⌐■_■)
+.
+The final “Hexagon Circles” design sticked to the back of my Fab Academy notebook
+You can find many more photos of the Platonic and Archimedean Solids that I created in the
+Assembling the Spheres
+section.
+Designing Parametrically With Cuttle
+In creating a press-fit construction kit that could be assembled in different ways I initially thought to create a
+marble run
+. But then Neil mentioned in Wednesday’s lecture that
+this
+was the week to be creative. And after hearing that I knew I wanted to create something that I would find
+beautiful
+instead.
+I randomly looked through Pinterest to see what “laser cutting” would return, and gosh, so beautiful! However, most was not press-fit. Until I saw a lovely example of a
+dodecahedron
+(a polyhedron with twelve pentagon faces, almost like a sphere), with an intricate design for the interior of the pentagon’s shape. I knew I wanted to create my own polyhedrons with different designs for each n-corner shape. Not a new idea in general, but new to me, felt like a challenge, and should hopefully create some beautiful results.
+Finding Cuttle
+During Neil’s lecture someone had posted a link to
+Cuttle
+which I’d opened. During the evening, while I was going through all of the links I’d opened from the lecture page, making notes, filing them away and assessing the different tools that were discussed for creating a parametric design, I came across the Cuttle again. After watching the short intro video on the homepage, I knew that
+this
+was the tool I wanted to work with. The video made it seem so easy, straightforward, and
+creative
+to create your 2D designs. Plus, you could use JavaScript code in certain ways to go even more crazy. Just what I needed. It’s still in private beta, so I filled in the invite form Wednesday evening and had my fingers crossed that I hopefully have an invite code by Thursday morning.
+And I did!
+(　＾∇＾)
+I started by watching the 5 tutorial videos (you can find several
+here
+), one of which is how to create a
+parametric
+box!
+I realized that Cuttle wasn’t
+quite
+the
+“I don’t need to watch tutorials and know how it works”
+kind of tool. But after the first 10 minutes of the first two tutorials it really clicked. Plus, many of the ways of working and shortcuts are the same as Illustrator and other vector programs (e.g. selecting several items and pressing
+⌘+G
+will group them).
+Starting a new cuttle design
+As a bonus, Cuttle has
+version history
+. You can save a version whenever you want (it also auto-saves), and it automatically saves a version during an (
+svg
+) export. You can then restore previous versions to see what you did before, or go back if you’ve royally messed up somehow. I used this option several times later in the week to double-check what parameters I’d set during my different laser cutting tests.
+Setting-up a Hexagon Design
+Naturally, I started with the creation of a hexagon shape. I created a global parameter for the
+side_length
+of the hexagon. You can create global project-wide parameters, but also have parameters for each component that you create. You can then adjust the values for each of copy of the component you create. For example, I created a hexagon first, and had a
+points
+parameter for my hexagon component that represented the number of corners, using this parameter throughout the design of the hexagon. Later I duplicated my hexagon component, set the
+points
+value to 5 and voila, I had a pentagon!
+Usually I work with the
+radius
+of polygons. However, since I wanted to eventually create multiple shapes, they had to fit together, and thus have their
+outer edges
+be the exact same length. After some trigonometry in my notebook, I figured out the formula to set the radius of the polygon using the
+side_length
+with
+scale_radius = (side_length/2) / Math.sin((2 * Math.PI) / (points * 2)) / 0.5
+. See the
+scale_radius
+parameter along the right side below (Technical note: Cuttle sets the diameter of a polygon to 1, not the radius, thus I had to divide the radius by 0.5 for the correct scale factor).
+Having parametrically set-up my hexagon, with a fixed edge length
+I created an outer thick rim along which I could make the slits to connect to other shapes and added an Arabic-like pattern to the inside.
+The design of my hexagon piece
+The creation process is so easy with Cuttle that I actually created the below ±2 min video to show how you can go from nothing to my (almost) final hexagon design (only the slits are missing from the sides). This uses (basically) no parametrization, otherwise the video would be twice as long with me just putting in numbers.
+Going from nothing to my final hexagon design
+Of course, when I did this for the first time it took longer to figure out all the steps. But I’m still amazed by how easy it is to create complex shapes with Cuttle.
+Making it all parametric took some time as well, but mostly at the start, when I was figuring out my main parameters. After that I just had to use the parameters in my set-up of new elements. The video below is from later in the process, where I’d also created my connector piece already, but it highlights how the design is indeed parametric.
+Showing the parametric side of my design
+I specifically had to make the outer thicker “ring” be offset
+inward
+from the base hexagon. I did this wrong initially, where I outlined the shape in both directions. However, this creates different
+outside
+side lengths when the process is applied to different shapes (I should’ve realized that
+(>﹏<)
+). Thankfully, the Cuttle Discord channel is very active, and I was quickly explained why this is happening. The image below right shows the main concept.
+My hexagon and square didn’t have the same outer edge lengths
+Offsetting the base shape around the central shape will result in different shapes having slightly different outer edge lengths
+The black shapes in the right-hand image above represent the original shapes that have the same edge lengths. The blue line is the offset towards the outside that is the same for both. The red line shows the new shape, and you can clearly see how the square now has longer edges than the hexagon.
+As the image above left shows, I started out with rectangular slots instead of slits. Because I wanted to create multiple “spheres” with my different shapes, each of these need a “connector” piece at different angles. I first hoped I could make a “universal connector” ring with a small opening on one side that I could loop through the slots of both shapes. But after discussing with out instructor, Henk, it proved to not be feasible. Acrylic would not be bendable enough, and the cardboard
+too
+bendable. So I updated to slits instead.
+Adding Slits
+Creating the slits was very straightforward. I made a component for one slit. A rectangle of
+material_thickness
+in width and
+slit_depth
+in height. I added a tiny rectangle along one side to mimic a
+chamfer
+(there isn’t yet a modifier to create this in Cuttle, but it’s been requested), and then mirrored it to the other side of the main slit. A final
+boolean union
+and my slit was done.
+The basis of one slit
+Next I created a new component in which I placed my
+slit
+component. Using parameters I placed the slit at a certain distance along the
+side_length
+and created one copy of the slit a certain distance away, to become a mirrored copy.
+Using one slit and a copy to create the component that adds slits to each of my shapes
+Finally, I placed the duo-slit component into my hexagon design, using parameters and trigonometry to place the component along one side exactly (see the green boxes in the image below). I then applied a
+Rotational Repeat
+to the duo-slit component, and finally a
+Boolean Difference
+of the slits with my hexagon shape, and the slits were cut out of each side of the hexagon.
+Placing the duo-slit component and setting a rotational repeat to have them be placed along all sides
+Creating a Connector Component
+For the connector pieces I created a rectangle, and inserted the original
+slit
+component into the top. Depending on the shape that you want to build, the connectors need to be a different
+dihedral angle
+; the angle between two intersecting planes. I thus had to create a connector where you put in an angle, and it updates to a shape of that angle.
+I wanted to have a connector where the outer corners would always be perfectly aligned, no matter the angle. Well, it took some tries and math, but I got there eventually!
+It took a few tries and drawings before I figured out the math for my connector pieces
+After some trial and error with the connectors, I realized that I’d forgotten to properly account for the
+length
+of each “arm”. You always want the edges of the two shapes you’re connecting to perfectly line up (at the inner sides), as the close-up image below shows.
+The connectors should be just long enough so the two shapes, when put together, those touch perfectly (at the inner side)
+That means that the distance between the
+central rotation point
+(of the two arms of the connector) and the
+outside
+of each arm shortens for a wider angle (you can see this better in the video a little below of the connector design in Cuttle).
+And so, after my second batch of connectors failed to work properly when I used different types of connectors together (with
+types
+I mean different
+angles
+), I sat down with my little notebook again to look at the math and realized that it really wasn’t as complex as I’d feared. (The thought process / scribbled images on the photo below goes from
+right
+to
+left
+. I’m a lefty, so I sometimes start at the far side of the page and work backwards when brainstorming my math
+¯\_(ツ)_/¯
+)
+Putting together the Dodecahedron with only one final 3-pentagon piece to go
+The height from the top of each arm to the outside corner at which the two arms connect is expressed by
+h = 2 * slid_depth + B
+, where
+slit_depth
+is the depth of the slit, and
+B
+is the additional padding needed. This comes from
+B = (m + c) / tan(dihedral_angle/2)
+, where
+m
+is the
+slit_width
+(the material thickness here),
+c
+the thickness of each “tooth” of the connector arm, and the
+dihedral_angle
+is the angle the two arms of the connector are making.
+With all of that put into my parameters in Cuttle, and those parameters applied to the right transformations of the height, position, and rotation of each connector “arm”, I had it working so you only needed to input a different angle, and the entire connector updates
+(๑•̀ㅂ•́)ง✧¯
+Even when changing the dihedral angles stay in sync
+I also added the (rounded) angle as text on top of the connector piece, to be (more-or-less)
+engraved
+by the laser. Otherwise it would be impossible to know which connector represented which angle, since many have quite similar angles.
+Designing More Shapes
+With my hexagon shape completed, it was time to design the other shapes: a triangle, square, pentagon and octagon. Since I love spirographs I knew that I wanted to have one of the shapes have an inner spirograph. Using Cuttle’s
+Function Plot
+I could set-up a simple spirograph function, setting up several variables (
+R1
+,
+R2
+,
+n1
+, and
+n2
+) of the “spirograph wheels” to play with until I had a shape I liked.
+Using the “Function Plot” to set-up a spirograph inside the octagon
+I played a little with the square design. First I wrote my own “modifier” to create a collection of random circles. But I wasn’t quite liking the result. FYI: I think it’s really nice that you can write your own modifiers using JavaScript. However, I have to admit that (at the time of writing) it’s not very easy because of a lack of documentation on using the Cuttle specific implementation of shapes, angles, paths, and so on in JavaScript variables.
+I then made a flower grid. This grid actually only uses 1 circle as the base. After that it’s only a collection of modifiers;
+Mirror Repeat
+, then a
+Rotational Repeat
+and finally a
+Tile Repeat
+. But eventually settled on something different, rotating one tiny square from the center outward as I also increase the scale.
+A “random circle” design
+A flower grid design
+The triangle and pentagon followed similar paths (I was inspired by another pentagon, but I forgot to save the original link). Below you can see the five final shapes I created:
+The five final shapes I designed
+Cuttle page with all the shapes |
+link
+Cuttle page with all connectors |
+link
+Platonic & Archimedean Solids
+Now that I had all of my base pieces, I really had to figure out
+which
+shapes I intended to create with them, since each would have its own set of
+dihedral angles
+and thus connectors. Reading up on polyhedrons, I quickly gravitated to
+Platonic solids
+and
+Archimedean solids
+as my options. A Platonic solid is a 3D shape where each face is the same regular polygon and where the same number of polygons meet at each vertex (the corners). A cube is a common example. For the Archimedean solids you use a mix of different shapes, such as hexagons
+and
+squares.
+I set-up a spreadsheet for the Solids that I wanted to create; what shapes did they have, how many edges, and what
+dihedral angles
+occurred inside each. From that I decided to make seven connectors at different angles with which I
+should
+be able to create eight different solids.
+Name
+shapes
+dihedral angle
+edges
+Platonic Solids
+Tetrahedron
+4 triangles
+70.53°
+6
+Cube
+8 squares
+90.00°
+12
+Octahedron
+8 triangles
+109.47°
+12
+Dodecahedron
+12 pentagons
+116.57°
+30
+Archimedean Solids
+Cuboctahedron
+8 triangles
+6 squares
+125.26°
+24
+Truncated cube
+8 triangles
+6 octagons
+3-8: 125.26°
+8-8: 90.00°
+36
+Truncated octahedron
+6 squares
+8 hexagons
+4-6: 125.26°
+6-6: 109.47°
+36
+Truncated cuboctahedron
+12 squares
+8 hexagons
+6 octagons
+4-6: 144.74°
+4-8: 135.00°
+6-8: 125.26°
+72
+I then calculated how many I’d need of each shape and of each connector, assuming I wouldn’t be making all the shapes
+at the same time
+. The numbers thus reflect the maximum I would need:
+Shape
+Required
+Angle
+Required
+triangle
+8
+70.53°
+12
+square
+12
+90.00°
+24
+pentagon
+12
+109.47°
+24
+hexagon
+8
+116.57°
+60
+octagon
+6
+125.26°
+48
+135.00°
+48
+144.74°
+48
+Some other Solids that I didn’t decide to add because they looked less interesting, or were just too damn big; the
+rhombicuboctahedron
+,
+(small) rhombicosidodecahedron
+,
+truncated icosahedron
+,
+icosahedron
+, and
+icosidodecahedron
+.
+Below are the final two
+svg
+files I used to create my cardboard shapes with:
+SVG of the shapes (nested by
+Deep Nest
+) |
+SVG file
+SVG of the connectors |
+SVG file
+Laser Cutting
+Although we have been introduced to two machines this week, the laser cutter took center stage. An giant, amazing, and quite dangerous machine. Naturally we got some long instructions about how to use it safely.
+General Instructions
+The laser cutter in the Waag is a CO2 BRM with a moving x- and y-axis where you can set the z-axis to a fixed point as to have the focus of the laser on the material (depending on the thickness of the material). It has a surface of 1600 x 1200 mm.
+The BRM laser cutter at the Waag, with fellow student Douwe standing in the red “not allowed to leave while laser is active” area
+The laser itself is located at the back of the machine, and is water cooled. This water cooler (thankfully) automatically turns on when the laser is active. There is also an air ventilation machine that is located to the right of the machine. This needs to be turned on (big green button on the top-left) before you start the laser, and should be kept on a little longer after the laser is done, so it can vent out the fumes still hanging in the machine.
+The machines around the laser cutter; the actual laser, the water cooler and the air ventilation
+Three mirrors are used to guide the laser beam into the head. Below you can see the first mirror that guides the laser into the laser bed area.
+The first mirror (of three) that guides the laser to the head
+The laser beam is eventually guided into an even smaller beam with a lens that resides in the head. On the laser head there is also an tube that goes into the head right at the end that blows in air. The red pen-like object to the left is used to automatically level the z-axis (not working yet) and to the right is a small laser pen that will show where the origin of the laser will fall (also not yet working).
+The head of the laser
+Our instructor, Henk, recently installed a new controller board for the laser, a Ruida. This can be found on the right side of the machine. However we generally don’t use the controls on the (red) board itself, but control the laser through software on the computer that is attached to the machine. (It appears that the machine gets confused if you use
+both
+the buttons on the board and want to control the laser with the software).
+The top four buttons to (de)activate the laser and (new) Ruida controller below them
+However, there are four very important buttons above the controller. Going from
+right
+to
+left
+:
+Big red button with yellow ring is the
+emergency stop button
+. To stop the laser when, for example, the material is burning. This completely deactivates the machine. The software also has a stop button in case you only want to stop the laser itself.
+The power “button” with the key inside, as if the machine was a car. This unlocks the machine. This is the first thing to turn when you want to start using the machine. Just switch to
+on
+. When completely done (for the day) turn this switch
+off
+to completely power down the machine.
+The green power button. After switching the button above to
+on
+, press the green button to power on the machine.
+The black switch turns on the laser itself. It won’t start moving, but the laser will only work if this is set to
+on
+. The machine will make a loud beep when this is switched to
+on
+. Only set this to
+on
+if you are truly ready to start the laser process, and turn it back to
+off
+when the laser is done with its job.
+When you power on the laser after it was completely shut down, it will first move to its home point, which is in the top-right for this machine, after which it will move back to its last location before being shut down.
+Very important: While the laser is working, you are not allowed to leave the area in front of the laser that is marked by red tape in front of the machine!
+The laser works with pulses, and when you set the power of the laser higher, that means that the frequency of the pulses gets higher, not the actual power output by the laser.
+Operating the Laser Cutter
+To create a laser cut (assuming that the machine is powered on), place the material on the laser bed. Position it below the laser head where you’d like to have the top-left section of your design (the laser is set-up to start from the top-left
+bounding box
+around your design). For some materials you might need to hold it down using weights so it’s more level.
+Align the z-axis by using the “wood thingy” (technical term). Unscrew the laser head by the ring, move it up, place the wood below it (the indented section),
+on top of the material
+, and move the laser head down until it hits the wood. Screw the ring tight again, and now the laser is focused on the material.
+Align the z-axis of the laser (redo this for every new material). You should have your material below the wood
+Next, on the computer connected to the machine, open
+LightBurn
+(it’s probably already open), which is the software to go from your (
+svg
+) design to having the laser cut it. Plug your USB into the PC, and import your file into LightBurn.
+The general overview of LightBurn, the software to prepare your laser cut settings with
+You’ll see you design loaded onto the area of the laser. With the software settings in the Waag, there will be a green dot in the top-left of the design that you just loaded. This green dot is the origin of the laser. No matter where in the LightBurn area you place that design, or where the laser head is actually situated, the laser will assume the green dot is where it starts.
+Along the right-top are a few tabs where you’ll input most of your settings. In the image above it’s displaying the
+Move
+tab. Pressing the arrow head keys in that panel will move the physical laser head. This might be needed if the laser has moved too far right and/or down and needs to be reset.
+Never press the
+Focus Z
+or the up and down arrow buttons.
+You can move the laser head with the arrow keys in the “Move” tab of LightBurn
+The
+Cuts/Layers
+tab gives you the option to change the settings of the laser per line (or layer). If a file without layers and only one color used for the lines is loaded, all lines end up in one layer. However, you can select all the separate elements from your design, and give this a different color (these colors are along the bottom), this will then put the selected lines in a new layer. This can be really useful when you want to use different speed and power settings for different parts of your design. Even more useful is to set the colors in the design already because
+LightBurn assigns a different cut layer to each unique color
+it encounters in the source file, either fill or stroke.
+Deselecting the
+Output
+of a layer will make the laser skip it.
+The “Layers” tab within LightBurn where you can change the settings per line / layer
+The layers tab gives a quick overview of the speed and max power. To change these settings, double-click the numbers, which will open up a window in which you can specify:
+The speed (in millimeters per second). The maximum is about 400 for cutting and 500 for engraving.
+The maximum power (as a percentage). The max power output when the laser is at its defined speed.
+The minimum power (as a percentage). This is the power used along corners, where the laser needs to change direction and thus is moving slowl. The lower power makes sure that you can optimize that the corners don’t get burned. Generally around 15% is a good number.
+Whether or not you can cut through your material depends on the combination of the material, the speed and the power. Slow and high power and you’ll get burns or scorch marks, to high and low power and the laser won’t have cut all the way through.
+The result of cutting through paper at a speed of 100 and three different Max power settings
+The Waag has several test plates per material (and if applicable, different thicknesses) that show the result of certain speeds + max power settings. We also made these tests ourselves, which I’ll go into later.
+Setting the speed and max & min power (my dummy set-up of LightBurn doesn’t show the “Min Power” option)
+You can also specify which type of laser “effect” you want; a normal cut, or an engraving, with the
+Mode
+dropdown. And
+if
+you want to engrave, what type of engraving. Such as halftone, greyscale, etc. The LightBurn software can do the transformation of the design to these types of engravings, although I haven’t yet tried this.
+The result of a quick engraving test, with a small distance between lines for the lower section
+After setting the right speed and power settings. It’s best to first do a “framing” of the area. This button is in the lower-right side. When clicked, the laser head will move along the
+bounding box
+, the smallest rectangle that can enclose the entire design, of all the selected lines. This lets you test if your material is big enough (and that your weights are placed far enough from the laser area).
+The “Start”, “Stop”, “Frame” and other control buttons in LightBurn
+Once all that is done, make sure the lid of the machine is closed (gently!), turn the laser on (that left-most switch on the machine above the controller),
+turn on the air ventilation
+, feel a little stress, and then press the
+Start
+button! Now all you need to do is watch and make sure that it all goes well.
+The laser in action
+If something does go wrong, press the
+Stop
+button in the software, or the emergency stop button above the controller.
+Once the laser is done, turn the laser off (that left-most switch again on the machine above the controller), wait a little while for the air ventilation to suck away the last fumes, power off the air ventilation, and open the lid to see your result up close.
+Fellow student Nicole working with LightBurn on the PC connected to the laser cutter
+Laser Cutting Steps
+To recap, the steps are as follows:
+Place material on the laser bed, possibly holding it down with weights
+Align the z-axis of the laser head (if it’s new material) with the wood aligner
+Open the design in LightBurn on the connected PC
+Set-up the lines with the speed and power settings that you think are needed
+Do a
+Frame
+to check that the full area that the design needs is available and free of weights
+Close the lid, gently
+Turn the laser on with the left-most switch on the machine above the controller
+Start the air ventilation machine
+Press
+Start
+Stay with the machine until it’s finished!
+After it’s done, turn the laser off (with that same switch to turn it on)
+Wait a little to let the air ventilation do its thing
+Turn off the air ventilation
+Open the lid
+All watching in awe as we see the laser in action for the first time
+Laser Cutting Tests
+To get a better understanding of the power of the laser on different materials and get experience in handling the machine, I and the three other students that were present that day, prepared and did several tests.
+Power versus Speed
+Nicole had created a grid of (max)
+Power
+versus
+Speed
+to see the effects of each combination on specific materials. Using the ±30 different colors/layers that you can set-up in LightBurn, Nicole and I (tediously) set the correct speed and (max) power of each rectangle (keeping the min power to 15% for each square), and let the machine do it’s thing on cardboard, wood and acrylic.
+Having given each rectangle its own color with a different speed and max power
+For our very first test, we had clearly set the power too high and speed too low (power 20% max / 10% min and speed 100) for the text engraving. Especially for how close the lines of the words were that we were trying to “etch” out of the cardboard, because the cardboard started to burn immediately.
+Burning the cardboard at the letters for our first power+speed test
+We dialed the settings down to: power 10% max / 0% min and speed 100, and found out that the laser doesn’t give output when the power is set below 10%. Finally setting it to: power 10% max / 10% min and speed 150, made the laser etch out the letters without burning anything.
+The result of the Power vs Speed test for cardboard
+The back result of the Power vs Speed test for cardboard showing the amount of scorch marks
+We moved on to wood (during which I operated the machine, although thankfully we could use the same file in LightBurn), which resulted in the following wooden plates (ignore that it still says “cardboard” at the top). It’s clear that you need to go quite slow and with high power to completely cut through this wood, and none of the cut rectangles are free from scorch marks sadly.
+The result of the Power vs Speed test for (thin) wood
+The back result of the Power vs Speed test for wood showing the amount of scorch marks
+And finally, the results for acrylic of ±3mm thickness. About the same result as for the wood. Again it’s proving quite hard to get any result without scorch marks on the back. However, I found out later that you can remove most of the black soot by rubbing it with ethanol (water and soap don’t work).
+The result of the Power vs Speed test for ±3mm acrylic
+The back result of the Power vs Speed test for acrylic showing the amount of scorch marks
+One downside to this test is that for the higher speeds, the laser can’t actually get up to that speed before it already has to move a corner for the rectangle. I’m therefore not so sure that the rows with speeds above 60 are reliable.
+The SVG used for the “power vs speed” test |
+SVG file
+Calculating the Kerf
+The
+kerf
+is the material that is burned away by the laser, it’s very tiny, and depends on the material and thickness used (
+this
+pages shows a few averages for different materials and thicknesses). However, it will have a big impact on making two pieces fit together snugly.
+After some instruction by our instructor on how to do a
+kerf
+test, fellow student Erwin created a quick design with 10 parallel lines, connected on both end by two lines, where the laser would only go over each line once. This design results in the laser having “eaten” away 10x the diameter of the laser, and measuring it on all the pieces at once, gives much better precision than measuring only 1 piece. Especially here where the kerf is very small.
+The simple shape to be able to measure the “kerf” of the laser
+We basically all stood watching as the machine cut out the the pattern. The first time it didn’t cut through all lines. As I mentioned at the end of the previous section, we’d used a high speed and relatively low power, but with the longer edges, it seems that the laser did get up to speed and was thus too fast to actually cut. After the second attempt, we ended up with 9 strips that we tried to measure, however they were collapsing into each other a little bit, making it impossible to measure.
+The cardboard pieces were collapsing into each other with our first test
+We should’ve cut the strips in the
+opposite
+direction of the cardboard, because of the wave structure within the cardboard. Rotating the cardboard 90°, redoing the pattern for the third time (using a power 40% max / 25% min and speed 100), and we finally had some good strips to measure:
+The width should’ve been 90mm but had been reduced by the laser’s “kerf”
+These strips should’ve been 90mm long, but we measured 88.27mm, thus having lost 1.73mm. Since this came from 10 lines having been burned away, the curve we measure in this ±2.8mm thick cardboard was
+1.73/10 = 0.173mm
+. This represents the
+diameter
+of the laser. For usage in CAD designs, where you need to offset the lines to be cut, this represents the
+radius
+of the laser, thus I should be using
+0.173 / 2 = 0.085mm
+in my designs.
+We redid the test for acrylic and this time measured the resulting strips to be a little smaller even. Coming down to
+(90 - 87.87)/10 = 0.213
+being the kerf. It was a little bigger, but that could potentially be down to having used a greater power and lower speed (I forgot to jot down the exact numbers), and that it’s a thicker and different material. As the website I shared at the top of this section mentions, the curve is slightly different per material and thickness.
+Redoing the kerf test with acrylic
+The SVG used for the kerf test |
+SVG file
+Curve Test
+We also had to test the result on a curved object. This is the test for which I made the design. I used
+Cuttle
+to draw a quick line. I mirrored it and then did a rotational repeat on it to create a symmetrical snow-flake like design. See the original file
+here
+. I played with the line to create some bigger and smaller curves, plus some very sharp corners. In the image below, only the line with the black anchor points truly “exists” the rest are from mirrored copies.
+Creating a curved shape with Cuttle
+We first cut this out of cardboard with a power of 50% max / 15% min and speed 100. That resulted in a very crude shape (below left image). Curves weren’t nicely curved at all, it was rather angular. Apparently the machine wasn’t able to get the precision at such high speeds. We then redid the test at 25% max power and 20 speed the resulting shape was really lovely, with nice round edges and good sharp corners (below right image).
+The rough / angular result of setting the speed to 100
+The nice and curved result of setting the speed to 20
+Pretty cool to finally see some more organic shape appear instead of all the rectangles we’d been cutting before
+ʕ•ᴥ•ʔ
+We also did a test in acrylic, but here we could really only use low speeds to begin with, because otherwise it couldn’t cut through the material anyway. Below is the result for a power of 50% max / 15% min and speed 20. The result looked very nice (although with some soot on the back).
+The nice and curved result of the curve test from acrylic
+We did try another one at a speed of 40 with max power at 100%, but it didn’t cut all the way through.
+The SVG used for the curve test |
+SVG file
+Comb Test
+This is probably not the official name, but it comes down to creating a comb-like figure where the width of each slit if the comb is
+just
+a bit wider than the previous one. Next, you measure which slit width will make two of these combs fit together nice and snug.
+Douwe had created the design of the comb. However, having printed it (in acrylic) it became apparent that the distance between the comb’s “teeth” wasn’t wide enough, because the teeth could be moved just a little.
+The first combs where the slits were too close to each other
+He adjusted the design to add more width between the slits, and it was printed in cardboard. The best and snug fit came at a slit width where
+the design was set to 2.6mm
+. Due to the kerf, the actual slit width would be just a little wider.
+The second comb design cut out of cardboard, fitting snug at 2.6mm
+I measured the thickness of the cardboard we were using by taking the 9 rectangles we’d used for the kerf test. Which results in 9 pieces coming down to 25.09mm, thus one piece was
+25.09 / 9 = 2.79mm
+.
+Measuring the thickness of the cardboard, at 2.79mm
+Since we measured a kerf diameter of 0.17mm and each slit would have lost the radius of this kerf along both edges of the slit, a slit set at 2.6mm in the design, would result in an actual slit width of
+2.6 + 2*(0.17/2) = 2.77mm
+, totalling to the
+actual
+width of the cardboard. And thus we’d kind of proven our kerf dimension again.
+The comb was also cut out of acrylic again. However, since the acrylic had a thickness of 3mm (I used the same method I described above for cardboard to get the result for the acrylic), the comb should’ve run from 2.5mm to 3.5 mm, instead of the numbers used for the cardboard (from 2mm to 3 mm). However, due to the kerf, there was already a (rather) snug fit at 2.9mm, since the
+actual
+slit width was
+2.9 + 2*(0.21/2) = 3.1mm
+. I think the 2.8mm slit was also working well enough? I can’t remember clearly anymore.
+Cutting the updated comb from acrylic again
+The SVG used for the comb test |
+SVG file
+Focus Test
+At the end of my second day in the lab we did a test to see the result of the laser being out of focus with the material. We set up a piece of cardboard around an angle, and tried to focus the laser around the middle of the material (at the scratchy dot in the image below). I quickly created a set of lines in LightBurn and gave each a different power, between 25% and 50% increasing in steps of 5% (speed fixed to 60).
+As we expected the laser cuts a (much) wider gap in the cardboard when the material is both too far away from the focus or is closer than the focus.
+The results of the laser focus test, having cut through a piece of cardboard that was placed under and angle
+Cutting My Press-Fit Design
+My fellow student Erwin cut his shapes first on a new sheet of cardboard and realized that the new cardboard that we were using for our tests was thinner than the one we’d been using for our tests! Erwin had printed out a bunch of hexagon shapes and grabbed 10 to measured the thickness. Giving us a thickness of 2.6mm, not the 2.79mm we’d gotten from our testing cardboard. I adjusted that number for my
+material_thickness
+in my design.
+With my hexagon shape
+svg
+from Cuttle on a USB stick I set-up the laser to create a first test in cardboard. To see if my parametric design and settings were working. I started with four hexagons and six connector pieces and used a power of 50% max / 15% min and speed 60.
+The laser working on the first test of my hexagon design
+It was quite fun seeing the laser doing its thing and seeing my shapes becoming a reality. It went through the cardboard easily enough, but it left quite some scorch marks on the back. I could definitely go faster and/or reduce the power next time. And some of the edges had turned out wobbly in very specific places.
+The sooth marks on the back of the hexagon and a few wobbly lines marked
+A few days after this lab day Henk mentioned that the reasons was that fact that the lens hadn’t been put back into the laser completely straight, or tight enough and that it would wobble a little sometimes? (I can’t quite remember) But it was fixed on later days indeed.
+However, a bigger issue was the fact that my connector pieces were fitted too loose! Apparently I’d made some mistake in my set-up somewhere
+ಥ_ಥ
+. I checked my parameters again, and didn’t see anything odd.
+For a second test, I therefore tried with a
+material_thickness
+of 0.1 mm smaller, just to see the result. I also made the outer ring a little wider as well, as I saw that there was very little cardboard where the connector and hexagon could grab each other.
+I redid my cut, but this time without the inner lines, since I’d already seen that those could be cut, and they took quite some time. I used a power of 50% max / 15% min and speed 70. And they fitted together really well, passing the “shake” test, yay!
+(๑•̀ㅂ•́)ง✧
+The second cut fitted together really snug
+It was almost closing time of the lab (and weekend) so I quickly did a third cut where I had put the inner section back in, just so I would have something to play with over the weekend.
+The laser cutting my hexagon shapes for the third test
+Those inner sides leave
+a lot
+of small pieces to peel out of the laser cutter after it’s done
+(*^▽^*)ゞ
+The design leaves a lot of small pieces to (slowly) peel out of the honeycomb bottom
+Back in the lab on Monday morning, I started with a test on the new shapes and connectors that I’d created over the weekend. However, somehow the laser was going over each shape twice. I checked if I’d accidentally duplicated the line within LightBurn, but that wasn’t the case. Luckily, I spotted a tiny
+Pass Count
+number at the bottom of the
+Cut/Layers
+panel in LightBurn that was set to 2! (Someone had been using the laser during the weekend). Setting it to 1 fixed the issue.
+It was still bugging me that I’d had to set the
+material_thickness
+to 2.5 for a snug fit, whereas the materials was actually 2.6mm. I did a few more tests, but always came back to needing that 0.1mm in addition to the kerf. (I also forgot to focus the laser on the cardboard for my first test, oops…
+(*^▽^*)ゞ
+)) I discussed with our instructor Henk. He mentioned that it was definitely possible that my design needed some extra “snugness” because my contact areas are very small, and cardboard does bend a little.
+Resetting my
+material_thickness
+to 2.6mm and adding an extra
+kerf_padding
+parameter of 0.1mm in my design and I was ready to print all my big shapes.
+Deep Nest
+Using my spreadsheet with all the the platonic and archimedean solids that I wanted to built I figured out how many of each shape I needed and set-up a grid with these shapes in Cuttle. I’d seen the tool
+Deep Nest
+come by in Wednesday’s lecture as a way to optimize the placement of shapes as to reduce the amount of leftover material.
+I imported the
+svg
+with my shapes, but saw that the tool also needs a shape that outlines the max size of the material sheet available. Personally it would make more sense to just be able to input a width and height, but I guess it’s this way because you might have non-rectangular sheets / available space as well. I measured the available space left on the cardboard sheet I’d been using, and in Cuttle created a new component with just a rectangle of those dimensions (700mm x 650mm) and imported that into Deep Nest as well.
+Setting the sheet and importing my un-optimized shapes into Deep Nest
+Next I only had to press
+Start nest
+and let the tool think for a while. I wasn’t so sure if the shapes would even fit the sheet in the first place, but after a minute Deep Nest returned with a configuration.
+Deep Nest’s result of optimally placing my shapes in the available sheet
+Cutting All The Shapes
+I exported the
+svg
+and set up the design in LightBurn, with a power of 30% max / 15% min and speed 50, to try and reduce the amount of burn/soot on the back of the shapes. It was about the lowest combination I could apply, because some parts of one pentagon in a corner where the cardboard was curved upward
+just a little
+barely came out.
+Cutting out the many shapes for my final go
+This took
+a long time
+! I should’ve timed it, but I think it took about 45 minutes, maybe even an hour to complete all those shapes with the many internal parts to cut. Thankfully I’d come to the lab really early and the other students only started to arrive by the time the cutting was almost done.
+The five different shapes to play with
+Cutting All The Connectors
+I hadn’t included the connectors yet. A quick test had shown me that Deep Nest would not retain the colors of the
+svg
+that it imported, and I wanted to have the angle engraved in each connector. Otherwise you’d never be able to tell which angle connecter you were handling. I thus figured I’d do the connectors separately.
+I created a new
+component
+in Cuttle that would include all the different connector types. Using my spreadsheet I had calculated how many connectors I’d need of each specific angle, summing up to a little over 250 connectors in total! I gave the
+angle number
+a red stroke in my design, so I could give those a different setting in LightBurn.
+First Batch of Connectors
+I used a power of 10% max / 10% min and speed 180 for the letters, and had that layer set to go first, otherwise the connector shapes would’ve already fallen slightly out of the cardboard as the laser tries to engrave the angles. For the connector shapes itself I used a power of 30% max / 15% min and speed 50. I figured this would go quite fast, but the engraving of the angles took quite some time, because the laser cutter
+outlines
+each letter.
+Having cut out 250 connectors for all the shapes
+After ±30 minutes the cutting was done, and I had to wiggle out all the shapes from the laser bed
+[¬º-°]¬
+Below is a close-up of six of the unique connectors (I hadn’t yet cut the 70.53° connector in my first batch). Just to note, but
+the connectors in the image below are the wrong ones
+, these are from a pre-final batch (I forgot to take a photo of my final connectors, and I don’t want to disassemble my spheres
+(*≧▽≦)
+).
+Six of the unique connectors I’d cut, these were wrong though
+I
+definitely
+needed those angles written on each one while I started assembling some of the solids.  The quality of the engraved letters isn’t perfect, due to having set the laser quite fast, but it was readable, and that was the point.
+I’m skipping ahead a little bit here, but while assembling the truncated cuboctahedron, which uses three different kinds of connectors/angles, I realized that my connectors were wrong. Some of the connector types weren’t long enough compared to the other connector types. They were not able to grab onto the each side while the sphere was coming together. In short, when using only one type of connector to create a shape, the connectors were fine, but when
+combining
+different types (angles) of connectors, it didn’t work.
+At first I wasn’t sure why it had failed exactly. The shapes fitted, the angles were correct, but the distances of the connectors weren’t quite right / didn’t match each other. Perhaps it was because I had actually made the connectors with the wider angles
+a little shorter
+in my design, because I was afraid that they would become too wide. Well, that turned out to be a wrong thing to do
+┐(￣ヮ￣)┌
+Second Batch of Connectors
+I adjusted my connector design to
+not
+make them shorter depending on the angle and had the three sets of connectors for the truncated cuboctahedron recut. However, I didn’t have the time to try and reassemble the truncated cuboctahedron at the lab to see if the new connectors would fit.
+All the unique connectors nicely packaged up to try building shapes again while at home
+Later that evening at home though I gave it another try. Sadly, I soon noticed that I hadn’t fixed my connectors. I seemed to have made the problem
+even worse
+, but in the reverse way; the widest angle connectors were much longer than the sharpest angle I was using. The 144.74° connectors between any square and hexagon were gripping really well, but the 125.26° connectors between the hexagons and octagons were not long enough to grab hold of both the hexagon and octagon at the same time.
+So the fix wasn’t as easy as I’d hoped. I figured that I really needed to look into the length of each connector side from a trigonometry perspective (this was already explained at the start of this blog in the
+Connector Design section
+)
+Third Batch of Connectors
+Having hopefully finally figured out how to properly design my connectors so they’d work when combining different types, I went back to the lab on Wednesday morning, only hours before the week would “end” to give it
+one last try
+! (I added the 70.53° connector to the batch as well so I could also assemble the tiny tetrahedron).
+Below is a photo of the three shortest angle connectors I had recut (the 125.26°, 135°, and 144.74° are all in my big sphere, before I realized I needed this photo)
+Three of the final batch of (finally working) connectors
+And they worked! So let me finally take you through a parade of all the assembly and shapes I managed to create.
+Assembling the Spheres
+With dozens of shapes and hundreds of connectors I could create a wide variety of Platonic and Archimedean Solids (I’ll just refer to them as “spheres” for ease). Going from tiniest to biggest shape, with the first four being Platonic Solids (all faces are the same shape) and the final two being Archimedean Solids (combining different shapes).
+Throughout the assembly process I learned that you definitely need the material to bend a little, otherwise you just can’t fit together all the shapes into one sphere. My “dream” of making one version from acrylic was quite surely shattered, but the resulting cardboard spheres looked lovely too
+(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧
+The Tetrahedron
+Only using 4 triangle pieces and a mere 12 (70.53°) connectors. This little cutie is so tiny that the connectors are almost too big in comparison I find.
+The tiny tetrahedron
+The Cube
+The cube, using 8 squares and 24 (90°) connectors came together very easily with all the straight angles.
+The cube was very easy to put together
+The Octahedron
+Like two tetrahedron pieces put together, this uses 8 triangles and 24 (109.47°) connectors.
+An octahedron which uses 8 triangles
+The Dodecahedron
+Now we’re getting towards some bigger shapes! A dodecahedron uses 12 pentagons and 60 (116.57°) connectors. This is actually the only sphere for which I needed pentagons, but I liked the shape so much that I felt it was worth to design a pentagon for.
+This one was definitely more complex to put together than the tiny ones. It was slow going, but I got there eventually.
+Putting together the dodecahedron with only one final 3-pentagon piece to go
+Being so much bigger than the shapes before, I was happy to find out that it was still super sturdy. You could shake all you want, but the pieces didn’t wiggle or budge.
+The final dodecahedron shape (reassembled with my 3rd batch of connectors to get a really tight fit at the edges
+The (Missing) Cuboctahedron and Truncated Cube
+And then… then I realized I’d done something really stupid in a design adjustments. During earlier tests I’d noticed that the slits of the triangles were too far to the outside. The connector pieces were touching each other. I’d therefore moved the slits more inward.
+However
+, I’d only applied that change to the triangle component, and
+not to any other shape
+. Meaning that I couldn’t use the triangles together with any of the other shapes! Sadly, that meant that I couldn’t assemble the cuboctahedron and truncated cube
+ಥ﹏ಥ
+The Truncated Octahedron
+Thankfully, the truncated octahedron was still an option, having 6 squares and 8 hexagons and using 72 connectors in total, with an angle of 125.26° between any square and hexagon, and 109.47° between any two hexagons.
+I build this with my second batch of connectors, which I later realized were still wrong. And I definitely noticed that something was off during the build if this sphere. However, it wasn’t preventing me from assembling the full shape thankfully. But using the wrong connectors is the reason why there’s still so much space between the shapes in the photos below.
+The truncated octahedron using 6 squares and 8 hexagons
+The (Massive) Truncated Cuboctahedron
+Also known as the great rhombicuboctahedron, this was my ultimate goal in sphere to build. It uses 12 squares, 8 hexagons and 6 octagons, with 144(!) connectors in total, using 144.74° between a square and hexagon, 135° between a square and octagon, and 125.26° between a hexagon and octagon.
+My first attempt to build this sphere was during my second lab day of the week, when I had all the final shapes and first batch of connectors cut. While putting piece by piece into the sphere, which was turning
+a lot
+bigger than I’d imagined, I noticed that something wasn’t right with my connectors. Not all connectors were grabbing both sides. I struggled for an hour and a half to try anyway, but at some point I had to admit defeat and realize that this sphere wasn’t coming together
+o(╥﹏╥)o
+I did get quite far though:
+As far as I could assemble the truncated cuboctahedron, before it became too unstable
+I made changes to the connector design, had them recut, disassembled the sphere and packaged all the shapes and connectors away to try again when I got home, hoping that my new connectors were correct this time, which turned out
+not
+to be the case. That evening I got
+even less far
+in building the sphere.
+Not wanting to give up, I looked at the math of my connectors again, figured out what I did wrong in the length of my connector “arms” and went back to the lab on Wednesday morning to cut the third batch of connectors, and try
+one more time
+!
+ᕦ(ò_óˇ)ᕤ
+While putting together the sphere again with my new connectors I
+definitely
+noticed how well the shapes were lining up along the edges, and how sturdy the sphere was becoming. I managed to put half of the sphere together much more quickly than before, and was getting very confident that I’d finally gotten the connectors correct this time.
+The halves of the truncated cuboctahedron, with the edges of all shapes line up really nicely, ready for the final assembly
+Lots of wiggling and gently moving and pressing the two halves together later, and I had a (beauti)fully assembled sphere in my hands.
+Success at last!
+Finally having fully assembled the truncated cuboctahedron!
+Next to the dodecahedron
+Bonus: The Tiniest of Them All
+Pssst, don’t tell Neil, but that last Wednesday morning I also made a teeny-tiny version of the truncated cuboctahedron (with the flower design for the squares for some variation) where the sides only measure 2.5cm instead of the original 6cm, which I later
+glued
+together
+(⑉⊙ȏ⊙)
+It was rather difficult to glue, because there’s no material on the
+inside
+of the cardboard that you can put the glue against. But two hours of slow progress got me there!
+The teeny-tiny truncated cuboctahedron that I glued together
+Bonus: Hexagon Grid
+Since I wasn’t going to be able to build my spheres using hard materials such as wood or acrylic, I wanted to cut
+something
+with it! As I’ve (probably) mentioned before, I love hexagons. I quickly set-up
+a hexagonal grid
+in Cuttle (using one hexagon shape, outlined and tile-repeated). I created three versions, where each version was outlined more than the one before.
+Three hexagonal grids using increasingly thicker outlines to cut and layer with wood and acrylic
+The first two grids above I cut from a nice looking wood (using a power of 100% max / 15% min and speed 25 (a speed of 40 didn’t cut through on my first try)).
+Having cut the layer with the smallest outline from wood
+For the third grid, that would be layed in the middle, I used a really nice blue acrylic (a power 100% max / 15% min and speed 20). Putting all three layers together creates a nice little “frame” to glue and place in my home.
+The result of layering the two wooden and one acrylic hexagon grids on top of each other
+As the photos show, I also got a whole collection of adorable small wooden and acrylic hexagon shapes that I plucked out of the laser bed as well and kept
+♥‿♥
+Vinyl Cutting
+The vinyl cutter in the Waag lab is a
+Roland GX-24
+.
+The vinyl cutter at the Waag, a Rolan GX-24
+General Instructions & Operation
+After you turn it on with the big button at the bottom-right of the control panel (along the right), the machine asks what kind of material is used;
+rol
+or a
+piece
+. If you select
+piece
+the machine will move the piece around to measure its exact dimensions. For a roll it will only measure the width of the sheet. Any material is added through the back, like a printer.
+You also need to make sure that the two wheels are within any of the white striped areas, otherwise the machine will return a
+Bad Position
+error.
+Make sure the two rollers are within any of the white stripes
+To operate the vinyl cutter,
+mods
+is used. This is an online “tool” that circumvents the printer drivers and does all of the required calculations to go from
+svg
+or
+png
+to commands sent to the cutter. It uses a technique of modules, and when strung together correctly you can operate a whole suite of machines.
+Generally
+mods
+is already running on the PC attached to the cutter. However, in case it’s not, you can start it up running the following commands in the terminal:
+$ cd mods
+$ bash mods
+Now you can access mods on port 8080 (
+120.0.0.1:8080
+). The machine is known as
+/dev/usb/lp0
+and generally mods runs on port
+1236
+.
+The Roland GX-24 is thankfully already set-up in mods. You first land on an almost empty page. Right-click anywhere and select
+programs
+from the options. Next
+open program
+and then you’ll see the Roland in the next window, where you can select the
+cut
+program.
+Selecting the Roland cutting program from mods
+The page will update to show nodes and connections.
+The full network of connected modules for the “Roland GX-24” program, with an SVG already loaded and calculated
+You can start from either an
+svg
+or a
+png
+file at the two nodes along the far left. If you load a file the upper-right four boxes get filled. You don’t have much to change here, the tool diameter has already been set (0.254 mm) in the
+cut raster
+node, so you can press
+calculate
+to go to the next step.
+The “cut raster” node with the blade’s diameter, and “calculate” button
+Now the lower three nodes will get filled with images as well with the final one where you can see exactly what path the cutter will take (black are cuts, red are blade-up movements).
+The last node in which you see the actual cutting path
+Another important node is the
+Roland GX/GS-24 Relative
+, right below the
+cut raster
+node. Here you can set the
+force
+with which the blade cuts and its
+speed
+. The default is 50g and 2cm/s, however doing a “cut test” showed that 50g is a not enough force, and 70g is better, while 100g will cut somewhat through the backing behind the vinyl piece as well.
+The “Relative” node in which to set the force, speed, and image origin
+Sometimes you might also want to change the
+image origin
+, depending on how the blade is positioned versus the end of the paper or position of the wheels. If the blade head is far to the right, it would be better to use the lower-right as the image origin, instead of the default lower-left.
+And finally, when you’ve changed all the settings (and pressed
+calculate
+again, just to be sure), you go to the
+Websocket
+node, where you can press
+send file to device
+which will start the cutting process. If it says that it’s
+waiting for input file
+that means you haven’t loaded a file, haven’t pressed
+calculate
+yet, or have made some changes and need to press
+caculate
+again.
+The “WebSocket” node where you can press “send file to device” to start the cutting
+When the cutting is done, you can use the down arrow key to have the piece (or roll) removed from the machine.
+For a small piece you want to make sure that the rollers are both on the piece and not too far to the sides (as long as they are within a white area). When you put in a roll of vinyl, place the rollers quite far apart, but still not all the way too the sides, otherwise the paper will crinkle in the middle. You can move the rollers from behind, when you’ve put the machine in “open” mode (when you can load vinyl).
+The blade head cutting into blue vinyl
+With the cutting done, you can either peel off your design if it;s big and sturdy. Or, if you have something intricate, or want to use multiple colors, you need to shear the excess vinyl away. You don’t want to pull the excess vinyl
+upward
+, but instead move it away
+parallel to the vinyl
+.
+Shearing the excess material away from the vinyl backing (using a newer design than the spirograph)
+You then want to apply a layer of
+transfer paper
+on top of the remaining design. You rub the design really well, so it will stick to the transfer paper. Now repeat the shearing process, but this time you remove the white vinyl backing paper, and have the vinyl itself stay on the transfer paper.
+The vinyl design on transfer paper (the transfer paper is transparent, so it’s a little hard to see)
+You can now apply the vinyl design to whatever surface you had in mind. Or apply even more colors onto the transfer paper first (I explain more about multi-colors in the
+section below
+where I create my final hexagon design).
+To recap, the steps are as follows, assuming the vinyl cutter is on, and mods is running:
+Load your piece or roll of vinyl (from behind)
+Set if it’s a
+roll
+or
+piece
+and have the vinyl cutter measure its dimensions
+Move the cutting head to a good location
+Plug your USB with the
+svg
+(or
+png
+) into the PC connected to the machine
+Within mods, load the
+Roland GX-24
+program
+Select the design
+Adjust the force to ±70g
+Press
+calculate
+Press
+send file to device
+and watch the cutting
+Use the up or down arrow key on the cutter to have the vinyl (sheet) rolled out
+Either peel off the vinyl design, or …
+… for more intricate designs / multi colors: shear away the excess vinyl and use transfer paper to move the design onto your final surface / apply more colors onto the transfer paper to do a multi color plot
+This
+Fab Academy tutorial on the
+Roland GX-24
+also has some good tips and photos.
+(Not) Vinyl Cutting a Spirograph
+I wanted to create a multi color vinyl cut after Henk showed me how he’d done it in the past. I loaded a spirograph and cut it into four different sections in Adobe Illustrator. Adding two little colored squares to help with the placement on the transfer paper (after having cut each color from vinyl).
+My original design to vinyl cut in four different colors
+I saved each color to its own
+svg
+. I had to save it in black though, because
+mods
+would load the
+svg
+if the shapes were colored, but there was no result in the final module to be cut.
+Initially I had a weird bug where none of the
+svgs
+that I loaded were showing up in mods, until one random circle I downloaded from the web
+did
+show up. After running several sets by looking at the differences between how the code of the two
+svgs
+was set-up, I discovered that mods would only accept the
+svg
+if it has an explicit
+width
+and
+height
+set-up. However, Adobe Illustrator generally doesn’t do that and uses the
+viewBox
+instead to define dimensions. So instead of
+viewBox = "0 0 300 300"
+I had to write
+width="300px" height="300px"
+and then it worked in mods (I filed an issue with the mods repo about this).
+I first wanted to print pink, which wasn’t available, so it became red, and loaded a red roll into the machine. Set-up my
+svg
+within mods and had it print. I immediately noticed that the cut wasn’t going well along the bottom edge. Part of the vinyl had been ripped by the blade along the bottom after a very sharp corner.
+The result of my first cut, with a ripped side along the bottom
+While peeling off the design, I also noticed that all of the corners of the small pointy inner sections hadn’t been fully cut and I had to rip them free from the spirograph quarter. I tried another test with a force of 70g (because I’d forgotten to adjust it from the default 50g in my first try), but that didn’t change much. Except that the blade was now pulling along the tiny inner section.
+I guess that by cutting my spirograph in four sections I’d created some impossibly narrow sections along the cutting line, but also that some of the corners in the design were too sharp.
+I went back to Illustrator and moved some things upwards and tried to curve as many of the sharpest inner corners. I tried cutting the shape again, but strangely the blade wasn’t cutting the tiny rectangle in the lower right corner. Apparently with all the tests I’d been moving the blade head so far to the right, that it couldn’t reach the far right side anymore? Setting the origin of the design to the right-lower corner in
+mods
+fixed it.
+With the updated design, the blade was no longer ripping the lower section (barely), so I cut out the design and then slowly sheared the excess vinyl away to only leave the spirograph attached.
+This time I was surprised that my two rectangles were not cut out nicely as well, which seemed like an angle that the machine should be able to handle. While back in the lab on Monday I asked Henk to check if the blade was perhaps blunt, and he switched blades (but by then I had moved on to a different design to print).
+It had worked, but I wasn’t really happy with the result. You could kind of see in which edges the excess vinyl had still stuck to the spirograph corners and I had to rip it apart.
+The result of one corner of the spirograph
+Vinyl Cutting a Hexagon
+When I came back to the lab after the weekend, I didn’t want to continue with my spirograph design any longer. Instead, I figured if I’d had so many issues with sharp angles, I’ll just create something
+without any angles
+! O boy, did I not think through my new design well enough
+(ー_ー﹡;  )
+Being in a “hexagon” vibe, I decided to create a hexagon shape, filled with 3 colors of circles. I grabbed a piece of JavaScript code that I’d created for a
+riso printing
+workshop a few months ago, in which I’d made a postcard with this design, so it was already almost good to go, only needing some final adjustments to set the size I had in mind (about 10cm in diameter).
+The design of my hexagon with 3 different colors (and registration rectangles in the corners)
+I saved an
+svg
+for each color (without any color remaining in them), loaded the red vinyl roll into the machine, and had it cut out the shape. And I sort of had expected this, but of course some of the circles in the design were too small and the blade pulled them away after being cut, but it definitely seemed to have improved versus the previous blade (and the blue and yellow colors almost didn’t suffer from this at all actually.)
+After it had printed I realized why my current design was such a bad idea. The shearing process was
+painfully slow
+and pretty darn hard! Most of the smaller circles wanted to come away with the excess vinyl, so I often had to backtrack the vinyl a little and then hold the circle in place with my nail, while pulling the vinyl away again. And I couldn’t prevent some of the smaller circles from moving a little as they were slightly pulled up a bit, while the smallest circles were just pulled away with the vinyl. Still, a good amount of circles remained.
+After shearing away the excess vinyl (and most of the tiniest circles)
+Next, I cut out a piece of transferring paper and placed it on top of the remaining red circles. Using the handle of a pair of scissors I then started rubbing the areas of the red circles, so those would stick specifically well to the transferring paper.
+Rubbing the transfer paper on the areas with circles to make them stick to the transfer paper (here I already applied my 2nd color)
+Rubbing finished, I went through yet another
+slow
+shearing process where I took of the vinyl backing, so the red dots now remained on the transfer paper.
+Next, I printed the blue and yellow, and
+very slowly
+sheared their excess vinyl away again. With the help of Henk to hold down the vinyl paper with the new color, I
+shakily
+applied the transfer paper section with the colors already applied, using the squares to align them. And then I could
+yet again
+slowly repeat the rubbing and shearing to remove the vinyl backing from the new color.
+Having applied all three colors together on the same transfer paper
+With how little room for error I had given myself in this design (circle could overlap quite easily) I have to admit that I was quite happy with the result after having applied all three colors!
+｡^‿^｡
+My laptop is already full with stickers, and so I pressed the transfer paper to the back of my Fab Academy notebook, rubbed all the circles really hard with the scissor handles, and, for the 7th (!) and final time,
+slowly
+sheared away the transfer paper, having the circles stick to my notebook.
+The final “Hexagon Circles” design sticked to the back of my Fab Academy notebook
+I have to admit that the yellow circles really wanted to stay with the transfer paper, but I got them all onto my notebook eventually. I have no idea how long this design will stay on though
+(>_<)
+with so many tiny circles (that don’t have much sticking power). Especially seeing how the notebook material feels like the kind of paper that doesn’t hold stickers well. But it looked really cool right after at least
+(๑•̀ㅂ•́)ง✧
+All the
+svg
+files used for the “Circle Hexagon” design |
+zip file
+Reflections
+I basically spend every moment I was awake this week (and not your morning/evening ritual and making + eating dinner) on either creating designs to cut, cutting, or documenting all the I’d done.
+What went wrong
+The first tests gave me shapes and connectors that were too loose. However, I think that was basically part of what we were “supposed to experience” this week. I had the most trouble with actually making correct connectors, where I could use connectors with different angles to build the bigger Archimedean solids.
+With the vinyl cutter more went wrong. I was using angles that were too sharp, either in combination with the bluntness of the blade and/or the age of the red vinyl roll I was using. When I switched to my new hexagon design the cutting itself went pretty well, only the shearing process was slow going.
+What went well
+Designing my 2D parametric design with Cuttle felt really nice. It gave me a lot of creative freedom to play with geometric shapes in interesting ways. There were of course some things about Cuttle that I didn’t understand at first, but the tutorials and the Cuttle Discord were of great help.
+I was also really happy with how the design of the shapes turned out, and surprised to see how precise and small lines could be cut from cardboard!
+And although the vinyl cutting process of my “Hexagon Circle” was a painful process, I am quite happy with how it’s currently looking on my notebook.
+What I would do differently
+Perhaps I should’ve realized sooner how to
+properly
+design my connectors, so I wouldn’t have made two full sets of wrong connectors. But then again, I only realized the mistakes after working on the biggest solid, where I just needed
+a lot
+of connectors.
+For the vinyl cutter I should’ve definitely created an easier design, with far fewer separate and more bigger elements.
+Wrapping up
+I really enjoyed working with the laser cutter! Such lovely shapes to create with them! So cool to see your designs come to live and build 3D structures from them. I wish this was a machine I could have at home
+ʕ•ᴥ•ʔ
+I have to admit that the vinyl cutting didn’t really hold my interest. Perhaps if I have some great idea for a sticker in the future, but otherwise I’m not sure if I’d use it again (very often).
+I wonder when my “home office” will stop smelling like I’ve had a bonfire in it
+(•ω•)
+All Files Together
+Archimedean Solid files
+Cuttle page with all the shapes |
+link
+Cuttle page with all connectors |
+link
+SVG of the shapes (nested by
+Deep Nest
+) |
+SVG file
+SVG of the connectors |
+SVG file
+Circle Hexagon design
+Group assignment files
+The SVG used for the “power vs speed” test |
+SVG file
+The SVG used for the kerf test |
+SVG file
+The SVG used for the curve test |
+SVG file
+The SVG used for the comb test |
+SVG file

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Week 18</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+ <link rel="shortcut icon" type="image/logo" href="img/logo.jpg" />
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Abo Elnaga</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive"> 
+          <ul class="navbar-nav text-uppercase ml-auto">
+ <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#about">WHO AM I</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#assignment">Weekly Assignments</a>
+            </li>           
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+
+    <!-- body -->
+    <section class="bg-light" >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Invention, Intellectual Property and Business Models</h2>
+          </div>
+        </div>
+<br>
+      
+<h3>Assignment Requirements:</h3>
+<ul>
+  <li>
+    Develop a plan for dissemination of your final project.
+  </li>
+  <li>
+    Prepare drafts of your summary slide (presentation.png, 1920x1080) and video clip (presentation.mp4, 1080p HTML5, < ~minute, < ~10 MB) and put them in your root directory.
+  </li>
+</ul>
+
+
+
+<h3>Learning Outcomes:</h3>
+
+  <li>Formulate future opportunities.</li>
+
+  
+
+
+<hr style="height:3px;border-width:0;color:blue;background-color:blue">
+
+
+<h3>Steps in General:</h3>
+<ul>
+  <li>Step(1): Developing a plan for dissemination the final project</li>
+  <li>Step(2): Preparing drafts of the summary slide and video clip.</li>
+</ul>
+
+<hr style="height:3px;border-width:0;color:blue;background-color:blue">
+
+
+<h3>Steps in Details:</h3>
+
+<h4>Step(1): Developing a plan for dissemination the final project</h4>
+
+<ul>
+  <li>
+    The project is not a new idea, it is an issue at most fab labs and makerspaces and each one contributes some solutions from his side.
+  </li>
+  <li>
+    The project will be an open-source and non-commercial.
+  </li>
+  <li>
+    The project is still a prototype and need further improvements and features to make it a final product. for example, it needs to be modular in the electronics side, the application needs to be more user friendly, it should have a smart database, and more and more features.
+  </li>
+  <li>
+    After Fab Academy, I will continue working on it, taking feedback form the lab members to improve its functions and usage.
+  </li>
+</ul>
+
+<li>
+  For the <b>License</b>, I prefered to choose the Creative Common License and the MIT license:
+</li>
+
+<ul>
+  <li>
+    <b>Creative Common License:</b> It is a free standard license which provides others a permission to use your work as per your condition. It helps us to share knowledge and creativity in a legal way. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+  </li>
+  <li>
+    <b>MIT License:</b> MIT license permits reuse within proprietary software provided that all copies of the licensed software include a copy of the MIT License terms and the copyright notice. I prefer this license in future if I worked on softwares.
+  </li>
+</ul>
+
+            <div class="row">
+   <div class="column">
+    <img src="img/Week18/c.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="img/Week18/m.jpg" alt="Forest" style="width:100%">
+  </div>
+  </div>
+
+
+<hr style="height:3px;border-width:0;color:blue;background-color:blue">
+
+
+
+<h4>Step(2): Preparing drafts of the summary slide and video clip</h4>
+
+<li>
+  <b>Slide Draft:</b>
+</li>
+
+<br> <center>  <img style= "width: 70%;" src="img/Week18/sketch.jpg"> </center> <br>
+
+<li>
+  <b>Selected images for the slide:</b>
+</li>
+
+            <div class="row">
+   <div class="column">
+    <img src="img/Week18/1.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="img/Week18/2.jpg" alt="Forest" style="width:100%">
+  </div>
+    <div class="column">
+    <img src="img/Week18/3.jpg" alt="Forest" style="width:100%">
+  </div>
+      <div class="column">
+    <img src="img/Week18/4.jpg" alt="Forest" style="width:100%">
+  </div>
+        <div class="column">
+    <img src="img/Week18/5.jpg" alt="Forest" style="width:100%">
+  </div>
+        <div class="column">
+    <img src="img/Week18/6.jpg" alt="Forest" style="width:100%">
+  </div>
+        <div class="column">
+    <img src="img/Week18/7.jpg" alt="Forest" style="width:100%">
+  </div>
+        <div class="column">
+    <img src="img/Week18/8.jpg" alt="Forest" style="width:100%">
+  </div>
+        <div class="column">
+    <img src="img/Week18/9.jpg" alt="Forest" style="width:100%">
+  </div>
+        <div class="column">
+    <img src="img/Week18/10.jpg" alt="Forest" style="width:100%">
+  </div>
+  </div>
+
+<li>
+  <b>Final slide:</b>
+</li>
+
+<br> <center>  <img style= "width: 100%;" src="presentation.png"> </center> <br>
+
+
+<li>
+  <b>Final Video:</b>
+</li>
+
+<div class="row">
+  <div class="column">
+  <div class="text-center">
+      <video width="200%" controls="controls" preload="true">
+      <source src="presentation.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+  </div>  
+  </div>
+  </div>
+
+
+
+
+
+
+
+    </section>
+
+ 
+
+       <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; Your Website 2021</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/mahmoud.aboelnaga.39/">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/mahmoud-aboelnaga/">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+   
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+
+  </body>
+
+</html>

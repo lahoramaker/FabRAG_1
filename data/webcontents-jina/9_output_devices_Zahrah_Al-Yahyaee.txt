@@ -1,0 +1,115 @@
+Title: Zahrah -Output Devices- 2018
+
+URL Source: http://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/exercise12.html
+
+Markdown Content:
+Week 12:  
+Output Devices
+-------------------------
+
+### Mission objectives:
+
+Add an output device to a microcontroller board you've designed and program it to do something.
+
+Describe your design and fabrication process using words/images/screenshots.
+
+Explain programming process/es you used and how the microcontroller datasheet helped you.
+
+Describe problems and how the team solved them.
+
+Include original design files and code.
+
+  
+As I mentioned in the previous [**week 11**](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/exercise11.html) that I incorporated the input with output in one board. However, here I will focus my explanation on the output only. I would like to use the neopixel RGB led in the final project, as I try how the RGB led works and connect it to the sensor.
+
+### Steps of making my board:
+
+My plan is to make the input and output in one board, so this is the schematic of the board here:
+
+This board's schematic includes the output the RGB for this weeks assignment.
+
+![Image 1](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/schematic-rgb.JPG)
+
+![Image 2](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/eagle-rgb.JPG)
+
+This is the pinout of the RGB led taken from this [**datasheet**](https://media.digikey.com/pdf/Data%20Sheets/CREE%20Power/CLV1A-FKB_Rev5.pdf)
+
+![Image 3](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/sereal-from-fabfoundation-min.jpg)
+
+![Image 4](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/datasheet-led-pinsconnections-min.JPG)
+
+#### The RGB has 3 leds: Red, Green, Blue and they have a common anode. [**Hashim**](http://archive.fabacademy.org/fabacademy2017/fablabuae/students/154/) explained to me what common anode means and how it work. So you see in the image that the anode is (+) VCC and all RGB connected to the anode which means they are all conected to the VCC but from the other side they all connected to different pins which is (-) Ground, so you can turn them off separately.  
+PWM (**0**\= zero volt **255**\= 5 volt) and here we can change the numbers between 0-255 regarding to what color you want. So the RGB will work in reverse way so for example if we give the LED 5V it will turn off because then the LED will connected to the ++ in both sides.
+
+![Image 5](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/common%20anode.jpeg)
+
+This is the first board
+
+![Image 6](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/board.JPG)
+
+![Image 7](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/pcb.jpg)
+
+I learned a trick from [**Hashim**](http://archive.fabacademy.org/fabacademy2017/fablabuae/students/154/) and [**Salama**](http://fab.academany.org/2018/labs/fablabuae/students/salama-altamimy/Output%20Devices.html) it is easy and quick way to connect all traces and thats by using jumpers as a bridge over traces.
+
+Here is the code which I modified from [**Salama**](http://fab.academany.org/2018/labs/fablabuae/students/salama-altamimy/Output%20Devices.html) code so I changed the color code and pins regarding to my board.
+
+So in the RGB LED the red colour is connected to pin 1 or D1 in attiny44, green to pin 0 or D0 and blue to pin 2 or D2 and "D" here means digital.
+
+![Image 8](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/attiny-pinout2.jpg)
+
+This chart or illustration helped me to figure out the number and its value as I began to choose colors by changing numbers and see if it has same color. for example (255, 0, 0) gives red color, (127, 255, 0) maroon color and etc...
+
+![Image 9](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/rgb-colorweel.png)
+
+The video shows the colors and shows the code used and you can also easily recognize it from the graphic as mentioned above.
+
+### Why I changed the board
+
+#### I have two reasons for changing the board:
+
+1.I lost my original schematic of this board because I had a problem with my computer and most of the files were deleted and I could not save the file.  
+2.I wanted to use the new pixel strip instead of the RGB LED because I found it easier to control in my table also it gives more light to the table and its good time to work for final in this week too.  
+
+### **The assignment**
+
+#### I used [final project board](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/project04.html). Also I added the eagle file in the zip folder at the end of this page.
+
+#### I was very careful checking the pinout for final project board and coding.
+
+![Image 10](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/full33.jpg)
+
+![Image 11](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/capture.JPG)
+
+![Image 12](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/b1.JPG)
+
+This is the table from the datasheet which shows how we calculate to have the value of resistor.
+
+![Image 13](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/how%20we%20calculate%20resistor-w12-min.JPG)
+
+Here is an example we did in the section which Hashim gave us. So the equation of calculating the resistor in the image.
+
+![Image 14](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/calculate.JPG)
+
+So soldering the strip of neopixel and testing by arduino then my board.
+
+Testing neopixel strip with Arduino Uno
+
+![Image 15](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/rgb1.jpg)
+
+The test of the output "neopixel" from my board, please do visit project development page to see more , [**week 20**](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/exercise20.html)
+
+![Image 16](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/p1.JPG)
+
+### Arduino code
+
+**I used the baord I made for final project and here is the code which I modified it from Salama code so I changed the colors and sensor code regarding to my board.**
+
+#### Look at the steps for running the neopixel strip with images
+
+![Image 17](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/1.JPG)
+
+![Image 18](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/t12.JPG)
+
+![Image 19](https://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/images/w12/4.JPG)
+
+#### And here see the video

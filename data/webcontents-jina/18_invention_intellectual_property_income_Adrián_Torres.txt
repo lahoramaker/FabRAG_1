@@ -1,0 +1,77 @@
+Title: Week 13. Invention, Intellectual Property and Business Models.
+
+URL Source: http://fabacademy.org/2020/labs/leon/students/adrian-torres/week13.html
+
+Markdown Content:
+This week there is one type of assignment; only individual.
+
+Here are the Assesment Criteria of this Assignment.
+
+*   Develop a plan for dissemination of your final project. ✔
+*   Prepare drafts of your summary slide (presentation.png, 1920x1080) and video clip (presentation.mp4, 1080p HTML5, < ~minute, < ~10 MB and put them in your root directory. ✔
+*   Formulate future opportunities. ✔
+*   Outlined future possibilities and described how to make them probabilities. ✔
+*   Prepared a draft summary slide and video. ✔
+
+Like every week, my weekly schedule. 😊
+
+![Image 1](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week13/week13.01.jpg)
+
+_Although this week seems easy, but it isn't. It is important that you will do with your project once you finish the Fab Academy, if you are going to make it public and in what way. About the slide and the video, although I have not started the project by shutdown by the COVID-19, I am going to try to make a video with the tests that I have been doing during the past assignments._ 😅
+
+Invention
+---------
+
+**Fab Train Model** is the name of my project. It is a set of modules that are part of a model. Since 2002 I have participated in the exhibitions of modular models. This system is not my invention, it was thanks to **Antonio G. Portas.** In 1997, he created the [**Club Módulos Maquetren Regulations,**](http://maquetren.net/wp-content/uploads/2019/04/Modulos-Maquetren-H0-via-unica-recto-MQ40.pdf) where he wanted the Spanish to create modular models in their homes, following [**Fremo's standards**](https://www.fremo-net.eu/en/home/) and that those models could join in events at a national level. And he got it. This is an example of the Fremo meetings on the left and on the right one carried out by the [**ModelSwitcher's Club**](https://modelswitchersclubdotcom.wordpress.com/page/1/) (with the reglamentations of Club Módulos Maquetren) held at the **Fab Lab León.**
+
+![Image 2](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week13/week13.02.jpg)
+
+For the **Fab Model Train**, I use the **Maquetren standard,** I adapt it to be able to use digital manufacturing in its construction. The structure is still made of wood, but I am innovating in the use of **composites** to make the landscape, much lighter and stronger.
+
+In the electronics part, many manufacturers already sell **train detection systems** and act on different elements of the model, a level crossing, a station, lights ... But thanks to the **Fab Academy** opportunity, I can manufacture, test and use them myself. And once they are valid, they can be used by my **Modeling group.**
+
+There is also the creation of different elements to **decorate** the model, using for example 3D printing or laser cutting, designed and manufactured by me. In this case, these objects are exclusive and their sale or distribution would only be done by me.
+
+Intellectual Property
+---------------------
+
+In my case and like that of all Fab Academy students, all our work is backed by the [**MIT License,**](https://opensource.org/licenses/mit-license.php/) which is an Open Source initiative. Anyone who enters my website can use my documentation without restrictions can use, copy, modify, merge, publish, distribute and even sell copies of the software.
+
+As everything I do is for public use, in my case I particularly want to use a Creative Commons license. In the following [**link,**](https://creativecommons.org/choose/) responding very easily to a questionnaire gives you a result of the license that best suits your project.
+
+I plan to use the following license for my project.
+
+[![Image 3: Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
+This work is licensed under a [**Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License**](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+**And why do I choose this type of license?**
+
+It means that you are **free** to **share it** and **adapt it** or transform it, but under the following terms:
+
+*   **Attribution:** You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+*   **NonCommercial:** You may not use the material for commercial purposes.
+*   **ShareAlike:** If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+
+Business Models
+---------------
+
+As I have explained in the Invention section, I belong to the ModelSwitcher's Club and with these models we do not profit, what we want is to spread the hobby.
+
+To do this, one way to disseminate the knowledge of this project would be to write an article in the [**Maquetren magazine,**](https://maquetren.net/) explaining the steps I have followed to build the model with the new digital manufacturing techniques and redirecting them to the Fab Academy page.
+
+I can also create an [**Instructable**](https://www.instructables.com/) and that anyone can create at home, a modular model, following the steps in the documentation.
+
+But for example the issue of boards for the control and detection of the train, which is something that some manufacturers already do, I can market it myself. A board for train detection sensors and a board for actuators.
+
+For this you could use platforms such as [**Kickstarter**](https://www.kickstarter.com/) to sell through crowdfunding the boards already manufactured by [**Seeed Studio**](https://www.seeedstudio.com/fusion_pcb.html) or another PCB manufacturer. Because surely he would manufacture them much faster than me at the Fab Lab.;)😅
+
+And who knows, just in the future I find that someone from **#fablabnetwork** has created a modular model, with everything I have documented on my page and that if possible, travel with our models to a Fab Event and let's play trains together. I would be very proud. 😍🚄🚂🤗
+
+The slide and video clip of my Final Project.
+---------------------------------------------
+
+For the creation of the Slide I have used **GIMP**, as I did in [**Week 02**](https://fabacademy.org/2020/labs/leon/students/adrian-torres/week02.html), through photos of some processes and the render that I have of that week I am going to do the final composition of the slide.
+
+For the video, as I am a [**YouTuber,**](https://www.youtube.com/adriantrain) I already used Pinnacle Studio, so I'm going to create the video with that program.
+
+![Image 4](https://fabacademy.org/2020/labs/leon/students/adrian-torres/images/week13/week13.03.png)

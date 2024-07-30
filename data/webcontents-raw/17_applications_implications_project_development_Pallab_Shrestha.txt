@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v5.3.0, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.3.0, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/image18-121x121.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Applications and Implications</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link href="assets/fonts/style.css" rel="stylesheet">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+  
+</head>
+<body>
+  
+  <section class="content5 cid-syvwbkDYgK" id="content5-10m">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                <h4 class="mbr-section-subtitle mbr-fonts-style mb-4 display-5">Assignment</h4>
+                <p class="mbr-text mbr-fonts-style display-7">Propose a final project masterpiece that integrates the range of units covered, answering:
+<br>&nbsp; &nbsp; a. What will it do?
+<br>&nbsp; &nbsp; b. Who's done what beforehand?
+<br>&nbsp; &nbsp; c. What will you design?
+<br>&nbsp; &nbsp; d. What materials and components will be used?
+<br>&nbsp; &nbsp; e. Where will come from?
+<br>&nbsp; &nbsp; &nbsp;f. How much will they cost?
+<br>&nbsp; &nbsp; g. What parts and systems will be made?
+<br>&nbsp; &nbsp; h. What processes will be used?
+<br>&nbsp; &nbsp; &nbsp;i. What questions need to be answered?
+<br>&nbsp; &nbsp; &nbsp;j. How will it be evaluated?<br>Your project should incorporate <br>&nbsp; &nbsp; a. 2D and 3D design,
+<br>&nbsp; &nbsp; b. additive and subtractive fabrication processes,
+<br>&nbsp; &nbsp; c. electronics design and production,&nbsp;&nbsp;<br>&nbsp; &nbsp; d. embedded microcontroller interfacing and programming,
+<br>&nbsp; &nbsp; e. system integration and packaging
+<br>      Where possible, you should make rather than buy the parts of your project
+<br>      Projects can be separate or joint, but need to show individual mastery of the skills, and be independently operable&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="menu cid-syvwbkXBZt" once="menu" id="menu1-10n">
+    
+    <nav class="navbar navbar-dropdown navbar-fixed-top collapsed">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="http://fabacademy.org/" target="_blank">
+                        <img src="assets/images/image18-121x121.png" alt="Logo" style="height: 3.8rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white text-primary display-7" href="index.html">PALLAB<br>Fab-2021<br></a></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-white text-primary display-7" href="index.html"><span class="mobi-mbri mobi-mbri-home mbr-iconfont mbr-iconfont-btn"></span>Home</a></li><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle text-white display-7" href="#" aria-expanded="false" data-toggle="dropdown-submenu"><span class="mbrib-opened-folder mbr-iconfont mbr-iconfont-btn"></span>Assignment</a><div class="dropdown-menu"><a class="dropdown-item text-white text-primary display-7" href="Principles_Practice_and_Project_Management.html" aria-expanded="false">Principles, Practice and Project Management</a><a class="dropdown-item text-white text-primary display-7" href="Computer-Aided_Design.html" aria-expanded="false">Computer-Aided Design<br></a><a class="dropdown-item text-white text-primary display-7" href="Computer-Controlled_Cutting.html" aria-expanded="false">Computer-Controlled Cutting<br></a><a class="dropdown-item text-white text-primary display-7" href="Electronics_Production.html" aria-expanded="false">Electronics Production<br></a><a class="dropdown-item text-white text-primary display-7" href="3D_Scanning_and_Printing.html" aria-expanded="false">3D Scanning and Printing<br></a><a class="dropdown-item text-white text-primary display-7" href="Electronics_Design.html" aria-expanded="false">Electronics Design<br></a><a class="dropdown-item text-white text-primary display-7" href="Computer-Controlled_Machining.html" aria-expanded="false">Computer-Controlled Machining<br></a><a class="dropdown-item text-white text-primary display-7" href="Embedded_Programming.html" aria-expanded="false">Embedded Programming<br></a><a class="dropdown-item text-white text-primary display-7" href="Mechanical_design_and_machine_design.html" aria-expanded="false">Mechanical Design and Machine Design<br></a><a class="dropdown-item text-white text-primary display-7" href="Input_devices.html" aria-expanded="false">Input Devices<br></a><a class="dropdown-item text-white text-primary display-7" href="Molding_and_Casting.html" aria-expanded="false">Molding and Casting<br></a><a class="dropdown-item text-white text-primary display-7" href="Output_devices.html" aria-expanded="false">Output Devices<br></a><a class="dropdown-item text-white text-primary display-7" href="Networking_and_Communications.html" aria-expanded="false">Networking and Communications</a><a class="dropdown-item text-white text-primary display-7" href="Interface_and_Application_Programming.html" aria-expanded="false">Interface and Application Programming</a><a class="dropdown-item text-white text-primary display-7" href="Wild_Card_Week.html" aria-expanded="false">Wild Card Week</a><a class="dropdown-item text-white text-primary display-7" href="Applications_and_Implications.html" aria-expanded="false">Applications and Implications<br></a><a class="dropdown-item text-white text-primary display-7" href="Invention_Intellectual_Property_and_Income.html" aria-expanded="false">Invention, Intellectual property, and Income<br></a></div></li><li class="nav-item"><a class="nav-link link text-white text-primary display-7" href="Final_Project.html"><span class="mbrib-extension mbr-iconfont mbr-iconfont-btn"></span>Final Project</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white text-primary display-7" href="about_me.html"><span class="mobi-mbri mobi-mbri-user-2 mbr-iconfont mbr-iconfont-btn"></span>
+                            About me</a></li></ul>
+                
+                
+            </div>
+        </div>
+    </nav>
+
+</section>
+
+<section class="content5 cid-syvwblFzdE" id="content5-10o">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                
+                <p class="mbr-text mbr-fonts-style display-5">Plan for&nbsp; the week</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="image3 cid-syvwblZVTB" id="image3-10p">
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div class="image-wrapper">
+                    <img src="assets/images/week16-task-1219x316.jpg" alt="Week16_Plan">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content5 cid-syvwbmAUKC" id="content5-10q">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                <h4 class="mbr-section-subtitle mbr-fonts-style mb-4 display-5">Introduction</h4>
+                <p class="mbr-text mbr-fonts-style display-7">This week we will be documenting about the final project. Its function, parts, cost, process involved and evaluation criteria.&nbsp;<br>Our Lab is closed and will remain closed until further notice due to covid issues.<br><br>I had planned on doing Solar Cleaner but sue to unavailability of parts inhouse and as the hardware shops are not open, i decided to change my project to medicine dispenser.&nbsp;<br><br>The main purpose of the proposed system is to help patients, mainly seniors and elderly people, take their medications on time in an easy manner without the possibility of skipping pills and thus reducing the risk of accidental over/under dose treatment. Failing to take medications promptly can have serious consequences on patients including delay in recovery, occurrence of other illness and even death.<br></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="image3 cid-syvwboaFjK" id="image3-10t">
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+                <div class="image-wrapper">
+                    <img src="assets/images/untitled.63-1-1646x1259.jpeg" alt="dispenser">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content5 cid-syvwbn5MYn" id="content5-10r">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                
+                <p class="mbr-text mbr-fonts-style display-7"><strong>What will it do?&nbsp;</strong><br>Functionally, it will dispense the medication according to the user entered time maximum up to 3 times a day. When modules are connected in series, it can dispense from more than one module meaning different type of tablets per requirement of the user.<br><br>As an outcome, it will help people to take medication on time without forgetting. This will also help to prevent confusion between medicines when to take which one reducing irregularity.<br><br>The User interface will be following</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="image3 cid-syw8zBNxtM" id="image3-11k">
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-7">
+                <div class="image-wrapper">
+                    <img src="assets/images/fab-gui-1125x2436.png" alt="GUI_Plan_final">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content5 cid-syvWlOfmir" id="content5-11b">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                
+                <p class="mbr-text mbr-fonts-style display-7"><strong>Who's done what beforehand?&nbsp;</strong><br>There are commercial dispensers that can be found like the following<br><br>https://www.instructables.com/The-Automatic-Pill-Dispenser/<br>https://www.instructables.com/AUTOMATIC-PILL-DISPENSER/#:~:text=AUTOMATIC%20PILL%20DISPENSER.%20This%20is%20a%20pill%20dispenser,the%20machine%20is%20easily%20refilled%20by%20the%20user.<br></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery3 cid-sF0xFHWl6t" id="gallery3-1bw">
+    
+    
+    <div class="container">
+        
+        <div class="row mt-4">
+            <div class="item features-image сol-12 col-md-6 col-lg-4">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <img src="assets/images/pivotell-automatic-pill-dispenser2-696x696.jpg" alt="commercial_med">
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="item features-image сol-12 col-md-6 col-lg-4">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <img src="assets/images/1af42641-91a5-48cd-93ba-862d7536dd0b-1.21add357e65093df861c427d7c2070d4-696x696.jpg" alt="commerical2">
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="item features-image сol-12 col-md-6 col-lg-4">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <img src="assets/images/71al1tzkizl.-sl1449-2-696x633.jpeg" alt="commericial3">
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="content5 cid-sF0BoyXiGm" id="content5-1bx">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                
+                <p class="mbr-text mbr-fonts-style display-7">Similiarly you can make a diy pill dispenser which are shared in instructables.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery3 cid-sF0CoTBaHq" id="gallery3-1by">
+    
+    
+    <div class="container">
+        
+        <div class="row mt-4">
+            <div class="item features-image сol-12 col-md-6 col-lg-6">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <a href="https://www.instructables.com/AUTOMATIC-PILL-DISPENSER/#:~:text=AUTOMATIC%20PILL%20DISPENSER.%20This%20is%20a%20pill%20dispenser,the%20machine%20is%20easily%20refilled%20by%20the%20user."><img src="assets/images/f6ejhkjjq2o66gp-640x700.jpeg" alt="instructables1"></a>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="item features-image сol-12 col-md-6 col-lg-6">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <a href="https://www.instructables.com/The-Automatic-Pill-Dispenser/"><img src="assets/images/ff2rm4hjqaszohu-1-525x700.jpeg" alt="instructables2"></a>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+
+<section class="content5 cid-sF0DYukbu0" id="content5-1c0">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                
+                <p class="mbr-text mbr-fonts-style display-7">There are some open source manual dispenser as well from which it can be used like that or can be made automatic according to the requirement. You can download the opensource manual dispenser from this <a href="https://www.welder.app/careables.org/enzyme.dispenser.mechanism/master/tree" class="text-primary">link</a><br></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="image4 cid-sF0ERABPOw" id="image4-1c3">
+    
+
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="image-wrapper">
+                    <img src="assets/images/0.krrdray8w9c789597bc-f820-475e-b9d8-16a4c8cce8b0-690x518.jpg" alt="manual2">
+                    
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="image-wrapper">
+                    <img src="assets/images/0.xybg413ydcimage-1-900x518.jpeg" alt="manual">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content5 cid-sF0Fi7oDXZ" id="content5-1c4">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                
+                <p class="mbr-text mbr-fonts-style display-7">In commercial, or automatic, every week has to be filled in advance with different tablets but i am trying to make one dispenser per pill and make it modular for multiple pills. and just fill it one only .<br></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content9 cid-syvY57XqX4" id="content9-11j">
+    
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="counter-container col-md-12 col-lg-11">
+                <h4 class="mbr-section-title mbr-fonts-style mb-4 display-7"><strong>What will you design? 
+</strong><div>I will design following:
+</div></h4>
+                <div class="mbr-text mbr-fonts-style display-7">
+                    <ol>
+                        <li><strong>Mechanism: </strong>mechanism design to dispense the medication tablets.</li><li><strong>Casing</strong>: It Holds every thing together, mechanism, electronics, and material.<br>- Design for assembly<br>- Design for fabrication<br>- Design for cost<br>- Design for versatility</li><li><strong>Electronics design: </strong>Design the board for the mechanism for the dispensor</li><li><strong>Programming:&nbsp;</strong><br>- Embedded programming for the microcontrollers<br>- Connect via mobile platform</li><li><strong>Networking:</strong><br>-I2C communication protocol between main board and the secondary modules</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content9 cid-sywaXb3W4V" id="content9-11l">
+    
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="counter-container col-md-12 col-lg-11">
+                <h4 class="mbr-section-title mbr-fonts-style mb-4 display-7"><strong>What materials and components will be used?&nbsp;</strong></h4>
+                <div class="mbr-text mbr-fonts-style display-7">
+                    <ol>
+                        <li><strong>Mechanism: </strong>PLA plastic</li><li><strong>Casing</strong>:&nbsp;<br>- PLA plastic<br>- M2 Nuts and bolts<br>- Inserts<br>- Acrylic (tray and cup)</li><li><strong>Electronics :</strong><br><strong>Master Board:</strong><br>-ESP-32 X 1<br><span style="font-size: 1.2rem;">-10K ohm resistor   X 2&nbsp;<br></span><span style="font-size: 1.2rem;">-4.99K ohm resistor   X 2&nbsp;<br></span><span style="font-size: 1.2rem;">-1K ohm resistor X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-10uF Capacitor   X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-1uF Capacitor X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-0.1uF Capacitor X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-MOSFET N-Channel&nbsp;<br></span><span style="font-size: 1.2rem;">-5 to 3.3 Voltage regulator   X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-2x2 header pin   X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-FTDI header pin X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-1x3 THT header pin X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-1x4 THT header pin X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-SPDT switch X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-Tactile switch X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-Buzzer X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-Connection Jack 2.1mm X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-Servo Motor X 1<br><strong>Master Hall Module:</strong><br>-Hall effect sensor X 1
+<br></span><span style="font-size: 1.2rem;">-MOSFET N-Channel X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-10K ohm Resistor X 2&nbsp;<br></span><span style="font-size: 1.2rem;">-1K ohm Resistor X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-1uF Capacitor X 1 <br></span><span style="font-size: 1.2rem;">-Blue Led THT X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-1x4 THT header pin X 1<br><strong>Secondary main board:</strong><br>-ATtiny 412 X 1
+<br></span>-10K ohm resistor X 1 <br>-1K ohm resistor X 1 <br>-4.99K ohm resistor X 1 <br>-1uF Capacitor X 1&nbsp;<br>-MOSFET N-Channel X 1 <br>-2x2 header pin X 2<br>-1x3 THT header pin X 2 <br>-Buzzer X 1 <br>-Servo Motor X 1<br><strong>Secondary hall module:</strong><br>-Hall effect sensor X 1
+<br><span style="font-size: 1.2rem;">-1K ohm Resistor X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-Blue Led THT X 1&nbsp;<br></span><span style="font-size: 1.2rem;">-1x3 THT header pin X 1</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content5 cid-syvWnytKSA" id="content5-11d">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                
+                <p class="mbr-text mbr-fonts-style display-7"><strong>Where will come from?&nbsp;</strong><br>I am a person who when&nbsp; does something, is focused on that particular work only which makes me forget many things. In work, google calendar came handy which reminded of events that kept me on track. But for medicines, whenever I had to, sometimes i would skip a schedule or there is a delay. Later I found out from the doctor that each medicine has a course in which it has to be taken without skipping the schedule otherwise the medication would not be effective. <br>Even for me it was hard and I thought how would elderly people maintain the strict schedule. I searched if there is any dispenser and found out there are many, but for I could not find it back in my hope country Nepal. <br><br>But i found out that there are commercial medicine dispenser and also there are research papers for the dispenser and Thought of making one locally in a digital&nbsp; fabrication lab which can be recreated anywhere with digital fabrication facilities,.<br></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content5 cid-syvWoU9FU4" id="content5-11f">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                
+                <p class="mbr-text mbr-fonts-style display-7"><strong>How much will they cost?</strong><br>There are many types of cost while defining the cost of the product as like R&amp;D cost,&nbsp;material  cost, fabrication cost, packaging cost, QA/QC cost, Marketing cost, profit etc but for now I will be only mentioning the material cost for electronics only.<br></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="image3 cid-sF0Sz5a8Em" id="image3-1c6">
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-12">
+                <div class="image-wrapper">
+                    <img src="assets/images/costing-1024x710.jpg" alt="costing">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content5 cid-syvWpwqu8o" id="content5-11g">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                
+                <p class="mbr-text mbr-fonts-style display-7"><strong>What parts and systems will be made?&nbsp;</strong><br>Standard parts like ESP32, ATTiny-412, resistors capacitors will be used and except that all will be fabricated as follows<br>1. A slider mechanism will be made using 3D printed part and actuated by servomotor. <br>2. The servo motor will be operated from two types of electronics board board with ESP 32 in master and ATTiny-412 in secondary.<br>3. Main board with Hall sensor module underneath the container.<br>4. Transparent Cartridge for medicine will be made from laser cutting.<br>5. Hopper with lid will be designed and using 3D printer it will be fabricated.<br>6. Magnetic hopper will be made from laser cutting and 3D printing.<br>7. A compact casing including all of them will be then designed and printed using 3D printer.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content5 cid-syvWqaCZi8" id="content5-11h">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                
+                <p class="mbr-text mbr-fonts-style display-7"><strong>What processes will be used?&nbsp;</strong><br>1. Computer Aided Design, part and assembly<br>2. Electronics design <br>3. 3D printing<br>4. Laser cutting<br>5. Vinyl Cutting<br>6. PCB milling<br>7. Stuffing, Soldering, testing, debugging<br>8. Embedded programming<br>9. Assembly<br>10. Testing<br>11. Iteration</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content5 cid-syvWkM6awd" id="content5-11a">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                
+                <p class="mbr-text mbr-fonts-style display-7"><strong>What questions need to be answered?&nbsp;</strong><br>1. Does it dispense well?<br>2. Is there any complication while loading the medications in the hopper?<br>3. Does it dispense according to the time entered by the user?<br>4. Is it modular?<br></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content5 cid-syvXc4tQAE" id="content5-11i">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                
+                
+                <p class="mbr-text mbr-fonts-style display-7"><strong>How will it be evaluated?</strong><br>Since the Lab was closed since the Output week, most of the class week was self learning and theoretical learning only so for the final project the evaluation criteria that i think would be that it should dispense medication of designed size tablet smoothly without errors as per user.&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content12 cid-syvwbw88C1" id="content12-119">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-11">
+                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-7" href="Wild_Card_Week.html">&lt;&lt;</a>
+                    <a class="btn btn-primary display-7" href="Invention_Intellectual_Property_and_Income.html">&gt;&gt;</a></div>
+            </div>
+        </div>
+    </div>
+</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/e" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;"><a href="https://mobirise.site/s" style="color:#aaa;">web page</a> was started with Mobirise theme</p></section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/theme/js/script.js"></script>  
+  
+  
+ <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+  </body>
+</html>

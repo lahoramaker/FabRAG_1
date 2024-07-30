@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="media/favicon.ico">
+     <title>Salama Altamimy</title>
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-gray">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+       <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-3">
+        <div class="w3-display-container">
+         <div class="w3-bottomleft w3-container w3-text-blue-gray">
+          </div>
+        </div>
+        <div class="w3-container">
+          <p class="w3-large"><b><i class="fa fa fa-bars fa-fw w3-margin-right w3-text-blue-gray"></i>Menu</b></p>
+        
+               
+          <a href="index.html" class="w3-bar-item w3-button">Home</a> <br>
+        <a href="Principles%20and%20Practices.html" class="w3-bar-item w3-button">Principles and Practices</a> <br>
+         <a href="Project%20Management.html" class="w3-bar-item w3-button">Project Management</a> <br>
+        <a href="Computer-aided%20Design.html" class="w3-bar-item w3-button">Computer-aided Design</a> <br>
+            
+            <a href="Computer-controlled%20Cutting.html" class="w3-bar-item w3-button">Computer-controlled Cutting</a> <br>
+            
+            <a href="Electronics%20Production.html" class="w3-bar-item w3-button">Electronics Production</a> <br>
+            
+         <a href="3D%20Scanning%20and%20Printing.html" class="w3-bar-item w3-button">3D Scanning and Printing</a> <br>
+          
+        <a href="Electronics%20Design.html" class="w3-bar-item w3-button">Electronics Design</a> <br>
+            
+            
+            <a href="Computer-controlled%20Machining.html" class="w3-bar-item w3-button">Computer-controlled Machining</a> <br>
+          
+             <a href="Embedded%20Programming.html" class="w3-bar-item w3-button">Embedded Programming</a> <br>
+            
+            <a href="Molding%20and%20Casting.html" class="w3-bar-item w3-button">Molding and Casting</a> <br>
+            
+            <a href="Input%20Devices.html" class="w3-bar-item w3-button">Input Devices</a> <br>
+            
+            <a href="Output%20Devices.html" class="w3-bar-item w3-button">Output Devices</a> <br>
+            
+            <a href="Interface%20and%20Application%20Programming.html" class="w3-bar-item w3-button">Interface and Application Programming</a> <br>
+            
+            <a href="Networking%20and%20Communications.html" class="w3-bar-item w3-button">Networking and Communications</a> <br>
+         
+            <a href="Mechanical%20Design.html" class="w3-bar-item w3-button">Mechanical Design</a> <br>
+            
+            <a href="Machine%20Design.html" class="w3-bar-item w3-button">Machine Design</a> <br>
+            
+             <a href="Wildcard.html" class="w3-bar-item w3-button">Wildcard</a> <br>
+            
+             <a href="Applications%20and%20Implications.html" class="w3-bar-item w3-button">Applications and Implications</a> <br>
+            
+            <a href="Invention,%20Intellectual%20Property,%20and%20Income.html" class="w3-bar-item w3-button">Invention, Intellectual Property, and Income</a> <br>
+            
+            <a href="Project%20Development.html" class="w3-bar-item w3-button">Project Development</a> <br>
+            
+            <a href="finalproject.html" class="w3-bar-item w3-button">Final Project</a> <br>
+        </div>
+      </div><br>
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+      <div class="w3-twothird">
+          
+      <div class="w3-container w3-card w3-light-gray w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Week 17</h2>
+        <div class="w3-container">
+         
+        </div>
+        
+      </div>
+
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Wildcard</h2>
+          <p>Week Assessment :	 
+          <p style="text-indent: 9em;"> Design and produce something with a digital fabrication process</p>
+          
+          <p>For this week assignment, I learned how to use Janome Memory Craft 15000. So I started this week with a session from <a href="https://wendwarge.github.io/" target="_blank">Wendy</a>  on how to use the machine.</p>
+              
+              <img src="media/wildcard/session.jpg" >
+              
+          <p>Then Mr.Tarek and  <a href="http://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/" target="_blank">Zahrah</a> showed me how to prepare the file for the embroidery machine in Digitizer.</p>
+    
+     <img src="media/wildcard/Digitizer.png" >
+    <p>I decided to use the file that I created for the computer-controlled cutting week. So I created new and I chose hoop SQ14. This is all the hoop sizes I got this image from the<a href="https://www.janome.com/siteassets/support/manuals/embroidery-models/inst-mc15000-enlr2.pdf" target="_blank">   manual</a> of the machine.   </p>
+        
+           <img src="media/wildcard/hoopssize.png" >
+        
+        <p>Toolboxes > Auto-Digitizer > Insert Artwork.</p>
+      <img src="media/wildcard/insertfile.png" >
+    
+   <p> I selected my image > Click-to-fill> Then I clicked at the place that I want and I select the stitch type and I chose Cross stitch. My design is really simple I don't have to do anything else. </p>
+                <img src="media/wildcard/selectstitch.png" >
+          
+          <p>  Settings up machine was not easy we as students we don't realize how hard is that. Connecting the machine to PC throw wire to send an order to the machine not always work. That why I saved my file in flash memory and I insert the flash in the machine in port 1. 
+</p>
+          
+                <img src="media/wildcard/insertfileinmachine.jpg" >
+                  
+          <p>On page 104 in the <a href="https://www.janome.com/siteassets/support/manuals/embroidery-models/inst-mc15000-enlr2.pdf" target="_blank">   manual</a> shows how to enable the embroidery mode and it shows the steps of how to place the embroidery unit on the back side of the machine base. </p>
+          
+          <p>Before that <a href="https://wendwarge.github.io/" target="_blank">Wendy</a>  showed me to set up the fabric for the machine so what I did I had to put paper under the fabric  and what she taught me was exactly what I found in machine manual.   </p>
+          
+          <img src="media/wildcard/settingfabric.png" >
+          <p>And this what I did. </p>
+               <img src="media/wildcard/settingfabricwithmachine.jpg" >
+          
+          <p>I selected my design then I pressed the start button on the machine </p>
+          <img src="media/wildcard/selectfile.jpg" ><br><br>
+          <video width="500" height="500" controls>
+              <source src="media/wildcard/salamalogo.mp4" type="video/mp4"></video>
+          
+          <p>This is the reasult</p>
+          
+        <div class="w3-container">
+     
+
+                <img src="media/wildcard/salamalogo.jpg" >
+                  <p>I really did not expect this machine to that accurate. This machine is really amazing I like it. I did more research on this Janome Memory Craft 15000 and I found that Janome has an iPad app. where you can design or modify a design even when the machine is sewing. this can be done by wifi communication between the iPad and embroidery machine.</p>
+             <img src="media/wildcard/janomeapp.jpg" >
+             
+            <p>Because the aim of the fab academy is to share knowledge. I showed  <a href="http://fabacademy.org/2018/labs/fablabuae/students/darshan-shah/" target="_blank">Darshan</a>
+                and 
+                
+                <a href="http://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/" target="_blank">Al-Zubair</a> how to use the embroidery machine, and special thanks to <a href="https://wendwarge.github.io/" target="_blank">Wendy</a> and  <a href="http://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/" target="_blank">Zahrah</a> and Tarek how showed me how this machine works. And now I did my best to share it with the rest of the world. I hope this page helps others.</p>
+            
+            
+            <p>I also did for the wildcard week 3D milling with the shopbot and the vacuum forming for my final project and I documented in 
+                
+                <a href="Project%20Development.html" target="_blank">project development</a> page. </p>
+            
+                    <h4 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>File</h4>
+         
+           <a href="files/wildcard/salamalogo.EMB">EMB File</a><br>
+             <a href="files/computer-controlledcutting/logo.dxf">Design logo File</a><br>
+            
+          </div>
+      </div><br>
+          
+           
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>

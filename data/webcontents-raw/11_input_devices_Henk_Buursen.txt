@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Molding and Casting, Mar 21">
+<meta name="keywords" content="WeeklyAssignmentsFinalProjectHowtoResources,  Molding and Casting,  Mar 21">
+<title>Week 11 - Input | FabAcademy 2018 Documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="henk-buursen" href="http://localhost:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> FabAcademy 2018 Documentation</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">FabAcademy 2018<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="http://fabacademy.org/" target="_blank">Fabcademy</a></li>
+                        
+                        
+                        
+                        <li><a href="http://archive.fabacademy.org/archives/2018/schedule.html" target="_blank">Class Schedule 2018</a></li>
+                        
+                        
+                        
+                        <li><a href="http://docs.academany.org/FabAcademy-Handbook/_book/" target="_blank">The Fab Academy Handbook</a></li>
+                        
+                        
+                        
+                        <li><a href="http://FabAcademy.org/the-fab-academy-students/" target="_blank">Fab Academy for Students</a></li>
+                        
+                        
+                        
+                        <li><a href="http://connectmedia.waag.org/AcadeMany/fab-2018/" target="_blank">Fabacademy Videos</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fablab @ Waag<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://fablab.waag.org/" target="_blank">Fablab Amsterdam</a></li>
+                        
+                        
+                        
+                        <li><a href="https://waag.org/en/" target="_blank">Waag Society</a></li>
+                        
+                        
+                        
+                        <li><a href="https://fablab.nl/" target="_blank">Fablab Benelux</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Week 11 - Input">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">Fabacademy 2018 0.01</li>
+  
+  
+  
+      
+  
+  <li>
+      <a href="#">Overview</a>
+      <ul>
+          
+          
+          
+          <li><a href="index.html">Fabacademy 2018</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="aboutme.html">About me</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="waag.html">Waag Society</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="fablabwaag.html">Fablab@Waag</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Weekly Assignments</a>
+      <ul>
+          
+          
+          
+          <li><a href="week01.html">Jan 17| principles and practices, introductions, presentations, projects</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week02.html">Jan 24| project management</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week03.html">Jan 31| computer-aided design</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week04.html">Febr 7| computer-controlled cutting</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week05.html">Febr 14| electronics production</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week06.html">Febr 21| 3D scanning and printing</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week07.html">Febr 28| electronics design</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week08.html">March 7| computer-controlled machining</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week09.html">March 14| embedded programming</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week10.html">March 21| molding and casting</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a href="week11.html">April 4|input devices</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week12.html">April 11|output devices</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week13.html">April 18|interface and application programming</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week14.html">Arpil 25|networking</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week15.html">May 2|mechanical design</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week16.html">May 9|machine design</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week17.html">May 16|wildcard/composites</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week18.html">May 23|applications and implications</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="week19.html">May 30|Invention, Intellectual Property, and Income</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Final Project</a>
+      <ul>
+          
+          
+          
+          <li><a href="presentation.html">Ice thickness Measurement devices</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="ideas.html">Initial ideas</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="housing.html">Casing / CNC / Molding & Casting</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="oled.html">Interface</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="powermanagment.html">Power Managment</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="boards.html">Electronical Design</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="code.html">Code</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="conclusion.html">Final Words</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Howto's</a>
+      <ul>
+          
+          
+          
+          <li><a href="vim.html">Vim</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="gitlabsetup.html">Gitlab setup</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="vimgitlab.html">Vim and Gitlab</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="vimmarkdown.html">Vim and Markdown</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Week 11 - Input</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Molding and Casting, Mar 21</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+  <table>
+  <thead>
+    <tr>
+      <th>This week</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Presentation Input Devices</td>
+      <td><a href="http://academy.cba.mit.edu/classes/input_devices/index.html">http://academy.cba.mit.edu/classes/input_devices/index.html</a></td>
+    </tr>
+    <tr>
+      <td>Video of the review (molding and casting)</td>
+      <td><a href="http://fab.academany.org/2018/lectures/fab-20180404.html">http://fab.academany.org/2018/lectures/fab-20180404.html</a></td>
+    </tr>
+    <tr>
+      <td>video of the lecture</td>
+      <td><a href="http://fab.academany.org/2018/lectures/fab-20180404.html">http://fab.academany.org/2018/lectures/fab-20180404.html</a></td>
+    </tr>
+    <tr>
+      <td>recitation: circular innovation challenge (Eric King)</td>
+      <td><a href="http://fab.academany.org/2018/lectures/fab-20180409.html">http://fab.academany.org/2018/lectures/fab-20180409.html</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assignment</th>
+      <th>Used software</th>
+      <th>Files/Downloads/links</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Group Assignment</td>
+      <td>measure the analog levels and digital signals in an input device</td>
+      <td><a href="http://fab.academany.org/2018/labs/fablabamsterdam/inputdevices/index.html">http://fab.academany.org/2018/labs/fablabamsterdam/inputdevices/index.html</a></td>
+    </tr>
+    <tr>
+      <td>pcb hc-sr04</td>
+      <td>kicad</td>
+      <td><a href="./files/week11/kicad4-hc-sr04.zip">kicad4-hc-sr04.zip</a></td>
+    </tr>
+    <tr>
+      <td>code</td>
+      <td>arduino</td>
+      <td><a href="./files/week11/hc-sr04.ino">hc-sr04.ino</a></td>
+    </tr>
+    <tr>
+      <td>png traces milling</td>
+      <td>kicad/gimp</td>
+      <td><a href="./files/week11/basic_board-F.Cu.png">basic_board-F.Cu.png</a></td>
+    </tr>
+    <tr>
+      <td>png cut milling</td>
+      <td>kicad/gimp</td>
+      <td><a href="./files/week11/basic_board-Margin.png">basic_board-Margin.png</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="research">Research</h2>
+
+<p><img src="./images/week11/hc-sr04.jpg" alt="" /></p>
+
+<p>I wanted to do some work for my final project, which is measuring ice thickness. For that i hope to use a ultrasonic sensor, namely the HC-SR04. This sensor i’ve used a lot in the <a href="http://waag.org/en/fab">fabschool</a> project. It’s a wonderfull sensor, specially with kids. You don’t see or hear what it’s doing, but with the output you can measure distance. More or less like bat’s navigate.</p>
+
+<p>But now i really wanted to get a deeper understanding how it functions, because i think i will use it to measure ice.</p>
+
+<p><a href="https://hackaday.com/2014/03/17/good-vibrations-giving-the-hc-sr04-a-brain-transplant/">https://hackaday.com/2014/03/17/good-vibrations-giving-the-hc-sr04-a-brain-transplant/</a></p>
+
+<p>This article was the start of a nice journey into understanding the HC-SR04. It leads to the following link, a page mentioned on hackaday as the source of the article:</p>
+
+<p><a href="http://uglyduck.ath.cx/ep/archive/2014/01/Making_a_better_HC_SR04_Echo_Locator.html">http://uglyduck.ath.cx/ep/archive/2014/01/Making_a_better_HC_SR04_Echo_Locator.html</a></p>
+
+<p><i>The circuit has 2 transducers one for emission and one for reception. To transmit the ultrasonic pulses a relatively high voltage is needed. A MAX232 (U3) is cleverly used to produce +/-10V (which are the normal USART voltages) from 5V. The transducer is connected between two outputs so it is in fact powered at 20V. Power is only applied to this circuit through Q2 some time before and during pulse emission because the internal switching charge-pump is noisy. When the circuit switches to receive mode the MAX232 power is cut off. The receive and emit circuits are controlled by an EM78P153S chinese microcontroller running at 27MHz. The receiver side uses LM324 which contains 4 OPAMPs. U2D is just a times 6 amplifier. U2C is a multiple feedback (1st order) pass band filter which is followed by another times 8 amplifier (U2B). The last OPAMP (U2A) is used together with Q1 as a hysteresis comparator. I’ve simulated the filter in PSpice and it is not centered at 40KHz as it should be but instead it has a 18KHz peak. By changing just two resistors (R13 to 2K2 and R11 to 18K) the filter response is shifted to the pulse frequency and this greatly improves the detection sensitivity.
+</i></p>
+
+<p>Here is the schematic of the HC-SR04 from his page:</p>
+
+<p><img src="http://uglyduck.ath.cx/HC-SR04E/HC-SR04.svgz" alt="" /></p>
+
+<p>The bunch of HC-SR04 sensors that we have at the Waag have a slightly other layout. But with the schematic and some guessing the board acts the same as this reversed engineered board.</p>
+
+<p>The page also mentioned another site with information which contains the most beautifull output from an oscilloscope, of how the sensor actually works:</p>
+
+<p>! <img src="./images/week11/General-Timing.png" alt="" /></p>
+
+<p>The first yellow line is the TRIG pin. Normally you pulse this pin to get the sensor started.</p>
+
+<p>Then the blue line is the TX for sending the ultrasonic pulses to the sending transducer. As you can see it send 8 short pulses.</p>
+
+<p>After the 8 pulses are send, the ECHO pin (Magenta) is set to HIGH and turns LOW once the RX (GREEN line), the receiving transducer gets the first echo back. The time the ECHO pin was high divided by 2 times / 29.1 is the distance to the object (see the code example).</p>
+
+<p>I tried to measure it myself. These are the 8 pulses the TX sends:</p>
+
+<p><img src="./images/week11/8puls.png" alt="" /></p>
+
+<p>Here you see the TX on the orange line (8 short pulses seen as 1 pulse) and then the RX in blue turning low is the receiving echo. Unfortunately i missed an image of the same with an object further away.</p>
+
+<p><img src="./images/week11/ds0000.png" alt="" /></p>
+
+<p>The measuring was a bit hard, because i didn’t see any signal (only noise) on the RX, so i measured at the last lm324 (see schematic above). Only after the signal went though 4 amps provided on the board, i discovered the receiving pulses.</p>
+
+<p><img src="./images/week11/4amps_pin.png" alt="" /></p>
+
+<h2 id="board">Board</h2>
+
+<p>I made this basic board to connect the hc-sr04 module:</p>
+
+<p><img src="./images/week11/schematics.png" alt="" /></p>
+
+<p>It’s a basic attiny84 board, based on the <a href="./week07.html">hello world board I made during the electronics design week</a>. I removed the button, the Phototransistor and the led from the hello world board schematics. Then added a 4 pins smd connector for the hc-sr04 module.</p>
+
+<p>The bootloader was burned with the <a href="./week05.html">ISP - in-circuit programmer made during the electronics production week</a>. The board uses the external 20mhz of the resonator as clock.</p>
+
+<p>The hc-sr04 needs of course VCC and GND.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- for the HC-SR04 i connected these pins:
+- Trigger pin = MOSI/PA6
+- Echo pin = MISO/PA5
+
+- for the softserial communication:
+- TX = PA0
+- RX = PA1
+
+- for the resonator
+- PB0 / XTAL 2
+- PB1 / XTAL 2
+</code></pre></div></div>
+
+<p><img src="./images/week09/pinout_attiny.png" alt="" /></p>
+
+<h2 id="code">Code</h2>
+
+<p>The code i wrote is compact and clean!</p>
+
+<p>First i included the softwareserial.h to send the outcome of the measurements to the ftdi’s tx and rx, so i get realime measurements in the console (seen by using this command in a terminal “screen /dev/ttyUSB0 9600”).</p>
+
+<p>Then i defined the pins according to the schematics of my board.</p>
+
+<p>In the setup function the serial baudrate is set, followed by the pinmode of the defined pins.</p>
+
+<p>The loop i first used the “long” variable for using a value of any type.</p>
+
+<p>The next 4 lines pulses the trigger pin of the hc-sr04. For how the hc-sr04 module actually works see <a href="./week11.html#research">the serearch</a> i did on top of this page.</p>
+
+<p>Then the calculation is done by reading the echoPin. I calculates the distance by getting the duration between the pulse signal and the echo of the echoPin, dividing it by 2 (/2 because the signal travels to the object and back) and then divided by the speed of sound  the (/29.1).</p>
+
+<p>Then it uses the distance for outputting to serial (TX). If the distance is more than 400 or less then 0, print “out of range”, otherwise print the distance to serial.</p>
+
+<p>Explaining the code costed more time than writing it :)</p>
+
+<pre><code class="language-C">
+#include &lt;SoftwareSerial.h&gt;
+#define rxPin 0
+#define txPin 1
+#define trigPin 6
+#define echoPin 5
+
+SoftwareSerial serial(rxPin, txPin);
+
+void setup() { //
+  serial.begin (9600);
+  pinMode(rxPin, INPUT);
+  pinMode(txPin, OUTPUT);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+void loop() {
+  long duration, distance;
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  duration = pulseIn(echoPin, HIGH);
+  distance = (duration/2) / 29.1;
+
+  if (distance &gt;= 400 || distance &lt;= 0){
+    serial.println("Out of range");
+  }
+  else {
+    serial.print(distance); 
+    serial.println(" cm");
+  }
+  delay(500);
+} /* */
+</code></pre>
+
+<h2 id="it-works-on-ice-but">It works on ice, but…</h2>
+
+<p>It works with ice, of a thickness of about 5 cm. Al lot of pulses get lost (out of range). Thickness should be about 4 cm, but ranges between  4-10. Time traveling of sound trough ice is about twice as long as air, so the major clear signal of 7cm i(ice thickness of 3.5cm) should be more or less ok.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4 cm
+4 cm
+10 cm
+4 cm
+4 cm
+3 cm
+Out of range
+4 cm
+Out of range
+5 cm
+9 cm
+8 cm
+7 cm
+7 cm
+7 cm
+7 cm
+6 cm
+7 cm
+7 cm
+7 cm
+7 cm
+7 cm
+7 cm
+7 cm
+302 cm
+Out of range
+Out of range
+10 cm
+Out of range
+15 cm
+Out of range
+16 cm
+Out of range
+15 cm
+7 cm
+Out of range
+6 cm
+Out of range
+12 cm
+Out of range
+11 cm
+Out of range
+12 cm
+</code></pre></div></div>
+
+<h2 id="other-measurement-tests-and-modifications-i-did">Other measurement tests and modifications i did:</h2>
+
+<p>Measuring distance to water. Works :)</p>
+
+<p><img src="./images/week11/water.png" alt="" /></p>
+
+<p>Measuring ice on water. Works… till about 5 cm thickness.</p>
+
+<p><img src="./images/week12/ijs_dikte.png" alt="" /></p>
+
+<p>I then modified the hc-sr04. I had a bigger 40khz transducer that i used to replace the RX to get a better echo.
+The transducer is a <a href="https://www.electronicsurplus.com/panasonic-matsushita-efr-rcb40k54-transducers-ultrasonic-40khz-45db">efr-rcb40k54</a></p>
+
+<p><img src="./images/week11/hc-sr04_mod.png" alt="" /></p>
+
+<p><img src="./images/week11/hello_board.png" alt="" /></p>
+
+<p>Did some measurements and finally replaced it with the hc-sr04 that’s on my newly made board, damaging the lanes on the pcb. I used 2 wires to make bypasses.</p>
+
+<p><img src="./images/week11/hc-sr04-mod2.png" alt="" /></p>
+
+<p><img src="./images/week12/broken_lanes.png" alt="" /></p>
+
+<p><img src="./images/week11/output.png" alt="" /></p>
+
+<h2 id="does-it-work-for-my-final-project-no">Does it work for my final project? NO!</h2>
+
+<p>during searching for possibilities i found these tehcnics (ultra-wideband impulse radar). With this technic you get good results (see the russian video), but a bit out of range for the fabacademy :(</p>
+
+<p><a href="https://hackaday.com/2013/10/05/homebuilt-ultra-wideband-impulse-radar/">https://hackaday.com/2013/10/05/homebuilt-ultra-wideband-impulse-radar/</a></p>
+
+<p><a href="http://glcharvat.com/shortrange/">http://glcharvat.com/shortrange/</a></p>
+
+<p><a href="http://glcharvat.com/Dr._Gregory_L._Charvat_Projects/XbandUWBImpulseRadar.html">http://glcharvat.com/Dr._Gregory_L._Charvat_Projects/XbandUWBImpulseRadar.html</a></p>
+
+<p><img src="https://images.tandf.co.uk/common/jackets/amazon/978113807/9781138077638.jpg" alt="" /></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cayYsnFsneQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<p><a href="http://uwbs.ru/products/izmeritel-tolschiny-lda-picor-ice/?lang=en">http://uwbs.ru/products/izmeritel-tolschiny-lda-picor-ice/?lang=en</a></p>
+
+<p><img src="http://uwbs.ru/wp-content/uploads/радарограмма2.png" alt="" /></p>
+
+<p><img src="http://uwbs.ru/products/izmeritel-tolshhiny-snega/?lang=en" alt="" /></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3TU5K-KsJnk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_WeeklyAssignments.html" class="btn btn-default navbar-btn cursorNorm" role="button">WeeklyAssignments</a>
+        
+        
+        
+        <a href="tag_FinalProject.html" class="btn btn-default navbar-btn cursorNorm" role="button">FinalProject</a>
+        
+        
+        
+        <a href="tag_Howto.html" class="btn btn-default navbar-btn cursorNorm" role="button">Howto</a>
+        
+        
+        
+        <a href="tag_Resources.html" class="btn btn-default navbar-btn cursorNorm" role="button">Resources</a>
+        
+        
+        
+    </div>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+			<p><img src="images/ws_logo.svg" width="100" height="100" alt="Waag Society"/</p><br>
+               2019 Henk Buursen.
+               <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+                <br />
+<span>Page last updated:</span> Mar 21, 2018<br/> Site last generated: Dec 13, 2019 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+Title: Week_16
+
+URL Source: http://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/Week16.html
+
+Markdown Content:
+Assignment 16                                                                        9.5.2018  
+
+------------------------------------------------------------------------------------------------
+
+Topic: Machine design
+---------------------
+
+Goals of this week:  
+
+*   Actuate and automate your machine (Group) ([LINK](http://fab.academany.org/2018/labs/fablaboulu/machine_week_group2.html))  
+    
+*   Document the group project and your individual contribution (Group) ([LINK](http://fab.academany.org/2018/labs/fablaboulu/machine_week_group2.html))
+
+What I did this week
+--------------------
+
+During this week, I developed our peeler machine as follows:  
+
+*   Lasercut and attached boxes for the motor
+  
+I used boxes py to create 3 boxes: 1 for motor and 2 for surface. Boxes were super precise so they attached well together when I hammered  
+pieces together. I also lasercut mdf surface top of the cardboard surface to limit bending. I used wood glue and sticker pads to attach  
+these pieces together. Finally, everything was attached to the cardboard surface:![Image 1: 3](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week16-MachineDesign/motor_box_3.jpg)  
+![Image 2: 4](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week16-MachineDesign/motor_box_4.jpg)  
+![Image 3: 5](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week16-MachineDesign/motor_box_5.jpg)
+
+*   Connected clutch with the motor
+To connect the clutch with the motor, I used wool to stuck the motor inside and screws to hold it there. The end result was fine:![Image 4: 5](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week16-MachineDesign/Kiinni.jpg)
+
+*   Designed, cut and assembled peeler holder
+  
+Our plastic container had already 3.5mm diameter holes between 19mm engraved to it, so I created corresponding hole-pattern  
+in Fusion 360. In total, it took me few tries to get kerf and the sizes correct, but in a end I came up with good design:![Image 5: 5](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week16-MachineDesign/PeelerHolder.jpg)
+
+I screwed the peeler holder to plastic part with bolts. The connection was durable:
+
+![Image 6: 5](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/images/Week16-MachineDesign/Screwed.jpg)
+
+FILES made THIS WEEK
+--------------------
+
+*   [Peeler stick pdf. file](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/Files/Week16/Stick.pdf)  
+    
+*   [Box1 pdf. file](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/Files/Week16/Boxi1.pdf)  
+    
+*   [Box2 and Box 3 pdf. file](https://fabacademy.org/2018/labs/fablaboulu/students/peetu-virkkala/Files/Week16/Boxi23.pdf)  
+    
+
+  
+[![Image 7: Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)  
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).

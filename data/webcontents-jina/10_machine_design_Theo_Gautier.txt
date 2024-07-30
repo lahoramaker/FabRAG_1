@@ -1,0 +1,1031 @@
+Title: 10. Mechanical & machine design - GAUTIER Théo
+
+URL Source: http://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/
+
+Markdown Content:
+This week was dedicated to making a machine as a group. I am very happy to have this opportunity. Working in a group to make something concrete is very exciting for me. To be able to exchange our knowledge to improve our prototype is really great.
+
+**[Group assignment](http://fab.academany.org/2021/labs/agrilab/group/week10/)** :
+
+*   Design a machine that includes mechanism + actuation + automation
+*   Build the mechanical parts and operate it manually.
+*   Actuate and automate your machine.
+*   Document the group project
+
+**Individual assignment** :
+
+*   Document your individual contribution.
+
+Vidéo shot[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#video-shot "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------
+
+Group assignment[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#group-assignment "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Slide[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#slide "Permanent link")
+-------------------------------------------------------------------------------------------------------------------
+
+![Image 1: Slide_pancake](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/slide.jpg)
+
+Day 1 - thinking of an idea, looking for kind of equipment with have at Agrilab, start the design and test some electronics[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#day-1-thinking-of-an-idea-looking-for-kind-of-equipment-with-have-at-agrilab-start-the-design-and-test-some-electronics "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+On the first day, we made a brainstorming together on which kind of machine we want to build and how to build it.
+
+![Image 2](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_3.jpg)
+
+We want to have a device that is working with 2 or 3 axes.
+
+*   First Theo has the idea to make a smart garbage sorting device, where we put some garbage in a box and with buttons, it will throw the garbage in the right trash can we would have built.
+*   The second idea was to make a device that print pancakes to a warming plate, to draw pancakes with different shpaes, such as pancakes in the shape of houses, or animals.
+
+![Image 3](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_4.jpg)
+
+So we decided to make a pancake printer because it is a device that interested us, to make something with food. We started to think to a way to make this device, we drew on paper how the machine could work. We want to have an extruder, to pour the pancake dough on the plate, that will move on 2 axes, X and Y, with motors. We thought about 2 differents systems to pour the pancake dough. Because this paste is pretty fluid, we thought of a system with pump that will bring the dough to the extruder, or a system with a syringe, that can be activate with a motor to push the pancake dough.
+
+![Image 4](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_5.jpg)
+
+Some shields for Arduino have been ordered in our lab for this week so we gonna use an Arduino mega board with a shield GRBL to use gcode to pilot our device.
+
+Antonio talked to us about peristaltic we can use for the device. In Agrilab we have a device that dispense hydroalcoholic gel (because of the pandemic) which is using this kind of pump. We went to check it for how it works and how we can use it in the device.
+
+![Image 5](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w1015.jpg)
+
+![Image 6](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w1014.jpg)
+
+To move the extruder of pancake dough we have thought of two possibilites:
+
+*   One is the plate that can move, like creality 10
+
+![Image 7](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/images/week10/17.jpg)
+
+*   Second is to have 2 axes for the extruder
+
+We would like to use a hotplate that can be find in a kitchen, with a pan, that’s why we are choosing the second possibilities. To do this we drew a ramp system.
+
+![Image 8](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_6.jpg)
+
+Now we have a pretty clear idea in our mind, we went over Agrilab to look of all the device we have and which system inspire us.
+
+We have a 3D printer where we can see the mechanism, a Creality ender 5 plus.
+
+![Image 9](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w1016.jpg)
+
+It is working with wheels that roll along an aluminium V-profile rail that is drived with a belt thanks to a motor and a puley for X and Y axes.
+
+![Image 10](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_9.jpg)
+
+One of the axes is drived with a motor with two sides.
+
+![Image 11](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_11.jpg)
+
+For the Z axe, it is the plate that goes up and and down with a threaded rod and a motor.
+
+![Image 12](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_10.jpg)
+
+We found in storage aluminium profiles that we will certainly use.
+
+![Image 13](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_12.jpg)
+
+In Agrilab we have an other device made by Luc, that engrave cardboard plates.
+
+![Image 14](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_13.jpg)
+
+Here is it moving accoding to a motor with puley, a belt and wheels that block everything.
+
+![Image 15](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_15.jpg)
+
+There is this kind of system with motors on both sides of the aluminium V-profile that are coordinate to move together.
+
+The other axis is working according to the same principle.
+
+We took a look on a small CNC built in our lab.
+
+![Image 16](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_21.jpg)
+
+This device is moving with bearings, metal sticks and the movement is make by and threaded rot with a screw, that turn with a motor and drive the cnc tool.
+
+![Image 17](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_20.jpg)
+
+We found in the storage some metal sticks that fit perfectly with the bearing that we have at our disposal, and also threaded shafts with screw, but that is not the system we gonna use.
+
+We were inspired by all these systems to make our pancake printer bot. We were given some wheels for the aluminium V-profiles to check what is it.
+
+Now we have started to design our machine. Theo started the design on Fusion 360.
+
+![Image 18](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_2.jpg)
+
+![Image 19](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_7.jpg)
+
+Individual assignment:[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#individual-assignment "Permanent link")
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Fusion 360](https://www.autodesk.com/products/fusion-360/overview?term=1-YEAR)[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#fusion-360 "Permanent link")
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+I design on Fusion 360. For this I was very inspired by the machines we have at AgriLab. After thinking about it and looking for materials in storage we decided on a machine that moves on 20 x 20 mm aluminium profile rails. In addition to our rails I found bearings and wheels that fit perfectly into our V-profiles. So I were able to make a list of all the items we were going to take.
+
+*   Aluminium profile 20 x 20 mm
+*   Bearings
+*   2 Nema17 motors
+*   Transmission belts
+*   Output pinions for the motor
+*   2 stop switches for our X and Y axes
+*   1 power source
+*   1 peristaltic pump
+*   Plexiglass 3mm thick
+*   6mm thick MDF
+*   Nuts, bolts, washers…
+
+![Image 20](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/4.jpg)
+
+![Image 21](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/5.jpg)
+
+So I started the design by adding a [Mc MasterCarr](https://www.mcmaster.com/) component, our profiles. I then extruded it to the length we wanted. In order to make the frame of our machine I moved them (1). Then I made the support for the crossbar (2). This support is held in place by three bearings, inserted with Mc MasterCarr, and then moved on the drawing (3). I then did the same thing on the other side of the machine (4). I added a pivot point for the belt. This point will have a double use, first to send the belt back to the other side but also to tension the belt (5). I have inserted our nema17 engine. For this I had to modify a support bracket to be able to fix the motor. I used the datasheet of the motor to make the fixing holes (6). In the continuity I made the carriage (7). I then made the mounting bracket and inserted the second motor (8). Again with Mc MasterCarr I inserted the drive belts (9). Finally I made the feet of our machine. Here is the finished machine (10).
+
+### How do I make a McMaster Carr insertion ?[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#how-do-i-make-a-mcmaster-carr-insertion "Permanent link")
+
+It’s **very simple**, just click on the **insert** button and then click on **insert McMaster-Carr component**. A dialogue box will open and you will have to find the object you want. In this example I would like to insert a screw. Once you have found the object you want, click on **product detail CAD** and download the object in **3-D STEP format**. Once all these steps have been completed you can move your object wherever you want.
+
+![Image 22](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/inserer.jpg)
+
+### Exporting parts for laser cutting.[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#exporting-parts-for-laser-cutting "Permanent link")
+
+In order to cut our parts quickly and precisely I chose to use our laser cutter. To do this I exported all our parts to be machined so that I could save the sketches in DXF. To check if our supports were good I decided to cut our parts on cardboard.
+
+For this I cut out all the parts like the head for the extruder, the feet, the bearing supports… After cutting out all the pieces and assembling them I realised that there were improvements to be made.
+
+![Image 23](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/6.jpg)
+
+I made some modifications with these cuttings.
+
+*   I added an extra bearing on the crossbar support. This support will have 4 bearings instead of 3. This is to increase the precision of the movement. With the weight of the motor I was afraid that the displacement would be imprecise, so I added this 4th bearing to increase the constraints and thus have a more precise displacement
+*   I modified one base to be able to integrate the motor directly into the base. It was possible to position the motor directly in the foot of the machine. This avoids the need to manufacture another motor mount. So I enlarged the base to fit the motor.
+*   I modified a foot to be able to force in a bearing for the belt return pinion. The same for the other belt tensioner. This allowed me to gain in efficiency on the belt return and allows the motor to force itself less, the movement is more smooth.
+*   I added the fixing holes for the belts in the supports
+
+![Image 24](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/7.jpg)
+
+With all these modifications I was ready to make the final cuts. For that I exported my sketches in DXF again. For the bases we used 6mm thick MDF. We decided to use this MDF because it is the thickest and therefore strongest material we have at AgriLab that is capable of being laser cut. For the rest of the machine (extruder head and X axis support)we used 3mm thick plexiglass. These parts are the most exposed to the projection of our pancake dough, so it is preferable to use this kind of material for more safety.Plexiglass has the particularity to be food safe. The purpose of our machine being to make edible pancakes it is preferable to look at the materials we use to avoid danger.
+
+### Cutting the aluminium profile[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#cutting-the-aluminium-profile "Permanent link")
+
+![Image 25](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/3.jpg)
+
+The structure of our machine is made of aluminium profile. At AgriLab we have large bars that need to be cut with our band saw. Being a dangerous and complex machine to use, it was a worker (Jérome) from the Lab who cut our profiles. I gave all the measurements and the bar to cut out and then Jérome did it all.
+
+Assembly[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#assembly "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------
+
+![Image 26](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/8.jpg)
+
+Once all the parts were cut and grouped together I was able to assemble the whole machine.
+
+To assemble there is no particular order. However, you should be careful when inserting your bearings into the profile, it is best to place them before assembling and closing the frame. Apart from that, using a profile with a special fastener helps a lot with the assembly. It was very easy to assemble piece by piece.
+
+I started by assembling the chassis with brackets. Then I assembled the crossbar and added the bearings. Finally I assembled the legs.
+
+### Fitting the motors, belts and limit switches[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#fitting-the-motors-belts-and-limit-switches "Permanent link")
+
+![Image 27](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/2.jpg)
+
+Once [Antonio](http://fabacademy.org/2021/labs/agrilab/students/antonio-anaya/about/) finished presetting the motors I was able to insert them on the machine. Then to transmit the power of the motors I added two toothed belts. I tightened them on the supports and then finalized their tension by adjusting the tensioners. The goal is to have the belts tight but not too tight. This adjustment is done by the sight and touch. Finally, I had the task of positioning the machine’s stop switches on the X and Y axes. For the limit switches we have chosen to position them in these corners for one main reason. These two corners had a large space to be able to fix them solidly.
+
+![Image 28](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/50.jpg)
+
+![Image 29](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/9.jpg)
+
+Box for the integration of the wires[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#box-for-the-integration-of-the-wires "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![Image 30](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/1.jpg)
+
+My last mission for this group work was to make boxes to hide the Arduino, the wires and to fix the peristaltic pump. For that I used the [makercase](https://www.makercase.com/) website to make the box. Then I imported the DXF file in fusion to make the fixing holes. I also cut these parts with a laser to have precision and speed of action.
+
+![Image 31](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/11.jpg)
+
+![Image 32](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/10.jpg)
+
+Group assignment[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#group-assignment_1 "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Antonio was looking into a power source for our motors.
+
+![Image 33](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_1.jpg)
+
+And he also tried to flash the Arduino board with the shield for CNC.
+
+![Image 34](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w10_8.jpg)
+
+Peristaltic pump[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#peristaltic-pump "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Elina worked on the system to make the pump bring the pancake paste to the warming plate. First she needed to make the pump turn in one way and an other way to have a retract of the paste of pancake inside the tube. The first step was to find how to plug the pump to an arduino board to flash it.
+
+![Image 35](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w1020.jpg)
+
+The pump is made of ball bearings and silicone pipe. It is working with 12V current and 2A. The motor is a DC motor. In AgriLab the instructors ordered for us some H-bridges for the motors. She looked on internet how to wire the motor of the pump with that and on Arduino and she found [this website on how to use H-bridge with a L298N motor](https://arduino.blaisepascal.fr/pont-en-h-l298n/).
+
+This schematic were very useful to know where to plug what.
+
+This [website](https://howtomechatronics.com/tutorials/how-to-setup-grbl-control-cnc-machine-with-arduino/) helped her also to understand how to control the CNC shield with Arduino.
+
+The pump is powered with an AC/DC electric power supply 12V.
+
+![Image 36](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w1013.jpg)
+
+Step by step, Elina wrote the code to make the pump turn. The program is taking a value written in the serial monitor and send it to the motor as the speed. The turning side of the motor depend on the sign of the number (positives numbers will turn in one directon, negatives numbers will turn in another one).
+
+Here is the wiring of the pump she made:
+
+![Image 37](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w1018.jpg)
+
+![Image 38](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w1019.jpg)
+
+Here is the code she wrote. Elina used the IDE [Visual Studio Code](https://code.visualstudio.com/) she discovered during [a previous week](http://fabacademy.org/2021/labs/agrilab/students/elina-nguyen-cadoret/assignments/week09/#visual-studio-code). First there is the constants, the pins where the wires are plugged. In the setup function, she set the pins as outputs. Then she wrote a function for the movement, with two variables, the speed and the direction. And in the loop Elina first collect the value of the speed that is set, then transform it a bit in order to make it nice for the motor.
+
+![Image 39](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/cap4.jpg)
+
+Here 200 is the speed of the motor, -200 is the same speed but in the other side, and -1 stop the motor.
+
+She got a problem on the value when I print it on the serial monitor. The value she wrote is read but after the delay it take again the 0 value, and stop the motor. To fix that the 0 was excluded for the program and she changed the stop for the value -1.
+
+```
+#include <Arduino.h>
+
+//https://ardwinner.jimdofree.com/arduino/iv-les-moteurs-continus/3-faire-tourner-un-moteur-dc-bidirectionnel-avec-un-module-l298n/
+//https://arduino.blaisepascal.fr/pont-en-h-l298n/
+
+//declaration des variables et des constantes
+int enA = 9; //les pins avec des tilds
+int in1 = 10;
+int in2 = 11;
+
+int speedmotor = 0; //vitesse du moteur
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(enA, OUTPUT);
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  Serial.begin(9600); //la valeur de communication
+}
+
+void move(int speed, bool testforward) {// speed between 0 and 255 analog write, test d'un booléen pour aller dans un sens ou dans un autre
+  if (testforward){
+    digitalWrite(in1, HIGH); //envoie du courant dans un sens (set to +)
+    digitalWrite(in2, LOW); //en envoie pas, le récupère (set to -)
+  }
+  else{
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, HIGH);
+  }
+  analogWrite(enA, speed);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  if(Serial.available() > 0){ //si la board arduino est branchée
+    speedmotor = Serial.parseInt(); // speedmotor recupere la valeur inscrite dans le serial
+    Serial.println(speedmotor);
+    if (speedmotor == 0){
+      return;
+    }
+    if(speedmotor > 0){ //si speedmoto a une valeur, plus grande que 0
+      if (speedmotor > 255){
+        speedmotor = 255; //speedmotor est forcé à 255 maxi
+      }
+      move(speedmotor, true); //alors marche avant
+    }
+    else if(speedmotor < -1){
+      speedmotor = -1*speedmotor; //pour que la vitesse ait une valeur de vitesse mais en marche arrière
+      if (speedmotor > 255){ //recopiage du test parce que speedmotor est de nouveau positif
+        speedmotor = 255; //speedmotor est forcé à 255 maxi
+      }
+      move(speedmotor,false); //marche arriere
+    }
+    else if(speedmotor == -1){ //c'est zero donc tout s'arrete
+      digitalWrite(in1, LOW);
+      digitalWrite(in2, LOW);
+    }    
+  } 
+}
+```
+
+With this code, she was able to make the viscosity test of the pancake paste in the tubes.
+
+Viscosity test[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#viscosity-test "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Elina cooked the first pancake paste according to [this recipe](https://www.marmiton.org/recettes/recette_pancakes-faciles-et-rapides_81518.aspx).
+
+*   150 g of flour T55
+*   1 egg
+*   1 tablespoon of sugar
+*   1 tablespoon of oil
+*   1 teaspoon of chemical yeast
+*   200 mL of milk
+
+She made a small test with this consistency of dough but it is too liquid, the flow continues to fall even with gravity when the pump is stopped.
+
+![Image 40](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w101.jpg)
+
+So she made different paste with different viscosity, the first one is the control sample, with initial recipe.
+
+![Image 41](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w102.jpg)
+
+The second one has 25% more flour, and the third one has 50% more flour. We can see the different viscosity of the paste on the video.
+
+To make the extruder she assembled some tubes from the largest to the smallest we could find. The biggest one is 7.6 mm, the second is 5.4 mm, the third one is 3.5 mm,a nd the last one is that small iI wasn’t able to measure it with the calliper.
+
+![Image 42](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w103.jpg)
+
+She also tested the different tube with the different viscosity of the paste.
+
+With the pipe of 3.5 mm she draw by hand a line on the warm plate to see how the dough is reacting to warm. We can see that the less viscose paste make the thinner line. After we taste it, because of too much flour we pour inside it is not really tasty.
+
+![Image 43](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w104.jpg)
+
+We finally decided to take the consitency of the second dough, with 25% more flour, and the third pipe.
+
+Improving the control of the pump with a joystick[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#improving-the-control-of-the-pump-with-a-joystick "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+After making the pump turning according to some values, she wanted to add an input, a joystick to control the speed of the pump. I searched on internet how to use a potential meter and found this very useful [website on how to control a potential meter with Arduino](https://www.mataucarre.fr/index.php/2019/03/09/utiliser-un-potentiometre-avec-un-arduino/). There is a picture of the wiring and how to control a LED with a potential meter.
+
+![Image 44](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/cap1.jpg)
+
+Elina apply this to my motor of the pump.
+
+To understand how a potential meter is working she just copied the code and watch the values of the potential meter printed on the serial monitor.
+
+![Image 45](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/cap2.jpg)
+
+To plug everything on the Arduino board she checked [this website with H-bridge and Arduino](https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/) and she followed this schematic with the potential meter and the motor.
+
+![Image 46](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/cap3.jpg)
+
+She discover the function _map_ to transform some value to some other which was very usefu because the motor handle values from 0 to 255 and the potential meter have value from 0 to 1023. I modify the code to make the pump go in a way or in an other according to the position of the potential meter.
+
+![Image 47](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w1011.jpg)
+
+![Image 48](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w1012.jpg)
+
+Here is the code she wrote, and we use it for the device, the pancake bot.
+
+```
+#include <Arduino.h>
+
+//https://ardwinner.jimdofree.com/arduino/iv-les-moteurs-continus/3-faire-tourner-un-moteur-dc-bidirectionnel-avec-un-module-l298n/
+//https://arduino.blaisepascal.fr/pont-en-h-l298n/
+//https://www.mataucarre.fr/index.php/2019/03/09/utiliser-un-potentiometre-avec-un-arduino/
+
+//declaration des variables et des constantes
+int enA = 9; //les pins avec des tilds
+int in1 = 10;
+int in2 = 11;
+int pot; //valeur du potentiometre
+
+int speedmotor = 0; //vitesse du moteur
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(enA, OUTPUT);
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  Serial.begin(9600); //la valeur de communication
+}
+
+void move(int speed, bool testforward) {// speed between 0 and 255 analog write, test d'un booléen pour aller dans un sens ou dans un autre
+  if (testforward){
+    digitalWrite(in1, HIGH); //end current in one side (set to +)
+    digitalWrite(in2, LOW); //receive the current (set to -)
+  }
+  else{
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, HIGH);
+  }
+  analogWrite(enA, speed); //send some speed to the motor
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+    pot = analogRead(A0); // read the value of the potentialmeter
+    delay(200); 
+    Serial.println(pot); //print the value, to have a check
+    if(pot < 470){ //separate the value of the potential meter, and have a gap of 40 to be sure to taje the value
+      speedmotor = map(pot, 470, 0, 0, 255); // the speedmotor variable take the value of pot that is transformed, the speed has to be from 0 to 255, map function transform the value, when the potential meter go farther the origin, it increae the peed of the motor
+      move(speedmotor, true); //alors marche avant
+    }
+    else if(pot > 550){ // other case, the potentialmeter is in the other side
+      speedmotor = map(pot, 550, 1023, 0, 255); //map the value, but in the other way
+      move(speedmotor,false); //marche arriere
+    }
+    else{ // if it is not on the values before it stops
+      digitalWrite(in1, LOW);
+      digitalWrite(in2, LOW);
+    }     
+}
+```
+
+To control the peristaltic pump for our pancake bot, we used this system so they are two Arduino boards to control the pancake bot. We decided to use the joystick because the time was short, and we wanted to have the device ready pretty quickly.
+
+When she first tried the code she took a new pump but the ball bearings inside were broken. I first believed that the code she wrote were miswritten, but it finally was the pump that actually don’t work. It took her a little time to figure out that it was the pump and not the code.
+
+![Image 49](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w107.jpg)
+
+Improving the control of the pump with Gcode[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#improving-the-control-of-the-pump-with-gcode "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Elina wanted improve the control of the peristaltic pump with the Gcode, to have the control of the pump directly in the code and not manually with the joystick.
+
+First she looked for a way to understand gcode, so I followed a tutorial on how to control a CNC with Arduino and grbl. Here is [the tutorial on how to flash arduino with grbl](https://letmeknow.fr/shop/fr/blog/110-piloter-une-cnc-avec-arduino-et-grbl). To use Arduino IDE with grbl she need to install it so according to the tutorial she installed [grbl](https://github.com/grbl/grbl).
+
+Elina started by building the electronic system with 2 motors, on for X and one for Y. With the equipment we add and thanks to some pictures on internet She plugged the shiel CNC for Arduino on the Arduino board and try to understand how to plug the motor and the power source on it.
+
+![Image 50](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w105.jpg)
+
+She found on [a blog how to use the shield CNC for Aduino](https://blog.protoneer.co.nz/arduino-cnc-shield/). The shield she have is a V3, and thanks to the picture she succeed to plug eveything to the Arduino, and the writing on the shield. To plug the motor on the right side she looked for a datasheet of the motor to know which wire goes to which wire. She found [this datasheet](https://datasheetspdf.com/pdf-file/928656/MotionKing/17HS3401/1) but the datas are wrong. My instructor helped to find the good side and replugged everything right. To do that we use Dupont wire. We turn the motor manually while plug to hole together with the wire, and when we feel a strength in the motor it means that the color wires go together.
+
+So the red goes with the green, and the blue with the black. Here is the wiring she made.
+
+![Image 51](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w1010.jpg)
+
+She also installed [Universal Gcode Sender](https://github.com/winder/Universal-G-Code-Sender) to control the motor. And according to [the tutorial I mainly followed on how to use grbl with Arduino](https://letmeknow.fr/shop/fr/blog/110-piloter-une-cnc-avec-arduino-et-grbl).
+
+Elina searched to learn more on G. command in gcode. [The Marlin website](https://marlinfw.org/docs/gcode/G091.html) were really useful to understand more the gcode command. On the terminal of UGS (Universal Gcode Sender), she wrote this line to make the motor work
+
+Which means :
+
+*   in millimeters
+*   with relative coordonate
+*   make a linear move
+*   in X, 5 mm
+*   in Y, 5 mm
+*   with a Feedrate at 50
+
+And here is the video on how the motors are working with this line of code.
+
+Now she understood a little bit more, I wanted to add my pump to the system. She found the [Gcode command for the spindle here](https://blogs.brighton.ac.uk/danielscncmachine/testing/).
+
+*   M03 = CW Spindle
+*   M04 = CWW Spindle
+*   M05 = Spindle
+
+Elina tried to look on internet to know how to plug the H-bridge to the CNC shield, for example on [this blog](https://blog.protoneer.co.nz/arduino-cnc-shield-v3-00-assembly-guide/#4THAXIS), but after reading what is written on the shield and on the H-bridge she finally plugged together whe pin where the name seems the same and see what it is doing.
+
+ENA with SpnEn, one In with SpnDir, and the In with the ground GND.
+
+![Image 52](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w1021.jpg)
+
+Here is the wiring between the H-bridge and the CNC shield for Arduino.
+
+![Image 53](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w1023.jpg)
+
+![Image 54](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w1022.jpg)
+
+Here is the wiring with the motor of the pump and the H-bridge.
+
+![Image 55](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w106.jpg)
+
+Here is the all wiring between the two motors, the shield for Arduino, the H-bridge, and the peristaltic pump.
+
+![Image 56](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w108.jpg)
+
+Here is the focus on the wiring between the H-bridge for the pump and the shield for Arduino.
+
+![Image 57](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/w109.jpg)
+
+She might have plugged the wire in a wrong way because the command line doesn’t really work has they supposed to do but it still work for the device. M03 start the spindle and M04 stop the spindle. It is maybe because the current flow only in one way, that why the reverse spindle stop the spindle actually.
+
+Here is the video of the pump controlled by gcode.
+
+GRBL CNC system[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#grbl-cnc-system "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------
+
+![Image 58: parts_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/diagram_toon.jpg)
+
+### Parts[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#parts "Permanent link")
+
+![Image 59: parts_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/parts_01.jpg)
+
+**Click on name to check reference in Digikey**
+
+| Part | Quantity |
+| --- | --- |
+| NEMA 17 step motors | 2 |
+| CNC GRBL arduino UNO compatible board | 1 |
+| HR4988 Motor drivers | 2 |
+| Limit switches | 2 |
+| Arduino UNO | 1 |
+| Connectors for wiring | # |
+| Recycled ATX power supply | 1 |
+
+### Consumables[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#consumables "Permanent link")
+
+![Image 60: consumables_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/wires_01.jpg)
+
+![Image 61: consumables_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/connectors_01.jpg)
+
+1.  Ribbon wire 4 colors for stepper motors
+2.  AWG wire 1669
+3.  Connectors “Type 1”
+4.  Connector “Type 2”
+
+### Tools[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#tools "Permanent link")
+
+![Image 62: tools_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/tools_01.jpg)
+
+1.  GST Crimping Tool
+2.  Soldering iron
+3.  Clippers
+4.  Multimeter
+5.  Cross screw driver
+6.  Wire stripper
+
+### Software[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#software "Permanent link")
+
+1.  [Arduino IDE](https://www.arduino.cc/en/software)
+2.  [Universal Gcode sender](https://winder.github.io/ugs_website/download/)
+3.  [GRBL firmware](https://github.com/grbl/grbl)
+4.  [Fusion 360](https://www.autodesk.com/products/fusion-360/overview)
+
+**Instructions for the usage and configurations are detailed in the next steps.**
+
+Using an ATX Power supply[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#using-an-atx-power-supply "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![Image 63: atx_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/atx_01.jpg)
+
+We checked possible power sources and the most suitable one was this recycled ATX power supply.
+
+In AgriLab there’s a large stock of recycled parts and materials.
+
+### Power on jumper[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#power-on-jumper "Permanent link")
+
+To switch on the power supply Antonio added a jumper between the green wire and ground.
+
+Explain more
+
+1.  Cut the wires
+2.  Connect using an electrical union connector
+
+![Image 64: atx_03](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/atx_03.jpg) ![Image 65: atx_02](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/atx_02.jpg)
+
+### Outputs[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#outputs "Permanent link")
+
+This is the table with the Voltage and Power of every output in the ATX power supply.
+
+![Image 66: atx_04](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/atx_04.jpg)
+
+![Image 67: atx_05](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/atx_05.jpg)
+
+He have used 3 pairs of 12 Volts based in the power consumption of every component listed here:
+
+| Part | Voltage | Wire color | Black Ground wire |
+| --- | --- | --- | --- |
+| Arduino UNO board | 5 Volts | Red | Yes |
+| GRBL board | 12 Volts | Yellow | Yes |
+| 12 V Red LED | 12 Volts | Yellow | Yes |
+| Peristaltic pump | 12 Volts | Yellow | Yes |
+
+CNC control system assembly and configuration[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#cnc-control-system-assembly-and-configuration "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Introduction:
+
+The GRBL board we have it’s a common one used for CNC machines, like small low power laser cutters, small milling machines and vinyl cutters.
+
+### CNC board[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#cnc-board "Permanent link")
+
+This is the schematic given by the manufacturer.
+
+Schematic has some faults in the motor driver silk
+
+![Image 68](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/diagram_01.jpg)
+
+characteristics:
+
+| GRBL | Board |  |
+| --- | --- | --- |
+| Operation voltage | 12 to 16 V | not regulated, only protected by a fusible |
+| Axis | 3 connectors for XYZ | +1 Clone axis connector |
+| Limit switches | +-X, +-Y, +- Z |  |
+| Spindle control | Enable, Direction, cooling | Also used for laser output control |
+| Machine override controls | Abort, Hold, Resume |  |
+| Emergency stop |  |  |
+| Serial communication pinouts | SDA, SCL, TX RX, RST, 3.3V 5V |  |
+| Microstepping configuration jumpers | 1/2, 1/4, 1/8, 1/16 |  |
+
+### Assembly[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#assembly_1 "Permanent link")
+
+![Image 69: cnc_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/cnc_01.jpg)
+
+Connect the motor driver boards to the GRBL board sockets. Check the pinout and be sure all the pins coincide correctly.
+
+### Motor drivers[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#motor-drivers "Permanent link")
+
+![Image 70: cnc_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/driver_01.jpg)
+
+![Image 71: cnc_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/driver_02.jpg)
+
+Characteristic:
+
+| HR4988 motor driver |  |  |
+| --- | --- | --- |
+| Operation voltage | 5 Volts |  |
+| Resistance | R100 | 0.1 Ohms |
+| Motor Voltage Regulator | Potentiometer for VREF |  |
+
+Pinouts in order:
+
+| Left | Right |
+| --- | --- |
+| Direction | GND |
+| Step | VDD |
+| Sleep | 1B |
+| Reset | 1A |
+| MS3 | 2A |
+| MS2 | 2B |
+| MS1 | GND |
+| Enable | VMOT |
+
+### Stepper motors[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#stepper-motors "Permanent link")
+
+#### Wiring[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#wiring "Permanent link")
+
+The wiring with the stepper motors was confusing and he invested one afternoon to find out the right wiring configuration.
+
+Following the color code the wires should be punched in the connector like this:
+
+![Image 72: cnc_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/motor_01.jpg)
+
+| Motor driver | Step motor |
+| --- | --- |
+| Green | Red |
+| Red | Blue |
+| Black | Green |
+| Blue | Black |
+
+#### VREF calibration[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#vref-calibration "Permanent link")
+
+This is an important task to prevent over-heating of the motor drivers, and excessive vibration and over-heating of the step motors.
+
+[This the motor datasheet provided by the manufacturer](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/link) [SMD resistor calculator](http://kiloohm.info/smd4-resistor/R100)
+
+Calculation:
+
+| Values |  |  |
+| --- | --- | --- |
+| Current Sense resistance | 0.01 Ohms | Rsense |
+| Rated motor current | 1.3 A | RMC |
+| Safety margin percentage | 25 % | SM |
+
+Antonio found this formula VREF = RMC x 8 x Rsense
+
+![Image 73: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/vref_01.jpg)
+
+Process:
+
+1.  Use the multimeter as voltmeter in a scale of less than 5 Volts.
+2.  Get a multimeter with a clamp connector in the cathode
+3.  Power on the GRBL board
+4.  Place the cathode (screw driver) in the VREF potentiometer and the ground probe in the bottom left GND pin.
+5.  Turn the potentiometer clockwise to increase and anti-clockwise to decrease the VREF.
+
+#### Steps per millimeter for belt driven systems[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#steps-per-millimeter-for-belt-driven-systems "Permanent link")
+
+Antonio calculated this using this [calulator.](https://zalophusdokdo.github.io/StepperMotorsCalculator/en/index.html)
+
+| Data | Value |
+| --- | --- |
+| Motor step angle | 1.8° |
+| Driven Microstepping | Full step |
+| Belt pitch | 2 mm (GT2) |
+| Pulley tooth count | 20 |
+
+**Result: 5.00**
+
+| Resolution | Teeth | Step angle | Stepping | Belt |
+| --- | --- | --- | --- | --- |
+| 200 micron | 20 | 1.8° | Full step | 2mm |
+
+### GRBL[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#grbl "Permanent link")
+
+[GRBL](https://github.com/grbl/grbl) is an Open-Source firmware that runs in Atmega328 based Arduinos for low cost CNC machines. The version I’ve used is the v1.1 released in 08/2019.
+
+He dowloaded the repository:
+
+```
+git clone https://github.com/grbl/grbl.git
+```
+
+Install requirements for Fedora Linux:
+
+*   Avr gcc compiler
+*   Arduino
+
+```
+sudo dnf install avr-gcc arduino
+```
+
+Once the requirements are installed, the next steps are documented in the [GRBL repository.](https://github.com/gnea/grbl/wiki/Compiling-Grbl)
+
+#### Compiling and Flashing GRBL using Arduino IDE[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#compiling-and-flashing-grbl-using-arduino-ide "Permanent link")
+
+1.  Launch the Arduino IDE
+2.  Make sure you are using the most recent version of the Arduino IDE!
+3.  Load the `grbl folder` into the Arduino IDE as a Library.
+4.  Click the `Sketch` drop-down menu, navigate to `Include Library` and select `Add .ZIP Library`. The `Add .ZIP Library` command supports both a .ZIP file or a folder. In our case, there is no `.ZIP` file.
+5.  You can confirm that the library has been added. Click the `Sketch` drop-down menu again, navigate to `Include Library`, then scroll to the bottom of the list where you should see `grbl`.
+6.  **IMPORTANT:** Select the `grbl` folder **_inside_** the `grbl-XXX` folder, which **only** contains the source files and an example directory.
+7.  If you accidentally select the `.zip` file or the wrong folder, you will need to navigate to your Arduino library, delete the mistake, and re-do Step 3.
+8.  Open the `GrblUpload` Arduino example.
+9.  Click the `File` down-down menu, navigate to `Examples->Grbl`, and select `GrblUpload`.
+10.  Do not alter this example in any way! Grbl does not use any Arduino code. Altering this example may cause the Arduino IDE to reference Arduino code and compiling will fail.
+11.  Compile and upload Grbl to your Arduino.
+12.  Connect your Arduino Uno to your computer.
+13.  Make sure your board is set to the Arduino Uno in the `Tool->Board` menu and the serial port is selected correctly in `Tool->Serial Port`. (There are some controller boards on ebay that have the Arduino Pro bootloader on it, if you get error messages like “avrdude: stk500\_getsync() attempt n of 10: not in sync: resp=0x20” then choose another board, try Arudino Pro/Pro Mini)
+14.  Click the `Upload`, and Grbl should compile and flash to your Arduino! (Flashing with a programmer also works by using the `Upload Using Programmer` menu command.)
+
+#### Compiling and flashing using command line tools[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#compiling-and-flashing-using-command-line-tools "Permanent link")
+
+**Requirements for Fedora Linux**
+
+GRBL repository:
+
+```
+git clone https://github.com/grbl/grbl.git
+```
+
+AVR-GCC and Arduino core libraries:
+
+```
+sudo dnf install avr-gcc arduino-core
+```
+
+Make:
+
+**Usage**
+
+Go to your local GRBL repository using your terminal by cd , in my case this is:
+
+Then use make to compile the grbl HEX file that’s going to be flashed to your Arduino UNO board:
+
+```
+make clean && make grbl.hex
+```
+
+If the HEX file is successfully compiled then proceed to flash it to the board by executing:
+
+```
+avrdude -v -patmega328p -Uflash:w:grbl_v1.1h.20190825.hex:i -carduino -b 115200 -P /dev/ttyACM0
+```
+
+Where:
+
+*   /dev/ttyACM0 it’s the local addres of my Arduino UNO board.
+    
+*   \-patmega328p it’s microprocessor family
+    
+*   \-Uflash:w:grbl\*.hex it’s the grbl\_file\_name.hex you have compiled.
+    
+*   b 115200 it’s the baudrate speed.
+    
+
+There are different ways to know this value, the easiest one it’s this:
+
+*   Execute on the terminal with your board **unplugged**:
+
+Save the output and then execute the same command again, **but with your Arduino board connected**, compare the difference, and the new address it’s the one of your Arduino:
+
+#### Disable Z axis homing routine[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#disable-z-axis-homing-routine "Permanent link")
+
+After flashing the board, and setting up electronics and power source he tried to configure the homming using **Universal Gcode Sender** but, I got many alarms in the process of trying the limit switches. Remember I’m using a 2 axis configuration in hardware but then the GRBL by default expects Z axis limit switch in the routine.
+
+We need to edit and re-flash the firmware to the board, this are the steps needed:
+
+In the lines 75 and 76 of the **grbl/config.h** file its declared the homing process and as the comments point:
+
+*   line 75 moves the Z axis which is not existing in our configuration,
+    
+*   line 76 moves the XY axis at the same time and rate.
+    
+
+This whole process it’s called “limit finding”:
+
+Edition:
+
+*   Comment line 75 by adding double slash “//” at the begging of the line.
+    
+*   Edit line 76 by changing “HOMING\_CYCLE\_1” to “HOMING\_CYCLE\_0”.
+    
+*   Save the file, and run the compilation process with Arduino or Linux command tools.
+    
+
+Now the homing cycle starts by moving the X and Y axis and the errors are fixed.
+
+#### Firmware configuration[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#firmware-configuration "Permanent link")
+
+The important points of the firmware configuration are:
+
+*   Report in inches, which means you need to disable it to use millimeters.
+    
+*   Homing cycle enabled, this is required since we’re using a band-pulley system, and as result the machine is not precise enough to preserve an reliable 0 position.
+    
+*   Working area limits:
+    
+*   X: 310 mm
+*   Y: 290 mm
+
+We obtained this measurements by manually measuring the travel length of each axis.
+
+![Image 74: cnc_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/axis_01.jpg)
+
+![Image 75: cnc_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/axis_02.jpg)
+
+Firmware configuration table:
+
+| Setting | Value | Description |
+| --- | --- | --- |
+| $0 | 10 | Step pulse time |
+| $1 | 25 | Step idle delay |
+| $2 | 0 | Step pulse invert |
+| $3 | 2 | Step direction invert |
+| $4 | 0 | Invert Step enable pin |
+| $5 | 0 | Invert limit pins |
+| $6 | 0 | Invert probe pin |
+| $10 | 1 | Status report options |
+| $11 | 0.010 | Junction deviation |
+| $12 | 0.020 | Arc tolerance |
+| $13 | 0 | Report in inches |
+| $20 | 1 | Soft limits enable |
+| $21 | 0 | Hard limits enable |
+| $22 | 1 | Homing cycle enable |
+| $23 | 7 | Homing direction invert |
+| $24 | 25.000 | Homing locate feed rate |
+| $25 | 700.000 | Homing search feed rate |
+| $26 | 250 | Homing switch de-bouncing delay |
+| $27 | 1.000 | Homing switch pull-off distance |
+| $30 | 10000 | Maximum spindle speed |
+| $31 | 0 | Minimum spindle speed |
+| $32 | 1 | Laser mode enabled |
+| $100 | 5.000 | X-axis travel resolution |
+| $101 | 5.000 | Y-axis travel resolution |
+| $102 | 5.000 | Z-axis travel resolution |
+| $110 | 10000.000 | X-axis maximum rate |
+| $111 | 10000.000 | Y-axis maximum rate |
+| $112 | 500.000 | Z-axis maximum rate |
+| $120 | 5000.000 | X-axis acceleration |
+| $121 | 5000.000 | Y-axis acceleration |
+| $122 | 10.000 | Z-axis acceleration |
+| $130 | 310.000 | X-axis maximum travel |
+| $131 | 290.000 | Y-axis maximum travel |
+| $132 | 0.000 | Z-axis maximum travel |
+
+### Valid GCODE[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#valid-gcode "Permanent link")
+
+Antonio have the time to test multiple GCODES compatible for this version of GRBL.
+
+| Code | Action |
+| --- | --- |
+| $H | Starts homing cycle |
+| $G28 | Goes to the maximum point |
+| $G0 X100 | Linear movement on X axis by 100 mm |
+| $G0 Y100 | Linear movement on Y axis by 100 mm |
+| $G0 X100 Y100 | Linear movement on X and Y axis by 100 mm |
+| $G53 | Uses absolute coordinates for positioning |
+| $G27 | Uses XY plane |
+
+Wiring and connections[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#wiring-and-connections "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+![Image 76: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/wiring_02.jpg)
+
+1.  Connect motor driver boards to the CNC arduino shield
+2.  Connect stepper motors with the correct wiring configuration specified in the stepper motors section.
+3.  Connect X and Y limit switches to -X and -Y ports in the board.
+4.  Connect power supply yellow and black cables from the ATX power supply.
+5.  I’ve included a 12 V Red led to give some visual feedback, it’s connected by an independent yellow and black wires from the ATX power supply.
+
+Fusion 360 work-flow[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#fusion-360-work-flow "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+We used Autodesk’s [Fusion 360](https://www.autodesk.com/products/fusion-360/overview) to understand how the process of making GCODE works with a familiar software. Although there are other options like [LaserWeb](https://laserweb.yurl.ch/)
+
+### Design[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#design "Permanent link")
+
+The Design process conssit just in drawing a shape using the sketch tools under the Design environment of Fusion 360.
+
+We made a simple shapes to test the device
+
+### Manufacturing[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#manufacturing "Permanent link")
+
+![Image 77: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/fusion_01.jpg) ![Image 78: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/fusion_02.jpg) ![Image 79: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/fusion_03.jpg) ![Image 80: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/fusion_04.jpg) ![Image 81: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/fusion_05.jpg) ![Image 82: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/fusion_06.jpg) ![Image 83: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/fusion_07.jpg) ![Image 84: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/fusion_08.jpg)
+
+### Simulation[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#simulation "Permanent link")
+
+### NC file post-processing[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#nc-file-post-processing "Permanent link")
+
+![Image 85: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/fusion_10.jpg) ![Image 86: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/fusion_11.jpg) ![Image 87: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/fusion_12.jpg)
+
+```
+%
+(cake_test_01)
+(Machine)
+(  vendor: Autodesk)
+(  description: Generic Cutting Machine)
+G90 G94
+G17
+G21
+
+(2D Profile2)
+G54
+G0 S255 M4
+G0 X62.576 Y25.508
+G1 X61.576 Y23.776 F1000
+G1 X62.447 Y22.268
+G1 X131.498
+G1 X166.023 Y82.068
+G1 X131.498 Y141.868
+G1 X62.447
+G1 X27.921 Y82.068
+G1 X61.576 Y23.776
+G1 X63.576
+G1 S0
+M30
+%
+```
+
+Universal GCODE sender[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#universal-gcode-sender "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+*   Download Universal GCODE sender
+    
+*   Run Universal GCODE sender and activate the communication with the machine
+    
+*   Establish serial communication at 115200 bauds
+
+![Image 88: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/ugs_04.jpg)
+
+*   Run the HOME cycle
+
+![Image 89: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/ugs_03.jpg)
+
+*   Import the GCODE in “File” –> “Open”
+
+![Image 90: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/ugs_06.jpg)
+
+*   Press the “Play” Button to run the GCODE
+
+![Image 91: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/ugs_05.jpg)
+
+Troubleshooting[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#troubleshooting "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------
+
+*   Slow speeds:
+
+Change the maximum acceleration on the firmware configuration:
+
+*   High vibration:
+
+Decrease the motor drivers VREF until the vibration gets reduced
+
+*   Axis not moving:
+
+Check the transmission band, look for any stuck parts or excessive friction. Adjust the motor drivers VREF increasing the output
+
+*   Motors not changing direction
+
+Antonio found that the silk labels on the motor drivers are inverted and thus it gets confusing if you try to connect the stepper motors following the schematics.
+
+![Image 92: vref_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/diagram.jpg)
+
+![Image 93: cnc_01](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/images/week10/driver_02.jpg)
+
+Conclusion and future[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#conclusion-and-future "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+For the future we will be able to make some modifications such as :
+
+*   Adding a rasberry pie for ease of use.
+*   More solid feet
+*   A guide for the belt, it rubs along the profile which can damage it quickly
+*   A hot plate specially designed for our machine
+
+Files[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#files "Permanent link")
+-------------------------------------------------------------------------------------------------------------------
+
+*   [Pancake bot](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/files/pancakesbot.f3d)
+*   [Part pancake bot](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/files/piecepancake.f3d)
+
+Useful links[¶](https://fabacademy.org/2021/labs/agrilab/students/theo-gautier/assignments/week15/#useful-links "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------
+
+*   [Fusion 360](https://www.autodesk.com/products/fusion-360/overview?term=1-YEAR)
+*   [Mc MasterCarr](https://www.mcmaster.com/)
+*   [Makercase](https://www.makercase.com/)
+
+* * *
+
+Last update: June 16, 2021

@@ -1,0 +1,1000 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="This website contains my documentation of the course">
+      
+      
+      
+        <meta name="author" content="Gustavo Abreu">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>10. Molding and Casting - Fab Academy 2019 Gustavo Abreu</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-133852711-1", "http://fabacademy.org/2019/labs/barcelona/students/gustavo-deabreu/")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#10-molding-and-casting" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Fab Academy 2019 Gustavo Abreu" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">directions_bike</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Fab Academy 2019 Gustavo Abreu
+            </span>
+            <span class="md-header-nav__topic">
+              
+                10. Molding and Casting
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../week01/" title="Assignments" class="md-tabs__link md-tabs__link--active">
+          Assignments
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../projects/__final_project/" title="Projects" class="md-tabs__link">
+          Projects
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Fab Academy 2019 Gustavo Abreu" class="md-nav__button md-logo">
+      
+        <i class="md-icon">directions_bike</i>
+      
+    </a>
+    Fab Academy 2019 Gustavo Abreu
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Assignments
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Assignments
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week01/" title="1. Principles and Practices" class="md-nav__link">
+      1. Principles and Practices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week02/" title="2. Project Management" class="md-nav__link">
+      2. Project Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week03/" title="3. Computer-Aided Design" class="md-nav__link">
+      3. Computer-Aided Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week04/" title="4. Computer-Controlled Cutting" class="md-nav__link">
+      4. Computer-Controlled Cutting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week05/" title="5. Electronics Production" class="md-nav__link">
+      5. Electronics Production
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week06/" title="6. 3D Scanning and Printing" class="md-nav__link">
+      6. 3D Scanning and Printing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week07/" title="7. Electronics Design" class="md-nav__link">
+      7. Electronics Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week08/" title="8. Computer-Controlled Machining" class="md-nav__link">
+      8. Computer-Controlled Machining
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week09/" title="9. Embedded Programming" class="md-nav__link">
+      9. Embedded Programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        10. Molding and Casting
+      </label>
+    
+    <a href="./" title="10. Molding and Casting" class="md-nav__link md-nav__link--active">
+      10. Molding and Casting
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#molding-and-casting-class" title="Molding and Casting class" class="md-nav__link">
+    Molding and Casting class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-project-test" title="Final project test" class="md-nav__link">
+    Final project test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-milling" title="3D milling" class="md-nav__link">
+    3D milling
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fab-modules-offset" title="Fab modules offset" class="md-nav__link">
+    Fab modules offset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-piece-fail" title="Second piece fail" class="md-nav__link">
+    Second piece fail
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-the-silicon-mold" title="Making the silicon mold" class="md-nav__link">
+    Making the silicon mold
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casting-metal" title="Casting metal" class="md-nav__link">
+    Casting metal
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week11/" title="11. Input Devices" class="md-nav__link">
+      11. Input Devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week12/" title="12. Output Devices" class="md-nav__link">
+      12. Output Devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week13/" title="13. Applications and Implications" class="md-nav__link">
+      13. Applications and Implications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week14/" title="14. Networking and Communications" class="md-nav__link">
+      14. Networking and Communications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week15/" title="15. Mechanical Design" class="md-nav__link">
+      15. Mechanical Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week16/" title="16. Interface and Application Programming" class="md-nav__link">
+      16. Interface and Application Programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week17/" title="17. Machine Design" class="md-nav__link">
+      17. Machine Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week18/" title="18. Wildcard Week" class="md-nav__link">
+      18. Wildcard Week
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week19/" title="19. Invention, Intellectual Property, and Income" class="md-nav__link">
+      19. Invention, Intellectual Property, and Income
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week20/" title="20. Project Development" class="md-nav__link">
+      20. Project Development
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Projects
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Projects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/__final_project/" title="Final project" class="md-nav__link">
+      Final project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/_final-project-dev/" title="Final Project Development" class="md-nav__link">
+      Final Project Development
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/bike_restoration/" title="Bike restoration" class="md-nav__link">
+      Bike restoration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/usb_lipo_battery_charger/" title="USB Li-Po Battery charger" class="md-nav__link">
+      USB Li-Po Battery charger
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#molding-and-casting-class" title="Molding and Casting class" class="md-nav__link">
+    Molding and Casting class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-project-test" title="Final project test" class="md-nav__link">
+    Final project test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-milling" title="3D milling" class="md-nav__link">
+    3D milling
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fab-modules-offset" title="Fab modules offset" class="md-nav__link">
+    Fab modules offset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-piece-fail" title="Second piece fail" class="md-nav__link">
+    Second piece fail
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-the-silicon-mold" title="Making the silicon mold" class="md-nav__link">
+    Making the silicon mold
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casting-metal" title="Casting metal" class="md-nav__link">
+    Casting metal
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="10-molding-and-casting">10. Molding and Casting<a class="headerlink" href="#10-molding-and-casting" title="Permanent link">&para;</a></h1>
+<p><em>assignments</em></p>
+<p><em>group assignment:</em></p>
+<ul>
+<li>review the safety data sheets for each of your molding and casting materials,
+then make and compare test casts with each of them</li>
+</ul>
+<p><em>individual assignment:</em></p>
+<ul>
+<li>design a 3D mold around the stock and tooling that you&rsquo;ll be using,
+mill it, and use it to cast parts</li>
+</ul>
+<h2 id="molding-and-casting-class">Molding and Casting class<a class="headerlink" href="#molding-and-casting-class" title="Permanent link">&para;</a></h2>
+<p>We started the week with a class showing different materials and the process of molding and casting.</p>
+<p><img alt="" src="../../images/week10/class.jpg" /></p>
+<p>Our first test was with a translucent silicon mold.</p>
+<p><img alt="" src="../../images/week10/silicon_label.jpg" /></p>
+<p>After reading the datasheet, started measuring the quantities we needed.</p>
+<p><img alt="" src="../../images/week10/measuring_silicon.jpg" /></p>
+<p>It needed to me mixed a lot, so we improvised a tool for it.</p>
+<p><img alt="" src="../../images/week10/mixing_silicon.jpg" /></p>
+<p>Then, we wanted to take the bubbles out, so we put the container inside a vacuum chamber, but, it expanded so much almost all of it went out of the cup.</p>
+<p><img alt="" src="../../images/week10/mess.jpg" /></p>
+<p>Then, poured it into the mold and let it rest for the day.</p>
+<p><img alt="" src="../../images/week10/pouring_silicon.jpg" /></p>
+<p>Then, for the second try with the vacuum, we covered the base and one of the students stayed controlling the valve to let some air in / reduce the pressure, whenever the material was approaching the limit.</p>
+<p><img alt="" src="../../images/week10/vacuum.jpg" /></p>
+<p><img alt="" src="../../images/week10/protect_vacuum.jpg" /></p>
+<p><img alt="" src="../../images/week10/bubbles.jpg" /></p>
+<p>Then, after one day, we had all our pieces ready to be displayed.</p>
+<p><img alt="" src="../../images/week10/tests.jpg" /></p>
+<h2 id="final-project-test">Final project test<a class="headerlink" href="#final-project-test" title="Permanent link">&para;</a></h2>
+<p>I wanted to test the silicon as a transparent display cover, since the resin we have is really toxic, I&rsquo;d be nice to find an alternative.</p>
+<p>I started taping the display into a clear acrylic board.</p>
+<p><img alt="" src="../../images/week10/taped_display.jpg" /></p>
+<p>Then, poured the silicon but got a few bubbles. So it went into the vacuum chamber a couple of times before looking nice.</p>
+<p><img alt="" src="../../images/week10/display_vaccum.jpg" /></p>
+<p><img alt="" src="../../images/week10/poured_display.jpg" /></p>
+<p>After one night, it was ready and it seems that is an option to use instead of the resin. Still need to make water resistance tests.</p>
+<p><img alt="" src="../../images/week10/ready_display.jpg" /></p>
+<p><img alt="" src="../../images/week10/working_display.jpg" /></p>
+<p>But, since I sprayed the release agent on top of the whole piece (somewhat intended), I was able to take it off.</p>
+<p><img alt="" src="../../images/week10/peeled_display.jpg" /></p>
+<h2 id="3d-milling">3D milling<a class="headerlink" href="#3d-milling" title="Permanent link">&para;</a></h2>
+<p>I spent the weekend trying to think of useful ways to spend this week with my final project, but most of them needed me to design the whole project again in order to cast something. So, I decided to look for a model online and just learn the process. Witch it seems to be a lot of information to digest.</p>
+<p>Found <a href="https://www.thingiverse.com/thing:802925">this design</a> on thingiverse. Since we had material size restrictions, I had to scale it down a lot. So I 3d printed it to make sure it would work.</p>
+<p><img alt="" src="../../images/week10/moai_3d.jpg" /></p>
+<p>Since it looks like it, I&rsquo;m going to go for it.</p>
+<p>I took me actually a lot of time to manage to understand every step of the process, and how I should design everything.</p>
+<p>It is a bit difficult at first to visualize the the positive wax, then the negative mold, and finally the piece. Specially because fabmodules works with height maps, so that was bending my mind a bit.</p>
+<p>Since this is just a simple setup, I skipped the heavy cads and went into tinkercad, I find it really easy and fast to test concepts that don&rsquo;t need a lot of modeling.</p>
+<p><img alt="" src="../../images/week10/tinkercad.png" /></p>
+<p>To make the CAM files for milling, Fab Lab Barcelona had a great <a href="https://speakerdeck.com/santifu/molding-and-casting">documentation</a> for the whole process.</p>
+<p>To resume, these were the steps:</p>
+<p>Import model into Fab Modules<br />
+Adjust units (Inches/mm) and resolution<br />
+Calculate height map<br />
+Generate rough cut and then finish cut</p>
+<p><img alt="" src="../../images/week10/height_map.png" /></p>
+<p><img alt="" src="../../images/week10/fabmodules.png" /></p>
+<p>Everything seemed fine, but when I started the job, it was way off the stock.</p>
+<p><img alt="" src="../../images/week10/first_attempt.jpg" /></p>
+<p>It was late and I did not want to generate a new file (fabmodules took a lot of time to process this), so I just eyeballed it and moved the axis by a couple of clicks. This made the home position be out of the stock completely.</p>
+<p><img alt="" src="../../images/week10/offset.jpg" /></p>
+<p>I was really lucky, the job turned out great. And I was only a few mm off the edge.</p>
+<p><img alt="" src="../../images/week10/first_rough.jpg" /></p>
+<p>It even has a little hole that I&rsquo;ll need to cover before making the mold.</p>
+<p><img alt="" src="../../images/week10/hole.jpg" /></p>
+<p>Since the tool was out of the stock, I decided to not change the tool to a ball end. It was actually a good test to see if a flat end mill was able to do decent rounded corners.</p>
+<p><img alt="" src="../../images/week10/first_half.jpg" /></p>
+<p>Everything seemed fine. So now for the second part.</p>
+<p>One thing I changed other than mirroring the piece, was to make the walls thinner, so I&rsquo;d have a smaller travel.</p>
+<h3 id="fab-modules-offset">Fab modules offset<a class="headerlink" href="#fab-modules-offset" title="Permanent link">&para;</a></h3>
+<p>In order to accurately position your piece over the stock, fabmodules have a x and y offset option. The starting point is at the bottom left corner.</p>
+<p><img alt="" src="../../images/week10/fabmodules_offset.png" /></p>
+<h3 id="second-piece-fail">Second piece fail<a class="headerlink" href="#second-piece-fail" title="Permanent link">&para;</a></h3>
+<p>After setting everything up, started the job and the machine just plumbed all the way to the bottom.</p>
+<p>Thankfully, it has sensors all over and it stoped because the motors were overloaded.</p>
+<p><img alt="" src="../../images/week10/plunge.jpg" /></p>
+<p>After checking everything, the only two possible problems would be for the machine to have started the old finishing job or the cam generated an odd file.</p>
+<p>So I did everything again, tested with an air pass beforehand and then it seemed to work fine.</p>
+<p>Now to make the resin mold.</p>
+<h2 id="making-the-silicon-mold">Making the silicon mold<a class="headerlink" href="#making-the-silicon-mold" title="Permanent link">&para;</a></h2>
+<p>We have a <a href="https://www.smooth-on.com/products/mold-max-60/">heat resistant silicon</a>, that holds up to almost 300ºC. Since we have a low melting temperature metal here. I&rsquo;ll try to use it.</p>
+<p>Pot Life:   40 minutes<br />
+Cure Time:  24 hours<br />
+Mix Ratio:  100A:3B</p>
+<p>Safety:</p>
+<p>Use in a ventilated space, without contact to skin or eyes.</p>
+<p><img alt="" src="../../images/week10/mold_max_60.jpg" /></p>
+<p>Placed a layer of release agent to the wax, before starting everything.</p>
+<p><img alt="" src="../../images/week10/release_agent.jpg" /></p>
+<p>Then, after reading the instructions, started measuring and mixing the silicon.</p>
+<p><img alt="" src="../../images/week10/measuring.jpg" /></p>
+<p>Mixed for 3 minutes</p>
+<p><img alt="" src="../../images/week10/mixing.jpg" /></p>
+<p>Then, let it for 3 more minutes under the vacuum</p>
+<p><img alt="" src="../../images/week10/vacuum_heat_silicon.jpg" /></p>
+<p>The mixture started to get hard quickly, making pouring properly difficult.</p>
+<p><img alt="" src="../../images/week10/pouring_heat_silicon.jpg" /></p>
+<p>Looks a bit ugly, but since I used the vacuum, I hope not to have any bubbles on the inside.</p>
+<p><img alt="" src="../../images/week10/finished_pour.jpg" /></p>
+<p>Then, the datasheet states that the complete curing cycle is 24hors. So I let it rest for a day.</p>
+<p><img alt="" src="../../images/week10/molds_cured.jpg" /></p>
+<p>Using the air compressor was fairly easy to take it out.</p>
+<p><img alt="" src="../../images/week10/molds.jpg" /></p>
+<p>Bubble free mold!</p>
+<p><img alt="" src="../../images/week10/mold_closeup.jpg" /></p>
+<p>After trimming, time to get into action</p>
+<p><img alt="" src="../../images/week10/trimming_mold.jpg" /></p>
+<h2 id="casting-metal">Casting metal<a class="headerlink" href="#casting-metal" title="Permanent link">&para;</a></h2>
+<p>It is recommended to use powder as a release agent</p>
+<p><img alt="" src="../../images/week10/powder.jpg" /></p>
+<p>We had a 88% Bismuth, 12% Tin metal, it has a low melting point. Perfect for our application</p>
+<p><img alt="" src="../../images/week10/metal.jpg" /></p>
+<p>Now, to melting the metal</p>
+<p><img alt="" src="../../images/week10/melting_metal.jpg" /></p>
+<p>Pouring needs to be quick, since the edges of the metal tend to cool quickly</p>
+<p><img alt="" src="../../images/week10/poured_metal.jpg" /></p>
+<p>To speed up the process of cooling, we soaked it into water</p>
+<p><img alt="" src="../../images/week10/cooling_metal.jpg" /></p>
+<p>Then, in just about 5 minutes after melting the metal, I had the piece</p>
+<p><img alt="" src="../../images/week10/cooled_metal.jpg" /></p>
+<p>After just rubbing it with a rag with soap, it looked nice and shiny</p>
+<p><img alt="" src="../../images/week10/moai.jpg" /></p>
+<p>Now I have a great sunglass support</p>
+<p><img alt="" src="../../images/week10/glasses_moai.jpg" /></p>
+<p><a href="../../files/week10/Moai glass holder.zip">Download files</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../week09/" title="9. Embedded Programming" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                9. Embedded Programming
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../week11/" title="11. Input Devices" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                11. Input Devices
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Creative Commons Attribution Non Commercial
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ghabreu" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/GHAbreu" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/in/gustavo-abreu-44a73660/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://instagram.com/gustavoabr.eu" class="md-footer-social__link fa fa-instagram"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,340 @@
+Title: 12. Output devices - Fab Academy Student Rutger oomkes
+
+URL Source: http://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12/
+
+Markdown Content:
+| This weeks design |  |
+| --- | --- |
+| three led’s | [INO](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12documents/threeledburning/threeledburning.ino) |
+| output.kicad\_pcb | [pcb](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12documents/output.kicad_pcb) |
+| output.sch | [sch](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12documents/output.sch) |
+| Threeleds and sonar | [ino](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12documents/threeled_sonar/threeled_sonar.ino) |
+
+Groupsassigment[¶](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12/#groupsassigment "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------------------
+
+For this weeks group assignment we had to measure the power consumption of a output device. Here we made use of the regulated power supply (powerbench) available at the Fab lab Amsterdam. This machine converts AC current in DC current and you can control the voltage and current (measured in amp) aplied to a device. This machine is used to check the power consumption of a device. You can play with the settings to see what is the minimum combination of voltage and current in which the output device is still functioning.
+
+![Image 1: Tenma](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/tenmaspec.PNG) _The specification of the regulated power supply Fablab Amsterdam_
+
+[Tenma Datasheet](http://www.farnell.com/datasheets/2785676.pdf?_ga=2.261128457.588640690.1554627902-315099092.1551783443)
+
+In the device you set the voltage which you want to use and the max amount of current flowing through it. Its good to set a max current (amp) to ensure you won’t destroy the electronics. When testing it shows the current flowing through till the max current set in the beginning.
+
+The device i tested is normally powered by usb which has a voltage of 5. The voltage therefore i set to 5. The current (amp) is set to a max of 0.4 amp. The actual current is much lower and is measured in mA (mili amphere). Setting the max ensures that the voltage you can add never exceeds the limit of the 1 amp current.
+
+I connected my device i made in week 5 electronic design to a DIY powerbench. The advantage of this powerbench is that is has small female headers for more easy use with the small electronic device. First i connect the cable with gnd (often black cable). Then applied the vcc cable (often red cable) to the device.
+
+![Image 2: powersupply](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/powersupplysmall.PNG) _My device connected with 5 volt and max 04. Amp_
+
+In the display you an see the amount of volts(5), the current flowing through (0.014 A) and the power consumption of the the device (0.07 WATS). This you can calculate by owns law.
+
+![Image 3: Ohms law](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/wattcalcgood.PNG) \*5(V) X \* 0.014 (I) = 0.07 (P)
+
+Now you know the usage is 0.07 watt. When you want to calculate how long it can last you can divide the Voltage with Milliampere. `5/0.14 =35.7` When you have a battery of 5 volts you can power the device for 35.7 hours.
+
+My device i applied also the the Tenma powerbench to see if i would get the same results. Here it was more difficult to connect the cables. The outcome was the same on this machine. A nice detail was that the moment the led was on you could see the differents in current.
+
+![Image 4: powersupllybig](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/powersupplysbig.PNG) _Same measurement with big powerbench_
+
+Debugging 1[¶](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12/#debugging-1 "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------
+
+My last week ended with recieving imput from the sonar on my device. After this my device was not recognized anymore when i tried to upload code. AVR dude did not recognize my usbtinyisp. At first i did not seem to find the issue. My first thought was that my device was broken. I used the multimeter checking for short and resoldered parts which where not straight on the circuit. nothing seemed to help for AVR to recognize my device. With the help of my instructor i could find the issue and that learned me also how you should debug. First he tried my device in his computer and it did recognize the device. So the problem was not the usbtiny. He pointed me on the manual of week 5 electronic design.
+
+[Using the GNU AVR toolchain on Windows 10](http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/windows_avr.html)
+
+Here they decribe what could be the issue when your device is not recognized.
+
+Connect your programmer to a USB port and type: avrdude -c usbtiny -p t45 and press enter. You should see:
+
+avrdude.exe: initialization failed, rc=-1
+...
+This means that avrdude successfully found your programmer, but failed to talk to a target board (expected because we don't have anything conencted to the programmer right now.)
+
+If instead you see:
+
+avrdude.exe: Error: Could not find USBtiny device (0x1781/0xc9f)
+check your USB driver installation (the Zadig steps).
+
+If you get a "command not found" error, check your installation of avrdude and your path variable.
+
+In this case we should use Zadig to reinstall the driver. After doing this my laptop recognized my usbtiny again. When i tried to program the device i recieved the same error again. Now i checked the cables connected to the isp header and they seemed good. The problem seems to lay in the device i made during imput week. Instead of fixing this board i decided to redesign the board since my initial plan is to use the sonar (imput) to shine rgb colors (output)
+
+![Image 5: zadig](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/zadigdebug2.PNG) _reinstalling driver usbtiny_
+
+Designing the output device[¶](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12/#designing-the-output-device "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Last week we put the focus on imput devices for which i designed a board with a sonar. With the use of serial communications i was able to recieve data about distance. Already then i had i mind it would be nice that the distance result in a rgb LED light that change colors according the distance of a object. Since my knowledge of electronic is still very basic i decided to go for a relative simple design to learn more about the concepts of electronics. I started straight away with designing a board so i would have more time focussing on coding and understanding the theory of electronics.
+
+I redesign my board including the imput. Was last board turned out not reliable and i like to improve my design. Further instead of using a rgb light i went for three different colors led. RED, BLUE and GREEN. This way i could say more clearer what the effect would be of changing the brightnes of the colors for output.
+
+Already knew the components i used during imput week and thanks to neil his lecture i knew different color LED needs a different resistor. For the red and green i used a resistor of 1K and for the blue is used 499 ohm resistor
+
+![Image 6: footprint LED](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/rgbneil.PNG) _Footprint board using RGB LED_
+
+Schematic design PCB[¶](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12/#schematic-design-pcb "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+I redesigned the board ot the imput week by uploading the components from the fab library. The only additional component where the three LED and three resistors. Knowing my way in kicad the first part went quickly. I placed the components and added labels to the lines. Which each LED i added a resistor and named the component according to the color it should be and the amount of ohm for the resistors.
+
+![Image 7: label component](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/namingled.PNG) _Placing the new components in the schematic and labeling them_
+
+The confusing part was how to connect the led to the right pin of the processor. From the lecture i understood that to play with the frequency of the led you have to use PWM (pulse Width Modulation). This is a method to reduce the amount of power delivered by a electrical signal [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) On the Attiny44a processor there are 4 pins you can use for this purpose.
+
+![Image 8: pins pwm](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/pwmpin.PNG) _Pins PA5,PA6,PA& and PB2_
+
+In my previous design for the imput week i used pin pa6 and pa7 to communicate with the sonar. Now i came some pins short for controlling the LED. I did some online research if you could connect the sonar using different pins.
+
+![Image 9: imput](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/imput.PNG) _Old schematic where is used pa5 and pa7 for the sonar_
+
+I found you could connect the sonar using any I/O pin (input/output) for communication between processor and the sonar. I could use any of the adc (analog to digital) functons of the pin. So i changed the pins to pa 2 and pa 3. Now i could place the led on the pins that support PWM. One issue remained. Now i had two pins with a double function. PA5 and PA6 are used for programming the processor with the isp header. My instructor assured me that was not a issue since this is only used for programming the board. The only thing it results in is blinking led when programming the board. Which it does. Now this problem was solved i went to the procedure which become a routine. Annotate to give a order in the components The electrical ruler check which resulted in the two error 3 which make sense since there is no power source selected. Assigning the footprint and creating the netlist.
+
+![Image 10: schematic](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/schematic.PNG)
+
+This time i did not forget to set the design rules in the newpcb mode. I changed them according to the milling bit we use and the puzzle could start again. Motivated to get the job done in the evening so i had the change to make my board before the weekend. Everytime i struggle much more then intended to make the traces of the board. This time i made sure to leave some extra space around the sonar. In the previous week i did not realize to make the sonar fitting i had to bend the pins to make it fit.
+
+![Image 11: designrules](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/designrules.PNG) _correct design rules_
+
+I made sure the LED were close to each other to create the rgb feeling. Looking back on the design i should have placed them different so no led would be in the middle. Well.. So you learn.
+
+Again it took way longer to place the trace then expected. I wanted the traces to be well separated to avoid issues as shorts in a later stadium. For the processor i made traces going outwards to make the soldering more easy. I think i redid the traces four or five times. At first i did not want to use a zero ohm resistor. This is a resistor that is used as a bridge to be able to cross lines but has no resistance. Only one connection should still be made and not motivated anymore but more coming to desperation i decided to use the zero ohm resistor. I went back to the schematic and added a resistor which i named zero ohm. I added wires and labeled them both as GND. Gave the resistor a footprint and saved as a netlist. Now i finally could finish all the traces.
+
+![Image 12: pcb](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/pcb.PNG) _All traces sett_
+
+Next step was to make the footprint for the hc-sr04 sonar bigger. For this i used inkscape. The exported the file as a svg and opened it in inkscape. There i made squares to fit the sonar on. Further i added my company name to the board.
+
+![Image 13: inkscape](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/inkscape.PNG) _Making some alterations on the design_
+
+When this was done i used gimp to set the dpi to 1000 and to remove the alpha channel. I exported the inside cut and outside cut as .png and open mods.
+
+Milling the PCB[¶](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12/#milling-the-pcb "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Luckely the copper plate was still in the roland mxd 20. I changed the mill to .4 mm and chose the right origin. In mods i uploaded the inside and used inverted function. I chose mill traces and used the default functions. I only adjust the speed to 1 mm per second. When pressing calculate i noticed i placed some traces to close to each other. Went back to newpcb and changed the lines to make good traces.
+
+![Image 14: twopcb](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/twopcb.PNG) _left: old, right new_
+
+Now the traces were better in mods and i started the job. The soon it started i realized another small error. The outline cut was to close to the inside traces. Went back to inkscape and resized the outline with 10 mm on the x and y. This way i would have 5 mm space on each side. I realize i had to adjust the origin of the machine. On both the x and y i moved the origin with 3 mm.
+
+The inside traces were cut out nicely and now it was time to cut the outline. A bit nervous if my calculations were correct. The path went perfect around in the inside traces. A happy man.
+
+![Image 15: pcbdone](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/pcbdone.PNG) _After washing the board taped to paper for soldering_
+
+The soldering went smooth. After having each of the components soldered before i knew in which direction i had to place them on the board. I still take my time to get the board ready but i see i am improving my techniques in how to solder.
+
+Boatloading and uploading the board[¶](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12/#boatloading-and-uploading-the-board "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The next part i find nerve wrecking After spending some much time in designing the board and make it now the big test. Will it work?
+
+I connected my new device with the isp header to my usbtiny. In the terminal i used the avrdude command to check if it could find my device. `avrdude -c usbtiny -p t44`
+
+![Image 16: antihero](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/antihero.PNG) _A antihero shot after avrdude did not recognize my device_
+
+Lucky i had learned in the debugging that it might be that i had to reinstall my driver using zadig. After doing this the problem was solved and it recognized my device. Now i could perform the boatloader using my arduino IDE software.
+
+![Image 17: boatloader](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/boat.PNG) _Successful boat loading_
+
+I still had the code i used for the imput week and uploaded it succesfull to my new board. Now this was done i was keen to see some input on my serial monitor. Only i did not..
+
+Debugging 2[¶](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12/#debugging-2 "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------
+
+When finished my second board i could initialize the device and program the board using arduino ide. I did not recieve imput from the sonar. Two debugging options could result in the same solution.
+
+1.  My code was wrong. I switched the rx pin and tx pin (software)
+2.  Changing the cables rx/tx resulted also in the solution. Somehow i presumed tx should go to tx and rx to rx. It makes sense that the trammiting pin should go in to the recieving pin(hardware)
+
+![Image 18: input](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/datainput.PNG) _recieving data from the sonar on my serail monitor_
+
+Output[¶](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12/#output "Permanent link")
+-------------------------------------------------------------------------------------------------------------------
+
+My first goal in the output was to make my led blink. I watched some tutorials how to play with rgb led and i found the next one the most useful [Helpful tutorial for rgb led](https://www.youtube.com/watch?v=Q72DvmcCe4I) I used the code from last week for the sonar. I changed some things in code according what is saw in the tutorial. The majority of the code was from last weeks input. I verified and uploaded the code.
+
+First unsuccessful coding[¶](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12/#first-unsuccessful-coding "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Revealed to see that the code was working. This was a first test to see if i would be able to control the different led. My purpose was to integrate the led with the distance.
+
+![Image 19: inputoutput](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/inputoutput.PNG) _Uploading succesfull the code_
+
+Underneath the code and the mistakes i made.
+
+#include <SoftwareSerial.h> // import another program, a library, to communicate
+#define rxpin 1 
+#define txpin 0
+
+SoftwareSerial serial(rxpin,txpin);
+//Declaring number to the different variables
+int rxPin = 1; 
+int txPin = 0;
+int trig = 3; // 
+int echo = 2; 
+long lecture\_echo; 
+long cm;
+int PinRed = 6;
+int PinBlue = 7;
+int PinGreen = 5;
+
+Initializing the led in the old code
+
+//color amount used
+int Red\_Amount = 100;
+int Blue\_Amount = 100;
+int Green\_Amount = 100;
+void setup() 
+{ 
+  pinMode(PinRed, OUTPUT);
+  pinMode(PinBlue, OUTPUT);
+  pinMode(PinGreen, OUTPUT);
+  pinMode(trig, OUTPUT); 
+  digitalWrite(trig, LOW); 
+  pinMode(echo, INPUT); 
+  serial.begin(9600); 
+}
+
+From the tutorial i copied the amount and placed this on 100 (from the 0 to 255) Further i declared the led as a output.
+
+void loop() 
+{ 
+  //Read the analog pin
+  int Input\_Color = analogRead(echo);
+
+Initializing the input color. making it equal to the analog output of the the sonar. Later on i realized this would not give me valid data. Now it shows the data of the echo which is much higher then the actual distance. To recieve correct data i should have divided the analog read by 58.
+
+//map the input value to usable range for analogWrite
+  Input\_Color = map(Input\_Color, 0, 50, 0, 255);
+  //turn on and of led
+  analogWrite(PinRed, Input\_Color); 
+  analogWrite(PinBlue,Input\_Color ); 
+  analogWrite(PinGreen, Input\_Color);  
+
+Here i tried to map the values of the input\_Color from 0 to 50 cm to the rgb colors 0 to 255. Not knowing i would not get data since the values would be well of because of the wrong argument for the input\_Color.
+
+  digitalWrite(trig, HIGH); 
+  delayMicroseconds(10); 
+  digitalWrite(trig, LOW); 
+  lecture\_echo = pulseIn(echo, HIGH); 
+  cm = lecture\_echo / 58; 
+
+  serial.print ("Distance in cm: "); 
+  serial.println(cm); 
+  delay(1000); 
+}
+
+In this part of the code nothing was changed.
+
+The tutorial was mend for the potentiometer which has a range from 0 (LOW) to 1023 (HIGH) My assumption was i could read the serial monitor to control the led. In this case you can use the analogRead function to read the data and control the RGB led. I had to come with a new code to have a output based on the input.
+
+Second Code[¶](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12/#second-code "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------
+
+Here i just focused on getting a output from the different led. I only show the line of code i changed to make the leds blink. Not to impressive but i was happy i could make it work.
+
+void loop() 
+{ 
+
+  digitalWrite(PinRed, HIGH); //High voltage
+  delay(500); //delay of 500 milliseconds
+  digitalWrite(PinRed, LOW); //low voltage
+  digitalWrite(PinBlue, HIGH);
+  delay(500);
+  digitalWrite(PinBlue, LOW); 
+  digitalWrite(PinGreen, HIGH);
+  delay(500);
+  digitalWrite(PinGreen, LOW);
+  }
+
+Instead of using the pwm function from 0 to 255 i used digitalWrite to create a on(high) or off(low) LED. First the red led burns, then the blue and green with a delay of 500 milliseconds.
+
+Third code[¶](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12/#third-code "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------
+
+Still i did not receive a output in reaction of a input in the last coding. And this was my goal. At the fablab my fellow student Anne helped me in making a code for one output led. I wanted all my leds to react on the distance so i altered the code. Trying to play with the code and trying it out on the board error appeared in the serial monitor.
+
+![Image 20: input](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/images/week12/error.PNG) _error with data on serial monitor_
+
+I checked with the multimeter my board and noticed that the vvc pin of the sonar was not steady connected. When pressing gentle on the sonar it did make connection. Eager to test my code with the board i struggled to keep the connection tight by placing a pin to the object. I do not have soldering equipment at home. After countless effort i managed to recieve the data and see the led changing colors.
+
+This code i made for input resulting in output.
+
+#include <SoftwareSerial.h> // import another program, a library, to communicate
+#define rxpin 1 
+#define txpin 0
+
+
+SoftwareSerial serial(rxpin,txpin);
+
+//Declaring number to the different variables
+int rxPin = 1; 
+int txPin = 0;
+int trig = 3; 
+int echo = 2; 
+long lecture\_echo; 
+long cm;
+int PinRed = 6;
+int PinBlue = 7;
+int PinGreen = 5;
+
+The first part remains the same as my previous code. Here i initialize all the variables and appoint them to the according pin. The Long command is used when number exceed the normal maximum.
+
+//color amount used
+int Red\_Amount = 100;
+int Blue\_Amount = 100;
+int Green\_Amount = 100;
+
+This part is also not altered. These settings set the led on a standard brightness of 100 in the scale of 0 to 255. These values are overruled by new arguments in the code except in one argument.
+
+void setup() 
+{ 
+  pinMode(PinRed, OUTPUT);
+  pinMode(PinBlue, OUTPUT);
+  pinMode(PinGreen, OUTPUT);
+  pinMode(trig, OUTPUT); 
+  digitalWrite(trig, LOW); 
+  pinMode(echo, INPUT); 
+  serial.begin(9600); 
+}
+
+In this code you define the variables as input or output. The only input is the echo from the sonar. The serial begin function start the serial communications.
+
+void loop() 
+{ 
+  digitalWrite(trig, HIGH); 
+  delayMicroseconds(10); 
+  digitalWrite(trig, LOW); 
+  lecture\_echo = pulseIn(echo, HIGH); 
+  cm = lecture\_echo / 58;   
+
+This part is for sending pulses and retrieving echo to determine the distance of a object. the delay can be max set at 10 millisecond. The lecture\_echo show the raw data which has much higher numbers. Cm is the outcome when dividing by 58.
+
+  int Input\_Color = cm;
+  Input\_Color = map(Input\_Color, 0, 50, 0, 255);
+  analogWrite(PinRed, Input\_Color); 
+analogWrite(PinBlue, -Input\_Color);
+analogWrite(PinGreen, Input\_Color -Green\_Amount);
+serial.print ("Distance in cm: "); 
+
+In this section i decide the color range of the three led. In th map section you convert the outcome of cm to the PWM scale `0-255` I liked the different led correspond different to the distance so i subtract the the input color with blue. With green i used the standard brightness 100 to subtract. It is far from perfect but this way is see all LED reacting on the distance
+
+serial.println(cm); 
+serial.print ("Red:");
+serial.println(PinRed);
+serial.print ("blue:"); 
+serial.println(PinBlue);
+serial.print ("Green:");
+serial.println(PinGreen);
+
+  delay(1000); 
+
+I want all data to be printed to see how the react according to the distance. I wrote the arguments wrong so you only see the pin which the are connected on.
+
+What i learned and what went wrong.[¶](https://fabacademy.org/2019/labs/waag/students/rutger-oomkes/assignments/week12/#what-i-learned-and-what-went-wrong "Permanent link")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+With the start of the week i really wanted to play with the possibilities of the rgb led. After advice of my Instructor i focused more in understanding the basics of electronics and coding. By using three different colors led you actual see the difference in brightness of the led. It was a good call. This week i had my first real understanding of some basics. One thing i am happy about was my planning for this week. Forcing myself to finish the board quickly so i could more focus on the theory of electronics and on the coding itself.
+
+It remains a challenge but that the reason i am participating in the academy. Is my work this week stunning? Definitely not. But the amount of pleasure i get from seeing it work is worth something right?

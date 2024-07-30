@@ -1,0 +1,58 @@
+Title: 8. Computer controlled machining - Daniel Smithwick
+
+URL Source: http://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/assignments/week08/
+
+Markdown Content:
+CAD Design[¶](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/assignments/week08/#cad-design "Permanent link")
+----------------------------------------------------------------------------------------------------------------------------------
+
+### Parts layout[¶](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/assignments/week08/#parts-layout "Permanent link")
+
+![Image 1](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/images/danpuzzle.png) I first wanted to make a smaller scale prototype on the laser cutter to test for fit and assembly.
+
+Laser Cut Prototype[¶](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/assignments/week08/#laser-cut-prototype "Permanent link")
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+![Image 2](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/images/puzzleoutside.jpg)
+
+![Image 3](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/images/puzzleinside.jpg)
+
+![Image 4](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/images/crazy-cube-scales.jpg) Now…to scale it up!
+
+First I remade the parts layout to reflect needed changes for the larger scale cnc cut puzzle. ![Image 5](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/images/4x8layout.PNG)
+
+I used ShopBot’s VCarve program to define the tool paths - all path were set to the Contour method.
+
+Includes: I scaled overall 2x the original size. I added dog bone corners, and I made the parts 8X thicker so that they’d be more chunky at larger scale as opposed to planar.
+
+[Rhino parts layout download files](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/images/puzzle%20tool%20path%20prep.3dm)
+
+2D Workflow[¶](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/assignments/week08/#2d-workflow "Permanent link")
+------------------------------------------------------------------------------------------------------------------------------------
+
+Here’s a Rhino screenshot to illustrate a 2d workflow for modifying the red geometry to be ready for milling, the black geometry. ![Image 6](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/images/fillets2.png)
+
+The main 2D drafting operations I used were fillet, offset, move, rotate, and join. By using thicker material I need to offset the lines to make the gap wider. I also need to account interior corners when using press fit/slotted geometry, hence the dogbone geometry. This particular dogbone geometry uses a double fillet so to prevent any sharp corners. When modifying this particular piece I had to remove a significant chunk of material from the bottom left corner By widening the slot, it left a really small pinch point in the material which would have likely broken off after cutting. So I made the decision to remove the geometry to the left of the slot, however I left some small nub to help hold the parts together.
+
+VCarve[¶](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/assignments/week08/#vcarve "Permanent link")
+--------------------------------------------------------------------------------------------------------------------------
+
+![Image 7](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/images/vcarve.jpg) I used Vcarve to generate the gcode for the piece. In this photo I’m selecting the 1/4” downcut tool, and making sure the feed and speed and rpm are appropriate for the material. I also can set the pass depth and stepover here. Since this is just a profile cut, I don’t need to worry about step over dimensions. However, in the [Casting and Molding Week](http://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/assignments/week10/), I did adjust these settings to get the precision of the slope.
+
+CNC Cutting[¶](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/assignments/week08/#cnc-cutting "Permanent link")
+------------------------------------------------------------------------------------------------------------------------------------
+
+![Image 8](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/images/shopbot.jpg) Here is the Shopbot control interface. First, you need to manually jog the tool over to your 0,0. You do this with the blue Keypad arrows.
+
+![Image 9](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/images/sacrifice.jpg) Our sacrificial layer has been sacrificed!
+
+![Image 10](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/images/shopbot1.jpg) The 1” foam cut quite well. I could probably speed up the feed rate.
+
+I secured the parts to the table using wood screws.
+
+Final Piece[¶](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/assignments/week08/#final-piece "Permanent link")
+------------------------------------------------------------------------------------------------------------------------------------
+
+![Image 11](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/images/cncpartdetail.jpg) Here’s a detail of the dog bone design - a modified ‘H’ section. I’ve also added fillets to the all exterior corners to mimimize breakage.
+
+![Image 12](https://fabacademy.org/2019/labs/dassault/students/daniel-smithwick/images/cncpart1test.jpg) Here’s the full piece! It’s about 30” tall, 1” thick.

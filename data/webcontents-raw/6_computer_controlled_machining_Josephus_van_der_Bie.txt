@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en-us" class="no-js">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <link type="text/plain" rel="author" href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie/humans.txt" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Optimized for search engines -->
+  <meta name="description" content="Making something BIG from wood using the Shopbot">
+
+  
+
+  <link rel="canonical" href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie/week08.html">
+
+  
+    <link rel="next" href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie/week09.html" title="Week 9. Embedded Programming">
+  
+
+  
+    <link rel="prev" href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie/week07.html" title="Week 7. Electronics Design">
+  
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@joeyvanderbie">
+  <meta name="twitter:creator" content="@joeyvanderbie">
+  <meta name="twitter:title" content="Week 8. Computer Controlled Machining">
+  <meta name="twitter:description" content="Making something BIG from wood using the Shopbot">
+  <meta name="twitter:image" content="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbiehttp://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/posts/week08/pirate_hero_1.jpg">
+  <meta name="twitter:url" content="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie/week08.html">
+
+  <!-- Open graph -->
+  <meta property="og:title" content="Week 8. Computer Controlled Machining">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie/week08.html">
+  <meta property="og:image" content="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbiehttp://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/posts/week08/pirate_hero_1.jpg">
+  <meta property="og:description" content="Making something BIG from wood using the Shopbot">
+  <meta property="og:site_name" content="Joey van der Bie">
+  <meta property="og:locale" content="en_us">
+
+  
+    <meta property="article:modified_time" content="2019-03-29T15:00:00+01:00">
+    <meta property="article:published_time" content="2019-03-08T00:00:00+01:00">
+    <meta property="article:author" content="https://www.facebook.com/">
+    
+      <meta property="og:see_also" content="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie/week20.html">
+    
+      <meta property="og:see_also" content="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie/week19.html">
+    
+      <meta property="og:see_also" content="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie/week18.html">
+    
+  
+
+  
+    
+    <meta property="article:section" content="week">
+    
+  
+
+  
+    
+    <meta property="article:tag" content="illustrator,">
+    
+    <meta property="article:tag" content="g-code,">
+    
+    <meta property="article:tag" content="wood,">
+    
+    <meta property="article:tag" content="milling">
+    
+  
+
+  <title>
+    
+      Week 8. Computer Controlled Machining &middot; Joey van der Bie
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/css/main.css">
+
+  
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Source+Serif+Pro:700,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:700' rel='stylesheet' type='text/css'>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+  <!-- modernizer -->
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+$(document).ready(function(){
+    $('img').each(function(){
+      $('<div class="imagecaption">' + $(this).attr('alt') + '</div>').insertBefore($(this));
+    });
+  });
+  </script>
+
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <![endif]-->
+
+  <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+<!--   <script async defer src="http://assets.pinterest.com/js/pinit.js"></script> -->
+  <script>
+  !function(a,b,c){var d,e,f;d="PIN_"+~~((new Date).getTime()/864e5),a[d]?a[d]+=1:(a[d]=1,a.setTimeout(function(){e=b.getElementsByTagName("SCRIPT")[0],f=b.createElement("SCRIPT"),f.type="text/javascript",f.async=!0,f.src=c.mainUrl+"?"+Math.random(),e.parentNode.insertBefore(f,e)},10))}(window,document,{mainUrl:"http://assets.pinterest.com/js/pinit_main.js"});
+  </script>
+</head>
+
+
+  <body>
+    
+      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+      <nav role="navigation" class="sidebar sidebar--right">
+  <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//index.html" class="textLogo textLogo--white textLogo--sidebar">Joey van der Bie</a>
+  <ul class="sidebar-recentPosts">
+        <li>
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie/about/index.html">About Me
+          </a>
+        </li>
+    <li>
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie/project/index.html">Final project
+          </a>
+        </li>
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week20.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week20/heroshot.png" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week20.html">Week 20. Project development
+            <div class="postMeta">03 Jun 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week19.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week19/presentation.png" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week19.html">Week 19. Invention, intellectual property and income
+            <div class="postMeta">29 May 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week18.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week18/heroshot.jpg" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week18.html">Week 18. Wildcard Week - Vacuum Forming
+            <div class="postMeta">15 May 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week17.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week17/magicmarblemachineendresult.jpg" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week17.html">Week 17. Machine Design
+            <div class="postMeta">15 May 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week16.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week16/nodejsserialchat.png" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week16.html">Week 16. Interface and Application programming
+            <div class="postMeta">09 May 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week15.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week15/openSCAD_finalRailDesign.png" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week15.html">Week 15. Mechanical Design
+            <div class="postMeta">08 May 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week14.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week14/ATTiny3Vtohm10.jpg" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week14.html">Week 14. Networking and Communications
+            <div class="postMeta">24 Apr 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week13.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/sketches/decomposed_view.jpg" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week13.html">Week 13. Applications and Implications
+            <div class="postMeta">20 Apr 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week12.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week12/heroshot.JPG" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week12.html">Week 12. Output Devices
+            <div class="postMeta">03 Apr 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week11.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week11/bridgingwires.jpg" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week11.html">Week 11. Input Devices
+            <div class="postMeta">03 Apr 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week10.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week10/hero.jpg" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week10.html">Week 10. Molding and Casting
+            <div class="postMeta">20 Mar 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week09.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week07/connected.jpg" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week09.html">Week 9. Embedded Programming
+            <div class="postMeta">12 Mar 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        <!-- exclude current post -->
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week07.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week07/hero.jpg" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week07.html">Week 7. Electronics Design
+            <div class="postMeta">27 Feb 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week06.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week06/me_finished.JPG" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week06.html">Week 6. 3D Scanning and Printing
+            <div class="postMeta">18 Feb 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week05.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week05/workingMicrocontroller.jpg" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week05.html">Week 5. Electronics Production
+            <div class="postMeta">13 Feb 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week04.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week04/lasercutter/hero.jpeg" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week04.html">Week 4. Computer Controlled Cutting
+            <div class="postMeta">06 Feb 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week03.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week03/fusion3603DBody.png" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week03.html">Week 3. Computer Aided Design
+            <div class="postMeta">28 Jan 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week02.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/week02/hero.png" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week02.html">Week 2. Project management
+            <div class="postMeta">25 Jan 2019</div>
+          </a>
+        </li>
+        
+      
+    
+      
+        
+        <li>
+<!--           
+            <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week01.html" class="sidebar-recentPosts-image-wrapper">
+              <img src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/thumbnail/sketches/decomposed_view.jpg" style="" alt="">
+            </a>
+           -->
+          <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//week01.html">Week 1. Concept final project
+            <div class="postMeta">18 Jan 2019</div>
+          </a>
+        </li>
+        
+      
+    
+  </ul>
+</nav>
+
+      <nav class="menuWrapper">
+  <ul class="popover popover--menu">
+    <li class="menu-avatar">
+      <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//index.html" class="brandLogo brandLogo--small
+      
+      ">Joey van der Bie</a>
+      <ul class="list list--avatarMenu hidden">
+        <li class="list-item"><a href="">Twitter</a></li>
+        <li class="list-item"><a href="">LinkedIn</a></li>
+        <li class="list-item"><a href="">Researchgate</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    
+
+    <article class="postWrapper">
+  <section class="section--first is-darkBackgrounded u-table">
+    <div class="section-backgroundImage">
+
+      
+        <img class="post-featuredImage" src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/images/posts/week08/pirate_hero_1.jpg" style="
+        
+          top:-190px;
+        
+        " alt="">
+      
+
+    </div>
+
+    <div class="section-title is-darkBackgrounded u-tableCell u-verticalAlignMiddle">
+      <div class="container">
+        <h2>Week 8. Computer Controlled Machining</h2>
+        <div class="postMeta-wrapper">
+          <ul class="postMeta">
+            <li class="postMeta-datetime">
+              <time datetime="2019-03-08 00:00:00 +0100">
+                08 Mar 2019
+              </time>
+            </li>
+            <li class="postMeta-author">
+              By Joey van der Bie
+            </li>
+            <li class="postMeta-tags">
+              week
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section--last">
+    <div class="container container--content">
+      <div class="content-body">
+
+        <h1 id="8-computer-controlled-machining">8. Computer Controlled Machining</h1>
+
+<h2 id="assignment">Assignment</h2>
+<p>Group assignment: “Test runout, alignment, speeds, feeds, and toolpaths for your machine”<br />
+Individual: “Make something BIG on a CNC machine.”</p>
+
+<h2 id="software">Software</h2>
+<p>PartWorks (special version of Vectrix software for Shopbot to generate G-code)<br />
+Shopbot controller software<br />
+Illustrator for designing cutout</p>
+
+<h2 id="hardware">Hardware</h2>
+<p>Shopbot<br />
+Shisel<br />
+Handdrill<br />
+Screws</p>
+
+<h2 id="files">Files</h2>
+<!-- Included your design files and ‘hero shot’ photos of final object -->
+<p><a href="assets/files/CNC_Pirate_Chest_future_20190312_try_1000.ai">Illustrator file of pirate chest design(3.1 MB)</a> <br />
+<a href="assets/files/week08/20190312chest_cutout_5mm.sbp">G-code cutout 5mm </a><br />
+<a href="assets/files/week08/20190312chest_cutout_dogbone_fast_5mm.sbp">G-code cutout dogbones 5mm </a><br />
+<a href="assets/files/week08/20190312chest_decoration_5mm.sbp">G-code chest decoration 5mm </a><br />
+<a href="assets/files/week08/20190312schroefgaten_5mm.sbp">G-code screw holes 5mm </a><br />
+<a href="assets/files/week08/PirateChestTest_PartWorks2019031500_onlinebox.crv">PartWorks file piratechest</a></p>
+
+<h2 id="before-your-start">Before your start</h2>
+<h3 id="safety-first">Safety first!</h3>
+<ol>
+  <li>NO long hair, long sleeves or lose ropes ect! You do not want to get stuck in the machine.</li>
+  <li>Know what to do in case of FIRE! Know where the fire extinguisers are.<br />
+In case of even one spark: turn OFF the spindle and machine and check if you did not cause a fire in the vacuum cleaner.</li>
+  <li>Know where the emergency stop is.</li>
+  <li>Never touch the machine when powered, always first turn the power off.</li>
+  <li>When you stop the cutting process always lift the spindle and turn of the spindle to prevent fire!</li>
+  <li>When the machine is on you never leave the device, but stay to monitor your progress.</li>
+  <li>Check if your material can be cut using the shopbot. If you do not know the precise contents of your material you are not allowed to cut it.</li>
+  <li>If you do not know what you are doing, ask somebody to help.</li>
+  <li><a href="https://hackaday.com/2019/05/20/design-tips-for-easier-cnc-milling/">Check this website for great milling tips!</a>
+<img src="assets/images/posts/week08/IMG_3477.jpg" alt="Fire extinguisher" />
+<img src="assets/images/posts/week08/IMG_3504.jpg" alt="Emergency stop" /></li>
+</ol>
+
+<h2 id="getting-to-know-the-shopbot-group-assignment">Getting to know the Shopbot (group assignment)</h2>
+<p>Group assignment: “Test runout, alignment, speeds, feeds, and toolpaths for your machine”<br />
+For our group assignment we made a test design that included:</p>
+<ul>
+  <li>cutout toolpath</li>
+  <li>pocket toolpath</li>
+  <li>dog-bone toolpath</li>
+  <li>t-bone toolpath</li>
+  <li>square</li>
+  <li>circle</li>
+  <li>joints</li>
+</ul>
+
+<p>For the cutout we made cutouts for the pieces, but also cut a square from the piece itself, to be able to see the offset needed.<br />
+We made a circle and square to see how straight and accurate the shapes would be.<br />
+We made a pocket and tried to hit a dark glue-layer to get a nice contrast. I was inspired by this idea by the artist Wintergatan, he is making a Marble machine using the CnC router. See an impression of his work at the results section of our group assignment.<br />
+We made two type of joints( pocket join and finger join) to see the difference and try out the dog-bone and t-bone toolpaths.</p>
+
+<p>Our progress was as follows:</p>
+<ol>
+  <li>
+    <p>We made a design on paper with our criteria
+<img src="assets/images/posts/week08/group/IMG_3539.jpg" alt="Designing on paper" /></p>
+  </li>
+  <li>
+    <p>We chose a piece of wood and measured the dimension of our wood:
+     height 330 mm<br />
+     width 700 mm<br />
+     thickness 23.8 mm<br />
+<img src="assets/images/posts/week08/group/IMG_3540.jpg" alt="Measuring material" />
+<img src="assets/images/posts/week08/group/IMG_3549.jpg" alt="Thickness of material may vary" /></p>
+  </li>
+  <li>
+    <p>We transfered the design to Illustrator using our new dimensions. <br />
+<img src="assets/images/posts/week08/group/IMG_3542.jpg" alt="Designing in illustrator" /></p>
+  </li>
+  <li>We left 3 centimeters between the squares to allow for easy cutout and to put a screw inbetween the cutouts to fix the plate to the sacrificial layer.<br />
+We decided on the 3 cm by taking our mill dimension 5 mm  times 2 adding dimension of the screw and adding a margin: 5 * 2 (cutouts) + 5 mm screw + 5 mm margin * 2 + 5 mm margin (to account for errors) = 3 cm</li>
+  <li>
+    <p>We saved our design as an Illustrator file and imported it in PartWorks.<br />
+Before importing the design we created a new file in ParkWorks with the dimensions of our wood.
+<img src="assets/images/posts/week08/group/IMG_3547.jpg" alt="New file with thickness of material" /></p>
+  </li>
+  <li>
+    <p>For each different type of milling we made a separate toolpath, one for the inside cutout, one for the outside cutout, one for the pockets, ect. <br />
+During the creating of our toolpaths we checked the simulation to see if everything turns out the way it should be. <br />
+<img src="assets/images/posts/week08/group/IMG_3551.jpg" alt="Select drilling toolpath" />
+<img src="assets/images/posts/week08/group/IMG_3552.jpg" alt="Setting Drilling/cutout toolpath" />
+<img src="assets/images/posts/week08/group/IMG_3553.jpg" alt="Selecting the mill with the correct settings" />
+<img src="assets/images/posts/week08/group/IMG_3556.jpg" alt="Assigning pocket toolpath" />
+<img src="assets/images/posts/week08/group/IMG_3557.jpg" alt="Pocket toolpath simulation" /><br />
+<img src="assets/images/posts/week08/group/IMG_3565.jpg" alt="Check toolpaths in simulation" /></p>
+  </li>
+  <li>
+    <p>For the cutout we milled about 0.1 mm further than the material, placed small tabs and assigned the dog-bones to the finger join cutout and the t-bone to the pocket join.<br />
+<img src="assets/images/posts/week08/group/IMG_3558.jpg" alt="Selecting dog-bones" />
+<img src="assets/images/posts/week08/group/IMG_3560.jpg" alt="Placing dog-bones in the corners" />
+<img src="assets/images/posts/week08/group/IMG_3561.jpg" alt="Cutout trough the material" />
+<img src="assets/images/posts/week08/group/IMG_3563.jpg" alt="Adding tabs" />
+<img src="assets/images/posts/week08/group/IMG_3562.jpg" alt="Tabs placement" /></p>
+  </li>
+  <li>Last we created a toolpath for the screw holes.  We directly exported this screw holes toolpath, gave it a clear name including the mill size and then deleted the toolpath from partworks to make sure we would not include it later in the process.</li>
+  <li>We ordered the remaining toolpaths to make our pockets first, then the inside toolpaths and last the outside toolpath.</li>
+  <li>We exported the reamining toolpaths and gave it a clear name includignt he mill size.</li>
+  <li>
+    <p>Next we prepared the Shopbot (cleaning, mill, turning on vacuum machine) and started the milling software.<br />
+<img src="assets/images/posts/week08/group/IMG_3545.jpg" alt="Cleaning shopbot" /></p>
+  </li>
+  <li>
+    <p>We placed our material on the sacrificial layer, but did not attached it. In stead we calibrated the Shopbot to the wood and milled the screw holes.<br />
+<img src="assets/images/posts/week08/group/IMG_3566.jpg" alt="Place material, but not attaching it to sacrificial layer" /></p>
+  </li>
+  <li>
+    <p>Next we turned off the spindle placed the screws and recalibrated the Z-axis of the Shopbot.<br />
+<img src="assets/images/posts/week08/group/IMG_3577.jpg" alt="Calibrating Z-axis" />
+<img src="assets/images/posts/week08/group/IMG_3570.jpg" alt="Calibrateing Z-axis option in software" /></p>
+  </li>
+  <li>We loaded our design toolpath and waited untill the Shopbot was finished.</li>
+  <li>
+    <p>We cleaned the wood, removed it from the bed and saw we only toughed the sacrifical layer. Nice! Next we removed the small tabs with a shisel.<br />
+<img src="assets/images/posts/week08/group/IMG_3592.jpg" alt="Nice cutout" />
+<img src="assets/images/posts/week08/group/IMG_3597.jpg" alt="Removing bridge with a shisel the proper way" /></p>
+  </li>
+  <li>
+    <p>We forgot to measure the offset before removing the material, but tried to determine it by measureing the difference in the finger joins.<br />
+It was very difficult to measure, but the difference is about 50.4 - 49.8 = 0.6 mm . This difference made it almost impossible to join the two pieces of wood with the pocket join. <br />
+<img src="assets/images/posts/week08/group/IMG_3601.jpg" alt="Big difference in cut makes it impossible to properly join" />
+<img src="assets/images/posts/week08/group/IMG_3604.jpg" alt="Outer finger join measurement, not 50mm but 50.4" />
+<img src="assets/images/posts/week08/group/IMG_3606.jpg" alt="Inner finger join measurement, not 50mm but 49,8 mm" />
+<img src="assets/images/posts/week08/group/IMG_3608.jpg" alt="Inner cut measurement" />
+<img src="assets/images/posts/week08/group/IMG_3609.jpg" alt="Pocket join measurement" /></p>
+  </li>
+  <li>Overal the mill is very accurate and the circle pocket turned out to be really nice with the difference in contrast. Thanks Wintergatan!<br />
+<img src="assets/images/posts/week08/group/IMG_3613.jpg" alt="Our pocket on the gluelayer" /><br />
+<img src="assets/images/posts/week08/wintergatan.png" alt="Credits: Wintergatan milling on the glue layer as seen on YouTube" /></li>
+</ol>
+
+<h2 id="making-something-big-with-the-shopbot">Making something big with the Shopbot</h2>
+<!-- 
+Demonstrate 2D design development for CNC production
+Describe workflows for CNC production 
+Shown how you made something BIG (setting up the machine, 
+using fixings, 
+testing joints, 
+adjusting feeds 
+and speeds, 
+depth of cut etc)
+drill, 
+pocket, ????
+dog-bones, 
+nesting, ????etc.
+
+-->
+
+<h3 id="creating-a-2d-design-for-the-shopbot">Creating a 2D design for the Shopbot</h3>
+<!-- Explained how you made your files for machining (2D or 3D) -->
+<p>We are going to create something big with the Shopbot.<br />
+We will walk you through the whole process, from inspiration, to design, to milling, to construction. <br />
+In this example we will be creating a pirate chest out of a single sheet of plywood.<br />
+We have as criteria:</p>
+<ul>
+  <li>it should be made from a single piece of plywood (dimensions 2500 x 1220 x 15.3)</li>
+  <li>use almost no glue or screws</li>
+  <li>the chest should look as a pirate chest</li>
+  <li>use only one type of mill 5 mm two flutes</li>
+  <li>be made within 3 hours of milling time</li>
+</ul>
+
+<h4 id="inspiration">Inspiration</h4>
+<p>For inspiration for our pirate chest, I created a Pinterest moodboard, containing all kind of great wooden chests. Some are made with a CNC router, others by hand.<br />
+<a data-pin-do="embedBoard" data-pin-lang="nl" data-pin-board-width="800" data-pin-scale-height="400" data-pin-scale-width="60" href="https://nl.pinterest.com/joeyvanderbie/pirate-chests/"></a> <br />
+From this moodboard I created some sketches of possible pirate chests for us to create containing concepts as joins, lid and planks.</p>
+
+<p>Important questions to decide on are the type of lid, joints and size:<br />
+For the lid we can think of a solid, tampered, curved or more organic shaped. To keep things simple, I chose to first make a basic solid lid.</p>
+
+<p><img src="assets/images/posts/week08/sketches_covers.jpg" alt="sketches of pirate chests lids" /></p>
+
+<p>For the joints we considered, simple small joints, joints the size of a plank, and joints via pockets.  I schetched some different designs for the joints, and decided to make big joints and the size of a plank 70 mm. This also allows me to decorate the joints with pockets.</p>
+
+<p><img src="assets/images/posts/week08/sketches_joinideas.jpg" alt="sketches of pirate chests join ideas" />
+<img src="assets/images/posts/week08/sketch_finaljoin.jpg" alt="sketches of pirate chests final join design" /></p>
+
+<p>For the chest size we looked for inspiration at boxes that are convenient to store stuff in, look storage boxes.<br />
+A large storage box of the <a href="https://www.praxis.nl/badkamer-keuken-wonen/opbergen/verhuisbenodigdheden/praxis-verhuisdoos-70l-wit/5558761">Praxis hardware store is 580 by 400 by 300 mm.</a><br />
+This is the size we will follow for the base of the chest. On top of this base we will provide the lid. 
+Box size: 580 x 400 x 300.</p>
+
+<p><img src="assets/images/posts/week08/sketches_chestdesign.jpg" alt="final sketch of pirate chest design" />
+<!-- https://www.gamma.nl/assortiment/pianoscharnier-messing-500x32-mm/p/B691008 --></p>
+
+<h4 id="designing-in-illustrator">Designing in Illustrator</h4>
+<p>Having decided on the basic shape I could start designin the box in Adobe Illustrator. I considered to use Fusion360, but several team members indicated the export of Fusion can give issues with the PartWorks software. To prevent issues with exporting I went with Illustrator. The advantage for me is that I better know Illustrator than Fusion, so my design time will probably be shorter, but with Illustrator I cannot use parametric design as in Fusion, meaning that changes in dimension mean more edit time than in Fusion.</p>
+
+<p>I created a new file in Illustrator with the dimensions of my wood: 2500 x 1220 mm<br />
+Within this canvas I created a “save to design are”. This area has a margin of 30 mm from all edges. This will later allows me to put screws in the sides of my wood and not have to worry if the machine will mill at the screws.<br />
+My save area dimensions are: 2440 x 1160 mm</p>
+
+<p>Next I created the front panel of: 580 x 300 mm.<br />
+I used the rectagle tool. To quickly create a rectangle the desired size, you can click with your mouse on the screen and enter the dimensions.
+Within the rectangle I drew the cutouts for the joints, size: 70 x 15.3 mm<br />
+I quickly realized a size of 580 by 300 mm will not work with 70 mm finger joints. After all 580 / 70 = 8.25… not a round number!<br />
+I adjusted my box dimensions to fit within a factor of 70.<br />
+New dimension: 630 x 490 x 350 mm</p>
+
+<p>During the design I often got lost in dimensions and had to work on different levels of requirements, therefor I made the following list of priorities for my design: pratical aspects first, then estetics.<br />
+	level 1 material, the material is use has a dimension and thickness<br />
+	level 2 box size, the box I want to make has to be practical in usage and fit on the material<br />
+	level 3 plank size, I decided, I wanted to use a plank size of 70 mm, the box sizes need to fit with this size.<br />
+	level 4 esthetics, the box has to look as a pirate chest given the dimensions and limitations of the assignment.</p>
+
+<p><img src="assets/images/posts/week08/strugling_dimensions.jpg" alt="strugling with dimensions" /></p>
+
+<p>Further I created an Excel sheet containing all the dimensions of my box and the material I wanted to use, this allowed me to keep an overview of all the panels and to see If it would fit the material.</p>
+<iframe style="width:100%;height:400px;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTQc4kD0R887GBeP0stVFDHIG6CvYoNr7Z604wy8gkOdpVkzcLGaqkrJmJ_Z8PVF2tJIKB3r3aiieA3/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
+<p>During designing I noticed when you color and fill the lines for their different cutout/kerf/pockets settings, it is easier to get an overview of the final result, also this will help when setting the settings in the PartWorks software.</p>
+
+<p>To get the design from from Illustrator to PartWorks use the following steps:</p>
+<ol>
+  <li>Ungroup all groups</li>
+  <li>Make sure you have closed your lines and no duplicate lines</li>
+  <li>Create oulines of your text. Your text will now be lines and you do not need to transfer the font with your desing.</li>
+  <li>Last store your design as an .ai file.</li>
+</ol>
+
+<p><img src="assets/images/posts/week08/illustrator.png" alt="The final design of the pirate chest in Adobe Illustrator. Notice the colors for different cut depths" /></p>
+
+<h3 id="from-design-to-g-code-for-the-shopbot">From design to G-code for the Shopbot</h3>
+<p>We use the PartWorks software to generate the G-code for the CNC milling machine (Shopbot).<br />
+The PartWorks software runs on a special computer connected to the Shopbot.</p>
+
+<p><img src="assets/images/posts/week08/IMG_3646.jpg" alt="The dialog screen for your canvas properties" /><br />
+Start by turning on the computer that is connected to the Shopbot, login with the Fablab account (no password).<br />
+Transfer you file from your USB stick to the computer and place it in the fablab project folder with a folder with your name.<br />
+Start the Shopbot software PartWorks and Create a new Job.<br />
+Input your dimensions of your material, in my case:
+	width: 2500 mm
+	height: 1220 mm
+	depth: 15.3 mm (I actually measured 15.37, and 15.28, and decided to average on 15.3)<br />
+<img src="assets/images/posts/week08/IMG_3623.jpg" alt="Measure wood thickness" /></p>
+
+<p><img src="assets/images/posts/week08/IMG_3640.jpg" alt="Import your design via:  File -&gt; Import... -&gt; Import Vectors..." /><br />
+Import your design via:<br />
+	File -&gt; Import… -&gt; Import Vectors… (our illustrator file)<br />
+	Or use Ctrl + I<br />
+<img src="assets/images/posts/week08/IMG_3699.jpg" alt="After importing you will get something like this:" /></p>
+
+<p><img src="assets/images/posts/week08/IMG_3652.jpg" alt="Select vectors and then select toolpath" />
+<img src="assets/images/posts/week08/IMG_3653.jpg" alt="Create line toolpath" />
+Now select the lines you want to use to cut/mill.<br />
+Go to Toolpaths and select the 3rd icon, “Create profile toolpath”<br />
+Now put in your cuth depth in our case we use the thickness of the material + 0.1 mm to make sure we are through our material, and because our material has a variancing thickness of 0.05 mm.
+cut depth: 15.4 mm</p>
+
+<p><img src="assets/images/posts/week08/IMG_3643.jpg" alt="Dialog screen for mill properties" /><br />
+Next select your mill, We are milling with a End mill 5 mm two flute mill.<br />
+Put in the following parameters:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mill settings</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Diameter:</td>
+      <td>5 mm</td>
+    </tr>
+    <tr>
+      <td>Pass depth:</td>
+      <td>3.1 mm</td>
+    </tr>
+    <tr>
+      <td>Stepover:</td>
+      <td>48%</td>
+    </tr>
+    <tr>
+      <td>Spindle feed:</td>
+      <td>18000</td>
+    </tr>
+    <tr>
+      <td>Feed rate:</td>
+      <td>40 mm/s</td>
+    </tr>
+    <tr>
+      <td>Plunge rate:</td>
+      <td>30 mm/s</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="assets/images/posts/week08/IMG_3700.jpg" alt="Add tabs" />
+<img src="assets/images/posts/week08/IMG_3702.jpg" alt="Adding tabs" /><br />
+Next select tabs and select “Edit tabs” button.<br />
+Select the amount of tabs you want. Recommended is to place two tabs per 50 cm line. I place two tabs at each side of my cutout plates.<br />
+Next select the “Add Tabs” button. This will place the tabs on the screen.<br />
+Take a look at your tabs, and see if tabs are placed inconvenient. With you mouse you can remove and place tabs.<br />
+Select “Close” when you are finished with setting your tabs.</p>
+
+<p><img src="assets/images/posts/week08/IMG_3703.jpg" alt="Warning message when cutting through the material" /><br />
+Give your toopath a name and select “Calculate”.<br />
+You will receive a warning that you will be cutting through your material. Check if the message gives the information you agree with and continue if everthing checks out.</p>
+
+<p><img src="assets/images/posts/week08/IMG_3741.jpg" alt="Creat fillets" />
+Last if you have joins you want to add fillets (dog-bones or T-bones). You can apply this by selecting the “Create Fillets” option in the left menu bar. Next select the type of fillet (dog-bones or T-bones), and click with your mouse where you want the fillets to be. This will mostly be the corners of your cut.</p>
+
+<p><img src="assets/images/posts/week08/IMG_3659.jpg" alt="Simulation of your cutout" /><br />
+Next you will be able to simulate your cutout.
+Select “Preview Toolpath” to see a simulation of your toolpath.</p>
+
+<p>Next select your lines you want to kerf and create a toolpath for these lines.
+For our lines we select:</p>
+<ul>
+  <li>cut depth 3 mm (to get to the third wood layer)</li>
+  <li>machine vectors: on the line</li>
+  <li>give it a name “wood grooves”, and calculate.</li>
+</ul>
+
+<p>Next we select our pockets and create a toolpath for these lines</p>
+<ul>
+  <li>cut depth: 1.17 mm (pocket for my second wood layer)</li>
+  <li>machine vectors: inside/left</li>
+  <li>name: “pockets”, and calculate<br />
+<img src="assets/images/posts/week08/IMG_3655.jpg" alt="Create pocket toolpath" /></li>
+</ul>
+
+<p><img src="assets/images/posts/week08/IMG_3660.jpg" alt="Order toolpaths" />
+Having created all the different toolpaths we order them in the correct sequence.<br />
+Leave the cutout for last.<br />
+After orderning select the pocket and kerf toolpaths and export them to G-code using the “Save toolpath” icon.</p>
+
+<p><img src="assets/images/posts/week08/IMG_3705.jpg" alt="Export toolpaths as G-code for shopbot" /><br />
+<img src="assets/images/posts/week08/IMG_3704.jpg" alt="Export toolpath with clear name including mill diameter" /><br />
+Chose a fitting name and include the mill diameter in the name. This way you are sure you have to correct G-code when selecting it in your milling software.<br />
+Next select the cutout toolpath and again save is at G-code under a fitting name. Include cutout and mill diameter.</p>
+
+<h3 id="from-g-code-to-milling-with-the-shopbot">From G-code to milling with the Shopbot</h3>
+<p>Having created our G-code we can now continue to the next step, mill our design with the Shopbot.
+Before doing anything with the Shopbot you first need to know your safeties.
+Look at the <a href="#Before_you_start">“Before you start”</a> section.</p>
+
+<p><img src="assets/images/posts/week08/group/IMG_3545.jpg" alt="Clean the sacrificial layer by vacuuming all the dust and residu material, and by sanding away imperfections from screws." /><br />
+Know knowing what to do in case of fire, and how to keep everything save we can start touching the Shopbot.<br />
+Make sure the device is turned OFF.<br />
+Next clean the sacrificial layer. In our case it is this nice black layer that we can use to fix our material on and that is nice and flat.<br />
+Clean the sacrificial layer by vacuuming all the dust and residu material, and by sanding away imperfections from screws.</p>
+
+<p><img src="assets/images/posts/week08/IMG_3725.jpg" alt="Fixing the material to the sacrificial layer with screws." /><br />
+After cleaning place your material. Our sacrificial layer has a nice small guiding edge at the left side to lay your material straight.<br />
+Make sure your material is flat than fix it to the sacrificial layer with wood screws. Make sure the screws go into the sacrificial layer, but not through!<br />
+Also make sure to put enough presure on the wood to not raise the wood.<br />
+Place your screws at the edges of your material, and make sure you do not have planned any milling near the screws.</p>
+
+<p><img src="assets/images/posts/week08/IMG_3723.jpg" alt="Protip: Screw holes made with toolpath" /><br />
+Protip:<br />
+You can also create a special toolpath for your screw holes fore placing your screws. I did this in the end to make sure I would not mill on the screws.<br />
+Do be carefull to not include your screw holes toolpath in the other milling toolpaths. My advice would be to create the screw toolpath, generate this G-code, save it under a name as: “DANGER_screw_holes_toolpath_5mm”, and then through away the toolpath from PartWorks. This way you cannot easily make mistakes later in the process.<br />
+When you use a toolpath for screws you need to follow the steps:</p>
+<ul>
+  <li>first need to place your material</li>
+  <li>go through the whole procedure of setting up the Shopbot</li>
+  <li>mill the screw holes</li>
+  <li>turn off the spindle and move the spindle out of the way</li>
+  <li>fix your material to the sacrifical layer</li>
+  <li>then recalibrate your Z-axis before your start with your actual milling</li>
+</ul>
+
+<p>When I wanted to start milling, there were many people around (including from the Dutch radio!), to avoid making mistakes I wrote down a quick procedure to follow:</p>
+
+<ol>
+  <li>Vacuum ON
+<img src="assets/images/posts/week08/IMG_3502.jpg" alt="Main vacuum machine on/off switch" />
+.</li>
+  <li>Mill on<br />
+<img src="assets/images/posts/week08/IMG_3491.jpg" alt="Danger! Mill on/off switch, spindle ON/OFF only works with key!" />
+.</li>
+  <li>Shopbot software launch<br />
+.</li>
+  <li>Calibrate x, y, z axis (z axis in the centre of the plate) (see calibration section for details)</li>
+  <li>Load screw cutout in Shopbot sofrtware</li>
+  <li>Spindle on 180000 and vacuum ON
+<img src="assets/images/posts/week08/IMG_3717.jpg" alt="Spindle to 18000 rpm" /><br />
+<img src="assets/images/posts/week08/IMG_3503.jpg" alt="Regulate vacuum machine" /><br />
+.</li>
+  <li>Mill Screwholes</li>
+  <li>Spindle and vacuum OFF</li>
+  <li>Move mill out of the way with software
+Protip: If you want to quickly move the Shopbot (while the spinle is off) press K to get the keypad, instead of selecting this option from the menu.<br />
+<img src="assets/images/posts/week08/IMG_3726.jpg" alt="Shopbot controll software with keypad to controll mill" />
+.</li>
+  <li>Measure screwholes and set screws<br />
+.</li>
+  <li>Recalibrate Z-axis</li>
+  <li>Load milling file for pockets and cutout</li>
+  <li>Spindle and vacuum ON</li>
+  <li>Start milling<br />
+<img src="assets/images/posts/week08/IMG_3727.jpg" alt="Shopbot milling" />
+.</li>
+  <li>After milling: Spindle and vacuum OFF<br />
+.</li>
+  <li>Check if everything looks ok (inserted this option after fails)</li>
+  <li>Move mill out of the way and turn OFF</li>
+  <li>Vacuum material</li>
+  <li>Remove material</li>
+  <li>Vacuum table
+.</li>
+  <li>Remove cutouts from material</li>
+  <li>Cleanup waste, vacuum and use a saw to make your left overs smaller.<br />
+<img src="assets/images/posts/week08/cleanup_saw.jpg" alt="Reduce waste size with a saw" />
+<img src="assets/images/posts/week08/cleanup_waste.jpg" alt="Cleaning op waste" /></li>
+</ol>
+
+<p>I pretty much followed these steps as determined. Before discussing my result I will describe placing a mill and calibrating</p>
+
+<h4 id="replacing-mill">(Re)Placing mill</h4>
+<p><img src="assets/images/posts/week08/IMG_3485.jpg" alt="Tools for replacing mill" /></p>
+
+<p>For (re)placing a mill. First make sure the Shopbot is OFF and the spindle is OFF, and the key is not machine.<br />
+Next get the tools for replacing the mill.  <br />
+Move the vacuum scirt up (there is a small screw at the back of the spindle) and remove the old mill with yor tools.</p>
+
+<p>Find the mill you want to use and select the fitting collet, it should fit tight when only holding with your fingers.<br />
+<img src="assets/images/posts/week08/IMG_3479.jpg" alt="Select the right collet for your mill, it should fit tight when only holding with your fingers" /></p>
+
+<p>Place the mill in the collect and the collet in the ring. Make sure the mill is placed as in the image.<br />
+<img src="assets/images/posts/week08/placemillincollet.jpg" alt="Drawing if placemet of mill, collect and ring" /></p>
+
+<p>Tighten the mill to the spindle monkey tight, but make sure it is not to lose, we do not want to have a flying mill.</p>
+
+<p>Last check if your mill is in straight and move the scirt down.</p>
+
+<h4 id="calibrating">Calibrating</h4>
+<ol>
+  <li>Place your material and attatch it to the sacrificial layer</li>
+  <li>Start the Shopbot and the Shopbot controll software</li>
+  <li>Select the option XY icon with the arrows in the software. The Shopbot will now move to its default X and Y 0.</li>
+  <li>Move the Shopbot to the new start position. You set a X,Y 0 in your PartWorks software, most of the times this is the left bottom corner.<br />
+Remember that the Y-axis is the short part of the Shopbot, so left bottom is actually right bottom on the picture where you see the mill.</li>
+  <li>Next selec the Zero X and Y option in the menu. 
+<img src="assets/images/posts/week08/IMG_3713.jpg" alt="Zero X and Y, set the X and Y axis to new position" /></li>
+  <li>Next move the mill to the centre of the material. 
+<img src="assets/images/posts/week08/IMG_3715.jpg" alt="Calibrate Z-axis in the centre of the material" /></li>
+  <li>Place the metal plate under the mill and select the Z icon with the arrows in the software.<br />
+You will receive a mesage to place the plate. If you placed the plate press ok. You will get a Z-contact did not clear error, ignore this.<br />
+<img src="assets/images/posts/week08/IMG_3714.jpg" alt="Calibrate Z-axis mesage, place metal plate" /></li>
+  <li>Next move the mill up and remove the plate. You are now ready to start milling.</li>
+</ol>
+
+<h3 id="result">Result</h3>
+<p><img src="assets/images/posts/week08/IMG_3735.jpg" alt="Milling the pockets, notice the difference in contrast due to the next wood layer" />
+<img src="assets/images/posts/week08/IMG_3746.jpg" alt="Final result of cutout on the Shopbot" />
+After milling I had a nice cutout, but found out I made some mistakes (see also my fails): I forgot dog-bones and to set an offset. I repaired these errors by sanding and a shisel, I had to remove remaining wood curls anyway. I only removed some material to keep a tight fit and used a hamer to attach the pieces. 
+<img src="assets/images/posts/week08/chisel2.jpg" alt="Fixing no dog bones with shisel" />
+<img src="assets/images/posts/week08/sanding.jpg" alt="Removing material with sanding" />
+<img src="assets/images/posts/week08/wood_hammer.jpg" alt="Joining with a hammer and a plank" /></p>
+
+<p>The final join were really tight and I did not had to use any glue!<br />
+<img src="assets/images/posts/week08/pirate_join.jpg" alt="Working join" /></p>
+
+<p>After hard work I was able to finally put all the pieces together, make some nice pictures and present the end result to my son, who is really happy with his new pirate chest!
+<img src="assets/images/posts/week08/pirate_hero_1.jpg" alt="Hero shot of te pirate chest 1" />
+<img src="assets/images/posts/week08/pirate_hero_2.jpg" alt="Hero shot of te pirate chest 2" />
+<img src="assets/images/posts/week08/pirate_hero_3.jpg" alt="Hero shot of te pirate chest 3" />
+<img src="assets/images/posts/week08/pirate_chest_active.JPG" alt="Pirate chest in active use by my son" /></p>
+
+<h1 id="fails">Fails</h1>
+<!-- Described problems and how you fixed them -->
+
+<h2 id="illustrator-duplicate-vectors">Illustrator duplicate vectors</h2>
+<p>In our group assignment we made our design in Illustrator and imported this in the PartWorks software. <br />
+There we noticed we had duplicate vectors, meaning we had multiple of the same lines.<br />
+In PartWorks you can resolve this by selecting all vectors, then selected “edit” and the option “select all duplicates” and then delete them.
+<img src="assets/images/posts/week08/group/IMG_3554.jpg" alt="Duplicate vectors " /></p>
+
+<!-- ## 
+issue with fingers and box size and plank size, I could not alternate in a nice way the finger joints, because I did not used a uneven combination of 7.  
+issue with fingers and box size and plank size and material thickness, I forgot the material thickness resulting in overlapping fingerjoints when combined.  I made the corner fingers overlap and combined them to compensate for material thickness.  
+issue with kerf lines, the kerf lines will overlap with my cutout, meaning I will get cutouts with a small kerf around it, not nice. I made the kerf shorter to reduce overlap   -->
+
+<h2 id="illustrator-align-option-not-pixel-perfect">Illustrator align option not pixel perfect</h2>
+<p>When creating my design in illustrator, I wanted to align my pockets in line with my cutouts. I thought I could sue the align option of Illustrator. But after zooming in I found out that this function is not pixel perfect. You are better of aligning the vectors by hand. If your vectors do not overlap you will get nasty results with milling.</p>
+
+<h2 id="expensive-mistake-forgetting-material-thickness">Expensive mistake: Forgetting material thickness</h2>
+<p>When first creating the finger joints I used the dimension: 70 x 15, forgetting my material is 15.35 mm thick! I later had to adjust all my joints, which takes a lot of time in Illustrator, since Illustrator does not support parametric design. <br />
+Next design will definitly be with a tool that allows for parametric design.</p>
+
+<h2 id="out-of-time">Out-of-time</h2>
+<p>Designing the cutout in illustrator took much more time than I had planned. I had given myself 6 hours to design my cutout.<br />
+But I kept having problems with designen a proper pirate chest, due to dimensions and forgetting material thickness, ect.<br />
+When I noticed I was out of time, I made a new plan. I would first make a basic setup of my box, not a fancy one, made the dimensions in Excel, fancy it up a little bit.<br />
+Then try my desing in the PartWorks software, see how uch time the milling would take, and tweak my design to allow for a shorter milling time. <br />
+I ended up using a higher feedrate of 40 mm/s and a plunge rate of 30 mm/s and pass depth of 3.1 mm to allow for less passes and make the passes faster.<br />
+I could use these high settings, because I hade soft wood and we had a sharp mill. During milling I kept listening and checked with Henk if I was not stressing the mill or the Shopbot to much.</p>
+
+<h2 id="kerf-line-on-cutout">Kerf line on cutout</h2>
+<p>When starting the pockets and kerfs lines, it looked like the mill was doing the cutout toolpath.<br />
+I stopped the milling process and checked my design.  I could not find my mistake, so I reexported my pocket and ker toolpaths and restarted the milling process.<br />
+I kept having this error. After 1.5 hour I decided I had to continue anyway. After the first pass of the cutout of my top plate the milling continued as expected with the pockets and other kerf lines. It turned out I had selected one cutout line as a kerf line by accidend. This gave the impression of a cutout, but was only a kerf.
+<img src="assets/images/posts/week08/IMG_3731.jpg" alt="Fail! kerf on the cutout lines" />
+<img src="assets/images/posts/week08/IMG_3729.jpg" alt="Fail! Recreating cutout toolpath to correct for mistakes" /></p>
+
+<h2 id="almost-fire">Almost fire!</h2>
+<p>With the stopping of the milling process due to my faulty kerf line I forgot to turn off the spindle. <br />
+This was quickly noted by Henk, and within a few seconds I had lifted the spindle and turned off the spindle.<br />
+After this error I fortunately never made this mistake again. So I learned my lesson, always press stop button and then turn key to OFF!</p>
+
+<h2 id="cutout-in-sacrificial-layer">Cutout in sacrificial layer</h2>
+<p>After my cutout, I noticed I went not only through my material, but also in the sacrifical layer.  Much further than anticipated. It turned out I did not measured my wood thickness acurate enough on multiple sides, I only easured it on multiple places on one side. On some parts the wood is 15.37, on the other side more like 15.30. I only measured one side resulting in me thinking my wood was thicker than that is actually was. Next time I will measure my woodthickness on multiple sides and do a test cut to see if my cut out settings are accurate.
+<img src="assets/images/posts/week08/IMG_3750.jpg" alt="Cutouts in sacrificial layer" /></p>
+
+<h2 id="forgot-dog-bones">Forgot dog-bones</h2>
+<p>I noticed in time I forgot to put my dog bones in, so after my decorations (pockets and kerfs), I stopped the milling and added the dog-bones to my cutouts saved the new toolpath under a new name with “dog-bones” in it and reloaded the cutout file in the milling software.<br />
+Next time I will walk through my checklist more carefully to make sure I did no forget something as important.</p>
+
+<h2 id="where-are-my-dog-bones">Where are my dog-bones?</h2>
+<p>Still after the cutout I had to conclude my dog-bones were still missing. Somehow I forgot to check after the cutout and removed my material from the wood before I found out my mistake. Everytime when you change a shape you need to recalculate your toolpath, and maybe I missed this.  So I either forgot to recalculate my toolpath, or I loaded the wrong toolpath in the milling software.<br />
+I found my error only after removing the material from the table, resulting in having to fix all the corners using a shisel.<br />
+Next time I will through away first the wrong toolpath and than recalculate the correct new toolpath. <br />
+<img src="assets/images/posts/week08/no_dog_bones.jpg" alt="No dog bones" />
+<img src="assets/images/posts/week08/chisel2.jpg" alt="Fixing no dog bones with shisel" /></p>
+
+<h2 id="no-offset">No offset</h2>
+<p><img src="assets/images/posts/week08/cutout_inside.jpg" alt="Cutout inside" />
+<img src="assets/images/posts/week08/cutout_outside.jpg" alt="Cutout oudside to large" />
+<img src="assets/images/posts/week08/sanding.jpg" alt="Removing material with sanding" />
+<img src="assets/images/posts/week08/not_a_perfect_fit.jpg" alt="Not a perfect fit" /></p>
+
+<p>The sanding together with the creation of the corners with the shisel took me about 4 hours and would surely be much shorter when I set the correct offset and milled the dog bones.</p>
+
+<h2 id="using-a-shisel-with-a-hamer">Using a Shisel with a hamer</h2>
+<p>When removing our cutout from the wood we used a shisel and a hamer, but Heidi and Anne learned us that especially with this type of material and accuracy it is way better to use only the shisel and slowly remove the tabs by hand.</p>
+
+<p><img src="assets/images/posts/week08/group/IMG_3596.jp" alt="Fail! Removing bridge with a shisel and hamer" />
+<img src="assets/images/posts/week08/group/IMG_3597.jpg" alt="Removing bridge with a shisel the proper way" /></p>
+
+<h2 id="spindle-warmup-not-working">Spindle warmup not working</h2>
+<p>In the Shopbot software we noticed there was a spindle warmup feature. We tried it, but it turnout our software does not communicate with the spindle speed itself. We need to set the speed manually ourself. So using this feature in the software is not an option for this specific device.<br />
+<img src="assets/images/posts/week08/group/IMG_3581.jpg" alt="Spindle warmup not working" /></p>
+
+<h1 id="reflection">Reflection</h1>
+<p>I really liked it to create something BIG with the Shopbot. I must say creating something big does add to the complexity with the different software, and the difficulties in all the steps in controlling the Shopbot.<br />
+Although I was very carefull in my steps and tried to prevent error, I made many, and noticed I really needed much more time for this assingment, than any other assignment of the previous weeks.<br />
+Also looking at the reviews of this week, I noticed that most people either did not finish their work completly or did not finish their documentation. To me this is an indication the assignment is to big to succesfully complete in one week, and I would recommend for next years to stretch it to two weeks. Maybe start with making something small in the first week and making something big the next week.</p>
+
+
+
+      </div>
+    </div>
+    <hr class="u-clearHr"/>
+    <hr class="u-clearHr"/>
+    <hr/>
+    <div class="container container--content">
+      <div class="content-body">
+      </div>
+    </div>
+  </section>
+  <footer class="postFooter">
+    <footer class="section--footer">
+  <div class="container container--content">
+    <div>
+      Based on <a href="https://github.com/vincentchan/mickey" target="_blank">Mickey theme</a> for Jekyll, adapted by <a href="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//about/index.html">Joey van der Bie</a>
+    </div>
+    <ul class="socialAccountList">
+      <li><a href="http://twitter.com/joeyvanderbie" class="socialAccount socialAccount--twitter" target="_blank"></a></li>
+      <li><a href="http://www.linkedin.com/in/joeyvanderbie" class="socialAccount socialAccount--linkedin" target="_blank"></a></li>
+      <li><a href="http://www.researchgate.net/profile/Joey_Van_Der_Bie" class="socialAccount socialAccount--researchgate" target="_blank"></a></li>
+     <li><a href="rss feed url" class="socialAccount socialAccount--rss" target="_blank"></a></li>
+    </ul>
+    <div>
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </div>
+  </div>
+</footer>
+
+  </footer>
+</article>
+
+<div class="modal-toggle-group animate scaleIn">
+  <div class="modal-toggle-bubbleShadow"></div>
+  <div class="modal-toggle-bubble"></div>
+  <div class="modal-toggle-wrapper"></div>
+  <div class="modal-toggle-close-wrapper">
+    <div class="modal-toggle-close"></div>
+  </div>
+</div>
+
+<div class="fullscreenModal u-table">
+  <div class="u-tableCell u-verticalAlignMiddle">
+    <h2 class="h2--shareTitle">Share this story</h2>
+    <ul class="shareWrapper">
+      <li><a class="shareButton shareButton--twitter" href="https://twitter.com/intent/tweet?text=Week 8. Computer Controlled Machining by @VincentChan&url=http%3A%2F%2Ffab.academany.org%2F2019%2Flabs%2Fwaag%2Fstudents%2Fjosephus-vanderbiehttp%3A%2F%2Ffab.academany.org%2F2019%2Flabs%2Fwaag%2Fstudents%2Fjosephus-vanderbie%2F%2Fweek08.html" target="_blank"></a></li>
+      <li><a class="shareButton shareButton--facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ffab.academany.org%2F2019%2Flabs%2Fwaag%2Fstudents%2Fjosephus-vanderbiehttp%3A%2F%2Ffab.academany.org%2F2019%2Flabs%2Fwaag%2Fstudents%2Fjosephus-vanderbie%2F%2Fweek08.html" target="_blank"></a></li>
+      <li><a class="shareButton shareButton--linkedin" href="https://www.linkedin.com/shareArticle
+?mini=true&url=http%3A%2F%2Ffab.academany.org%2F2019%2Flabs%2Fwaag%2Fstudents%2Fjosephus-vanderbiehttp%3A%2F%2Ffab.academany.org%2F2019%2Flabs%2Fwaag%2Fstudents%2Fjosephus-vanderbie%2F%2Fweek08.html&title=Week 8. Computer Controlled Machining"  target="_blank"></a></li>
+      <li><a class="shareButton shareButton--buffer" href="https://buffer.com/add?text=Week 8. Computer Controlled Machining by @VincentChan&url=http%3A%2F%2Ffab.academany.org%2F2019%2Flabs%2Fwaag%2Fstudents%2Fjosephus-vanderbiehttp%3A%2F%2Ffab.academany.org%2F2019%2Flabs%2Fwaag%2Fstudents%2Fjosephus-vanderbie%2F%2Fweek08.html" target="_blank"></a></li>
+      <li><a class="shareButton shareButton--hackernews" href="http://news.ycombinator.com/submitlink?u=http%3A%2F%2Ffab.academany.org%2F2019%2Flabs%2Fwaag%2Fstudents%2Fjosephus-vanderbiehttp%3A%2F%2Ffab.academany.org%2F2019%2Flabs%2Fwaag%2Fstudents%2Fjosephus-vanderbie%2F%2Fweek08.html&t=Week 8. Computer Controlled Machining" target="_blank"></a></li>
+      <li><a class="shareButton shareButton--pocket" href="https://getpocket.com/save?url=http%3A%2F%2Ffab.academany.org%2F2019%2Flabs%2Fwaag%2Fstudents%2Fjosephus-vanderbiehttp%3A%2F%2Ffab.academany.org%2F2019%2Flabs%2Fwaag%2Fstudents%2Fjosephus-vanderbie%2F%2Fweek08.html&title=Week 8. Computer Controlled Machining" target="_blank"></a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+      <label for="sidebar-checkbox" class="sidebar-toggle-wrapper">
+  <div class="sidebar-toggle"></div>
+</label>
+
+    
+
+    
+
+    <!-- Javascript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://fab.academany.org/2019/labs/waag/students/josephus-vanderbie//assets/javascripts/imagesloaded.pkgd.min.js"></script>
+
+
+
+<script>
+  $(document).ready(function(){
+
+    // Featured image loaded behavior
+    $('.section-backgroundImage img').imagesLoaded()
+      .done( function( instance ) {
+        $('.post-featuredImage').addClass('is-loaded');
+      });
+
+    // Modal toggle behavior
+    $('.modal-toggle-wrapper').click(function() {
+    	$(this).toggleClass('active');
+      $('.modal-toggle-bubble').toggleClass('active');
+    	$('.modal-toggle-bubbleShadow').toggleClass('active');
+      $('.modal-toggle-close-wrapper').toggleClass('active');
+      $('.fullscreenModal').toggleClass('active');
+    });
+
+    // Prevent default anchor event and make a share popup
+    $.fn.sharePopup = function (e, intWidth, intHeight, blnResize) {
+
+      e.preventDefault();
+      intWidth = intWidth || '750';
+      intHeight = intHeight || '500';
+      strResize = (blnResize ? 'yes' : 'no');
+
+      //// Set title and open popup with focus on it
+      var strTitle = ((typeof this.attr('title') !== 'undefined') ? this.attr('title') : 'Social Share'),
+          strParam = 'width=' + intWidth + ',height=' + intHeight + ',resizable=' + strResize,
+          objWindow = window.open(this.attr('href'), strTitle, strParam).focus();
+    }
+
+    $('.shareButton').on("click", function(e) {
+      $(this).sharePopup(e);
+    });
+  });
+
+  // Show modal toggle after scrolling 300px
+  $(document).scroll(function() {
+    $('.modal-toggle-group').toggleClass('active', $(document).scrollTop() >= 300);
+  });
+</script>
+
+  </body>
+</html>

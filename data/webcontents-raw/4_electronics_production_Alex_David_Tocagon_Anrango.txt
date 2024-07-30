@@ -1,0 +1,575 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Week 5 Fab Academy 2018</title>
+		<meta charset="utf-8" />
+		<meta name="Alex Tocagon" content="FabAcademy 2018" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="http://fab.academany.org/2018/" class="title">Fab Academy 2018</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+                        <li><a href="wk4.html" class="active">Week 4</a></li>
+						<li><a href="wk6.html" class="active">Week 6</a></li>
+                        <li><a href="final_project.html">Final Project</a></li>
+                        <li><a href="https://www.fablabs.io/labs/fablabzoi">The FabLab ZOI</a></li>
+				        <li><a href="http://academany.org/" >The Academany</a></li>
+                        <li><a href="http://fabfoundation.org" >The Fab Fundation</a></li>
+					</ul>
+				</nav>
+            </header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+                            <br><br>
+							<h1 class="major">ELECTRONICS PRODUCTION</h1>
+                            
+                            <section>
+                                <p>
+                                    In this week we have group and individual assignment, we will learn how to make a PCB board in a machine, I always made them by hand. Neil asked us to make a test board, I'm going to try to get it right, he also asked us to choose a design of a PCB board that I believe one of the previous students, there is a lot but I'm going to do my own design. I will call it ALX ICSP and also I want to create a team that works similar to the arduino but under my design I call it FABALX
+                                </p>
+                            </section>
+                            
+ 							<!-- Group Assigment -->
+								<section>
+									<h2>Group assignment</h2>
+                                    <p>
+                                        * Characterize the specifications of your PCB production process<br>
+                                    </p>
+                                    
+                                    <h3>Specifications of the machine</h3>
+                                    <p>
+                                        In our laboratory we use the 1325 CNC router machine while a smaller machine is activated.
+                                        This machine is one of the best, it is a very precise machine, although the size is special for any PCB board
+                                    </p>   
+                                    <p>
+                                        In my country there are 2 types of board 1 normal and another fiberglass.
+                                        To place the copper board on the platform of the machine we use a double-sided tape.
+                                        During our first practice, we learned how to change the cutting tool and the location at the zero point of work.
+                                    </p>
+                                    
+                                    <div class="box alt">
+										<div class="row uniform">                                            
+											<div class="4u"> <span class="image fit"><img src="images/wk5/IMG_20180215_165129.jpg"/></span></div>
+											<div class="4u"> <span class="image fit"><img src="images/wk5/IMG_20180216_123006.jpg" /></span></div>     
+											<div class="4u$"> <span class="image fit"><img src="images/wk5/IMG_20180215_165149.jpg"/></span></div>
+										</div>
+									</div>
+                                    <p>                                        
+                                        In this practice, we learned how to configure the traces and cuts of the pcb on the FabModules page. The milling tools my laboratory has are 1/64, 1/32 and 0.01 mm. We decided to make some test boards to practice welding. When making the test pcb board, we observe that the bed of the machine is not uniform. This was a strange problem: a small piece of pcb board was the culprit. Here we were able to practice the process of generating the routes with the fab modules and milling with the machine. With the pcb test board already made, I made welding tests, so that in the new board everything comes out of the best.
+                                    </p>
+                                    
+                                    
+                                    <div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Milling the PCB</th>
+													<th>Fab Modules</th>
+													<th>Practical pcb boards</th>
+                                                    <th>Cut PCB of practice</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><span class="image fit"><img src="images/wk5/IMG_20180215_165144.jpg" /></span></td>
+                                                    <td><span class="image fit"><img src="images/wk5/test1.png"/></span></td> 
+                                                    <td><span class="image fit"><img src="images/wk5/IMG_20180216_161408.jpg" /></span></td> 
+                                                    <td><span class="image fit"><img src="images/wk5/IMG_20180216_133043.jpg" /></span></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+                                    
+                                    <p>
+                                        Take the test file but we found a problem, when generating the file in http://fabmodules.org/ and in http://mods.cba.mit.edu/. Here I leave the files for analysis, the scrolling speed is very low when generating the file at http://mods.cba.mit.edu/.
+                                    </p>
+                                    <div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>mods.cba.mit.edu</th>
+                                                    <th>fabmodules.org</th>													
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+                                                    <td><span class="image fit"><img src="images/wk5/2018-04-17.png" /></span></td> 
+                                                    <td><span class="image fit"><img src="images/wk5/2018-04-17%20(1).png" /></span></td>
+												</tr>
+											</tbody>
+                                            <tbody>
+												<tr>                                                    
+                                                    <td><a href="images/wk5/files/linetest.png_mods.nc">Files</a></td>
+                                                    <td><a href="images/wk5/files/linetest_modules.nc">Files</a></td> 
+												</tr>
+											</tbody>
+										</table>
+									</div>
+                                    
+                                    <span class="image fit"><img src="images/wk5/IMG_20180301_192431.jpg" alt="" /></span>
+                                    
+                                    
+                                    <p>
+                                        We identify the welding station and the components for a correct welding.
+                                        The components are the solder paste, the soldering iron, the solder wire and the heat gun. There are more tools for the soldier but the ones I mention are the most necessary.
+                                    </p>
+                                    
+                                    <div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Welding station</th>
+													<th>Solder paste</th>
+													<th>The solder wire</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><span class="image fit"><img src="images/wk5/IMG_20180217_154445.jpg" /></span></td>
+                                                    <td><span class="image fit"><img src="images/wk5/IMG_20180217_184211.jpg"/></span></td> 
+                                                    <td><span class="image fit"><img src="images/wk5/IMG_20180217_184207.jpg" /></span></td> 
+												</tr>
+											</tbody>
+										</table>
+									</div>
+                                    
+                                    <p>Welding practice</p>                                  
+                                    
+                                    <div class="box alt">
+										<div class="row uniform">                                            
+											<div class="4u"> <span class="image fit"><img src="images/wk5/IMG_20180217_174612.jpg"/></span></div>
+                                            <div class="4u"> <span class="image fit"><img src="images/wk5/IMG_20180217_1746.jpg"/></span></div>
+                                            <div class="4u"> <span class="image fit"><img src="images/wk5/IMG_20180217_154507.jpg"/></span></div>
+										</div>
+									</div>
+									
+								</section>
+
+							<!-- Individual Assigments -->
+								<section>
+                                    <hr>
+                                    <h2>Individual assignment</h2>	
+                                    <hr>
+                                    <p>
+                                        * Make an in-circuit programmer by milling the PCB (program it, so that you can use it to program your board in Electronics Design week, and in other weeks)<br>
+                                        * Optionally, trying other processes.
+                                    </p>
+                                    <hr>
+                                    <p>
+                                        I have experience making pcb boards. I set myself the challenge of making my own PCB board, look for information on the circuit and I started from there. Use the fab library that the instructor gave me.After finishing the schematic, I made a nice design, here it took me a long time to reach my goal.
+                                    </p>
+                                    <h2>My reference ATtiny45</h2>
+                                    <p>
+                                        The USBtinyISP is another version of an AVR ISP programmer / board that can be produced in a manufacturing lab using a PCB and easily available components.
+                                        My reference was Thomas' board, but on my PCB board I wanted to eliminate the errors that Tomás had when placing the bridges
+                                        <a href="http://fab.cba.mit.edu/classes/863.17/CBA/people/tomasero/index.html"> Page of Tomas </a>
+                                    </p>
+                                    
+                                    <div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>My Circuit</th>
+													<th>Tomas Circuit</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><span class="image fit"><img src="images/wk5/circuito.png" /></span></td>
+                                                    <td><span class="image fit"><img src="images/wk5/schematic.png"/></span></td> 
+												</tr>
+											</tbody>
+                                            <tbody>
+												<tr>
+													<td><span class="image fit"><img src="images/wk5/correct - copia.png" /></span></td>
+                                                    <td><span class="image fit"><img src="images/wk5/mini_traces.png"/></span></td> 
+												</tr>
+											</tbody>
+										</table>
+									</div>
+                                                            
+                                    <p>
+                                        To export the file to the fab modules, you have to do one step before.
+                                        We must first generate the monochromatic image of the pcb board.
+                                        After generating the file, we open it with the Gimp image editor.
+                                        I have to make the following changes: invert the colors, draw a border and generate 2 individual files, one of strokes and one of contour cutting.
+                                    </p>
+                                    
+                                    <div class="box alt">
+										<div class="row uniform">
+											<div class="6u"><span class="image fit"><img src="images/wk5/process1.png" alt="" /></span></div>
+                                            <div class="6u$"><span class="image fit"><img src="images/wk5/shc_eagle.png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/correct.png" alt="" /></span></div>
+                                            <div class="6u$"><span class="image fit"><img src="images/wk5/pcb_eagle.png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/process2.png" alt="" /></span></div>
+                                            <div class="6u$"><span class="image fit"><img src="images/wk5/process3.png" alt="" /></span></div>
+										</div>
+									</div>
+                                    
+                                    <div class="box alt">
+                                        <table>
+											<thead>
+												<tr>
+													<th>Traces</th>
+													<th>Board outline</th>
+												</tr>
+											</thead>
+                                            <tbody>
+												<tr>
+													<td><span class="image fit"><img src="images/wk5/fabisp_trace.png" /></span></td>
+                                                    <td><span class="image fit"><img src="images/wk5/fabisp_cut.png"/></span></td> 
+												</tr>
+											</tbody>
+										</table>										
+									</div>
+                                    <ul>
+                                            <li><a href="images/wk5/fabisp_trace.png">Traces</a></li>
+                                            <li><a href="images/wk5/fabisp_cut.png" >Board outline</a></li>
+                                    </ul>
+                                    
+                                    <h2>Configuration with Fabmodules</h2>
+                                    <p>                          
+                                        With the files of strokes and cut and ready passed to fab modules to generate my routes.
+                                        Here I had to do it 2 times since the first time the fails to make an adequate route, these routes are generated by the fabmodules with The default parameters without changing any of the values.
+                                        In the second way, I change certain parts where I already obtain more adequate routes and observe that it completes all the contours.
+                                    </p>
+                                    
+                                    <div class="box alt">
+										<div class="row uniform">
+											<div class="6u"><span class="image fit"><img src="images/wk5/process4.png" alt="" /></span></div>
+                                            <div class="6u$"><span class="image fit"><img src="images/wk5/process5.png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/process6.png" alt="" /></span></div>
+                                            
+                                            <div class="6u$"><span class="image fit"><img src="images/wk5/process7.png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/process8.png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/process9.png" alt="" /></span></div>
+										</div>
+									</div>
+                                    <p>                         
+                                        In the second way, I change certain parts where I already obtain more adequate routes and observe that it completes all the contours.
+                                        The most important changes that are made with the diameter of the tooling and the number of offsets note that in the second option are in 0.3 and 3. I made an error when changing the parameter of cut depth in 0.2. This error is identified by my instructor
+                                    </p>
+                                    
+                                    <div class="box alt">
+										<div class="row uniform">
+											<div class="6u"><span class="image fit"><img src="images/wk5/process10.png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/process11.png" alt="" /></span></div>
+										</div>
+                                    </div>
+                                    
+                                    
+                                    <br>
+                                    
+                                    <h3>PCB OUTLINE</h3>
+                                    <br>
+                                    <div class="box alt">
+										<div class="row uniform">
+											<div class="6u"><span class="image fit"><img src="images/wk5/trac1%20(1).png" alt="" /></span></div>
+                                            <div class="6u$"><span class="image fit"><img src="images/wk5/trac1%20(2).png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/trac1%20(3).png" alt="" /></span></div>
+                                            
+                                            <div class="6u$"><span class="image fit"><img src="images/wk5/trac1%20(4).png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/trac1%20(5).png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/trac1%20(6).png" alt="" /></span></div>
+										</div>
+									</div>
+								</section>
+                                    <h2>Working on the cnc machine</h2>
+                                    <p> 
+                                        Already in the machine I use a tool of 1/64 for the traces and 1/32 for the cuts.
+                                        The software that we use for the communication of the cnc is LINUX CNC.
+
+                                        As in the pcb board of practice we made the same paste the big pcb board on the table,
+                                        define the starting zero and start the process.
+
+                                        Here I had a problem forget to place the double-sided tape.
+                                        When I was cutting the outline my board got up and cut off.
+
+                                        I have to remember to paste the pcb board well
+                                    </p>
+                                    
+                                    <div class="box alt">
+										<div class="row uniform">
+                                            <div class="12u$"><span class="image fit"><img src="images/wk5/IMG_20180215_195401.jpg" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/error.jpg" alt="" /></span></div>
+                                            
+                                            <div class="6u$"><span class="image fit"><img src="images/wk5/IMG_20180216_133053_BURST001_COVER.jpg" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/IMG_20180216_133326.jpg" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/IMG_20180216_171316.jpg" alt="" /></span></div>
+										</div>
+									</div>
+							<!-- Form -->
+								<section>
+                                    <h2>Assembling the PCB</h2>
+                                    <p>
+                                        With the pcb already ready and correct now let's solder<br>
+
+                                        The materials to be used with the following:<br>
+
+                                        1 x ATtiny45 or ATtiny85<br>
+                                        2 x 1 kΩ resistors<br>
+                                        2 x 499Ω resistors<br>
+                                        2 x 49Ω resistors<br>
+                                        2 x 3.3v Zener diodes<br>
+                                        1 x red LED<br>
+                                        1 x green LED<br>
+                                        1 x 100nF capacitor<br>
+                                        1 x pins of 2x3 pins
+                                    </p>
+                                    
+                                    <p>
+                                        I installed the components according to the diagram. I had many problems, the components are very small.
+                                        It is very difficult to weld.
+                                        We did not have one of the components the two zener but we chose to use his replacement.
+                                        A component fell down and for 10 minutes I was looking for the component
+                                    </p>
+                                    
+                                    <div class="box alt">
+										<div class="row uniform">
+                                            <div class="4u"><span class="image fit"><img src="images/wk5/IMG_20180217_173356.jpg" alt="" /></span></div>
+                                            <div class="4u"><span class="image fit"><img src="images/wk5/IMG_20180217_174403.jpg" alt="" /></span></div>
+                                            <div class="4u$"><span class="image fit"><img src="images/wk5/IMG_20180217_174627.jpg" alt="" /></span></div>
+                                            <div class="4u"><span class="image fit"><img src="images/wk5/IMG_20180217_180120.jpg" alt="" /></span></div>
+                                            <div class="4u"><span class="image fit"><img src="images/wk5/IMG_20180217_184201.jpg" alt="" /></span></div>
+                                            <div class="4u$"><span class="image fit"><img src="images/wk5/IMG_20180217_184352.jpg" alt="" /></span></div>
+                                            <div class="12u"><span class="image fit"><img src="images/wk5/IMG_20180221_094137.jpg" alt="" /></span></div>
+										</div>
+									</div>
+									
+								</section>
+                            
+                            <section>
+                                <h2>Programming FabISP</h2>
+                                <p>
+                                    I use the link as a  <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/windows_avr.html"  target="_blank" title="Tutorial" >guide</a> to programming the FabISP.                               
+                                </p>
+                                <ul>
+                                    <p>
+                                        To start I need to install the following programs
+                                    </p>
+                                    <li>
+                                        Install Git. Visit the link <a href="https://git-scm.com/download/win"  target="_blank" title="Tutorial" >Here</a> <br>
+                                        
+                                        Install the Atmel GNU Toolchain.  Visit the link <a href="http://www.atmel.com/tools/atmelavrtoolchainforwindows.aspx"  target="_blank" title="Download" >Here</a><br>
+                                        
+                                        Install GNU Make.  Visit the link <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/make-3.81.exe"  target="_blank" title="Download" >Here</a><br>
+                                        
+                                        Install avrdude.  Visit the link <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/avrdude-win-64bit.zip"  target="_blank" title="Download" >Here</a><br>
+                                        
+                                        Optionally Install AVR Studio.  Visit the link <a href="http://www.microchip.com/avr-support/atmel-studio-7"  target="_blank" title="Download" >Here</a>  <br> 
+                                        
+                                        About I recommend install the driver for your programmer, the program <a href="http://zadig.akeo.ie/"  target="_blank" title="Download" >Zadig</a> 
+                                        
+                                        
+                                        
+                                    </li>
+                                    
+                                    <li>
+                                        Update the path.
+                                    </li>
+                                    
+                                    <p>
+                                        Go to the Start menu and open the Control Panel, then go to System. From the left panel, choose "Advanced System Settings". Under the Advanced tab, click the "Environment Variables" button.
+                                    </p>
+                                    
+                                    <div class="box alt">
+										<div class="row uniform">
+                                            <div class="12u"><span class="image fit"><img src="images/wk5/2018-apr-21-002.jpg" alt="" /></span></div>
+										</div>
+									</div>
+                                    <p>
+                                         In my case add the variables :
+                                        
+                                    </p>
+                                    <code>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1056\avr8-gnu-toolchain\bin</code><br>  
+                                    <code>C:\Program Files (x86)\GnuWin32\bin</code><br>
+                                    <code>C:\avrdude</code><br>
+                                    <li>
+                                        Test the program´s in my computer.
+                                    </li>
+                                    <p>
+                                        First open Git Bash
+                                    </p>
+                                    
+                                    <div class="box alt">
+										<div class="row uniform">
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-03%20(1).png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-03%20(2).png" alt="" /></span></div>
+										</div>
+									</div>
+                                    <p>
+                                        Type the code <code>  make -v </code>  and next type de code <code>  avr-gcc --version </code>
+                                    </p>
+                                    
+                                    <div class="box alt">
+										<div class="row uniform">
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-03%20(3).png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-03%20(4).png" alt="" /></span></div>
+										</div>
+									</div>
+                                    <p>
+                                        If your answers are similar or equal on the screen, the program is correct. The next steps are to create the files for the FabISP, these steps are very difficult, so pay attention.
+                                    </p>
+                                    
+                                    <li>
+                                        Create the files
+                                    </li> 
+                                    <p>
+                                        Connect the programmer to a  USB and type the <code>  make -clean </code> next type <code> avrdude -c usbtiny -p t45 </code> remenber press enter. I'm trying to program my fabisp with another programmer with the name USBasp.
+                                    </p>
+                                    <div class="box alt">
+										<div class="row uniform">
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-04-21.png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-03%20(5).png" alt="" /></span></div>
+										</div>
+									</div>
+                                    
+                                    <p>
+                                        If in the second step see the code <code>initialization failed, rc=-1</code> this is the solution for windows in my case.
+                                    </p>
+                                    <div class="box alt">
+										<div class="row uniform">
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-04-21.png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-03%20(5).png" alt="" /></span></div>
+										</div>
+									</div>
+                                    <p>
+                                        Change the name of the programmer according to the one shown in the equipment manager. If the error continue , try the next step. Open de Makefiles and change the name in this files.
+                                    </p>
+                                    <div class="box alt">
+										<div class="row uniform">                                            
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-04%20(1).png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-04%20(2).png" alt="" /></span></div>
+										</div>
+									</div>
+                                                                        
+                                    <p>
+                                        Change the name of the programmer <code>  avrdude -c usbasp -p t45 </code>. if the process is correct. Type the <code>make clean</code> 
+                                    </p>
+                                    
+                                    
+                                    
+                                    <div class="box alt">
+										<div class="row uniform">                                            
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-04%20(5).png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-04%20(6).png" alt="" /></span></div>
+										</div>
+									</div>
+                                    <p>
+                                        Type the code <code> make flash </code>. Remember edit the makefile  .
+                                    </p>
+                                    <div class="box alt">
+										<div class="row uniform">                                            
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-04%20(7).png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-04%20(8).png" alt="" /></span></div>
+										</div>
+									</div>
+                                    
+                                    <p>
+                                        Type the code <code> make fuses </code>. And finally type <code> make rstdisbl </code>.
+                                    </p>
+                                    
+                                    <div class="box alt">
+										<div class="row uniform">                                            
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-04%20(9).png" alt="" /></span></div>
+                                            <div class="6u"><span class="image fit"><img src="images/wk5/2018-03-04%20(10).png" alt="" /></span></div>
+										</div>
+                                    </div>
+                                    <h2>
+                                        Now I have my Fabisp.
+                                    </h2>
+                                    
+                                    <hr>
+                                    
+                                    <h2>
+                                        My FABALX.
+                                    </h2>
+                                    <p>
+                                        Additional in this week I created my FABALX is a new board similar to arduino pro-micro I use the bootloader of arduino Pro-micro the reason is that i prefer use the ftdi for programming and communicated
+                                    </p>
+                                    
+                                    <span class="image centered"><img src="images/wk5/fabalx-sh.png" alt="" /></span>
+                                    <p>
+                                        In this week I can only mill the board. In other week continue with the programming
+                                    </p>
+                                    <span class="image centered"><img src="images/wk5/fabalx-brd.png" alt="" /></span>
+                                                                        
+                                </ul>
+                                
+                                <h2>
+                                   CONCLUSION
+                                </h2>
+                                
+                                <p>
+                                
+                                    
+
+A large machine can make very small circuits all depend on the accuracy of the equipment in our case is great the machine is very useful to capture its large size.
+
+The pcb board that neil asked us to do the test showed us 2 very important things something strange happened with the mods, the drilling speed in z is very slow, another conclusion we saw in our machine, because this is too uneven.
+
+Many cnc correct the level error using auto level programs as in our case we use AUTOLEVELLER.
+
+Most circuits are made in eagle a tool that many makers use, I also realized that most students do not upload the original files but upload the photos of the schematics this sometimes delays but it is good to learn how to design.
+
+Something very important for me was discovering that you can do a programmer for only about 3 dollars and a very small size, even with this I discovered how to program from the console.
+
+Something that I loved was that Neil liked my PCB silver all my colleagues bother me for that now they tell me ALEX version. He said that it would be a reference for the prosy academy.
+                                    <br><br>
+                                    Something very important that I learned was to handle Make files I had never done this, I had not been able to program from the terminal now I have the idea and soon I will continue discovering more things
+                                </p>
+                            </section>
+                            
+                            <section>
+                                <h2>The files</h2>
+                                    <nav>
+                                        <hr>
+                                        <ul>
+                                            <li><a href="images/wk5/files/FasbISP_schematic.sch">Schematics</a></li>
+                                            <li><a href="images/wk5/files/FasbISP_schematic.brd" >PCB Board</a></li>
+                                            <li><a href="images/wk5/fts_firmware_bdm_v1.rar" >Firmware</a></li>
+                                            <li><a href="images/wk5/files/ArduLAB.sch">Schematics FABALX</a></li>
+                                            <li><a href="images/wk5/files/ArduLAB.brd" >PCB Board FABALX</a></li>
+                                        </ul>
+                                        <hr/>
+                                    </nav>
+                            </section>
+                                     
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

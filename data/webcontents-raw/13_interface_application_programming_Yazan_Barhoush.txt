@@ -1,0 +1,1727 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Personal Website">
+      
+      
+      
+        <meta name="author" content="Yazan Barhoush">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>16. Interface and Application Programming - Yazan Barhoush</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#16-interface-and-application-programming" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Yazan Barhoush" class="md-header__button md-logo" aria-label="Yazan Barhoush" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yazan Barhoush
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              16. Interface and Application Programming
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Yazan Barhoush" class="md-nav__button md-logo" aria-label="Yazan Barhoush" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Yazan Barhoush
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        About Me
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Agreements
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Agreements" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Agreements
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agreements/about-fablaboulu/" class="md-nav__link">
+        About FabLab
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agreements/agreement/" class="md-nav__link">
+        Student Agreement
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Assignments
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Assignments" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Assignments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week01/" class="md-nav__link">
+        1. Principles and Practices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week02/" class="md-nav__link">
+        2. Project Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week03/" class="md-nav__link">
+        3. Computer-Aided Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week04/" class="md-nav__link">
+        4. Computer Controlled Cutting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week05/" class="md-nav__link">
+        5. Electronics Production
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week06-2/" class="md-nav__link">
+        6. 3D Scanning and Printing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week07/" class="md-nav__link">
+        7. Electronics Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week08/" class="md-nav__link">
+        8. Computer Controlled Machining
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week09/" class="md-nav__link">
+        9. Embedded Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week10/" class="md-nav__link">
+        10. Applications and Implications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week11/" class="md-nav__link">
+        11. Input Devices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week12/" class="md-nav__link">
+        12.1 Input Devices - JoyStick
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week13/" class="md-nav__link">
+        13. Output Devices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week14/" class="md-nav__link">
+        14. Networking and Communications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week15/" class="md-nav__link">
+        15. Mechanical Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          16. Interface and Application Programming
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        16. Interface and Application Programming
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#individual-assignment" class="md-nav__link">
+    Individual Assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component3-test-game-scene-cube-interactions-using-keyboard-input" class="md-nav__link">
+    COMPONENT3, Test Game Scene: Cube interactions Using Keyboard Input
+  </a>
+  
+    <nav class="md-nav" aria-label="COMPONENT3, Test Game Scene: Cube interactions Using Keyboard Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-package" class="md-nav__link">
+    Installing the Package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-inputs-for-keyboard" class="md-nav__link">
+    Creating Inputs for Keyboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-simple-test-scene" class="md-nav__link">
+    Creating the Simple Test Scene
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component2-test-game-scene-cube-interactions-using-arduino-input" class="md-nav__link">
+    COMPONENT2, Test Game Scene: Cube interactions Using Arduino Input
+  </a>
+  
+    <nav class="md-nav" aria-label="COMPONENT2, Test Game Scene: Cube interactions Using Arduino Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-and-configuring-the-library" class="md-nav__link">
+    Installing and Configuring the Library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-using-an-arduino" class="md-nav__link">
+    Message Using an Arduino
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component1-unity-custom-device-using-a-fabricated-board" class="md-nav__link">
+    COMPONENT1, Unity Custom Device using a Fabricated Board
+  </a>
+  
+    <nav class="md-nav" aria-label="COMPONENT1, Unity Custom Device using a Fabricated Board">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-unity-project" class="md-nav__link">
+    New Unity Project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-custom-device" class="md-nav__link">
+    Create a Custom Device
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-over-com-ports-with-unity" class="md-nav__link">
+    Communication over COM ports with Unity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controller-message" class="md-nav__link">
+    Controller Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-final-scene-with-everything-included" class="md-nav__link">
+    Creating the Final Scene, with everything included
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion-and-challenges" class="md-nav__link">
+    Conclusion and Challenges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment" class="md-nav__link">
+    Group Assignment
+  </a>
+  
+    <nav class="md-nav" aria-label="Group Assignment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tkinter" class="md-nav__link">
+    Tkinter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blynk" class="md-nav__link">
+    Blynk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing" class="md-nav__link">
+    Processing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week17/" class="md-nav__link">
+        17. Molding and Casting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week18/" class="md-nav__link">
+        18. Wildcard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week19/" class="md-nav__link">
+        19. Invention, intellectual property and income
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week20/" class="md-nav__link">
+        20. Project Development
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projects" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/controller-body/" class="md-nav__link">
+        Controller Body
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/final-project/" class="md-nav__link">
+        Final Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/related-work/" class="md-nav__link">
+        Related Work
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#individual-assignment" class="md-nav__link">
+    Individual Assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component3-test-game-scene-cube-interactions-using-keyboard-input" class="md-nav__link">
+    COMPONENT3, Test Game Scene: Cube interactions Using Keyboard Input
+  </a>
+  
+    <nav class="md-nav" aria-label="COMPONENT3, Test Game Scene: Cube interactions Using Keyboard Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-package" class="md-nav__link">
+    Installing the Package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-inputs-for-keyboard" class="md-nav__link">
+    Creating Inputs for Keyboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-simple-test-scene" class="md-nav__link">
+    Creating the Simple Test Scene
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component2-test-game-scene-cube-interactions-using-arduino-input" class="md-nav__link">
+    COMPONENT2, Test Game Scene: Cube interactions Using Arduino Input
+  </a>
+  
+    <nav class="md-nav" aria-label="COMPONENT2, Test Game Scene: Cube interactions Using Arduino Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-and-configuring-the-library" class="md-nav__link">
+    Installing and Configuring the Library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-using-an-arduino" class="md-nav__link">
+    Message Using an Arduino
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component1-unity-custom-device-using-a-fabricated-board" class="md-nav__link">
+    COMPONENT1, Unity Custom Device using a Fabricated Board
+  </a>
+  
+    <nav class="md-nav" aria-label="COMPONENT1, Unity Custom Device using a Fabricated Board">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-unity-project" class="md-nav__link">
+    New Unity Project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-custom-device" class="md-nav__link">
+    Create a Custom Device
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-over-com-ports-with-unity" class="md-nav__link">
+    Communication over COM ports with Unity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controller-message" class="md-nav__link">
+    Controller Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-final-scene-with-everything-included" class="md-nav__link">
+    Creating the Final Scene, with everything included
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion-and-challenges" class="md-nav__link">
+    Conclusion and Challenges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment" class="md-nav__link">
+    Group Assignment
+  </a>
+  
+    <nav class="md-nav" aria-label="Group Assignment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tkinter" class="md-nav__link">
+    Tkinter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blynk" class="md-nav__link">
+    Blynk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing" class="md-nav__link">
+    Processing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="16-interface-and-application-programming">16. Interface and Application Programming<a class="headerlink" href="#16-interface-and-application-programming" title="Permanent link">&para;</a></h1>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Individual Assignment</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> write an application that interfaces a user with an input &amp;/or output device with a fabricated device</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Group Assignment</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Compare as many tool options as possible</li>
+</ul>
+</li>
+</ul>
+<h2 id="individual-assignment">Individual Assignment<a class="headerlink" href="#individual-assignment" title="Permanent link">&para;</a></h2>
+<p>The aim is to realize an interface that would 1) allow the fabricated PCB boards communicate over COM ports with Unity 2) Build a Unity scene that would make use of the data sent over the COM ports.</p>
+<p>Unity Real-Time Development Platform, is is a cross-platform game engine developed by Unity Technologies. It can be used to Make real-time 3D projects for Games, Animation, Film, Automotive, Transportation, Architecture, Engineering, Manufacturing &amp; Construction. Visualize ..</p>
+<div class="codehilite"><pre><span></span><code>https://unity.com/
+</code></pre></div>
+
+<p>The UI, for the user, will be Unity (A shooter game), where the Inputs/Outputs on the fabricated board would allow the user to 1) move around and shoot cubes within the Unity Environment. To do so, the following components need to be used (within Unity):</p>
+<ul>
+<li>COMPONENT1. A Unity Custom Device, that would take inputs from an external device (e.g., fabricated board) and recognize them as part of a Custom Input Device by Unity.</li>
+<li>COMPONENT2. A library that would allow for Communication over COM ports of the external device with Unity.</li>
+<li>COMPONENT3. A game scene, that would employ Custom Input Device, via the library, for game interactions.</li>
+</ul>
+<h2 id="component3-test-game-scene-cube-interactions-using-keyboard-input">COMPONENT3, Test Game Scene: Cube interactions Using Keyboard Input<a class="headerlink" href="#component3-test-game-scene-cube-interactions-using-keyboard-input" title="Permanent link">&para;</a></h2>
+<p>As a starting point, a bottom-up approach was used. Thus, COMPONENT3 was experimented with at first. To keep things simple, a Unity Input Device (Keyboard, not fabricated board) was used to control a simple game scene (a Cube growing). Tutorial:
+Note that we used the keyboard input instead of the controller.</p>
+<div class="codehilite"><pre><span></span><code>https://www.youtube.com/watch?v=p-3S73MaDP8
+</code></pre></div>
+
+<p>To use Keyboard Input, or any other input, Unity Input System Package is needed.</p>
+<p>For more information about the package, see</p>
+<div class="codehilite"><pre><span></span><code>https://docs.unity3d.com/Manual/com.unity.inputsystem.html
+</code></pre></div>
+
+<p>and</p>
+<div class="codehilite"><pre><span></span><code>https://blogs.unity3d.com/2019/10/14/introducing-the-new-input-system/
+</code></pre></div>
+
+<h3 id="installing-the-package">Installing the Package<a class="headerlink" href="#installing-the-package" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Window &gt; Package Manager</p>
+</blockquote>
+<ul>
+<li>
+<p>Make sure you show <strong>Packages: All</strong></p>
+</li>
+<li>
+<p>Search for Input System Package</p>
+</li>
+</ul>
+<p><img alt="image001" src="../../images/controller-input-unity/image001.png" /></p>
+<p>Follow the “Recomendded Settings”, by pressing “yes” after installing. Unity needs restarting after installing this package.</p>
+<p><img alt="image003" src="../../images/controller-input-unity/image003.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use Unity <strong>Input Debbuger</strong> to view avaliable input devices.</p>
+</div>
+<p>To Access <strong>Input Debugger</strong></p>
+<blockquote>
+<p>Window &gt; Analysis &gt; Input Debugger</p>
+</blockquote>
+<p><img alt="image005" src="../../images/controller-input-unity/image005.png" /></p>
+<p>Controller is connected. In this case, the Device is <strong>Keyboard</strong></p>
+<h3 id="creating-inputs-for-keyboard">Creating Inputs for Keyboard<a class="headerlink" href="#creating-inputs-for-keyboard" title="Permanent link">&para;</a></h3>
+<p>Using Input Actions Assets</p>
+<div class="codehilite"><pre><span></span><code>https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/ActionAssets.html
+</code></pre></div>
+
+<ul>
+<li>Under Project,</li>
+</ul>
+<p><img alt="image007" src="../../images/controller-input-unity/image007.png" /></p>
+<ul>
+<li>Create an <strong>Input Actions</strong></li>
+</ul>
+<p><img alt="image009" src="../../images/controller-input-unity/image009.png" /></p>
+<ul>
+<li>Open the “New Controls” Input Actions</li>
+</ul>
+<p><img alt="image011" src="../../images/controller-input-unity/image009.png" /></p>
+<ul>
+<li>Add an “Action Map” under <strong>Actions Maps</strong>.</li>
+</ul>
+<p>A <strong>New action</strong> will be added by default.</p>
+<p>Add a <strong>Binding</strong> to the Action.</p>
+<p><strong>Listen</strong> to add a <strong>Binding</strong> to <strong>New action</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since Controller is connected. In this case, the Device is <strong>Keyboard</strong>, a <strong>New action</strong> will be bound to a <strong>Keyboard</strong> button when pressed. Keyboard button “A” was pressed.</p>
+</div>
+<p><img alt="image013" src="../../images/controller-input-unity/image013.png" /></p>
+<ul>
+<li>
+<p><strong>Save Asset</strong> and <strong>Generate C# Class</strong></p>
+</li>
+<li>
+<p><strong>New Controls</strong> Scripts will be generated.</p>
+</li>
+</ul>
+<p><img alt="image015" src="../../images/controller-input-unity/image015.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To make scripting easier later on, naming changes were applied: the following figure shows the naming of the created**Action Maps** as “Map”, the created <strong>Action</strong> as “Action” and the created <strong>Input Actions</strong> as “Controls”. The generated C# Class name is the same as the created <strong>Input Actions</strong>, which is “Controls”.</p>
+</div>
+<p><img alt="image017" src="../../images/controller-input-unity/image017.png" /></p>
+<h3 id="creating-the-simple-test-scene">Creating the Simple Test Scene<a class="headerlink" href="#creating-the-simple-test-scene" title="Permanent link">&para;</a></h3>
+<p>Inputs from Keyboard will be used to interact with a Cube.</p>
+<p>Add a new <strong>Cube</strong> to the Scene.</p>
+<blockquote>
+<p>Right Click &gt; 3D Object &gt; Cube</p>
+</blockquote>
+<p><img alt="image019" src="../../images/controller-input-unity/image019.png" /></p>
+<p>Select the <strong>Cube</strong>, and <strong>Add Component</strong> that is a script.</p>
+<p><img alt="image021" src="../../images/controller-input-unity/image021.png" /></p>
+<p>Cube Script was edited</p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">UnityEngine.InputSystem</span><span class="p">;</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Cube</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+<span class="p">{</span>
+    <span class="c1">// set controls equal to a new player controls object </span>
+    <span class="n">PlayerControls</span> <span class="n">controls</span><span class="p">;</span>
+    <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">//... created a player controls object to refer to</span>
+        <span class="n">controls</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PlayerControls</span><span class="p">();</span>
+        <span class="c1">//following action map structure, access game play and then access the grow action</span>
+        <span class="c1">//inside Grow function, transform dot local scale ... for the context, use lambda expression</span>
+        <span class="n">controls</span><span class="p">.</span><span class="n">GamePlay</span><span class="p">.</span><span class="n">Grow</span><span class="p">.</span><span class="n">performed</span> <span class="p">+=</span> <span class="n">ctx</span> <span class="p">=&gt;</span> <span class="n">Grow</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="c1">//add a function to Grow that will be triggered when the action is performed</span>
+    <span class="k">void</span> <span class="nf">Grow</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">transform</span><span class="p">.</span><span class="n">localScale</span> <span class="p">*=</span> <span class="m">1.1f</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">//make sure to enable and disable input actions whenever this object gets enabled or disabled</span>
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">OnEnable</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">controls</span><span class="p">.</span><span class="n">GamePlay</span><span class="p">.</span><span class="n">Enable</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="c1">//make sure to enable and disable input actions whenever this object gets enabled or disabled</span>
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">OnDisable</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">controls</span><span class="p">.</span><span class="n">GamePlay</span><span class="p">.</span><span class="n">Disable</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Now &hellip; when the button is pressed, the cube gets bigger.</p>
+<p><img alt="image023" src="../../images/controller-input-unity/image023.png" /></p>
+<p><a href="../../images/week16/unity-Keyboard-button-input.mp4">Unity-Keyboard-button-input.mp4</a></p>
+<h2 id="component2-test-game-scene-cube-interactions-using-arduino-input">COMPONENT2, Test Game Scene: Cube interactions Using Arduino Input<a class="headerlink" href="#component2-test-game-scene-cube-interactions-using-arduino-input" title="Permanent link">&para;</a></h2>
+<p>Again, since a bottom-up approach was used and COMPONENT3 was experimented with at first, thus, it is time to add COMPONENT2: A Unity Input Device (that could be a fabricated board, but an Arduino was used for convenience and testing) was used to control a simple game scene (a Cube growing).</p>
+<p>To get communication over COM ports with Unity to work, a library was used (later on modified for final project purposes). More about the Library</p>
+<div class="codehilite"><pre><span></span><code>https://ardity.dwilches.com/
+</code></pre></div>
+
+<p>To connect board to Unity over a COM port, Ardity was modified to allow bidirectional communication over COM ports from Unity.</p>
+<blockquote>
+<p>Ardity creates a thread in which it polls a COM port, all data it receives is stored in a shared thread-safe queue.</p>
+</blockquote>
+<p>Later, your Unity program must either configure a callback, e.g. <em>ReadSerialMessage()</em> which de-queues the next message in queue. Additionally, <em>SendSerialMessage()</em> can be used to  send data to the COM port.</p>
+<h3 id="installing-and-configuring-the-library">Installing and Configuring the Library<a class="headerlink" href="#installing-and-configuring-the-library" title="Permanent link">&para;</a></h3>
+<p>Download and Import Package</p>
+<div class="codehilite"><pre><span></span><code>https://github.com/DWilches/Ardity/raw/master/UnityPackages/Ardity.unitypackage
+</code></pre></div>
+
+<p><img alt="image027" src="../../images/ardity-com/image027.png" /></p>
+<p>Sample Scene is available as a starting point</p>
+<p><img alt="image029" src="../../images/ardity-com/image029.png" /></p>
+<p>When configuring the Serial Controller Script (matching with the Arduino IDE), Debug messages will show under the Console tap in Unity. For documentation and debugging</p>
+<div class="codehilite"><pre><span></span><code>https://github.com/dwilches/Ardity/blob/master/UnityProject/Ardity%20-%20Setup%20Guide.pdf
+</code></pre></div>
+
+<h3 id="message-using-an-arduino">Message Using an Arduino<a class="headerlink" href="#message-using-an-arduino" title="Permanent link">&para;</a></h3>
+<p>Now, instead of getting the Input from Keyboard directly, an Arduino Board was used as an Input. Note that the Arduino can be treated as a Keyboard.</p>
+<p>An example tutorial:</p>
+<div class="codehilite"><pre><span></span><code>https://www.arduino.cc/en/Tutorial/KeyboardMessage
+</code></pre></div>
+
+<p>Therefore, when the button connected to the Arduino is pressed, a text string is sent to the computer as keyboard input. An Arduino Due was used for testing.</p>
+<div class="codehilite"><pre><span></span><code>https://www.arduino.cc/en/Guide/ArduinoDue
+</code></pre></div>
+
+<p>The following schematic was followed:</p>
+<p><img alt="image023" src="https://www.arduino.cc/en/uploads/Tutorial/KeyboardMessage3_bb.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using the Native port enables you to use the Due as a client USB peripheral (acting as a mouse or a keyboard connected to the computer) or as a USB host device so that devices can be connected to the Due (like a mouse, keyboard, or an Android phone). This port can also be used as a virtual serial port using the &ldquo;SerialUSB&rdquo; object in the Arduino programming language.</p>
+<p>Hence, either port in Due can be used for programming, but the native USB port allows for: 1) emulating a USB mouse or keyboard to an attached computer. To use these features, see <a href="https://www.arduino.cc/reference/en/language/functions/usb/keyboard/">the Mouse and Keyboard library reference pages</a> 2) acting as a USB host for connected peripherals such as mice, keyboards, and smartphones. See the  <a href="http://arduino.cc/en/Main/arduinoBoardDue">USBHost references</a>. Thus, the Due cab be used to interface with USB devices or connect it to your computer and have it act like a USB device.</p>
+</div>
+<blockquote>
+<p>Tutorials &gt; Built-In Examples &gt; 02.Digital &gt; Button</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>https://www.arduino.cc/en/tutorial/button
+</code></pre></div>
+
+<p>Modified code to Serial.println(&ldquo;1&rdquo;); and LED is used for debugging.</p>
+<div class="highlight"><pre><span></span><code><span class="p">...</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buttonState</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">HIGH</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Connect the Arduino and <a href="https://github.com/ybarhoush/FabAcademy2020Project/blob/master/FabAcademyController/Assets/SerialControllerCommunicator/Scripts/SerialController.cs">Configure Serial Controller Script</a>. Also, see <a href="https://github.com/dwilches/Ardity/blob/master/UnityProject/Ardity%20-%20Setup%20Guide.pdf">Ardity - Setup Guide.pdf</a>.</p>
+<p>Run the Scene! When button is pressed, console will print the message.</p>
+<p><img alt="image011" src="../../images/week16/msg-button.PNG" /></p>
+<p>Edit the <strong>Binding</strong> to the Action to support the Arduino board, as an HID input.</p>
+<blockquote>
+<p>Human Interface Device (HID) is a specification to describe peripheral user input devices connected to computers via USB or Bluetooth. HID is commonly used to implement devices such as gamepads, joysticks, or racing wheels.</p>
+</blockquote>
+<p>For more information. See Unity Manual about HID, which explains the requirements for acting as a USB host device.</p>
+<div class="codehilite"><pre><span></span><code>https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/HID.html
+</code></pre></div>
+
+<p>The following images shows how HID input is supported in the Unity Input System.</p>
+<p><img alt="image025" src="../../images/controller-input-unity/image025.png" /></p>
+<p>When the button, connected to the Arduino is pressed, the cube gets bigger.</p>
+<p><a href="../../images/week16/unity-DUE-button-input.mp4">unity-DUE-button-input.mp4</a></p>
+<h2 id="component1-unity-custom-device-using-a-fabricated-board">COMPONENT1, Unity Custom Device using a Fabricated Board<a class="headerlink" href="#component1-unity-custom-device-using-a-fabricated-board" title="Permanent link">&para;</a></h2>
+<p>Now, instead of getting the Input from an Arduino Board, a FabAcademy Fabricated board will be used. See <a href="https://fabacademy.org/2020/labs/oulu/students/yazan-barhoush/assignments/week12/">Input Board</a>. The board can be connected to Joystick and used as Joystick, e.g., movement. See <a href="https://www.amazon.com/HiLetgo-Controller-JoyStick-Breakout-Arduino/dp/B00P7QBGD2/ref=sr_1_4?dchild=1&amp;keywords=arduino+joystick&amp;qid=1600004285&amp;sr=8-4">Joystick</a>.</p>
+<p>Arduino merely emulates the keyboard, not Custom Device Input and Board currently designed for Fab Academy cannot act/support a USB host device. Therefore, a different kind of Custom Device Input is needed. The following steps explain that. Additionally, the simple test cube scene is replaced with the actual game scene (made from scratch).</p>
+<h4 id="new-unity-project">New Unity Project<a class="headerlink" href="#new-unity-project" title="Permanent link">&para;</a></h4>
+<p><img alt="image001" src="../../images/unity-controller-project/image001.png" /></p>
+<p>Unity Package Manager</p>
+<p><img alt="image003" src="../../images/unity-controller-project/image003.png" /></p>
+<p>Install Input System from Unity Package Manager. Yes, to Restart.</p>
+<p><img alt="image005" src="../../images/unity-controller-project/image005.png" /></p>
+<p>Import Custom Device Sample! For integrating the fabricated board.</p>
+<p><img alt="image007" src="../../images/unity-controller-project/image007.png" /></p>
+<p>Edit Custom Device Script</p>
+<p><img alt="image009" src="../../images/unity-controller-project/image009.png" /></p>
+<p>The sample code is well documented. Refer to script and comments <a href="https://github.com/ybarhoush/FabAcademy2020Project/blob/master/FabAcademyController/Assets/CustomDevice.cs">CustomDevice.cs</a></p>
+<p><img alt="image011" src="../../images/unity-controller-project/image011.png" /></p>
+<p>Reference Documentation for Unity Input System 1.0</p>
+<p>Struct FourCC</p>
+<div class="codehilite"><pre><span></span><code>https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Utilities.FourCC.html
+</code></pre></div>
+
+<p>Controls</p>
+<div class="codehilite"><pre><span></span><code>https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/Controls.html
+</code></pre></div>
+
+<p>Devices</p>
+<div class="codehilite"><pre><span></span><code>https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/Devices.html
+</code></pre></div>
+
+<p>Assumptions Made, describing device inputs</p>
+<ul>
+<li>The device has a bitfield of buttons. Each bit indicates whether a certain button is pressed or not.</li>
+<li>A ushort field that contains the state of each possible button on the
+    device can be constructed.</li>
+<li>The device also has a stick. The stick is stored as two unsigned bytes with the midpoint of each axis located at value 127.</li>
+</ul>
+<h4 id="create-a-custom-device">Create a Custom Device<a class="headerlink" href="#create-a-custom-device" title="Permanent link">&para;</a></h4>
+<p><img alt="image013" src="../../images/unity-controller-project/image013.png" /></p>
+<p>Device will show under the Input Debugger in Unity</p>
+<p><img alt="image015" src="../../images/unity-controller-project/image015.png" /></p>
+<p><img alt="image017" src="../../images/unity-controller-project/image017.png" /></p>
+<p>From Script</p>
+<p><img alt="image019" src="../../images/unity-controller-project/image019.png" /></p>
+<p>When Buttons are pressed, the changes will show in the Debug menu (Observe change in Value)</p>
+<p><img alt="image021" src="../../images/unity-controller-project/image021.png" /></p>
+<h4 id="communication-over-com-ports-with-unity">Communication over COM ports with Unity<a class="headerlink" href="#communication-over-com-ports-with-unity" title="Permanent link">&para;</a></h4>
+<p>The boards were connected to Unity over a COM port communication script, as in COMPONENT2.</p>
+<p>Download and Import Package</p>
+<div class="codehilite"><pre><span></span><code>https://github.com/DWilches/Ardity/raw/master/UnityPackages/Ardity.unitypackage
+</code></pre></div>
+
+<p><img alt="image023" src="../../images/unity-controller-project/image023.png" /></p>
+<p>Sample Scene is available as a starting point</p>
+<p><img alt="image025" src="../../images/unity-controller-project/image025.png" /></p>
+<p>When configuring the Serial Controller Script (matching with the Arduino IDE), Debug messages will show under the Console tap in Unity.</p>
+<h4 id="controller-message">Controller Message<a class="headerlink" href="#controller-message" title="Permanent link">&para;</a></h4>
+<p>Using the boards from Electronic Design Week.</p>
+<p>Script, Modified</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Arduino pin numbers</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SW_pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// digital pin connected to switch output</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">X_pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// analog pin connected to X output</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Y_pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// analog pin connected to Y output</span>
+<span class="c1">//const int Motor = 4; // analog pin connected to Y output</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">SW_pin</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">SW_pin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//  pinMode( Motor , OUTPUT);  // Must be a PWM pin</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">SW_pin</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">SW_pin</span><span class="p">));</span><span class="w"></span>
+<span class="w">      </span><span class="c1">//analogWrite( Motor , 153 );  // 60% duty cycle</span>
+<span class="w">      </span><span class="c1">//delay(100);              // play for 0.1s</span>
+<span class="w">      </span><span class="c1">//analogWrite( Motor , 0 );  // 60% duty cycle</span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">SW_pin</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">HIGH</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Waiting...&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">analogRead</span><span class="p">(</span><span class="n">X_pin</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;left&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">analogRead</span><span class="p">(</span><span class="n">X_pin</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;right&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">analogRead</span><span class="p">(</span><span class="n">Y_pin</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;up&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">analogRead</span><span class="p">(</span><span class="n">Y_pin</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;down&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A pull-up resistor was used in the Arduino code: a high state was needed as default (to match with the Unity implementation) and then changed to Low by the Unity Script Interaction. This can also be flipped, but modifications on Unity&rsquo;s are also needed.
+Additionally, the numbers for defining the <em>threshold</em> are not arbitrary. Since the values coming from the Joystick are Analog and the input in Unity is defined to be Digital, couple values were experimented with till the <em>threshold</em> was found. A future implementation should define inputs as Analog on Unity&rsquo;s Side.</p>
+</div>
+<p>Connect the controller to PC using the FTDI cable. Then, modify the SampleMessageListner to work with CustomDevice.cs. The msg in the SampleMessageListner.cs Script is the packets sent from the board to the PC via the FTDI cable!</p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">UnityEngine.InputSystem</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * When creating your message listeners you need to implement these two methods:</span>
+<span class="cm"> *  - OnMessageArrived</span>
+<span class="cm"> *  - OnConnectionEvent</span>
+<span class="cm"> */</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">MessageListener</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+<span class="p">{</span>
+    <span class="c1">// Invoked when a line of data is received from the serial device.</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnMessageArrived</span><span class="p">(</span><span class="kt">string</span> <span class="n">msg</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;Message arrived: &quot;</span> <span class="p">+</span> <span class="n">msg</span><span class="p">);</span>
+
+        <span class="c1">// this works with CustomDevice.cs it actually feeds input for the device. Notice</span>
+        <span class="c1">// that we already have the IInputUpdateCallbackReceiver interface on CustomDevice class.</span>
+        <span class="c1">// What this does is to add an OnMessageArrived method that will automatically be called</span>
+        <span class="c1">// by the input system whenever it updates!</span>
+        <span class="c1">// Here &gt;&gt; feed input to our devices.</span>
+        <span class="c1">//</span>
+        <span class="c1">// NOTE: InputSystem.QueueEvent can be called from anywhere, including from threads.</span>
+        <span class="c1">//       So in this case, we have a background thread polling input from your device,</span>
+        <span class="c1">//       that&#39;s where we can also queue its input events.</span>
+        <span class="c1">//</span>
+        <span class="c1">// The original script read input on CustomDevice class. It made up some stuff</span>
+        <span class="c1">// there for the sake of demonstration. Additionally, It polled the keyboard...</span>
+        <span class="c1">//</span>
+        <span class="c1">// NOTE: The keyboard there was part of OnUpdate. however,</span>
+        <span class="c1">//       they run OnUpdate from onBeforeUpdate, i.e. from where keyboard</span>
+        <span class="c1">//       input has not yet been processed. This means that our input will always</span>
+        <span class="c1">//       be one frame late. Plus, because we are polling the keyboard state here</span>
+        <span class="c1">//       on a frame-to-frame basis, we may miss inputs on the keyboard.</span>
+        <span class="c1">//</span>
+        <span class="c1">// NOTE: One thing we could instead is to actually use OnScreenControls that</span>
+        <span class="c1">//       represent the controls of our device and then use that to generate</span>
+        <span class="c1">//       input from actual human interaction.</span>
+
+        <span class="kt">var</span> <span class="n">state</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CustomDeviceState</span><span class="p">();</span>
+
+        <span class="n">state</span><span class="p">.</span><span class="n">x</span> <span class="p">=</span> <span class="m">127</span><span class="p">;</span>
+        <span class="n">state</span><span class="p">.</span><span class="n">y</span> <span class="p">=</span> <span class="m">127</span><span class="p">;</span>
+
+        <span class="c1">// WARNING: It may be tempting to simply store some state related to updates</span>
+        <span class="c1">//          directly on the device. For example, let&#39;s say we want scale the</span>
+        <span class="c1">//          vector from WASD to a certain length which can be adjusted with</span>
+        <span class="c1">//          the scroll wheel of the mouse. It seems natural to just store the</span>
+        <span class="c1">//          current strength as a private field on CustomDevice.</span>
+        <span class="c1">//</span>
+        <span class="c1">//          This will *NOT* work correctly. *All* input state must be stored</span>
+        <span class="c1">//          under the domain of the input system. InputDevices themselves</span>
+        <span class="c1">//          cannot private store their own separate state.</span>
+        <span class="c1">//</span>
+        <span class="c1">//          What you *can* do however, is simply add fields your state struct</span>
+        <span class="c1">//          (CustomDeviceState in our case) that contain the state you want</span>
+        <span class="c1">//          to keep. It is not necessary to expose these as InputControls if</span>
+        <span class="c1">//          you don&#39;t want to.</span>
+
+        <span class="c1">// Map buttons to 1, 2, and 3.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">msg</span> <span class="p">==</span> <span class="s">&quot;0&quot;</span><span class="p">)</span>
+            <span class="n">state</span><span class="p">.</span><span class="n">buttons</span> <span class="p">|=</span> <span class="m">1</span><span class="p">;</span> <span class="c1">// |= will only ever add bits to the target</span>
+
+        <span class="c1">//string msg1 = msgSplit[1];</span>
+        <span class="c1">// Map the stick.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">msg</span> <span class="p">==</span> <span class="s">&quot;left&quot;</span><span class="p">)</span>
+            <span class="n">state</span><span class="p">.</span><span class="n">x</span> <span class="p">-=</span> <span class="m">127</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">msg</span> <span class="p">==</span> <span class="s">&quot;right&quot;</span><span class="p">)</span>
+            <span class="n">state</span><span class="p">.</span><span class="n">x</span> <span class="p">+=</span> <span class="m">127</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">msg</span> <span class="p">==</span> <span class="s">&quot;up&quot;</span><span class="p">)</span>
+            <span class="n">state</span><span class="p">.</span><span class="n">y</span> <span class="p">+=</span> <span class="m">127</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">msg</span> <span class="p">==</span> <span class="s">&quot;down&quot;</span><span class="p">)</span>
+            <span class="n">state</span><span class="p">.</span><span class="n">y</span> <span class="p">-=</span> <span class="m">127</span><span class="p">;</span>
+
+        <span class="c1">// Finally, queue the event.</span>
+        <span class="c1">// NOTE: We are replacing the current device state wholesale here. An alternative</span>
+        <span class="c1">//       would be to use QueueDeltaStateEvent to replace only select memory contents.</span>
+        <span class="n">InputSystem</span><span class="p">.</span><span class="n">QueueStateEvent</span><span class="p">(</span><span class="n">CustomDevice</span><span class="p">.</span><span class="n">current</span><span class="p">,</span> <span class="n">state</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// Invoked when a connect/disconnect event occurs. The parameter &#39;success&#39;</span>
+    <span class="c1">// will be &#39;true&#39; upon connection, and &#39;false&#39; upon disconnection or</span>
+    <span class="c1">// failure to connect.</span>
+    <span class="k">void</span> <span class="nf">OnConnectionEvent</span><span class="p">(</span><span class="kt">bool</span> <span class="n">success</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">success</span><span class="p">)</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;Connection established&quot;</span><span class="p">);</span>
+        <span class="k">else</span>
+            <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;Connection attempt failed or disconnection detected&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><img alt="image027" src="../../images/unity-controller-project/image027.png" /></p>
+<p>The original CustomDevice.cs read input on CustomDevice class. It made up some stuff there for the sake of demonstration. Additionally, it polled the keyboard. See image below.</p>
+<p><img alt="image029" src="../../images/unity-controller-project/image029.png" /></p>
+<p>The keyboard there was part of OnUpdate. however, they run OnUpdate from onBeforeUpdate, i.e. from where keyboard input has not yet been processed. This means that our input will always be one frame late. Plus, because we are polling the keyboard state here on a frame-to-frame basis, we may miss inputs on the keyboard.</p>
+<p>When the buttons/stick is pressed on the board, it will show on the CustomDevice in Unity.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use Unity <strong>Input Debbuger</strong> to view available input devices.</p>
+</div>
+<p>To Access <strong>Input Debugger</strong></p>
+<blockquote>
+<p>Window &gt; Analysis &gt; Input Debugger</p>
+</blockquote>
+<p>Controller is connected. In this case, the Device is <strong>Custom Device</strong>. First Button was pressed along side the stick moving down.</p>
+<p><img alt="image031" src="../../images/unity-controller-project/image031.png" />
+  </p>
+<h3 id="creating-the-final-scene-with-everything-included">Creating the Final Scene, with everything included<a class="headerlink" href="#creating-the-final-scene-with-everything-included" title="Permanent link">&para;</a></h3>
+<p>For this, the environment/scenes/scripts were not created, but modified an existing one. “Simple Demo” was imported.</p>
+<p><img alt="image033" src="../../images/unity-controller-project/image033.png" /></p>
+<p>Below is the imported Simple Demo imported.</p>
+<p><img alt="image035" src="../../images/unity-controller-project/image035.png" /></p>
+<p>This sample shows how to set up a simple character controller using the input system. As there is more than one way to do it, the sample illustrates several ways, but only one was kept. Each demonstration is set up as a separate scene (all deleted except one). The basic functionality in all the scenes is the same.</p>
+<p>You can move and look around and fire projectiles (colored cubes) into the scene. In the kept scenes, both custom controller and original bindings were supported (which is explained here).</p>
+<p>SimpleDemo_UsingPlayerInput was kept and modified. (./SimpleController_UsingPlayerInput.cs)</p>
+<p>This is the highest level of the input system. While scripting input like in the examples above can be quick and easy, it becomes hard to manage when there can be multiple devices and/or multiple players in the game. This is where “PlayerInput” comes in.</p>
+<p><img alt="image037" src="../../images/unity-controller-project/image037.png" /></p>
+<p>“PlayerInput” automatically manages per-player device assignments and can also automatically handle control scheme switching in single player (e.g. when the player switches between a Game Pad and mouse&amp;keyboard).</p>
+<p>In our case, we are not getting too much out of it since we don&rsquo;t have control schemes or multiple players but still.</p>
+<p>There are two script components on the “Player2 object, one being the usual “SimpleController” and the other being “PlayerInput”.
+“PlayerInput” refers to SimpleControls.inputactions (SimpleControls.inputactions).</p>
+<p>It also has “gameplay” set as the “Default Action Map” so that the gameplay actions will get enabled right away when “PlayerInput” itself is enabled.</p>
+<p>For getting callbacks, we have chosen “Invoke Unity Events” as the “Behavior”.</p>
+<p>“Events” foldout in the inspector, show that “OnFire”, “OnMove”, and “OnLook” are added to the respective events.
+Each callback method here looks like the “started”, “performed”, and “canceled” callbacks.</p>
+<p>“MessageListener” and “SerialController” were added to get input from the designed custom controller hardware.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hierarchy was changed. Some scripts were renamed. Ardity was removed and only certain scripts were kept from that library. Some code was refactored just to keep everything neat and organized!</p>
+</div>
+<p>Add a <strong>Binding</strong> to the Actions. Joystick Button shows as First Button.</p>
+<p><img alt="image039" src="../../images/unity-controller-project/image039.png" /></p>
+<p>Add a <strong>Binding</strong> to the Actions. Joystick’s move shows as Dpad.</p>
+<p><img alt="image041" src="../../images/unity-controller-project/image041.png" /></p>
+<p>The following video shows everything working together!</p>
+<p><a href="../../images/week16/Controller%20Input%20Unity.mp4">Controller Input Unity.mp4</a></p>
+<h2 id="conclusion-and-challenges">Conclusion and Challenges<a class="headerlink" href="#conclusion-and-challenges" title="Permanent link">&para;</a></h2>
+<p>The Input manager is new to Unity, and the current version did not exist before Unity2020. It was a hassle to get it to work since there were not examples out there, apart from Unity’s official documentation.</p>
+<p>Also, it was tricky getting many components to work together. However, it can be explained as the following: the Plugin can be boiled down to the The <em>SampleMessageListener</em>, which picks up <em>Serial.println(&ldquo;&rdquo;)</em> messages sent by the board (when configured). Within <em>SampleMessageListener</em> script, there is <em>OnMessageArrived(string msg)</em> method, which updates the <em>CustomDeviceState()</em> &ndash;within the same method.</p>
+<p>The experimental bottom-up approach and dividing the work into components actually helped getting this to work. Starting small, with a Keyboard/Arduino has helped in understanding and envisioning how the whole thing would work.</p>
+<p>Moreover, there has been a lot of tweaks here and there … and some code refactoring, all final scripts/configurations can be found under files.</p>
+<p>This has been a fun assignment, and probably the most crucial for completing the final project later on.</p>
+<h2 id="group-assignment">Group Assignment<a class="headerlink" href="#group-assignment" title="Permanent link">&para;</a></h2>
+<p>Tkinter, Blynk for Python and Processing.</p>
+<h3 id="tkinter">Tkinter<a class="headerlink" href="#tkinter" title="Permanent link">&para;</a></h3>
+<p>Tkinter is a popular programming package for graphical user interface or desktop apps. The Button control also called widgets are used to display buttons in developed application while the Canvas widget is used to draw shapes (lines, ovals, polygon&hellip;) in your application.</p>
+<div class="codehilite"><pre><span></span><code>https://docs.python.org/3/library/tkinter.html
+</code></pre></div>
+
+<ul>
+<li>
+<p>It provides diverse widgets, such as labels, buttons, and text boxes used in a graphical user interface application.</p>
+</li>
+<li>
+<p>Tkinter is an open source and it is available under the Python License.</p>
+</li>
+</ul>
+<p>Hello World Demo interface was made</p>
+<iframe src="https://player.vimeo.com/video/436739269" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<h3 id="blynk">Blynk<a class="headerlink" href="#blynk" title="Permanent link">&para;</a></h3>
+<p>Blynk is a mobile application that allows users to build convenient interfaces to control hardware from smartphones.</p>
+<p>The benefits of Blynk includes:</p>
+<ul>
+<li>
+<p>User-friendly interface: The interface of Blynk itself is well-designed.  Adding widgets or changing the layout is intuitive.</p>
+</li>
+<li>
+<p>Convenient operation: Users can easily add widgets to the interface for controlling the hardware. The way to modify the properties of the widgets is also simple, mostly by defining the pins and value range.</p>
+</li>
+<li>
+<p>Easy connection with hardware: Blynk can connect to hardware via Ethernet, Wi-Fi, Bluetooth, Cellular, and Serial. </p>
+</li>
+<li>
+<p>High compatibility with different devices: This application is available to both IOS and Android users. On the other hand, the virtual ports allow users to presumably connect to any kind of hardware without worrying about the ports.</p>
+</li>
+</ul>
+<p>On the other hand, the drawbacks of Blynk are:</p>
+<ul>
+<li>
+<p>Limited adjustable features: From the aesthetic design point of view,  users have limited options in customizing the interface, mostly just the size and position of the widget. Users do not have much choice regarding styling the interface.</p>
+</li>
+<li>
+<p>Limited available options for free users: Adding widgets to the interface cost &ldquo;Energy&rdquo;. Adding simple components like slider bars and buttons can cost all the free energy of users. For any additional features, users need to purchase extra energy</p>
+</li>
+</ul>
+<p>Blynk was used durning a  Demo application for implemting a slider for controlling a motor</p>
+<p><img alt="Blynk01" src="../../images/week16/01_Blynk.png" /></p>
+<iframe src="https://player.vimeo.com/video/455390590" width="640" height="1131" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<div class="highlight"><pre><span></span><code><span class="cp">#define BLYNK_PRINT Serial</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP8266WiFi.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;BlynkSimpleEsp8266.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Servo.h&gt;</span><span class="cp"></span>
+
+<span class="n">Servo</span><span class="w"> </span><span class="n">servo</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">char</span><span class="w"> </span><span class="n">auth</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">Blynk</span><span class="w"> </span><span class="n">Auth</span><span class="w"> </span><span class="n">Token</span><span class="p">];</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="n">ssid</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">Your</span><span class="w"> </span><span class="n">Wi</span><span class="o">-</span><span class="n">Fi</span><span class="w"> </span><span class="n">ssid</span><span class="p">];</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="n">pass</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">Your</span><span class="w"> </span><span class="n">Wi</span><span class="o">-</span><span class="n">Fi</span><span class="w"> </span><span class="n">password</span><span class="p">];</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Blynk</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">auth</span><span class="p">,</span><span class="w"> </span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">pass</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">servo</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// NodeMCU D8 pin</span>
+<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Blynk</span><span class="p">.</span><span class="n">run</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">BLYNK_WRITE</span><span class="p">(</span><span class="n">V1</span><span class="p">)</span><span class="w"></span>
+
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">servo</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">param</span><span class="p">.</span><span class="n">asInt</span><span class="p">());</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="n">BLYNK_WRITE</span><span class="p">(</span><span class="n">V2</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">servo</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">45</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="n">BLYNK_WRITE</span><span class="p">(</span><span class="n">V3</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">servo</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="n">BLYNK_WRITE</span><span class="p">(</span><span class="n">V4</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">servo</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">135</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="processing">Processing<a class="headerlink" href="#processing" title="Permanent link">&para;</a></h3>
+<p>Processing is a flexible software sketchbook and a language for learning how to code within the context of the visual arts. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. There are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning and prototyping.</p>
+<p>In this example we show how to print “Hello world!” in the console (used for testing purposes, e.g. error-messages) and how to print it on a window. Window is created with size(x,y) and it’s background is set as (0,0,0)(black).</p>
+<p>Marked with blue squares on picture above is two ways to print on text on the console. Less useful way to print it is to put it under the Setup-section of the code. This will print it only once when the software is launched. Another way is to put it under the Draw-section. This will print it in every loop. Useful case would be inside an if-sentence to see that the code actually works properly.</p>
+<p>Marked with orange squares on the picture above is the way to print “Hello world!” on the window. This took few more lines compared to printing only on the console. First declaring Font and then creating the font. The draw()-section specifies which font is used, it’s fill color, text aligning and finally calling the text()-function. Text has 3 arguments which are displayed text, X- and Y-coordinate. In this case, width/2 and height/2 to center it near middle were used.</p>
+<p><img alt="Processing01" src="../../images/week16/01_Processing.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="n">PFont</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w"></span>
+<span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
+<span class="w">   </span><span class="n">size</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createFont</span><span class="p">(</span><span class="s">&quot;Arial&quot;</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">(){</span><span class="w"></span>
+<span class="w">   </span><span class="n">background</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">textFont</span><span class="p">(</span><span class="n">f</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">textAlign</span><span class="p">(</span><span class="n">CENTER</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">text</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/oulu/students/yazan-barhoush/tree/master/docs/images/week16/Arduino">Arduino Scripts</a>.</li>
+<li><a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/oulu/students/yazan-barhoush/tree/master/docs/images/week16/FabAcademyController">Unity Scripts 01</a> and <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/oulu/students/yazan-barhoush/tree/master/docs/images/week16/button-input">Unity Scripts02</a>. Includes scripts and artefacts (no config, user settings or meta). For full code (more than 100mb), see <a href="https://github.com/ybarhoush/FabAcademy2020Project">github.com/ybarhoush/FabAcademy2020Project</a>.</li>
+</ul>
+<p>For full code (more than 100mb), see</p>
+<p><a href="https://github.com/ybarhoush/FabAcademy2020Project">https://github.com/ybarhoush/FabAcademy2020Project</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../week15/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 15. Mechanical Design" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              15. Mechanical Design
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../week17/" class="md-footer__link md-footer__link--next" aria-label="Next: 17. Molding and Casting" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              17. Molding and Casting
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            CC BY-NC-SA 4.0
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="styles.css" rel="stylesheet">
+</head>
+    <title>Al-Zubair | Week 12</title>
+    <nav class="top-bar fixed"><ul>
+  <li><a href="index.html"><img src="img/fabacademy2011.png" width="113"></a></li>
+    <li style="float: right"><a href="finalproject.html">Final Project</a></li>
+    <li style="float: right"><a href="http://fabacademy.org/2018/labs/fablabuae/">Group Page</a></li>
+    <li style="float: right" class="dropdown"><a href="#" class="dropbtn">All Weeks</a>
+        <div class="dropdown-content">
+      <a style="font-size: 9px; text-align: left"  href="Week01.html">Week 1 - Principles and Practices</a>
+      <a style="font-size: 9px; text-align: left"  href="Week02.html">Week 2 - Project Management</a>
+      <a style="font-size: 9px; text-align: left" href="Week03.html">Week 3 - Computer-Aided Design</a>
+      <a style="font-size: 9px; text-align: left"  href="Week04.html">Week 4 - Computer-controlled Cutting</a>
+      <a style="font-size: 9px; text-align: left"  href="Week05.html">Week 5 - Electronics Production</a>
+      <a style="font-size: 9px; text-align: left"  href="Week06.html">Week 6 - 3D Scanning and Printing</a>
+      <a style="font-size: 9px; text-align: left"  href="Week07.html">Week 7 - Electronics Design</a>
+      <a style="font-size: 9px; text-align: left"  href="Week08.html">Week 8 - Computer-controlled Machining</a>
+      <a style="font-size: 9px; text-align: left"  href="Week09.html">Week 9 - Embedded Programming</a>
+      <a style="font-size: 9px; text-align: left"  href="Week10.html">Week 10 - Molding and casting</a>
+      <a style="font-size: 9px; text-align: left"  href="Week11.html">Week 11 - Input devices</a>
+      <a style="font-size: 9px; text-align: left"  href="Week12.html">Week 12 - Output devices</a>
+      <a style="font-size: 9px; text-align: left"  href="Week13.html">Week 13 - Interfaces and Application Programming</a>
+      <a style="font-size: 9px; text-align: left"  href="Week14.html">Week 14 - Networking and Communicating</a>
+      <a style="font-size: 9px; text-align: left"  href="Week15.html">Week 15 - Mechanical Design</a>
+      <a style="font-size: 9px; text-align: left"  href="Week16.html">Week 16 - Machine Design</a>
+      <a style="font-size: 9px; text-align: left"  href="Week17.html">Week 17 - Wildcard Week</a>
+      <a style="font-size: 9px; text-align: left"  href="Week18.html">Week 18 - Applications and Implications</a>
+      <a style="font-size: 9px; text-align: left"  href="Week19.html">Week 19 - Invention, intellectual property, and income</a>
+      <a style="font-size: 9px; text-align: left"  href="Week20.html">Week 20 - Final Project Development</a>
+    </div></li>
+</ul></nav>
+<body>
+    
+    
+    <div class="centerthis">
+        <h1>Week12 - Output Devices</h1>
+        <table style="width: 600px">
+            <tr>
+                <td>
+        <h2>1-Piezo Buzzer</h2>
+                    <p>I found this buzzer in the lab, sadly nothing was written on it so i didnt know what model it was, i just recognized the buzzer because i was looking for one earlier on google to get one for this week. and i tested it on the arduino, sure enough, it makes noise. xD</p>
+                    
+                    <img src="img/Week12/buzzer.jpeg" width="400">
+                    
+                    <p>I tried to look for the buzzer datasheet, it is not clear but i think i got the right <a href="https://www.mouser.com/ds/2/400/ef532_ps-13444.pdf">datasheet</a>, i just looked for the buzzer that looked almost exactly the same to find some more information about it, that did not help a lot, i only found out it can take upto 30 volts of maximum input volatage.</p>
+                    
+                    <h3>Board Design</h3>
+                    
+                    <p>I used eagle again for this week, and started working on the schematics, first i had to know what components i needed, sure enough i made a list.</p>
+                    
+                    <img src="img/Week12/list.PNG">
+                    
+                    <p>I didnt use a resonator on this one, i was gonna use the internal clock 8Mhz, and i only used 3 pins of the FTDI header because i only wanted to use that as a power source.</p>
+                    
+                    <h4>1-Schematics</h4>
+                    
+                    <p>Same process of the schematics, just adding components from the fab library i already downloaded, connecting everything together and done.</p>
+                    
+                    <img src="img/Week12/Schematic.PNG" width="600"> 
+                    
+                    <h4>2-Board Design</h4>
+                    <p>For the board design i used autoroute to do the traces after moving the components to where i wanted them to be.</p>
+                    
+                    <img src="img/Week12/autoroute.PNG">
+                    
+                    <p>100%! I love to see that, traces were perfect in one button click. Just had to make sure everything is alright, that didnt take a long time, i dont have many components.</p>
+                    
+                    <img src="img/Week12/PCB.PNG" width="600">
+                    
+                    <p>Everything looks great!</p>
+                    
+                    <h4>3-Milling the board</h4>
+                    <p>You need to export the board into a PNG so that you can convert that to RML, i use <a href="http://fabmodules.org/">fabmodules</a> for that. before you export the board, you need to turn off all the layers except the top layer, thats all you need. After you choose all the right configurations on fabmodules and calculate, just click save to download the rml file.</p>
+                    
+                    <p>for the outline or the board cut area, I use MicrosoftPaint, I open the traces PNG file previously exported from eagle, then I just cover the board with a filled white square and make sure thre is just enough black borders for The CNC to cut, and i save it as Outline, then i go on with the fabmodules process and choose 1/32 mill bit instead of 1/64 for the traces.</p>
+                    
+                    <img src="img/Week12/boardwithoutcomponents.jpeg" width="500">
+                    
+                    <p>Board looks great! time to solder the components.</p>
+                    
+                    <img src="img/Week12/Solderedboard.jpeg" width="500">
+                    
+                    <h2>4-Programming the board</h2>
+                    
+                    <p>I found this amazing <a href="http://www.instructables.com/id/How-to-use-a-Buzzer-Arduino-Tutorial/">tutorial</a> that explained what you need in order to program a buzzer with an example code.</p>
+                    
+                    <xmp>/* Arduino tutorial - Buzzer / Piezo Speaker
+   More info and circuit: http://www.ardumotive.com/how-to-use-a-buzzer-en.html
+   Dev: Michalis Vasilakis // Date: 9/6/2015 // www.ardumotive.com */
+
+
+const int buzzer = 9; //buzzer to arduino pin 9
+
+
+void setup(){
+ 
+  pinMode(buzzer, OUTPUT); // Set buzzer - pin 9 as an output
+
+}
+
+void loop(){
+ 
+  tone(buzzer, 1000); // Send 1KHz sound signal...
+  delay(1000);        // ...for 1 sec
+  noTone(buzzer);     // Stop sound...
+  delay(1000);        // ...for 1sec
+  
+}</xmp>
+                    
+                    <p>So apparently what i am looking for are these functions below. </p>
+                    <xmp>tone()
+noTone()</xmp>
+                    <p>A quick search for the <a href="https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/">function page</a> and you understand some more details, like "It is not possible to generate tones lower than 31Hz."</p>
+                    
+                    <p>I modified the code so that it can go through frequencies from 31Hz to 1000Hz with a delay between them.</p>
+                    
+                    <xmp>//Fab Academy 2018
+//Alzubair Alshehhi
+
+const int buzzer = 7; //buzzer to arduino pin 7   
+
+int k = 31;
+void setup(){
+ 
+  pinMode(buzzer, OUTPUT); // Set buzzer - pin 7 as an output
+
+}
+
+void loop(){
+  //Loops through the frequencies from 31Hz to 1000Hz or 1KHz
+ for (k=31; k""=1000; k++){ //Download the code to see the missing lessthan condition.
+  tone(buzzer, k); // Send 1KHz sound signal...
+  delay(100);        
+  noTone(buzzer);     // Stop sound...
+  delay(100);        
+ }
+}</xmp>
+                    <p>I understand that there is no reset for the k variable, once it reaches 1000 it will stop. but it will take some times and it is okay. <br><br>It works!</p>
+                    
+                    <video id="BuzzerVideo" width="320" controls>
+  <source src="img/Week12/workingbuzzer%20.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+                    
+                    <!––I SAVED YOU-->
+<script>
+var vid = document.getElementById("BuzzerVideo");
+  
+    vid.volume = 0.15;
+</script>           <!––END OF SAVING YOU-->
+                    
+                    <p>Download the Arduino Code <a href="img/Week12/AlzubairFab18buzzeroutput/AlzubairFab18buzzeroutput.ino" Download>here</a>.<br>Download the Schematics <a href="img/Week12/AlzubairFab18buzz.sch" Download>here</a>.<br>Download the Board Design <a href="img/Week12/AlzubairFab18buzz.brd" Download>here</a>.</p>
+                    
+                    <p>I will measure the power consumption of an output device on <a href="Week20.html">Week20</a> Will be there as soon as I am done with it. and i will probably update this later.</p>
+                    
+                </td>
+            </tr>
+        </table>
+        
+        
+    </div>
+</body>
+</html>

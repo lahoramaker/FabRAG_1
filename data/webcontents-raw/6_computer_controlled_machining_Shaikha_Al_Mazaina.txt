@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Fablab 2020 - Shaikha Al Mheiri</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/Computer-Controlled%20Machining.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">     <img src="https://www.fablabs.io/media/W1siZiIsIjIwMTcvMDEvMjgvMTEvMjIvMTEvNTllMzQ1YzYtYjVkNy00NzIzLTk4ZWYtODlkMDg4ZWM2ZTk2L0ZhYiBVQUUuanBnIl0sWyJwIiwidGh1bWIiLCIxMTh4MTE4IyJdXQ/Fab%20UAE.jpg?sha=1ff2c078bb96fe37"class="img-fluid" alt="" width="50"
+         height="50" ></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+       Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+          <a class="nav-link js-scroll-trigger text-white " href="index.html">Home</a>
+          </li>
+        
+                  <div class="dropdown">
+<a class="nav-link text-white ">Assignments</a>
+<div class="dropdown-content">
+<a href="Agreement.html">Student Agreement</a>
+<a href="Principles.html">1.Princples & Practices</a>
+<a href="ProjectMang.html">2.Project Management</a>
+<a href="Computeraided.html">3.Computer-Aided Design</a>
+<a href="Computercontrolled.html">4.Computer Controlled Cutting</a>
+<a href="ElectronicProduction.html">5.Electronic Production</a>
+<a href="3D%20Scanning%20&%20Printing.html">6.3D Scanning & Printing</a>
+<a href="Electronic%20Design.html">7.Electronic Design</a>
+<a href="controlledmach.html">8.Computer-Controlled Machining</a>
+<a href="Embedded.html">9.Embedded Programming</a>
+<a href="input.html">10.Input Devices</a>
+<a href="application.html">11.Applications & Implications</a>
+<a href="Output.html">12.Output Devices</a>
+<a href="Molding.html">13.Molding & Casting</a>
+<a href="Networking.html">14.Networking & Communications</a>
+<a href="Interface.html">15.Interface & application Programming</a>
+<a href="Machine.html">16.Mechanical Design, Machine Design</a>
+<a href="Wildcard.html">17.Wildcard Week</a>
+<a href="Invention.html">18.Invention, Intellectual Property, & Income</a>
+<a href="ProjectDevelop.html">19.Project Development</a>
+</div>
+</div>
+<a class="nav-link text-white" href="Finalproject.html" >Final Project</a>
+          </ul>
+</div> 
+</div>      
+</nav>  
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">Computer-Controlled Machining</h1>
+       
+      
+      </div>
+    </div>
+  </header>
+ <section id="about" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-white mb-4">Introduction</h2>
+          <p class="text-white-50">In this week, we are required to design, mill & assemble something big. We will be using the Shobot machine with plwood as the chosen material. </p>
+        </div>
+      </div>
+     
+    </div>
+  </section>
+<!-- Projects Section -->
+  <section id="projects" class="projects-section bg-black">
+      
+
+      <!-- Project Two Row -->
+  <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/cnccardboard.png" width="49%" align="right" alt="">
+            <video width="50%" float="right" controls>
+  <source src="img/fitting.mp4" type="video/mp4">
+</video>
+              <video width="50%" float="right" controls>
+  <source src="img/finalcnc.mp4" type="video/mp4">
+</video>
+                  <!-- add pic in src -->
+     </div>
+          <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white">Design and Testing: Fusion 360</h4>
+              <div align="justify" class="mb-0 text-white-50" style="font-size:17px">
+  For this week, i decided to make a simple pressfit table stool. I designed it using fusion since i'm more comfortable with it and i'm learning more and more features throught this course. I began with a 2D design and then converted it to 3D using the normal steps i used previously. For the aesthetic aspect, i changed the appearance using the appearance feature to mimic the real look.The feature i used to ensure that the legs can fit together with the table-top on. After that, i exported the 2D file as dxf to cut a small scaled down version using laser on cardboard to make sure that dimensions and design fits well. Then going back to fusion, i layed out all parts on one flat sheet and exported it to prepare for CNC cutting process.<br> 
+                     <font size="2" color="red"> Downloads</font>    <font size="2" ><ul>
+   <li>  <a href="files/Table.f3d" download>Table Fusion File </a></li>
+    <li>  <a href="files/Table.dxf" download>Table Dxf File </a></li>
+
+</ul></font>
+                  
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            </div>
+
+       <!-- Project One Row -->
+     <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6 ">
+           <img class="img-fluid" src="img/kerf.png" alt=""> 
+      <!-- add pic in src -->
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+             <h4 class="text-white">Finding Kerf </h4>
+                 <div align="justify" class="mb-0 text-white-50" style="font-size:17px"> 
+Before we proceed, we need to find the kerf for the 12mm plywood material we are using so we can incorporate it in the design. A simple pressfit design was made for this test and 3 different measurements were chosen as a start. Fillets used here and also will be used in the final design are the Dog bone fillets, which are used to create clearance for internal corners to allow slotted pieces to fit together.The cutting process will be explained below.The best fit was on 12.20mm which makes kerf=0.2mm.      </div>
+                 
+    
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- Project Two Row -->
+  <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+        <br> <br><br><img class="img-fluid" src="img/Vcarve.png" alt="">
+                  <!-- add pic in src -->
+     </div>
+          <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white">Preparing files for cnc: Vcarve </h4>
+              <div align="justify" class="mb-0 text-white-50" style="font-size:19px"> 
+Here we will start working on generating toolpaths in g-code for the CNC. Plywood sheets must be placed and screwed into the correct position. Then the following steps are followed:
+  <ol><li>Import the design in Vcarve software, making sure that sheet dimension is measured and inserted under Job Setup Tab, in addition to specifying material thickness (12mm in our case).When placing the design, we must always pay attention to the location of screws to prevent the end mill from passing over it and breaking. </li>
+<li>As mentioned before, Dog fillets will be used, for both slots and taps corner. Fillets are inserted in the design in this step.</li>
+      <li> We will be creating 2 profiles, 1 for cutting the inner parts, and another for cutting the outer parts. Start by going to toolpaths tab and select profile toolpath with the following settings:<br><br> <font color="white"> Inside Profile </font><ul><li>Cut depth = 13.5mm (slightly larger the depth of plywood to ensure a full cut)</li><li>Tool> 6mm End Mill, Spindle Speed=14000r.p.m, Feed Rate=60mm/sec, Plunge Rate=10mm/sec, Passes=4 (the higher the number of passes, the more steps it takes for the end mill to go down to cut, which makes it safer as it wont impose high load and damage it).</li><li>Machine Vectors> Inside/left , Direction=Climb.</li><li>Tabs > Tick add tabs, Thickness=3mm, Length=8mm. Tabs location can be changed based on our own preferenecs.</li><li>Name the profile = Inside Profile, then press Calculate.<br><br></li></ul> <font color="white"> Outside Profile</font><ul><li> Same exact steps are followed, the only difference is when choosing the machine vectors, where we choose> Outside/Right, then Rename the profile to Outside Profile and click on Calculate.</li></ul></li>
+                  </ol> 
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        </div>
+      
+        <!-- Project One Row -->
+     <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6 ">
+          <br><br><br>   <img class="img-fluid" src="img/zerocnc.png" alt=""> 
+      <!-- add pic in src -->
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+             <h4 class="text-white">Preparing Shobot: ShopBot SB3 </h4>
+                 <div align="justify" class="mb-0 text-white-50" style="font-size:17px"> 
+    Similar to any milling/cutting machines, the XYZ origin points must be set. We open the ShopBot SB3 software then we do the following:
+                     <li>For X & Y position=On the control Panel click on the keypad, then move using the on screen arrows or using the remote control that is connected, then click on Zero Axes and tick the X & y. </li><Li>For Z position= we first move to a reachable spot, then take the metal plate that is attached on top of the tool, and place it underneath the tool position, then click on set zero, and it'll automatically go down and make the milling bit touch the metal plate twice. Now Z axis is zeroed. </Li> <li> Now we can start the milling process by clicking on "cut" from the control panel, then warning messages will appear and we should read them carefully, then we click on start from the remote control</li>
+                     </div>
+                 
+    
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Project Two Row -->
+  <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+       <img class="img-fluid" src="img/cncduring.png" width="50%" align="right"alt="">
+            <video width="50%" float="right" controls>
+  <source src="img/cnc2.mov" type="video/mp4">
+</video>
+            <img class="img-fluid" src="img/cncresu.png" width="100%" align="center"alt="">
+                  <!-- add pic in src -->
+     </div>
+          <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white">Results </h4>
+              <div align="justify" class="mb-0 text-white-50" style="font-size:18px"> 
+    During the milling process, it is always recommended to stay around to monitor in case anything occured that might interrupt the process, keeping the emergency button near. <br> The process went very smooth, after it was done. We vacummed the extra residues that formed so we can start breaking the tabs and remove the parts.<br>The edges weren't smooth and thus required some sanding to look good.<br>After that we are ready for assembling, which needed a bit of power to do so and got help from my friends. Final result looked really good. <br> During this assignment we  worked in groups to use time efficently especially for this machine, which is why in the pictures it is shown that the sheet contained other designs.     
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        </div>
+    
+      
+         <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2 class="text-white mb-4" align="center"><br>Group Assignment</h2>
+          <div align="justify" class="text-white-50"> For this task, we need to do the following:
+               <li>Test runout, alignment, speeds, feeds, and toolpaths for the machine.
+</li>
+               The link to the group assignment page is found <a href="http://fabacademy.org/2020/labs/uae/shopbot/shopbot.html"><font color="white"> <b>here.</b></font></a>   </div>
+        </div>
+      </div>
+      
+          <!-- 3rd section  --> 
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2 class="text-white mb-4" align="center"><br>Experience</h2>
+          <p align="justify" class="text-white-50"> One of the toughest and most dangerous weeks, safety is a must, knowing what incidents took place with this machine previously made us more cautious but didn't prevent us from enjoying it!   </p>
+        </div>
+      </div>
+     
+  </section>
+
+     
+   
+      
+  <!-- Footer -->
+     <footer class="small text-center text-white-50 bg-black">
+       <div class="container" style="font-size:10px">
+  Copyright &copy; Shaikha Al Mheiri 2020 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><br><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"></span> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br>
+    HTML template &copy; <a href= "https://startbootstrap.com/themes/">Bootstrap</a>, Cover Page image &copy; <a href= "https://unsplash.com/">Unsplash</a>
+    </div>
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/grayscale.min.js"></script>
+
+</body>
+
+</html>

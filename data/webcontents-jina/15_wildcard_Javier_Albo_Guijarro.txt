@@ -1,0 +1,232 @@
+Title: Fabacademy Barcelona 2018
+
+URL Source: http://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/week16.html
+
+Markdown Content:
+_assignment:  
+\-design and produce something with a digital fabrication process (incorporating computer-aided design and manufacturing) not covered in another assignment, documenting the requirements that your assignment meets, and including everything necessary to reproduce it. Possibilities include (but are not limited to) composites, textiles, biotechnology, robotics, and cooking._
+
+Laser welding is a technique I wanted to develop in Fab Academy as a final project, but I finally decided to leave it for the wildcard week. The idea is using the laser cutter as a "sewing machine" for plastic materials. The layers, instead of being joined with thread, they are sealed together by melting them with the laser heat. The purpose of this technique is achieving inflatable volumes.
+
+Inflatables/soft robotics can also be made in a more manual process with two layers of vinyl and a baking paper layer in between, sealed with a Heat Transfer Press. The purpose of Laser Welding is compiling all the steps into a single lasering process, making it a simpler and faster way of getting similar results.
+
+I first came up with this method back when I was in architecture school making this model down here for an inflatable house I designed. Here I sealed the plastic manually using an iron, but this made me think there had to be a better and faster way to seal the plastic. This is how the idea of using the heat of the laser came to my head. Since then I always wanted to spend some time experimenting with this method.
+
+![Image 1](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/sharedgreenhouse.jpg)
+
+I searched if this had already been done in Fab Academy, but I believe this digital fabrication process is apparently new because no one has documented this technique before. Developing new stuff is always a personal challenge I like taking! The most similar thing I found on the internet was [this guy](http://www.mit.edu/~calisch/fold/www/welding.html) from MIT who also used the laser engraver for the same purpose as me. However, he doesn't really explain the method in detail.
+
+There are multiple possibilities and areas where I think this process could be implemented, such as design, architecture, art or even cooking. These are some inflatable examples that might be possible to get with this process. The obtained results could be filled with any shapeless material (air, gas, smoke, water):
+
+![Image 2](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/lamp.jpg) ![Image 3](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/lamp2.jpg) ![Image 4](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/lamp4.jpg) ![Image 5](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/lamp3.jpg)  
+![Image 6](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/chair.jpg) ![Image 7](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/projection.jpg) ![Image 8](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/igarashi1.jpg) ![Image 9](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/igarashi2.jpg)
+
+or be used only as a mould to obtain a solid volume (ice, concrete, chocolate):
+
+![Image 10](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/iceman.jpg)
+
+![Image 11](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/concrete.jpg) ![Image 12](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/curtain1.jpg) ![Image 13](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/curtain3.jpg) ![Image 14](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/fisac2.jpg)
+
+process
+-------
+
+I went to Servei Estacio, a huge shop in Barcelona were you can find almost anything. There they had several plastic rolls. PVC roll looked nice and I'm sure it could work nice. However this material should not be lasered because it releases toxic gases when it is burned. That's why I went for Polyethylene (PE), which can be lasered. There were many sizes and thicknesses (even different colors). I believed the thinner the material the easier it would be for the laser to heat both layers without cutting them. That's why I tried with the thinnest Polyethylene they had in the shop: gauge 200 (0.05mm) and gauge 300 (0.075mm).
+
+I put a wood base on the laser cutter in order to have a flat bottom. I prepared two PE layers and placed them on the base, one layer on top of the other. Then I proceeded to make different linear tests by changing the power and speed. The two PE layers sometimes melted and sometimes didn't, depending on the settings. To test the strenght of the sealing I pulled both plastics layers. Some tests were stronger than others, but no matter all the settings I tried, none of them were strong enough to bear the stretching.
+
+![Image 15](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/laser1.jpg) ![Image 16](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test1.jpg)
+
+Not finding the right settings was a bit frustating. Technicaly, what I wanted to accomplish sounded logical and possible: just melting two plastic layers together using heat. But maybe the problem was not the laser settings, but something else I was doing wrong...It was a matter of understanding what made it work and what didn't, so I decided to find out what could be done to improve that.
+
+First I thought it had to do with the width of the sealing lines. They were very thin, so maybe the sealing was too thin to hold both layers together when pulling... I thought of three options to increase the thickness of the sealing:
+
+**a) making more than one passing by offsetting the sealing line.**  
+I made several tests with different offset distances. Doubling or tripling the line seemed to improve the strenght when the offsets lines were very close together, merging into a single thicker sealing.
+
+**b) making a non-linear boundary (zigzag...)**  
+The zigzag didn't really work out, when pulling the two layers of plastics they started to unstick in the sharpened angles of the zigzag.
+
+![Image 17](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test2.jpg)
+
+**c) defocusing the laser on purpose.**  
+This seemed to be the best option. Defocusing the laser meant a wider area where the heat was applied. At the beggining I defocused it manually with a ruler. Later on I realised you can defocus it in the laser settings, which was way more useful and fast.
+
+![Image 18](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/laser2.jpg)  
+![Image 19](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test6.jpg) ![Image 20](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test7.jpg)
+
+I finally decided to keep on trying with both the offset and the defocusing, and move on to try the first inflatable tests. First attempts were a bit dissapointing. The two PE layers did not seal well all along the sealing lines, which made the inflatable piece have small holes through which the air leaked when inflating it.
+
+![Image 21](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test3.jpg) ![Image 22](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test4.jpg)
+
+I realised it had to do with the two PE layers not being in complete contact to each other. I tried by taping the two layers to the board in order to make them stay in contact, but the result was pretty much the same. After several tries I thought of using some kind of adhesive. We didn't have any in the lab at that moment so the closest thing was the Nelly hairspray we use for the RepRap 3d printer surface (we use it to make the 3d printed piece stick to the base). This made the two PE layers stay almost 100% in contact. And since it's not a strong adhesive, it unsticks easily when inflating the object. By this tecnhique, I achieved the first succesfull test.
+
+![Image 23](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/nelly.jpg)
+
+I also tried to use a thermo-adhesive spray. This is used for adhering clothes: you spray the clothes and the heat of the iron activates de glue. This sounded perfect for this process: the heat of the laser would not only melt the plastic but also activate the sprayed area along its path. Worst solution ever: the spray was not sticky but dusty, which made not stick the plastic layers together at all. Also, the heat of the laser cutter did not activate the adhesive (when you iron the sprayed clothes, you need to iron ir for at least 30 seconds). So after a couple tests I didn't even try this again.
+
+![Image 24](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/spray.jpg)
+
+However, the method with the hairspray was not 100% reliable either: there were always some air bubbles trapped in-between the two layers, no matter how hard I tried to take all of them out. An air bubble means the two layers are not in contact, which can make the sealing fail on that point.
+
+Then I decided to google deeper about sealing plastics together with a laser. I found there are experienced companies ([1](http://www8.basf.us//PLASTICSWEB/displayanyfile?id=0901a5e18045b8d9), [2](https://www.industrial-lasers.com/articles/2010/07/laser-based_polymer.html), [3](https://www.lpkf.com/newsletter/rapid-pcb-prototyping/597/652/203.htm), [4](http://www.avio.co.jp/english/products/assem/principle/laser/method.html), [5](https://www.or-laser.com/en/laser-welding/laser-plastic-welding/)) with speacialized laser machinery for transmission welding, even though I believe this method is basically for rigid plastics. There are two important things I got from their way of doing that could be helpful for welding my PE layers:
+
+\-The top plastic (transparent) must transmit the laser radiation and the bottom plastic (opaque) must absorb it. [This](http://www.laserplasticwelding.com/how-does-color-affect-the-welding-process) explains how color affect the welding process and [this](http://www.laserplasticwelding.com/wp-content/uploads/2011/08/Material-Compatibility-Chart-Updated.jpg) explains which thermoplastics can be welded.
+
+![Image 25](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/materials.jpg)
+
+\-To ensure perfect contact of the layers, pressure needs to be applied.
+
+![Image 26](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/transmission.jpg)
+
+These videos explain everything about laser welding:
+
+After seeing how they do it, I realized by the way I did it most of the laser power went through the two transparent PE layers. I decided to try with two different polyethylene layers: one transparent and one opaque. This seemed to improve the sealing quite a lot, but still did not seal when there was air in between the layers. This means there was always a chance of getting gaps in the sealing, so the tests would not be airtight.
+
+![Image 27](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test8.jpg) ![Image 28](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test9.jpg)
+
+After playing with the laser settings, I managed to make a succesful small inflatable test.
+
+![Image 29](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test16.jpg) ![Image 30](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/testgif.gif)
+
+![Image 31](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/testgif2.gif)  
+it can also hold water!
+
+But as soon as I tried with more complex shapes, sealings problems started to appear again. Most of the problems came from the two PE layers not being in uniform contact throughout the entire surface. This makes the PE layers react weirdly to the laser and rather not be sealed at all or being cut through.
+
+![Image 32](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test11.jpg) ![Image 33](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test14.jpg) ![Image 34](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test15.jpg)
+
+The proper contact between the layers is what experienced companies solve by applying pressure on the two parts so they join. But pressure can't be applied in the Trotec...Maybe the air assist nozzle in the laser engraver could apply this pressure?...
+
+That night, at home, I took out the garbage. When I replaced the bags for the garbage bin, I noticed how garbage bags were made: a roll of two plastic layers, with absolutely no air in-between. Two polyethylene (PE) layers in complete contact to each other throughout the entire surface. I had to try lasering that.
+
+![Image 35](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/garbagebag1.jpg) ![Image 36](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/garbagebag2.jpg)
+
+Even the first tests with this material had very positive results. The sealing was great thanks to the complete contact of the two layers. I tried different garbage bags and turns out biodegradable garbage bags seal better than any other material I had tried.
+
+![Image 37](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test.jpg) ![Image 38](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/test13.jpg)
+
+Soon after I started to make more complex tests and see how far I could go with this technique.
+
+![Image 39](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/man_cut.gif) ![Image 40](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/man_blow.gif)
+
+![Image 41](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/man_fly.gif)  
+fly little man!
+
+I wanted to see if I could get helium balloons out of this technique. I inflated the little man with helium, but unfortunately it did not rise. I think the size is too small and the plastic is too heavy for the amount of helium inside. I believe increasing the size of the design will make it rise, since the volume of air inside would scale up quicker than the amount of surface outside.
+
+However helium has very thin particles which leak through everywhere. In this photo I had two men, one inflated with helium and one with regular air. The one with helium (left) deinflated in about 1 or 2 hours, while the man filled with air (right) lasted completely inflated for at least more than a week.
+
+![Image 42](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/man_airhelium.jpg)
+
+I also wanted to try getting ice shapes by filling the inflatable with water and freezing it (this plastic is NOT foodsafe). Here the result:
+
+![Image 43](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/man_freezer.jpg) ![Image 44](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/man_demold.jpg) ![Image 45](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/man_ice.jpg)
+
+Inflatable text can also be made!
+
+![Image 46: hola_seal](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/hola_seal.jpg)  
+sealing
+
+![Image 47: hola_cut](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/hola_cut.jpg)  
+cutting
+
+![Image 48](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/hola2.gif)
+
+It's interesting how much it bends when inflating. Notice how the lower part of the L bends, forcing also the A. When inflating, a slight curve in the design will curve even more if no other part stops this movement. This might be something useful somehow...
+
+![Image 49](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/hola.gif)
+
+When the sealing is good, you can keep blowing air above the limit until the PE plastic starts deforming. This plastic is not elastic, so any deformation will not go back to the original shape. The deformation makes the plastic thinner and thinner, so if it keeps being inflated it will end up bursting.
+
+In this case I inflated it until the little man's belly started growing. When inflating it, I did not decide which part of the man I wanted to start deforming. Inflatables are a bit unpredictable...but I guess the deformation will occur in the bigger volume of the shape, in this case the belly.
+
+![Image 50](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/man_overblow.jpg)
+
+This made me think: maybe I can somehow control this deformation? Can I use the laser in a way to weaken the plastic or make it thinner? If so, will the deformation occur where the plastic is weakened? The answer is uncertain...Seems like it might be possible, however the material is probably not the best for this method.
+
+This is the closest thing I could get before the test burst. For the blue lines I set the laser power very low, lower than the sealing power, so it weakens the upper layer without sealing it to the lower layer. I think this could work out better with a thicker material.
+
+![Image 51](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/deformation.jpg) ![Image 52](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/deformation2.jpg) ![Image 53](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/deformation3.jpg)
+
+With this other test I discovered something very interesting. When the shape is inflated, the narrowings that subdivide the volume will make the shape unstable in the straight position. They will tend to bend to one side or the other, making the narrowings act as articulations. This allows each part of the inflatable shape to keep its position as desired.
+
+![Image 54](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/fishbone1.jpg) ![Image 55](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/fishbone_move.gif)
+
+Then I decided to move on to more complex shapes and explore this articulation method. I decided to do a scorpion so I could test if the tail can be articulated by dividing it in different segments separated by narrowings.
+
+![Image 56](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/scorpio1.jpg) ![Image 57](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/scorpio2.jpg)
+
+The result was very satisfying. Once inflated, the tail acted as expected and it could be articulated into any position keeping the shape.
+
+![Image 58](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/scorpio_move.gif)
+
+Since I had only tried to seal exterior boundaries, I also wanted to try interior sealings, so the inflatable volume can be subdivided into smaller volumes, but all of them sharing the same air. In order to try this, I decided to do a Star Wars spaceship: the N-1 Starfighter.
+
+![Image 59](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/starwars2.gif)
+
+![Image 60](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/starfighter_cut.gif) ![Image 61](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/starfighter_lift.gif)
+
+![Image 62](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/starfighter_blow.gif)
+
+Notice how at the end of each interior sealing a wider rounding is needed. When inflating the object, the tension held in these points is higher than in the rest of the sealings. Without this wide rounding, the PE plastic will most likely tear and create a hole, which will ruin the inflatable. A more elastic or thicker plastic would probably hold this tension easier.
+
+![Image 63](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/starfighter1.jpg) ![Image 64](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/starfighter2.jpg)
+
+So these are most of the tests I did for the wildcard week. I will stop for now, but I will keep on testing after Fab Academy. Things I want to try: using the air assist of the laser to apply pressure on the plastic layers; a bigger scale (balloons, zeppelins, boats, architecture...); a more elastic material; [softrobotics](http://tangible.media.mit.edu/project/sticky-actuator/); concrete molding; cnc welding...
+
+I believe this technique has so many possibilities in the digital fabrication area and I really want to see how far it can go.
+
+  
+
+step by step
+------------
+
+I will explain now how to make an inflatable step by step:
+
+In Rhino, draw whatever you want to inflate. You will need 2 layers, one for sealing (black) and one for cutting (red). Remember the sealing goes before the cutting! I usually triplicate the sealing path to ensure the sealing is good. I offset each line 0.4mm. If the inflatable is very small, even just one path for sealing might be enough.
+
+Also try not to have sharped angles because the laser speed/power will change slightly on those points and it will probably do weird things when sealing. Try to make the angles as round as possible in order to make the laser movement smoother.
+
+![Image 65](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/step_rhino1.jpg) ![Image 66](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/step_rhino2.jpg)
+
+Remember to draw an air entrance. I make this entrance a bit long, so I can use it later for making a knot. Once the whole shape is cut, you will need to manually cut off a thin slice of this air entrance so as to be able to introduce the air pump or straw.
+
+![Image 67](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/step_rhino3.jpg)
+
+Prepare the laser machine:
+
+![Image 68](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/step_base.jpg)  
+place a flat base on the laser table
+
+![Image 69](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/step_unroll.jpg)  
+take one garbage bag from the roll
+
+![Image 70](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/step_place.jpg)  
+place the bag on the wood as flat as possible
+
+![Image 71](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/step_weights.jpg)  
+put some weights on the edges of the bag
+
+One aspect to keep in mind is the air ventilation inside the laser. Because the plastic bag is very light, it is very easy to be moved by the air. The weights help keeping the bag flat and also hold it in place from the laser machine ventilation. The long piece I put on the lower edge is very important because the air blows from the lower to the upper part. If there is no weight along this edge, air will flow underneath the bag and lift it up from the base. I also tend to close half of the air ventilation valve so the air blowing inside is not that strong. If this is not done, when the laser is cutting the design, the air can lift up some parts, which can ruin the whole thing. The triple sealing also helps sticking the shape on the wood.
+
+You will try to place your design avoiding the wrinkles of the bag as much as possible. The more wrinkles the bag has, the higher the chances of getting a bad sealing. Actually, out of all the bags in the roll, the first ones are better because they have less wrinkles. The inner bags of the roll are too wrinkled and will cause many problems in the sealings, specially when doing big inflatables (It would be nice to obtain a BIG roll of this material, so there would be more and bigger bags. This would also allow a bigger flat area and a bigger inflatable design...)
+
+![Image 72](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/garbagebag3.jpg)
+
+![Image 73](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/step_area.gif)  
+I usually limit the design size to this area to avoid the wrinkles
+
+In Rhino, print your design to the Trotec software. Once there, place the drawing in the flat area of the bag and prepare it for sending it to the laser machine. For this material I used these settings:
+
+**Sealing:** Power 2.70 - Speed 1.10 - 1000Hz - Zoffset 16  
+**Cutting:** Power 5.00 - Speed 1.00 - 1000Hz - Zoffset 10
+
+When the job is done, remove carefully your design, cut off the air entrance, blow and make a knot!
+
+![Image 74](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/scorpio_lift.gif) ![Image 75](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/scorpio_blow.gif)
+
+:)
+
+![Image 76](https://fabacademy.org/2018/labs/barcelona/students/javier-alboguijarro/img/week16/scorpio3.jpg)
+
+[download files](https://gitlab.fabcloud.org/academany/fabacademy/2018/labs/barcelona/students/javier-alboguijarro/tree/master/file/week16)

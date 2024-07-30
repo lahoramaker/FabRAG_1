@@ -1,0 +1,109 @@
+Title: 13. Applications and implications - Fab Academy Student Name
+
+URL Source: http://fabacademy.org/2020/labs/uae/students/ali-binghulaita/assignments/week13/
+
+Markdown Content:
+What will it do?[¶](https://fabacademy.org/2020/labs/uae/students/ali-binghulaita/assignments/week13/#what-will-it-do "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------
+
+We can use the portable life stream case for covering the accidents from all sides. The commanders will have full view on the accidents to run and give the right orders. The video will be taking from the accidents will also help in investigations after the accidents. It helps the trainees before going to the field and facing a real accident. Gives accurate and real time intelligence as to the progression of the fire spread.
+
+Who’s done it beforehand?[¶](https://fabacademy.org/2020/labs/uae/students/ali-binghulaita/assignments/week13/#whos-done-it-beforehand "Permanent link")
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+There were phones that show livestream videos through apps but in my experience I never saw a livestream case being made and used.
+
+What will you design?[¶](https://fabacademy.org/2020/labs/uae/students/ali-binghulaita/assignments/week13/#what-will-you-design "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+I need to design a case that is portable in size and you can fit it in your vehicle and has support where you can hold it and carry it around. It also needs an arched stand that you can hook in the vehicle so you can film without the case moving in place.
+
+What materials and components will be used?[¶](https://fabacademy.org/2020/labs/uae/students/ali-binghulaita/assignments/week13/#what-materials-and-components-will-be-used "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Modem
+
+12V 15000mAh li-ion battery
+
+Rotatable Camera
+
+Circuit board that battery checker (RGB LED lights, buzzer, cover for the LED made by 3D printer)
+
+Aluminum 3 inch Tube
+
+Tube foundation to hold the tube in the case.
+
+Wires
+
+Switch
+
+Battery charger
+
+Assembling parts (Screwdriver and nut)
+
+Battery mold
+
+Camera foundation
+
+Acrylic pieces for covering the design inside of the case.
+
+Where will they come from?[¶](https://fabacademy.org/2020/labs/uae/students/ali-binghulaita/assignments/week13/#where-will-they-come-from "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+I will buy the components and materials online or locally. I will fabricate some materials by my own in the FabLab.
+
+Tube, stopper motor, wood, electronic components, RGB Light: FabLab.
+
+Camera, modem, battery: Online purchase.
+
+How much will they cost?[¶](https://fabacademy.org/2020/labs/uae/students/ali-binghulaita/assignments/week13/#how-much-will-they-cost "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![Image 1](https://fabacademy.org/2020/labs/uae/students/ali-binghulaita/images/week13/LIST.jpg)
+
+### Total amount 1653.62[¶](https://fabacademy.org/2020/labs/uae/students/ali-binghulaita/assignments/week13/#total-amount-165362 "Permanent link")
+
+What parts and systems will be made?[¶](https://fabacademy.org/2020/labs/uae/students/ali-binghulaita/assignments/week13/#what-parts-and-systems-will-be-made "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+I will make most of the components in the lab
+
+The portable case
+
+Camera foundation
+
+Tube holder
+
+Board
+
+Motor Driver
+
+What processes will be used?[¶](https://fabacademy.org/2020/labs/uae/students/ali-binghulaita/assignments/week13/#what-processes-will-be-used "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1-(3D printer) Tube foundation to hold the tube in the case.
+
+2-(Electronic circuit)
+
+Assembling parts (Screwdriver and nut)
+
+3-(Molding) Battery mold
+
+Camera foundation
+
+4-(laser cutting) acrylic pieces for covering the design inside of the case.
+
+What questions need to be answered?[¶](https://fabacademy.org/2020/labs/uae/students/ali-binghulaita/assignments/week13/#what-questions-need-to-be-answered "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Checking whether the signal from my portable case camera is working properly from my location to the operation room of the Civil Defence. I want to see if the camera can show both video and sound properly so the operation room can see the incident clearly.
+
+How will it be evaluated?[¶](https://fabacademy.org/2020/labs/uae/students/ali-binghulaita/assignments/week13/#how-will-it-be-evaluated "Permanent link")
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+First I carry the case to the place I want to film, then I switch it on. The camera will come out of the case and the modem will take 5-10 seconds to turn on the LTE in the SIM card and all systems will switch on. The camera will start live streaming and sending the video to the Dubai Civil Defence Operation Room where they can watch the video live.
+
+* * *
+
+[![Image 2: Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)  
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).

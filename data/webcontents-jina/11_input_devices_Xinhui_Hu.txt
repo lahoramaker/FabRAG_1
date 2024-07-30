@@ -1,0 +1,246 @@
+Title: Week 9  Input Devices
+
+URL Source: http://fabacademy.org/2020/labs/oulu/students/xinhui-hu/Week9_Input_Device.html
+
+Markdown Content:
+* * *
+
+Group Assignment  
+   Please check our [Group Assignment](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/Week9_Input_Device.html#group) page.
+
+Individual Assignment
+
+*   [Board Design](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/Week9_Input_Device.html#board)
+*   [Sensor Measurement](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/Week9_Input_Device.html#sensor)
+*   [Files](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/Week9_Input_Device.html#file)
+
+Group Assignment  
+   Please check our [Group Assignment](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/Week9_Input_Device.html#group) page.
+
+Skillsets Gained: Basic Arduino programming, Hall Effect Sensor Usage  
+Software Used: Autodesk Eagle, Arduino IDE
+
+### Individual Assignment
+
+* * *
+
+This week's individual assignment is about adding a sensor to a microcontroller board to detect signals from the environment. In my final project, I will need a Hall Effect sensor to adjust the zero point of the clock hand. Thus, for this week's assignment, the Hall Effect Sensor will be integrated with the ATtinty 1614 board.
+
+#### Board Design
+
+* * *
+
+In my [final project](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/finalprojectlog.html), a unipolar stepper motor will be used to control the clock hand movement. The unipolar stepper does not have default starting point, which requires the zero point to be calibrated whenever the devices is initiated.
+
+![Image 1: Clock Zero Point](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/img/weekly_pic/week9/clock.jpg)
+
+Clock Zero Point
+
+In this case, the Hall Effect sensor can be an ideal solution.  
+According to [Wikipedia](https://en.wikipedia.org/wiki/Hall_effect_sensor):"A Hall effect sensor is a device that is used to measure the **magnitude of a magnetic field**. Its output voltage is directly proportional to the magnetic field strength through it."
+
+![Image 2: Hall Effect Sensor Mechanism](https://pic1.zhimg.com/v2-dd9ff7baf4184033d73959dfa8349223_1440w.jpg?source=172ae18b)
+
+Hall Effect Sensor Mechanism
+
+[credit](https://zhuanlan.zhihu.com/p/50598257)
+
+My plan is to place a strong magnet on the clock hand and place the Hall Effect sensor on the back of the clock face at the zero point. The clock will rotate a full revolution when it is turned on until it detects the strongest magnetic field. That point will be labeled as the zero point, from which the step counting starts.
+
+In my design, the sensor is placed on a separated board that connects to the microcontroller board with wires. This is because that the Hall Effect sensor can only detect the magnetic field that approaches from a certain direction. It will be much harder to adjust the direction if the sensor is on a large board with all other components, while the other components and wires themselve can generate magnetic fields.
+
+**ATtiny 1614 Board**  
+On my microcontroller board, I have reserved a digital pin (**PB3**) of the **ATtiny 1614** chip for receiving the sensor input and have connected the VCC and GND to the connectors that designated for the sensor communication. More design details of this microcontroller board can be found [here](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/finalprojectlog.html#attiny_design).
+
+![Image 3: ATtiny board ](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/img/weekly_pic/week9/microcontroller%20board.jpg)
+
+ATtiny board
+
+**Hall Effect Sensor Board**  
+The Hall Effect sensor board is very simple, which basically have only two components: a Hall Effect sensor and a connector that connect the three pins of the sensor.I used a SOT23-W Hall Effect Sensor and a 2x2 connector in this case.  
+I intentionally left a relatively large space between the sensor and connector to prevent the detection being interfered by the magnetic field
+
+![Image 4: Sensor Board](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/img/weekly_pic/week9/sensor_board.jpg)
+
+Sensor Board
+
+#### Sensor Measurement
+
+* * *
+
+In my case, the precision of the signal detection was not as crucial as let the sensor being able to detect the signal per se. Thus, I used the following code that I retrieved from [this tutorial](https://maker.pro/arduino/tutorial/how-to-use-a-hall-effect-sensor-with-arduino) as a start. This tutorial was based on Arduino Uno board, but the code works well for the ATtiny 1614 board with simple modification.
+
+This code works well. As the magnet approaches to the sensor, the sensor can detect the magnetic field and print "detect" in the serial port.
+
+![Image 5: Test Result](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/img/weekly_pic/week9/hall_test.jpg)
+
+Test Result
+
+For the final project, the Hall Effect sensor is used to determine the zero point. The mechanism is like:  
+1\. The clock hand starts to rotate in the clockwise direction  
+2\. The Hall Effect Sensor is placed at the back of the clock face to detect the magnetic field when the clock hand get near enough  
+3\. When the microcontroller receive the "detect" signal from the sensor, it will set that position as the start point.  
+\* My original plan was to make this progress iterative: I was considering make a comparison of the magnetic field magnitude for each step, which will allow me to determine which point has the strongest signal and hence determine the start point more precisely. However, I soon found it is much easier to adjust the distance between the clock hand and sensor to reduce the error due to detection range.  
+Thus, as shown below, the code I used for the clock only determine two conditions: detected vs not-detected.
+
+**Hall Effect Sensor Relevant Code**  
+```
+
+             int currentstep = 0;  
+                //Hall Effect   
+                int hallsensor = 4;//pin PB3  
+                int digitalVal;//digital readings  
+                void setup() {      
+                    //...omited irrelevant code  
+                    pinMode(hallsensor,INPUT);
+```
+
+```
+
+                      while (true){  
+                        step(1);  
+                        digitalVal = digitalRead(hallsensor);  
+                        if (digitalVal==LOW){ //low = detect  
+                          break;  
+                        }  
+                        else{  
+                          }  
+                      }   
+                      currentstep=0;  
+                    }
+```
+
+### Group Assignment
+
+* * *
+
+This week's group assignment is to probe an input device's analog levels and digital signals. Our group tested the digital and analog signal of a **Hall Effect Sensor**, which mostly due to the easiness of the circuit and the obvious effect.  
+Hall Effect sensor can detect the magnetic field that approach from a certain direction, which can be reflected via different voltage. For convenience, we used an Arduino UNO board and a Hall Effect sensor board from one of our programs for this group assignment.  
+The board connection and is again derived from [this tutorial](https://maker.pro/arduino/tutorial/how-to-use-a-hall-effect-sensor-with-arduino)
+
+![Image 6: Board Connection](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/img/weekly_pic/week9/group/connection.jpg)
+
+Board Connection
+
+We have used really simple code to detect the digital and analog signals from the sensor. The main structure of the code are basically the same, except the usage of digital pins versus analog pins.  
+1.Digital Detection  
+In this case, one of the digital pins is used for Hall effect sensor input. There are two status of the sensor input: **HIGH** and **LOW**, which corresponds to the status of "detected" versus "not detected".  
+The code used is as below:  
+```
+
+            const int hallPin = 0;     // hall effect sensor out pin  
+            int hallState = 0;         // Initial hall sensor status
+```
+
+```
+
+            
+            void setup() {
+```
+
+```
+
+            
+            Serial.begin(9600); // The hall effect sensor pin as an input    
+            pinMode(hallPin, INPUT);  
+            }  
+
+            void loop(){
+```
+
+```
+
+            
+              hallState = digitalRead(hallPin); // reading the state of the hall effect sensor pin  
+
+                Serial.println(hallState);  
+                Serial.println("detect");  //  
+                delay(200);
+```
+
+```
+
+            
+                } 
+```
+
+  
+
+![Image 7: Digital Detection](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/img/weekly_pic/week9/group/digital_hall.jpg)
+
+Digital Detection
+
+We also used the oscilloscope to detect the digital wave of the sensor. We have measured the signal from the Tx pin of the board and detected the square wave on the screen.
+
+![Image 8: Digital Wave](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/img/weekly_pic/week9/group/digital_wave.jpg)
+
+Digital Detection with oscilloscope
+
+2.Analog Detection  
+In this case, instead of using the digital pin, the Analog pin **A0** on the Arduino board is used. Moreover, the **digitalRead()** syntax should be changed to **analogRead()**. Our instructor Ari helped us to developed this analog detection method. In this case, instead of the binary stasus of "detected" vs " Not detected", the actual magnitude of magenetic field is detected and demonstrated.  
+The code used is as below:  
+```
+               
+            const int hallPin = A0;     // hall effect sensor out pin  
+            int hallState = 0;         // Initial hall sensor status
+```
+
+```
+
+             
+            void setup() {
+```
+
+```
+
+             
+            Serial.begin(9600); // The hall effect sensor pin as an input   
+ 
+            pinMode(hallPin, INPUT);  
+            }
+```
+
+```
+
+             
+            void loop(){
+```
+
+```
+
+             
+              hallState = analogRead(hallPin); // reading the state of the hall effect sensor pin
+```
+
+```
+
+             
+                Serial.println(hallState);  
+                Serial.println("detect");  //  
+                delay(200);  
+
+                }  
+```
+
+The analog detection is reflected by the change of **magnetic field magnitude** and the **voltage** as the magnetic field approaches or moves away.  
+For example, when magnet moves towards the Hall effect sensor from the front, the detected magnetic field is around 110.
+
+![Image 9: Front Side](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/img/weekly_pic/week9/group/analog_2.jpg)
+
+Front Side
+
+On the other hand, when the magnet approaches from the back, the detected magnetic field is around 1000.
+
+![Image 10: Back Side](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/img/weekly_pic/week9/group/analog_1.jpg)
+
+Back Side
+
+We have also used the multimeter to detect the actual change of voltage when moving the magnet from different direction, which is shown in the following video.
+
+#### Files
+
+* * *
+
+Arduino Code:  
+Individual:  ●   [Hall Effect Sensor Test](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/Files/Week9/ArduinoHallEffect/ArduinoHallEffect.ino)  ●   [Full Motor Control Code](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/Files/Final/ATtiny1614/ATtiny1614.ino)  
+Group:  ●   [Analog Detection](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/Files/Week9/analog_hall/analog_hall.ino)  ●   [Digital Detection](https://fabacademy.org/2020/labs/oulu/students/xinhui-hu/Files/Week9/digital_hall/digital_hall.ino)

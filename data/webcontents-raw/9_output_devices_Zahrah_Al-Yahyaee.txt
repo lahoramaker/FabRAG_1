@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Zahrah AlYahyaee">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Zahrah -Output Devices- 2018</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Zahrah AlYahyaee</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+
+
+     <h1>Week 12:<br>
+       Output Devices </h1>
+    
+        <legend><h3>Mission objectives:</h3>
+        <p>Add an output device to a microcontroller board you've designed and program it to do something.</p>     
+       <p>Describe your design and fabrication process using words/images/screenshots.</p>
+        <p>Explain programming process/es you used and how the microcontroller datasheet helped you.</p>
+        <p>Describe problems and how the team solved them.</p>
+        <p>Include original design files and code.</p>
+        
+       <br></legend>
+ <p> As I mentioned in the previous <a href="exercise11.html"><b>week 11</b></a> that  I incorporated the input with output in one board. However, here I will focus my explanation on the output only.
+
+I would like to use the neopixel RGB led in the final project, as I try how the RGB led works and connect it to the sensor.</p>
+        <h3>Steps of making  my board: </h3>
+        <p>My plan is to make the input and output in one board, so this is the schematic of the board here:</p>
+     
+        
+   
+   <div class="jumbotron"> 
+       <P> This board's schematic includes the output the RGB for this weeks assignment.</P>
+       
+                 <p class="pic"><img src=images/w12/schematic-rgb.JPG >
+                <p class="pic"><img src=images/w12/eagle-rgb.JPG >
+                    
+                <p> This is the pinout of the RGB led taken from this <a href="https://media.digikey.com/pdf/Data%20Sheets/CREE%20Power/CLV1A-FKB_Rev5.pdf"><b>datasheet</b></a></p>
+         <p class="pic"><img src=images/w12/sereal-from-fabfoundation-min.jpg>
+             
+              <p class="pic"><img src=images/w12/datasheet-led-pinsconnections-min.JPG >
+ <h4> The RGB has 3 leds: Red, Green, Blue and they have a common anode. <a href="http://archive.fabacademy.org/fabacademy2017/fablabuae/students/154/"><b>Hashim</b></a> explained to me what common anode means and how it work. So you see in the image that the anode is (+) VCC and all RGB connected to the anode which means they are all conected to the VCC but from the other side they all connected to different pins which is (-) Ground, so you can turn them off separately.<br> 
+     PWM (<b>0</b>= zero volt <b>255</b>= 5 volt) and here we can change the numbers between 0-255 regarding to what color you want. So the RGB will work in reverse way so for example if we give the LED 5V it will turn off because then the LED will connected to the ++ in both sides.</h4>
+        <p class="pic"><img src=images/w12/common%20anode.jpeg>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/n1g2BzzUoaQ?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+ 
+       <p> This is the first board</p>
+       <p class="pic"><img src=images/w12/board.JPG >
+        <p class="pic"><img src=images/w12/pcb.jpg>
+       
+       <p>I learned a trick from <a href="http://archive.fabacademy.org/fabacademy2017/fablabuae/students/154/"><b>Hashim</b></a> and <a href="http://fab.academany.org/2018/labs/fablabuae/students/salama-altamimy/Output%20Devices.html"><b>Salama</b></a> it is easy and quick way to connect  all traces and thats by using jumpers as a bridge over traces.</p>
+       
+       <p>Here is the code which I modified from <a href="http://fab.academany.org/2018/labs/fablabuae/students/salama-altamimy/Output%20Devices.html"><b>Salama</b></a> code so I changed the color code and pins regarding to my board.</p>
+       
+         <iframe src="images/w12/rgb-output-code.txt" frameborder="0" height="400" width="95%"> 
+      </iframe>
+       <br> <br>
+       <p> So in the RGB LED the red colour is connected to pin 1 or D1 in attiny44, green to pin 0 or D0 and blue to pin 2 or D2 and "D" here means digital. </p>
+        <p class="pic"><img src=images/w12/attiny-pinout2.jpg>
+       <p> This chart or illustration helped me to figure out the number and its value as I began to choose colors by changing numbers and see if it has same color. for example (255, 0, 0) gives red color, (127, 255, 0) maroon color and etc...</p> <br>
+               <p class="pic"><img src=images/w12/rgb-colorweel.png>
+
+       <p> <br>The video shows the colors and shows the code used and you can also easily recognize it from the graphic as mentioned above.</p>
+       
+        
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/KrvZt6VMX7U?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+       
+       <br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nvuLdHgG1b8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/nFK3DCW1Iq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+   
+       
+       
+    <h3> Why I changed the board</h3>
+       
+    <h4>I have two reasons for changing the board:</h4>   
+       <p4>1.I lost my original schematic of this board because I had a problem with my computer and most of the files were deleted and I could not save the file.</p4><br>
+       
+    <p4>2.I wanted to use the new pixel strip instead of the RGB LED because I found it easier to control in my table also it gives more light to the table and its good time to work for final in this week too. </p4>
+    
+  
+       <br><h3> <b> The assignment </b></h3>
+       
+       <h4> 
+       
+I used <a href="project04.html"> final project board</a>. Also I added the eagle file in the zip folder at the end of this page.</h4>   
+       <h4> I was very careful checking the pinout for final project board and coding. </h4>
+       
+     <p> <img src="images/w12/full33.jpg">
+       <p> <img src="images/w12/capture.JPG">     
+           <p> <img src="images/w12/b1.JPG">     
+       
+<p> This is the table from the  datasheet which shows how we calculate to have the value of resistor.</p>       
+       <p class="pic"><img src=images/w12/how%20we%20calculate%20resistor-w12-min.JPG >
+ <p> Here is an example we did in the section which Hashim gave us. So the equation of calculating the resistor in the image. </p>          
+            <p class="pic"><img src=images/w12/calculate.JPG>
+                
+
+    <p> So soldering the strip of neopixel and testing by arduino then my board.</p>
+      <p> Testing neopixel strip with Arduino Uno</p>   
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4IDW9VS9KVA?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+ <p class="pic"><img src=images/w12/rgb1.jpg > 
+    
+    
+    
+</p></div>
+        
+      
+    
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUmbkPrUE_c?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qwGMlsjaFcY?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+ 
+<p> The test of the  output "neopixel" from my board, please do visit project development page to see more , <a href="exercise20.html"><b>week 20</b></a></p>
+   <p class="pic"><img src=images/w12/p1.JPG>
+            
+      
+<br><h3>Arduino code</h3>
+        
+        <p> <b>I used the baord I made for final project and here is the code which I modified it from Salama code so I changed the colors and sensor code regarding to my board.</b></p>
+    <iframe src="images/w12/neopixel.txt" frameborder="0" height="400" width="95%"> 
+      </iframe>
+       <br> <br>
+        <h4>Look at the steps for running the neopixel strip with images</h4>
+        
+  <p class="pic"><img src=images/w12/1.JPG>
+
+       <p class="pic"><img src=images/w12/t12.JPG>
+             <p class="pic"><img src=images/w12/4.JPG>
+       
+      <h4>And here see the video </h4>  
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZQt2BetOmEQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+          <br><a href="images/w12/zahra-output.zip"><button type="button" class="btn btn-primary btn-lg">zahra-output.zip</button> </a>
+        
+        
+        
+        
+        
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p id="cclicense">
+                </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

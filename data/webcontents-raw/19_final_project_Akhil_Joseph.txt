@@ -1,0 +1,791 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <!-- Page Title Here -->
+  <title>Final Project</title>
+
+  <!-- Meta -->
+  <!-- Page Description Here -->
+  <meta name="description" content="Final Project">
+
+  <!-- Disable screen scaling-->
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+  <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+  <!-- Web fonts and Web Icons -->
+  <link rel="stylesheet" href="fontsw/opensans/stylesheet.css">
+  <link rel="stylesheet" href="fontsw/bebas/stylesheet.css">
+  <link rel="stylesheet" href="fontsw/ionicons.min.css">
+  <link rel="stylesheet" href="fontsw/font-awesome.min.css">
+
+  <!-- Vendor CSS style -->
+  <link rel="stylesheet" href="cssw/pageloader.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="cssw/myimg.css">
+
+  <!-- Uncomment below to load individualy vendor CSS -->
+  <link rel="stylesheet" href="cssw/bootstrap.min.css">
+  <link rel="stylesheet" href="jsw/vendor/swiper.min.css">
+  <link rel="stylesheet" href="jsw/vendor/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="jsw/vegas/vegas.min.css">
+
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="cssw/main.css">
+
+  <!-- add alt layout here -->
+  <link rel="stylesheet" href="cssw/style-default.css">
+
+  <script src="jsw/vendor/modernizr-2.7.1.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133770407-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-133770407-1');
+  </script>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #06023b;
+    }
+  </style>
+</head>
+
+<body id="menu" class="body-item">
+  <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+  <!-- Page Loader : just comment these lines to remove it -->
+  <div class="page-loader" id="page-loader">
+    <div>
+      <div class="icon ion-spin"></div>
+      <p>Akhil Joseph</p>
+    </div>
+  </div>
+
+  <!-- BEGIN OF site header Menu -->
+  <header class="page-header navbar page-header-alpha scrolled-white menu-right topmenu-right">
+
+    <!-- Begin of menu icon toggler -->
+    <button class="navbar-toggler site-menu-icon" id="navMenuIcon">
+      <!-- Available class : menu-icon-dot / menu-icon-thick /menu-icon-random -->
+      <span class="menu-icon menu-icon-random">
+        <span class="bars">
+          <span class="bar1"></span>
+          <span class="bar2"></span>
+          <span class="bar3"></span>
+        </span>
+      </span>
+    </button>
+    <!-- End of menu icon toggler -->
+
+
+    <!-- begin of menu wrapper -->
+    <div class="all-menu-wrapper" id="navbarMenu">
+      <!-- Begin of top menu -->
+      <nav class="navbar-topmenu">
+        <!-- Begin of CTA Actions, & Icons menu -->
+        <ul class="navbar-nav navbar-nav-actions">
+          <li class="nav-item">
+            <a class="btn btn-outline-white btn-round" href="index.html#assignments">
+              Assignments
+            </a>
+          </li>
+        </ul>
+        <!-- End of CTA & Icons menu -->
+      </nav>
+      <!-- End of top menu -->
+
+      <!-- Begin of hamburger mainmenu menu -->
+      <nav class="navbar-mainmenu">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html#home">Home
+              <!-- <span class="sr-only">(current)</span> -->
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="item.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="demo.html">Assignments</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- End of hamburger mainmenu menu -->
+
+      <!-- Begin of sidebar nav menu params class: text-only / icon-only-->
+      <nav class="navbar-sidebar icon-only">
+        <ul class="navbar-nav" id="qmenu">
+          <li class="nav-item" data-menuanchor="home">
+            <a href="index.html#home">
+              <i class="icon ion-ios-home-outline"></i>
+              <span class="txt">Home</span>
+            </a>
+          </li>
+          <li class="nav-item" data-menuanchor="about">
+            <a href="index.html#about">
+              <i class="icon ion-ios-information-outline"></i>
+              <span class="txt">About Me</span>
+            </a>
+          </li>
+          <li class="nav-item" data-menuanchor="about">
+            <a href="index.html#contact">
+              <i class="icon ion-ios-telephone-outline"></i>
+              <span class="txt">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- End of sidebar nav menu -->
+    </div>
+    <!-- end of menu wrapper -->
+
+  </header>
+  <!-- END OF site header Menu-->
+
+  <!-- BEGIN OF page main content -->
+  <main class="page-main page-fullpage main-anim" id="itempage">
+
+    <!-- Begin of list two side 1 section -->
+    <div class="section section-twoside fp-auto-height-responsive section-item" data-section="item-alpha">
+      <div class="section-cover-tier mask-black" style="background-image:url('imgw/items/flutedrawing.jpg')">
+        <div class="cover-content">
+          <div class="title-desc">
+            <h2 class="display-4 display-title">Akhil</h2>
+            <p>Final Project</p>
+          </div>
+        </div>
+      </div>
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper largewidth">
+
+        <!-- text or illustration order are manipulated via Bootstrap order-md-1, order-md-2 class -->
+
+
+        <!-- begin of item -->
+        <div class="item row">
+          <!-- margi reservation -->
+          <div class="col-12 col-md-4">
+          </div>
+
+          <!-- begin of text content -->
+          <div class="col-12 col-md-8 center-vh">
+            <!-- content -->
+            <div class="section-content anim scrollable">
+
+              <article class="article article-light">
+                <header class="article-header">
+                  <div class="wrapper">
+                    <div class="media media-article-title">
+                      <img class="media-image d-flex align-self-center mr-3 rounded-circle" src="imgw/akhil.jpg"
+                        alt="Generic placeholder image">
+                      <div class="media-body align-self-center">
+                        <h5 class="mt-0 media-title">
+                          <strong>Akhil Joseph</strong>
+                        </h5>
+                        <p class="mb-0 t-nowrap">Fab Accadamy 2019</p>
+                        <p class="mb-0 t-nowrap">January 20, 2019</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+                <div class="article-content w3-justify">
+                  <div class="wrapper">
+                    <h2><b>Final Project</b></h2>
+                    <h4>Make a Flute play music like a Flutist</h4>
+
+                    <h5>What is flute??</h5>
+
+
+
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/maxresdefault.jpg" style="width:90%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                    </div>
+
+                    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                      <div class="w3-modal-content w3-animate-zoom">
+                        <img id="img01" style="width:100%">
+                      </div>
+                    </div>
+
+                    <p>Indian flute is a cylindrical wooden instrument played which has holes and can be played with the
+                      help of blow and fingers. As it is the instrument of Lord Krishna, it has religious importance
+                      too. when played correctly the sound Produced is melodious and liked by everyone.s </p>
+
+                    <p>The “flute family” is the oldest Instrumental family in the woodwind category. </p>
+                    <p>A flute in The Renaissance period sas a simple cylindrical wooden tube with a few finger holes
+                      and an embouchure hole. </p>
+                    <p>Throughout the course of time, the structure and design of the instrument gradually changed and
+                      became more better. </p>
+
+                    <p>I wanted to learn Engineering with my love of Music and love towards flute I decided to mix them
+                      and make a machine which will play flute automatically. my basic idea is to use Motors instead of
+                      fingers and a blower instead of blowing with mouth. This instrument can make a change and replace
+                      one person in the band and we would be able to play flute without learning how to play a flute.
+                    </p>
+
+                    <ul>
+                      <li>What task completed?
+                        <p>Flute basic operations completed. It can produce notes.Flute fingering mechanism works fine
+                        </p>
+
+                      </li>
+                      <li>what tasks remain?
+                        <P>The blower nozzile have very low pressur, so the last holes cant produce sound upto the mark
+
+                        </P>
+                      </li>
+                      <li>
+                        what has works?
+                        <p>
+                          <ul>
+                            <li>Fingering mechanism works</li>
+                            <li>Blower works</li>
+                            <li>Servos works fine</li>
+                          </ul>
+                        </p>
+
+                      </li>
+                      <li>What hasn't work?
+                        <p>Last holes can't produce enough sound</p>
+                      </li>
+                      <li>What questions need to resolved
+                        <p>
+                          need to study some airodyanamics, to learn how to make flow smoother and reduce back pressure.
+                        </p>
+                      </li>
+                      <li>what have learned?
+                        <p>I learned 3D-modeling, and some aire flow relations</p>
+                      </li>
+                    </ul>
+
+                    <h3>CAD Design</h3>
+                    <h4>1. Flute stand</h4>
+                    <p>
+
+                    </p>
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/flute stand.png" style="width:90%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                    </div>
+
+                    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                      <div class="w3-modal-content w3-animate-zoom">
+                        <img id="img01" style="width:100%">
+                      </div>
+                    </div>
+
+                    <p>
+
+                      I 3D printed the model and it was fitting corectly with the flute.
+
+                    </p>
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/flute stand.jpg" style="width:90%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                    </div>
+                    <p></p>
+
+                    <a class="btn btn-round" href="Downlods/final project/flutestand.ipt" download><i
+                        class="fa fa-download"></i>
+                      Download Inventor files
+                    </a>
+                    <a class="btn btn-round" href="Downlods/final project/flutestand.stl" download><i
+                        class="fa fa-download"></i>
+                      Download STL file
+                    </a>
+
+                    <p></p>
+                    <h3>2. Servo Stand</h3>
+                    <p>
+                      I made one stand for servo by 3D-printing, which was not much strong to hold the servo.
+                      The servo got fixed in that stand but it didn't balance properly on the movement of servo motor.
+                      so I designed a new one. At this time i think, LASER CUTTING is a better option, because
+                      3D-printing is time
+                      consuming task. so i design a new one for my SG90 servos.
+
+                    </p>
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/servohold.png" style="width:90%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                    </div>
+
+                    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                      <div class="w3-modal-content w3-animate-zoom">
+                        <img id="img01" style="width:100%">
+                      </div>
+                    </div>
+
+                    <p></p>
+
+                    <a class="btn btn-round" href="Downlods/final project/Servo hold.ipt" download><i
+                        class="fa fa-download"></i>
+                      Download Inventor file
+                    </a>
+                    <a class="btn btn-round" href="Downlods/final project/servohold.zip" download><i
+                        class="fa fa-download"></i>
+                      Download DXF files
+                    </a>
+                    <p>
+
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/L0dyRvyrLlU" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                      <p>i lasercut this and fix servos in it</p>
+
+                    </p>
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/servo hold2.jpg" style="width:90%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                    </div>
+
+                    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                      <div class="w3-modal-content w3-animate-zoom">
+                        <img id="img01" style="width:100%">
+                      </div>
+                    </div>
+
+                    <p></p>
+
+                    <h3>3. Fingers </h3>
+                    <p>Fingers for the holes of flute. I made fingers using silikka rubber. By molding and casting. This
+                      by drow a square in coral draw, and cut it in LASER. please reffer my <a href="http://"
+                        target="_blank" rel="noopener noreferrer"> computer controled cutting </a> week to know
+                      more about laser cutting
+                      i paste it on another acrilic sheet. Then i cast it in silicon rubber. please reffer my <a
+                        href="http://" target="_blank" rel="noopener noreferrer"> moulding and casting </a> week to
+                      learn
+                      how to make mold using silicon. </p>
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/finger1.jpeg" style="width:90%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                    </div>
+                    <p>Then take some resin with proper ratio and mix it then poure it in mold, please refer my <a
+                        href="http://" target="_blank" rel="noopener noreferrer">moulding and castig </a>
+                      week t learn more about it.
+                    </p>
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/items/week10/resin2.jpg" style="width:90%;cursor:pointer" onclick="onClick(this)"
+                          class="w3-hover-opacity">
+                      </div>
+                    </div>
+                    <p>After curing time we got fllowing moulds</p>
+
+
+                    <p>
+                    </p>
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/finger2.jpeg" style="width:90%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                    </div>
+                    <p></p>
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/finger.jpeg" style="width:90%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                    </div>
+
+                    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                      <div class="w3-modal-content w3-animate-zoom">
+                        <img id="img01" style="width:100%">
+                      </div>
+                    </div>
+                    <p></p>
+
+                    <h5>Fixing fingers on the flute</h5>
+                    <p>This idea is made my my frent akhil g babu.He take a tape and fix this in flute. this is a nice
+                      idea.
+                      this also helps the servo mechanism easy. my plan is to build and 3D-print a mechanism for this.
+                      But he made my work more easyer.
+                    </p>
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/coperwire.jpeg" style="width:90%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                    </div>
+                    <p>Heuse 3m tape and copper wire to make the movement Mechanism</p>
+
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/3mtape.jpeg" style="width:90%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                    </div>
+                    <p>Finaly he attach this to servo, so when servo works, it will open and close holes</p>
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/mchanism.jpeg" style="width:90%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                    </div>
+                    <p>Finaly he attach this to servo, so when servo works, it will open and close holes</p>
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/fixing.jpeg" style="width:90%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                    </div>
+
+
+                    <h3>4. Blower</h3>
+                    <p>Blower for the flute. This blower can be used for your flute, if not approprialte you can make
+                      the nozzel according to your flute length. Cut the upper part and make a nozzel according to your
+                      flute. </p>
+                    <p>This is the most complex part for me, This is difficult because the im very new to aero
+                      dyanamics, so the
+                      problem is that the flute will only produce sound when the flow and angle of incidence is correct.
+                    </p>
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/blower.png" style="width:90%;cursor:pointer" onclick="onClick(this)"
+                          class="w3-hover-opacity">
+                      </div>
+                    </div>
+
+                    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                      <div class="w3-modal-content w3-animate-zoom">
+                        <img id="img01" style="width:100%">
+                      </div>
+                    </div>
+                    <p></p>
+                    <a class="btn btn-round" href="Downlods/final project/nozzile.ipt" download><i
+                        class="fa fa-download"></i>
+                      Download Inventor files
+                    </a>
+                    <a class="btn btn-round" href="Downlods/final project/nozzile.stl" download><i
+                        class="fa fa-download"></i>
+                      Download STL file
+                    </a>
+                    <p></p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lG2zfvbk3FQ" frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                    <p></p>
+
+
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/Finalproject/blownozzle.jpeg" style="width:90%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                    </div>
+                    <p></p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/W9cUWz80_B0" frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+
+
+                    <p></p>
+
+                    <h3>Electronics Mother board</h3>
+                    <p>Heare i use board which i designed in <a
+                        href="http://fab.academany.org/2019/labs/kochi/students/akhil-joseph/week12.html"
+                        target="_blank">week 12</a> Output devices. Which have 6 Servo
+                      compactable connectors, FTDI connector, OLED compatable onnector and one LED on 13th digital pin.
+                      Full details and schematics aviialable in <a
+                        href="http://fab.academany.org/2019/labs/kochi/students/akhil-joseph/week12.html"
+                        target="_blank">week 12</a> assignment page.
+                    </p>
+
+                    <div class="w3-row-padding">
+                      <div class="w3-container w3-center">
+                        <img src="imgw/items/week12/oled.jpeg" style="width:90%;cursor:pointer" onclick="onClick(this)"
+                          class="w3-hover-opacity">
+                      </div>
+                    </div>
+
+                    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                      <div class="w3-modal-content w3-animate-zoom">
+                        <img id="img01" style="width:100%">
+                      </div>
+                    </div>
+                    <p></p>
+                    <h3>4. Embedded Programming</h3>
+                    <p>I used Arduino to program my board. Because of an Embedded JOB background, this is a easy task
+                      for me. Heare i dont know nothing about music. so i can only produce sounds,
+                      <code>sa,ri,ga,ma,pa,ni</code>
+                      i just write a program to open and clse cach holes. i use Servo.h Library.
+                    </p>
+
+                    <div style="height:2550px;
+                    line-height:3em;overflow:scroll;padding:5px;
+                    background-color:rgb(167, 166, 166);color:rgb(0, 0, 0);
+                    border:4px double rgb(43, 42, 38);">
+                      <pre>
+    <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><b><font color="#d35400">Servo</font></b><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+    <b><font color="#d35400">Servo</font></b> <font color="#000000">s1</font><font color="#434f54">,</font> <font color="#000000">s2</font><font color="#434f54">,</font> <font color="#000000">s3</font><font color="#434f54">,</font> <font color="#000000">s4</font><font color="#434f54">,</font> <font color="#000000">s5</font><font color="#434f54">,</font> <font color="#000000">s6</font><font color="#000000">;</font> &nbsp;<font color="#00979c">int</font> <font color="#000000">pos</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font>
+    <font color="#00979c">void</font> <font color="#5e6d03">setup</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;<font color="#000000">s1</font><font color="#434f54">.</font><font color="#d35400">attach</font><font color="#000000">(</font><font color="#000000">3</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">s2</font><font color="#434f54">.</font><font color="#d35400">attach</font><font color="#000000">(</font><font color="#000000">5</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">s3</font><font color="#434f54">.</font><font color="#d35400">attach</font><font color="#000000">(</font><font color="#000000">6</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">s4</font><font color="#434f54">.</font><font color="#d35400">attach</font><font color="#000000">(</font><font color="#000000">9</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">s5</font><font color="#434f54">.</font><font color="#d35400">attach</font><font color="#000000">(</font><font color="#000000">10</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">s6</font><font color="#434f54">.</font><font color="#d35400">attach</font><font color="#000000">(</font><font color="#000000">11</font><font color="#000000">)</font><font color="#000000">;</font>
+    <font color="#000000">}</font>
+    <font color="#00979c">void</font> <font color="#5e6d03">loop</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;<font color="#5e6d03">for</font> <font color="#000000">(</font><font color="#000000">pos</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">&lt;=</font> <font color="#000000">120</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">+=</font> <font color="#000000">30</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;&nbsp;&nbsp;<font color="#000000">s1</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">pos</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">50</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">}</font>
+     &nbsp;<font color="#5e6d03">for</font> <font color="#000000">(</font><font color="#000000">pos</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">&lt;=</font> <font color="#000000">120</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">+=</font> <font color="#000000">30</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;&nbsp;&nbsp;<font color="#000000">s2</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">pos</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">50</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">}</font>
+     &nbsp;<font color="#5e6d03">for</font> <font color="#000000">(</font><font color="#000000">pos</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">&lt;=</font> <font color="#000000">120</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">+=</font> <font color="#000000">30</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;&nbsp;&nbsp;<font color="#000000">s3</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">pos</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">50</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">}</font>
+     &nbsp;<font color="#5e6d03">for</font> <font color="#000000">(</font><font color="#000000">pos</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">&lt;=</font> <font color="#000000">120</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">+=</font> <font color="#000000">30</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;&nbsp;&nbsp;<font color="#000000">s4</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">pos</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">50</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">}</font>
+     &nbsp;<font color="#5e6d03">for</font> <font color="#000000">(</font><font color="#000000">pos</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">&lt;=</font> <font color="#000000">120</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">+=</font> <font color="#000000">30</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;&nbsp;&nbsp;<font color="#000000">s5</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">pos</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">50</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">}</font>
+     &nbsp;<font color="#5e6d03">for</font> <font color="#000000">(</font><font color="#000000">pos</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">&lt;=</font> <font color="#000000">120</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">+=</font> <font color="#000000">30</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;&nbsp;&nbsp;<font color="#000000">s6</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">pos</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">50</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">}</font>
+     &nbsp;<font color="#5e6d03">for</font> <font color="#000000">(</font><font color="#000000">pos</font> <font color="#434f54">=</font> <font color="#000000">120</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">&gt;=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">-=</font> <font color="#000000">30</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;&nbsp;&nbsp;<font color="#000000">s3</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">pos</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">50</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">}</font>
+    
+     &nbsp;<font color="#5e6d03">for</font> <font color="#000000">(</font><font color="#000000">pos</font> <font color="#434f54">=</font> <font color="#000000">120</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">&gt;=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">-=</font> <font color="#000000">30</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;&nbsp;&nbsp;<font color="#000000">s2</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">pos</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">50</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">}</font>
+     &nbsp;<font color="#5e6d03">for</font> <font color="#000000">(</font><font color="#000000">pos</font> <font color="#434f54">=</font> <font color="#000000">120</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">&gt;=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">-=</font> <font color="#000000">30</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;&nbsp;&nbsp;<font color="#000000">s3</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">pos</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">50</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">}</font>
+     &nbsp;<font color="#5e6d03">for</font> <font color="#000000">(</font><font color="#000000">pos</font> <font color="#434f54">=</font> <font color="#000000">120</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">&gt;=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">-=</font> <font color="#000000">30</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;&nbsp;&nbsp;<font color="#000000">s4</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">pos</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">50</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">}</font>
+     &nbsp;<font color="#5e6d03">for</font> <font color="#000000">(</font><font color="#000000">pos</font> <font color="#434f54">=</font> <font color="#000000">120</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">&gt;=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">-=</font> <font color="#000000">30</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;&nbsp;&nbsp;<font color="#000000">s5</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">pos</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">50</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">}</font>
+     &nbsp;<font color="#5e6d03">for</font> <font color="#000000">(</font><font color="#000000">pos</font> <font color="#434f54">=</font> <font color="#000000">120</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">&gt;=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">pos</font> <font color="#434f54">-=</font> <font color="#000000">30</font><font color="#000000">)</font> <font color="#000000">{</font>
+     &nbsp;&nbsp;&nbsp;<font color="#000000">s6</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">pos</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">50</font><font color="#000000">)</font><font color="#000000">;</font>
+     &nbsp;<font color="#000000">}</font>
+    <font color="#000000">}</font>
+    
+    
+    </pre>
+                    </div>
+
+                    <h3>Testing</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_NcRU24KkNs" frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+
+                    <h3>Bill of materials</h3>
+                    <p>
+
+                    </p>
+                    <table>
+                      <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+
+                      </tr>
+                      <tr>
+                        <td>Servo Motor</td>
+                        <td>Used in place of fingers</td>
+                        <td>6</td>
+                        <td>Rs.720</td>
+                      </tr>
+                      <tr>
+                        <td>BLDC Motor</td>
+                        <td>Used to rotate blower for blow air into the flute</td>
+                        <td>1</td>
+                        <td>Rs.585</td>
+                      </tr>
+                      <tr>
+                        <td>3LASER CUT Flute Stand</td>
+                        <td>Pressfitting for holding the flute</td>
+                        <td>3</td>
+                        <td>Rs.120</td>
+                      </tr>
+                      <tr>
+                        <td>3D Printed Servo Stand</td>
+                        <td>To hold the servo</td>
+                        <td>6</td>
+                        <td>Rs.240</td>
+
+                      </tr>
+
+                      <tr>
+                        <td>Laser cut base</td>
+                        <td>Base of the flute</td>
+                        <td>2</td>
+                        <td>Rs.160</td>
+                      </tr>
+
+                      <tr>
+                        <td>Flute</td>
+                        <td>6 hole PVC</td>
+                        <td>1</td>
+                        <td>Rs.350</td>
+                      </tr>
+
+                      <tr>
+                        <td>Nut and Bolts</td>
+                        <td>Fixing all the components in the Base</td>
+                        <td>1</td>
+                        <td>Rs.350</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Total</td>
+                        <td>Rs. 2525</td>
+                      </tr>
+                    </table>
+
+                    <p></p>
+                    <p>
+                        <a class="btn btn-round" href="presentation.png" target="_blank" >
+                          Presentation brochure
+                      </a>
+                      <a class="btn btn-round" href="presentation.mp4" target="_blank">
+                        Presentation video
+                    </a>
+                    
+                    </p>
+
+                  </div>
+                </div>
+                <footer class="article-footer">
+                  <div class="article-details">
+                    <div class="media media-article-title">
+                      <img class="media-image d-flex align-self-center mr-3 rounded-circle" src="imgw/akhil.jpg"
+                        alt="Generic placeholder image">
+                      <div class="media-body align-self-center">
+                        <h5 class="mt-0 media-title">
+                          <strong>NEXT WEEK</strong>
+                        </h5>
+                        <p class="mb-0 t-nowrap">project management</p>
+                        <p class="mb-0 t-nowrap">January 20, 2019</p>
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+              </article>
+
+              <!-- Action button -->
+              <div class="btns-action mt-4">
+                <a class="btn btn-outline-primary btn-round" href="#">
+                  Previous Week
+                </a>
+                <a class="btn btn-transp-arrow btn-outline btn-primary btn-round" href="#">
+                  <span class="icon arrow-right"></span>
+                  <span class="text">Next Week</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- end of text content -->
+        </div>
+        <!-- end of item -->
+
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of list two side 1 section -->
+  </main>
+  <!-- END OF page main content -->
+
+
+
+  <!-- scripts -->
+  <!-- All Javascript plugins goes here -->
+  <script src="jsw/vendor/jquery-1.12.4.min.js"></script>
+
+  <script>
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+    }
+  </script>
+
+  <!-- All vendor scripts -->
+  <script src="jsw/vendor/scrolloverflow.min.js"></script>
+  <script src="jsw/vendor/all.js"></script>
+  <script src="jsw/particlejs/particles.min.js"></script>
+
+  <!-- Countdown script -->
+  <script src="jsw/jquery.downCount.js"></script>
+
+  <!-- Form script -->
+  <script src="jsw/form_script.js"></script>
+
+  <!-- Javascript main files -->
+  <script src="jsw/main.js"></script>
+
+
+</body>
+
+
+<!-- Mirrored from demo.highhay.com/simpleux/item.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Feb 2019 10:54:24 GMT -->
+
+</html>

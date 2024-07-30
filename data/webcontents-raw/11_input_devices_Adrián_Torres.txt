@@ -1,0 +1,628 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Week 09. Input Devices</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/LOGO%20fablab.png" alt="" /></span><span class="title">Adrián Torres</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul><li><a href="index.html">Home</a></li>
+							<li><a href="assignments.html">Assignments</a></li>
+							<li><a href="project.html">Final Project</a></li>
+                            <li><a href="adrianino.html">Adrianino</a></li>
+                            <li><a href="samdino.html">SAMDino</a></li>
+                            <li><a href="fabxiao.html">Fab-Xiao</a></li>
+							<li><a href="about.html">About me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Week 09. Input Devices</h1>
+							
+                            <p>This week there are also two types of assignments, one group and one individual. In my case being alone in the Fab Lab, I do both.</p>
+                            
+                            <ul><li> Probe an input device(s)'s analog and digital signals. ✔
+                                <li> Document your work (in a group or individually). ✔ 
+                                <li> Measure something: add a sensor to a microcontroller board that you have designed and read it. ✔
+                                <li> Linked to the group assignment page. ✔
+                                <li> Documented what you learned from interfacing an input device(s) to microcontroller and how the physical property relates to the measured results. ✔    
+                                <li> Documented your design and fabrication process or linked to previous examples. ✔ 
+                                <li> Explained the programming process/es you used. ✔ 
+                                <li> Explained problems and how you fixed them. ✔ 
+                                <li> Included original design files and source code. ✔ 
+                                <li> Included a ‘hero shot/video’ of your board. ✔     
+                            </ul>  
+                            
+                            
+                            <p>Like every week, my weekly schedule. 😊 </p>
+                            <p><img src="images/week09/week09.01.jpg" width="80%"; max-width="700" /></p>   
+                            
+                            <p style="color:orangered;"> <i>This week I am going to try to make two inputs, a Hello Reflect / Light with normal light or infrared and another Hello Distance with the Time of Flight sensor. My idea is to try to test the inputs that I am going to use to see which is the best for my final project. </i> 😅</p>
+                            
+                            <p><b>The Fab Lab León is closed to the general public due to the coronavirus 😷, but the c(u)ore is working and helping to create a protective face shield for nurses, doctors ... Nuria, Pablo and I have been printing in 3D and now we are also doing them with laser cutting. The girl on the right is my sister who is a nurse, and very proud of her and that she is wearing the shield that her brother 3D printed. 😘 </b></p>
+                            
+                            <span class="image main"><img src="images/week09/week09.35.jpg" alt="" /></span>
+                            
+                            <h1>Group Assignment</h1>  
+                            <p>The <b>Group Assignment page</b> is at the following <a href="http://academany.fabcloud.io/fabacademy/2020/labs/leon/leon-group-assignments/"><b>link.</b></a></p>
+                            <p>If you click on this <a href="#group"><b>link,</b></a> you go to the Group Assignment section that I have done for this week.</p>
+                            
+                            
+                            <h1>Hello Reflect / Light.</h1>
+                            <h2>Design</h2>
+                            <p>For the Hello Reflect / Light I am going to use the <b>ATtiny 1614.</b> I use Eagle, and as in <a href="week06.html"> <b>Week 06</b></a> it does not exist in the footprint library of said microcontroller. I was using the ATtiny44 footprint. During the Regional Review, Nuria showed us the <a href="https://octopart.com/attiny1614-ssfr-microchip-82181131?r=spc#PriceAndStock"> <b> Octopart page,</b></a>  where by chance the ATtiny1614 footprint appeared. Thanks Nuria. 😘</p>
+                            
+                            <p>Once the footprint and the outline have been downloaded, I add it to the library.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.02.jpg" alt="" /></span>
+                            
+                            <p>I use Neil's Hello Reflect and the one made by <a href="http://fabacademy.org/archives/2013/students/contonente.javier/week10/week10.html"> <b>Japi Contonente</b></a> during his Fab Academy 2013. For my project as phototransistors and LEDs are going to go under the track, I'm going to use cables with connectors to test if it works. These connectors also help me to use a <b>visible or IR phototransistor</b>. I have included a connector for <b>I2C communications.</b> This is the result of the schematic using the ATtiny1614. </p>
+                            
+                            <p><img src="images/week09/week09.03.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>When I started drawing the board, I ran into a little problem. The ATtiny1614 footprint has a layer with an outer contour that even if you turn it off you cannot trace the lines. 😰</p>
+                            
+                            <p><img src="images/week09/week09.04.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>But within the component properties menu there is a tool <b>Footprint Properties</b> that allows us to edit the component. So I delete the outer line and take the opportunity to <b>modify the paths</b>, I make them a little smaller so that I can fit 3 lines between the pins of the ATtiny.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.05.jpg" alt="" /></span>
+                            
+                            <p>This is the end result of the board. After exporting it as a monochrome image, I use <b>GIMP</b> to create the outer border and erase the paths I don't need from the connectors.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.06.jpg" alt="" /></span>
+                            
+                            <h2>Making</h2>
+                            
+                            <p>And these are the two images ready to use in the Modela.</p>
+                            
+                            <p><img src="images/week09/week09.07.jpg" width="70%"; max-width="700" /></p>
+                            
+                            
+                            <p>After milling the board using <b>Mods CE,</b> this is the end result.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.08.jpg" alt="" /></span>
+                            
+                            <p>This is the list of components, I take another 50K resistor to test the sensitivity of the phototransistor. In principle I will use the 10K. Also as I have mentioned above, I am going to use the two types of phototransistor so I take the Visible and the IR with the corresponding LEDs (visible and IR).</p>
+                            
+                            <p><img src="images/week09/week09.09.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>During the soldering process, I realize that there are two tracks attached, the mill did not remove the copper that was not necessary. So with a knife I remove the small piece.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.10.jpg" alt="" /></span>
+                            
+                            <p>Once the problem is solved, this is the result with the board finished, in the absence of soldering the cables with the phototransistors.</p>
+                            
+                            <p><img src="images/week09/week09.11.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>Following the datasheet of the phototransistors and the IR LED, this is their connection. These are the Datasheet links. <a href="https://www.digikey.es/es/datasheets/everlight-electronics-co-ltd/everlight-electronics-co-ltd-pt15-21b-tr8"> <b>Phototransistor IR PT15-21B</b></a> <a href="https://www.digikey.es/htmldatasheets/production/854310/0/0/1/ir15-21c-tr8.html"> <b>Infrared LED IR15-21C</b></a> <a href="https://www.digikey.es/htmldatasheets/production/854336/0/0/1/pt15-21c-tr8.html"> <b>Phototransistor PT15-21C</b></a> </p>
+                            
+                            <p><img src="images/week09/week09.12.jpg" width="50%"; max-width="700" /></p>
+                            <p>This is how it would look, the Hello Reflect on the left and the Hello Light on the right.</p>
+                            <span class="image main"><img src="images/week09/week09.13.jpg" alt="" /></span>
+                            
+                            <p>Here is the video of the soldering process.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/401871554" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <h2>Programming: Arduino + Linux.</h2>
+                            
+                            <p>The first thing I do is download the Neil program from <b>Hello Reflect.</b> It is in C and for the ATtiny45. I try to modify it for the ATtiny1614 but it gives me errors and I don't understand them.</p>
+                            
+                            <p><img src="images/week09/week09.14.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>I speak to my instructor Pablo, and he tells me why I don't do <b>spiral development</b>. Start with the Visible phototransistor and then go to the IR light phototransistor. That look for easy programs in Arduino, from other years. Thank you, Master Pablo. 🤗</p>
+                            
+                            <p>So I replaced the IR phototransistor with the visible one. I am going to use the <a href="http://fabacademy.org/2019/labs/leon/students/elena-cardiel/week11.html"> <b>Elena Cardiel</b></a>  program that I used last year at the Fab Academy. I compile it, load it and it seems to work.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.15.jpg" alt="" /></span>
+                            
+                            <p>To use the Pyserial, I follow the <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/bootcamp/spicy/blob/master/Program1614.md"><b>tutorial</b></a>  that Pablo taught me that they used in the <b>Bootcamp in India</b> that <b>Santi</b> from <b>Fab Lab BCN</b> created.</p>
+                            
+                            <p>Listen the serial port <b><i> python -m serial.tools.miniterm /dev/ttyUSB0 9600</i></b></p>
+                            
+                            <p>But it does not work. 😪</p>
+                            
+                            <p><img src="images/week09/week09.16.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>I talk to Pablo again, and comparing Neil's code from the Hello Echo from last week and mine, the <b>Serial Communication Speed</b> does not match. I have <b>9600</b> and Neil has <b>115200.</b> Santi also has the same in the tutorial, 115200. It happens to me for not reading. 😖 Thank you very much Pablo. 😇</p>
+                            
+                            <p>So I modify the code so that it has the speed of 115200. I reload it with the UPDI and read the PySerial.</p>
+                            <p>Listen the serial port <b><i> python -m serial.tools.miniterm /dev/ttyUSB0 115200</i></b></p>
+                            
+                            <p>And works. Here the data capture and the video.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/401871831" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            
+                            <p>Here is the Arduino code.</p>
+                            
+                            <pre><code>//Original code: Elena Cardiel. Fab Academy 2019.
+//
+//Modified by Adrián Torres. Fab Academy 2020.
+//
+//ATtiny1614
+
+int sensorPin = 1;    // analog input pin to hook the sensor to
+int sensorValue = 0;  // variable to store the value coming from the sensor
+ 
+void setup() {
+  Serial.begin(115200); // initialize serial communications
+}
+ 
+void loop() {
+  sensorValue = analogRead(sensorPin); // read the value from the sensor
+  sensorValue = map(sensorValue, 0, 1024, 1024, 0);
+  Serial.println(sensorValue); // print value to Serial Monitor
+  //mySerial.println("x"); // print value "x" to Serial Monitor
+  delay(500); // short delay so we can actually see the numbers
+}</code></pre>
+                            
+                            <p>At the moment the Hello Reflect I'm going to wait, I'm going to test how the Hello Light works with the Visible phototransistor when the train passes. You can see the proof in <a href="projectmanagement.html"> <b>Project Management</b></a></p>
+                            
+                            <h1><a id="group"></a>Group Assignment</h1>  
+                            <p>The <b>Group Assignment page</b> is at the following <a href="http://academany.fabcloud.io/fabacademy/2020/labs/leon/leon-group-assignments/"><b>link.</b></a></p>
+                            <h2>Measurement with the oscilloscope</h2>
+                            <p>Measured with the oscilloscope of an analog signal, in this case the output of the Phototransistor. It is observed how the signal varies when I approach and move away the light.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/401872527" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            
+                            
+                            <h2>03/31/2020: Hello Reflect update</h2>
+                            <p>I have continued looking for different examples that use an IR phototransistor, and I have found this <a href="https://learn.sparkfun.com/tutorials/qrd1114-optical-detector-hookup-guide/all"> <b>Sparkfun page</b></a> that explains the operation of the QRD1114 Optical Detector Hookup that is based on an IR phototransistor and an IR LED.</p>
+                            
+                            <p>Looking at the connection of the QRD114 scheme, the IR LED is not connected to any pin of the Arduino, it is connected to GND. So on my board I'm going to do a test, connecting the cathode of the IR LED to GND. The orange wire is connected to the GND of the I2C connection.</p>
+                            
+                            <p><img src="images/week09/week09.36.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>I compile the sample program on the web on Arduino and load it by UPDI with Linux and Pyserial.</p>
+                            
+                            <p><img src="images/week09/week09.37.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>Using the PyUPDI and the FT230XS programmer and the converter for UPDI I load the .hex program.</p>
+                            <p>Program the board using python -> run <b><i>sudo python3 pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 19200 -f Hello_Reflect_IR.ino.hex -v</i></b></p>
+                            <p>After, listen the serial port <b><i> python -m serial.tools.miniterm /dev/ttyUSB0 115200</i></b></p>
+                            
+                            <p>Measurement data is best viewed on video, displays data between 0 and 4.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/402568568" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <p>How it works I am going to make a Frankestein, I am going to cut the track that goes to ATtiny1614 and solder it to GND with a small cable. Here is the result.</p>
+                            
+                            <p><img src="images/week09/week09.38.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <p>I modify the schematic and the board in Eagle. I extract the PNG and edit it with GIMP to be able to redo the board again.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.39.jpg" alt="" /></span>
+                            
+                            <span class="image main"><img src="images/week09/week09.40.jpg" alt="" /></span>
+                            
+                            <p>Here is the Arduino code.</p>
+                            <pre><code>/******************************************************************************
+QRD1114_Proximity_Example.ino
+Example sketch for SparkFun's QRD1114 Reflectance Proximity Sensor
+  (https://www.sparkfun.com/products/246)
+Jim Lindblom @ SparkFun Electronics
+May 2, 2016
+
+Modified by Adrián Torres Omaña
+Fab Academy 2020 - Fab Lab León
+
+ATtiny1614
+
+******************************************************************************/
+const int Sensor = 1; // Sensor output voltage
+
+void setup() 
+{
+  Serial.begin(115200);
+  pinMode(Sensor, INPUT);
+}
+
+void loop() 
+{
+  // Read in the ADC and convert it to a voltage:
+  int proximityADC = analogRead(Sensor);
+  float proximityV = (float)proximityADC * 5.0 / 1023.0;
+  Serial.println(proximityV);
+  delay(100);
+}</code></pre>
+                            
+                            <p>Here is the files to download.</p>
+                            <ul><li><a href="assignments/week09/Microchip%20-%20ATTINY1614-SSFR.zip"> <b>ATtiny1614 Library</b></a>
+                                <li><a href="assignments/week09/Hello_Reflect_IR2_traces.png"> <b>Hello Reflect Traces</b></a>
+                                <li><a href="assignments/week09/Hello_Reflect_IR2_interior.png"> <b>Hello Reflect Interior</b></a>
+                                <li><a href="assignments/week09/Hello%20Reflect.zip"> <b>Hello Reflect Schematic and Board</b></a>      
+                                <li><a href="assignments/week09/hello_phototransistor/hello_phototransistor.ino"> <b>Arduino program Hello Phototransistor</b></a> 
+                                <li><a href="assignments/week09/Hello_Reflect_IR/Hello_Reflect_IR.ino"> <b>Arduino program Hello Reflect IR</b></a>     
+                                    
+                                    
+                            </ul>
+                            
+                            
+                            <h1>Hello Distance. Time of Fligth. VL53L0X</h1>
+                            <h2>Design</h2>
+                            <p>I am going to use a module that integrates the <b>VL53L0X sensor.</b> Last year <a href="http://fabacademy.org/2019/labs/leon/students/alejandro-ausejo/final%20project%20process.html"> <b>Alejandro Ulecia</b></a> used it in his final project and it is very interesting because several sensors can communicate through <b>I2C.</b> The module is sold by <a href="https://learn.adafruit.com/adafruit-vl53l0x-micro-lidar-distance-sensor-breakout/overview"> <b>Adafruit,</b></a> although in my case I bought it from <a href="https://www.amazon.es/s?k=vl53l0x&__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=FRB5JPGJ2WSI&sprefix=vl%2Caps%2C169&ref=nb_sb_ss_i_1_2"> <b>Amazon.</b></a></p>
+                            
+                            <p>I am going to use the ATtiny1614 to communicate with the sensor. In this case of the pinout that the sensor brings, I will only use the VCC, GND, SDA and SCL pins. This information is obtained from the <a href="https://www.luisllamas.es/arduino-sensor-distancia-vl53l0x/"> <b> Luis Llamas website.</b></a></p>
+                            
+                            <p><img src="images/week09/week09.17.jpg" width="60%"; max-width="700" /></p>
+                            
+                            <p>Using Eagle I design the schematic and the board. I really only use the following pins of the ATtiny1614: VCC, GND, TX, RX, UPDI, SCL and SDA.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.18.jpg" alt="" /></span>
+                            
+                            <p>Using GIMP I eliminate the paths that I don't need and I make the outer cut layer.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.19.jpg" alt="" /></span>
+                            
+                            <p>Before sending the work to the Modela, I always like to check with Mods if it is going to mill all the tracks or if it is going to join. In this case the lower pins of the ATtiny1614 would all be joined. With the GIMP, I modify with black color and make the paths smaller.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.20.jpg" alt="" /></span>
+                            
+                            <p>And these are the two images ready to use in the Modela.</p>
+                            
+                            <p><img src="images/week09/week09.23.jpg" width="70%"; max-width="700" /></p>
+                            
+                            
+                            <h2>Making</h2>
+                            
+                            <p>Using Mods CE I milled the board, I reused the last piece of the board that I had milled two weeks ago.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.21.jpg" alt="" /></span>
+                            
+                            <p>This is the material listing, an ATtiny1614, a 1uF Capacitor and the rest connecting pins.</p>
+                            
+                            <p><img src="images/week09/week09.22.jpg" width="60%"; max-width="700" /></p>
+                            
+                            <p>And this is the result of the board, with the VL53L0X module</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.24.jpg" alt="" /></span>
+                            
+                            <h2>Programming: Arduino + Linux.</h2>
+                            
+                            <p>To program the ATtiny1614 I am going to use Arduino and the <a href="https://www.luisllamas.es/arduino-sensor-distancia-vl53l0x/"> <b> Luis Llamas program</b></a> that it has on its page, use the <b>Adafruit library</b> that you can find at this <a href="https://github.com/adafruit/Adafruit_VL53L0X"> <b> link.</b></a> I try to download it in the Arduino Library and I can't, it gives me an error. So I decide to uninstall Arduino from Linux and reinstall it again. Meanwhile, I try to do it with Windows and I realize that the program does not enter the ATtiny1614, it occupies 100% of its memory. The Adafruit library is very large. 😭 </p>
+                            
+                            <p><b>RECOMMENDATION:</b> Don't try to create the .hex file in Windows and then try to load it in Lynux, because the communication protocol is different; in Linux it is "ttyUSB0" and in Windows it can be "COM4"</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.25.jpg" alt="" /></span>
+                            
+                            <p>So ATtiny1614 does not enter the program or the library. I call Nuria to comment and ask her if she had accidentally ordered the <b>ATtiny3216</b> and she said yes. Thanks Nuria. 🤗</p>
+                            
+                            <h2>ATtiny3216</h2>
+                            <p>Since last week I looked at the datsheet of the other microcontrollers, this time it's time to look at everyone's "big brother", the ATtiny3216.. I combine the Datasheet image with the one from the <a href="https://github.com/SpenceKonde/megaTinyCore/blob/master/megaavr/extras/ATtiny_x16.md"><b>SpenceKonde website</b></a> on the ATtiny3216.</p>
+                            <ul><li><b>20 pin</b> package.
+                                <li>Internal clocks 1/4/5/8/10/16 <b>20 MHz.</b>
+                                <li>32768 bytes Flash Memory.
+                                <li>256 bytes EEPROM.
+                                <li>2048 bytes SRAM.
+                                <li>Maximum voltage: 6V; minimum voltage -0.5 V. </ul>
+                            
+                            <p>After looking at the basic features, you will find the pinning of the microcontroller.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.26.jpg" alt="" /></span>
+                            
+                            <ul><li><b>VDD:</b> Supply voltage.
+                                <li><b>GND:</b> Ground.
+                                <li><b>Digital pins:</b> Port A: PA0, PA1, PA2, PA3, PA4, PA5, PA6, PA7. Port B: PB0, PB1, PB2, PB3, PB4, PB5. Port C: PC0, PC1, PC2, PC3.  
+                                <li><b>Analog pins:</b> Port A: PA0, PA1, PA2, PA3, PA4, PA5, PA6, PA7. Port B: PB0, PB1, PB4, PB5.   
+                                <li><b>UPDI Programming pin:</b> PA0 (physical pin number 16).
+                            </ul>
+                            <p>All I/O pins can be configured with <b>internal pullup resistance.</b></p>
+                            
+                            <p>Within the communications section there are different types and their pins are different. It is clear that the different communication protocols cannot all be used at the same time, because they have pins in common.</p>
+                            <ul><li><b>USART - Universal Synchronous and Asynchronous Receiver and
+                                Transmitter: </b> It has the <b>RX</b> (PB3 or PA2) and the <b>TX</b> (PB2 or PA1).
+                                <li><b>SPI - Serial Peripheral Interface:</b> It has only <b>MOSI</b> (PA1 or PC2), <b>MISO</b> (PA2 or PC1), <b>SCK</b> (PA3 or PC0), <b>SS</b> (PA4 or PC3) .
+                                <li><b>TWI - Two Wire Interface (I2C):</b> It has <b>SDA</b> (PB1 or PA1) and <b>SCL</b> (PB0 or PA2).
+                            </ul>
+                            
+                            <h2>Design the new board for the ATtiny3216</h2>
+                            <p>Since I had already designed the circuit for the ATtiny1614, I would only have to change it for the ATtiny3216. It seems easy, but ... 😥 There is no footprint. I search Octopart and nothing. At the end I find it on the <a href="https://www.snapeda.com/parts/ATTINY3216-SN/Microchip%20Technology/view-part/?ref=search&t=Tiny3216"><b>SnapEDA page.</b></a></p>
+                            <p>Once downloaded, I add the library to Eagle.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.27.jpg" alt="" /></span>
+                            
+                            <p>Once the schematic is done, this is the result of the board.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.28.jpg" alt="" /></span>
+                            
+                            <p>This is the end result of the board. After exporting it as a monochrome image, I use <b>GIMP</b> to create the outer border and erase the paths I don't need from the connectors.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.29.jpg" alt="" /></span>
+                            
+                            
+                            <h2>Making</h2>
+                            <p>After milling the plates using Mods CE, this is the end result.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.30.jpg" alt="" /></span>
+                            
+                            <p>And this is the result of the board, with the VL53L0X module</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.31.jpg" alt="" /></span>
+                            
+                            
+                            <h2>Programming: Arduino + Linux.</h2>
+                            
+                            <p>I return to resume the programming of the VL53L0X, but this time Pablo recommends that I use one of the examples that the Adafruit library brings you (it is the first time that I discover that when you download a library in Aduino, it brings associated examples. Incredible). Configure the Arduino for the ATtiny 3216.</p>
+                            
+                            <span class="image main"><img src="images/week09/week09.32.jpg" alt="" /></span>
+                            
+                            <p>Using the PyUPDI and the FT230XS programmer and the converter for UPDI I load the .hex program.</p>
+                            <p>Program the board using python -> run <b><i>sudo python3 pyupdi.py -d tiny3216 -c /dev/ttyUSB0 -b 19200 -f vl53l0x.ino.hex -v</i></b></p>
+                            <p>After, listen the serial port <b><i> python -m serial.tools.miniterm /dev/ttyUSB0 115200</i></b></p>
+                            
+                            <span class="image main"><img src="images/week09/week09.33.jpg" alt="" /></span> 
+                            
+                            <p>It works and measures well. Here is an example video with the measurements on the screen and with a ruler.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/401875977" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            
+                            <p>Here is the Arduino code.</p>
+                            <pre><code>//Adafruit VL53L0X program.
+
+//Adrian Torres. Fab Academy 2020.
+
+#include "Adafruit_VL53L0X.h"
+
+Adafruit_VL53L0X lox = Adafruit_VL53L0X();
+
+void setup() {
+  Serial.begin(115200);
+
+  // wait until serial port opens for native USB devices
+  while (! Serial) {
+    delay(1);
+  }
+  
+  Serial.println("Adafruit VL53L0X test");
+  if (!lox.begin()) {
+    Serial.println(F("Failed to boot VL53L0X"));
+    while(1);
+  }
+  // power 
+  Serial.println(F("VL53L0X API Simple Ranging example\n\n")); 
+}
+
+
+void loop() {
+  VL53L0X_RangingMeasurementData_t measure;
+    
+  Serial.print("Reading a measurement... ");
+  lox.rangingTest(&measure, false); // pass in 'true' to get debug data printout!
+
+  if (measure.RangeStatus != 4) {  // phase failures have incorrect data
+    Serial.print("Distance (mm): "); Serial.println(measure.RangeMilliMeter);
+  } else {
+    Serial.println(" out of range ");
+  }
+    
+  delay(100);
+}</code></pre>
+                            
+                            
+                            
+                            
+                            <p>Here is the files to download.</p>
+                            <ul><li><a href="assignments/week09/ATTINY3216-SN.zip"> <b>ATtiny3216 Library</b></a>
+                                <li><a href="assignments/week09/Hello_distance_traces2.png"> <b>Hello Distance Traces ATtiny1614</b></a>
+                                <li><a href="assignments/week09/Hello_distance_interior.png"> <b>Hello Distance Interior ATtiny1614</b></a>
+                                <li><a href="assignments/week09/hello_VL53LO_1614.zip"> <b>Hello Distance Schematic and Board ATtiny1614</b></a>    
+                                <li><a href="assignments/week09/Hello_distance_3216_traces.png"> <b>Hello Distance Traces ATtiny3216</b></a>
+                                <li><a href="assignments/week09/Hello_distance_3216_interior.png"> <b>Hello Distance Interior ATtiny3216</b></a>    
+                                <li><a href="assignments/week09/hello_VL53LO_3216.zip"> <b>Hello Distance Schematic and Board ATtiny3216</b></a>        
+                                <li><a href="assignments/week09/vl53l0x/vl53l0x.ino"> <b>Arduino program VL53L0X</b></a> 
+                                </ul>
+                            
+                            
+                            <h2><b>29/03/2020</b></h2>
+                            <p>My instructor Pablo tells me that there is another library within Arduino, it is from <a href="https://www.pololu.com/product/2490"> <b> Polulu</b></a> for the VL53L0X, and it may be smaller and enter the ATtiny1614. The library is <a href="https://github.com/pololu/vl53l0x-arduino"> <b> here.</b></a> Thank you Pablo, master of the code. 🤗 </p>
+                            
+                            <p>I use a code that the library had as an example, it is called "Single."</p>
+                            <p><img src="images/week09/week09.34.jpg" width="60%"; max-width="700" /></p>
+                            
+                            <p>Using the PyUPDI and the FT230XS programmer and the converter for UPDI I load the .hex program.</p>
+                            <p>Program the board using python -> run <b><i>sudo python3 pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 19200 -f Single_VL53L0X.ino.hex -v</i></b></p>
+                            <p>After, listen the serial port <b><i> python -m serial.tools.miniterm /dev/ttyUSB0 115200</i></b></p>
+                            
+                            <p>The data is better seen on video.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/402114273" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <p>Here is the Arduino code.</p>
+                            <pre><code>/* This example shows how to get single-shot range
+ measurements from the VL53L0X. The sensor can optionally be
+ configured with different ranging profiles, as described in
+ the VL53L0X API user manual, to get better performance for
+ a certain application. This code is based on the four
+ "SingleRanging" examples in the VL53L0X API.
+
+ The range readings are in units of mm. */
+
+#include <Wire.h>
+#include <VL53L0X.h>
+
+VL53L0X sensor;
+
+
+// Uncomment this line to use long range mode. This
+// increases the sensitivity of the sensor and extends its
+// potential range, but increases the likelihood of getting
+// an inaccurate reading because of reflections from objects
+// other than the intended target. It works best in dark
+// conditions.
+
+//#define LONG_RANGE
+
+
+// Uncomment ONE of these two lines to get
+// - higher speed at the cost of lower accuracy OR
+// - higher accuracy at the cost of lower speed
+
+//#define HIGH_SPEED
+//#define HIGH_ACCURACY
+
+
+void setup()
+{
+  Serial.begin(115200);
+  Wire.begin();
+
+  sensor.setTimeout(500);
+  if (!sensor.init())
+  {
+    Serial.println("Failed to detect and initialize sensor!");
+    while (1) {}
+  }
+
+#if defined LONG_RANGE
+  // lower the return signal rate limit (default is 0.25 MCPS)
+  sensor.setSignalRateLimit(0.1);
+  // increase laser pulse periods (defaults are 14 and 10 PCLKs)
+  sensor.setVcselPulsePeriod(VL53L0X::VcselPeriodPreRange, 18);
+  sensor.setVcselPulsePeriod(VL53L0X::VcselPeriodFinalRange, 14);
+#endif
+
+#if defined HIGH_SPEED
+  // reduce timing budget to 20 ms (default is about 33 ms)
+  sensor.setMeasurementTimingBudget(20000);
+#elif defined HIGH_ACCURACY
+  // increase timing budget to 200 ms
+  sensor.setMeasurementTimingBudget(200000);
+#endif
+}
+
+void loop()
+{
+  Serial.print(sensor.readRangeSingleMillimeters());
+  if (sensor.timeoutOccurred()) { Serial.print(" TIMEOUT"); }
+
+  Serial.println();
+}</code></pre>
+                            
+ 
+                            
+                            
+                            <h1>Final Project Test</h1>
+                            <h2>Phototransistor + Train</h2>
+                            <p>I do a little test with the visible light phototransistor, to see how the values behave when the train passes. When it passes over it has very low values between 10 and 0.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/402114005" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <h2>VL53LOX + Train</h2>
+                            <p>With the time of flight sensor, when it is placed on the track it is out of range, but when the train passes over it gives me values below 40 mm.</p>
+                            
+                            <p><iframe src="https://player.vimeo.com/video/402114132" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+                            
+                            <p>In this image you can see in better detail the placement of the VL53LOX sensor between the track, to detect the passage of the wagon. It's just a test. 😅</p>
+                            
+                            
+                            <p><img src="images/week09/week09.41.jpg" width="70%"; max-width="700" /></p>
+                            
+                            <h1>Review of the class</h1>
+                            <p>During the review of this class I volunteered with the FPGA in the minute 1:20:30. 😊 </p>
+                            
+                            <iframe src="https://player.vimeo.com/video/403070894" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/403070894">20200401 input devices review</a> from <a href="https://vimeo.com/academany">Academany</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                            
+                            
+                            
+                            <h1>Files</h1>
+                            <p>Find below the files that I made for this assignment.</p>
+                            <ul><li><a href="assignments/week09/Microchip%20-%20ATTINY1614-SSFR.zip"> <b>ATtiny1614 Library</b></a>
+                                <li><a href="assignments/week09/Hello_Reflect_IR2_traces.png"> <b>Hello Reflect Traces</b></a>
+                                <li><a href="assignments/week09/Hello_Reflect_IR2_interior.png"> <b>Hello Reflect Interior</b></a>
+                                <li><a href="assignments/week09/Hello%20Reflect.zip"> <b>Hello Reflect Schematic and Board</b></a>       
+                                <li><a href="assignments/week09/hello_phototransistor/hello_phototransistor.ino"> <b>Arduino program Hello Phototransistor</b></a> 
+                                <li><a href="assignments/week09/Hello_Reflect_IR/Hello_Reflect_IR.ino"> <b>Arduino program Hello Reflect IR</b></a>       
+                                <li><a href="assignments/week09/ATTINY3216-SN.zip"> <b>ATtiny3216 Library</b></a>
+                                <li><a href="assignments/week09/Hello_distance_traces2.png"> <b>Hello Distance Traces ATtiny1614</b></a>
+                                <li><a href="assignments/week09/Hello_distance_interior.png"> <b>Hello Distance Interior ATtiny1614</b></a>
+                                <li><a href="assignments/week09/Single_VL53L0X/Single_VL53L0X.ino"> <b>Arduino program Single_VL53L0X</b></a>
+                                <li><a href="assignments/week09/hello_VL53LO_1614.zip"> <b>Hello Distance Schematic and Board ATtiny1614</b></a>          
+                                <li><a href="assignments/week09/Hello_distance_3216_traces.png"> <b>Hello Distance Traces ATtiny3216</b></a>
+                                <li><a href="assignments/week09/Hello_distance_3216_interior.png"> <b>Hello Distance Interior ATtiny3216</b></a>    
+                                <li><a href="assignments/week09/hello_VL53LO_3216.zip"> <b>Hello Distance Schematic and Board ATtiny3216</b></a>      
+                                <li><a href="assignments/week09/vl53l0x/vl53l0x.ino"> <b>Arduino program VL53L0X</b></a> 
+                                
+                                    
+                                
+                            </ul>
+                            
+                            
+                            
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+                        
+                         <p align="center"> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><b>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</b></a>
+                        
+                        
+                        
+						<div class="inner">
+							
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/Adrian_Towy" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/adriantrains" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/adrian_towy/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.linkedin.com/in/adri%C3%A1n-torres-oma%C3%B1a/" class="icon brands style2 fa-linkedin"><span class="label">Linkedin</span></a></li>
+						
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,974 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Fabacademy Oulu">
+      
+      
+      
+        <meta name="author" content="Marjo Leinonen">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>9. Embedded programming - Fab Academy Marjo Leinonen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5350">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#9-embedded-programming" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Fab Academy Marjo Leinonen" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Fab Academy Marjo Leinonen
+            </span>
+            <span class="md-header-nav__topic">
+              
+                9. Embedded programming
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../about/" title="About" class="md-tabs__link">
+          About
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../week01/" title="Assignments" class="md-tabs__link md-tabs__link--active">
+          Assignments
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../projects/final-project/" title="Projects" class="md-tabs__link">
+          Projects
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Fab Academy Marjo Leinonen" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Fab Academy Marjo Leinonen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="About me" class="md-nav__link">
+      About me
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/agreement/" title="Student Agreement" class="md-nav__link">
+      Student Agreement
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Assignments
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Assignments
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week01/" title="1. Principles and practices" class="md-nav__link">
+      1. Principles and practices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week02/" title="2. Project management" class="md-nav__link">
+      2. Project management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week03/" title="3. Computer Aided design" class="md-nav__link">
+      3. Computer Aided design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week04/" title="4. Computer controlled cutting" class="md-nav__link">
+      4. Computer controlled cutting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week05/" title="5. Electronics production" class="md-nav__link">
+      5. Electronics production
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week06/" title="6. 3D Scanning and printing" class="md-nav__link">
+      6. 3D Scanning and printing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week07/" title="7. Electronics design" class="md-nav__link">
+      7. Electronics design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week08/" title="8. Computer controlled machining" class="md-nav__link">
+      8. Computer controlled machining
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        9. Embedded programming
+      </label>
+    
+    <a href="./" title="9. Embedded programming" class="md-nav__link md-nav__link--active">
+      9. Embedded programming
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment" title="Group assignment" class="md-nav__link">
+    Group assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-assignment" title="Individual assignment" class="md-nav__link">
+    Individual assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment_1" title="Group assignment" class="md-nav__link">
+    Group assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-assignment_1" title="Individual assignment" class="md-nav__link">
+    Individual assignment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-attiny-datasheet" title="Read ATTiny datasheet" class="md-nav__link">
+    Read ATTiny datasheet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-my-board" title="Programming my board" class="md-nav__link">
+    Programming my board
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflections" title="Reflections" class="md-nav__link">
+    Reflections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" title="Files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week10/" title="10. Molding and casting" class="md-nav__link">
+      10. Molding and casting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week11/" title="11. Input devices" class="md-nav__link">
+      11. Input devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week12/" title="12. Output devices" class="md-nav__link">
+      12. Output devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week13/" title="13. Applications and implications" class="md-nav__link">
+      13. Applications and implications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week14/" title="14. Networking and communications" class="md-nav__link">
+      14. Networking and communications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week15/" title="15. Mechanical design" class="md-nav__link">
+      15. Mechanical design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week16/" title="16. Interface and application programming" class="md-nav__link">
+      16. Interface and application programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week17/" title="17. Machine design" class="md-nav__link">
+      17. Machine design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week18/" title="18. Wildcard week - Waterjet cutting" class="md-nav__link">
+      18. Wildcard week - Waterjet cutting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week19/" title="19. Invention, intellectual property and income" class="md-nav__link">
+      19. Invention, intellectual property and income
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../week20/" title="20. Project development" class="md-nav__link">
+      20. Project development
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Projects
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Projects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/final-project/" title="Final Project" class="md-nav__link">
+      Final Project
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment" title="Group assignment" class="md-nav__link">
+    Group assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-assignment" title="Individual assignment" class="md-nav__link">
+    Individual assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-assignment_1" title="Group assignment" class="md-nav__link">
+    Group assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-assignment_1" title="Individual assignment" class="md-nav__link">
+    Individual assignment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-attiny-datasheet" title="Read ATTiny datasheet" class="md-nav__link">
+    Read ATTiny datasheet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-my-board" title="Programming my board" class="md-nav__link">
+    Programming my board
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflections" title="Reflections" class="md-nav__link">
+    Reflections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" title="Files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="9-embedded-programming">9. Embedded programming<a class="headerlink" href="#9-embedded-programming" title="Permanent link">&para;</a></h1>
+<h4 id="group-assignment">Group assignment<a class="headerlink" href="#group-assignment" title="Permanent link">&para;</a></h4>
+<p>Compare the performance and development workflows for other architectures  </p>
+<h4 id="individual-assignment">Individual assignment<a class="headerlink" href="#individual-assignment" title="Permanent link">&para;</a></h4>
+<p>Read a microcontroller data sheet.<br />
+Program your board to do something, with as many different programming languages and programming environments as possible.  </p>
+<h2 id="group-assignment_1">Group assignment<a class="headerlink" href="#group-assignment_1" title="Permanent link">&para;</a></h2>
+<p>We worked together with whole Oulu Academy group.  </p>
+<p>We tested STM32 Nucleo-64 development board with STM32F401RE MCU and ESP32 board using Arduino IDE.  </p>
+<p><img alt="" src="../../images/week09/Nucleo.jpg" />     </p>
+<p><img alt="" src="../../images/week09/board1.jpg" />      </p>
+<p>We tested the STM32 Nucleo-64 development board with STM32F401RE MCU and ESP32 LOLIN32 development board using Arduino IDE. ST32 is a family of 32-bit microcontroller integrated circuits by STMicroelectronics. This group is related to same 32 bit ARM processor. The STM32 F4-series is the first group of STM32 microcontrollers based on the ARM Cortex-M4F core. The F4-series is also the first STM32 series to have DSP and floating point instructions. The F4 is pin-to-pin compatible with the STM32 F2-series and adds higher clock speed, 64 KB CCM static RAM, full duplex, improved real-time clock, and faster ADCs. All devices offer one 12-bit ADC, a low-power RTC, six general-purpose 16-bit timers including one PWM timer for motor control, two general-purpose 32-bit timers. They also feature standard and advanced communication interfaces.  </p>
+<ul>
+<li>Up to three I2Cs</li>
+<li>Up to four SPIs</li>
+<li>Two full duplex I2Ss. To achieve audio class accuracy, the I2S peripherals can be clocked via a dedicated internal audio PLL or via an external clock to allow synchronization.</li>
+<li>Three USARTs</li>
+<li>SDIO interface</li>
+<li>USB 2.0 OTG full speed interface</li>
+</ul>
+<p>See the <a href="https://www.st.com/resource/en/datasheet/stm32f401re.pdf">data sheet STM32F401x</a> for more information.</p>
+<p>ESP32 is a series of low-cost, low-power system on a chip microcontrollers with integrated Wi-Fi and dual-mode Bluetooth. The ESP32 series employs a Tensilica Xtensa LX6 microprocessor in both dual-core and single-core variations and includes in-built antenna switches, RF balun, power amplifier, low-noise receive amplifier, filters, and power-management modules. ESP32 is created and developed by Espressif Systems, a Shanghai-based Chinese company, and is manufactured by TSMC using their 40 nm process. See the more details about <a href="https://wiki.wemos.cc/products:lolin32:lolin32#tutorials">ESP32 LOLIN32</a> in the link.  </p>
+<p>We installed Board Manager for the Nucleo board  </p>
+<p><img alt="" src="../../images/week09/test1.jpg" />     </p>
+<p>Then we defined the board information (Board and Board number) in Tools</p>
+<p><img alt="" src="../../images/week09/test3.jpg" />     </p>
+<p><img alt="" src="../../images/week09/test4.jpg" />     </p>
+<p>and run the blinking test code for the board  </p>
+<p><img alt="" src="../../images/week09/test5.jpg" />     </p>
+<p><a href="https://gitlab.fabcloud.org/academany/fabacademy/2019/labs/oulu/students/marjo-leinonen/blob/master/docs/images/week09/smtblink.mp4">Video of the blinking</a>  </p>
+<p><source src="../../images/week9/smtblink.mp4" type="video/mp4">
+<img alt="" src="../../images/week09/smtblink.mp4" />   </p>
+<p>With very similar steps and using ESP32 we were able to make some LEDs fading. We just had to taking into account pin numbers, find proper and connect them with LED stripes.  </p>
+<p><img alt="" src="../../images/week09/esp1.jpg" />     </p>
+<p><img alt="" src="../../images/week09/esp2.jpg" />     </p>
+<p><img alt="" src="../../images/week09/esp3.jpg" />     </p>
+<h2 id="individual-assignment_1">Individual assignment<a class="headerlink" href="#individual-assignment_1" title="Permanent link">&para;</a></h2>
+<h4 id="read-attiny-datasheet">Read ATTiny datasheet<a class="headerlink" href="#read-attiny-datasheet" title="Permanent link">&para;</a></h4>
+<p><a href="http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf">ATTiny datasheet</a> has 238 pages. I scanned it briefly to understand what it contains, so that I can come back to it when needed. I read more detailed the <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/8183S.pdf">short version of the datasheet</a> (22 pages) that gives a quick reference on the microprosessor features, lists Registers and Commands.  </p>
+<p>ATtiny24A/44A/84A is a low-power CMOS 8-bit microcontroller based on the AVR enhanced RISC architecture. By executing powerful in structions in a single clock cycle, the ATtiny24A/44A/84A achieves throughputs up to 1 MIPS per MHz allowing the system designer to optimize power consumption versus processing speed.    </p>
+<p>Figure 1-1. shows the Pinout of ATtiny24A/44A/84A and Block Diagram (Figure 2-1.) gives an overview of the architechture. More detailed Pin descriptions are in chapter 1.1    </p>
+<p>Resources like drivers, application notes,  data sheets and descriptions on development tools are available for download at http://www.atmel.com/avr.  </p>
+<p>The documentation contains simple code examples that briefly show how to use various parts of the device. Examples are written in c-code.  </p>
+<h4 id="programming-my-board">Programming my board<a class="headerlink" href="#programming-my-board" title="Permanent link">&para;</a></h4>
+<p>First I installed <a href="https://www.arduino.cc/en/Main/Software">Arduino 1.8.8</a>.  </p>
+<p>Then I copied Boards Manager installation url from <a href="https://github.com/SpenceKonde/ATTinyCore/blob/master/Installation.md">GitHub SpeceKonde</a>. I opened Arduino File/Preferences and pasted the url in Additional Boards Manager URLs.  </p>
+<p><img alt="" src="../../images/week09/arduino1.jpg" />  </p>
+<p>Then I opened Boards Manager and installed ATTinyCore by SpenceKonde.  </p>
+<p><img alt="" src="../../images/week09/arduino2.jpg" />  </p>
+<p>Next I opened Tools and defined Board and Chip to ATTiny44, Clock to 20mHz and Programmer as USBTinyISP.  </p>
+<p><img alt="" src="../../images/week09/arduino3.jpg" />  </p>
+<p>Then I did Burn Bootloader. When using a chip for the first time, or after changing the clock speed or BOD settings, you must do &ldquo;burn bootloader&rdquo; to set the fuses.  </p>
+<p>I attached my board to my laptop with FTDI cable to provide the power. Then I inserted my USB programmer to my laptop and connected the ISP cable between the programmer and the board.    </p>
+<p><img alt="" src="../../images/week09/arduino4.jpg" />  </p>
+<p>I opened Button code in File / Examples / Digital. I set the pin numbers according to my board pins, I have PA7 and PB2 as my button and led ports in ATTiny44A.   </p>
+<p>const int buttonPin = 7;     // the number of the pushbutton pin<br />
+const int ledPin =  8;      // the number of the LED pin  </p>
+<p>I checked the correct pin numbers from <a href="https://github.com/SpenceKonde/ATTinyCore">ATTiny Pinout map</a>  </p>
+<p><img alt="" src="../../images/week09/attiny pinout.jpg" />  </p>
+<p>and ran the code by pushing arrow.  </p>
+<p><img alt="" src="../../images/week09/arduino8.jpg" />  </p>
+<p>I got an error message, that USBtiny was not found. What could be the problem?   </p>
+<p><img alt="" src="../../images/week09/arduino7.jpg" />  </p>
+<p>I checked all the settings again and saw that all the changes I made to ATTiny in Tools were lost. I did the changes again (Board and Chip to ATTiny44, Clock to 20mHz and Programmer as USBTinyISP).  </p>
+<p>I saved and ran the code again. Now led was turned on. Led will be off when pushing the button.    </p>
+<p><img alt="" src="../../images/week09/arduino5.jpg" />  </p>
+<p>In the code, if the buttonState is HIGH, LED is turned on, else LED is turned off.   </p>
+<p>if (buttonState == HIGH) {<br />
+    // turn LED on:<br />
+    digitalWrite(ledPin, HIGH);<br />
+  } else {<br />
+    // turn LED off:<br />
+    digitalWrite(ledPin, LOW);  </p>
+<p>I modified the code so that if buttonState is HIGH, LED is turned off.   </p>
+<p>if (buttonState == HIGH) {<br />
+    // turn LED off:<br />
+    digitalWrite(ledPin, LOW);<br />
+  } else {<br />
+    // turn LED on:<br />
+    digitalWrite(ledPin, HIGH);  </p>
+<p>Now the led is on only when the button is pushed.  </p>
+<p><img alt="" src="../../images/week09/arduino6.jpg" />  </p>
+<p>I also tried the Arduino examples for LED blinking and LED fading. I modified the example codes to have correct pin numbers and I also changed the blinking interval and the fade amount to see how the changes are affecting. Everything was working as expected.   </p>
+<h2 id="reflections">Reflections<a class="headerlink" href="#reflections" title="Permanent link">&para;</a></h2>
+<p>Embedded programming is completely new to me and I have learned a lot during this week. Luckily the Arduino example codes are very simple, so it is easy to understand what is the program doing and what needs to be changed in the code when working with different microcontroller (ATTiny44).  </p>
+<p>There are several phases in the programming of the board and every detail and setting needs to be correct to make programming successful. Data sheet is needed, especially the pin descriptions for this assignment. I am sure that in further assignments I will get more deep with the programming and data sheets, it is needed for my final project. Looking forward to that :).  </p>
+<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">&para;</a></h2>
+<p><a href="https://gitlab.fabcloud.org/academany/fabacademy/2019/labs/oulu/students/marjo-leinonen/raw/master/docs/images/week09/Button_code/Button_code.ino">Arduino Button code</a><br />
+<a href="https://gitlab.fabcloud.org/academany/fabacademy/2019/labs/oulu/students/marjo-leinonen/raw/master/docs/images/week09/Blink5000Delay/Blink5000Delay.ino">Arduino Blink code</a><br />
+<a href="https://gitlab.fabcloud.org/academany/fabacademy/2019/labs/oulu/students/marjo-leinonen/raw/master/docs/images/week09/LEDFade/LEDFade.ino">Arduino Fade code</a>  </p>
+<p></p>
+</div></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../week08/" title="8. Computer controlled machining" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                8. Computer controlled machining
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../week10/" title="10. Molding and casting" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                10. Molding and casting
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Creative Commons Attribution Non Commercial
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/academany" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/fabacademany" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/academany" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://instagram.com/fabacademany" class="md-footer-social__link fa fa-instagram"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

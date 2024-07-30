@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Week 9  Input Devices</title>
+
+  <!-- Font Awesome Icons -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" >
+
+  <!-- Theme CSS - Includes Bootstrap -->
+  <link href="css/creative.min.css" rel="stylesheet">
+    
+  <!--Customize CSS-->
+  <base target="_blank">
+  <style>
+      /* The sidebar menu */  
+    .newdropbtn {
+      background-color: #f4623a;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+
+    }
+
+    .newdropbtn:hover, .newdropbtn:focus {
+      background-color:#f4623a;
+    }
+
+    .newdropdown {
+      position: fixed;
+      top:200px;
+      display: inline-block;
+    }
+
+    .newdropdown-content {
+      display: none;
+      position:fixed;
+      background-color: "white";
+      min-width: 160px;
+      overflow: 20px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .newdropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .newdropdown a:hover {background-color: #ffc107;}
+
+    .show {display: block;}
+      
+      
+      
+    /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+    /* Style the buttons that are used to open the tab content */
+    .tab button {
+      background-color: #f1f1f1;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: white;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color:#f4623a;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display:block;
+      overflow: scroll;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+  </style>
+
+
+</head>
+    
+    
+
+<body id="page-top">
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="index.html">Xinhui Hu - Oulu Ubicomp</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="About_Me.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#portfolio">Portfolio
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jump to</a>
+                  <div class="dropdown-menu" style="background-color: #6c757d;  ">
+                    <a class="dropdown-item" href="Week0_Principles-and-Practices.html" style="color:#fff" >Week 0 Principles and Practices </a>  
+                    <a class="dropdown-item" href="Week1_ProjectManagement.html" style="color:#fff">Week 1 Project Management </a>
+                    <a class="dropdown-item" href="Week2_CAD.html" style="color:#fff">Week 2 Computer-Aided Design</a>
+                    <a class="dropdown-item" href="Week3_computer_controlled_cutting.html" style="color:#fff">Week 3 Computer-Controlled Cutting</a>
+                    <a class="dropdown-item" href="Week4_Electronic_production.html" style="color:#fff">Week 4  Electronics Production</a>
+                    <a class="dropdown-item" href="Week5_3D_printing_and_scanning.html" style="color:#fff">Week 5  3d Scanning and Printing</a>
+                    <a class="dropdown-item" href="week6_ELectronic_Design.html" style="color:#fff">Week 6  Electronics Design</a>
+                    <a class="dropdown-item" href="Week7_Computer_Controlled_Machining.html" style="color:#fff">Week 7  Computer-Controlled Machining</a>
+                    <a class="dropdown-item" href="Week8_Embedded_Programming.html" style="color:#fff">Week 8  Embedded Programming</a>
+                    <a class="dropdown-item" href="Week9_Input_Device.html" style="color:#fff">Week 9  Input Devices</a>
+                    <a class="dropdown-item" href="Week10_Application_and_Implication.html" style="color:#fff">Week 10  Applications And Implications</a>
+                    <a class="dropdown-item" href="week11_Output_Device.html" style="color:#fff">Week 11  Output Devices</a>
+                    <a class="dropdown-item" href="Week12_Molding_And_Casting.html" style="color:#fff">Week 12  Interface and Application Programming</a>
+                    <a class="dropdown-item" href="Week13_Networking_and_Communication.html" style="color:#fff">Week 13  Invention, Intellectual Property, and Income</a>
+                    <a class="dropdown-item" href="Week14_Interface_and_Application.html" style="color:#fff">Week 14  Networking and Communications</a>
+                    <a class="dropdown-item" href="Week15_Mechanical_Design_Machine_Design.html" style="color:#fff">Week 15  Molding and Casting</a>
+                    <a class="dropdown-item" href="Week16_Wildcard_Week.html" style="color:#fff">Week 16  Wildcard Week</a>
+                    <a class="dropdown-item" href="Week17_Invention_IP_Income.html" style="color:#fff">Week 17  Mechanical Design, Machine Design</a>
+                    <a class="dropdown-item" href="Week18_project_development.html" style="color:#fff">Week 18  Project Development</a>
+                  </div>
+
+                </li></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="finalprojectlog.html">Final Project</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Placeholder Section -->
+  <section class="page-section bg-primary" id="placeholder">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="text-white mt-0">Input Devices </h2>
+          <hr class="divider light my-4">
+          <p class=" mb-4 text-justify" style="color:#fff">Group Assignment<br>
+              &nbsp; &nbsp;Please check our <a href="#group "style="color:white;text-decoration: underline;" target="_self">Group Assignment </a> page.
+          </p> 
+          <p class=" mb-4 text-justify" style="color:#fff">Individual Assignment  </p>
+          <ul style="list-style-type: disc; text-align: left; color:#fff">
+              <li><a href="#board" style="color:white;text-decoration: underline;" target="_self">Board Design</a></li>
+              <li><a href="#sensor" style="color:white;text-decoration: underline;"target="_self">Sensor Measurement</a></li>
+              <li><a href="#file" style="color:white;text-decoration: underline;" target="_self">Files</a></li>
+          </ul>
+          <p class=" mb-4 text-justify" style="color:#fff">Group Assignment<br>
+              &nbsp; &nbsp;Please check our <a href="#group" style="color:#fff; text-decoration: underline">Group Assignment</a> page.
+          </p>
+          <p class=" mb-4 text-justify" style="color:#fff">Skillsets Gained: Basic Arduino programming, Hall Effect Sensor Usage<br>
+              Software Used: Autodesk Eagle, Arduino IDE
+              
+            </p>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+    
+    
+<!--side navigation-->    
+
+
+    <div class="newdropdown ">
+      <button onclick="myFunction()" class="newdropbtn ">Shortcut☰</button>
+      <div id="myDropdown" class="newdropdown-content">
+        <a href="#page-top" target="_self">Page Top</a>
+        <a href="#board" target="_self">Board Design</a>
+        <a href="#sensor" target="_self">Sensor Measurement</a>
+        <a href="#group" target="_self">Group</a>
+        <a href="#file" target="_self">Files</a>
+      </div>
+    </div>
+
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.newdropbtn')) {
+        var dropdowns = document.getElementsByClassName("newdropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>    
+  
+  <!-- Content Section -->
+  <section class="page-section" id="content">
+    <div class="container">
+      <div class="row justify-content-center" id="">
+        <div class="col-lg-8 text-center" >
+            
+
+<!--Individual Assignment-->
+            <h3 class="mt-0" >Individual Assignment</h3>
+          <hr class="divider my-4">          
+         <p class="text-muted mb-5 text-justify " > This week's individual assignment is about adding a sensor to a microcontroller board to detect signals from the environment. In my final project, I will need a Hall Effect sensor to adjust the zero point of the clock hand. Thus, for this week's assignment, the Hall Effect Sensor will be integrated with the ATtinty 1614 board.</p>
+            
+            
+        <!--board-->
+        <h4  class="mt-0" id="board">Board Design</h4>
+        <hr class="divider my-4" style="border-color: grey;max-width: 1.25rem">       
+          <p class="text-muted mb-5 text-justify " style="line-height: 1.6">
+             In my <a href="finalprojectlog.html">final project</a>, a unipolar stepper motor will be used to control the clock hand movement. The unipolar stepper does not have default starting point, which requires the zero point to be calibrated whenever the devices is initiated. <br>
+            <br>
+         </p>
+        <figure>
+            <img alt="Clock Zero Point" src="img/weekly_pic/week9/clock.jpg" style="width:50%">
+            <figcaption>Clock Zero Point</figcaption>
+         </figure>    
+        
+        <p class="text-muted mb-5 text-justify " style="line-height: 1.6"> 
+            In this case, the Hall Effect sensor can be an ideal solution. <br>
+            <small>According to <a href="https://en.wikipedia.org/wiki/Hall_effect_sensor">Wikipedia</a>:"A Hall effect sensor is a device that is used to measure the <b style="color: black">magnitude of a magnetic field</b>. Its output voltage is directly proportional to the magnetic field strength through it."</small><br>
+         </p>
+        <figure>
+            <img alt="Hall Effect Sensor Mechanism" src="https://pic1.zhimg.com/v2-dd9ff7baf4184033d73959dfa8349223_1440w.jpg?source=172ae18b" style="width:80%">
+            <figcaption>Hall Effect Sensor Mechanism</figcaption>
+            <small><a href="https://zhuanlan.zhihu.com/p/50598257">credit</a></small>
+         </figure>    
+        
+        <p class="text-muted mb-5 text-justify " style="line-height: 1.6">
+            My plan is to place a strong magnet on the clock hand and place the Hall Effect sensor on the back of the clock face at the zero point. The clock will rotate a full revolution when it is turned on until it detects the strongest magnetic field. That point will be labeled as the zero point, from which the step counting starts.<br>
+            <br>
+            In my design, the sensor is placed on a separated board that connects to the microcontroller board with wires. This is because that the Hall Effect sensor can only detect the magnetic field that approaches from a certain direction. It will be much harder to adjust the direction if the sensor is on a large board with all other components, while the other components and wires themselve can generate magnetic fields. <br>
+            <br>
+            <b>ATtiny 1614 Board</b><br>
+            On my microcontroller board, I have reserved a digital pin (<b style="color: black">PB3</b>) of the <b>ATtiny 1614</b> chip for receiving the sensor input and have connected the VCC and GND to the connectors that designated for the sensor communication. More design details of this microcontroller board can be found <a href="finalprojectlog.html#attiny_design">here</a>.  <br>
+        </p>
+        <figure>
+            <img alt="ATtiny board " src="img/weekly_pic/week9/microcontroller%20board.jpg" style="width:80%">
+            <figcaption>ATtiny board</figcaption>
+         </figure>    
+        
+        <p class="text-muted mb-5 text-justify " style="line-height: 1.6">
+            <b>Hall Effect Sensor Board</b><br>
+            The Hall Effect sensor board is very simple, which basically have only two components: a Hall Effect sensor and a connector that connect the three pins of the sensor.I used a SOT23-W Hall Effect Sensor and a 2x2 connector in this case.<br>
+            <small> I intentionally left a relatively large space between the sensor and connector to prevent the detection being interfered by the magnetic field</small>
+            <br>
+                     </p>
+        <figure>
+            <img alt="Sensor Board" src="img/weekly_pic/week9/sensor_board.jpg" style="width:80%">
+            <figcaption>Sensor Board</figcaption>
+         </figure>    
+        
+<!--sensor-->
+        <h4  class="mt-0" id="sensor">Sensor Measurement</h4>
+        <hr class="divider my-4" style="border-color: grey;max-width: 1.25rem">       
+          <p class="text-muted mb-5 text-justify " style="line-height: 1.6">
+         In my case, the precision of the signal detection was not as crucial as let the sensor being able to detect the signal per se. Thus, I used the following code that I retrieved from <a href="https://maker.pro/arduino/tutorial/how-to-use-a-hall-effect-sensor-with-arduino">this tutorial</a> as a start. This tutorial was based on Arduino Uno board, but the code works well for the ATtiny 1614 board with simple modification.
+            </p>
+         <div id="Confusing Result" class="tabcontent" style="height: 420px; overflow: scroll">
+          
+        <p class="text-muted mb-5 text-justify " style="line-height: 1.6" >  
+            <code>
+             /*<br>
+            Arduino Hall Effect Sensor Project<br>
+            by Arvind Sanjeev<br>
+            Please check out  http://diyhacking.com for the tutorial of this project.<br>
+            DIY Hacking<br>
+            */<br>
+
+<br>
+             volatile byte half_revolutions;<br>
+             unsigned int rpm;<br>
+             unsigned long timeold;<br>
+             void setup()<br>
+             {<br>
+               Serial.swap(1);//  Because I mistakenly used the back up Rx/Tx on my board<br>
+               Serial.begin(9600);<br>
+               attachInterrupt(6, magnet_detect, RISING);//Initialize the intterrupt pin (Pin 6 of ATtiny 1614)<br>
+               half_revolutions = 0;<br>
+               rpm = 0;<br>
+               timeold = 0;<br>
+             }<br>
+             void loop()//Measure RPM<br>
+             {<br>
+               if (half_revolutions >= 50) { <br>
+                 rpm = 30*1000/(millis() - timeold)*half_revolutions;<br>
+                 timeold = millis();<br>
+                 half_revolutions = 0;<br>
+                 //Serial.println(rpm,DEC);<br>
+               }<br>
+             }<br>
+             void magnet_detect()//This function is called whenever a magnet/interrupt is detected by the arduino<br>
+             {<br>
+               half_revolutions++;<br>
+               Serial.println("detect");<br>
+             }   <br>
+            </code>     
+             </p>
+            </div>
+        <br>
+         <p class="text-muted mb-5 text-justify " style="line-height: 1.6" >  
+         This code works well. As the magnet approaches to the sensor, the sensor can detect the magnetic field and print "detect" in the serial port.
+            </p>    
+         <figure>
+            <img alt="Test Result" src="img/weekly_pic/week9/hall_test.jpg" style="width:100%">
+            <figcaption>Test Result</figcaption>
+         </figure>     
+         
+        <p class="text-muted mb-5 text-justify " style="line-height: 1.6" >  
+        For the final project, the Hall Effect sensor is used to determine the zero point. The mechanism is like:<br>
+        1. The clock hand starts to rotate in the clockwise direction<br>
+        2. The Hall Effect Sensor is placed at the back of the clock face to detect the magnetic field when the clock hand get near enough <br>
+        3. When the microcontroller receive the "detect" signal from the sensor, it will set that position as the start point.<br>
+        <small>* My original plan was to make this progress iterative: I was considering make a comparison of the magnetic field magnitude for each step, which will allow me to determine which point has the strongest signal and hence determine the start point more precisely. However, I soon found it is much easier to adjust the distance between the clock hand and sensor to reduce the error due to detection range.</small> <br>
+        Thus, as shown below, the code I used for the clock only determine two conditions: detected vs not-detected.
+            </p>
+            
+         <!-- Tab links -->
+            <div class="tab">
+              <button class="tablinks" onclick="openMotor(event, 'hall')" id="defaultOpen1">Hall Effect Sensor Relevant Code</button>
+              <button class="tablinks" onclick="openMotor(event, 'motorcode')">Motor Control Code</button>        
+            </div>
+            
+                      
+            
+        <div id="hall" class="tabcontent" style="height: 420px; overflow: scroll">
+    
+        <p class="text-muted mb-5 text-justify " style="line-height: 1.6" >  
+         <b>Hall Effect Sensor Relevant Code</b><br>   
+            <code>
+             int currentstep = 0;<br>
+                //Hall Effect <br>
+                int hallsensor = 4;//pin PB3<br>
+                int digitalVal;//digital readings<br>
+                void setup() {    <br>
+                    //...omited irrelevant code<br>
+                    pinMode(hallsensor,INPUT);<br>
+<br>
+                      while (true){<br>
+                        step(1);<br>
+                        digitalVal = digitalRead(hallsensor);<br>
+                        if (digitalVal==LOW){ //low = detect<br>
+                          break;<br>
+                        }<br>
+                        else{<br>
+                          }<br>
+                      } <br>
+                      currentstep=0;<br>
+                    }<br>
+ 
+                </code>
+            
+            </p>
+        </div>
+            
+         <div id="motorcode" class="tabcontent" style="height: 420px; overflow: scroll">
+
+        <pre class="text-muted mb-5 text-justify " style="line-height: 1.6"> 
+              <b>Motor Control Code</b><br>
+              <code style="color: #e83e8c;">            
+                const int T4_Blue = 3; 
+                const int T1_Black = 0; 
+                const int T3_Red = 2; 
+                const int T2_Yellow = 1; 
+                const int maxnumberofsteps = 48;
+
+                int currentstep = 0; // Indicates in which step I am (0,47)-> your motor do 48 steps in one rotation
+                int current_location = 0; // Indicates in which position I am (0 to 11)
+                int num_of_steps = 0;
+                String inString = "";
+
+                #define step_delay 500 
+
+                void stepMotor(int step_t) {
+                   switch (step_t) //
+                  {
+                    case 0:
+                    //Serial.println("Yellow/Red HIGH");
+                       digitalWrite(T4_Blue, LOW);
+                       digitalWrite(T1_Black, LOW);
+                       digitalWrite(T3_Red, HIGH);
+                       digitalWrite(T2_Yellow, HIGH);
+
+                    break;
+
+                    case 1:
+                       digitalWrite(T1_Black, HIGH);
+                       digitalWrite(T3_Red, HIGH);
+                       digitalWrite(T2_Yellow, LOW);
+                       digitalWrite(T4_Blue, LOW);
+
+                    break;
+
+                    case 2:
+                       digitalWrite(T4_Blue, HIGH);
+                       digitalWrite(T1_Black, HIGH);
+                       digitalWrite(T3_Red, LOW);
+                       digitalWrite(T2_Yellow, LOW);  
+                    break;
+
+                    case 3:
+                       digitalWrite(T4_Blue, HIGH);
+                       digitalWrite(T1_Black, LOW);
+                       digitalWrite(T3_Red, LOW);
+                       digitalWrite(T2_Yellow, HIGH);
+                    break;
+
+                  }
+                 // Serial.print("step_t ");
+                  //Serial.print(step_t);    
+                 }
+
+                // Move x steps (negative will move backwards)
+                void step(int steps_to_move)
+                {
+                  int steps_left = abs(steps_to_move);  // how many steps to take
+
+                  int direction = 0;
+
+                  // determine direction based on whether steps_to_mode is + or -:
+
+                  if (steps_to_move &gt; 0) {
+                    direction = 1;
+                  }
+
+                  if (steps_to_move &lt; 0) {
+                    direction  = 0;
+                  }
+
+                  // decrement the number of steps, moving one step each time:
+
+                  while (steps_left > 0)
+
+                  {
+
+                    // increment or decrement the step number,
+
+                    // depending on direction:
+
+                    if (direction == 1)
+
+                    {
+                      currentstep++;
+
+                      if (currentstep == maxnumberofsteps) {
+                        currentstep = 0;
+                      }
+                    }
+                    else // direction==0
+                    {
+                      if (currentstep == 0) {
+                        currentstep = maxnumberofsteps;
+                      }
+                      currentstep--;
+                    }
+                    // decrement the steps left:
+                    steps_left--;
+
+                    // step the motor to step number 0, 1, ..., {3 or 10}
+                    stepMotor(currentstep % 4);
+                      //Serial.print("Stepleft: ");
+                  //Serial.println(steps_left);
+                  delay (step_delay);
+                  }
+
+                }
+
+                //Move to position
+                void moveToLocation(int location){
+                  num_of_steps = (location - current_location)*4; // Each location is 30 degrees. You have then 4 steps per locations
+
+                  current_location = location;
+                 Serial.print("steps: ");
+                 Serial.println(num_of_steps);
+                  step (num_of_steps);
+                  }
+
+
+                void setup() {
+
+                  pinMode(T4_Blue, OUTPUT);
+                  pinMode(T1_Black, OUTPUT);
+                  pinMode(T3_Red, OUTPUT);
+                  pinMode(T2_Yellow, OUTPUT);
+                  Serial.swap(1);
+                  Serial.begin(9600);
+                  step(5);
+
+
+
+                  currentstep=0;
+                }
+
+                void loop() {
+
+                // put your main code here, to run repeatedly:
+                    //for location10, 11 and 12, which are more than 1 byte
+                  while (Serial.available()>0) {
+                   int inChar = Serial.read();
+                    if (isDigit(inChar)) {
+                      // convert the incoming byte to a char and add it to the string:
+                      inString += (char)inChar;
+                    }
+                    // if you get a newline, print the string, then the string's value:
+                    if (inChar == '\n') {
+                      //Serial.print("Value:");
+                      int location = inString.toInt();
+                      //Serial.println(location);
+                      //Serial.print("String: ");
+                      //Serial.println(inString);
+                      // clear the string for new input:
+
+                      inString = "";//
+
+                      Serial.print("location: ");
+                      Serial.println(location);
+                      moveToLocation(location);
+                      //step(location);
+                    }
+                  }
+                /*
+                for (int i=0; i&lt;=48; i++){ //It should do ¼
+
+                Serial.println(i);
+
+                stepMotor(i%4); //module result from 0 to 4
+
+                delay(2000);
+
+                Serial.println("Moving 12");
+                step(12);
+                delay (5000);
+                Serial.println("Moving 24");
+                step(24);
+                delay(5000);
+                Serial.println("Moving 48");
+                step(48);
+                delay(5000);
+
+                Serial.println("location 3");
+                moveToLocation(3);
+                Serial.println(current_location);
+                delay (5000);
+                Serial.println("location 5");
+                moveToLocation(5);
+                Serial.println(current_location);
+                delay(5000);
+                Serial.println("location 11");
+                moveToLocation(11);
+                Serial.println(current_location);
+                delay(5000);
+                Serial.println("location 6");
+                moveToLocation(6);
+                Serial.println(current_location);
+                delay(5000);*/
+
+                }
+              </code>    
+             </pre>   
+         </div>              
+               
+           <script>
+            function openMotor(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen1").click();
+            </script>
+             <br>
+            <br>
+                  
+<!--Group Assignment-->            
+            <br>
+            <br>
+        <h3 class="mt-0" id="group" >Group Assignment</h3>
+          <hr class="divider my-4">          
+         
+           
+          <p class="text-muted mb-5 text-justify " >
+           This week's group assignment is to probe an input device's analog levels and digital signals. Our group tested the digital and analog signal of a <b>Hall Effect Sensor</b>, which mostly due to the easiness of the circuit and the obvious effect. <br>
+           Hall Effect sensor can detect the magnetic field that approach from a certain direction, which can be reflected via different voltage. For convenience, we used an Arduino UNO board and a Hall Effect sensor board from one of our programs for this group assignment.<br>
+              
+            The board connection and is again derived from <a href="https://maker.pro/arduino/tutorial/how-to-use-a-hall-effect-sensor-with-arduino">this tutorial</a>
+         </p>    
+         <figure>
+            <img alt="Board Connection" src="img/weekly_pic/week9/group/connection.jpg" style="width:80%">
+            <figcaption>Board Connection</figcaption>
+         </figure>     
+         
+        <p class="text-muted mb-5 text-justify " style="line-height: 1.6" >    
+         We have used really simple code to detect the digital and analog signals from the sensor. The main structure of the code are basically the same, except the usage of digital pins versus analog pins. <br>
+         1.Digital Detection<br>
+         In this case, one of the digital pins is used for Hall effect sensor input. There are two status of the sensor input: <b>HIGH</b> and <b>LOW</b>, which corresponds to the status of "detected" versus "not detected".<br>
+         The code used is as below:<br>
+         <code>
+            const int hallPin = 0;     // hall effect sensor out pin<br>
+            int hallState = 0;         // Initial hall sensor status<br>
+            <br>
+            void setup() {<br>
+            <br>
+            Serial.begin(9600); // The hall effect sensor pin as an input  <br>
+            pinMode(hallPin, INPUT);<br>
+            }<br>
+
+            void loop(){<br>
+            <br>
+              hallState = digitalRead(hallPin); // reading the state of the hall effect sensor pin<br>
+
+                Serial.println(hallState);<br>
+                Serial.println("detect");  //<br>
+                delay(200);<br>
+            <br>
+                } <br>
+         </code>
+         <br>
+                  </p>    
+         <figure>
+            <img alt="Digital Detection" src="img/weekly_pic/week9/group/digital_hall.jpg" style="width:100%">
+            <figcaption>Digital Detection</figcaption>
+         </figure>     
+        <p class="text-muted mb-5 text-justify " style="line-height: 1.6" > 
+        
+            We also used the oscilloscope to detect the digital wave of the sensor. We have measured the signal from the Tx pin of the board and detected the square wave on the screen.<br>
+            </p>
+            <figure>
+            <img alt="Digital Wave" src="img/weekly_pic/week9/group/digital_wave.jpg" style="width:100%">
+            <figcaption>Digital Detection with oscilloscope</figcaption>
+         </figure>  
+         <br>
+        <p class="text-muted mb-5 text-justify " style="line-height: 1.6" > 
+          2.Analog Detection<br>
+            In this case, instead of using the digital pin, the Analog pin <b>A0</b> on the Arduino board is used. Moreover, the <b>digitalRead()</b> syntax should be changed to <b>analogRead()</b>. Our instructor Ari helped us to developed this analog detection method. In this case, instead of the binary stasus of "detected" vs " Not detected", the actual magnitude of magenetic field is detected and demonstrated. <br>
+            The code used is as below:<br>
+         <code>               
+            const int hallPin = A0;     // hall effect sensor out pin<br>
+            int hallState = 0;         // Initial hall sensor status<br>
+             <br>
+            void setup() {<br>
+             <br>
+            Serial.begin(9600); // The hall effect sensor pin as an input <br> 
+            pinMode(hallPin, INPUT);<br>
+            }<br>
+             <br>
+            void loop(){<br>
+             <br>
+              hallState = analogRead(hallPin); // reading the state of the hall effect sensor pin<br>
+             <br>
+                Serial.println(hallState);<br>
+                Serial.println("detect");  //<br>
+                delay(200);<br>
+
+                }  <br>
+            </code> 
+            The analog detection is reflected by the change of <b>magnetic field magnitude</b> and the <b>voltage</b> as the magnetic field approaches or moves away.<br>
+            For example, when magnet moves towards the Hall effect sensor from the front, the detected magnetic field is around 110.
+                              </p>    
+         <figure>
+            <img alt="Front Side" src="img/weekly_pic/week9/group/analog_2.jpg" style="width:100%">
+            <figcaption>Front Side</figcaption>
+         </figure>     
+         <br>
+        <p class="text-muted mb-5 text-justify " style="line-height: 1.6" > 
+         On the other hand, when the magnet approaches from the back, the detected magnetic field is around 1000.
+                                       </p>    
+         <figure>
+            <img alt="Back Side" src="img/weekly_pic/week9/group/analog_1.jpg" style="width:100%">
+            <figcaption>Back Side</figcaption>
+         </figure>     
+     
+        <p class="text-muted mb-5 text-justify " style="line-height: 1.6" >    
+         We have also used the multimeter to detect the actual change of voltage when moving the magnet from different direction, which is shown in the following video.
+            </p>
+            <video controls muted>
+              <source src="Files/Week9/1595061320927670%20(1).mp4" type="video/mp4">
+              
+            </video>
+            
+            
+            
+        
+<!--Files-->           
+          <h4  class="mt-0" id="file">Files</h4>
+          <hr class="divider my-4" style="border-color: grey;max-width: 1.25rem">
+        
+          <p class="text-muted mb-5 text-justify ">     
+         Arduino Code:<br>
+             Individual: &nbsp;&#9679; &nbsp; <a href="Files/Week9/ArduinoHallEffect/ArduinoHallEffect.ino">Hall Effect Sensor Test</a>  &nbsp;&#9679; &nbsp; <a href="Files/Final/ATtiny1614/ATtiny1614.ino">Full Motor Control Code</a><br>
+             Group: &nbsp;&#9679; &nbsp; <a href="Files/Week9/analog_hall/analog_hall.ino">Analog Detection</a>  &nbsp;&#9679; &nbsp; <a href="Files/Week9/digital_hall/digital_hall.ino">Digital Detection</a>
+             
+       
+            </p> 
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light py-5">
+    <div class="container">
+      <div class="small text-center text-muted">Copyright &copy; 2019 - Start Bootstrap</div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.min.js"></script>
+
+</body>
+
+</html>

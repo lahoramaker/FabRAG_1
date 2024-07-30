@@ -1,0 +1,1206 @@
+Title: Embedded Programming
+
+URL Source: http://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/
+
+Published Time: 2021-03-17T00:00:00+00:00
+
+Markdown Content:
+This week the programming became real! After a brief (but not easy to get working) taste during the “Electronics Design” week to test my board, I now learned a lot more about how to program my board and make it do some fun and simple tasks, often involving the LED.
+
+Assignments
+-----------
+
+Our tasks for this week are:
+
+*   Individual assignment:
+    *   Read a microcontroller data sheet
+    *   Program your board to do something, with as many different programming languages and programming environments as possible
+*   Group assignment: compare the performance and development workflows for other architectures
+
+Hero Shots
+----------
+
+Showing a final result that I programmed on my board for the `tl;dr` and hopefully showing you why the rest of this very long blog could be interesting to read (⌐■\_■)
+
+The blinking frequency changes with the amount of light that the phototransistor senses
+
+Programming My Board
+--------------------
+
+Two weeks ago, during the [Electronics Design week](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-6/) Henk had created a schematic that included an ATtiny412 microcontroller, an LED, button, phototransistor, and a UPDI and FTDI connection (and two resistors and a capacitor), which we’d all turned into an actual board.
+
+I had already [tested](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-6/#testing-the-board) my tiny hexagon board to run a simple [_echo_](http://academy.cba.mit.edu/classes/embedded_programming/t412/hello.t412.echo.ino) program that returned whatever I typed.
+
+It was now time to make the board do more and start tinkering with our own code. This is generally easiest to pick up while using the _Arduino IDE_, combined with the _megaTinyCore_ board manager for it. I’d already installed both of these two weeks ago when testing my board.
+
+I opened the Arduino app and started a new file. As a reminder:
+
+*   I set the _Board_ under _Tools_ to _ATtiny412_, which updates a whole array of things.
+*   I set the _Port_ to my UPDI (being `D30A3T7I`).
+*   I should _not_ forget that the _Programmer_ should be set to _Serial Port and 4.7k_, otherwise you could end up seeing only `java.nullExceptionError` type results being returned when trying to upload a program to the board.
+
+### A Blinking LED
+
+I was really eager to start with my LED, to make it blink. During instruction day at the lab, Henk showed an example of a tiny script to make the LED go on and off after specific intervals. In that example it uses pin number 7 (`int led_pin = 7;`). However, I already knew that on our boards things were different, because the schematic that we followed had switched the default _TX_ and _RX_ pins to their alternate positions. Thankfully, many pins can be programmed to take on different functions. Only the pin connected to power `VCC` and ground `GND` are fixed.
+
+I therefore had to figure out the pin number on our board connected to the LED. Having learned from the testing that the _megaTinyCore_ website contains a wealth of information, I started looking there, and quickly found the section about [“How to refer to pins”](https://github.com/SpenceKonde/megaTinyCore#how-to-refer-to-pins). Although it sadly doesn’t share actual code snippets, it said **“Defines are provided of form PIN\_Pxn, where x is A, B, or C, and n is a number 0-7”**. Looking at our schematic, I saw the the LED was connected to pin `PA6`, and thus I updated my code to:
+
+```
+// Blink the LED on and off every two seconds
+
+#define led_pin PIN_PA6 // This uses the ATtiny pin number
+//const int led_pin = 0; // This uses the Arduino pin number instead
+
+// The setup function only runs once when you press reset or power the board
+void setup() {
+  // Use the alternate pin positions due to swapped TX&RX pins
+  Serial.swap(1); 
+  // Initialize digital pin led_pin as an output
+  pinMode(led_pin, OUTPUT);
+}
+
+// The loop function runs over and over again forever
+void loop() {
+  digitalWrite(led_pin, HIGH);   // Turn the LED on (HIGH is the voltage level)
+  delay(1000);                   // Wait for a second (= 1000 microseconds)
+  digitalWrite(led_pin, LOW);    // Turn the LED off by making the voltage LOW
+  delay(1000);                   // Wait for a second
+}
+```
+
+The code above is an Arduino flavor mixed around _C_. _C_ is a low-level programming language that is very efficient and fast, but that’s not quite as easy for mere humans to write and understand. Therefore, many many programs have written wrappers around this that are more human friendly, such as _python_, but also _Arduino_. In Arduino these are wrapped into _libraries_. These libraries contain functions (e.g. `digitalWrite` is function) that help you perform a specific task in only 1 line. Under the hood, that function could consist of a few to hundreds of lines of C code that _actually_ do the work in the end.
+
+Libraries therefore make it easy for humans to get started and write code, but it does mean that those libraries need to be added to the script you’re writing when they’re being uploaded to the microcontroller, increasing its size. The fact that the library needs to do the “translation” to _C_ for you, also means that it’s (much) slower than if the script was written in pure _C_.
+
+If you’re script is small, and you don’t need ultra fast processing, then using the libraries is no problem. But in case you do run into performance issues, it might be time to look into ditching the libraries and writing your code in pure _C_.
+
+Getting back to my script. I pressed the _Verify_ button (the circle with the check mark) which gave no compiler issues. I then pressed the _Upload_ button (the circle with the right-pointing arrow next to the _Verify_ button) to compile and upload the program to my board. It took a few seconds, but the output I was seeing from the console was indicating that all was going well.
+
+[![Image 1: The console output from uploading the “blink” code to my board](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/led_blink_arduino_compilation.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/led_blink_arduino_compilation.png)
+
+The console output from uploading the “blink” code to my board
+
+I looked at my board and saw _a blinking LED_! (　＾∇＾)
+
+The LED on my board was blinking
+
+Although using `delay` works for this dummy example, it wouldn’t be a smart approach to use in generally, because the `delay` blocks the system from doing anything else in the meantime. You instead want to work with _timers_, but I’ll hopefully get to that later.
+
+### Pin Numbers
+
+In general, the microcontroller controls the signal (the voltage) to its pins, and there are two ways of controlling this, via _analog_ or _digital_ means.
+
+In the datasheet there is a tiny image on page 14 of the ATtiny412 called the _pinout_ with some base functions of the different pins.
+
+[![Image 2: The “pinout” overview from the ATtiny412 datasheet](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/pins_attiny.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/pins_attiny.png)
+
+The “pinout” overview from the ATtiny412 datasheet
+
+I tried to gather what all these pin options meant:
+
+*   **VCC** | Power supply
+*   **GND** | Ground
+*   **PA** | The name for _digital_ pins, which all of these pins are
+*   **PB** | The name for (purely?) _analog_ pins, which the ATtiny412 doesn’t have, but the green indicates an _analog functions_ that five of the pins have. I _think_ this means that they can all do _ADC_ or Analog _Digital Conversion_
+*   **RESET** | Through this pin you can reset the microcontroller
+*   **UPDI** | Through this pin you can program the board via a UPDI connection - this is linked with the _RESET_
+*   **EXTCLK** | _External Clock_ | Where you can connect this pin to an external clock, such as a resonator
+*   **GPIO VDD power domain** | I wasn’t able to find a clear answer online about what this means, but I think it means that the microcontroller can set a voltage on each of these pins?
+
+To see what Arduino pin numbers are associated to it, you need to find the _Arduino pinout_ overview. I googled “_ATtiny412 Arduino pinout_” to see if I could also make the blinking work while using the pin number that the LED is connected to according to Arduino/_megaTinyCore_.
+
+I found several Fab Academy websites that showed images of the pinout (^▽^) . One site pointed to the source of the pinout in the [_megaTinyCore_ documents](https://github.com/SpenceKonde/megaTinyCore/blob/master/megaavr/extras/ATtiny_x12.md):
+
+[![Image 3: The “pinout” of the ATtinyX12](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/pins_arduino.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/pins_arduino.png)
+
+The “pinout” of the ATtinyX12
+
+Here I saw that the `PA6` pin was probably the number `0` pin according to the _megaTinyCore_ library. I commented out the `#define led_pin PIN_PA6` line and instead added `int led_pin = 0;`. I uploaded it to my board and it all worked, no errors, and my LED started blinking again. Nice!
+
+From the Arduino pinout I have a few new pin names, which I think mean the following:
+
+*   **MISO** | _Master In Slave Out_ | Which is the pin to use to send data from the slave to the maser.
+*   **MOSI** | _Master Out Slave In_ | Which is the pin to use to send data from the master to the slave / peripherals.
+*   **SCK** | _Serial Clock_ | Which are the clock pulses that synchronize data transmission generated by the master.
+*   **SCL** | _Serial Clock Line_ | The same as the _SCK_, but this one is used for an _I2C_ I believe, while _SCK_ is used for _SPI_ communication.
+*   **SDA** | _Serial Data_ | The pin that carries the data when using _I2C_ I think?
+*   **DAC** | _Digital Analog Conversion_ | This allows you to convert digital (numeric) values into analog signals so you can have output voltages that are variable between 0 and 5V, instead of only either 0 or 5V. From the ATtiny412 datasheet there is one DAC pin (PA6, connected to our LED), which is 8-bit.
+*   **ADC** | _Analog Digital Conversion_ | This is doing the reverse from above, where the incoming analog signal is converted into a digital one. This has to be in steps, and the higher the number of steps, the higher the resolution. With a _10-bit_ ADC you can detect 1024 (being `2^10`) discrete analog levels, while _8-bit_ can detect 256 (`2^8`) discrete levels. If I understand the ATtiny datasheet correctly (from the _Peripheral Summary_), then all 6 (non _VCC/GND_) pins are _ADC_ (at 10-bit 115ksps).
+*   **TXD** | _Transmit_ | The transmitting pin to do serial communication (_UART_ or _USART_ I think? Which is serial over USB).
+*   **RXD** | _Receive_ | The receiving pin to do serial communication.
+
+And there are a few extra marks, such as the tilde (~) meaning a **PWM** pin (Pulse Width Modulation), which I’ll get to in the _fading_ LED example below, and the alternate locations of the _TXD, RXD_ and _MOSI, MISO_ which I’d already discovered during my testing, because our board is making use of these alternate positions. I’m not quite sure what the _async interrupt_ truly means.
+
+### A Fading LED
+
+To create an LED that seems as if it’s fading, you can use the **PWM** pins. Pulse Width Modulation is a technique for getting analog results with digital means. It’s explained well on [this](https://www.arduino.cc/en/Tutorial/Foundations/PWM) Arduino page. It comes down to varying the amount of time during a _pulse_ that the signal is _HIGH_ / ON.
+
+[![Image 4: Pulse Width Modulation - from the Arduino website](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/led_fade_pwm.gif)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/led_fade_pwm.gif)
+
+Pulse Width Modulation - from the Arduino website
+
+There is a handy [Fading Example](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fading) on the Arduino website that uses this _PWM_ technique, using the `analogWrite` function (instead of the `digitalWrite` function from the “blink” example). The `analogWrite` function can take integers between a value of `0 - 255`, where the higher, the brighter the LED should become.
+
+_However_, I noticed that the pin that our LED is connected to, pin `PA6` **does not have PWM**. Another sad by-effect from having switched the _TX_ and _RX_ pins. Using the `analogWrite` function, and the “fade” example therefore didn’t work. I compiled and uploaded it, but my LED remained off.
+
+I therefore had to mimic a _PWM_ through purely software means. This is done by using the `digitalWrite` function combined with the `delay` to basically create your own pulses. You make your own pulses of width `X` milliseconds long, and using the `digitalWrite` you turn it on for, say 20% of the time of that pulse and off for the remaining 80% of the time of a pulse.
+
+I definitely needed a first starting example to wrap my head around it, but eventually it clicked and I understood what was happening and adjusted the examples to my own version:
+
+```
+// Using "software PWM" to fade my LED
+// Loosely based on: https://forum.arduino.cc/index.php?topic=104572.0
+
+const int led_pin = 0;
+float steps = 25; // The max time of each step
+float fade_step = 0.5;
+// It takes (steps / fade_step) steps to go from OFF to ON
+// the "delay()" function should take "unsigned long"
+// but I really need 0.5 milliseconds or less
+// and using the delayMicroSeconds() doesn't work,
+// because it can't handle numbers above a few thousand microseconds
+// which is only a few milliseconds
+
+void setup() {
+  Serial.swap(1); //Because I have swapped TX/RX pins
+  pinMode(led_pin, OUTPUT);
+}//void setup
+
+void loop(){
+  // Fade to bright | Runs from 0% -> 100%
+  for(float i = 0; i <= steps; i += fade_step) {
+    digitalWrite(led_pin, HIGH);
+    delay(i);         // ON for this long
+    digitalWrite(led_pin, LOW); 
+    delay(steps - i); // OFF for this long, the remaining "pulse width"
+  }//for
+
+  // Stay on for a while
+  digitalWrite(led_pin, HIGH);
+  delay(50);
+  
+  // Fade to dim | Runs from 100% -> 0%
+  for(float i = steps; i >= 0; i -= fade_step){
+    digitalWrite(led_pin, HIGH);
+    delay(i);
+    digitalWrite(led_pin, LOW);
+    delay(steps - i);
+  }//for
+
+  // Stay off for a while
+  digitalWrite(led_pin, LOW);
+  delay(50);
+}//void loop
+```
+
+Which made my LED fade nicely:
+
+The LED was fading using a software mimicking PWM
+
+The code above isn’t _totally_ neat code, because the `delay` functions wants an `unsigned long` as a value, whereas I’m giving it a `float`. However, if I increased the step size from `0.5` to `1` the visual result was a very jagged fading on and off, whereas using `0.5` shows a pretty nice smooth fading. I also couldn’t use the `delayMicroSeconds` function, because according to the [docs](https://www.arduino.cc/reference/en/language/functions/time/delaymicroseconds/) _“the largest value that will produce an accurate delay is 16383. For delays longer than a few thousand microseconds, you should use delay() instead."_, and I’d need about `25000`.
+
+If the delays are too long, your eyes will notice the jagged steps
+
+### Sending Print Statements
+
+In the next section about wanting to integrate my button I ran into some weird errors. I therefore wanted to use _print_ statements to investigate what was happening (also because I don’t yet have a logic analyzer at home).
+
+I searched for an example on how to output the results from `Serial.print()` statements and found [this](https://www.programmingelectronics.com/using-the-print-function-with-arduino-part-1/) blog, that says I only have to open the _Serial Monitor_ (under _Tools_ in the Arduino IDE), and that I would see the print statements there. I tried that with a very simple example (using the `printf` statement example I found on the _megaTinyCore_ website), but the window remained empty.
+
+[![Image 5: Nothing appears in my Serial Monitor to the right](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/serial_megatinycore_example.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/serial_megatinycore_example.png)
+
+Nothing appears in my Serial Monitor to the right
+
+Looking at the slides from the instruction day, I saw that the `SoftwareSerial` library was used. I looked up some [examples](https://www.arduino.cc/en/Tutorial/LibraryExamples/SoftwareSerialExample) to learn how to implement it, and then tried running a very basic example, but again, my monitoring window remained empty.
+
+[![Image 6: Using “SoftwareSerial” also didn’t return anything](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/serial_softwareserial_example.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/serial_softwareserial_example.png)
+
+Using “SoftwareSerial” also didn’t return anything
+
+I tried tweaking both scripts, changing the order of the _TX_ and _RX_ pin numbers, changing the _baud rates_, but nothing ever appeared in the monitor. I searched for reasons as to why this could be happening. I couldn’t find a clear answer, but I slowly started getting the idea that it had to do something with the USB?
+
+I decided to check the long _megaTinyCore_ page again, and found this passage: _“Note that this does not give you serial monitor”_ in the “From a USB-Serial adapter (pyupdi-style)” section. I couldn’t understand the rest of that section, but it slowly started dawning on me. I was using the _UPDI_ to program my board, and the _Port_ was set to my UPDI in the Arduino IDE. The Monitor was thus set to listen to my UPDI. However, the serial communication was happening on the _TX_ and _RX_ pins of my _FTDI_. I was thus listening _on the wrong port_!
+
+I didn’t want to have to switch the port on my Arduino IDE every time I wanted to program my board (with the UPDI) and then get back the print statements (with the FTDI). I therefore started searching for a way to listen to ports through my terminal. I found [this](https://learn.sparkfun.com/tutorials/terminal-basics/all#command-line-windows-mac-linux) page that explains that I can use:
+
+```
+# screen <port_name> <baud_rate>
+screen /dev/tty.usbserial-D30A3T7C 9600
+```
+
+Make sure that the _baud rate_ that you use in the statement above is the same as the one you supply in the `Serial.begin(<<baud rate>>);` statement within your Arduino script.
+
+And it worked! (๑•̀ㅂ•́)ง✧ My terminal started showing hundreds of lines with _hello_.
+
+[![Image 7: Finally seeing some “hello"s when connecting to my FTDI](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/serial_screen_print_statements_working.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/serial_screen_print_statements_working.png)
+
+Finally seeing some “hello"s when connecting to my FTDI
+
+To disconnect to the FTDI, type `CTRL+a` followed by `CTRL+\`. The screen will then ask if you are sure you want to disconnect, say `y`.
+
+**Note** | If you close the tab in _iTerm_ you won’t have closed the connection to the FTDI. So if you try and run the `screen` command again, it will tell you that it’s busy. You really have to close the connection with the `CTRL+a` followed by `CTRL+\` command while in tha tab that shows the connection to the FTDI. If you _have_ closed the tab, then you need to end the process. From the terminal, run `lsof | grep usbserial`. If the port is in use, you will get a response like this (otherwise it will return nothing):
+
+```
+screen 13411 nadieh 5u CHR 22,8 0t4 765 /dev/tty.usbserial-D30A3T7C
+```
+
+Note the session number, which in my case was `13411`. Run `screen -x 13411` (but with your own session number) to close the session.
+
+While I was struggling with all this, I’d also asked Quentin Bolsee for help. If I was maybe missing something to see the output from the print statements. I explained that I eventually had it working, and he replied that I should really try and **avoid using the `SoftwareSerial` library**. Sure, it can turn any pin into an _TX/RX_ combination, but it’s apparently slow and you can’t get hardware interrupts according to Quentin (I’m not totally sure what that latter really implies). I also noticed that including it took up a significant portion of my ATtiny’s storage space.
+
+I therefore rewrote my example to be based on the default `Serial`:
+
+```
+void setup() {
+  // Initialize serial communications at 9600 bps
+  // Only used for debug
+  Serial.swap(1);
+  Serial.begin(9600);
+  while(!Serial);
+}// void setup
+
+void loop() {
+  Serial.print("hello");
+}// void loop
+```
+
+And that worked as well, and took a little less space. Still a decent amount of space, about 30%-ish, so using `Serial` in my code should be something I **reserve for debugging purposes only**, but should really take out as soon as I’m finalizing the code.
+
+**Note** | Quentin said that you can also open up a second Arduino IDE, set the port to the FTDI, open up the _Serial Monitor_, and then you can also see the print statements. But I think I prefer the ease of the `screen` command in my terminal now.
+
+### Pressing the Button
+
+To integrate the push button on our board to have an effect on the LED, I started with the [button](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Button) example from the Arduino website.
+
+In this case the button is an _input_ for the ATtiny, and thus we have a `pinMode(button_pin, INPUT)`. After that I use a `digitalRead` on the pin connected to the button in the function that loops forever to ask the state of the button, and with that I decide if the LED pin should be set to high or low.
+
+```
+#define led_pin 0 // Arduino number | ATtiny PA6
+#define button_pin 4 // Arduino number | ATtiny PA3
+
+int button_state = 0;
+
+void setup() {
+  // Initialize serial communications at 9600 bps
+  // Only used for debug
+  Serial.swap(1);
+  Serial.begin(9600);
+  while(!Serial);
+
+  // Initialize the LED pin as an output
+  pinMode(led_pin, OUTPUT);
+  // Initialize the button pin as an input
+  pinMode(button_pin, INPUT);
+}// void setup
+
+void loop() {
+  // Read the state of the pushbutton value
+  // If it is pressed the button_state is LOW
+  // When the button is open (unpressed) there is no connection between the two
+  // legs of the button, so the pin is connected to 5V and we read a HIGH.
+  button_state = digitalRead(button_pin);
+  
+  // Check if the button is pressed
+  if (button_state == HIGH) {
+    digitalWrite(led_pin, HIGH);
+  } else {
+    digitalWrite(led_pin, LOW);
+  }//else
+
+  //Only used for debug
+  Serial.print(button_state);
+}// void loop
+```
+
+As you can see, I also added a `Serial.print` statement to see the `button_state`. That’s because my button press worked like a charm to turn the LED off. _However_, the LED would remain off for at least a second longer. And the longer I pressed, the longer the LED remains off, and I had _no_ idea why that was happening (⊙\_☉)
+
+The button remains off a bit longer after I stop pressing it
+
+I therefore added the `Serial` statements to see the value of the `button_state` during this time. Was the button still sending along a `LOW` after I stopped pushing?
+
+And that did indeed seem to happen. After I stopped pressing the button, the value of `button_state` kept on being `0`. And even more odd, it would often start alternating between `0` and `1` either immediately after I stopped pushing, or a little while after I stopped pushing, before finally settling on being `1`.
+
+The button state would continue to be 0 and then alternate before becoming 1
+
+I noticed that if I was _holding_ my board with one finger on the button and another finger on the bottom of the PCB that the `button_state` would return back to `0` almost immediately.
+
+Some time later I looked at the slides that Henk had send us from the instruction day at the lab, and noticed that sometimes the input pin would be set with `INPUT_PULLUP` instead of `INPUT` and I wondered what the difference was, so I looked it up on the [Arduino website](https://www.arduino.cc/en/Tutorial/Foundations/DigitalPins). Here I found a paragraph that said: _“pins configured as pinMode(pin, INPUT) with nothing connected to them, \[…\] will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin."_ Which sounded quite a lot like my button problem I thought!
+
+The page then continues to say that it’s a good idea to have a _pullup_ or _pulldown_ resistor coupled to the input device to remove that noise. Well, my button didn’t have that, it was a direct connection to the ATtiny on one side and ground on the other. _BUT_, the page continues to explain that the ATmega chip has built-in pullup resistors that can be accessed by setting the `pinMode()` to `INPUT_PULLUP`. Interesting! The page also explains that _“When connecting a sensor to a pin configured with INPUT\_PULLUP, the other end should be connected to ground. In the case of a simple switch, this causes the pin to read HIGH when the switch is open, and LOW when the switch is pressed."_
+
+I thus changed my `INPUT` to `INPUT_PULLUP`, compiled my code and send it to my board:
+
+```
+#define led_pin 0 // Arduino number | ATtiny PA6
+#define button_pin 4 // Arduino number | ATtiny PA3
+
+int button_state = 0;
+
+void setup() {
+  // Initialize the LED pin as an output
+  pinMode(led_pin, OUTPUT);
+  // Initialize the button pin as an input
+  pinMode(button_pin, INPUT_PULLUP);
+}// void setup
+
+void loop() {
+  // Read the state of the pushbutton value
+  // If it is pressed the button_state becomes LOW
+  button_state = digitalRead(button_pin);
+  
+  // Check if the button is pressed
+  if (button_state == HIGH) {
+    digitalWrite(led_pin, HIGH);
+  } else {
+    digitalWrite(led_pin, LOW);
+  }//else
+}// void loop
+```
+
+And it worked! My button was coming back on immediately after I stopped pressing the button, every time I tried (^▽^)
+
+The working button!
+
+### Using the Phototransistor
+
+The final component on my board that I hadn’t incorporated through code yet was the phototransistor. The instruction slides from Henk had one example that used a sensor, which I used to write my starting code, together with the [AnalogInOutSerial](https://www.arduino.cc/en/Tutorial/BuiltInExamples/AnalogInOutSerial) example from the Arduino website:
+
+```
+#define led_pin 0 // ATtiny PA6
+#define photo_pin 1 //ATtiny PA7
+
+int sensor_value = 0;
+
+void setup() {
+  // Initialize digital pin led_pin as an output
+  pinMode(led_pin, OUTPUT);
+  // Initialize the phototransistor pin as an input
+  pinMode(photo_pin, INPUT);
+}//void setup
+
+void loop() {
+  // Read the analog value coming in from the phototransistor
+  // The input is 10-bit (2^10) which gives 1024 values -> between 0 - 1023
+  sensor_value = analogRead(photo_pin);
+
+  //If the sensor value is greater than 500, have the LED on
+  if(sensor_value > 500) {
+    digitalWrite(led_pin, HIGH);
+  } else {
+    digitalWrite(led_pin, LOW);
+  }//else
+}//void loop
+```
+
+I had no idea if the phototransistor would show a high number when it was dark of bright, but I grabbed a flashlight and could use my finger to block the phototransistor to test and see what would happen.
+
+The LED went off when I shined a bright light on the phototransistor
+
+The first step was working, but I now wanted to make the LED blink: the brighter it became, the slower it should blink, while the darker it became, the faster it should blink until it was seemingly fully on when the phototransistor was blocked from light.
+
+I first wanted to get a sense for the sensor values that were being output by the phototransistor. I therefore added a few `Serial.print()` statements to my code (I had also added a `map` function to go from the `0 - 1023` to a `delay` frequency that I could use to blink the LED with, which I called `output_value`).
+
+The first time I uploaded the program with the print statements, the sensor and output values came flying by on my terminal screen _so fast_ that I couldn’t even read them. Of course, I’d forgotten how fast that _loop_ function must go. After a bit of searching I found an example to have the print statement only run every _X_ milliseconds.
+
+```
+static const unsigned int refresh_interval = 1000; // milliseconds
+static unsigned long last_refresh_time = 0;
+
+#define led_pin 0 // ATtiny PA6
+#define photo_pin 1 //ATtiny PA7
+int sensor_value = 0;
+int output_value = 0;
+
+void setup() {
+  // Initialize serial communications at 9600 bps:
+  Serial.swap(1);
+  Serial.begin(9600);
+  while(!Serial);
+  
+  pinMode(led_pin, OUTPUT);
+  pinMode(photo_pin, INPUT);
+}//void setup
+
+void loop() {
+  // Read the analog value coming in from the phototransistor
+  sensor_value = analogRead(photo_pin);
+  // Map from 0 - 1023 to 1 - 1000
+  output_value = map(sensor_value, 0, 1023, 1, 1000);
+
+ if(millis() - last_refresh_time >= refresh_interval) {
+   Serial.print(F("sensor: "));
+   Serial.println(sensor_value);
+
+   Serial.print(F("output: "));
+   Serial.println(output_value);
+
+   last_refresh_time += refresh_interval;
+ }//if
+}//void loop
+```
+
+I saw that the base level in my room was about `1000`, which I found odd, since I also saw that “dark” was `1023` and I really wasn’t sitting in the near dark in my room. I did see that shining my flashlight on the sensor would bring the sensor value down, and if I pressed the flashlight almost on top of the sensor it could reach `0` (ignore the _output_ lines in the image below for now):
+
+[![Image 8: The sensor values when shining a flashlight on the phototransistor and the base level at the bottom](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/phototransistor_ir_sensor_values.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/phototransistor_ir_sensor_values.png)
+
+The sensor values when shining a flashlight on the phototransistor and the base level at the bottom
+
+I still found it odd that my phototransistor was so heavily skewed that the section between normal lighting and dark was only ±23 steps, but between normal and very bright was the remaining 1000 (◎\_◎;) Perhaps I could use some easing function to “squeeze” the part from `0 - 1000` and “extend” the section between `1000 - 1023`?
+
+I used [this](https://easings.net/) website with visual examples to figure out what kind of easing I wanted. Something like an exponential or 5-order polynomial seemed good. I then found [some](https://www.gizma.com/easing) [examples](https://github.com/warrenm/AHEasing/blob/master/AHEasing/easing.c) of these easing functions (the latter written in _C_) that I could use for my own function.
+
+I created another variable `output_value_ease` that would be the result from the easing between the `0 - 1000` interval. I also added this to the `Serial.print()` statements so I could check the eased value. However, when I tried to compile the code I kept on getting very vague errors about “text not fitting”. I first thought that I was not handling my variables well, that my function was expecting an `int` in its arguments, but I was supplying a `float`, or that I was doing integer division (although I figured that shouldn’t give any errors).
+
+[![Image 9: The same error kept appearing when I tried to compile my phototransistor program](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/phototransistor_ir_compilation_errors.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/phototransistor_ir_compilation_errors.png)
+
+The same error kept appearing when I tried to compile my phototransistor program
+
+But even when I removed the function and did the math within the general _loop_ function it still didn’t solve anything. If I took out the lines with the new `output_value_ease` the code would compile though. I kept in struggling with that for a while, thinking it was errors in my math and usage of variable types.
+
+Eventually I decided to search online on the one small section of text that seemed even remotely intelligible from the error statement `'.text' will not fit in region 'text' during compile` and was surprised to find results; apparently **my program was too big**! Really?! Had I already filled up my ATtiny with only ±40 lines of code? _That_ I hadn’t expected at all, I had totally not been paying attention to the percentage value that the compiler shows (when it _does_ compile) that is being taken up of the program storage space.
+
+I searched for tips on how to reduce the size of my script in Arduino and found some useful tips on [this](https://create.arduino.cc/projecthub/john-bradnam/reducing-your-memory-usage-26ca05) page. Such as using `#define led_pin 0` to set compiler constants instead of using `int led_pin = 0;`. Or to use `int8_t` to initialize an `int` that you know will stay within `-128` and `128` (all of my `int` variables could get bigger sadly). Or to wrap any purely text print statement with `F`, such as `Serial.print(F("sensor: "))`. But most of the other tips I didn’t quite understand (\*^▽^\*)ゞ
+
+While I was working on this I got the note from Quentin to not use `SoftwareSerial` anymore (which I was using till this point) and rewrote my prints to the default `Serial`, and _finally_ my program wanted to compile again, pfew!
+
+As a test I commented out all the `Serial` statements, and the storage space dropped from 80% to 51%. Damn, that was _a lot_ of space taken up by `Serial`.
+
+With the compilation errors gone, I had the easing function working on my board. It was blinking really fast as a default, would blink so fast that it seemed fully on when I placed my finger on the phototransistor, and blinked really slow when I shined my flashlight on it
+
+```
+#define led_pin 0 // ATtiny PA6
+#define photo_pin 1 //ATtiny PA7
+int sensor_value = 0;
+int output_value = 0;
+int output_value_ease = 0;
+
+void setup() {
+  pinMode(led_pin, OUTPUT);
+  pinMode(photo_pin, INPUT);
+}//void setup
+
+void loop() {
+  // Read the analog value coming in from the phototransistor
+  sensor_value = analogRead(photo_pin);
+  //Map to 1 - 1000 and then ease that value
+  output_value = map(sensor_value, 0, 1023, 1, 1000);
+  output_value_ease = easeOut(output_value, 1.0, 1000.0);
+
+  // Blink the LED with a 2*output_value_ease timing
+  blinkLED(output_value_ease);
+}//void loop
+
+//t = current value, b = start value, d = end value
+int easeOut(int t, float b, float d) {
+  float n = (t - b) / (d - b);
+  return(int)(d - b) * (1.0 - n*n*n*n) + b;
+}// int easeOut
+
+// Make the LED blink with a delay of delay_time
+void blinkLED(int delay_time) {
+  digitalWrite(led_pin, HIGH);
+  delay(delay_time);
+  digitalWrite(led_pin, LOW);
+  delay(delay_time); 
+}// void blink
+```
+
+Apologies for the crappy video below, I couldn’t point my phone camera directly at the board, because it messed up the blinking signal. I’ll explain a little further below why this happened.
+
+The speed of the blinking LED changes depending on the amount of light shining on it
+
+**Side Note** | I noticed at some point that the my LED was still flashing when I kept my finger on it. I didn’t know why that had appeared all of a sudden. But later I found that when I slowed down the time during which the _print_ statements were being run, that the flashing was also slower. Ah! So **the print statements were interfering with the speed at which the loop could run**. Commenting out my `Serial` statements fixed the issue indeed.
+
+I kept on fiddling with my easing function, because I wanted the default blinking to go slower. But I couldn’t quite get it to work, the easing was getting quite extreme with a 7-th order polynomial. But I figured that it was good enough for now to at least take a video. But as soon as I pointed my phone’s camera at my board the blinking frequency became a bit erratic, jumping between different Hz. Coincidentally, around that time I was still chatting with Quentin, and told him about my phototransistor registering my room as almost completely dark, more as a joke. But he immediately asked if I perhaps didn’t have an _infrared_ (IR) phototransistor. O no…. Did I….? ✖\_✖
+
+I thought I remembered that it was the only tiny box at the Waag that had the name _phototransistor_ without also having _IR_ in the name: _Phototransistor NPN SMD PLCC-2_, specifically with part number _365-1162-1-ND_. I searched online for some information and found [a PDF](http://dkc3.digikey.com/PDF/TW092-10/P2237.pdf) that put that specific part number in the infrared. Dammit!
+
+I now understood the reason why my camera was messing with the blinking frequency. To focus, many camera’s use an infrared signal. Thus as soon as I pointed my camera at the board, the IR phototransistor would register a slight increase of the sensor value. And because I was using a high-order polynomial in my easing function to _really_ stretch out the area around ±1000, it made a _big_ difference in the decrease in speed at which the LED was blinking.
+
+#### Using a Visible Light Phototransistor
+
+I asked Henk if I was supposed to use an IR phototransistor, but he said it was supposed to be visible light.
+
+Thus, back at the Waag after the weekend, I checked the wall with the little electronics boxes again, and saw that there was indeed one that said _Phototransistor Visible 940nm_. Hmmmm, perhaps I had been confused two weeks ago, because `940nm` lies smack damn in the Infrared range (blue is `±450nm` and red is `700nm`). The box right next ot it even said _Phototransistor **IR** 940nm_.
+
+But after an online search by Henk, looking at the parts list of the Fab Academy, he found that the _Visible 940nm_ was indeed the one I was supposed to use. On the [Digi-Key website](https://www.digikey.nl/product-detail/en/everlight-electronics-co-ltd/PT15-21C-TR8/1080-1380-1-ND/2676114) you can see the [datasheet](https://www.digikey.nl/htmldatasheets/production/854336/0/0/1/pt15-21c-tr8.html) of piece _1080-1380-1-ND_, which shows the _Range of Spectral Bandwidth_ to lie between `530nm - 1030nm`, with the peak sensitivity at `940nm`.
+
+In all honesty, I wouldn’t say that was _completely_ visible, because the shortest wavelength it can handle is green-ish, which is about halfway through the spectrum that the human eye can see. Whereas it does pick up a large portion of the IR spectrum. But ok, better something than nothing.
+
+I used the heat gun to melt the soldering connections to my IR phototransistor, grabbing onto the phototransistor with tweezers and holding it up, supposedly letting gravity and heat do the rest. At first it just _would not_ come off. My board was heating up, the paper sheet that was lying a little below where I was holding the board was turning brown even!
+
+I stopped and looked at the tip of the heat gun and noticed that I was missing the small baffle that points the hot air into a thin stream, oops ✖‿✖
+
+After putting the baffle on the heatgun and trying again, the board fell away from the phototransistor that I was holding after only a few seconds (_such_ a difference!)
+
+From the datasheet I had seen that the _collector_ side was marked wit two green stripes, which was the side that should point towards the ATtiny.
+
+[![Image 10: Figuring out the correct orientation of the new phototransistor](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/phototransistor_visible_orientation.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/phototransistor_visible_orientation.jpg)
+
+Figuring out the correct orientation of the new phototransistor
+
+[![Image 11: The phototransistor with the “collector” mark in green on the left](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/phototransistor_visible_component.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/phototransistor_visible_component.jpg)
+
+The phototransistor with the “collector” mark in green on the left
+
+I soldered on the new phototransistor, and set my computer and UPDI and FTDI up to program my board. This time the phototransistor reported values of around `400 - 600` as the base of the room (although this was at te Waag not at home), which was much more along the lines I had initially expected.
+
+I deleted the original easing function, and instead created a second-order polynomial function (`y = a*x^2 + b*x + c`) using R that converts the `0 - 1023` range to a delay frequency range of `1000 - 1`, clamped to 1 at `900`
+
+```
+# Get a second-order polynomial fit trough
+# these preferred points
+x <- c(0, 500, 900)
+y <- c(1000, 200, 1)
+
+# Fit a regression curve
+fit2 <- lm(y~poly(x,2,raw=TRUE)) #second degree polynomial
+
+# Plot the results
+xx <- seq(0,1000, length=50)
+plot(x,y,pch=19,ylim=c(0,1500))
+lines(xx, predict(fit2, data.frame(x=xx)), col="green")
+
+# Get the coefficients
+summary(fit2)
+```
+
+I added the coefficients of the polynomial to a new function called `curveFit`, and uploaded it to my board.
+
+```
+#define led_pin 0 // ATtiny PA6
+#define photo_pin 1 //ATtiny PA7
+int sensor_value = 0;
+int output_value = 0;
+
+void setup() {  
+  pinMode(led_pin, OUTPUT);
+  pinMode(photo_pin, INPUT);
+}//void setup
+
+void loop() {
+  // Read the analog value from the phototransistor, between 0 - 1023
+  sensor_value = analogRead(photo_pin);
+
+  // Map the sensor value to the range 1000 - 1
+  // using a second-order polynomial
+  output_value = curveFit(sensor_value);
+
+  // Blink the LED with a 2*output_value timing
+  blinkLED(max(output_value, 1));
+}//void loop
+
+int curveFit(int n) {
+  return (int)(0.001225*n*n - 2.212*n + 1000);
+}// int curveFit
+
+// Make the LED blink with a delay of delay_time
+void blinkLED(int delay_time) {
+  digitalWrite(led_pin, HIGH);
+  delay(delay_time);
+  digitalWrite(led_pin, LOW);
+  delay(delay_time); 
+}// void blink
+```
+
+And then my LED was showing some nice behavior with blinking while at base level, moving to seemingly full on when covered and blinking much slower when I shine a flashlight on it.
+
+The blinking speed of the LED changes with how much light the phototransistor picks up
+
+I did notice that IR (heat) had an effect on the phototransistor (which I see through the blink frequency of the LED). For example, there’s a difference if I use my finger to block the phototransistor (you can still see that it flashes), or a piece of cardboard (the LED seems always on). Or that it matters how close my arm is in general.
+
+Not feeling quite right about the spectral range, I tested the sensor values again while back in my office, and damn, they were back at `1000` (￣ー￣) . I then checked the spectral range of that first phototransistor that was on my board, and saw that _it was basically the same_, running from about `450nm - 1100nm`, with a peak at `±900nm`. So now I’m just very confused about “visible light” phototransistors, not fully capturing visible light, but secretly adding a bulk of the IR range.
+
+### Programming With PlatformIO
+
+Besides the Arduino IDE I also wanted to try a few other tools for doing embedded programming, one of which was the [PlatformIO IDE](https://platformio.org/). This is an extension for _Visual Studio Code_ (VSC), which is my main code editor, so I was pleasantly surprised, and installed _PlatformIO_ through the extensions tab from VSC.
+
+I followed the [Quick start guide](https://docs.platformio.org/en/latest/integration/ide/vscode.html#quick-start). You can open the PlatformIO Home tab by clicking on the tiny house icon that was now visible on the bottom info row of VSC.
+
+[![Image 12: The PlatformIO buttons that appear at the bottom of VSC](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_overview.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_overview.jpg)
+
+The PlatformIO buttons that appear at the bottom of VSC
+
+Which will bring you to a new tab from PlatformIO. Click on _New Project_, which opens a new window that asks for the project name, and the board and framework to use. It says by default that almost 900 boards are supported and thankfully the ATtiny412 is one of those.
+
+[![Image 13: The home tab of PlatformIO within Visual Studio Code](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_home.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_home.png)
+
+The home tab of PlatformIO within Visual Studio Code
+
+[![Image 14: Creating a new project](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_new_project.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_new_project.jpg)
+
+Creating a new project
+
+After it’s done with that (it might take a minute for the very first project ever), you should open up the `main.cpp` file in the `src` folder.
+
+[![Image 15: The empty “main.cpp” file](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_main.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_main.png)
+
+The empty “main.cpp” file
+
+I copied the default “Blink” example from the PlatformIO Quick start, only changing the `LED_BUILTIN` variable to `#define led_pin 0`. I clicked the little “check mark” icon to compile (or _Build_ as it’s named here) the program, and that all went smoothly.
+
+[![Image 16: Compiling the simple “Blink” program worked](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_compile_success.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_compile_success.png)
+
+Compiling the simple “Blink” program worked
+
+I figured I might as well click the _Upload_ icon next (the “right-arrow” icon) and see what happens. This time I wasn’t so lucky, and got an error:
+
+[![Image 17: Getting an error during the upload of the “Blink” program](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_upload_error.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_upload_error.png)
+
+Getting an error during the upload of the “Blink” program
+
+I inspected the log and the start seemed good indeed, but then I was confused to read `jtag2updi` upload protocol. I was expecting to see something about `pyupdi`. I did notice that it was using my UPDI in the `Auto-detect: /dev/cu.usbserial-D30A3T7I` line, whereas I never actually selected my port I realized.
+
+I read a little into this, and learned that PlatformIO will try and select the correct port for you. I found that you can see a list of the available ports/devices from the PlatformIO home page by clicking on the _Devices_ tab along the left:
+
+[![Image 18: The available ports / devices can be found in the “Devices” tab](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_devices.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_devices.png)
+
+The available ports / devices can be found in the “Devices” tab
+
+But since this was going correctly, I had to look elsewhere for my upload error.
+
+I found the [Atmel megaAVR](https://github.com/platformio/platform-atmelmegaavr) plugin/library for PlatformIO, which led me to its documentation within the PlatformIO docs. And there I found a section on [“Upload using pyupdi”](https://docs.platformio.org/en/latest/platforms/atmelmegaavr.html#upload-using-pyupdi). It seemed that I had to use a custom `upload_command` in my project’s `platform.ini` file.
+
+I thus opened the `platform.ini` file in VSC and added the `upload_speed`, `upload_flags`, and `upload_command` lines to it:
+
+```
+[env:ATtiny412]
+platform = atmelmegaavr
+board = ATtiny412
+framework = arduino
+upload_speed = 115200
+upload_flags =
+    -d
+    tiny412
+    -c
+    $UPLOAD_PORT
+    -b
+    $UPLOAD_SPEED
+upload_command = pyupdi $UPLOAD_FLAGS -f $SOURCE
+```
+
+I _really_ wasn’t sure if that would be enough. I pressed the _Upload_ button again, and it worked, ending with a _SUCCESS_ statement and blinking LED on my board (๑•̀ㅂ•́)ง✧
+
+[![Image 19: Successfully uploaded my program via PlatformIO](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_upload_successful.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_upload_successful.png)
+
+Successfully uploaded my program via PlatformIO
+
+**Note** | By pressing the little “electrical plug” icon (the **Serial Monitor**) brings up the terminal window in VSC where it tells you the available ports and by selecting a number it will open that port for you, really handy!
+
+[![Image 20: The Serial Monitor options with PlatformIO](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_serial_monitor.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/platformio_serial_monitor.png)
+
+The Serial Monitor options with PlatformIO
+
+**Note** | I found that there is a dedicated page for each AVR chip on the PlatformIO docs, such as the [ATtiny412](https://docs.platformio.org/en/latest/boards/atmelmegaavr/ATtiny412.html#board-atmelmegaavr-attiny412)
+
+Seeing that I could get PlatformIO working, I left it at that, choosing to remain with the Arduino IDE for this week.
+
+### Programming With Python
+
+I also took a quick look at using [_MicroPython_](https://micropython.org/) or [_CircuitPython_](https://github.com/adafruit/circuitpython) (which is based on MicroPython). However, I quickly found this line on the MicroPython website: _“Yet it is compact enough to fit and run within just 256K of code space and 16K of RAM”_. However, our ATtiny412 has 4KB of _Flash_ and only 256B of _SRAM_. I therefore understood it as being not possible to use these python methods of programming my board, and let them be.
+
+Maybe if I choose to use a _ESP8266_ or _ESP32_ development board in the future I could look into this again (using [this](https://randomnerdtutorials.com/getting-started-micropython-esp32-esp8266/), [this](https://randomnerdtutorials.com/install-upycraft-ide-mac-os-x-instructions/), and [this](https://randomnerdtutorials.com/flash-upload-micropython-firmware-esp32-esp8266/) tutorial perhaps).
+
+The ATtiny412 Datasheet
+-----------------------
+
+Part of our individual assignment this week was to read/skim through the entire datasheet of the microcontroller that we’re using on our boards, so we know what kind of data can be found in it. The [datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny212-214-412-414-416-DataSheet-DS40002287A.pdf) of the ATtiny412 is almost 600 pages, and I’ve understood that 1000 pages isn’t that odd to have for other microcontrollers, so I guess I should consider myself lucky (◍•﹏•)
+
+The first page of the datasheet lists the technical specifications of the tinyAVR 1-series, but I have to admit that the relevance of the specs still eludes me for most of the lines.
+
+**Section 2** shows a table with the _Peripheral summary_, where I know at least some of the words, such as there being 1 _USART_, but also an _SPI_ and _I2C_ connections, six ADC and one DAC connection.
+
+The _Block Diagram_ in **section 3** gives a peek inside the microcontroller. I’m starting to read/recognize some parts in here now, but it’s still mostly an unknown to me.
+
+[![Image 21: The ATtiny Block Diagram showing what’s inside the microcontroller](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/attiny412_block_diagram.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/attiny412_block_diagram.png)
+
+The ATtiny Block Diagram showing what’s inside the microcontroller
+
+**Section 4** is the _Pinout_ which I’ve referenced before already. I’m not quite sure why this pinout image is so sparse with the pin info that it gives. But at least they do seem to give a lot more info on what functions each pin can do in the _Multiplexed Signals_ table of **section 5**, which is the table that made me realize that we have our _TX_ and _RX_ pins mapped to their alternate positions.
+
+[![Image 22: The “Pinout” overview](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/pins_attiny.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/pins_attiny.png)
+
+The “Pinout” overview
+
+[![Image 23: “Port Function Multiplexing” table](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/attiny412_multiplexing_table.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/attiny412_multiplexing_table.png)
+
+“Port Function Multiplexing” table
+
+**Section 6** gives an expanded overview of the different types of memories; _Flash_, _SRAM_ and _EEPROM_. These can be separated into two types: _Volatile memory_ where the stored data is lost when it loses power and _Non-Volatile memory_ where it remembers the information even if the power to it is turned off. _SRAM_ is volatile, while _Flash_ and _EEPROM_ are non-volatile.
+
+The **Flash memory** is 4KB and is the space available for the storage of the program I upload through the UPDI. It seems that part of this 4KB is taken up by the bootloader, while the rest gets used by the actual code and the “application data”.
+
+The **EEPROM Memory**, Electrically Erasable Programmable Read-Only Memory, of 128 bytes is, I believe, used to store small amounts of data, such as the states of certain input and output devices connected to the MC that need to be stored for longer periods of time (e.g. it needs to be remembered for when the board powers up again for example).
+
+The **SRAM Data Memory**, which stands for Static Random Access Memory, is 256 bytes. I believe this is the memory that is used to hold the variables and functions in memory while the chip executes its tasks.
+
+I found [this](https://www.circuitbasics.com/types-of-memory-on-the-arduino/) explanation and [this](https://www.youtube.com/watch?v=4WnTTL_7a1g) video on the differences between the types of memory to be helpful.
+
+The rest of section 6 goes deeper into the specifics of these types of memories, which was beyond my knowledge at this point.
+
+**Section 7** shows a table of the “Peripheral Module Address Map”, with the base address for each peripheral. However, I don’t know what a _base address_ is though, nor an _Interrupt Flag_…
+
+[![Image 24: The first few rows of the “Peripheral Module Address Map”](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/attiny412_peripheral_module_address_map.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/attiny412_peripheral_module_address_map.png)
+
+The first few rows of the “Peripheral Module Address Map”
+
+**Section 8** goes into the _AVR CPU_, giving the technical specs (e.g. it’s 8-bit, and uses a _Harvard architecture_ that separates program and data memory). The docs say that _“The CPU is able to access memories, perform calculations, control peripherals, and execute instructions in the program memory”_ and _“While one instruction is being executed, the next instruction is pre-fetched from the program memory. This enables instructions to be executed on every clock cycle."_
+
+The CPU has an _ALU_, Arithmetic Logic Unit which does the math and logic operations. Thanks to a _Hardware Multiplier_ it can multiply two 8-bit numbers into a 16-bit result (section 8.4.1), and it also goes into _Stacks_ and _Registers_.
+
+**Section 9** goes into the _Non Volatile Memory Controller_ (NVMCTRL), the interface between the device, the _Flash_, and the _EEPROM_. From the docs: _“The Flash and EEPROM are reprogrammable memory blocks that retain their values even when not powered. The Flash is mainly used for program storage, but can also be used for data storage. The EEPROM is used for data storage and can be programmed while the CPU is running the program from the Flash."_ The section then goes into the _Flash_ and _EEPROM_ memories again, talking about _write_ and _erase_ commands.
+
+**Section 10** is about the _Clock Controller_ (CLKCTRL) where the ATtiny412 has a `20Mhz` oscillator (and also a `32KHz` Ultra Low Power oscillator), however it can also handle an external clock. The Clock Controller peripheral controls, distributes, and pre-scales the clock signals from the available oscillators. It supports internal and external clock sources. There are several types of clocks I believe, with a main clock, _CLK\_MAIN_ that is used by the CPU, RAM, Flash and all peripherals connected to IO?
+
+**Section 11** goes into the _Sleep Controller_ (SLPCTRL) where there are three sleep modes; Idle, Standby and Power Down (the remaining mode is the Active mode). The docs explain it is _“Sleep modes are used to shut down peripherals and clock domains in the device in order to save power. The Sleep Controller controls and handles the transitions between active mode and sleep mode."_ Depending on the type of sleep mode different types of peripherals and clocks are turned off. Interrupts are used to wake up again, but if there are no interrupts enabled when going to sleep, the device cannot wake up again. Only a reset will allow it to continue operation.
+
+During _Idle_ mode the CPU stops executing code, but no peripherals are disabled and all interrupt sources can wake it up. In the _Standby_ mode, the user can configure any peripheral to be enabled or not, giving the user control over the power consumptions (see 11.3.2.1 for the interrupt options). Finally, in _Power Down_ mode only the _WDT_ and _PIT_ are active and the only wake-up sources are the pin change interrupt and TWI address match (whatever those may mean).
+
+[![Image 25: The “Sleep Mode Activity Overview” table from section 11.2](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/attiny412_sleep_mode_activity_overview.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/attiny412_sleep_mode_activity_overview.png)
+
+The “Sleep Mode Activity Overview” table from section 11.2
+
+**Section 12** is the _Reset Controller_ (RSTCTRL) which can reset the device to its initial state. The sources for doing such a reset are the:
+
+*   Power supply Reset sources - caused by changes in the power supply voltage: _Brownout Detect_ (BOD), _Power On Reset_ (POR)
+*   User Reset sources - issued by the application, debug operations or by pin changes: _External Reset pin_ (RESET), _Watchdog Reset_ (WDT), _Software Reset_ (SW) and _UPDI Reset_
+
+Where I think that I’ve only used the _UPDI Reset_. The start of this section goes deeper into what the different kinds of reset sources are.
+
+**Section 13** goes into the _CPU Interrupt Controller_ (CPUINT). The datasheet explains it as _“An interrupt request signals a change of state inside a peripheral, and can be used to alter program execution. Peripherals can have one or more interrupts, and all are individually enabled and configured. When an interrupt is enabled and configured, it will generate an interrupt request when the interrupt condition occurs."_ The _CPUINT_ also looks at the priority level of incoming interrupts and decides to act or keep them pending, depending on how it compares to any ongoing interrupts.
+
+**Section 14** explains the _Event System_ (EVSYS), which allows a change in one peripheral (the Event Generator) to trigger actions in other peripherals through _Event channels_ without using the CPU.
+
+In **Section 15** there is the _Port Multiplexer_ (PORTMUX), which I tried to understand while testing my board two weeks ago, and seeing the _TX_/_RX_ port swap. I do understand (more about) the concept of port multiplexing now, where you have the option to change the functionality of pins, such as using alternative pins for the _TX_ and _RX_.
+
+**Section 16** is about the _I/O Pin Configuration_, which are the six General Purpose Input and Output (GPIO) pins. But I have to admit that I didn’t understand much about what was being explained in the overview about this.
+
+**Section 17** explains the _Brownout Detector_ (BOD) that I come by in section 12 before as a way to cause a _reset_. The Brownout detection monitors the power supply to avoid operation below a programmable level. The threshold defines when to generate a _reset_.
+
+**Section 18** is the _Voltage Reference_ (VREF) which provides an accurate, low noise, constant output voltage that is used by several peripherals (the default reference voltages are 0.55V). I couldn’t quite understand _why_ to use this though (even after searching online for it, none of it was _noob_ enough).
+
+**Section 19** goes into the _Watchdog Timer_ (WDT) which is also a _reset_ source. _“It allows to recover from situations such as runaway or deadlocked code, by issuing a reset. When enabled, the WDT is a constantly running timer configured to a predefined timeout period. If the WDT is not reset within the timeout period, it will issue a System Reset. \[…\] When enabled, the WDT will run in active mode and all sleep modes."_
+
+The next three chapters go into a few different types of timers/counter, with **section 20** about the _TCA_, a _16-bit PWM Timer/Counter type A_. A TCA consists of a base counter and a set of compare channels: _“The base counter can be used to count clock cycles or events \[…\] The compare channels can be used together with the base counter to do compare match control, frequency generation, and pulse width waveform modulation."_ And there are some explanations in this section about different types of _PWM_ generation. **Section 21** is about _TCB_, the _type B_ timer/counter which includes frequency and waveform generation. The TCB consists of a base counter and control logic which can be set in one of eight different modes, each mode providing unique functionality, that are explains in section 21.3.3.1. Finally there is the _TCD_, the _type D_ timer/counter and is _“a high performance waveform controller that consists of an asynchronous counter, a pre-scaler, compare logic, capture logic, and control logic. The purpose of the TCD is to control power applications like LED, motor control, H-bridge and power converters."_
+
+**Section 23** is about the _Real Time Counter_ (RTC), which I didn’t understand.
+
+**Section 24** is about the _USART_ or _Universal Synchronous and Asynchronous Receiver and Transmitter_, the connection that I’ve been using to receive and transmit (serial) information with to my board via that _TX_ and _RX_ pins. Communication is frame based and a serial frame consists of:
+
+*   1 start bit
+*   5, 6, 7, 8, or 9 data bits
+*   Parity bit: even, odd, or none
+*   1 or 2 stop bits
+
+It can apparently also be set to one-wire mode, where the transmitter and receiver share the same _TxD_ pin. The rest of the section goes into elaborate detail.
+
+**Section 25** is the _Serial Peripheral Interface_ or _SPI_ and _“is a high-speed synchronous data transfer interface using three or four pins. It allows full duplex communication between an AVR device and peripheral devices or between several microcontrollers. The SPI peripheral can be configured as either Master or Slave. The master initiates and controls all data transactions."_. I haven’t worked with _SPI_ before I believe, but that might still come in the next weeks, where I might learn more about the _MISO_, _MOSI_, _SCK_ and _SS_ ports.
+
+Yet another communication interface is described in **section 26**: the _Two Wire Interface_ (TWI), which is a bidirectional, two-wire communication interface, and is _I2C_ compatible. The latter being another term that I’ve been hearing here and there and think I’ll learn more about in upcoming weeks. This section also goes into extreme detail how _TWI_ works.
+
+And then for something completely different in **section 27** with the _Cyclic Redundancy Check Memory Scan_ (CRCSCAN), which can be used to detect errors in program memory.
+
+**Section 28** is about _Configurable Custom Logic_ (CCL), which is a programmable logic peripheral, which I believe could be a powerful way to bypass the CPU for doing logic tasks?
+
+**Section 29** goes into the _Analog Comparator_ or _AC_ which compares the voltage levels on two inputs and gives a digital output based on this comparison, of which the ATtiny412 has one output pin _PA3_ (and _PA6_ and _PA7_ should be used as the input pins?)?
+
+All pins besides the _VCC_ and _GND_ pins are capable of _Analog to Digital Converter_ (ADC) which is explained in **section 30**, with a resolution of 10-bit (and a sampling rate up to 115ksps).
+
+In **section 31** we read about the inverse direction, the _Digital to Analog Converter_ (DAC, of which the ATtiny412 has one pin (_PA6_), of 8-bit resolution capable of converting 350,000 samples per second (350ksps).
+
+**Section 32** is about the _UPDI_ or _Unified Program and Debug Interface_. The process / interface that I’ve been using to program the ATtiny412. There is some really extensive documentation in this section that goes way beyond my knowledge.
+
+And with that I think the datasheet had explained all the peripherals and goes into the _Electrical Characteristics_ in **section 33**. Such as the _minimum and maximum_ of the power supply and currents, at what _frequencies_ the clock can run depending on the voltage and temperature, what the _power consumption_ is at different clock frequencies and voltages, and much more having to do with voltages and frequencies when using any of the peripherals.
+
+In **section 34** we finally see some charts! Such as the current versus the frequency for different voltage levels. But there are many more charts comparing current, voltage, frequency and temperature in different ways, and for different peripherals. This seems like info useful for the _really_ expert readers.
+
+The remaining chapters go into ordering information, packaging, with **section 36** finally giving an image of the actual ATtiny with top, side and top-side views. But also recommendations for the footprint settings I believe.
+
+[![Image 26: A schematic image of the ATtiny 1-series](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/attiny412_schematic_image.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/attiny412_schematic_image.png)
+
+A schematic image of the ATtiny 1-series
+
+And _Arithmetic and Logic Instructions_ in **section 37** which sounds interesting, but where you need some background knowledge to make sense of.
+
+A kind of _glossary_ in **sections 38 and 39** and that’s about it. Finally!
+
+Programming Other Boards
+------------------------
+
+During the instruction day at the Waag, we got to play and program several other boards that Henk had available. I didn’t get to program them all, but let me describe the boards that were there. For the programming, I teamed up with Loes.
+
+### Arduino Boards
+
+Possibly the most well known brand in boards (although there’s Raspberry Pi too of course). Over the years many different boards have been created, in different sizes. You can program an Arduino board without using any kind of extra board libraries within the _Arduino IDE_ because all these boards are pre-installed.
+
+[![Image 27: The Arduino boards pre-installed with the Arduino IDE](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_installed_boards.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_installed_boards.jpg)
+
+The Arduino boards pre-installed with the Arduino IDE
+
+#### Arduino UNO
+
+The Arduino UNO is a great board to getting started with electronics and programming a board. Its microcontroller is an [ATmega328P](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf), which has 32 KB of memory (with 0.5 KB occupied by the bootloader). You can find a wealth of useful information about this board on the [Arduino](https://store.arduino.cc/arduino-uno-rev3) website.
+
+[![Image 28: The Arduino Uno](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_uno.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_uno.jpg)
+
+The Arduino Uno
+
+Some of the most important components of the board are:
+
+*   14 digital input/output pins, labelled 0 - 13
+    *   They all operate at 5 volts
+    *   Of these 6 can be used as 8-bit PWM outputs, those with the `~` mark next to them: 3, 5, 6, 9, 10, and 11
+    *   Each pin can provide or receive 20 mA
+    *   Each pin has an internal pull-up resistor of 20-50k Ω (disconnected by default)
+    *   Pins 0 and 1 are used for _RX_ and _TX_ respectively
+*   6 analog inputs, labelled A0 - A5
+    *   They provide 10 bits of resolution
+*   a 16 MHz ceramic resonator
+*   a built-in LED on pin 13
+*   a USB connection, type B strangely
+*   a power jack
+*   two ICSP (In-Circuit Serial Programming) headers (the two connectors with 6 pins pointing upward)
+*   a reset button
+
+An extended overview of the _pinout_ can be found [here](https://content.arduino.cc/assets/Pinout-UNOrev3_latest.pdf). To go into a bit more detail about the power pins, taken from the Arduino website:
+
+*   _Vin_ | The input voltage to the Arduino board when it’s using an external power source (as opposed to 5 volts from the USB connection or other regulated power source). You can supply voltage through this pin, or, if supplying voltage via the power jack, access it through this pin.
+*   _5V_ | This pin outputs a regulated 5V from the regulator on the board. The board can be supplied with power either from the DC power jack (7 - 12V), the USB connector (5V), or the VIN pin of the board (7-12V). Supplying voltage via the 5V or 3.3V pins bypasses the regulator, and can damage your board. We don’t advise it.
+*   _3V3_ | A 3.3 volt supply generated by the on-board regulator. Maximum current drawn is 50 mA.
+
+You use the USB connection to both power the board via a laptop, but also to program it. However, you can use the jack connection for external power as well. The recommended range is 7 to 12 volts.
+
+The Arduino Uno comes with a bootloader installed so we don’t have to use an external hardware programmer to upload new code to it (which I believe means we don’t need a UPDI to program it?). But you can by-pass this bootloader by using the _ICSP_ connection.
+
+I loved playing with the different Arduino’s during this afternoon so much, that I ordered an Arduino Uno that very evening! (^ᗨ^) (although I actually never got to play with the Uno during the day).
+
+#### Arduino Mega
+
+I think the Waag has the original version of the _Arduino Mega_, but let me talk about the _Arduino Mega 2560 Rev 3_, because that’s the newest one at this moment. The microcontroller on the Mega is a [ATmega2560](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2549-8-bit-AVR-Microcontroller-ATmega640-1280-1281-2560-2561_datasheet.pdf) with a memory of 256 KB. An extended overview of the _pinout_ can be found [here](https://content.arduino.cc/assets/Pinout-Mega2560rev3_latest.pdf).
+
+[![Image 29: The Arduino Mega 2560](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_mega.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_mega.jpg)
+
+The Arduino Mega 2560
+
+*   54 digital input/output pins!
+    *   They all operate at 5 volts
+    *   Of these 15 can be used as 8-bit PWM outputs, those with the `~` mark next to them: 2 to 13 and 44 to 46
+    *   Each pin can provide or receive 20 mA
+    *   4 _UARTS_: Serial pins: 0 (RX) and 1 (TX) | 19 (RX) and 18 (TX) | 17 (RX) and 16 (TX) | 15 (RX) and 14 (TX)
+*   16 analog inputs, labelled A0 - A15
+    *   They provide 10 bits of resolution
+*   a 16 MHz crystal oscillator
+*   a USB connection, type B
+*   a power jack
+*   an ICSP header
+*   a reset button
+
+As with the _Arduino Uno_, this board can be powered via the USB or the jack connection, and programmed via the USB (or ICSP header to bypass the bootloader). Some other things are also the same for the _Arduino Mega_ and the _Arduino Uno_, such as the power pins and supply, so please check the _Arduino Uno_ section for more info. And you can find more info about the _Arduino Mega_ on the [Arduino website](https://store.arduino.cc/arduino-mega-2560-rev3).
+
+Loes and I picked up the _Arduino Mega_ as our first board to play with. Using a USB B cable to connect it to Loes' Mac. Opened up the Arduino IDE, selected the _Blink_ example. This uses the `LED_BUILTIN` variable for the internal LED pin, so you don’t have to figure out the pin number.
+
+[![Image 30: Choosing the Arduino Mega board - With the standard “Blink” program loaded](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_mega_choose_board.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_mega_choose_board.jpg)
+
+Choosing the Arduino Mega board - With the standard “Blink” program loaded
+
+That all went smoothly, so we wanted to try with an external LED. The [Arduino website](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink) mentions that you need to attach a resistor to the LED. However, we’d seen Henk push an LED into the `GND` and another pin during the instructions that morning, so we did the same (perhaps the pins internal pullup resistor gets turned on automatically in that case?)
+
+We switched from the `LED_BUILTIN` variable to setting our own `int led_pin = 10;` and voila, the LED turned on after compiling and uploading the program.
+
+[![Image 31: A working LED by pushing it straight into the pins of the Arduino Mega](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_mega_led_direct.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_mega_led_direct.jpg)
+
+A working LED by pushing it straight into the pins of the Arduino Mega
+
+We copied the [Fading](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fading) example next, and played a little with the `delay` values and the incremental values of the two `loop` functions to see how it would affect the timing of the fade.
+
+Next, we wanted to play with a _breadboard_! We’d seen Henk set up a simple example that morning, and it seemed like fun. We learned that the 5 pins per row (there are two sections of five) are interconnected. We thus plugged in a cable from `GND` to row 29, pushed the LED with one leg into that row as well and another leg in the row 28, and finally a pin going from row 28 back to the Arduino pin 10. I did put in the LED the wrong way around the first time, but a quick switch and the LED started fading (ﾉ◕ヮ◕)ﾉ\*:・ﾟ✧
+
+That went so well, that we figured we wanted to expand on the fade and add another LED that would fade in reverse (go on while the red one went off and vice versa). We plugged in a green LED into rows 24 and 25, added another wire from row 29 to row 25 for the _GND_ and added one final wire to connect the LED from row 24 to the Arduino pin 9.
+
+[![Image 32: Plugging in a green and red LED to the Arduino via a breadboard](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_mega_breadboard_two_leds.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_mega_breadboard_two_leds.jpg)
+
+Plugging in a green and red LED to the Arduino via a breadboard
+
+And adjusted our code to include the green LED:
+
+```
+const int led_pin_red = 10;
+const int led_pin_green = 9;
+const int max_value = 100;
+
+void setup() {
+    //nothing
+}
+
+void loop() {
+    //fade from 0 to max_value in increments of 5
+    for(int fade_value = 0; fade_value <= max_value; fade_value += 5) {
+        analogWrite(led_pin_red, max_value - fade_value);
+        analogWrite(led_pin_green, fade_value);
+        delay(20);
+    }//for
+
+    //fade from max_value to 0 in increments of 5
+    for(int fade_value = max_value; fade_value >= 0; fade_value -= 5) {
+        analogWrite(led_pin_red, max_value - fade_value);
+        analogWrite(led_pin_green, fade_value);
+        delay(20);
+    }//for    
+}//void loop
+```
+
+Which made our green and red LED cross fade from each other:
+
+Cross fading LEDs!
+
+At that point we felt it was time to try some other boards as well.
+
+#### Arduino YUN
+
+I didn’t get to play with the _Arduino Yún_, which is the original version. Because there is now a _Rev 2_ version, let me go into the technical aspects of the updated one. It runs on a [ATmega32U4](http://www.atmel.com/Images/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf), same as the old version. The special thing about the _Yun_ is that it has loads of connections, including Wi-fi, and it has a second microprocessor (the [Atheros AR9331](https://www.openhacks.com/uploadsproductos/ar9331_datasheet.pdf)) that runs on Linux with _python_ preinstalled. You can find an extensive pinout of the board [here](https://content.arduino.cc/assets/Pinout-YUNREV2_latest.pdf).
+
+[![Image 33: The original Arduino YUN found at the Waag](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_yun.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_yun.jpg)
+
+The original Arduino YUN found at the Waag
+
+Here are some of the most important components:
+
+*   14 digital input/output pins
+    *   Of these 7 can be used as 8-bit PWM outputs, those with the `~` mark next to them
+    *   Each pin can provide or receive 40 mA
+    *   Pins 0 and 1 are used for _RX_ and _TX_ respectively
+*   6 analog inputs, labelled A0 - A6
+*   a 16 MHz crystal oscillator
+*   a standard USB connection
+*   a micro USB connection
+*   an ethernet connection
+*   a microSD slot for external storage
+*   three reset buttons; for the WiFi, the Arduino chip and the Linux chip
+
+For more information, see the [Arduino website](https://store.arduino.cc/arduino-yun-rev-2).
+
+#### Arduino Nano
+
+Henk said that he had the _Arduino Mini_, but when we investigated photos of the Mini we noticed that the one we were holding looked slightly different, and found that we had in fact and _Arduino Nano_.
+
+[![Image 34: The Arduino Nano](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_nano.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_nano.jpg)
+
+The Arduino Nano
+
+And actually, after investigating for this documentation, I _think_ that it’s a clone of the _Arduino Nano V3_, because it looks exactly like [this one](https://www.otronic.nl/a-60871666/arduino/nano-v3-arduino-compatible-ch340-voorgesoldeerd), whereas the [original V3](https://www.elektor.nl/arduino-nano-v3) looks just a bit different. They both have a ATmega328 microcontroller with 32 KB of memory though, just like the _Arduino Uno_. I think [this](https://content.arduino.cc/assets/Pinout-NANOevery_latest.pdf) pinout schema would still be the one to apply to the V3? Some other facts about the Nano:
+
+*   14 digital input/output pins
+    *   Of these 6 can be used as PWM outputs
+    *   Each pin can provide or receive 40 mA
+    *   Pins 0 and 1 are used for _RX_ and _TX_ respectively
+*   8 analog inputs, labelled as A0 - A7
+*   a 16 MHz crystal oscillator
+*   a mini-USB connection
+*   a reset button
+
+This is the cheapest Arduino PCB and really tiny, making it more ideal than the Uno in case there isn’t a lot of space available in the project you’re building. It’s size also makes it fit onto a breadboard if you use pin headers.
+
+Loes and I did experiment with this board for a bit. We plugged the Mini-B USB cable into the laptop, selected the _Arduino Nano_ from the _Boards_, and wanted to upload the standard “Blink” script, but it failed the first time.
+
+[![Image 35: The compile error for the Arduino Nano](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_nano_blink_compile_error.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_nano_blink_compile_error.jpg)
+
+The compile error for the Arduino Nano
+
+After a short online search, I found a [“Getting started with the Arduino Nano”](https://www.arduino.cc/en/Guide/ArduinoNano) tutorial, that mentioned that for old boards you had to select the _ATmega328P (Old Bootloader)_ as the _Processor_. We tried this, and it worked, the build-in LED started blinking. Ok, so we had an old _Arduino Nano_ it seemed.
+
+We next looped the wires from the breadboard that we had set-up already from playing with the _Arduino Mega_ through the holes of the _GND_ and two of the digital pins, labelled _D9_ and _D10_, both of which can do _PWM_ (but that was a happy coincidence, because we didn’t understand _PWM_ enough at that time (\*^▽^\*)ゞ ), uploaded the fading program, and the two LEDs started fading again.
+
+[![Image 36: Connecting our breadboard set-up to the Arduino Nano](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_nano_fading_leds.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/arduino_nano_fading_leds.jpg)
+
+Connecting our breadboard set-up to the Arduino Nano
+
+### ESP Boards
+
+There were two boards with _ESP_ microcontrollers that were lying on the table for us to play with, the _ESP8266_ and its newer iterations the _ESP32_. These both have WiFi, whereas the _ESP32_ also has Bluetooth.
+
+#### NodeMCU ESP8266
+
+The _NodeMCU_ is a development board that holds the _ESP8266_ microchip having the _Tensilica Xtensa® 32-bit LX106 RISC_ microprocessor. There is 128 KB of memory.
+
+[![Image 37: The NodeMCU ESP8266 V1.0](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_esp8266.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_esp8266.jpg)
+
+The NodeMCU ESP8266 V1.0
+
+*   Operates at 3.3V
+*   17 digital input/output pins, labelled as D0 - D8, RX, TX, CLK, CMD, SD0 - SD3
+    *   Of these 4 can be used as _PWM_, being D2, D5, D6 and D8
+    *   Each can be configured to be an internal pull-up or pull-down resistor
+*   1 analog input, labelled as A0
+*   2 _UART_ interfaces
+*   a micro-USB connection
+
+Here is an overview of the _pinout_, from _LastMinuteEngineers.com_
+
+[![Image 38: The pinout of the NodeMCU ESP8266](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_esp8266_pinout.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_esp8266_pinout.png)
+
+The pinout of the NodeMCU ESP8266
+
+The ESP8266 can both connect to a WiFi network and also set up a network of its own, allowing other devices to connect directly to it.
+
+You can program and power the _ESP8266 NodeMCU_ via the micro-USB connector. Alternatively, if you have a 5V voltage source, the `VIN` pin can be used to directly supply the ESP8266 and its peripherals.
+
+[This](https://lastminuteengineers.com/esp8266-nodemcu-arduino-tutorial/) website has a lot more technical specifications and explanations about the _NodeMCU ESP8266_.
+
+After playing with two Arduino’s we were ready to try a different type of board and picked the _NodeMCU ESP8266_.
+
+This board wasn’t in the available boards of the Arduino IDE, but we found a [tutorial](https://randomnerdtutorials.com/how-to-install-esp8266-board-arduino-ide/) on how to install the _ESP8266_ to the boards. From the Arduino _Preferences_ add `http://arduino.esp8266.com/stable/package_esp8266com_index.json` to the _Board Manager URLs_
+
+[![Image 39: Adding the “ESP8266” to the Arduino IDE board managers](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_adding_board_manager.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_adding_board_manager.png)
+
+Adding the “ESP8266” to the Arduino IDE board managers
+
+Next, go to _Tools_ -> _Board_ -> _Board Manager_. In the new window search for _ESP8266_ and install _ESP8266_ by _ESP8266 Community_.
+
+Once that is installed, there should now be another option to choose from under _Board_, the _ESP8266 Boards_. Loes and I noticed that there is a _NodeMCU 0.9_ and _NodeMCU 1.0_ option available. A quick image search and comparing to the one on our desk later and we knew that ours was the _1.0_ version.
+
+[![Image 40: Selecting the “NodeMCU 1.0” board](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_picking_board.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_picking_board.jpg)
+
+Selecting the “NodeMCU 1.0” board
+
+With the correct board selected, we also selected the _Port_ of the _NodeMCU_, labelled as `/dev/cu.usbserial-0001`.
+
+[![Image 41: Set the “Port” to the Micro-USB connection to the “NodeMCU”](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_select_port.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_select_port.png)
+
+Set the “Port” to the Micro-USB connection to the “NodeMCU”
+
+However, when trying to upload the simple program from the tutorial to make the internal LED blink, we ran into an error about `pyserial or esptool directories not found`. I eventually found a solution to this on the [Arduino forum](https://forum.arduino.cc/index.php?topic=702144.0). Having to replace some very specific lines within the `list_ports_osx.py` file:
+
+[![Image 42: How to fix the error in the “ESP8266” library](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_error_fix.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_error_fix.png)
+
+How to fix the error in the “ESP8266” library
+
+We didn’t expect that to work in one go, but it actually did, and the internal LED started blinking!
+
+[![Image 43: Getting the internal LED to blink on the NodeMCU ESP8266](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_blinking_internal_led.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/nodemcu_blinking_internal_led.jpg)
+
+Getting the internal LED to blink on the NodeMCU ESP8266
+
+Next, we plugged the header pins underneath the _NodeMCU_ into the breadboard and connected the wires the _GND_ and two _Dx_ rows (randomly choose for _D2_ and _D7_, which had pin numbers _13_ and _4_). Strangely though pin _13_ does not have _PWM_ according to the pinout schema from above, but when we loaded the _Fade_ program, both the red and green LED were fading nicely.
+
+Cross fading LEDs with the 'NodeMCU ESP8266'
+
+Loes did have to keep her finger pressed on the _NodeMCU_ board, otherwise the contact with the breadboard was lost.
+
+#### ESP82 AI-Thinker
+
+The other ESP board was an [_ESP32-CAM AI-Thinker_](https://github.com/raphaelbs/esp32-cam-ai-thinker/blob/master/assets/ESP32-CAM_Product_Specification.pdf). This has a tiny camera, a microSD card slot, and a very bright on-board LED. The _ESP32_ has WiFi (like the _ESP8266_), but the _ESP32_ also has Bluetooth. There is 512 KB of memory.
+
+[![Image 44: The ESP32-CAM AI-Thinker board](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_cam_ai_thinker.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_cam_ai_thinker.jpg)
+
+The ESP32-CAM AI-Thinker board
+
+*   10 digital input/output pins
+*   1 _UART_ interface, labelled as _U0R_ and _U0T_
+*   a micro-SD card slot
+*   a tiny camera
+
+[This](https://randomnerdtutorials.com/esp32-cam-ai-thinker-pinout/) page on the _ESP32-CAM AI Thinker_ has a lot of technical information, including the _pinout_:
+
+[![Image 45: The ESP32-CAM AI-Thinker pinout | From RandomNerdTutorials](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_pinout.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_pinout.png)
+
+The ESP32-CAM AI-Thinker pinout | From RandomNerdTutorials
+
+I found [this](https://randomnerdtutorials.com/program-upload-code-esp32-cam/) tutorial to program the _ESP32-CAM_ with the Arduino IDE. It has a very handy example on how the _ESP32_ needs to be connected to an FTDI (it doesn’t have a USB connection of its own):
+
+[![Image 46: How to connect the “ESP-32 CAM” to an FTDI | From RandomNerdTutorials](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_connection_guide_ftdi.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_connection_guide_ftdi.jpg)
+
+How to connect the “ESP-32 CAM” to an FTDI | From RandomNerdTutorials
+
+And you might miss it, but **the `GPIO 0` pin needs to be connected the a `GND` pin** as well. Only when this connection is made does the _ESP32_ go into flashing mode and you can upload code to the board.
+
+I carefully recreated the setup from the image, using the [FTDI board schematic](http://academy.cba.mit.edu/classes/embedded_programming/FTDI/USB-FT230XS-serial.png) to check what each pin represented. Making sure to connect the `GND` pins first, and to _not_ connect the `5V` pin to `GND`!
+
+[![Image 47: Connecting the ESP32-CAM board to my FTDI](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_connect_ftdi.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_connect_ftdi.jpg)
+
+Connecting the ESP32-CAM board to my FTDI
+
+To install the _ESP32_ library in the Arduino IDE, follow the same steps as for any library: Go to the Arduino IDE _Preferences_ and in the _Board Manager urls_ add `https://dl.espressif.com/dl/package_esp32_index.json`. Then under _Tools_ -> _Board_ -> _Board Manager_ install _ESP32_ by _Espressif Systems_
+
+I could then select the _AI Thinker ESP32-CAM_ under _Boards_ from the _very_ long list of _ESP32_ boards.
+
+[![Image 48: Select the “ESP32-CAM AI-Thinker” board](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_board_selection.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_board_selection.png)
+
+Select the “ESP32-CAM AI-Thinker” board
+
+Don’t forget to **set the _Port_ to my FTDI**, since I was now using the FTDI to upload a program to the _ESP32_.
+
+I started with an empty program, just to make sure that I could make it upload. At first I got an error that `Resource busy: '/dev/cu.usbserial-D30A3T7C'`. O right! I still had the `screen` command running. I closed it (with `CTRL+a` + `CTRL+\`) and uploaded my program again.
+
+This time I saw that a connection was trying to be made with the board and saw a bunch of `....._____....._____` slowly appear on my screen. After waiting for a while an error appeared about a _time out_:
+
+[![Image 49: A time out error](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_error_time_out.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_error_time_out.png)
+
+A time out error
+
+I _really_ should’ve kept on reading the tutorial, because the next sentence was literally _“When you start to see some dots on the debugging window, **press the on-board RST button**."_ (\*^▽^\*)ゞ
+
+I uploaded the code again, and pressed the tiny `RST` button on the back when I saw the `....____` pattern appear. A second later the connection was made and my empty program was loaded onto the board.
+
+[![Image 50: The back of the “ESP32-CAM” board with the reset button in the lower-left](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_back_rst_button.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_back_rst_button.jpg)
+
+The back of the “ESP32-CAM” board with the reset button in the lower-left
+
+I made sure to read the rest of the tutorial, but thankfully it was only one more step after the program was done uploading: **Disconnect the `GPIO 0` pin from `GND` and press the `RST` button** to run the new code.
+
+With my empty program I didn’t know if that last step went ok, so I connected the `GPIO 0` pin to `GND` again and opened the default “blink” example. I found online that the flashlight LED is connected to pin `GPIO 4`, I thus set `#define led_pin 4` and uploaded the program.
+
+I was watching the LED from close by, not considering the giant size of this LED, because when it started flashing, it was _bright_ and I got blinded for a second (O\_O)
+
+[![Image 51: Using the “blink” program on the VERY bright LED of the ESP32-CAM](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_bright_led.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_bright_led.jpg)
+
+Using the “blink” program on the VERY bright LED of the ESP32-CAM
+
+After taking a photo and video I quickly uploaded the empty program again, just to make the flashing stop ✖‿✖ Only then did I find that the tiny built-in LED was set to port `GPIO 33`.
+
+I had heard Loes talking about a _WiFi scan_ example that seemed interesting to try. Within the Arduino IDE I opened the _Examples_ -> _WiFi_ -> _WiFiScan_ example, and without changing anything I uploaded it to the board.
+
+This time I _could_ use the _Serial Monitor_ from the Arduino IDE because I was both uploading my program to the _ESP32_ with the FTDI and listening to incoming messages. I saw that the Waag has _a lot_ of wifi signals in the neighborhood!
+
+[![Image 52: Running the WiFi scan example](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_wifiscan.png)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_wifiscan.png)
+
+Running the WiFi scan example
+
+Finally, I wanted to try and access the camera. I found a [tutorial](https://randomnerdtutorials.com/esp32-cam-video-streaming-face-recognition-arduino-ide/) that walked me through the (few) required steps. Such as selecting the _Examples_ -> _ESP32_ -> _Camera_ -> _CameraWebServer_. Next, I had to input the name and password of the wifi I was currently on at the Waag, and finally, I had to select the correct camera model by commenting the line with `#define CAMERE_MODEL_WROVER_KIT` and uncommenting `#define CAMERA_MODEL_AI_THINKER`.
+
+I uploaded the code, and in the _Serial Monitor_ that I still had open, I saw that the camera was ready, and I could access it from a certain IP address.
+
+The address did work, and I was seeing images (after pressing _Start Stream_), but there was definitely _something_ still not set up correctly with it σ\_σ
+
+[![Image 53: The camera was giving a pretty odd image (showing my hexagonal PCB board)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_camera_online.jpg)](https://fabacademy.org/2021/labs/waag/students/nadieh-bremer/blog/week-8/esp32_camera_online.jpg)
+
+The camera was giving a pretty odd image (showing my hexagonal PCB board)
+
+I tried adjusting all the sliders and buttons along the left, but nothing made the image any better. After a few minutes I figured that it was ok, I’d done enough for now, and closed the web server and disconnected the _ESP32_ from my FTDI.
+
+Reflections
+-----------
+
+This was both a very fun and, at times, very frustrating week. Trying to figure out the errors in the code, while not yet having the knowledge to really know what to look for. But eventually I got to play with all of the input/output devices on my board.
+
+#### What went wrong
+
+I really wish that I had remembered that one final setting in the Arduino IDE to use _megaTinyCore_, so that my three fellow students hadn’t been stuck on a vague `java` error for 2-3 hours during the Thursday instructions class (╥\_╥)
+
+I also still feel that I have a mostly-IR phototransistor on my board that doesn’t work well with the LED lights in our house (which shine mostly in the blue spectrum). But that’s only minor, since it’s only purpose was to play with it using code.
+
+#### What went well
+
+Since I had already tested my board two weeks ago, I’d already gone through most of the troubles of getting my board and software set-up. So uploading my programs went quite well this week, and I could focus on learning more about the _code_ side of things.
+
+#### What I would do differently
+
+I should’ve compared the spectral bandwidth of my old phototransistor with the new one so I would’ve seen that these were basically the same, so there would be no use in switching them.
+
+#### Wrapping up
+
+I’m glad that we’ve gotten to the point where we can program our boards (^▽^) However, this week was really simple, only playing with a blinking LED, button, and one input device (the phototransistor). I’m therefore a bit nervous about next week’s “Machine Week” in which we need to go from a blinking LED to a _bloody moving machine_ that can perform much more complex tasks (●\_\_●)
+
+All Files Together
+------------------
+
+No separate files this week, because I all of my functions can be found throughout this week’s documentation.

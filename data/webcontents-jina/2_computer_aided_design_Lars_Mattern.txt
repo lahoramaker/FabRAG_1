@@ -1,0 +1,310 @@
+Title: I. Overview - Lars Mattern
+
+URL Source: http://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/
+
+Markdown Content:
+I. Overview - Lars Mattern - Fab Academy 2021
+===============
+          
+
+[Skip to content](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#i-overview)
+
+[](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/ "Lars Mattern - Fab Academy 2021")
+
+Lars Mattern - Fab Academy 2021
+
+I. Overview
+
+Initializing search
+
+*   [Home](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/)
+*   [About](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/about/)
+*   [Assignments](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/01.%20Project%20management/1_week01/)
+*   [Projects](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/0_final-project/)
+
+[](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/ "Lars Mattern - Fab Academy 2021")Lars Mattern - Fab Academy 2021
+
+*   [Home](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/)
+*    About
+    
+    About
+    
+    *   [About me](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/about/)
+    *   [Past projects](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/about/2_past_projects/)
+    *   [Instructors agreement](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/about/instructors_agreement/)
+    *   [Students agreement](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/about/students_agreement/)
+    
+*    Assignments
+    
+    Assignments
+    
+    *    01\. Project management
+        
+        01\. Project management
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/01.%20Project%20management/1_week01/)
+        *   [II. My Environment Setup](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/01.%20Project%20management/2_setup/)
+        *   [III. using git](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/01.%20Project%20management/3_git/)
+        *   [IV. little html walk through](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/01.%20Project%20management/4_html/)
+        *   [V. customizing MkDocs](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/01.%20Project%20management/5_mkdocs/)
+        *   [VI. markdown](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/01.%20Project%20management/6_markdown/)
+        
+    *    02\. Computer aided design
+        
+        02\. Computer aided design
+        
+        *    I. Overview [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/)
+            
+            Table of contents
+            
+            *   [3D Modeling](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#3d-modeling)
+                
+                *   [Fusion360](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#fusion360)
+                *   [FreeCAD](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#freecad)
+                
+            *   [Vector Graphics](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#vector-graphics)
+                
+                *   [Inkscape](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#inkscape)
+                *   [Affinity Designer](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#affinity-designer)
+                
+            
+        *   [II. Using Fusion 360](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/2_fusion360/)
+        *   [III. Using FreeCAD](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/3_freecad/)
+        *   [IV. Inkscape](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/4_inkscape/)
+        *   [V. Affinity Designer](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/5_affinity/)
+        
+    *    03\. Computer controlled cutting
+        
+        03\. Computer controlled cutting
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/03.%20Computer-controlled%20cutting/1_week03/)
+        *   [II. Using the Silhouette Cameo 3](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/03.%20Computer-controlled%20cutting/2_cameo/)
+        *   [III. Parametrical design with Fusion360](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/03.%20Computer-controlled%20cutting/3_parametric/)
+        *   [IV. Characterizing the GS 6090 PR](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/03.%20Computer-controlled%20cutting/4_characterizing/)
+        *   [V. The production process and presentation](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/03.%20Computer-controlled%20cutting/5_production/)
+        
+    *    04\. Electronics production
+        
+        04\. Electronics production
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/04.%20Electronics%20production/1_week04/)
+        *   [II. gcode preparing](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/04.%20Electronics%20production/2_toolchain/)
+        *   [III. Milling process](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/04.%20Electronics%20production/3_milling/)
+        *   [IV. Soldering the components](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/04.%20Electronics%20production/4_soldering/)
+        *   [V. Setup environment](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/04.%20Electronics%20production/5_setup/)
+        *   [VI Flashing process](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/04.%20Electronics%20production/6_flashing/)
+        *   [VII Linetest with CNC3018](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/04.%20Electronics%20production/7_linetest/)
+        
+    *    05\. 3D Scanning and Printing
+        
+        05\. 3D Scanning and Printing
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/05.%203D%20Scanning%20and%20Printing/1_week05/)
+        *   [II. 3D scanning](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/05.%203D%20Scanning%20and%20Printing/2_scan/)
+        *   [III. Testing the printer](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/05.%203D%20Scanning%20and%20Printing/3_calibration/)
+        *   [IV. creating and export an object](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/05.%203D%20Scanning%20and%20Printing/4_fusion/)
+        *   [V. slicing the cubes](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/05.%203D%20Scanning%20and%20Printing/5_slicing/)
+        *   [VI. printing](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/05.%203D%20Scanning%20and%20Printing/6_printing/)
+        
+    *    06\. Electronics design
+        
+        06\. Electronics design
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/06.%20Electronics%20design/1_week06/)
+        *   [II. Using test equipment](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/06.%20Electronics%20design/2_mc_op/)
+        *   [III. Redraw an echo hello-world board](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/06.%20Electronics%20design/3_eagle/)
+        *   [IV. Making the Board](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/06.%20Electronics%20design/4_making/)
+        *   [V. Flashing the Bootloader](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/06.%20Electronics%20design/5_flashing/)
+        
+    *    07\. Computer controlled machining
+        
+        07\. Computer controlled machining
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/07.%20Computer-controlled%20machining/1_week07/)
+        *   [II. Safety & Testing the Machine](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/07.%20Computer-controlled%20machining/2_group/)
+        *   [III. Designing a Book/Magazine Shelf](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/07.%20Computer-controlled%20machining/3_design/)
+        *   [IV. Milling the Shelf](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/07.%20Computer-controlled%20machining/4_milling/)
+        
+    *    08\. Embedded Programming
+        
+        08\. Embedded Programming
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/08.%20Embedded%20Programming/1_week08/)
+        *   [II. Quick Specs comparison](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/08.%20Embedded%20Programming/2_attiny/)
+        *   [III. Programming and Testing](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/08.%20Embedded%20Programming/3_program/)
+        *   [IV. Programming in ‘C’ by using Atom](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/08.%20Embedded%20Programming/4_atom/)
+        *   [V. flashing an ESP8266](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/08.%20Embedded%20Programming/5_esp8266/)
+        
+    *    09\. Machine Design
+        
+        09\. Machine Design
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/09.%20Machine%20Design/1_week09/)
+        *   [II. Electronic and Programming](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/09.%20Machine%20Design/2_programming/)
+        
+    *    10\. Input devices
+        
+        10\. Input devices
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/10.%20Input%20devices/1_week10/)
+        *   [II. Probing an input device](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/10.%20Input%20devices/2_probe/)
+        *   [III. Designing a Sensor Board with KiCad](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/10.%20Input%20devices/3_kicad/)
+        *   [IV. Generating the toolpath with FlatCAM](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/10.%20Input%20devices/4_flatcam/)
+        *   [V. Milling and soldering](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/10.%20Input%20devices/5_milling/)
+        *   [VI. Programming](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/10.%20Input%20devices/6_programming/)
+        
+    *    11\. Molding and Casting
+        
+        11\. Molding and Casting
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/11.%20Molding%20and%20Casting/1_week11/)
+        *   [II. Safety data sheet](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/11.%20Molding%20and%20Casting/2_group/)
+        *   [III. Design rules and drawing a mold](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/11.%20Molding%20and%20Casting/3_design/)
+        *   [IV. Milling the mold with a Roland MDX-50](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/11.%20Molding%20and%20Casting/4_milling/)
+        *   [V. Casting](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/11.%20Molding%20and%20Casting/5_casting/)
+        
+    *    12\. Output devices
+        
+        12\. Output devices
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/12.%20Output%20devices/1_week12/)
+        *   [II. Measuring the power consumption](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/12.%20Output%20devices/2_group/)
+        *   [III. Designing a single Nixie Tube output device](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/12.%20Output%20devices/3_kicad/)
+        *   [IV. Milling, Making and Testing](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/12.%20Output%20devices/4_milling/)
+        
+    *    13\. Networking and Communications
+        
+        13\. Networking and Communications
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/13.%20Networking%20and%20Communications/1_week13/)
+        *   [II. send messages between two projects](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/13.%20Networking%20and%20Communications/2_group/)
+        *   [III. building up a serial network](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/13.%20Networking%20and%20Communications/3_serial/)
+        
+    *    14\. Interface and App Programming
+        
+        14\. Interface and App Programming
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/14.%20Interface%20and%20App%20Programming/1_week14/)
+        *   [II. Group Assignment](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/14.%20Interface%20and%20App%20Programming/2_group/)
+        *   [III. application programming with the MIT app inventor](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/14.%20Interface%20and%20App%20Programming/3_app/)
+        
+    *    15\. Wildcard week
+        
+        15\. Wildcard week
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/15.%20Wildcard%20week/1_week15/)
+        *   [II. FiloCUT](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/15.%20Wildcard%20week/2_wild/)
+        
+    *    16\. Applications and Implications
+        
+        16\. Applications and Implications
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/16.%20Applications%20and%20Implications/1_week16/)
+        
+    *    17\. Invention, Intellectual Property, and Income
+        
+        17\. Invention, Intellectual Property, and Income
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/17.%20Invention%2C%20Intellectual%20Property%2C%20and%20Income/1_week17/)
+        
+    *    18\. Project Development
+        
+        18\. Project Development
+        
+        *   [I. Overview](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/18.%20Project%20Development/1_week18/)
+        
+    
+*    Projects
+    
+    Projects
+    
+    *    Final project
+        
+        Final project
+        
+        *   [I. Thoughts and Story](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/0_final-project/)
+        *   [II. first and more sketches](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/1_sketches/)
+        *   [III. Research](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/2_research/)
+        *    IV. Prototyping
+            
+            IV. Prototyping
+            
+            *   [shift register](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/IV.%20Prototyping/1_shiftregister/)
+            *   [K155id1](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/IV.%20Prototyping/2_k155id1/)
+            *   [K155id1 + 74HC595](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/IV.%20Prototyping/3_k155id1_74hc595/)
+            *   [DS1307 RTC](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/IV.%20Prototyping/4_ds1307/)
+            *   [DCF77 Atomic Radio Clock](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/IV.%20Prototyping/5_dcf77/)
+            *   [Neo-6M GPS Module](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/IV.%20Prototyping/6_neo-6m/)
+            
+        *    V. Making the Final
+            
+            V. Making the Final
+            
+            *   [The Embedded Electronics](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/V.%20Making%20the%20Final/1_electronics/)
+            *   [milling the pcb’s](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/V.%20Making%20the%20Final/2_milling/)
+            *   [soldering](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/V.%20Making%20the%20Final/3_soldering/)
+            *   [programming](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/V.%20Making%20the%20Final/4_programming/)
+            *   [Building the Case](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/V.%20Making%20the%20Final/5_case/)
+            
+        *    VI. Presentation
+            
+            VI. Presentation
+            
+            *   [The Slide](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/VI.%20Presentation/1_slide/)
+            *   [The Video](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/projects/final-project/VI.%20Presentation/2_video/)
+            
+        
+    
+
+Table of contents
+
+*   [3D Modeling](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#3d-modeling)
+    
+    *   [Fusion360](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#fusion360)
+    *   [FreeCAD](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#freecad)
+    
+*   [Vector Graphics](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#vector-graphics)
+    
+    *   [Inkscape](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#inkscape)
+    *   [Affinity Designer](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#affinity-designer)
+    
+
+I. Overview[¶](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#i-overview "Permanent link")
+================================================================================================================================================================
+
+This week we have to draw a possible final project, so I started playing around with different software. I’ll don’t describe “pixel” paint tools like the windows integrated MS Paint or the open source tool [GIMP](https://www.gimp.org/)
+
+For cutting, engraving and printing are vector graphics and / or 3D design files mandatory.
+
+Vector graphics are lossless scalable, because it uses “nodes” and between this nodes are “pathes”  
+Commonly uses file formats are `svg` or `dxf`
+
+3D Modeling[¶](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#3d-modeling "Permanent link")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Fusion360[¶](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#fusion360 "Permanent link")
+
+[HERE](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/2_fusion360/) I describe some Fusion360 basics
+
+### FreeCAD[¶](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#freecad "Permanent link")
+
+[HERE](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/3_freecad/) are some FreeCAD basics
+
+Vector Graphics[¶](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#vector-graphics "Permanent link")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Inkscape[¶](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#inkscape "Permanent link")
+
+[HERE](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/4_inkscape/) you find just a really quick Tour and example files, which I drew in the past.
+
+### Affinity Designer[¶](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/1_week02/#affinity-designer "Permanent link")
+
+[HERE](https://fabacademy.org/2021/labs/bottrop/students/lars-mattern/assignments/02.%20Computer%20aided%20design/5_affinity/) I’ve tried the commercial software Affinity Designer.
+
+June 27, 2021
+
+Copyright 2021 Lars Mattern - Creative Commons Attribution Non Commercial
+
+Made with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
+
+[](https://instagram.com/fabacademany "instagram.com")[](https://facebook.com/fabacademany "facebook.com")[](https://twitter.com/fabacademany "twitter.com")[](https://linkedin.com/in/academany "linkedin.com")

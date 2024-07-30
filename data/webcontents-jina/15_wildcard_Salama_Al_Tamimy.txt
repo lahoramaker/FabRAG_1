@@ -1,0 +1,66 @@
+Title: Salama Altamimy
+
+URL Source: http://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/Wildcard.html
+
+Markdown Content:
+Wildcard
+--------
+
+Week Assessment :
+
+Design and produce something with a digital fabrication process
+
+For this week assignment, I learned how to use Janome Memory Craft 15000. So I started this week with a session from [Wendy](https://wendwarge.github.io/) on how to use the machine.
+
+![Image 1](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/media/wildcard/session.jpg)
+
+Then Mr.Tarek and [Zahrah](http://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/) showed me how to prepare the file for the embroidery machine in Digitizer.
+
+![Image 2](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/media/wildcard/Digitizer.png)
+
+I decided to use the file that I created for the computer-controlled cutting week. So I created new and I chose hoop SQ14. This is all the hoop sizes I got this image from the [manual](https://www.janome.com/siteassets/support/manuals/embroidery-models/inst-mc15000-enlr2.pdf) of the machine.
+
+![Image 3](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/media/wildcard/hoopssize.png)
+
+Toolboxes > Auto-Digitizer > Insert Artwork.
+
+![Image 4](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/media/wildcard/insertfile.png)
+
+I selected my image > Click-to-fill> Then I clicked at the place that I want and I select the stitch type and I chose Cross stitch. My design is really simple I don't have to do anything else.
+
+![Image 5](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/media/wildcard/selectstitch.png)
+
+Settings up machine was not easy we as students we don't realize how hard is that. Connecting the machine to PC throw wire to send an order to the machine not always work. That why I saved my file in flash memory and I insert the flash in the machine in port 1.
+
+![Image 6](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/media/wildcard/insertfileinmachine.jpg)
+
+On page 104 in the [manual](https://www.janome.com/siteassets/support/manuals/embroidery-models/inst-mc15000-enlr2.pdf) shows how to enable the embroidery mode and it shows the steps of how to place the embroidery unit on the back side of the machine base.
+
+Before that [Wendy](https://wendwarge.github.io/) showed me to set up the fabric for the machine so what I did I had to put paper under the fabric and what she taught me was exactly what I found in machine manual.
+
+![Image 7](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/media/wildcard/settingfabric.png)
+
+And this what I did.
+
+![Image 8](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/media/wildcard/settingfabricwithmachine.jpg)
+
+I selected my design then I pressed the start button on the machine
+
+![Image 9](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/media/wildcard/selectfile.jpg)
+
+This is the reasult
+
+![Image 10](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/media/wildcard/salamalogo.jpg)
+
+I really did not expect this machine to that accurate. This machine is really amazing I like it. I did more research on this Janome Memory Craft 15000 and I found that Janome has an iPad app. where you can design or modify a design even when the machine is sewing. this can be done by wifi communication between the iPad and embroidery machine.
+
+![Image 11](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/media/wildcard/janomeapp.jpg)
+
+Because the aim of the fab academy is to share knowledge. I showed [Darshan](http://fabacademy.org/2018/labs/fablabuae/students/darshan-shah/) and [Al-Zubair](http://fabacademy.org/2018/labs/fablabuae/students/alzubair-alshehhi/) how to use the embroidery machine, and special thanks to [Wendy](https://wendwarge.github.io/) and [Zahrah](http://fabacademy.org/2018/labs/fablabuae/students/zahrah-alyahyaee/) and Tarek how showed me how this machine works. And now I did my best to share it with the rest of the world. I hope this page helps others.
+
+I also did for the wildcard week 3D milling with the shopbot and the vacuum forming for my final project and I documented in [project development](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/Project%20Development.html) page.
+
+#### File
+
+[EMB File](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/files/wildcard/salamalogo.EMB)  
+[Design logo File](https://fabacademy.org/2018/labs/fablabuae/students/salama-altamimy/files/computer-controlledcutting/logo.dxf)

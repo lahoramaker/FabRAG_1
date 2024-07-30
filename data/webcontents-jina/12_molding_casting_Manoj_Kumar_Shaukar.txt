@@ -1,0 +1,18 @@
+Title: Home | Manoj Sahukar
+
+URL Source: http://fabacademy.org/2019/labs/vigyanashram/students/manoj-sahukar/
+
+Markdown Content:
+About
+-----
+
+Inquisitive, Skeptic, Transhumanist, Stoic, Freethinker, Deontological, Ambivert and Neoteric etc. are the words I use to describe myself more or less. I have B.Tech. in Mechanical Engineering and M.Tech in 'Entrepreneurship & Innovations'. Before Fab Academy, my last job role was 'Business Developer' at Elegate.org, Cairo (Egypt). Prior to that I worked in Neuromarketing related technologies for my Master's thesis.
+
+###### My Lab
+
+Vigyan Ashram is a center of Indian Institute of Education (IIE) Pune established by Dr.S.S. Kalbag in 1983. It's a modern version of old Gurukula systems of 'simple living and high thinking'. Dr.Neil Greshenfeld, (Director, Center of Bits and atoms, MIT (USA)) who created the Fab Lab, described Vigyan Ashram as ‘Fab Lab Zero’. VA-Fab lab was established through the interaction between Dr.Kalbag and Dr. Dr.Neil Greshenfeld in 2002. VA made slow and steady progress to master the use of Fab Lab to solve rural problems.
+
+###### Project
+
+Stink-o-Meter  
+It is an e-nose, specifically designed and trained for detecting bad odors. It is an array of chemical gas sensors housed in a device that uses pattern recognition to recognize, identify, and compare odors. The objective is to monitor and map all regions of India with this lowcost opensource device and create open stink data. If that sounds too bold, a practical use case is management of public garbage bins and toilets in India.

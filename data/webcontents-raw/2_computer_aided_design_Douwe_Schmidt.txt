@@ -1,0 +1,2343 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The website of all the amazing dosch work at his fabacademy time">
+      
+      
+      
+        <meta name="author" content="dosch">
+      
+      
+      <link rel="shortcut icon" href="../../files/favicon.svg">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>2 - CAD - FabDosch</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ff6e42">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#computer-aided-design" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="FabDosch" class="md-header-nav__button md-logo" aria-label="FabDosch">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            FabDosch
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              2 - CAD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/waag/students/douwe-schmidt" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Gitlab
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../PostFA%20Projects/" class="md-tabs__link">
+        PostFA Projects
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/aboutme/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../all-the-weeks/" class="md-tabs__link md-tabs__link--active">
+        Assignments
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../diary/week0/" class="md-tabs__link">
+        Diary
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../files/machines/" class="md-tabs__link">
+        Files
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../final_project/finalproject/" class="md-tabs__link">
+        Final project
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="FabDosch" class="md-nav__button md-logo" aria-label="FabDosch">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>
+
+    </a>
+    FabDosch
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/waag/students/douwe-schmidt" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Gitlab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" data-md-state="indeterminate" type="checkbox" id="nav-2" checked>
+      
+      <label class="md-nav__link" for="nav-2">
+        PostFA Projects
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PostFA Projects" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          PostFA Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PostFA%20Projects/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PostFA%20Projects/CNC-Ender-home/" class="md-nav__link">
+        A Home for my CNC and Ender 3D Printer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" data-md-state="indeterminate" type="checkbox" id="nav-2-3" checked>
+      
+      <label class="md-nav__link" for="nav-2-3">
+        CNC Ender Home
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CNC Ender Home" data-md-level="2">
+        <label class="md-nav__title" for="nav-2-3">
+          <span class="md-nav__icon md-icon"></span>
+          CNC Ender Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PostFA%20Projects/CNC-Ender-Home/CNC-Ender-home/" class="md-nav__link">
+        A Home for my CNC and Ender 3D Printer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" data-md-state="indeterminate" type="checkbox" id="nav-3" checked>
+      
+      <label class="md-nav__link" for="nav-3">
+        About
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/aboutme/" class="md-nav__link">
+        About me
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/agreement/" class="md-nav__link">
+        Student Agreement
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/license/" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      
+      <label class="md-nav__link" for="nav-4">
+        Assignments
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assignments" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Assignments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../all-the-weeks/" class="md-nav__link">
+        Assignments Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../todo/" class="md-nav__link">
+        Todo
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week01/" class="md-nav__link">
+        1 - PM
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2 - CAD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        2 - CAD
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignments-learning-outcomes" class="md-nav__link">
+    Assignments - Learning Outcomes
+  </a>
+  
+    <nav class="md-nav" aria-label="Assignments - Learning Outcomes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spirals-have-you" class="md-nav__link">
+    Spirals - Have you?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-evaluate-and-select-2d-and-3d-software" class="md-nav__link">
+    #1. Evaluate and select 2D and 3D software
+  </a>
+  
+    <nav class="md-nav" aria-label="#1. Evaluate and select 2D and 3D software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adobe-illustrator" class="md-nav__link">
+    Adobe Illustrator
+  </a>
+  
+    <nav class="md-nav" aria-label="Adobe Illustrator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#photoshop" class="md-nav__link">
+    Photoshop
+  </a>
+  
+    <nav class="md-nav" aria-label="Photoshop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing_1" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mockup" class="md-nav__link">
+    Mockup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusion360" class="md-nav__link">
+    Fusion360
+  </a>
+  
+    <nav class="md-nav" aria-label="Fusion360">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing_2" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-a-box" class="md-nav__link">
+    Getting a box
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-a-sheet-of-metal-on-the-box" class="md-nav__link">
+    Getting a sheet of metal on the box
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-frustrations" class="md-nav__link">
+    Current frustrations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters-are-cool" class="md-nav__link">
+    Parameters are cool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-little-hole" class="md-nav__link">
+    Adding a little hole.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplying-a-part" class="md-nav__link">
+    Multiplying a part.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-some-colour" class="md-nav__link">
+    Getting some colour.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copypaste-bodies-and-destroy-aspiration" class="md-nav__link">
+    Copy/paste bodies and destroy aspiration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuts" class="md-nav__link">
+    Cuts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-a-hole-and-a-pcb-part-2" class="md-nav__link">
+    Making a hole and a PCB (part 2)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-an-external-model" class="md-nav__link">
+    using an external model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-state-is" class="md-nav__link">
+    Current state is:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-an-exploded-view" class="md-nav__link">
+    Making an exploded view.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#michelle-talks" class="md-nav__link">
+    Michelle talks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-beginnings" class="md-nav__link">
+    New beginnings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newer-beginnings" class="md-nav__link">
+    Newer Beginnings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renderings" class="md-nav__link">
+    Renderings
+  </a>
+  
+    <nav class="md-nav" aria-label="Renderings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video" class="md-nav__link">
+    Video
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-software" class="md-nav__link">
+    Other Software
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#freecad" class="md-nav__link">
+    Freecad
+  </a>
+  
+    <nav class="md-nav" aria-label="Freecad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#miniconda-interlude" class="md-nav__link">
+    MiniConda interlude
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openscad" class="md-nav__link">
+    OpenSCAD
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenSCAD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing_3" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result_1" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-went-wrong" class="md-nav__link">
+    What went wrong
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week03/" class="md-nav__link">
+        3 - CCC
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week04/" class="md-nav__link">
+        4 - EP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week05/" class="md-nav__link">
+        5 - 3D
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week06/" class="md-nav__link">
+        6 - ED
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week07/" class="md-nav__link">
+        7 - MSB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week08/" class="md-nav__link">
+        08 - EP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week09/" class="md-nav__link">
+        09 - MD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week10/" class="md-nav__link">
+        10 - ID
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week11/" class="md-nav__link">
+        11 - M&C
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week12/" class="md-nav__link">
+        12 - OD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week13/" class="md-nav__link">
+        13 - NC
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week14/" class="md-nav__link">
+        14 - IAP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week15/" class="md-nav__link">
+        15 - WW
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week16/" class="md-nav__link">
+        16 - A&I
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week17/" class="md-nav__link">
+        17 - IP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week18/" class="md-nav__link">
+        18 - PD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week19/" class="md-nav__link">
+        19 - PP
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" data-md-state="indeterminate" type="checkbox" id="nav-5" checked>
+      
+      <label class="md-nav__link" for="nav-5">
+        Diary
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Diary" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Diary
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week0/" class="md-nav__link">
+        0 - BC
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week01/" class="md-nav__link">
+        1 - PM
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week02/" class="md-nav__link">
+        2 - CAD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week03/" class="md-nav__link">
+        3 - CCC
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week04/" class="md-nav__link">
+        4 - EP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week05/" class="md-nav__link">
+        05 - 3D
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week06/" class="md-nav__link">
+        06 - ED
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week07/" class="md-nav__link">
+        07 - MSB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week08/" class="md-nav__link">
+        08
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week09/" class="md-nav__link">
+        09 -	Mechanical Design, Machine Design
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week10/" class="md-nav__link">
+        10 - ID
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week11/" class="md-nav__link">
+        11 - M&C
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week12/" class="md-nav__link">
+        12 - OD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week13/" class="md-nav__link">
+        13 - NC
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week14/" class="md-nav__link">
+        14 - IAP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week15/" class="md-nav__link">
+        15 - Molding and Casting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week16/" class="md-nav__link">
+        16 - A&I
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week17/" class="md-nav__link">
+        17
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week18/" class="md-nav__link">
+        18
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/week19/" class="md-nav__link">
+        19
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" data-md-state="indeterminate" type="checkbox" id="nav-6" checked>
+      
+      <label class="md-nav__link" for="nav-6">
+        Files
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Files" data-md-level="1">
+        <label class="md-nav__title" for="nav-6">
+          <span class="md-nav__icon md-icon"></span>
+          Files
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files/machines/" class="md-nav__link">
+        Machines
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-2" data-md-state="indeterminate" type="checkbox" id="nav-6-2" checked>
+      
+      <label class="md-nav__link" for="nav-6-2">
+        Week13
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Week13" data-md-level="2">
+        <label class="md-nav__title" for="nav-6-2">
+          <span class="md-nav__icon md-icon"></span>
+          Week13
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files/week13/tinywireerrors/" class="md-nav__link">
+        Tinywireerrors
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" data-md-state="indeterminate" type="checkbox" id="nav-7" checked>
+      
+      <label class="md-nav__link" for="nav-7">
+        Final project
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Final project" data-md-level="1">
+        <label class="md-nav__title" for="nav-7">
+          <span class="md-nav__icon md-icon"></span>
+          Final project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../final_project/finalproject/" class="md-nav__link">
+        Final Project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../final_project/project_plan/" class="md-nav__link">
+        Project Plan
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../final_project/spirals/" class="md-nav__link">
+        What has not been done
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignments-learning-outcomes" class="md-nav__link">
+    Assignments - Learning Outcomes
+  </a>
+  
+    <nav class="md-nav" aria-label="Assignments - Learning Outcomes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spirals-have-you" class="md-nav__link">
+    Spirals - Have you?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-evaluate-and-select-2d-and-3d-software" class="md-nav__link">
+    #1. Evaluate and select 2D and 3D software
+  </a>
+  
+    <nav class="md-nav" aria-label="#1. Evaluate and select 2D and 3D software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adobe-illustrator" class="md-nav__link">
+    Adobe Illustrator
+  </a>
+  
+    <nav class="md-nav" aria-label="Adobe Illustrator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#photoshop" class="md-nav__link">
+    Photoshop
+  </a>
+  
+    <nav class="md-nav" aria-label="Photoshop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing_1" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mockup" class="md-nav__link">
+    Mockup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusion360" class="md-nav__link">
+    Fusion360
+  </a>
+  
+    <nav class="md-nav" aria-label="Fusion360">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing_2" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-a-box" class="md-nav__link">
+    Getting a box
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-a-sheet-of-metal-on-the-box" class="md-nav__link">
+    Getting a sheet of metal on the box
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-frustrations" class="md-nav__link">
+    Current frustrations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters-are-cool" class="md-nav__link">
+    Parameters are cool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-little-hole" class="md-nav__link">
+    Adding a little hole.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplying-a-part" class="md-nav__link">
+    Multiplying a part.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-some-colour" class="md-nav__link">
+    Getting some colour.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copypaste-bodies-and-destroy-aspiration" class="md-nav__link">
+    Copy/paste bodies and destroy aspiration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuts" class="md-nav__link">
+    Cuts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-a-hole-and-a-pcb-part-2" class="md-nav__link">
+    Making a hole and a PCB (part 2)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-an-external-model" class="md-nav__link">
+    using an external model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-state-is" class="md-nav__link">
+    Current state is:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-an-exploded-view" class="md-nav__link">
+    Making an exploded view.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#michelle-talks" class="md-nav__link">
+    Michelle talks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-beginnings" class="md-nav__link">
+    New beginnings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newer-beginnings" class="md-nav__link">
+    Newer Beginnings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renderings" class="md-nav__link">
+    Renderings
+  </a>
+  
+    <nav class="md-nav" aria-label="Renderings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video" class="md-nav__link">
+    Video
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-software" class="md-nav__link">
+    Other Software
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#freecad" class="md-nav__link">
+    Freecad
+  </a>
+  
+    <nav class="md-nav" aria-label="Freecad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#miniconda-interlude" class="md-nav__link">
+    MiniConda interlude
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openscad" class="md-nav__link">
+    OpenSCAD
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenSCAD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing_3" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result_1" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-went-wrong" class="md-nav__link">
+    What went wrong
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="computer-aided-design">Computer-Aided Design</h1>
+<ul>
+<li><a href="../../diary/week02/">Link to diary</a></li>
+<li><a href="http://fabacademy.org/2021/docs/assessment/index.html">Link to assignment &amp; assessment</a></li>
+<li><a href="http://academy.cba.mit.edu/classes/computer_design/index.html">Link to recitation notes</a></li>
+</ul>
+<blockquote>
+<p>openscad is great for parametric parts, but you will go insane programming things such as bevels and stuff</p>
+</blockquote>
+<h2 id="description">Description</h2>
+<p>Model (raster, vector, 2D, 3D, render, animate, simulate, ...) a possible final project, compress your images and videos, and post it on your website.</p>
+<p>This week I am going to make as many mockups as I can, using different 2D and 3D programs. My <a href="../../files/mockups/initial_idea.png">initial sketch</a> was made on an ereader. It is time to take it to the next level!</p>
+<h2 id="assignments-learning-outcomes">Assignments - Learning Outcomes</h2>
+<table>
+<thead>
+<tr>
+<th align="center">#</th>
+<th>Assignment</th>
+<th>Fin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td>Evaluate and select 2D and 3D software</td>
+<td>1</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td>Demonstrate and describe processes used in modelling with 2D and 3D software</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spirals-have-you">Spirals - Have you?</h3>
+<table>
+<thead>
+<tr>
+<th>Spirals</th>
+<th>Description</th>
+<th align="right">Done</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Modelled experimental objects/part of a possible project in 2D and 3D software</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Shown how you did it with words/images/screenshots</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Included your original design files</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-evaluate-and-select-2d-and-3d-software">#1. Evaluate and select 2D and 3D software</h2>
+<h3 id="adobe-illustrator">Adobe Illustrator</h3>
+<p>To make it a little bit easier on myself I am first going to make a sketch in a program I know really well. This will allow me to be more creative and less frustrated. This basic model I can then use to recreate in other programs.</p>
+<h4 id="installing">Installing</h4>
+<p>This was easy using the Adobe installer. And I already had the program... so...</p>
+<p>I made a drawing of the model as I think it should be. As colours are important, and I drew inspiration from the '80 synth TR-808, I pasted a picture of that synth in my file. 
+I then traced the bitmap image so I could easily extract colour from it.</p>
+<p><img alt="" src="../../files/week02/colors_and_swatches.jpg" /></p>
+<p>I played with different options to make this clock.
+The three options I consider can be seen in the illustrator file.</p>
+<p><img alt="" src="../../files/week02/lightclock_sideview_ai.png" /></p>
+<p>You can download the <a href="../../files/lightclock.ai">original file here</a></p>
+<h3 id="photoshop">Photoshop</h3>
+<h4 id="installing_1">Installing</h4>
+<p>Photoshop was already on my machine so that was easy.</p>
+<h4 id="mockup">Mockup</h4>
+<p>I made a picture of where I want my machine to be in the house (next to my front door) and added the file I made in Fusion360 to it to get an idea of how it might look in real life</p>
+<p><img alt="" src="../../files/week02/bitmap_render.jpg" /></p>
+<p>The original design file is over 8MB and I am not going to waste my precious repo space on that. After all, it is a picture with a render placed in it. These two steps are not worth to document other then by words. Which I have now done.</p>
+<h3 id="fusion360">Fusion360</h3>
+<p>Research into F360 was done with the help from:</p>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLrZ2zKOtC_-DR2ZkMaK3YthYLErPxCnT-">a youtube playlist</a></li>
+<li><a href="../../diary/week02/">a lesson by Agrilab</a> </li>
+<li>And another lesson by Michelle.</li>
+</ul>
+<p>I think I am now ready to plunge in. I have a slightly new idea for my final project, so I will use Fusion360 to show you what it is.  But to give you a head start</p>
+<ul>
+<li>The model is more horizontal then vertical now (so it can fit above my front door)</li>
+<li>The model should get a nice 80's electronics feeling to it. Think [Roland TR-808] color scheme.
+<img alt="" src="../../files/week02/TR-808-Layered-No-Stripes-1024x427.png" /></li>
+<li>I want to achieve color by filters, not color by LED's. All LED's should be white.</li>
+</ul>
+<h4 id="installing_2">Installing</h4>
+<p>Installing was a breeze thnx to the license we got with our education. I am now gonna use this to make my first drawing.</p>
+<h4 id="getting-a-box">Getting a box</h4>
+<p>I start by filling out the parameters.</p>
+<p><img alt="" src="../../files/week02/parameters.jpg" /></p>
+<p><strong>NOTE: if you make mistakes, and you 'undo' using <code>ctrl-z</code>, the changes you made in the parameters panel are also undone.</strong></p>
+<p>Et voila, a new body has been created.</p>
+<p><img alt="" src="../../files/week02/thefirstbox.jpg" /></p>
+<h4 id="getting-a-sheet-of-metal-on-the-box">Getting a sheet of metal on the box</h4>
+<p>I have created a new sketch. This will represent a sheet of metal. I want the sheet of metal on the box. 
+The main problem here was getting selecting the metal (which was resolved by hiding the other body in front of it)
+The other problem was lifting it, but this was resolved with the move command.</p>
+<p><img alt="" src="../../files/week02/box.jpg" /></p>
+<p><em>look! there is a thin layer of pure aluminum on top!</em></p>
+<h4 id="current-frustrations">Current frustrations</h4>
+<ul>
+<li>copy-paste is not so easy: if I select something, and use cmd-c and cmd-v nothing happens.</li>
+<li>I need to change the functions of my pen to be able to use it with Fusion360. But changing the pen is really annoying because I am so used to it to work in a certain way.</li>
+<li>I am not used to thinking in 3D on a computer... My designs are always 2D. I get lost in space. </li>
+<li>Feeling frustrated and tired. Gonna take a break.</li>
+</ul>
+<h4 id="parameters-are-cool">Parameters are cool</h4>
+<p><em>Parameters are for 3D objects, what paragraph styles are for text</em>
+Playing with the parameters brought me a lot. It is a nice, reassuring feeling I can modify stuff in one place and have it changed everywhere.
+I even experimented a little with parameters in parameters.</p>
+<p><img alt="" src="../../files/week02/meta-parameter.jpg" />
+<img alt="" src="../../files/week02/yodawg.jpg" /></p>
+<h4 id="adding-a-little-hole">Adding a little hole.</h4>
+<p>I was looking and think how to make a little hole in the back of the acrylic pane. But when I right-clicked, Fusion offered me the 'hole feature.. </p>
+<p><img alt="" src="../../files/week02/holefeature.jpg" /></p>
+<p>Using this feature I made a tiny little hole in the back, that I will hope will fit a LED. But if not, no worries; I used all parametric numbers, so I can easily change them when needed. Woohoo!</p>
+<p><img alt="" src="../../files/week02/parametrichole.jpg" /></p>
+<h4 id="multiplying-a-part">Multiplying a part.</h4>
+<p>Now I want to get multiple parts of the little thingy I made. Every part should be 5mm longer and on top of the previous one. </p>
+<p>Using copy paste on the body I wanted to duplicate, I was able to create a new body. I could also move that on top of the existing body. But now come the resizing. I am using the scaling option from the 'Modify' tools. But this does not feel correct. It will destroy the parametric qualities of my design... </p>
+<p><img alt="" src="../../files/week02/scalingfunction.jpg" /></p>
+<p>I think I'll have to duplicate my sketch, not the  body. And create a new body from that new sketch... Let's try that.</p>
+<p><img alt="" src="../../files/week02/copyingthesketch.jpg" /></p>
+<p>Copying the sketch did work and I can now edit the sketch. The problem is that certain properties need to be applied again: the colour and the hole in the back are not copied over. </p>
+<p>I should try to find a 'best of both worlds'.</p>
+<p>After some testing it seems that copying bodies is the better way to go.</p>
+<h4 id="getting-some-colour">Getting some colour.</h4>
+<p>I find that colour, material and texture are very important in my design. You can add a material to a body by dragging it from the material window on the body. After that you can change the appearance in the appearance menu. </p>
+<p>I'll extract the RGB values from my illustrator file and put them here for all to remember</p>
+<table 
+    border="1"; 
+    >
+    <caption><b>My colors<b></caption>
+    <tr>
+        <td>HEX
+        </td>
+        <td bgcolor="#75998F" >
+            #75998F
+        </td>
+        <td bgcolor="#66B177" >
+            #66B177
+        </td>
+         <td bgcolor="#E6C644" >
+            #E6C644
+        </td>
+         <td bgcolor="#FE6001" >
+            #FE6001
+        </td>
+         <td bgcolor="#F30601" >
+            #F30601
+        </td>
+    </tr>
+        <tr>
+        <td>RGB
+        </td>
+        <td bgcolor="#75998F" >
+            R:117 G:153 B:143
+        </td>
+        <td bgcolor="#66B177" >
+            R:102 G:177 B:119
+        </td>
+         <td bgcolor="#E6C644" >
+            R:230 G:198 B:68
+        </td>
+         <td bgcolor="#FE6001" >
+            R:254 G:96 B:1
+        </td>
+         <td bgcolor="#F30601" >
+            R:243 G:6 B:1
+        </td>
+    </tr>
+</table>
+
+<p><img alt="" src="../../files/week02/properties.jpg" /></p>
+<h4 id="copypaste-bodies-and-destroy-aspiration">Copy/paste bodies and destroy aspiration</h4>
+<p>Although I think Fusion360 is the most user friendly 3D design tool out there, it still poses me with a lot of challenges.
+But I am currently left with this:</p>
+<p><img alt="" src="../../files/week02/state4.jpg" /></p>
+<p>And the most important things I learned are:
+- set parameters as you go; new stuff comes up when you draw, and whenever you can use the parameters to define the dimensions
+- you can make a hole and the parameters for its dimensions
+- you can use the move tool to make copies of bodies.
+- in my case it seems best to do the <em>chamfers</em> áfter I made the initial design. On the other hand I am no longer sure if I should do them at all; maybe a more cubic design is better to mimic an '80's design. 
+- I am still unsure how to use the sketches. Shall I make one for every body, or can I use one sketch for all similar bodies. 
+- How come I have now multiple bodies on my drawing and only three sketches... ?</p>
+<h4 id="cuts">Cuts</h4>
+<p>The structure I have made has little alu parts extruding it on the back.
+These should be cut out of a body of wood so that everything slides snugly into place.</p>
+<p>For this I used the combine tool and a <a href="https://www.youtube.com/watch?time_continue=332&amp;v=iGXQXOKPigU&amp;feature=emb_logo">little video tutorial</a> I found.</p>
+<p><img alt="" src="../../files/week02/thecut.jpg" /></p>
+<h4 id="making-a-hole-and-a-pcb-part-2">Making a hole and a PCB (part 2)</h4>
+<p>Using the Shell option I made the wooden box hollow. After that I created (my first) sketch on a different plane. This Sketch should become the PCB with the LED's. </p>
+<p><img alt="" src="../../files/week02/emtpybox_and_pcb.jpg" /></p>
+<p><strong>NOTE: Later Michelle told me that I can better use the extract function to cut away a hole. In this way I an make a sketch, which I an align with other object, and apply parameters. This keeps the parametric quality of the design and reduces random shit</strong></p>
+<h4 id="using-an-external-model">using an external model</h4>
+<p>For the LED's i searched online and found <a href="https://grabcad.com/library/o3-led">a model that I could use on GrabCad</a>. The legs of a model are too long, but this is something I will solve in another spiral.</p>
+<p>I copy-pasted the LED into my design from another file. </p>
+<p><strong>NOTE: Fusion360 doesn't open .STP files by itself. You have to force to open it by dragging the file onto the application in the dock while holding the ctrl-command. This forces a program (on mac) to try to open the file. And it works.</strong></p>
+<p><strong>NOTE 2: It is better to open a file in a different tab, save that tab and insert the object from the Datapanel</strong></p>
+<p><img alt="" src="../../files/week02/insert_object.jpg" /></p>
+<h4 id="current-state-is">Current state is:</h4>
+<video width="640" height="480" controls>
+  <source src="../../files/week02/assemble_vid.mp4" type="video/mp4">
+Your browser does not support the video tag, fool.
+</video>
+
+<p><em>(this video did not work immediately. I document why not and how I solved it in <a href="../week01/">week1 assignment page</a> )</em></p>
+<h4 id="making-an-exploded-view">Making an exploded view.</h4>
+<p>In the animation workbench of Fusion360 you can attempt to make an animation. Following good practices, your model should be able to nicely 'explode' in this view. I find it very hard. This is probably because I did not construct my model in the right way.</p>
+<video width="640" height="480" controls>
+  <source src="../../files/week02/ferryclockvid.mp4" type="video/mp4">
+ Your browser does not support the video tag, fool.
+</video>
+
+<h4 id="michelle-talks">Michelle talks</h4>
+<p>After a brief one-on-one session with Michelle I decided to do the design again. Biggest reasons are:</p>
+<ul>
+<li>my design has a lot of repetition. Most of these I drew by hand. Therefore it is not parametric and things get messy.</li>
+<li>There is nice options in F360 to make repetition automated. This gives me an opportunity to practice with that. </li>
+<li>Instead of making stuff even more messy by trying to adjust my existing design, it is better to start again; I will also learn more from starting a new.</li>
+</ul>
+<h4 id="new-beginnings">New beginnings</h4>
+<p>This time I made a base component structure that I am going to repeat.
+It exists out of</p>
+<ul>
+<li>an acrylic box</li>
+<li>a metal sheet</li>
+<li>a hole in the acrylic box</li>
+<li>a LED imported design</li>
+</ul>
+<p><img alt="" src="../../files/week02/new%20start.jpg" /></p>
+<p>In order to multiply this object, I merged the items together in one component. I then used the <strong>Pattern on Path</strong> function to multiply the selection above the original form. This created a rather unexpected glitchy effect.</p>
+<video width="640" height="480" controls>
+  <source src="../../files/week02/pattern_path_glitch.mp4" type="video/mp4">
+Your browser does not support the video tag, fool.
+</video>
+
+<h4 id="newer-beginnings">Newer Beginnings</h4>
+<p>In order to make fewer mistakes, I am now going to follow a path that Michelle layed out for me. </p>
+<p>Steps in this order;</p>
+<ol>
+<li>Create parameters. </li>
+<li>Make sure parameters reference each other where possible.</li>
+</ol>
+<p><img alt="" src="../../files/week02/parameters2.jpg" /></p>
+<ol>
+<li>Stay parametric in your design! Also when you think you can't, you can.</li>
+<li>Use the same sketch to make multiple bodies.</li>
+<li>Use the <em>Pattern on Path</em> option to create multiple copies of a body.</li>
+</ol>
+<p>All went fine so far.</p>
+<p>The main problem now is that I have linked bodies (because of step 5) and when I change color of one, they all change. I need to unlink this somehow... </p>
+<p>For now this is the end of the design-process. I hope I can continue and apply what I have learned so far to designs that are meant to be cut or printed by real machines soon.</p>
+<h4 id="renderings">Renderings</h4>
+<h5 id="images">Images</h5>
+<p><img alt="" src="../../files/week02/clock_screencapture_front.jpg" />
+<img alt="" src="../../files/week02/clock_screencapture_back.jpg" />
+<img alt="" src="../../files/week02/clock_render_front.jpg" />
+<img alt="" src="../../files/week02/clock_render_back.png" /></p>
+<p>*Note: I am not so happy with the Fusion360 renderings. The actual, unrendered model represents better what I intend to make, then the rendered image...</p>
+<h5 id="video">Video</h5>
+<video width="640" height="480" controls>   <source src="../../files/week02/final_rendering_week2.mp4" type="video/mp4"> Your browser does not support the video tag, fool. </video>
+
+<p><a href="../../files/week02/Clockv3.f3z">The original Fusion360 file</a></p>
+<h2 id="other-software">Other Software</h2>
+<h3 id="freecad">Freecad</h3>
+<p>Following this tutorial https://drvax.com/freecad-pre-releases-on-macos/</p>
+<p>Installing the latest version on Big Sur creates issues. The <a href="https://drvax.com/freecad-pre-releases-on-macos/">mentioned article</a> details how <a href="https://www.freecadweb.org/downloads.php">FreeCAD</a> can be installed despite this. So... let's try!</p>
+<blockquote>
+<p>The FreeCad developers package the current macOS pre-releases with Conda. It is easy to install MiniConda on your Mac and use it to install FreeCad.  </p>
+</blockquote>
+<h4 id="miniconda-interlude">MiniConda interlude</h4>
+<p>As these things go in OpenSource world, before you can do what you want to do, you first have to do something else. Some call it <a href="https://en.wikipedia.org/wiki/Yak_shaving">yak-shaving</a>. But apparently FreeCAD requires <a href="https://docs.conda.io/projects/conda/en/latest/">Conda</a>. Which has a tiny little brother for Mac, called miniconda. Let's get and install that.</p>
+<p><img alt="" src="../../files/week02/miniconda.jpg" /></p>
+<p>After that is that we are going to do some terminal work. </p>
+<pre><code>$ conda update --all
+$ conda create --name fcenv --channel conda-forge freecad
+</code></pre>
+<p>Or... so we hoped... </p>
+<p><img alt="" src="../../files/week02/conda-update-error.jpg" /></p>
+<p>Time to insert a debuggin table...</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Description</th>
+<th>Debugging</th>
+<th align="center">Solved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Can't update Conda from command line</td>
+<td>command not found</td>
+<td>log-out and relogin and try with sudo</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td>idem</td>
+<td>idem</td>
+<td>install conda with pip</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td>idem</td>
+<td>idem</td>
+<td>uninstall conda, miniconda and the whole shebang</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>I gave up on installing Freecad. Otherwise there is no time left to make an actual model.</p>
+<h3 id="openscad">OpenSCAD</h3>
+<p><a href="https://www.openscad.org/cheatsheet/index.html">Cheat sheet</a>
+<a href="https://www.openscad.org/libraries.html">Libraries</a></p>
+<h4 id="installing_3">Installing</h4>
+<p><code>$ pip install openscad</code>
+You then find the app in the application folder.</p>
+<h4 id="result_1">Result</h4>
+<p>I gave up on using OpenSCAD. Otherwise there is no time left to make an actual model.</p>
+<h2 id="what-went-wrong">What went wrong</h2>
+<ul>
+<li>Not enough time to explore all the programs that I wanted. In the end I decided it was more important to get to a design that at least somewhat resembled what I wanted to make, then getting to know all the programs.</li>
+<li>
+<p>Fusion360 was much harder then I anticipated. Even with the help of Michelle and numerous Youtube videos I spend way more time on this program than I anticipated.</p>
+<ul>
+<li>I need to learn more about constraints and joints.</li>
+<li>I was not ready for exporting in exploded view.</li>
+</ul>
+</li>
+<li>
+<p>My spirals and time budget planning as projected in the beginning were not met. I need to take more time to plan the week ahead. (For my defence; sudden school closings due to global pandamics do not help...)</p>
+</li>
+<li>Also I keep forgetting that I am really tired in the evenings. So it is hard to use the time I imagine I have there.</li>
+<li>3D modelling is really a different beast. I keep forgetting to remember to forget all I learned in 2D design.</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../week01/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                1 - PM
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../week03/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                3 - CCC
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.instant', 'navigation.sections', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
